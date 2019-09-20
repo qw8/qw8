@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>JavaScript原型链 | 秦伟的个人博客 | 前端及全栈知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JavaScript,原型,原型链,instanceof">
+    <meta name="description" content="面向对象原理：​    1）目标：实现封装、继承、多态等面向对象的基本功能。 ​    2）原理：原型链是面向对象的基础,使用prototype、function 、new、this模拟面向对象的类。 ​          JavaScript是面向对象语言，但不使用类（根本不存在类）。JavaScript的面向对象是基于prototype和function的，而不是基于类的。 介绍JavaScr">
+<meta name="keywords" content="JavaScript,原型,原型链,instanceof">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript原型链">
+<meta property="og:url" content="http://www.bluedream.top/前端知识点/JavaScript原型链.html">
+<meta property="og:site_name" content="秦伟的个人博客">
+<meta property="og:description" content="面向对象原理：​    1）目标：实现封装、继承、多态等面向对象的基本功能。 ​    2）原理：原型链是面向对象的基础,使用prototype、function 、new、this模拟面向对象的类。 ​          JavaScript是面向对象语言，但不使用类（根本不存在类）。JavaScript的面向对象是基于prototype和function的，而不是基于类的。 介绍JavaScr">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://www.bluedream.top/images/js001.png">
+<meta property="og:image" content="http://www.bluedream.top/images/js002.png">
+<meta property="og:image" content="http://www.bluedream.top/images/js003.png">
+<meta property="og:image" content="http://www.bluedream.top/images/js004.png">
+<meta property="og:updated_time" content="2019-09-11T05:07:20.927Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript原型链">
+<meta name="twitter:description" content="面向对象原理：​    1）目标：实现封装、继承、多态等面向对象的基本功能。 ​    2）原理：原型链是面向对象的基础,使用prototype、function 、new、this模拟面向对象的类。 ​          JavaScript是面向对象语言，但不使用类（根本不存在类）。JavaScript的面向对象是基于prototype和function的，而不是基于类的。 介绍JavaScr">
+<meta name="twitter:image" content="http://www.bluedream.top/images/js001.png">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟的个人博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                时间
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">JavaScript原型链</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">JavaScript原型链</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-08-31T07:10:08.000Z" itemprop="datePublished" class="page-time">
+  2019-08-31
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#面向对象原理："><span class="post-toc-number">1.</span> <span class="post-toc-text">面向对象原理：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍JavaScript的原型，原型链？有什么特点？"><span class="post-toc-number">2.</span> <span class="post-toc-text">介绍JavaScript的原型，原型链？有什么特点？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原型、构造函数、实例三者之间的关系"><span class="post-toc-number">3.</span> <span class="post-toc-text">原型、构造函数、实例三者之间的关系</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#prototype-和proto的关系是什么？"><span class="post-toc-number">4.</span> <span class="post-toc-text">prototype 和proto的关系是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#执行时对象查找时，永远不会去查找原型的一个函数是？"><span class="post-toc-number">5.</span> <span class="post-toc-text">执行时对象查找时，永远不会去查找原型的一个函数是？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#instanceof的原理"><span class="post-toc-number">6.</span> <span class="post-toc-text">instanceof的原理</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-JavaScript原型链"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">JavaScript原型链</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-08-31 15:10:08" datetime="2019-08-31T07:10:08.000Z"  itemprop="datePublished">2019-08-31</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="面向对象原理："><a href="#面向对象原理：" class="headerlink" title="面向对象原理："></a>面向对象原理：</h3><p>​    1）目标：实现封装、继承、多态等面向对象的基本功能。</p>
+<p>​    2）原理：原型链是面向对象的基础,使用prototype、function 、new、this模拟面向对象的类。</p>
+<p>​          JavaScript是面向对象语言，但不使用类（根本不存在类）。JavaScript的面向对象是<strong>基于prototype和function</strong>的，而不是基于类的。</p>
+<h3 id="介绍JavaScript的原型，原型链？有什么特点？"><a href="#介绍JavaScript的原型，原型链？有什么特点？" class="headerlink" title="介绍JavaScript的原型，原型链？有什么特点？"></a>介绍JavaScript的原型，原型链？有什么特点？</h3><ul>
+<li><p>原型：</p>
+<ul>
+<li>JavaScript的所有对象中都包含了一个 [<strong>proto</strong>] 内部属性，这个属性所对应的就是该对象的原型。</li>
+<li>JavaScript的函数对象，除了原型 [<strong>proto</strong>] 之外，还预置了 prototype 属性。</li>
+<li>当函数对象作为构造函数创建实例时，该 prototype 属性值将被作为实例对象的原型 [<strong>proto</strong>]。</li>
+</ul>
+</li>
+<li><p>原型链：</p>
+<ul>
+<li>原型链是由一些用来继承和共享属性的对象组成的（有限的）对象链。</li>
+<li>当一个对象调用的属性/方法自身不存在时，就会去自己 [<strong>proto</strong>] 关联的前辈 prototype 对象上去找。</li>
+<li>如果没找到，就会去该 prototype 原型 [<strong>proto</strong>] 关联的前辈 prototype 去找。依次类推，直到找到属性/方法（一直检索到 Object 内建对象）或 undefined 为止。从而形成了所谓的“原型链”</li>
+</ul>
+</li>
+<li><p>关系：<code>instance.constructor.prototype = instance.__proto__</code></p>
+</li>
+<li><p>原型特点：</p>
+<ul>
+<li>JavaScript对象是通过引用来传递的，当修改原型时，与之相关的对象也会继承这一改变</li>
+</ul>
+</li>
+<li><p>原型链的基本原理：</p>
+<p>任何一个<strong>实例</strong>，通过原型链，找到它上面的<strong>原型</strong>，该原型对象中的方法和属性，可以被所有的原型实例共享。</p>
+<p>原型可以起到继承的作用，原型里的方法都可以被不同的实例共享。</p>
+</li>
+<li><p>其他理解：</p>
+<p>通过一个对象的<strong>proto</strong>可以找到它的原型对象，原型对象也是一个对象，就可以通过原型对象的<strong>proto</strong>，最后找到了我们的 Object.prototype，Object是原型链的顶端。从实例的原型对象开始一直到 Object.prototype 就是我们的原型链。</p>
+<p>每个对象都有一个私有属性（称之为 [[Prototype]]），它指向它的原型对象（<strong>prototype</strong>）。该 prototype 对象又具有一个自己的 prototype ，层层向上直到一个对象的原型为 null。根据定义，null 没有原型，并作为这个<strong>原型链</strong>中的最后一个环节。</p>
+<p>当查找一个对象的属性时，JavaScript 会向上遍历原型链，直到找到给定名称的属性为止，到查找到达原型链的顶部 - 也就是 <strong>Object.prototype</strong> - 但是仍然没有找到指定的属性，就会返回 <strong>undefined</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function Func()&#123;&#125;</span><br><span class="line">Func.prototype.name = &quot;Sean&quot;;</span><br><span class="line">Func.prototype.getInfo = function() &#123;</span><br><span class="line">  return this.name;</span><br><span class="line">&#125;</span><br><span class="line">var person = new Func();//现在可以参考var person = Object.create(oldObject);</span><br><span class="line">console.log(person.getInfo());//它拥有了Func的属性和方法</span><br><span class="line">//&quot;Sean&quot;</span><br><span class="line">console.log(Func.prototype);</span><br><span class="line">// Func &#123; name=&quot;Sean&quot;, getInfo=function()&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/js001.png" alt="js001" title>
+                </div>
+                <div class="image-caption">js001</div>
+            </figure>
+
+
+
+<h3 id="原型、构造函数、实例三者之间的关系"><a href="#原型、构造函数、实例三者之间的关系" class="headerlink" title="原型、构造函数、实例三者之间的关系"></a>原型、构造函数、实例三者之间的关系</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/js002.png" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<blockquote>
+<p>PS：任何一个函数，如果在前面加了<code>new</code>，那就是构造函数。</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/js003.png" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<ol>
+<li>构造函数通过 <code>new</code> 生成实例</li>
+<li>构造函数也是函数，构造函数的<code>prototype</code>指向原型。（所有的函数有<code>prototype</code>属性，但实例没有 <code>prototype</code>属性）</li>
+<li>原型对象中有 <code>constructor</code>，指向该原型的构造函数。</li>
+</ol>
+<blockquote>
+<p>上面的三行，代码演示：</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Foo = <span class="function"><span class="keyword">function</span> (<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fn = <span class="keyword">new</span> Foo(<span class="string">'smyhvae'</span>);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>上面的代码中，<code>Foo.prototype.constructor === Foo</code>的结果是<code>true</code>：</p>
+</blockquote>
+<ol start="4">
+<li>实例的<code>__proto__</code>指向原型。也就是说，<code>Foo.__proto__ === M.prototype</code>。</li>
+</ol>
+<blockquote>
+<p>声明：所有的<strong>引用类型</strong>（数组、对象、函数）都有<code>__proto__</code>这个属性。</p>
+</blockquote>
+<p><code>Foo.__proto__ === Function.prototype</code>的结果为true，说明<code>Foo</code>这个普通的函数，是<code>Function</code>构造函数的一个实例。</p>
+<h3 id="prototype-和proto的关系是什么？"><a href="#prototype-和proto的关系是什么？" class="headerlink" title="prototype 和proto的关系是什么？"></a>prototype 和<strong>proto</strong>的关系是什么？</h3><p>所有的对象都拥有<strong>proto</strong>属性，它指向对象构造函数的 prototype 属性</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let obj = &#123;&#125;</span><br><span class="line">obj.__proto__ === Object.prototype // true</span><br><span class="line"></span><br><span class="line">function Test()&#123;&#125;</span><br><span class="line">test.__proto__ == Test.prototype // true</span><br></pre></td></tr></table></figure>
+
+<p>所有的函数都同时拥有<strong>proto</strong>和 protytpe 属性<br>函数的<strong>proto</strong>指向自己的函数实现 函数的 protytpe 是一个对象 所以函数的 prototype 也有<strong>proto</strong>属性 指向 Object.prototype</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">function func() &#123;&#125;</span><br><span class="line">func.prototype.__proto__ === Object.prototype // true</span><br></pre></td></tr></table></figure>
+
+<p>Object.prototype.<strong>proto</strong>指向 null</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object.prototype.__proto__ // null</span><br></pre></td></tr></table></figure>
+
+<h3 id="执行时对象查找时，永远不会去查找原型的一个函数是？"><a href="#执行时对象查找时，永远不会去查找原型的一个函数是？" class="headerlink" title="执行时对象查找时，永远不会去查找原型的一个函数是？"></a>执行时对象查找时，永远不会去查找原型的一个函数是？</h3><ul>
+<li>javaScript中hasOwnProperty函数方法是返回一个布尔值，指出一个对象是否具有指定名称的属性。此方法无法检查该对象的原型链中是否具有该属性；该属性必须是对象本身的一个成员</li>
+<li>使用方法： object.hasOwnProperty(proName)</li>
+<li>其中参数object是必选项。一个对象的实例。</li>
+<li>proName是必选项。一个属性名称的字符串值。</li>
+<li>如果 object 具有指定名称的属性，那么JavaScript中hasOwnProperty函数方法返回 true，反之则返回 false。</li>
+</ul>
+<h3 id="instanceof的原理"><a href="#instanceof的原理" class="headerlink" title="instanceof的原理"></a>instanceof的原理</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/images/js004.png" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<ul>
+<li><code>instanceof</code>的<strong>作用</strong>：用于判断<strong>实例</strong>属于哪个<strong>构造函数</strong>。</li>
+<li><code>instanceof</code>的<strong>原理</strong>：判断实例对象的<code>__proto__</code>属性，和构造函数的<code>prototype</code>属性，是否为同一个引用（是否指向同一个地址）。</li>
+</ul>
+<blockquote>
+<ul>
+<li><strong>注意1</strong>：虽然说，实例是由构造函数 new 出来的，但是实例的<code>__proto__</code>属性引用的是构造函数的<code>prototype</code>。也就是说，实例的<code>__proto__</code>属性与构造函数本身无关。</li>
+<li><strong>注意2</strong>：在原型链上，原型的上面可能还会有原型，以此类推往上走，继续找<code>__proto__</code>属性。这条链上如果能找到， instanceof 的返回结果也是 true。</li>
+</ul>
+</blockquote>
+<p>比如说：</p>
+<ul>
+<li><code>foo instance of Foo</code>的结果为true，因为<code>foo.__proto__ === M.prototype</code>为<code>true</code>。</li>
+<li><strong><code>foo instance of Objecet</code>的结果也为true</strong>，为<code>Foo.prototype.__proto__ === Object.prototype</code>为<code>true</code>。</li>
+</ul>
+<p><strong>instanceof 的内部机制是通过判断对象的原型链中是不是能找到类型的 prototype。</strong></p>
+<p>使用 instanceof 判断一个对象是否为数组，instanceof 会判断这个对象的原型链上是否会找到对应的 Array 的原型，找到返回 true，否则返回 false。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[] <span class="keyword">instanceof</span> <span class="built_in">Array</span>; <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p>但 instanceof 只能用来判断对象类型，原始类型不可以。并且所有对象类型 instanceof Object 都是 true。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[] <span class="keyword">instanceof</span> <span class="built_in">Object</span>; <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p>优点：instanceof 可以弥补 Object.prototype.toString.call()不能判断自定义实例化对象的缺点。</p>
+<p>缺点：instanceof 只能用来判断对象类型，原始类型不可以。并且所有对象类型 instanceof Object 都是 true，且不同于其他两种方法的是它不能检测出 iframes。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> f1 = <span class="keyword">new</span> f(<span class="string">"martin"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(f1 <span class="keyword">instanceof</span> f); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>推荐阅读:</strong> <a href="https://www.cnblogs.com/zhoulujun/p/9667651.html" target="_blank" rel="noopener">https://www.cnblogs.com/zhoulujun/p/9667651.html</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-09-11T05:07:20.927Z" itemprop="dateUpdated">2019-09-11 13:07:20</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/前端知识点/JavaScript原型链.html" target="_blank" rel="external">http://www.bluedream.top/前端知识点/JavaScript原型链.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://www.bluedream.top">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/instanceof/">instanceof</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型/">原型</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/原型链/">原型链</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.bluedream.top/前端知识点/JavaScript原型链.html&title=《JavaScript原型链》 — 秦伟的个人博客&pic=http://www.bluedream.top/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.bluedream.top/前端知识点/JavaScript原型链.html&title=《JavaScript原型链》 — 秦伟的个人博客&source=前端及全栈知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.bluedream.top/前端知识点/JavaScript原型链.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript原型链》 — 秦伟的个人博客&url=http://www.bluedream.top/前端知识点/JavaScript原型链.html&via=http://www.bluedream.top" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.bluedream.top/前端知识点/JavaScript原型链.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/前端面试题/面试问题.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">面试问题</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/散文/光阴.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">光阴</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p id="sitetime"></p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p><span>Copyright &copy; 2018 - 2019 <a
+                href="http://www.bluedream.top/" target="_blank">秦伟的个人博客</a>All Rights Reserved.</span>
+            <span>
+                部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除。
+                
+                
+            </span>
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); //北京时间2018-2-13 00:00:00
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = " 本网站已安全运行" +/*diffYears+" 年 "+*/diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.bluedream.top/前端知识点/JavaScript原型链.html&title=《JavaScript原型链》 — 秦伟的个人博客&pic=http://www.bluedream.top/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.bluedream.top/前端知识点/JavaScript原型链.html&title=《JavaScript原型链》 — 秦伟的个人博客&source=前端及全栈知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.bluedream.top/前端知识点/JavaScript原型链.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript原型链》 — 秦伟的个人博客&url=http://www.bluedream.top/前端知识点/JavaScript原型链.html&via=http://www.bluedream.top" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.bluedream.top/前端知识点/JavaScript原型链.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsUlEQVR42u3aQY5iMQwFQO5/6Z7tSD3Ae3GMGKn+Cv2GJJVFnLb9eMTPz6/n7/fJb88+/579sfHg4eHhjZf+jPF6mtfff/bXfPuS8f+xNjw8PLw1Xn6gJ+AkhCRLz0d7+h4PDw/vC3i3Ltb5cvHw8PD+d16bJjgLKm3CAg8PD+/zvCR9kCQFJsmLZFMWcy14eHh4MS+vIn3P55X6Hh4eHt64qp4fuGfhoT3Q69Xi4eHhLfDaJGzLaJeep32TdeLh4eFt8NpFTy6481nq1AYeHh7eAu9uuSsPFe12tIHqUevx8PDwOl47xPz4ztMT+Vxv6nt4eHh4l3ivJ0i2YD5O0kCQJ5GvLQsPDw8vvnO2UaVtdTpr58ov7m/CAx4eHt4l3iTZ2sLaS/ZZW9i1XDIeHh5eWRU6a5aaLPRuGxYeHh7eBi9JEOQBI3mTl8SScloU8fDw8PAWePk0bfqg/W2+ZfloeHh4eNu8tkHqLBmRb8rZtb7OH+Ph4eHdzI4WrVc5Kb80t41ZNRUPDw/vaD1tSDhLs+bss28+nREPDw/v47x5GSxpGjhLSUTJCDw8PLwF3jw85If7XniIqnx4eHh4l3j54d4O3QaPSTsXHh4e3md4k/bQNuF7VkibNBDg4eHhbfDaYzo5rCcBYK+lFQ8PD+8urx0uX1ByrLdBJR8TDw8Pb5v3+lhvD+42PdEWzAokHh4e3hpvctk9azXINyVPZNT/K+Dh4eGVvJ/yaadpmwbapMabSz8eHh7eAq89fHPwXoJjEkLw8PDwbvHyK3V+jc4DQ76JeSmuuFjj4eHhDXjtxTdf+icjGB4eHt538ialqWScNnX7ZtPx8PDwvoaXtxHkl/J8riJdi4eHh7fGm7cOnC06L24dFsbw8PDwFnjtFTZvlpo3YN1qzMLDw8O7xPsDY1xekzYFngkAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>

@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>前端知识点 | 秦伟的个人博客 | 前端及全栈知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="知识点,Json,PS,Git,SEO,存储,重构,前端,移动端">
+    <meta name="description" content="前端开发知识点 HTML&amp;amp;CSS对Web标准的理解、浏览器内核差异、兼容性、hack、CSS基本功：布局、盒子模型、选择器优先级、HTML5、CSS3、Flexbox JavaScript：数据类型、运算、对象、Function、继承、闭包、作用域、原型链、事件、RegExp、JSON、Ajax、DOM、BOM、内存泄漏、跨域、异步装载、模板引擎、前端MVC、路由、模块化、Canvas、E">
+<meta name="keywords" content="知识点,Json,PS,Git,SEO,存储,重构,前端,移动端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端知识点">
+<meta property="og:url" content="http://www.bluedream.top/前端面试题/前端知识点.html">
+<meta property="og:site_name" content="秦伟的个人博客">
+<meta property="og:description" content="前端开发知识点 HTML&amp;amp;CSS对Web标准的理解、浏览器内核差异、兼容性、hack、CSS基本功：布局、盒子模型、选择器优先级、HTML5、CSS3、Flexbox JavaScript：数据类型、运算、对象、Function、继承、闭包、作用域、原型链、事件、RegExp、JSON、Ajax、DOM、BOM、内存泄漏、跨域、异步装载、模板引擎、前端MVC、路由、模块化、Canvas、E">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-09-09T08:00:19.140Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端知识点">
+<meta name="twitter:description" content="前端开发知识点 HTML&amp;amp;CSS对Web标准的理解、浏览器内核差异、兼容性、hack、CSS基本功：布局、盒子模型、选择器优先级、HTML5、CSS3、Flexbox JavaScript：数据类型、运算、对象、Function、继承、闭包、作用域、原型链、事件、RegExp、JSON、Ajax、DOM、BOM、内存泄漏、跨域、异步装载、模板引擎、前端MVC、路由、模块化、Canvas、E">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟的个人博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                时间
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">前端知识点</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">前端知识点</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-08-27T12:30:00.000Z" itemprop="datePublished" class="page-time">
+  2019-08-27
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端面试题/">前端面试题</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前端开发知识点"><span class="post-toc-number">1.</span> <span class="post-toc-text">前端开发知识点</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTML-amp-CSS"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">HTML&amp;CSS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript："><span class="post-toc-number">1.2.</span> <span class="post-toc-text">JavaScript：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#其他："><span class="post-toc-number">1.3.</span> <span class="post-toc-text">其他：</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JSON-相关"><span class="post-toc-number">2.</span> <span class="post-toc-text">JSON 相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#XML和JSON的区别？"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">XML和JSON的区别？</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PS相关"><span class="post-toc-number">3.</span> <span class="post-toc-text">PS相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PNG-GIF-JPG的区别及如何选"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">PNG,GIF,JPG的区别及如何选</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Git相关"><span class="post-toc-number">4.</span> <span class="post-toc-text">Git相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-fetch和git-pull的区别"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">git fetch和git pull的区别</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#SEO相关"><span class="post-toc-number">5.</span> <span class="post-toc-text">SEO相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端需要注意哪些SEO"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">前端需要注意哪些SEO</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何做SEO优化"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">如何做SEO优化?</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#存储相关"><span class="post-toc-number">6.</span> <span class="post-toc-text">存储相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#浏览器本地存储"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">浏览器本地存储</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#web-storage和cookie的区别"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">web storage和cookie的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cookie-和session-的区别："><span class="post-toc-number">6.3.</span> <span class="post-toc-text">cookie 和session 的区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#描述-cookies、sessionStorage-和-localStorage-的区别？"><span class="post-toc-number">6.4.</span> <span class="post-toc-text">描述 cookies、sessionStorage 和 localStorage 的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#谈谈Cookie的弊端"><span class="post-toc-number">6.5.</span> <span class="post-toc-text">谈谈Cookie的弊端</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#重构相关"><span class="post-toc-number">7.</span> <span class="post-toc-text">重构相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#谈谈你对重构的理解"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">谈谈你对重构的理解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#页面重构怎么操作？"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">页面重构怎么操作？</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前端相关"><span class="post-toc-number">8.</span> <span class="post-toc-text">前端相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端页面有哪三层构成，分别是什么？作用是什么？"><span class="post-toc-number">8.1.</span> <span class="post-toc-text">前端页面有哪三层构成，分别是什么？作用是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Web-前端开发的注意事项？"><span class="post-toc-number">8.2.</span> <span class="post-toc-text">Web 前端开发的注意事项？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#说说你对前端架构师的理解"><span class="post-toc-number">8.3.</span> <span class="post-toc-text">说说你对前端架构师的理解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#平时如何管理你的项目？"><span class="post-toc-number">8.4.</span> <span class="post-toc-text">平时如何管理你的项目？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#说说最近最流行的一些东西吧？"><span class="post-toc-number">8.5.</span> <span class="post-toc-text">说说最近最流行的一些东西吧？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么样的前端代码是好的"><span class="post-toc-number">8.6.</span> <span class="post-toc-text">什么样的前端代码是好的</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#移动端相关"><span class="post-toc-number">9.</span> <span class="post-toc-text">移动端相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#你怎么看待-Web-App-hybrid-App-Native-App？（移动端前端-和-Web-前端区别？）"><span class="post-toc-number">9.1.</span> <span class="post-toc-text">你怎么看待 Web App/hybrid App/Native App？（移动端前端 和 Web 前端区别？）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在设计-Web-APP-时，应当遵循以下几点"><span class="post-toc-number">9.2.</span> <span class="post-toc-text">在设计 Web APP 时，应当遵循以下几点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#移动端（Android、IOS）怎么做好用户体验"><span class="post-toc-number">9.3.</span> <span class="post-toc-text">移动端（Android、IOS）怎么做好用户体验?</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#其他"><span class="post-toc-number">10.</span> <span class="post-toc-text">其他</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何设计突发大规模并发架构？"><span class="post-toc-number">10.1.</span> <span class="post-toc-text">如何设计突发大规模并发架构？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#列举IE与其他浏览器不一样的特性？"><span class="post-toc-number">10.2.</span> <span class="post-toc-text">列举IE与其他浏览器不一样的特性？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#是否了解公钥加密和私钥加密？"><span class="post-toc-number">10.3.</span> <span class="post-toc-text">是否了解公钥加密和私钥加密？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#WEB应用从服务器主动推送Data到客户端有那些方式？"><span class="post-toc-number">10.4.</span> <span class="post-toc-text">WEB应用从服务器主动推送Data到客户端有那些方式？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#列举IE与其他浏览器不一样的特性？-1"><span class="post-toc-number">10.5.</span> <span class="post-toc-text">列举IE与其他浏览器不一样的特性？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么叫优雅降级和渐进增强？"><span class="post-toc-number">10.6.</span> <span class="post-toc-text">什么叫优雅降级和渐进增强？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一个页面从输入-URL-到页面加载显示完成，这个过程中都发生了什么？（流程说的越详细越好）"><span class="post-toc-number">10.7.</span> <span class="post-toc-text">一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？（流程说的越详细越好）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#详细版："><span class="post-toc-number">10.7.1.</span> <span class="post-toc-text">详细版：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#简洁版："><span class="post-toc-number">10.7.2.</span> <span class="post-toc-text">简洁版：</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-前端知识点"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">前端知识点</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-08-27 20:30:00" datetime="2019-08-27T12:30:00.000Z"  itemprop="datePublished">2019-08-27</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端面试题/">前端面试题</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="前端开发知识点"><a href="#前端开发知识点" class="headerlink" title="前端开发知识点"></a>前端开发知识点</h2><hr>
+<h3 id="HTML-amp-CSS"><a href="#HTML-amp-CSS" class="headerlink" title="HTML&amp;CSS"></a>HTML&amp;CSS</h3><p>对Web标准的理解、浏览器内核差异、兼容性、hack、CSS基本功：布局、盒子模型、选择器优先级、HTML5、CSS3、Flexbox</p>
+<h3 id="JavaScript："><a href="#JavaScript：" class="headerlink" title="JavaScript："></a>JavaScript：</h3><p>数据类型、运算、对象、Function、继承、闭包、作用域、原型链、事件、RegExp、JSON、Ajax、DOM、BOM、内存泄漏、跨域、异步装载、模板引擎、前端MVC、路由、模块化、Canvas、ECMAScript </p>
+<h3 id="其他："><a href="#其他：" class="headerlink" title="其他："></a>其他：</h3><ul>
+<li><p>移动端、响应式、自动化构建、HTTP、离线存储、WEB安全、优化、重构、团队协作、可维护、易用性、SEO、UED、架构、职业生涯、快速学习能力</p>
+</li>
+<li><p>DOM结构 —— 两个节点之间可能存在哪些关系以及如何在节点之间任意移动。</p>
+</li>
+<li><p>DOM操作 —— 如何添加、移除、移动、复制、创建和查找节点等。</p>
+</li>
+<li><p>事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。</p>
+</li>
+<li><p>XMLHttpRequest —— 这是什么、怎样完整地执行一次GET请求、怎样检测错误。</p>
+</li>
+<li><p>严格模式与混杂模式 —— 如何触发这两种模式，区分它们有何意义。</p>
+</li>
+<li><p>盒模型 —— 外边距、内边距和边框之间的关系，及IE8以下版本的浏览器中的盒模型</p>
+</li>
+<li><p>块级元素与行内元素 —— 怎么用CSS控制它们、以及如何合理的使用它们</p>
+</li>
+<li><p>浮动元素 —— 怎么使用它们、它们有什么问题以及怎么解决这些问题。</p>
+</li>
+<li><p>HTML与XHTML —— 二者有什么区别，你觉得应该使用哪一个并说出理由。</p>
+</li>
+<li><p>JSON —— 作用、用途、设计结构</p>
+</li>
+</ul>
+<h2 id="JSON-相关"><a href="#JSON-相关" class="headerlink" title="JSON 相关"></a>JSON 相关</h2><ul>
+<li>JSON(JavaScript Object Notation) 是一种轻量级的数据交换格式</li>
+<li>它是基于JavaScript的一个子集。数据格式简单, 易于读写, 占用带宽小</li>
+<li>JSON字符串转换为JSON对象:</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var obj =eval(&apos;(&apos;+ str +&apos;)&apos;);</span><br><span class="line">var obj = str.parseJSON();</span><br><span class="line">var obj = JSON.parse(str);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>JSON对象转换为JSON字符串：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var last=obj.toJSONString();</span><br><span class="line">var last=JSON.stringify(obj);</span><br></pre></td></tr></table></figure>
+
+<h3 id="XML和JSON的区别？"><a href="#XML和JSON的区别？" class="headerlink" title="XML和JSON的区别？"></a><strong>XML和JSON的区别？</strong></h3><ul>
+<li>数据体积方面<ul>
+<li>JSON相对于XML来讲，数据的体积小，传递的速度更快些。</li>
+</ul>
+</li>
+<li>数据交互方面<ul>
+<li>JSON与JavaScript的交互更加方便，更容易解析处理，更好的数据交互</li>
+</ul>
+</li>
+<li>数据描述方面<ul>
+<li>JSON对数据的描述性比XML较差</li>
+</ul>
+</li>
+<li>传输速度方面<ul>
+<li>JSON的速度要远远快于XML</li>
+</ul>
+</li>
+</ul>
+<h2 id="PS相关"><a href="#PS相关" class="headerlink" title="PS相关"></a>PS相关</h2><hr>
+<h3 id="PNG-GIF-JPG的区别及如何选"><a href="#PNG-GIF-JPG的区别及如何选" class="headerlink" title="PNG,GIF,JPG的区别及如何选"></a><strong>PNG,GIF,JPG的区别及如何选</strong></h3><ul>
+<li>GIF：<ul>
+<li>8位像素，256色</li>
+<li>无损压缩</li>
+<li>支持简单动画</li>
+<li>支持boolean透明</li>
+<li>适合简单动画</li>
+</ul>
+</li>
+<li>JPEG：<ul>
+<li>颜色限于256</li>
+<li>有损压缩</li>
+<li>可控制压缩质量</li>
+<li>不支持透明</li>
+<li>适合照片</li>
+</ul>
+</li>
+<li>PNG：<ul>
+<li>有PNG8和truecolor PNG</li>
+<li>PNG8类似GIF颜色上限为256，文件小，支持alpha透明度，无动画</li>
+<li>适合图标、背景、按钮</li>
+</ul>
+</li>
+</ul>
+<h2 id="Git相关"><a href="#Git相关" class="headerlink" title="Git相关"></a>Git相关</h2><h3 id="git-fetch和git-pull的区别"><a href="#git-fetch和git-pull的区别" class="headerlink" title="git fetch和git pull的区别"></a><strong>git fetch和git pull的区别</strong></h3><ul>
+<li>git pull：相当于是从远程获取最新版本并merge到本地</li>
+<li>git fetch：相当于是从远程获取最新版本到本地，不会自动merge</li>
+</ul>
+<h2 id="SEO相关"><a href="#SEO相关" class="headerlink" title="SEO相关"></a>SEO相关</h2><h3 id="前端需要注意哪些SEO"><a href="#前端需要注意哪些SEO" class="headerlink" title="前端需要注意哪些SEO"></a>前端需要注意哪些SEO</h3><hr>
+<ul>
+<li>合理的title、description、keywords：搜索对着三项的权重逐个减小，title值强调重点即可，重要关键词出现不要超过2次，而且要靠前，不同页面title要有所不同；description把页面内容高度概括，长度合适，不可过分堆砌关键词，不同页面description有所不同；keywords列举出重要关键词即可</li>
+<li>语义化的HTML代码，符合W3C规范：语义化代码让搜索引擎容易理解网页</li>
+<li>重要内容HTML代码放在最前：搜索引擎抓取HTML顺序是从上到下，有的搜索引擎对抓取长度有限制，保证重要内容一定会被抓取</li>
+<li>重要内容不要用js输出：爬虫不会执行js获取内容</li>
+<li>少用iframe：搜索引擎不会抓取iframe中的内容</li>
+<li>非装饰性图片必须加alt</li>
+<li>提高网站速度：网站速度是搜索引擎排序的一个重要指标</li>
+</ul>
+<h3 id="如何做SEO优化"><a href="#如何做SEO优化" class="headerlink" title="如何做SEO优化?"></a>如何做SEO优化?</h3><ul>
+<li><p>标题与关键词</p>
+</li>
+<li><p>设置有吸引力切合实际的标题，标题中要包含所做的关键词</p>
+</li>
+<li><p>网站结构目录</p>
+</li>
+<li><p>最好不要超过三级，每级有“面包屑导航”，使网站成树状结构分布</p>
+</li>
+<li><p>页面元素</p>
+</li>
+<li><p>给图片标注”Alt”可以让搜索引擎更友好的收录</p>
+</li>
+<li><p>网站内容</p>
+</li>
+<li><p>每个月每天有规律的更新网站的内容，会使搜索引擎更加喜欢</p>
+</li>
+<li><p>友情链接</p>
+</li>
+<li><p>对方一定要是正规网站，每天有专业的团队或者个人维护更新</p>
+</li>
+<li><p>内链的布置</p>
+</li>
+<li><p>使网站形成类似蜘蛛网的结构，不会出现单独连接的页面或链接</p>
+</li>
+<li><p>流量分析</p>
+</li>
+<li><p>通过统计工具(百度统计，CNZZ)分析流量来源，指导下一步的SEO</p>
+</li>
+</ul>
+<h2 id="存储相关"><a href="#存储相关" class="headerlink" title="存储相关"></a>存储相关</h2><h3 id="浏览器本地存储"><a href="#浏览器本地存储" class="headerlink" title="浏览器本地存储"></a>浏览器本地存储</h3><ul>
+<li><p>在较高版本的浏览器中，js提供了sessionStorage和globalStorage。在HTML5中提供了localStorage来取代globalStorage</p>
+</li>
+<li><p>html5中的Web Storage包括了两种存储方式：sessionStorage和localStorage</p>
+</li>
+<li><p>sessionStorage用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储</p>
+</li>
+<li><p>而localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的</p>
+</li>
+</ul>
+<h3 id="web-storage和cookie的区别"><a href="#web-storage和cookie的区别" class="headerlink" title="web storage和cookie的区别"></a><strong>web storage和cookie的区别</strong></h3><ul>
+<li><p>Web Storage的概念和cookie相似，区别是它是为了更大容量存储设计的。Cookie的大小是受限的，并且每次你请求一个新的页面的时候Cookie都会被发送过去，这样无形中浪费了带宽，另外cookie还需要指定作用域，不可以跨域调用</p>
+</li>
+<li><p>除此之外，WebStorage拥有setItem,getItem,removeItem,clear等方法，不像cookie需要前端开发者自己封装setCookie，getCookie</p>
+</li>
+<li><p>但是cookie也是不可以或缺的：cookie的作用是与服务器进行交互，作为HTTP规范的一部分而存在 ，而Web Storage仅仅是为了在本地“存储”数据而生</p>
+</li>
+<li><p>浏览器的支持除了IE７及以下不支持外，其他标准浏览器都完全支持(ie及FF需在web服务器里运行)，值得一提的是IE总是办好事，例如IE7、IE6中的userData其实就是javascript本地存储的解决方案。通过简单的代码封装可以统一到所有的浏览器都支持web storage</p>
+</li>
+<li><p>localStorage和sessionStorage都具有相同的操作方法，例如setItem、getItem和removeItem等</p>
+</li>
+</ul>
+<h3 id="cookie-和session-的区别："><a href="#cookie-和session-的区别：" class="headerlink" title="cookie 和session 的区别："></a><strong>cookie 和session 的区别：</strong></h3><ul>
+<li><code>session</code>： 是一个抽象概念，开发者为了实现中断和继续等操作，将 <code>user agent</code>和 <code>server</code> 之间一对一的交互，抽象为“会话”，进而衍生出“会话状态”，也就是 <code>session</code> 的概念</li>
+<li><code>cookie</code>：它是一个世纪存在的东西，<code>http</code> 协议中定义在 <code>header</code> 中的字段，可以认为是 <code>session</code> 的一种后端无状态实现</li>
+</ul>
+<blockquote>
+<p>现在我们常说的 <code>session</code>，是为了绕开 <code>cookie</code> 的各种限制，通常借助 <code>cookie</code>本身和后端存储实现的，一种更高级的会话状态实现</p>
+</blockquote>
+<p><code>session</code> 的常见实现要借助<code>cookie</code>来发送 <code>sessionID</code></p>
+<ul>
+<li><p>1、cookie数据存放在客户的浏览器上，session数据放在服务器上。</p>
+</li>
+<li><p>2、cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗</p>
+<ul>
+<li>考虑到安全应当使用session。</li>
+</ul>
+</li>
+<li><p>3、session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能</p>
+<ul>
+<li>考虑到减轻服务器性能方面，应当使用COOKIE。</li>
+</ul>
+</li>
+<li><p>4、单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。</p>
+</li>
+<li><p>5、所以个人建议：</p>
+<ul>
+<li>将登陆信息等重要信息存放为SESSION</li>
+<li>其他信息如果需要保留，可以放在COOKIE中</li>
+</ul>
+</li>
+</ul>
+<h3 id="描述-cookies、sessionStorage-和-localStorage-的区别？"><a href="#描述-cookies、sessionStorage-和-localStorage-的区别？" class="headerlink" title="描述 cookies、sessionStorage 和 localStorage 的区别？"></a>描述 cookies、sessionStorage 和 localStorage 的区别？</h3><ul>
+<li><p>与服务器交互：</p>
+<ul>
+<li>cookie 是网站为了标示用户身份而储存在用户本地终端上的数据（通常经过加密）</li>
+<li>cookie 始终会在同源 http 请求头中携带（即使不需要），在浏览器和服务器间来回传递</li>
+<li>sessionStorage 和 localStorage 不会自动把数据发给服务器，仅在本地保存</li>
+</ul>
+</li>
+<li><p>存储大小：</p>
+</li>
+<li><p>cookie 数据根据不同浏览器限制，大小一般不能超过 4k</p>
+</li>
+<li><p>sessionStorage 和 localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大</p>
+</li>
+<li><p>有期时间：</p>
+<ul>
+<li>localStorage    存储持久数据，浏览器关闭后数据不丢失除非主动删除数据</li>
+</ul>
+</li>
+<li><p>sessionStorage  数据在当前浏览器窗口关闭后自动删除</p>
+<ul>
+<li>cookie   设置的cookie过期时间之前一直有效，与浏览器是否关闭无关</li>
+</ul>
+</li>
+</ul>
+<h3 id="谈谈Cookie的弊端"><a href="#谈谈Cookie的弊端" class="headerlink" title="谈谈Cookie的弊端"></a>谈谈Cookie的弊端</h3><p>cookie虽然在持久保存客户端数据提供了方便，分担了服务器存储的负担，但还是有很多局限性的</p>
+<ul>
+<li>1.每个特定的域名下最多生成20个cookie， 个数有限制（IE6或更低版本最多20个cookie）</li>
+<li>2.Firefox、IE7和之后的版本最后可以有50个cookie，chrome和Safari没有做硬性限制</li>
+<li>3.IE 和 Opera 会清理近期最少使用的 cookie，Firefox 会随机清理 cookie</li>
+<li>4.cookie 的最大大约为 4096 字节，为了兼容性，一般设置不超过 4095 字节</li>
+<li>5.如果 cookie 被人拦截了，就可以取得所有的 session 信息</li>
+</ul>
+<h2 id="重构相关"><a href="#重构相关" class="headerlink" title="重构相关"></a>重构相关</h2><h3 id="谈谈你对重构的理解"><a href="#谈谈你对重构的理解" class="headerlink" title="谈谈你对重构的理解"></a>谈谈你对重构的理解</h3><ul>
+<li>网站重构：在不改变外部行为的前提下，简化结构、添加可读性，而在网站前端保持一致的行为。也就是说是在不改变UI的情况下，对网站进行优化， 在扩展的同时保持一致的UI</li>
+<li>对于传统的网站来说重构通常是：<ul>
+<li>表格(table)布局改为DIV+CSS</li>
+<li>使网站前端兼容于现代浏览器(针对于不合规范的CSS、如对IE6有效的)</li>
+<li>对于移动平台的优化</li>
+<li>针对于SEO进行优化</li>
+<li>深层次的网站重构应该考虑的方面</li>
+</ul>
+</li>
+</ul>
+<h3 id="页面重构怎么操作？"><a href="#页面重构怎么操作？" class="headerlink" title="页面重构怎么操作？"></a><strong>页面重构怎么操作？</strong></h3><ul>
+<li>网站重构：在不改变外部行为的前提下，简化结构、添加可读性，而在网站前端保持一致的行为。也就是说是在不改变UI的情况下，对网站进行优化，在扩展的同时保持一致的UI</li>
+<li>对于传统的网站来说重构通常可以考虑的方面是：<ul>
+<li>升级第三方依赖</li>
+<li>使用HTML5、CSS3、ES6 新特性</li>
+<li>加入响应式布局</li>
+<li>统一代码风格规范</li>
+<li>减少代码间的耦合</li>
+<li>压缩/合并JS、CSS、image等静态资源(通常是由服务器来解决)</li>
+<li>程序的性能优化</li>
+<li>采用CDN来加速资源加载</li>
+<li>对于JS DOM的优化</li>
+<li>HTTP服务器的文件缓存</li>
+<li>表格(table)布局改为DIV+CSS</li>
+<li>使网站前端兼容于现代浏览器(针对于不合规范的CSS、如对IE6有效的)</li>
+<li>对于移动平台的优化</li>
+<li>针对于SEO进行优化</li>
+<li>深层次的网站重构应该考虑的方面</li>
+<li>让代码保持弹性</li>
+<li>严格按规范编写代码</li>
+<li>设计可扩展的API</li>
+<li>代替旧有的框架、语言(如VB)</li>
+<li>增强用户体验</li>
+<li>通常来说对于速度的优化也包含在重构中</li>
+</ul>
+</li>
+</ul>
+<h2 id="前端相关"><a href="#前端相关" class="headerlink" title="前端相关"></a>前端相关</h2><h3 id="前端页面有哪三层构成，分别是什么？作用是什么？"><a href="#前端页面有哪三层构成，分别是什么？作用是什么？" class="headerlink" title="前端页面有哪三层构成，分别是什么？作用是什么？"></a><strong>前端页面有哪三层构成，分别是什么？作用是什么？</strong></h3><ul>
+<li>结构层：由 (X)HTML 标记语言负责，解决页面“内容是什么”的问题</li>
+<li>表示层：由 CSS 负责，解决页面“如何显示内容”的问题</li>
+<li>行为层：由 JS 脚本负责，解决页面上“内容应该如何对事件作出反应”的问题</li>
+</ul>
+<h3 id="Web-前端开发的注意事项？"><a href="#Web-前端开发的注意事项？" class="headerlink" title="Web 前端开发的注意事项？"></a><strong>Web 前端开发的注意事项？</strong></h3><ul>
+<li>特别设置 meta 标签 viewport</li>
+<li>百分比布局宽度，结合 box-sizing: border-box;</li>
+<li>使用 rem 作为计算单位。rem 只参照跟节点 html 的字体大小计算</li>
+<li>使用 css3 新特性。弹性盒模型、多列布局、媒体查询等</li>
+<li>多机型、多尺寸、多系统覆盖测试</li>
+</ul>
+<h3 id="说说你对前端架构师的理解"><a href="#说说你对前端架构师的理解" class="headerlink" title="说说你对前端架构师的理解"></a><strong>说说你对前端架构师的理解</strong></h3><ul>
+<li>负责前端团队的管理及与其他团队的协调工作，提升团队成员能力和整体效率；带领团队完成研发工具及平台前端部分的设计、研发和维护； 带领团队进行前端领域前沿技术研究及新技术调研，保证团队的技术领先负责前端开发规范制定、功能模块化设计、公共组件搭建等工作，并组织培训</li>
+</ul>
+<h3 id="平时如何管理你的项目？"><a href="#平时如何管理你的项目？" class="headerlink" title="平时如何管理你的项目？"></a><strong>平时如何管理你的项目？</strong></h3><ul>
+<li>规定全局样式、公共脚本</li>
+<li>严格要求代码注释(html/js/css)</li>
+<li>严格要求静态资源存放路径</li>
+<li>Git 提交必须填写说明</li>
+</ul>
+<h3 id="说说最近最流行的一些东西吧？"><a href="#说说最近最流行的一些东西吧？" class="headerlink" title="说说最近最流行的一些东西吧？"></a><strong>说说最近最流行的一些东西吧？</strong></h3><ul>
+<li>ES6、Node、React、Webpack</li>
+</ul>
+<h3 id="什么样的前端代码是好的"><a href="#什么样的前端代码是好的" class="headerlink" title="什么样的前端代码是好的"></a><strong>什么样的前端代码是好的</strong></h3><ul>
+<li>高复用低耦合，这样文件小，好维护，而且好扩展。</li>
+</ul>
+<h2 id="移动端相关"><a href="#移动端相关" class="headerlink" title="移动端相关"></a>移动端相关</h2><h3 id="你怎么看待-Web-App-hybrid-App-Native-App？（移动端前端-和-Web-前端区别？）"><a href="#你怎么看待-Web-App-hybrid-App-Native-App？（移动端前端-和-Web-前端区别？）" class="headerlink" title="你怎么看待 Web App/hybrid App/Native App？（移动端前端 和 Web 前端区别？）"></a><strong>你怎么看待 Web App/hybrid App/Native App？（移动端前端 和 Web 前端区别？）</strong></h3><ul>
+<li>Web App(HTML5)：采用HTML5生存在浏览器中的应用，不需要下载安装<ul>
+<li>优点：开发成本低，迭代更新容易，不需用户升级，跨多个平台和终端</li>
+<li>缺点：消息推送不够及时，支持图形和动画效果较差，功能使用限制（相机、GPS等）</li>
+</ul>
+</li>
+<li>Hybrid App(混合开发)：UI WebView，需要下载安装<ul>
+<li>优点：接近 Native App 的体验，部分支持离线功能</li>
+<li>缺点：性能速度较慢，未知的部署时间，受限于技术尚不成熟</li>
+</ul>
+</li>
+<li>Native App(原生开发)：依托于操作系统，有很强的交互，需要用户下载安装使用<ul>
+<li>优点：用户体验完美，支持离线工作，可访问本地资源（通讯录，相册）</li>
+<li>缺点：开发成本高（多系统），开发成本高（版本更新），需要应用商店的审核</li>
+</ul>
+</li>
+</ul>
+<h3 id="在设计-Web-APP-时，应当遵循以下几点"><a href="#在设计-Web-APP-时，应当遵循以下几点" class="headerlink" title="在设计 Web APP 时，应当遵循以下几点"></a><strong>在设计 Web APP 时，应当遵循以下几点</strong></h3><ul>
+<li>简化不重要的动画/动效/图形文字样式</li>
+<li>少用手势，避免与浏览器手势冲突</li>
+<li>减少页面内容，页面跳转次数，尽量在当前页面显示</li>
+<li>增强 Loading 趣味性，增强页面主次关系</li>
+</ul>
+<h3 id="移动端（Android、IOS）怎么做好用户体验"><a href="#移动端（Android、IOS）怎么做好用户体验" class="headerlink" title="移动端（Android、IOS）怎么做好用户体验?"></a><strong>移动端（Android、IOS）怎么做好用户体验?</strong></h3><ul>
+<li>清晰的视觉纵线</li>
+<li>信息的分组、极致的减法</li>
+<li>利用选择代替输入</li>
+<li>标签及文字的排布方式</li>
+<li>依靠明文确认密码</li>
+<li>合理的键盘利用</li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="如何设计突发大规模并发架构？"><a href="#如何设计突发大规模并发架构？" class="headerlink" title="如何设计突发大规模并发架构？"></a><strong>如何设计突发大规模并发架构？</strong></h3><ul>
+<li>及时响应(NoSQL缓存)</li>
+<li>数据安全(数据备份)</li>
+<li>负载均衡</li>
+</ul>
+<h3 id="列举IE与其他浏览器不一样的特性？"><a href="#列举IE与其他浏览器不一样的特性？" class="headerlink" title="列举IE与其他浏览器不一样的特性？"></a><strong>列举IE与其他浏览器不一样的特性？</strong></h3><ul>
+<li>IE 的渲染引擎是 Trident 与 W3C 标准差异较大：例如盒子模型的怪异模式</li>
+<li>JS 方面有很多独立的方法，例如事件处理不同：绑定/删除事件，阻止冒泡，阻止默认事件等</li>
+<li>CSS 方面也有自己独有的处理方式，例如设置透明，低版本IE中使用滤镜的方式</li>
+</ul>
+<h3 id="是否了解公钥加密和私钥加密？"><a href="#是否了解公钥加密和私钥加密？" class="headerlink" title="是否了解公钥加密和私钥加密？"></a><strong>是否了解公钥加密和私钥加密？</strong></h3><ul>
+<li>私钥用于对数据进行签名，公钥用于对签名进行验证</li>
+<li>网站在浏览器端用公钥加密敏感数据，然后在服务器端再用私钥解密</li>
+</ul>
+<h3 id="WEB应用从服务器主动推送Data到客户端有那些方式？"><a href="#WEB应用从服务器主动推送Data到客户端有那些方式？" class="headerlink" title="WEB应用从服务器主动推送Data到客户端有那些方式？"></a><strong>WEB应用从服务器主动推送Data到客户端有那些方式？</strong></h3><ul>
+<li>AJAX 轮询</li>
+<li>html5 服务器推送事件<br><code>(new EventSource(SERVER_URL)).addEventListener(&quot;message&quot;, func);</code></li>
+<li>html5 Websocket</li>
+<li><code>(new WebSocket(SERVER_URL)).addEventListener(&quot;message&quot;, func);</code></li>
+<li>不可见的iframe</li>
+<li>WebSocket通过Flash</li>
+<li>XHR长时间连接</li>
+<li>XHR Multipart Streaming</li>
+<li>script标签的长时间连接(可跨域)</li>
+</ul>
+<h3 id="列举IE与其他浏览器不一样的特性？-1"><a href="#列举IE与其他浏览器不一样的特性？-1" class="headerlink" title="列举IE与其他浏览器不一样的特性？"></a><strong>列举IE与其他浏览器不一样的特性？</strong></h3><ul>
+<li>事件不同之处：<ul>
+<li>触发事件的元素被认为是目标（target）。而在 IE 中，目标包含在 event 对象的 srcElement 属性；</li>
+<li>获取字符代码、如果按键代表一个字符（shift、ctrl、alt除外），IE 的 keyCode 会返回字符代码（Unicode），DOM 中按键的代码和字符是分离的，要获取字符代码，需要使用 charCode 属性；</li>
+<li>阻止某个事件的默认行为，IE 中阻止某个事件的默认行为，必须将 returnValue 属性设置为 false，Mozilla 中，需要调用 preventDefault() 方法；</li>
+<li>停止事件冒泡，IE 中阻止事件进一步冒泡，需要设置 cancelBubble 为 true，Mozzilla 中，需要调用 stopPropagation()</li>
+</ul>
+</li>
+</ul>
+<h3 id="什么叫优雅降级和渐进增强？"><a href="#什么叫优雅降级和渐进增强？" class="headerlink" title="什么叫优雅降级和渐进增强？"></a><strong>什么叫优雅降级和渐进增强？</strong></h3><ul>
+<li>优雅降级：Web站点在所有新式浏览器中都能正常工作，如果用户使用的是老式浏览器，则代码会针对旧版本的IE进行降级处理了,使之在旧式浏览器上以某种形式降级体验却不至于完全不能用</li>
+<li>渐进增强：从被所有浏览器支持的基本功能开始，逐步地添加那些只有新版本浏览器才支持的功能,向页面增加不影响基础浏览器的额外样式和功能的。当浏览器支持时，它们会自动地呈现出来并发挥作用。</li>
+<li>如：默认使用flash上传，但如果浏览器支持 HTML5 的文件上传功能，则使用HTML5实现更好的体验</li>
+</ul>
+<h3 id="一个页面从输入-URL-到页面加载显示完成，这个过程中都发生了什么？（流程说的越详细越好）"><a href="#一个页面从输入-URL-到页面加载显示完成，这个过程中都发生了什么？（流程说的越详细越好）" class="headerlink" title="一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？（流程说的越详细越好）"></a><strong>一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？（流程说的越详细越好）</strong></h3><blockquote>
+<p>注：这题胜在区分度高，知识点覆盖广，再不懂的人，也能答出几句，而高手可以根据自己擅长的领域自由发挥，从URL规范、HTTP协议、DNS、CDN、数据库查询、 到浏览器流式解析、CSS规则构建、layout、paint、onload/domready、JS执行、JS API绑定等等</p>
+</blockquote>
+<ul>
+<li><h4 id="详细版："><a href="#详细版：" class="headerlink" title="详细版："></a>详细版：</h4></li>
+<li><p>1、浏览器会开启一个线程来处理这个请求，对 URL 分析判断如果是 http 协议就按照 Web 方式来处理;</p>
+</li>
+<li><p>2、调用浏览器内核中的对应方法，比如 WebView 中的 loadUrl 方法;</p>
+</li>
+<li><p>3、通过DNS解析获取网址的IP地址，设置 UA 等信息发出第二个GET请求;</p>
+</li>
+<li><p>4、进行HTTP协议会话，客户端发送报头(请求报头);</p>
+</li>
+<li><p>5、进入到web服务器上的 Web Server，如 Apache、Tomcat、Node.JS 等服务器;</p>
+</li>
+<li><p>6、进入部署好的后端应用，如 PHP、Java、JavaScript、Python 等，找到对应的请求处理;</p>
+</li>
+<li><p>7、处理结束回馈报头，此处如果浏览器访问过，缓存上有对应资源，会与服务器最后修改时间对比，一致则返回304;</p>
+</li>
+<li><p>8、浏览器开始下载html文档(响应报头，状态码200)，同时使用缓存;</p>
+</li>
+<li><p>9、文档树建立，根据标记请求所需指定MIME类型的文件（比如css、js）,同时设置了cookie;</p>
+</li>
+<li><p>10、页面开始渲染DOM，JS根据DOM API操作DOM,执行事件绑定等，页面显示完成。</p>
+</li>
+<li><h4 id="简洁版："><a href="#简洁版：" class="headerlink" title="简洁版："></a>简洁版：</h4><ul>
+<li>浏览器根据请求的URL交给DNS域名解析，找到真实IP，向服务器发起请求；</li>
+<li>服务器交给后台处理完成后返回数据，浏览器接收文件（HTML、JS、CSS、图象等）；</li>
+<li>浏览器对加载到的资源（HTML、JS、CSS等）进行语法解析，建立相应的内部数据结构（如HTML的DOM）；</li>
+<li>载入解析到的资源文件，渲染页面，完成</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2019-09-09T08:00:19.140Z" itemprop="dateUpdated">2019-09-09 16:00:19</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/前端面试题/前端知识点.html" target="_blank" rel="external">http://www.bluedream.top/前端面试题/前端知识点.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://www.bluedream.top">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Json/">Json</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PS/">PS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SEO/">SEO</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/存储/">存储</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/知识点/">知识点</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/移动端/">移动端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/重构/">重构</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.bluedream.top/前端面试题/前端知识点.html&title=《前端知识点》 — 秦伟的个人博客&pic=http://www.bluedream.top/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.bluedream.top/前端面试题/前端知识点.html&title=《前端知识点》 — 秦伟的个人博客&source=前端及全栈知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.bluedream.top/前端面试题/前端知识点.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端知识点》 — 秦伟的个人博客&url=http://www.bluedream.top/前端面试题/前端知识点.html&via=http://www.bluedream.top" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.bluedream.top/前端面试题/前端知识点.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/前端面试题/vue.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">vue</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/其他/welcome.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">welcome</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p id="sitetime"></p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p><span>Copyright &copy; 2018 - 2019 <a
+                href="http://www.bluedream.top/" target="_blank">秦伟的个人博客</a>All Rights Reserved.</span>
+            <span>
+                部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除。
+                
+                
+            </span>
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); //北京时间2018-2-13 00:00:00
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = " 本网站已安全运行" +/*diffYears+" 年 "+*/diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.bluedream.top/前端面试题/前端知识点.html&title=《前端知识点》 — 秦伟的个人博客&pic=http://www.bluedream.top/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.bluedream.top/前端面试题/前端知识点.html&title=《前端知识点》 — 秦伟的个人博客&source=前端及全栈知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.bluedream.top/前端面试题/前端知识点.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端知识点》 — 秦伟的个人博客&url=http://www.bluedream.top/前端面试题/前端知识点.html&via=http://www.bluedream.top" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.bluedream.top/前端面试题/前端知识点.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJElEQVR42u3aQW7DMAwEwP7/0+m1QGBnSSkFLI5ORaJGHB8I0tTPT7xef9b751c731fvlG0LAwPjsYzk4PsDrvYnp7zvvzr3w0PBwMAYwLgK7j6s+0CTDHn/v0lsGBgYGPd78iCSoPNzMTAwMKoJ976I3PUtBgYGRt5k5gVf9SXaffO8rRfHwMB4IKMa3H/+/ZX5BgYGxqMYr+LqDRqrqbYcFQYGxtGM3jHrr/jzXyvEg4GBMYDRC2XXxYtqA/yhF8fAwDiIkQwmk8Tae+mWlJ7RQ8TAwBjAqA4Ue4VdbzwZPWgMDIwxjF4h2AOvjEsLM1gMDIyjGfm1ht7YINkf9d8YGBhjGEl6zV/W934/GTBcpmYMDIyjGStt565CMH9MH87CwMAYwMjTZZ5Me5ctqoNPDAyMCYxq65iMHquJOC8Zy20tBgbGwxlLt8niixF703TUvmJgYBzESAq1/JppXlCutLuXDxcDA+NoRu/45CV+4WXZQubEwMCYwFgJrjqM/N74AQMDYzIjGTE2c3zrskVU4WJgYBzN6JWD1U92tbUYGBjTGPl4YNfYMk/o5S4cAwPjIMaruNYvk/WKwmgSi4GBcSgjXz1k+cJEaz8GBsYERhLc+lWM9QEABgYGRjXx9Qq4pA3Oi0gMDAyMJKDyYQsnYmBgYPQS7krLmqfaaPCAgYExgNG7WpGn1KQNTn4TAwNjJmOldcwHBknjWg0LAwNjAOMXqM0sulpxfK4AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
