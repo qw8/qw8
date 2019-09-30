@@ -47,7 +47,7 @@
 <meta property="og:image" content="http://www.bluedream.top/img/loading.gif">
 <meta property="og:image" content="http://www.bluedream.top/img/loading.gif">
 <meta property="og:image" content="http://www.bluedream.top/img/loading.gif">
-<meta property="og:updated_time" content="2019-09-28T10:14:14.996Z">
+<meta property="og:updated_time" content="2019-09-28T10:30:25.160Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS">
 <meta name="twitter:description" content="介绍一下标准的CSS的盒子模型？低版本IE的盒子模型有什么不同的？有两种， IE 盒子模型、W3C 盒子模型； 区别： IE的content部分把 border 和 padding计算了进去; 盒子模型构成：内容(content)、内填充(padding)、 边框(border)、外边距(margin)  IE8及其以下版本浏览器，未声明 DOCTYPE，内容宽高会包含内填充和边框，称为怪异盒模型">
@@ -139,6 +139,13 @@
               <a href="https://github.com/qw8" target="_blank" >
                 <i class="icon icon-lg icon-github"></i>
                 Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://coding.net/u/qw6" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                coding
               </a>
             </li>
         
@@ -334,18 +341,22 @@
 <h3 id="设置元素浮动后，该元素的-display-值会如何变化？"><a href="#设置元素浮动后，该元素的-display-值会如何变化？" class="headerlink" title="设置元素浮动后，该元素的 display 值会如何变化？"></a>设置元素浮动后，该元素的 display 值会如何变化？</h3><p>设置元素浮动后，该元素的 display 值自动变成 block</p>
 <h3 id="css中属性定义，使得dom元素不显示在浏览器可视范围内？"><a href="#css中属性定义，使得dom元素不显示在浏览器可视范围内？" class="headerlink" title="css中属性定义，使得dom元素不显示在浏览器可视范围内？"></a>css中属性定义，使得dom元素不显示在浏览器可视范围内？</h3><p>1.display属性为none、visibility设为hidden（但是仍然占据页面空间）<br>2.设置宽高为 0，设置透明度为 0，设置 z-index 位置在-1000em(附：该属性仅在定位元素中生效)；</p>
 <h3 id="display-float-position的关系"><a href="#display-float-position的关系" class="headerlink" title="display,float,position的关系"></a>display,float,position的关系</h3><ul>
-<li><p>如果 <code>display</code> 为<code>none</code>，那么<code>position</code>和<code>float</code>都不起作用，这种情况下元素不产生框</p>
-</li>
-<li><p>否则，如果<code>position</code>值为<code>absolute</code>或者<code>fixed</code>，框就是绝对定位的，<code>float</code>的计算值为<code>none</code>，<code>display</code>根据下面的表格进行调整</p>
-</li>
-<li><p>否则，如果<code>float</code>不是<code>none</code>，框是浮动的，<code>display</code>根据下表进行调整</p>
-</li>
-<li><p>否则，如果元素是根元素，<code>display</code>根据下表进行调整</p>
-</li>
-<li><p>其他情况下<code>display</code>的值为指定值 总结起来：绝对定位、浮动、根元素都需要调整 <code>display</code></p>
-<p><img src="/img/loading.gif" data-original="https://images2018.cnblogs.com/blog/715962/201805/715962-20180513012245079-391725349.png" alt="图片转自网络"></p>
-</li>
+<li>如果 <code>display</code> 为<code>none</code>，那么<code>position</code>和<code>float</code>都不起作用，这种情况下元素不产生框</li>
+<li>否则，如果<code>position</code>值为<code>absolute</code>或者<code>fixed</code>，框就是绝对定位的，<code>float</code>的计算值为<code>none</code>，<code>display</code>根据下面的表格进行调整</li>
+<li>否则，如果<code>float</code>不是<code>none</code>，框是浮动的，<code>display</code>根据下表进行调整</li>
+<li>否则，如果元素是根元素，<code>display</code>根据下表进行调整</li>
+<li>其他情况下<code>display</code>的值为指定值 总结起来：绝对定位、浮动、根元素都需要调整 <code>display</code></li>
 </ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="../images/css007.png" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+
+
 <h3 id="什么是外边距重叠-collapsing-margins-？"><a href="#什么是外边距重叠-collapsing-margins-？" class="headerlink" title="什么是外边距重叠(collapsing margins)？"></a>什么是外边距重叠(collapsing margins)？</h3><p>相邻的两个盒子（可能是兄弟关系也可能是祖先关系）的外边距可以结合成一个单独的外边距。<br>这种合并外边距的方式被称为<strong>折叠</strong>，结合而成的外边距称为<strong>折叠外边距</strong></p>
 <ul>
 <li>两个或多个毗邻的普通流中的块元素垂直方向上的<code>margin</code>会折叠</li>
@@ -1889,7 +1900,7 @@ important 比 内联优先级高</code></pre><p>CSS3新增伪类举例：</p>
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2019-09-28T10:14:14.996Z" itemprop="dateUpdated">2019-09-28 18:14:14</time>
+    最后更新时间：<time datetime="2019-09-28T10:30:25.160Z" itemprop="dateUpdated">2019-09-28 18:30:25</time>
 </span><br>
 
 
