@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>秦伟的个人博客</title>
+  <title>秦伟博客</title>
   
-  <subtitle>前端及全栈知识点、面试题与学习链接的整理</subtitle>
+  <subtitle>前端、全栈、SEO的知识点、面试题与学习链接的整理</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://blog.bluedream.site/"/>
+  <link href="http://blog.seoqp.com/"/>
   <updated>2021-02-22T07:16:11.274Z</updated>
-  <id>http://blog.bluedream.site/</id>
+  <id>http://blog.seoqp.com/</id>
   
   <author>
     <name>秦伟</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>JavaScript数据处理</title>
-    <link href="http://blog.bluedream.site/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/JavaScript%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86.html"/>
-    <id>http://blog.bluedream.site/前端知识点/JavaScript数据处理.html</id>
+    <link href="http://blog.seoqp.com/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/JavaScript%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86.html"/>
+    <id>http://blog.seoqp.com/前端知识点/JavaScript数据处理.html</id>
     <published>2020-01-14T10:24:00.000Z</published>
     <updated>2021-02-22T07:16:11.274Z</updated>
     
@@ -34,23 +34,23 @@
     
     </summary>
     
-      <category term="前端知识点" scheme="http://blog.bluedream.site/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+      <category term="前端知识点" scheme="http://blog.seoqp.com/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     
     
-      <category term="JavaScript" scheme="http://blog.bluedream.site/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://blog.seoqp.com/tags/JavaScript/"/>
     
-      <category term="字符串" scheme="http://blog.bluedream.site/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+      <category term="字符串" scheme="http://blog.seoqp.com/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
-      <category term="数组" scheme="http://blog.bluedream.site/tags/%E6%95%B0%E7%BB%84/"/>
+      <category term="数组" scheme="http://blog.seoqp.com/tags/%E6%95%B0%E7%BB%84/"/>
     
-      <category term="对象" scheme="http://blog.bluedream.site/tags/%E5%AF%B9%E8%B1%A1/"/>
+      <category term="对象" scheme="http://blog.seoqp.com/tags/%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
   <entry>
     <title>工作常见问题(vue)</title>
-    <link href="http://blog.bluedream.site/%E5%B7%A5%E4%BD%9C/%E5%B7%A5%E4%BD%9C%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98(vue).html"/>
-    <id>http://blog.bluedream.site/工作/工作常见问题(vue).html</id>
+    <link href="http://blog.seoqp.com/%E5%B7%A5%E4%BD%9C/%E5%B7%A5%E4%BD%9C%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98(vue).html"/>
+    <id>http://blog.seoqp.com/工作/工作常见问题(vue).html</id>
     <published>2019-12-29T15:40:25.000Z</published>
     <updated>2019-12-31T15:45:45.803Z</updated>
     
@@ -65,21 +65,21 @@
     
     </summary>
     
-      <category term="工作" scheme="http://blog.bluedream.site/categories/%E5%B7%A5%E4%BD%9C/"/>
+      <category term="工作" scheme="http://blog.seoqp.com/categories/%E5%B7%A5%E4%BD%9C/"/>
     
     
-      <category term="前端" scheme="http://blog.bluedream.site/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://blog.seoqp.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="vue" scheme="http://blog.bluedream.site/tags/vue/"/>
+      <category term="vue" scheme="http://blog.seoqp.com/tags/vue/"/>
     
-      <category term="ElementUI" scheme="http://blog.bluedream.site/tags/ElementUI/"/>
+      <category term="ElementUI" scheme="http://blog.seoqp.com/tags/ElementUI/"/>
     
   </entry>
   
   <entry>
     <title>工作常见问题(原生)</title>
-    <link href="http://blog.bluedream.site/%E5%B7%A5%E4%BD%9C/%E5%B7%A5%E4%BD%9C%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98(%E5%8E%9F%E7%94%9F).html"/>
-    <id>http://blog.bluedream.site/工作/工作常见问题(原生).html</id>
+    <link href="http://blog.seoqp.com/%E5%B7%A5%E4%BD%9C/%E5%B7%A5%E4%BD%9C%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98(%E5%8E%9F%E7%94%9F).html"/>
+    <id>http://blog.seoqp.com/工作/工作常见问题(原生).html</id>
     <published>2019-12-11T11:45:42.000Z</published>
     <updated>2019-12-31T16:06:12.060Z</updated>
     
@@ -94,21 +94,21 @@
     
     </summary>
     
-      <category term="工作" scheme="http://blog.bluedream.site/categories/%E5%B7%A5%E4%BD%9C/"/>
+      <category term="工作" scheme="http://blog.seoqp.com/categories/%E5%B7%A5%E4%BD%9C/"/>
     
     
-      <category term="JavaScript" scheme="http://blog.bluedream.site/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://blog.seoqp.com/tags/JavaScript/"/>
     
-      <category term="前端" scheme="http://blog.bluedream.site/tags/%E5%89%8D%E7%AB%AF/"/>
+      <category term="前端" scheme="http://blog.seoqp.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
-      <category term="Css" scheme="http://blog.bluedream.site/tags/Css/"/>
+      <category term="Css" scheme="http://blog.seoqp.com/tags/Css/"/>
     
   </entry>
   
   <entry>
     <title>浏览器兼容性</title>
-    <link href="http://blog.bluedream.site/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7.html"/>
-    <id>http://blog.bluedream.site/前端知识点/浏览器兼容性.html</id>
+    <link href="http://blog.seoqp.com/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/%E6%B5%8F%E8%A7%88%E5%99%A8%E5%85%BC%E5%AE%B9%E6%80%A7.html"/>
+    <id>http://blog.seoqp.com/前端知识点/浏览器兼容性.html</id>
     <published>2019-12-05T09:15:28.000Z</published>
     <updated>2019-12-31T15:53:30.563Z</updated>
     
@@ -123,19 +123,19 @@
     
     </summary>
     
-      <category term="前端知识点" scheme="http://blog.bluedream.site/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+      <category term="前端知识点" scheme="http://blog.seoqp.com/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     
     
-      <category term="浏览器" scheme="http://blog.bluedream.site/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+      <category term="浏览器" scheme="http://blog.seoqp.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
     
-      <category term="兼容性" scheme="http://blog.bluedream.site/tags/%E5%85%BC%E5%AE%B9%E6%80%A7/"/>
+      <category term="兼容性" scheme="http://blog.seoqp.com/tags/%E5%85%BC%E5%AE%B9%E6%80%A7/"/>
     
   </entry>
   
   <entry>
     <title>npm常用命令</title>
-    <link href="http://blog.bluedream.site/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/npm%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html"/>
-    <id>http://blog.bluedream.site/前端知识点/npm常用命令.html</id>
+    <link href="http://blog.seoqp.com/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/npm%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4.html"/>
+    <id>http://blog.seoqp.com/前端知识点/npm常用命令.html</id>
     <published>2019-11-14T03:10:20.000Z</published>
     <updated>2019-12-31T15:51:01.605Z</updated>
     
@@ -151,19 +151,19 @@
     
     </summary>
     
-      <category term="前端知识点" scheme="http://blog.bluedream.site/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+      <category term="前端知识点" scheme="http://blog.seoqp.com/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     
     
-      <category term="npm" scheme="http://blog.bluedream.site/tags/npm/"/>
+      <category term="npm" scheme="http://blog.seoqp.com/tags/npm/"/>
     
-      <category term="node" scheme="http://blog.bluedream.site/tags/node/"/>
+      <category term="node" scheme="http://blog.seoqp.com/tags/node/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript对象</title>
-    <link href="http://blog.bluedream.site/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/JavaScript%E5%AF%B9%E8%B1%A1.html"/>
-    <id>http://blog.bluedream.site/前端知识点/JavaScript对象.html</id>
+    <link href="http://blog.seoqp.com/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/JavaScript%E5%AF%B9%E8%B1%A1.html"/>
+    <id>http://blog.seoqp.com/前端知识点/JavaScript对象.html</id>
     <published>2019-11-05T14:10:40.000Z</published>
     <updated>2021-02-22T07:04:17.346Z</updated>
     
@@ -178,19 +178,19 @@
     
     </summary>
     
-      <category term="前端知识点" scheme="http://blog.bluedream.site/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+      <category term="前端知识点" scheme="http://blog.seoqp.com/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     
     
-      <category term="JavaScript" scheme="http://blog.bluedream.site/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://blog.seoqp.com/tags/JavaScript/"/>
     
-      <category term="对象" scheme="http://blog.bluedream.site/tags/%E5%AF%B9%E8%B1%A1/"/>
+      <category term="对象" scheme="http://blog.seoqp.com/tags/%E5%AF%B9%E8%B1%A1/"/>
     
   </entry>
   
   <entry>
     <title>RequireJS</title>
-    <link href="http://blog.bluedream.site/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/RequireJS.html"/>
-    <id>http://blog.bluedream.site/前端知识点/RequireJS.html</id>
+    <link href="http://blog.seoqp.com/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/RequireJS.html"/>
+    <id>http://blog.seoqp.com/前端知识点/RequireJS.html</id>
     <published>2019-10-29T11:45:42.000Z</published>
     <updated>2019-11-03T16:50:44.869Z</updated>
     
@@ -206,21 +206,21 @@
     
     </summary>
     
-      <category term="前端知识点" scheme="http://blog.bluedream.site/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+      <category term="前端知识点" scheme="http://blog.seoqp.com/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     
     
-      <category term="JavaScript" scheme="http://blog.bluedream.site/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://blog.seoqp.com/tags/JavaScript/"/>
     
-      <category term="模块化" scheme="http://blog.bluedream.site/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+      <category term="模块化" scheme="http://blog.seoqp.com/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
     
-      <category term="AMD规范" scheme="http://blog.bluedream.site/tags/AMD%E8%A7%84%E8%8C%83/"/>
+      <category term="AMD规范" scheme="http://blog.seoqp.com/tags/AMD%E8%A7%84%E8%8C%83/"/>
     
   </entry>
   
   <entry>
     <title>响应式布局</title>
-    <link href="http://blog.bluedream.site/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80.html"/>
-    <id>http://blog.bluedream.site/前端知识点/响应式布局.html</id>
+    <link href="http://blog.seoqp.com/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80.html"/>
+    <id>http://blog.seoqp.com/前端知识点/响应式布局.html</id>
     <published>2019-10-29T08:25:46.000Z</published>
     <updated>2019-11-03T16:48:51.749Z</updated>
     
@@ -235,19 +235,19 @@
     
     </summary>
     
-      <category term="前端知识点" scheme="http://blog.bluedream.site/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+      <category term="前端知识点" scheme="http://blog.seoqp.com/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     
     
-      <category term="网页设计" scheme="http://blog.bluedream.site/tags/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1/"/>
+      <category term="网页设计" scheme="http://blog.seoqp.com/tags/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1/"/>
     
-      <category term="响应式布局" scheme="http://blog.bluedream.site/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/"/>
+      <category term="响应式布局" scheme="http://blog.seoqp.com/tags/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%B8%83%E5%B1%80/"/>
     
   </entry>
   
   <entry>
     <title>网页设计模式</title>
-    <link href="http://blog.bluedream.site/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html"/>
-    <id>http://blog.bluedream.site/前端知识点/网页设计模式.html</id>
+    <link href="http://blog.seoqp.com/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.html"/>
+    <id>http://blog.seoqp.com/前端知识点/网页设计模式.html</id>
     <published>2019-10-28T07:55:55.000Z</published>
     <updated>2019-11-03T16:32:27.145Z</updated>
     
@@ -262,19 +262,19 @@
     
     </summary>
     
-      <category term="前端知识点" scheme="http://blog.bluedream.site/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+      <category term="前端知识点" scheme="http://blog.seoqp.com/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     
     
-      <category term="设计模式" scheme="http://blog.bluedream.site/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://blog.seoqp.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
-      <category term="网页设计" scheme="http://blog.bluedream.site/tags/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1/"/>
+      <category term="网页设计" scheme="http://blog.seoqp.com/tags/%E7%BD%91%E9%A1%B5%E8%AE%BE%E8%AE%A1/"/>
     
   </entry>
   
   <entry>
     <title>HTTP</title>
-    <link href="http://blog.bluedream.site/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/HTTP.html"/>
-    <id>http://blog.bluedream.site/前端面试题/HTTP.html</id>
+    <link href="http://blog.seoqp.com/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/HTTP.html"/>
+    <id>http://blog.seoqp.com/前端面试题/HTTP.html</id>
     <published>2019-10-26T09:52:49.000Z</published>
     <updated>2019-10-31T03:29:19.435Z</updated>
     
@@ -292,19 +292,19 @@
     
     </summary>
     
-      <category term="前端面试题" scheme="http://blog.bluedream.site/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+      <category term="前端面试题" scheme="http://blog.seoqp.com/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
     
-      <category term="HTTP" scheme="http://blog.bluedream.site/tags/HTTP/"/>
+      <category term="HTTP" scheme="http://blog.seoqp.com/tags/HTTP/"/>
     
-      <category term="前端通信" scheme="http://blog.bluedream.site/tags/%E5%89%8D%E7%AB%AF%E9%80%9A%E4%BF%A1/"/>
+      <category term="前端通信" scheme="http://blog.seoqp.com/tags/%E5%89%8D%E7%AB%AF%E9%80%9A%E4%BF%A1/"/>
     
   </entry>
   
   <entry>
     <title>大厂高频题</title>
-    <link href="http://blog.bluedream.site/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%A4%A7%E5%8E%82%E9%AB%98%E9%A2%91%E9%A2%98.html"/>
-    <id>http://blog.bluedream.site/前端面试题/大厂高频题.html</id>
+    <link href="http://blog.seoqp.com/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%A4%A7%E5%8E%82%E9%AB%98%E9%A2%91%E9%A2%98.html"/>
+    <id>http://blog.seoqp.com/前端面试题/大厂高频题.html</id>
     <published>2019-10-24T08:42:29.000Z</published>
     <updated>2021-02-22T07:00:54.208Z</updated>
     
@@ -319,19 +319,19 @@
     
     </summary>
     
-      <category term="前端面试题" scheme="http://blog.bluedream.site/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+      <category term="前端面试题" scheme="http://blog.seoqp.com/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
     
-      <category term="JavaScript" scheme="http://blog.bluedream.site/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://blog.seoqp.com/tags/JavaScript/"/>
     
-      <category term="vue" scheme="http://blog.bluedream.site/tags/vue/"/>
+      <category term="vue" scheme="http://blog.seoqp.com/tags/vue/"/>
     
   </entry>
   
   <entry>
     <title>ES6</title>
-    <link href="http://blog.bluedream.site/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/ES6.html"/>
-    <id>http://blog.bluedream.site/前端面试题/ES6.html</id>
+    <link href="http://blog.seoqp.com/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/ES6.html"/>
+    <id>http://blog.seoqp.com/前端面试题/ES6.html</id>
     <published>2019-10-23T03:42:39.000Z</published>
     <updated>2019-11-03T10:26:21.881Z</updated>
     
@@ -346,19 +346,19 @@
     
     </summary>
     
-      <category term="前端面试题" scheme="http://blog.bluedream.site/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+      <category term="前端面试题" scheme="http://blog.seoqp.com/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
     
-      <category term="JavaScript" scheme="http://blog.bluedream.site/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://blog.seoqp.com/tags/JavaScript/"/>
     
-      <category term="ES6" scheme="http://blog.bluedream.site/tags/ES6/"/>
+      <category term="ES6" scheme="http://blog.seoqp.com/tags/ES6/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript编程题</title>
-    <link href="http://blog.bluedream.site/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/JavaScript%E7%BC%96%E7%A8%8B%E9%A2%98.html"/>
-    <id>http://blog.bluedream.site/前端面试题/JavaScript编程题.html</id>
+    <link href="http://blog.seoqp.com/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/JavaScript%E7%BC%96%E7%A8%8B%E9%A2%98.html"/>
+    <id>http://blog.seoqp.com/前端面试题/JavaScript编程题.html</id>
     <published>2019-10-20T02:41:39.000Z</published>
     <updated>2019-11-03T17:25:09.339Z</updated>
     
@@ -373,21 +373,21 @@
     
     </summary>
     
-      <category term="前端面试题" scheme="http://blog.bluedream.site/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+      <category term="前端面试题" scheme="http://blog.seoqp.com/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
     
-      <category term="JavaScript" scheme="http://blog.bluedream.site/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://blog.seoqp.com/tags/JavaScript/"/>
     
-      <category term="算法" scheme="http://blog.bluedream.site/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://blog.seoqp.com/tags/%E7%AE%97%E6%B3%95/"/>
     
-      <category term="编程题" scheme="http://blog.bluedream.site/tags/%E7%BC%96%E7%A8%8B%E9%A2%98/"/>
+      <category term="编程题" scheme="http://blog.seoqp.com/tags/%E7%BC%96%E7%A8%8B%E9%A2%98/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript不常考</title>
-    <link href="http://blog.bluedream.site/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/JavaScript%E4%B8%8D%E5%B8%B8%E8%80%83.html"/>
-    <id>http://blog.bluedream.site/前端面试题/JavaScript不常考.html</id>
+    <link href="http://blog.seoqp.com/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/JavaScript%E4%B8%8D%E5%B8%B8%E8%80%83.html"/>
+    <id>http://blog.seoqp.com/前端面试题/JavaScript不常考.html</id>
     <published>2019-10-18T12:41:19.000Z</published>
     <updated>2019-11-03T10:32:48.989Z</updated>
     
@@ -402,21 +402,21 @@
     
     </summary>
     
-      <category term="前端面试题" scheme="http://blog.bluedream.site/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+      <category term="前端面试题" scheme="http://blog.seoqp.com/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
     
-      <category term="JavaScript" scheme="http://blog.bluedream.site/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://blog.seoqp.com/tags/JavaScript/"/>
     
-      <category term="DOM" scheme="http://blog.bluedream.site/tags/DOM/"/>
+      <category term="DOM" scheme="http://blog.seoqp.com/tags/DOM/"/>
     
-      <category term="BOM" scheme="http://blog.bluedream.site/tags/BOM/"/>
+      <category term="BOM" scheme="http://blog.seoqp.com/tags/BOM/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript常考2</title>
-    <link href="http://blog.bluedream.site/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/JavaScript%E5%B8%B8%E8%80%832.html"/>
-    <id>http://blog.bluedream.site/前端面试题/JavaScript常考2.html</id>
+    <link href="http://blog.seoqp.com/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/JavaScript%E5%B8%B8%E8%80%832.html"/>
+    <id>http://blog.seoqp.com/前端面试题/JavaScript常考2.html</id>
     <published>2019-10-17T03:21:59.000Z</published>
     <updated>2019-11-03T16:57:02.356Z</updated>
     
@@ -431,21 +431,21 @@
     
     </summary>
     
-      <category term="前端面试题" scheme="http://blog.bluedream.site/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+      <category term="前端面试题" scheme="http://blog.seoqp.com/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
     
-      <category term="JavaScript" scheme="http://blog.bluedream.site/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://blog.seoqp.com/tags/JavaScript/"/>
     
-      <category term="DOM" scheme="http://blog.bluedream.site/tags/DOM/"/>
+      <category term="DOM" scheme="http://blog.seoqp.com/tags/DOM/"/>
     
-      <category term="BOM" scheme="http://blog.bluedream.site/tags/BOM/"/>
+      <category term="BOM" scheme="http://blog.seoqp.com/tags/BOM/"/>
     
   </entry>
   
   <entry>
     <title>JavaScript常考1</title>
-    <link href="http://blog.bluedream.site/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/JavaScript%E5%B8%B8%E8%80%831.html"/>
-    <id>http://blog.bluedream.site/前端面试题/JavaScript常考1.html</id>
+    <link href="http://blog.seoqp.com/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/JavaScript%E5%B8%B8%E8%80%831.html"/>
+    <id>http://blog.seoqp.com/前端面试题/JavaScript常考1.html</id>
     <published>2019-10-14T02:24:57.000Z</published>
     <updated>2021-01-25T09:52:22.121Z</updated>
     
@@ -461,21 +461,21 @@
     
     </summary>
     
-      <category term="前端面试题" scheme="http://blog.bluedream.site/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+      <category term="前端面试题" scheme="http://blog.seoqp.com/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
     
-      <category term="JavaScript" scheme="http://blog.bluedream.site/tags/JavaScript/"/>
+      <category term="JavaScript" scheme="http://blog.seoqp.com/tags/JavaScript/"/>
     
-      <category term="DOM" scheme="http://blog.bluedream.site/tags/DOM/"/>
+      <category term="DOM" scheme="http://blog.seoqp.com/tags/DOM/"/>
     
-      <category term="BOM" scheme="http://blog.bluedream.site/tags/BOM/"/>
+      <category term="BOM" scheme="http://blog.seoqp.com/tags/BOM/"/>
     
   </entry>
   
   <entry>
     <title>vue全家桶</title>
-    <link href="http://blog.bluedream.site/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/vue%E5%85%A8%E5%AE%B6%E6%A1%B6.html"/>
-    <id>http://blog.bluedream.site/前端知识点/vue全家桶.html</id>
+    <link href="http://blog.seoqp.com/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/vue%E5%85%A8%E5%AE%B6%E6%A1%B6.html"/>
+    <id>http://blog.seoqp.com/前端知识点/vue全家桶.html</id>
     <published>2019-10-11T12:34:52.000Z</published>
     <updated>2019-10-29T16:44:22.400Z</updated>
     
@@ -490,21 +490,21 @@
     
     </summary>
     
-      <category term="前端知识点" scheme="http://blog.bluedream.site/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+      <category term="前端知识点" scheme="http://blog.seoqp.com/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     
     
-      <category term="vue-router" scheme="http://blog.bluedream.site/tags/vue-router/"/>
+      <category term="vue-router" scheme="http://blog.seoqp.com/tags/vue-router/"/>
     
-      <category term="vuex" scheme="http://blog.bluedream.site/tags/vuex/"/>
+      <category term="vuex" scheme="http://blog.seoqp.com/tags/vuex/"/>
     
-      <category term="vue-cli" scheme="http://blog.bluedream.site/tags/vue-cli/"/>
+      <category term="vue-cli" scheme="http://blog.seoqp.com/tags/vue-cli/"/>
     
   </entry>
   
   <entry>
     <title>前端布局代码</title>
-    <link href="http://blog.bluedream.site/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%89%8D%E7%AB%AF%E5%B8%83%E5%B1%80%E4%BB%A3%E7%A0%81.html"/>
-    <id>http://blog.bluedream.site/前端面试题/前端布局代码.html</id>
+    <link href="http://blog.seoqp.com/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%89%8D%E7%AB%AF%E5%B8%83%E5%B1%80%E4%BB%A3%E7%A0%81.html"/>
+    <id>http://blog.seoqp.com/前端面试题/前端布局代码.html</id>
     <published>2019-10-08T10:36:27.000Z</published>
     <updated>2019-10-29T16:14:29.902Z</updated>
     
@@ -519,21 +519,21 @@
     
     </summary>
     
-      <category term="前端面试题" scheme="http://blog.bluedream.site/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+      <category term="前端面试题" scheme="http://blog.seoqp.com/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
     
-      <category term="HTML" scheme="http://blog.bluedream.site/tags/HTML/"/>
+      <category term="HTML" scheme="http://blog.seoqp.com/tags/HTML/"/>
     
-      <category term="CSS" scheme="http://blog.bluedream.site/tags/CSS/"/>
+      <category term="CSS" scheme="http://blog.seoqp.com/tags/CSS/"/>
     
-      <category term="页面布局" scheme="http://blog.bluedream.site/tags/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/"/>
+      <category term="页面布局" scheme="http://blog.seoqp.com/tags/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/"/>
     
   </entry>
   
   <entry>
     <title>性能优化</title>
-    <link href="http://blog.bluedream.site/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html"/>
-    <id>http://blog.bluedream.site/前端知识点/性能优化.html</id>
+    <link href="http://blog.seoqp.com/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96.html"/>
+    <id>http://blog.seoqp.com/前端知识点/性能优化.html</id>
     <published>2019-10-05T09:46:24.000Z</published>
     <updated>2019-11-03T08:10:26.452Z</updated>
     
@@ -548,21 +548,21 @@
     
     </summary>
     
-      <category term="前端知识点" scheme="http://blog.bluedream.site/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+      <category term="前端知识点" scheme="http://blog.seoqp.com/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     
     
-      <category term="性能优化" scheme="http://blog.bluedream.site/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+      <category term="性能优化" scheme="http://blog.seoqp.com/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
     
-      <category term="渲染优化" scheme="http://blog.bluedream.site/tags/%E6%B8%B2%E6%9F%93%E4%BC%98%E5%8C%96/"/>
+      <category term="渲染优化" scheme="http://blog.seoqp.com/tags/%E6%B8%B2%E6%9F%93%E4%BC%98%E5%8C%96/"/>
     
-      <category term="网络优化" scheme="http://blog.bluedream.site/tags/%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96/"/>
+      <category term="网络优化" scheme="http://blog.seoqp.com/tags/%E7%BD%91%E7%BB%9C%E4%BC%98%E5%8C%96/"/>
     
   </entry>
   
   <entry>
     <title>前端工程化</title>
-    <link href="http://blog.bluedream.site/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html"/>
-    <id>http://blog.bluedream.site/前端面试题/前端工程化.html</id>
+    <link href="http://blog.seoqp.com/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96.html"/>
+    <id>http://blog.seoqp.com/前端面试题/前端工程化.html</id>
     <published>2019-10-02T02:47:54.000Z</published>
     <updated>2019-11-03T10:59:40.544Z</updated>
     
@@ -577,14 +577,14 @@
     
     </summary>
     
-      <category term="前端面试题" scheme="http://blog.bluedream.site/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+      <category term="前端面试题" scheme="http://blog.seoqp.com/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
     
-      <category term="模块化" scheme="http://blog.bluedream.site/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
+      <category term="模块化" scheme="http://blog.seoqp.com/tags/%E6%A8%A1%E5%9D%97%E5%8C%96/"/>
     
-      <category term="MVVM" scheme="http://blog.bluedream.site/tags/MVVM/"/>
+      <category term="MVVM" scheme="http://blog.seoqp.com/tags/MVVM/"/>
     
-      <category term="前端异常监控" scheme="http://blog.bluedream.site/tags/%E5%89%8D%E7%AB%AF%E5%BC%82%E5%B8%B8%E7%9B%91%E6%8E%A7/"/>
+      <category term="前端异常监控" scheme="http://blog.seoqp.com/tags/%E5%89%8D%E7%AB%AF%E5%BC%82%E5%B8%B8%E7%9B%91%E6%8E%A7/"/>
     
   </entry>
   
