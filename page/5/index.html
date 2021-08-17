@@ -628,7 +628,7 @@ This is my first post.If you have any problems in using this website , you can c
 
   
     <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/前端知识点/JavaScript类、对象和继承.html">JavaScript类、对象和继承</a>
+      <a class="post-title-link" href="/前端知识点/JavaScript类、对象和继承.html">JavaScript继承</a>
     </h3>
   
 
@@ -638,11 +638,11 @@ This is my first post.If you have any problems in using this website , you can c
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        类的定义、实例化JavaScript如何实现一个类，怎么实例化这个类？
-构造函数法（this + prototype） – 用 new 关键字 生成实例对象缺点：用到了 this 和 prototype，编写复杂，可读性差
+        Javascript如何实现继承？继承的本质就是原型链。（这些问题必问的，其实就是考察你对原型链的掌握程度。）
 
+构造函数绑定：使用 call 或 apply 方法，将父对象的构造函数绑定在子对象上
 
-123456789function Mobile(name, price)&#123;   this.name = name;//通过this，表明这是一个构造函数 ...
+12345function Cat(name,color)&#123; 　Animal.apply(this, arguments); 　this.name = name; 　this.col...
     
 
         <a href="/前端知识点/JavaScript类、对象和继承.html" class="post-more waves-effect waves-button">
@@ -652,7 +652,7 @@ This is my first post.If you have any problems in using this website , you can c
     
     <div class="post-footer">
         
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/对象/">对象</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/类/">类</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/继承/">继承</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面向对象/">面向对象</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/继承/">继承</a></li></ul>
 
     </div>
     

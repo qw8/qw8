@@ -14,25 +14,25 @@
     
     
     
-    <title>JavaScript类、对象和继承 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <title>JavaScript继承 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="JavaScript,对象,面向对象,类,继承">
-    <meta name="description" content="类的定义、实例化JavaScript如何实现一个类，怎么实例化这个类？ 构造函数法（this + prototype） – 用 new 关键字 生成实例对象缺点：用到了 this 和 prototype，编写复杂，可读性差   123456789function Mobile(name, price)&amp;#123;   this.name = name;//通过this，表明这是一个构造函数   t">
-<meta name="keywords" content="JavaScript,对象,面向对象,类,继承">
+    <meta name="keywords" content="JavaScript,继承">
+    <meta name="description" content="Javascript如何实现继承？继承的本质就是原型链。（这些问题必问的，其实就是考察你对原型链的掌握程度。）  构造函数绑定：使用 call 或 apply 方法，将父对象的构造函数绑定在子对象上  12345function Cat(name,color)&amp;#123; 　Animal.apply(this, arguments); 　this.name = name; 　this.color">
+<meta name="keywords" content="JavaScript,继承">
 <meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript类、对象和继承">
+<meta property="og:title" content="JavaScript继承">
 <meta property="og:url" content="http://blog.seoqp.com/前端知识点/JavaScript类、对象和继承.html">
 <meta property="og:site_name" content="秦伟博客">
-<meta property="og:description" content="类的定义、实例化JavaScript如何实现一个类，怎么实例化这个类？ 构造函数法（this + prototype） – 用 new 关键字 生成实例对象缺点：用到了 this 和 prototype，编写复杂，可读性差   123456789function Mobile(name, price)&amp;#123;   this.name = name;//通过this，表明这是一个构造函数   t">
+<meta property="og:description" content="Javascript如何实现继承？继承的本质就是原型链。（这些问题必问的，其实就是考察你对原型链的掌握程度。）  构造函数绑定：使用 call 或 apply 方法，将父对象的构造函数绑定在子对象上  12345function Cat(name,color)&amp;#123; 　Animal.apply(this, arguments); 　this.name = name; 　this.color">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-08-13T04:25:01.193Z">
+<meta property="og:updated_time" content="2021-08-13T13:36:22.737Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JavaScript类、对象和继承">
-<meta name="twitter:description" content="类的定义、实例化JavaScript如何实现一个类，怎么实例化这个类？ 构造函数法（this + prototype） – 用 new 关键字 生成实例对象缺点：用到了 this 和 prototype，编写复杂，可读性差   123456789function Mobile(name, price)&amp;#123;   this.name = name;//通过this，表明这是一个构造函数   t">
+<meta name="twitter:title" content="JavaScript继承">
+<meta name="twitter:description" content="Javascript如何实现继承？继承的本质就是原型链。（这些问题必问的，其实就是考察你对原型链的掌握程度。）  构造函数绑定：使用 call 或 apply 方法，将父对象的构造函数绑定在子对象上  12345function Cat(name,color)&amp;#123; 　Animal.apply(this, arguments); 　this.name = name; 　this.color">
     
         <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
     
@@ -141,7 +141,7 @@
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">JavaScript类、对象和继承</div>
+        <div class="flex-col header-title ellipsis">JavaScript继承</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -163,7 +163,7 @@
 <header class="content-header post-header">
 
     <div class="container fade-scale">
-        <h1 class="title">JavaScript类、对象和继承</h1>
+        <h1 class="title">JavaScript继承</h1>
         <h5 class="subtitle">
             
                 <time datetime="2010-03-25T13:10:40.000Z" itemprop="datePublished" class="page-time">
@@ -188,7 +188,7 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#类的定义、实例化"><span class="post-toc-number">1.</span> <span class="post-toc-text">类的定义、实例化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript如何实现一个类，怎么实例化这个类？"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">JavaScript如何实现一个类，怎么实例化这个类？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#构造函数法（this-prototype）-–-用-new-关键字-生成实例对象"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">构造函数法（this + prototype） – 用 new 关键字 生成实例对象</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Object-create-法-–-用-Object-create-生成实例对象"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Object.create 法 – 用 Object.create() 生成实例对象</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#极简主义法（消除-this-和-prototype）-–-调用-createNew-得到实例对象"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">极简主义法（消除 this 和 prototype） – 调用 createNew() 得到实例对象</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ES6-语法糖-class-–-用-new-关键字-生成实例对象"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">ES6 语法糖 class – 用 new 关键字 生成实例对象</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#对象"><span class="post-toc-number">2.</span> <span class="post-toc-text">对象</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是面向对象？"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">什么是面向对象？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#面向对象和面向过程的异同"><span class="post-toc-number">2.1.1.</span> <span class="post-toc-text">面向对象和面向过程的异同</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#面向对象的三大特性"><span class="post-toc-number">2.1.2.</span> <span class="post-toc-text">面向对象的三大特性</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#谈谈This对象的理解"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">谈谈This对象的理解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#谈谈This对象的理解-1"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">谈谈This对象的理解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#this相关-注意箭头函数的this指向问题"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">this相关(注意箭头函数的this指向问题)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#new操作符具体干了什么呢"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">new操作符具体干了什么呢?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#new-操作符具体干了什么呢"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">new 操作符具体干了什么呢?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#new操作符具体干了什么呢-1"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">new操作符具体干了什么呢?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#javascript创建对象的几种方式？"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">javascript创建对象的几种方式？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#call-和-apply-的含义和区别？"><span class="post-toc-number">2.9.</span> <span class="post-toc-text">call() 和 apply() 的含义和区别？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#含义："><span class="post-toc-number">2.9.1.</span> <span class="post-toc-text">含义：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#相同点："><span class="post-toc-number">2.9.2.</span> <span class="post-toc-text">相同点：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#不同点："><span class="post-toc-number">2.9.3.</span> <span class="post-toc-text">不同点：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#javascript-的本地对象，内置对象和宿主对象"><span class="post-toc-number">2.10.</span> <span class="post-toc-text">javascript 的本地对象，内置对象和宿主对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何判断一个对象是否属于某个类？"><span class="post-toc-number">2.11.</span> <span class="post-toc-text">如何判断一个对象是否属于某个类？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原型的constructor属性"><span class="post-toc-number">2.12.</span> <span class="post-toc-text">原型的constructor属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对象的几种创建方式"><span class="post-toc-number">2.13.</span> <span class="post-toc-text">对象的几种创建方式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第一种：内置对象Object-创建"><span class="post-toc-number">2.13.1.</span> <span class="post-toc-text">第一种：内置对象Object 创建</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第二种：使用对象字面量表示法"><span class="post-toc-number">2.13.2.</span> <span class="post-toc-text">第二种：使用对象字面量表示法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第三种：使用工厂模式创建对象"><span class="post-toc-number">2.13.3.</span> <span class="post-toc-text">第三种：使用工厂模式创建对象</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第四种-使用构造函数创建对象"><span class="post-toc-number">2.13.4.</span> <span class="post-toc-text">第四种:使用构造函数创建对象</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第五种：原型创建对象模式"><span class="post-toc-number">2.13.5.</span> <span class="post-toc-text">第五种：原型创建对象模式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#第六种：组合使用构造函数模式和原型模式"><span class="post-toc-number">2.13.6.</span> <span class="post-toc-text">第六种：组合使用构造函数模式和原型模式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#用function来模拟无参的构造函数"><span class="post-toc-number">2.13.7.</span> <span class="post-toc-text">用function来模拟无参的构造函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#用function来模拟参构造函数来实现（用this关键字定义构造的上下文属性）"><span class="post-toc-number">2.13.8.</span> <span class="post-toc-text">用function来模拟参构造函数来实现（用this关键字定义构造的上下文属性）</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#继承"><span class="post-toc-number">3.</span> <span class="post-toc-text">继承</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Javascript如何实现继承？"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Javascript如何实现继承？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Javascript如何实现继承？-1"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Javascript如何实现继承？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#类和继承（es5实现方法-es6实现方法）"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">类和继承（es5实现方法 + es6实现方法）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript-继承方式和优缺点"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">JavaScript 继承方式和优缺点</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#原型链继承"><span class="post-toc-number">3.4.1.</span> <span class="post-toc-text">原型链继承</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#借用构造函数-经典继承"><span class="post-toc-number">3.4.2.</span> <span class="post-toc-text">借用构造函数(经典继承)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#组合继承"><span class="post-toc-number">3.4.3.</span> <span class="post-toc-text">组合继承</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#原型式继承"><span class="post-toc-number">3.4.4.</span> <span class="post-toc-text">原型式继承</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#寄生式继承"><span class="post-toc-number">3.4.5.</span> <span class="post-toc-text">寄生式继承</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#寄生组合式继承"><span class="post-toc-number">3.4.6.</span> <span class="post-toc-text">寄生组合式继承</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何避免原型链上面的对象共享"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">如何避免原型链上面的对象共享</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#javascript-中-this-的指向问题"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">javascript 中 this 的指向问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#null，undefined-的区别？"><span class="post-toc-number">3.7.</span> <span class="post-toc-text">null，undefined 的区别？</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Javascript如何实现继承？"><span class="post-toc-number">1.</span> <span class="post-toc-text">Javascript如何实现继承？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#类和继承（es5实现方法-es6实现方法）"><span class="post-toc-number">2.</span> <span class="post-toc-text">类和继承（es5实现方法 + es6实现方法）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript-继承方式和优缺点"><span class="post-toc-number">3.</span> <span class="post-toc-text">JavaScript 继承方式和优缺点</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#原型链继承"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">原型链继承</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#借用构造函数-经典继承"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">借用构造函数(经典继承)</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#组合继承"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">组合继承</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#原型式继承"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">原型式继承</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#寄生式继承"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">寄生式继承</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#寄生组合式继承"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">寄生组合式继承</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何避免原型链上面的对象共享"><span class="post-toc-number">4.</span> <span class="post-toc-text">如何避免原型链上面的对象共享</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#javascript-中-this-的指向问题"><span class="post-toc-number">5.</span> <span class="post-toc-text">javascript 中 this 的指向问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1、全局环境"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">1、全局环境</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2、函数上下文调用"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">2、函数上下文调用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3、在-DOM-事件中"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">3、在 DOM 事件中</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-1-全局环境中"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">4.1 全局环境中</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
@@ -197,7 +197,7 @@
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
-        <h1 class="post-card-title">JavaScript类、对象和继承</h1>
+        <h1 class="post-card-title">JavaScript继承</h1>
         <div class="post-meta">
             <time class="post-time" title="2010-03-25 21:10:40" datetime="2010-03-25T13:10:40.000Z"  itemprop="datePublished">2010-03-25</time>
 
@@ -214,196 +214,8 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="类的定义、实例化"><a href="#类的定义、实例化" class="headerlink" title="类的定义、实例化"></a>类的定义、实例化</h2><h3 id="JavaScript如何实现一个类，怎么实例化这个类？"><a href="#JavaScript如何实现一个类，怎么实例化这个类？" class="headerlink" title="JavaScript如何实现一个类，怎么实例化这个类？"></a>JavaScript如何实现一个类，怎么实例化这个类？</h3><ul>
-<li><h4 id="构造函数法（this-prototype）-–-用-new-关键字-生成实例对象"><a href="#构造函数法（this-prototype）-–-用-new-关键字-生成实例对象" class="headerlink" title="构造函数法（this + prototype） – 用 new 关键字 生成实例对象"></a>构造函数法（this + prototype） – 用 new 关键字 生成实例对象</h4><p>缺点：用到了 this 和 prototype，编写复杂，可读性差</p>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Mobile</span>(<span class="params">name, price</span>)</span>&#123;</span><br><span class="line">   <span class="keyword">this</span>.name = name;<span class="comment">//通过this，表明这是一个构造函数</span></span><br><span class="line">   <span class="keyword">this</span>.price = price;</span><br><span class="line"> &#125;</span><br><span class="line"> Mobile.prototype.sell = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    alert(<span class="keyword">this</span>.name + <span class="string">"，售价 $"</span> + <span class="keyword">this</span>.price);</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">var</span> iPhone7 = <span class="keyword">new</span> Mobile(<span class="string">"iPhone7"</span>, <span class="number">1000</span>);</span><br><span class="line"> iPhone7.sell();</span><br></pre></td></tr></table></figure>
-
+            <h3 id="Javascript如何实现继承？"><a href="#Javascript如何实现继承？" class="headerlink" title="Javascript如何实现继承？"></a>Javascript如何实现继承？</h3><p>继承的本质就是原型链。（这些问题必问的，其实就是考察你对原型链的掌握程度。）</p>
 <ul>
-<li><h4 id="Object-create-法-–-用-Object-create-生成实例对象"><a href="#Object-create-法-–-用-Object-create-生成实例对象" class="headerlink" title="Object.create 法 – 用 Object.create() 生成实例对象"></a>Object.create 法 – 用 Object.create() 生成实例对象</h4><p>缺点：不能实现私有属性和私有方法，实例对象之间也不能共享数据</p>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Person = &#123;</span><br><span class="line">    firstname: <span class="string">"Mark"</span>,</span><br><span class="line">    lastname: <span class="string">"Yun"</span>,</span><br><span class="line">    age: <span class="number">25</span>,</span><br><span class="line">    introduce: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(<span class="string">'I am '</span> + Person.firstname + <span class="string">' '</span> + Person.lastname);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> person = <span class="built_in">Object</span>.create(Person);</span><br><span class="line">person.introduce();</span><br><span class="line"></span><br><span class="line"><span class="comment">// Object.create 要求 IE9+，低版本浏览器可以自行部署：</span></span><br><span class="line"><span class="keyword">if</span> (!<span class="built_in">Object</span>.create) &#123;</span><br><span class="line">　   <span class="built_in">Object</span>.create = <span class="function"><span class="keyword">function</span> (<span class="params">o</span>) </span>&#123;</span><br><span class="line">　　　 <span class="function"><span class="keyword">function</span> <span class="title">F</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">　　　 F.prototype = o;</span><br><span class="line">　　　 <span class="keyword">return</span> <span class="keyword">new</span> F();</span><br><span class="line">　　&#125;;</span><br><span class="line">　&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><h4 id="极简主义法（消除-this-和-prototype）-–-调用-createNew-得到实例对象"><a href="#极简主义法（消除-this-和-prototype）-–-调用-createNew-得到实例对象" class="headerlink" title="极简主义法（消除 this 和 prototype） – 调用 createNew() 得到实例对象"></a>极简主义法（消除 this 和 prototype） – 调用 createNew() 得到实例对象</h4><p>优点：容易理解，结构清晰优雅，符合传统的”面向对象编程”的构造</p>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Cat = &#123;</span><br><span class="line">  age: <span class="number">3</span>, <span class="comment">// 共享数据 -- 定义在类对象内，createNew() 外</span></span><br><span class="line">  createNew: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> cat = &#123;&#125;;</span><br><span class="line">    <span class="comment">// var cat = Animal.createNew(); // 继承 Animal 类</span></span><br><span class="line">    cat.name = <span class="string">"小咪"</span>;</span><br><span class="line">    <span class="keyword">var</span> sound = <span class="string">"喵喵喵"</span>; <span class="comment">// 私有属性--定义在 createNew() 内，输出对象外</span></span><br><span class="line">    cat.makeSound = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      alert(sound);  <span class="comment">// 暴露私有属性</span></span><br><span class="line">    &#125;;</span><br><span class="line">    cat.changeAge = <span class="function"><span class="keyword">function</span>(<span class="params">num</span>)</span>&#123;</span><br><span class="line">      Cat.age = num; <span class="comment">// 修改共享数据</span></span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">return</span> cat; <span class="comment">// 输出对象</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> cat = Cat.createNew();</span><br><span class="line">cat.makeSound();</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><h4 id="ES6-语法糖-class-–-用-new-关键字-生成实例对象"><a href="#ES6-语法糖-class-–-用-new-关键字-生成实例对象" class="headerlink" title="ES6 语法糖 class – 用 new 关键字 生成实例对象"></a>ES6 语法糖 class – 用 new 关键字 生成实例对象</h4><p>类的实例化很简单，直接 <code>new</code> 出来即可。函数可以作为构造函数来使用，通过 new 来实例化，其实函数本身也是一个对象。</p>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">   <span class="class"><span class="keyword">class</span> <span class="title">Point</span> </span>&#123;</span><br><span class="line">     <span class="keyword">constructor</span>(x, y) &#123;</span><br><span class="line">       <span class="keyword">this</span>.x = x;<span class="comment">//可以在构造函数里写属性</span></span><br><span class="line">       <span class="keyword">this</span>.y = y;</span><br><span class="line">     &#125;</span><br><span class="line">     toString() &#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="string">'('</span> + <span class="keyword">this</span>.x + <span class="string">', '</span> + <span class="keyword">this</span>.y + <span class="string">')'</span>;</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> point = <span class="keyword">new</span> Point(<span class="number">2</span>, <span class="number">3</span>);</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h2><h3 id="什么是面向对象？"><a href="#什么是面向对象？" class="headerlink" title="什么是面向对象？"></a>什么是面向对象？</h3><p>面向对象是把构成问题事务分解成各个对象，建立对象的目的不是为了完成一个步骤，而是为了描叙某个事物在整个解决问题的步骤中的行为。</p>
-<h4 id="面向对象和面向过程的异同"><a href="#面向对象和面向过程的异同" class="headerlink" title="面向对象和面向过程的异同"></a>面向对象和面向过程的异同</h4><ul>
-<li>面向过程就是分析出解决问题所需要的步骤，然后用函数把这些步骤一步一步实现，使用的时候一个一个依次调用就可以了。</li>
-<li>面向对象是把构成问题事务分解成各个对象，建立对象的目的不是为了完成一个步骤，而是为了描叙某个事物在整个解决问题的步骤中的行为。</li>
-</ul>
-<h4 id="面向对象的三大特性"><a href="#面向对象的三大特性" class="headerlink" title="面向对象的三大特性"></a>面向对象的三大特性</h4><ul>
-<li>封装</li>
-<li>继承</li>
-<li>多态</li>
-</ul>
-<h3 id="谈谈This对象的理解"><a href="#谈谈This对象的理解" class="headerlink" title="谈谈This对象的理解"></a>谈谈This对象的理解</h3><ul>
-<li>this总是指向函数的直接调用者（而非间接调用者）</li>
-<li>如果有new关键字，this指向new出来的那个对象</li>
-<li>在事件中，this指向触发这个事件的对象，特殊的是，IE中的attachEvent（触发事件）中的this总是指向全局对象Window</li>
-</ul>
-<h3 id="谈谈This对象的理解-1"><a href="#谈谈This对象的理解-1" class="headerlink" title="谈谈This对象的理解"></a>谈谈This对象的理解</h3><ul>
-<li>this总是指向函数的直接调用者（而非间接调用者），指向调用上下文；</li>
-<li>如果有new关键字，this指向new出来的那个对象；</li>
-<li>在事件中，this指向触发这个事件的对象，特殊的是，IE中的attachEvent中的this总是指向全局对象Window</li>
-</ul>
-<h3 id="this相关-注意箭头函数的this指向问题"><a href="#this相关-注意箭头函数的this指向问题" class="headerlink" title="this相关(注意箭头函数的this指向问题)"></a>this相关(注意箭头函数的this指向问题)</h3><p>ES6中箭头函数的this问题：</p>
-<blockquote>
-<p>ES6 允许使用“箭头”（=&gt;）定义函数， 函数体内的this对象，就是定义时所在的对象，而不是使用时所在的对象。this对象的指向是可变的，但是在箭头函数中，它是固定的，<strong>箭头函数根本没有自己的this，导致内部的this就是外层代码块的this。</strong>所以箭头函数不能做构造函数， 也不能用call()、apply()、bind()这些方法去改变this的指向。</p>
-</blockquote>
-<h3 id="new操作符具体干了什么呢"><a href="#new操作符具体干了什么呢" class="headerlink" title="new操作符具体干了什么呢?"></a>new操作符具体干了什么呢?</h3><ul>
-<li>创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。</li>
-<li>属性和方法被加入到 this 引用的对象中。</li>
-<li>新创建的对象由 this 所引用，并且最后隐式的返回 this</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var obj  = &#123;&#125;;</span><br><span class="line">obj.__proto__ = Base.prototype;</span><br><span class="line">Base.call(obj);</span><br></pre></td></tr></table></figure>
-
-<h3 id="new-操作符具体干了什么呢"><a href="#new-操作符具体干了什么呢" class="headerlink" title="new 操作符具体干了什么呢?"></a>new 操作符具体干了什么呢?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">function Test()&#123;&#125;</span><br><span class="line">const test = new Test()</span><br></pre></td></tr></table></figure>
-
-<ol>
-<li>创建一个<strong>新的空对象实例</strong>。</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const obj = &#123;&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>设置新对象的 constructor 属性为构造函数的名称，设置新对象的<strong>proto</strong>属性指向构造函数的 prototype 对象（设置原型链）</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">obj.constructor = Test</span><br><span class="line">obj.__proto__ = Test.prototype</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>使用新对象调用函数，函数中的 this 被指向新实例对象（执行构造函数，传入相应的参数，如果没有参数就不用传；让 Func 中的 this 指向 obj，并执行 Func 的函数体）</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Test.call(obj)</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>将初始化完毕的新对象地址，保存到等号左边的变量中。判断 Func 的返回值类型： 如果无返回值或者返回一个非对象值，则就将步骤（1）创建的对象返回；如果返回值是一个新对象的话那么直接直接返回该对象。</li>
-</ol>
-<h3 id="new操作符具体干了什么呢-1"><a href="#new操作符具体干了什么呢-1" class="headerlink" title="new操作符具体干了什么呢?"></a>new操作符具体干了什么呢?</h3><ul>
-<li>创建一个空实例对象，并且 this 变量引用该对象，同时还继承了该函数的原型</li>
-<li>属性和方法被加入到 this 引用的对象中</li>
-<li>新创建的对象由 this 所引用，并且最后隐式的返回 this</li>
-</ul>
-<h3 id="javascript创建对象的几种方式？"><a href="#javascript创建对象的几种方式？" class="headerlink" title="javascript创建对象的几种方式？"></a>javascript创建对象的几种方式？</h3><p>javascript创建对象简单的说,无非就是使用内置对象或各种自定义对象，当然还可以用JSON；但写法有很多种，也能混合使用</p>
-<p>1、对象字面量的方式</p>
-<ul>
-<li><code>person={firstname:&quot;Mark&quot;,lastname:&quot;Yun&quot;,age:25,eyecolor:&quot;black&quot;};</code></li>
-</ul>
-<p>2、用function来模拟无参的构造函数</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function Person()&#123;&#125;</span><br><span class="line">//定义一个function，如果使用new&quot;实例化&quot;,该function可以看作是一个Class</span><br><span class="line">person.name=&quot;Mark&quot;;</span><br><span class="line">var person=new Person();</span><br><span class="line">person.age=&quot;25&quot;;</span><br><span class="line">person.work=function()&#123;</span><br><span class="line">alert(person.name+&quot; hello...&quot;);</span><br><span class="line">&#125;</span><br><span class="line">person.work();</span><br></pre></td></tr></table></figure>
-
-<p>3、用function来模拟参构造函数来实现（用this关键字定义构造的上下文属性）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function Pet(name,age,hobby)&#123;</span><br><span class="line">   this.name=name;//this作用域：当前对象</span><br><span class="line">   this.age=age;</span><br><span class="line">   this.hobby=hobby;</span><br><span class="line">   this.eat=function()&#123;</span><br><span class="line">      alert(&quot;我叫&quot;+this.name+&quot;,我喜欢&quot;+this.hobby+&quot;,是个程序员&quot;);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">var maidou =new Pet(&quot;麦兜&quot;,25,&quot;coding&quot;);//实例化、创建对象</span><br><span class="line">maidou.eat();//调用eat方法</span><br></pre></td></tr></table></figure>
-
-<p>4、用工厂方式来创建（内置对象）</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var wcDog =new Object();</span><br><span class="line"> wcDog.name=&quot;旺财&quot;;</span><br><span class="line"> wcDog.age=3;</span><br><span class="line"> wcDog.work=function()&#123;</span><br><span class="line">   alert(&quot;我是&quot;+wcDog.name+&quot;,汪汪汪......&quot;);</span><br><span class="line"> &#125;</span><br><span class="line"> wcDog.work();</span><br></pre></td></tr></table></figure>
-
-<p>5、用原型方式来创建</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function Dog()&#123;</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"> Dog.prototype.name=&quot;旺财&quot;;</span><br><span class="line"> Dog.prototype.eat=function()&#123;</span><br><span class="line"> alert(this.name+&quot;是个吃货&quot;);</span><br><span class="line"> &#125;</span><br><span class="line"> var wangcai =new Dog();</span><br><span class="line"> wangcai.eat();</span><br></pre></td></tr></table></figure>
-
-<p>6、用混合方式来创建</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function Car(name,price)&#123;</span><br><span class="line">  this.name=name;</span><br><span class="line">  this.price=price;</span><br><span class="line">&#125;</span><br><span class="line"> Car.prototype.sell=function()&#123;</span><br><span class="line">   alert(&quot;我是&quot;+this.name+&quot;，我现在卖&quot;+this.price+&quot;万元&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">var camry =new Car(&quot;凯美瑞&quot;,27);</span><br><span class="line">camry.sell();</span><br></pre></td></tr></table></figure>
-
-<h3 id="call-和-apply-的含义和区别？"><a href="#call-和-apply-的含义和区别？" class="headerlink" title="call() 和 apply() 的含义和区别？"></a>call() 和 apply() 的含义和区别？</h3><h4 id="含义："><a href="#含义：" class="headerlink" title="含义："></a>含义：</h4><ul>
-<li><p>call：调用一个对象的一个方法，用另一个对象替换当前对象。</p>
-<p>例如：B.call(A, args1,args2);即 A 对象调用 B 对象的方法。</p>
-</li>
-<li><p>apply：调用一个对象的一个方法，用另一个对象替换当前对象。</p>
-<p>例如：B.apply(A, arguments);即 A 对象应用 B 对象的方法。</p>
-</li>
-</ul>
-<h4 id="相同点："><a href="#相同点：" class="headerlink" title="相同点："></a>相同点：</h4><ul>
-<li>方法的含义是一样的，即方法功能是一样的；</li>
-<li>第一个参数的作用是一样的；</li>
-</ul>
-<h4 id="不同点："><a href="#不同点：" class="headerlink" title="不同点："></a>不同点：</h4><p>两者传入的列表形式不一样</p>
-<ul>
-<li>call 可以传入多个参数；</li>
-<li>apply 只能传入两个参数，所以其第二个参数往往是作为数组形式传入</li>
-</ul>
-<h3 id="javascript-的本地对象，内置对象和宿主对象"><a href="#javascript-的本地对象，内置对象和宿主对象" class="headerlink" title="javascript 的本地对象，内置对象和宿主对象"></a>javascript 的本地对象，内置对象和宿主对象</h3><ul>
-<li><strong>本地对象</strong><br>ECMA-262 把本地对象（native object）定义为“独立于宿主环境的 ECMAScript 实现提供的对象”。简单来说，本地对象就是 ECMA-262 定义的类（引用类型）。它们包括：Object、Function、Array、String、Boolean、Number、Date、RegExp、Error、EvalError、RangeError、ReferenceError、SyntaxError、TypeError、URIError</li>
-<li><strong>内置对象</strong><br>JS中内置了17个对象，常用的是Array对象、Date对象、正则表达式对象、string对象、Global对象</li>
-<li><strong>宿主对象</strong><br>由ECMAScript实现的宿主环境提供的对象，可以理解为：浏览器提供的对象。所有的BOM和DOM都是宿主对象。</li>
-</ul>
-<h3 id="如何判断一个对象是否属于某个类？"><a href="#如何判断一个对象是否属于某个类？" class="headerlink" title="如何判断一个对象是否属于某个类？"></a>如何判断一个对象是否属于某个类？</h3><p>instanceof</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (a <span class="keyword">instanceof</span> Person) &#123;</span><br><span class="line">  alert(<span class="string">"yes"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="原型的constructor属性"><a href="#原型的constructor属性" class="headerlink" title="原型的constructor属性"></a>原型的<code>constructor</code>属性</h3><p><strong>问题：</strong>已知A继承了B，B继承了C。怎么判断 a 是由A<strong>直接生成</strong>的实例，还是B直接生成的实例呢？还是C直接生成的实例呢？</p>
-<blockquote>
-<p>分析：这就要用到原型的<code>constructor</code>属性了。</p>
-</blockquote>
-<ul>
-<li><code>foo.__proto__.constructor === M</code>的结果为<code>true</code>，但是 <code>foo.__proto__.constructor === Object</code>的结果为<code>false</code>。</li>
-<li>所以，用 <code>consturctor</code>判断就比用 <code>instanceof</code>判断，更为严谨。</li>
-</ul>
-<h3 id="对象的几种创建方式"><a href="#对象的几种创建方式" class="headerlink" title="对象的几种创建方式"></a>对象的几种创建方式</h3><blockquote>
-<p>javascript创建对象简单的说,无非就是用内置对象或各种自定义对象，当然还可以用JSON；但写法有很多种，也能混合使用</p>
-</blockquote>
-<h4 id="第一种：内置对象Object-创建"><a href="#第一种：内置对象Object-创建" class="headerlink" title="第一种：内置对象Object 创建"></a>第一种：内置对象Object 创建</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var wcDog =new Object();</span><br><span class="line">     wcDog.name=&quot;旺财&quot;;</span><br><span class="line">     wcDog.age=3;</span><br><span class="line">     wcDog.work=function()&#123;</span><br><span class="line">       alert(&quot;我是&quot;+wcDog.name+&quot;,汪汪汪......&quot;);</span><br><span class="line">     &#125;</span><br><span class="line">     wcDog.work();</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Person = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">Person.name = <span class="string">"Nike"</span>;</span><br><span class="line">Person.age = <span class="number">29</span>;</span><br></pre></td></tr></table></figure>
-
-<p>这行代码创建了 Object 引用类型的一个新实例，然后把实例保存在变量 Person 中。</p>
-<h4 id="第二种：使用对象字面量表示法"><a href="#第二种：使用对象字面量表示法" class="headerlink" title="第二种：使用对象字面量表示法"></a>第二种：使用对象字面量表示法</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> Person = &#123;&#125;; <span class="comment">//相当于 var Person = new Object();</span></span><br><span class="line"><span class="keyword">var</span> Person = &#123;</span><br><span class="line">	name: <span class="string">'Nike'</span>;</span><br><span class="line">	age: <span class="number">29</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>对象字面量是对象定义的一种简写形式，目的在于简化创建包含大量属性的对象的过程。也就是说，第一种和第二种方式创建对象的方法其实都是一样的，只是写法上的区别不同</p>
-<p>在介绍第三种的创建方法之前，我们应该要明白为什么还要用别的方法来创建对象，也就是第一种，第二种方法的缺点所在：它们都是用了同一个接口创建很多对象，会产生大量的重复代码，就是如果你有 100 个对象，那你要输入 100 次很多相同的代码。那我们有什么方法来避免过多的重复代码呢，就是把创建对象的过程封装在函数体内，通过函数的调用直接生成对象。</p>
-<h4 id="第三种：使用工厂模式创建对象"><a href="#第三种：使用工厂模式创建对象" class="headerlink" title="第三种：使用工厂模式创建对象"></a>第三种：使用工厂模式创建对象</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createPerson</span>(<span class="params">name, age, job</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line">  o.name = name;</span><br><span class="line">  o.age = age;</span><br><span class="line">  o.job = job;</span><br><span class="line">  o.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="keyword">this</span>.name);</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">return</span> o;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> person1 = createPerson(<span class="string">"Nike"</span>, <span class="number">29</span>, <span class="string">"teacher"</span>);</span><br><span class="line"><span class="keyword">var</span> person2 = createPerson(<span class="string">"Arvin"</span>, <span class="number">20</span>, <span class="string">"student"</span>);</span><br></pre></td></tr></table></figure>
-
-<p>在使用工厂模式创建对象的时候，我们都可以注意到，在 createPerson 函数中，返回的是一个对象。那么我们就无法判断返回的对象究竟是一个什么样的类型。于是就出现了第四种创建对象的模式。</p>
-<h4 id="第四种-使用构造函数创建对象"><a href="#第四种-使用构造函数创建对象" class="headerlink" title="第四种:使用构造函数创建对象"></a>第四种:使用构造函数创建对象</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age, job</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = name;</span><br><span class="line">  <span class="keyword">this</span>.age = age;</span><br><span class="line">  <span class="keyword">this</span>.job = job;</span><br><span class="line">  <span class="keyword">this</span>.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="keyword">this</span>.name);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person(<span class="string">"Nike"</span>, <span class="number">29</span>, <span class="string">"teacher"</span>);</span><br><span class="line"><span class="keyword">var</span> person2 = <span class="keyword">new</span> Person(<span class="string">"Arvin"</span>, <span class="number">20</span>, <span class="string">"student"</span>);</span><br></pre></td></tr></table></figure>
-
-<p>对比工厂模式，我们可以发现以下区别：</p>
-<p>1.没有显示地创建对象</p>
-<p>2.直接将属性和方法赋给了 this 对象</p>
-<p>3.没有 return 语句</p>
-<p>4.终于可以识别的对象的类型。对于检测对象类型，我们应该使用 instanceof 操作符，我们来进行自主检测：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">alert(person1 <span class="keyword">instanceof</span> <span class="built_in">Object</span>); <span class="comment">//ture</span></span><br><span class="line"></span><br><span class="line">alert(person1 <span class="keyword">instanceof</span> Person); <span class="comment">//ture</span></span><br><span class="line"></span><br><span class="line">alert(person2 <span class="keyword">instanceof</span> <span class="built_in">Object</span>); <span class="comment">//ture</span></span><br><span class="line"></span><br><span class="line">alert(person2 <span class="keyword">instanceof</span> <span class="built_in">Object</span>); <span class="comment">//ture</span></span><br></pre></td></tr></table></figure>
-
-<p>同时我们也应该明白，按照惯例，构造函数始终要应该以一个大写字母开头，而非构造函数则应该以一个小写字母开头。</p>
-<p>那么构造函数确实挺好用的，但是它也有它的缺点：</p>
-<p>就是每个方法都要在每个实例上重新创建一遍，方法指的就是我们在对象里面定义的函数。如果方法的数量很多，就会占用很多不必要的内存。于是出现了第五种创建对象的方法</p>
-<h4 id="第五种：原型创建对象模式"><a href="#第五种：原型创建对象模式" class="headerlink" title="第五种：原型创建对象模式"></a>第五种：原型创建对象模式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function Dog()&#123;&#125;</span><br><span class="line">Dog.prototype.name=&quot;旺财&quot;;</span><br><span class="line">Dog.prototype.eat=function()&#123;</span><br><span class="line">	alert(this.name+&quot;是个吃货&quot;);</span><br><span class="line">&#125;</span><br><span class="line">var wangcai =new Dog();</span><br><span class="line">wangcai.eat();</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">Person.prototype.name = <span class="string">"Nike"</span>;</span><br><span class="line">Person.prototype.age = <span class="number">20</span>;</span><br><span class="line">Person.prototype.jbo = <span class="string">"teacher"</span>;</span><br><span class="line">Person.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="keyword">this</span>.name);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person();</span><br><span class="line">person1.sayName();</span><br></pre></td></tr></table></figure>
-
-<p>使用原型创建对象的方式，可以让所有对象实例共享它所包含的属性和方法。</p>
-<p>如果是使用原型创建对象模式，请看下面代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;&#125;</span><br><span class="line">Person.prototype.name = <span class="string">"Nike"</span>;</span><br><span class="line">Person.prototype.age = <span class="number">20</span>;</span><br><span class="line">Person.prototype.jbo = <span class="string">"teacher"</span>;</span><br><span class="line">Person.prototype.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  alert(<span class="keyword">this</span>.name);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person();</span><br><span class="line"><span class="keyword">var</span> person2 = <span class="keyword">new</span> Person();</span><br><span class="line">person1.name = <span class="string">"Greg"</span>;</span><br><span class="line">alert(person1.name); <span class="comment">//'Greg' --来自实例</span></span><br><span class="line">alert(person2.name); <span class="comment">//'Nike' --来自原型</span></span><br></pre></td></tr></table></figure>
-
-<p>当为对象实例添加一个属性时，这个属性就会屏蔽原型对象中保存的同名属性。</p>
-<p>这时候我们就可以使用构造函数模式与原型模式结合的方式，构造函数模式用于定义实例属性，而原型模式用于定义方法和共享的属性</p>
-<h4 id="第六种：组合使用构造函数模式和原型模式"><a href="#第六种：组合使用构造函数模式和原型模式" class="headerlink" title="第六种：组合使用构造函数模式和原型模式"></a>第六种：组合使用构造函数模式和原型模式</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age, job</span>) </span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.name = name;</span><br><span class="line">	<span class="keyword">this</span>.age = age;</span><br><span class="line">	<span class="keyword">this</span>.job = job;</span><br><span class="line">&#125;</span><br><span class="line">Person.prototype = &#123;</span><br><span class="line">	<span class="keyword">constructor</span>: Person,</span><br><span class="line">	sayName: function() &#123;</span><br><span class="line">		alert(<span class="keyword">this</span>.name);</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person(<span class="string">'Nike'</span>, <span class="number">20</span>, <span class="string">'teacher'</span>);</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function Car(name,price)&#123;</span><br><span class="line">     this.name=name;</span><br><span class="line">     this.price=price; </span><br><span class="line">   &#125;</span><br><span class="line">    Car.prototype.sell=function()&#123;</span><br><span class="line">      alert(&quot;我是&quot;+this.name+&quot;，我现在卖&quot;+this.price+&quot;万元&quot;);</span><br><span class="line">     &#125;</span><br><span class="line">   var camry =new Car(&quot;凯美瑞&quot;,27);</span><br><span class="line">   camry.sell();</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><h4 id="用function来模拟无参的构造函数"><a href="#用function来模拟无参的构造函数" class="headerlink" title="用function来模拟无参的构造函数"></a>用function来模拟无参的构造函数</h4></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> function Person()&#123;&#125;</span><br><span class="line"> //定义一个function，如果使用new&quot;实例化&quot;,该function可以看作是一个Class</span><br><span class="line">    var person=new Person();</span><br><span class="line">        person.name=&quot;Mark&quot;;</span><br><span class="line">        person.age=&quot;25&quot;;</span><br><span class="line">        person.work=function()&#123;</span><br><span class="line">        alert(person.name+&quot; hello...&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">person.work();</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><h4 id="用function来模拟参构造函数来实现（用this关键字定义构造的上下文属性）"><a href="#用function来模拟参构造函数来实现（用this关键字定义构造的上下文属性）" class="headerlink" title="用function来模拟参构造函数来实现（用this关键字定义构造的上下文属性）"></a>用function来模拟参构造函数来实现（用this关键字定义构造的上下文属性）</h4></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function Pet(name,age,hobby)&#123;</span><br><span class="line">       this.name=name;//this作用域：当前对象</span><br><span class="line">       this.age=age;</span><br><span class="line">       this.hobby=hobby;</span><br><span class="line">       this.eat=function()&#123;</span><br><span class="line">          alert(&quot;我叫&quot;+this.name+&quot;,我喜欢&quot;+this.hobby+&quot;,是个程序员&quot;);</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    var maidou =new Pet(&quot;麦兜&quot;,25,&quot;coding&quot;);//实例化、创建对象</span><br><span class="line">    maidou.eat();//调用eat方法</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><blockquote>
-<p>继承的本质就是原型链。（这些问题必问的，其实就是考察你对原型链的掌握程度。）</p>
-</blockquote>
-<h3 id="Javascript如何实现继承？"><a href="#Javascript如何实现继承？" class="headerlink" title="Javascript如何实现继承？"></a>Javascript如何实现继承？</h3><ul>
 <li>构造函数绑定：使用 call 或 apply 方法，将父对象的构造函数绑定在子对象上</li>
 </ul>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cat</span>(<span class="params">name,color</span>)</span>&#123;</span><br><span class="line"> 　Animal.apply(<span class="keyword">this</span>, <span class="built_in">arguments</span>);</span><br><span class="line"> 　<span class="keyword">this</span>.name = name;</span><br><span class="line"> 　<span class="keyword">this</span>.color = color;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -432,20 +244,6 @@
 <li>原型prototype机制或apply和call方法去实现较简单，建议使用构造函数与原型混合方式</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function Parent()&#123;</span><br><span class="line">       this.name = &apos;wang&apos;;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   function Child()&#123;</span><br><span class="line">       this.age = 28;</span><br><span class="line">   &#125;</span><br><span class="line">   Child.prototype = new Parent();//继承了Parent，通过原型</span><br><span class="line"></span><br><span class="line">   var demo = new Child();</span><br><span class="line">   alert(demo.age);</span><br><span class="line">   alert(demo.name);//得到被继承的属性</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Javascript如何实现继承？-1"><a href="#Javascript如何实现继承？-1" class="headerlink" title="Javascript如何实现继承？"></a>Javascript如何实现继承？</h3><ul>
-<li><p>构造继承</p>
-</li>
-<li><p>原型继承</p>
-</li>
-<li><p>实例继承</p>
-</li>
-<li><p>拷贝继承</p>
-</li>
-<li><p>原型prototype机制或apply和call方法去实现较简单，建议使用构造函数与原型混合方式</p>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Parent</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.name = <span class="string">'wang'</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Child</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">this</span>.age = <span class="number">28</span>;</span><br><span class="line">&#125;</span><br><span class="line">Child.prototype = <span class="keyword">new</span> Parent();<span class="comment">//继承了Parent，通过原型</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> demo = <span class="keyword">new</span> Child();</span><br><span class="line">alert(demo.age);</span><br><span class="line">alert(demo.name);<span class="comment">//得到被继承的属性</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="类和继承（es5实现方法-es6实现方法）"><a href="#类和继承（es5实现方法-es6实现方法）" class="headerlink" title="类和继承（es5实现方法 + es6实现方法）"></a>类和继承（es5实现方法 + es6实现方法）</h3><p><a href="http://www.ruanyifeng.com/blog/2011/06/designing_ideas_of_inheritance_mechanism_in_javascript.html" target="_blank" rel="noopener">继承机制</a></p>
 <p><a href="https://juejin.im/post/5ab31129f265da2378402cb3" target="_blank" rel="noopener">ES6创建类的基本语法和继承实现原理</a></p>
@@ -516,20 +314,17 @@
 <p>开发人员普遍认为寄生组合式继承是引用类型最理想的继承范式。</p>
 <h3 id="如何避免原型链上面的对象共享"><a href="#如何避免原型链上面的对象共享" class="headerlink" title="如何避免原型链上面的对象共享"></a>如何避免原型链上面的对象共享</h3><p>避免对象共享可以参考经典的 extend()函数，很多前端框架都有封装的，就是用一个空函数当做中间变量</p>
 <h3 id="javascript-中-this-的指向问题"><a href="#javascript-中-this-的指向问题" class="headerlink" title="javascript 中 this 的指向问题"></a>javascript 中 this 的指向问题</h3><ul>
-<li><strong>全局环境、普通函数（非严格模式）指向 window</strong></li>
-<li><strong>普通函数（严格模式）指向 undefined</strong></li>
-<li><strong>函数作为对象方法及原型链指向的就是上一级的对象</strong></li>
-<li><strong>构造函数指向构造的对象</strong></li>
-<li><strong>DOM 事件中指向触发事件的元素</strong></li>
-<li><strong>箭头函数…</strong></li>
+<li>全局环境、普通函数（非严格模式）指向 window</li>
+<li>普通函数（严格模式）指向 undefined</li>
+<li>函数作为对象方法及原型链指向的就是上一级的对象</li>
+<li>构造函数指向构造的对象</li>
+<li>DOM 事件中指向触发事件的元素</li>
+<li>箭头函数…</li>
 </ul>
-<p>解析：</p>
-<p>1、<strong>全局环境</strong></p>
-<p>全局环境下，this 始终指向全局对象（window），无论是否严格模式；</p>
+<h4 id="1、全局环境"><a href="#1、全局环境" class="headerlink" title="1、全局环境"></a>1、全局环境</h4><p>全局环境下，this 始终指向全局对象（window），无论是否严格模式；</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在浏览器中，全局对象为 window 对象：</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span> === <span class="built_in">window</span>); <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">this</span>.a = <span class="number">37</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.a); <span class="comment">// 37</span></span><br></pre></td></tr></table></figure>
 
-<p>2、<strong>函数上下文调用</strong></p>
-<p>2.1 普通函数</p>
+<h4 id="2、函数上下文调用"><a href="#2、函数上下文调用" class="headerlink" title="2、函数上下文调用"></a>2、函数上下文调用</h4><p>2.1 普通函数</p>
 <p>普通函数内部的 this 分两种情况，严格模式和非严格模式。</p>
 <p>（1）非严格模式下，没有被上一级的对象所调用,this 默认指向全局对象 window。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">&#125;</span><br><span class="line">f1() === <span class="built_in">window</span>; <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
@@ -571,8 +366,7 @@
 <p>（2）可以通过 bind()方法改变内部函数 this 指向。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//默认情况下代码</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.age = <span class="number">0</span>;</span><br><span class="line">  setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">  &#125;, <span class="number">3000</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> Person(); <span class="comment">//3秒后返回 window 对象</span></span><br><span class="line"><span class="comment">//通过bind绑定</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.age = <span class="number">0</span>;</span><br><span class="line">  setTimeout(</span><br><span class="line">    <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="keyword">this</span>);</span><br><span class="line">    &#125;.bind(<span class="keyword">this</span>),</span><br><span class="line">    <span class="number">3000</span></span><br><span class="line">  );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> p = <span class="keyword">new</span> Person(); <span class="comment">//3秒后返回构造函数新生成的对象 Person&#123;...&#125;</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>3、在 DOM 事件中</strong></p>
-<p>3.1 作为一个 DOM 事件处理函数</p>
+<h4 id="3、在-DOM-事件中"><a href="#3、在-DOM-事件中" class="headerlink" title="3、在 DOM 事件中"></a>3、在 DOM 事件中</h4><p>3.1 作为一个 DOM 事件处理函数</p>
 <p>当函数被用作事件处理函数时，它的 this 指向触发事件的元素（针对 addEventListener 事件）。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 被调用时，将关联的元素变成蓝色</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">bluify</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//this指向所点击元素</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"this === e.currentTarget"</span>, <span class="keyword">this</span> === e.currentTarget); <span class="comment">// 总是 true</span></span><br><span class="line">  <span class="comment">// 当 currentTarget 和 target 是同一个对象时为 true</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">"this === e.target"</span>, <span class="keyword">this</span> === e.target);</span><br><span class="line">  <span class="keyword">this</span>.style.backgroundColor = <span class="string">"#A5D9F3"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取文档中的所有元素的列表</span></span><br><span class="line"><span class="keyword">var</span> elements = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"*"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 将bluify作为元素的点击监听函数，当元素被点击时，就会变成蓝色</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; elements.length; i++) &#123;</span><br><span class="line">  elements[i].addEventListener(<span class="string">"click"</span>, bluify, <span class="literal">false</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -583,48 +377,7 @@
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 控制台打印</span><br><span class="line">&lt;button onclick=&quot;console.log(this)&quot;&gt;show me&lt;/button&gt;</span><br><span class="line">Window &#123;postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, parent: Window, …&#125;</span><br><span class="line">undefined</span><br></pre></td></tr></table></figure>
 
-<h3 id="null，undefined-的区别？"><a href="#null，undefined-的区别？" class="headerlink" title="null，undefined 的区别？"></a>null，undefined 的区别？</h3><ul>
-<li><p>null     表示一个对象是“没有值”的值，也就是值为“空”；</p>
-</li>
-<li><p>undefined     表示一个变量声明了没有初始化(赋值)；</p>
-</li>
-<li><p>undefined不是一个有效的JSON，而null是；</p>
-</li>
-<li><p>undefined的类型(typeof)是undefined；</p>
-</li>
-<li><p>null的类型(typeof)是object；</p>
-</li>
-</ul>
-<ul>
-<li>Javascript将未赋值的变量默认值设为undefined；</li>
-<li>Javascript从来不会将变量设为null。它是用来让程序员表明某个用var声明的变量时没有值的</li>
-</ul>
-<ul>
-<li><p>typeof undefined</p>
-<ul>
-<li>undefined :<ul>
-<li>是一个表示”无”的原始值或者说表示”缺少值”，就是此处应该有一个值，但是还没有定义。当尝试读取时会返回 undefined；</li>
-<li>例如变量被声明了，但没有赋值时，就等于undefined</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>typeof null //“object”</p>
-<ul>
-<li>null : 是一个对象(空对象, 没有任何属性和方法)；</li>
-<li>例如作为函数的参数，表示该函数的参数不是对象；</li>
-</ul>
-</li>
-<li><p>注意：</p>
-<ul>
-<li>在验证null时，一定要使用　=== ，因为 == 无法分别 null 和　undefined</li>
-<li>null == undefined // true</li>
-<li>null === undefined // false</li>
-</ul>
-</li>
-</ul>
-<p>4.1 全局环境中</p>
-<p>在全局代码中，箭头函数被设置为全局对象：</p>
+<h4 id="4-1-全局环境中"><a href="#4-1-全局环境中" class="headerlink" title="4.1 全局环境中"></a>4.1 全局环境中</h4><p>在全局代码中，箭头函数被设置为全局对象：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> globalObject = <span class="keyword">this</span>;</span><br><span class="line"><span class="keyword">var</span> foo = <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">this</span>;</span><br><span class="line"><span class="built_in">console</span>.log(foo() === globalObject); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 
 <p>4.2 this 捕获上下文</p>
@@ -648,7 +401,7 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> handler = &#123;</span><br><span class="line">  id: <span class="string">"123456"</span>,</span><br><span class="line"></span><br><span class="line">  init: <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">document</span>.addEventListener(</span><br><span class="line">      <span class="string">"click"</span>,</span><br><span class="line">      event =&gt; <span class="keyword">this</span>.doSomething(event.type),</span><br><span class="line">      <span class="literal">false</span></span><br><span class="line">    );</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  doSomething: <span class="function"><span class="keyword">function</span>(<span class="params">type</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Handling "</span> + type + <span class="string">" for "</span> + <span class="keyword">this</span>.id);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
 <p>上面代码的 init 方法中，使用了箭头函数，这导致这个箭头函数里面的 this，总是指向 handler 对象。如果不使用箭头函数则指向全局 document 对象。</p>
-<p>4.6 箭头函是不适用场景</p>
+<p>4.6 箭头函数不适用场景</p>
 <p>（1）箭头函数不适合定义对象的方法（方法内有 this），因为此时指向 window；</p>
 <p>（2）需要动态 this 的时候，也不应使用箭头函数。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//例1，this指向定义箭头函数所在的作用域，它位于对象cat内，但cat不能构成一个作用域，所以指向全局window，改成普通函数后this指向cat对象。</span></span><br><span class="line"><span class="keyword">const</span> cat = &#123;</span><br><span class="line">  lives: <span class="number">9</span>,</span><br><span class="line">  jumps: <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">this</span>.lives--;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//例2，此时this也是指向window，不能动态监听button，改成普通函数后this指向按钮对象。</span></span><br><span class="line"><span class="keyword">var</span> button = <span class="built_in">document</span>.getElementById(<span class="string">"press"</span>);</span><br><span class="line">button.addEventListener(<span class="string">"click"</span>, () =&gt; &#123;</span><br><span class="line">  <span class="keyword">this</span>.classList.toggle(<span class="string">"on"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
@@ -661,7 +414,7 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2021-08-13T04:25:01.193Z" itemprop="dateUpdated">2021-08-13 12:25:01</time>
+    最后更新时间：<time datetime="2021-08-13T13:36:22.737Z" itemprop="dateUpdated">2021-08-13 21:36:22</time>
 </span><br>
 
 
@@ -687,7 +440,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/对象/">对象</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/类/">类</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/继承/">继承</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面向对象/">面向对象</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/继承/">继承</a></li></ul>
 
 
             
@@ -697,7 +450,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端知识点/JavaScript类、对象和继承.html&title=《JavaScript类、对象和继承》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端知识点/JavaScript类、对象和继承.html&title=《JavaScript继承》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -707,7 +460,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端知识点/JavaScript类、对象和继承.html&title=《JavaScript类、对象和继承》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端知识点/JavaScript类、对象和继承.html&title=《JavaScript继承》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -717,7 +470,7 @@
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript类、对象和继承》 — 秦伟博客&url=http://blog.seoqp.com/前端知识点/JavaScript类、对象和继承.html&via=http://blog.seoqp.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript继承》 — 秦伟博客&url=http://blog.seoqp.com/前端知识点/JavaScript类、对象和继承.html&via=http://blog.seoqp.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
@@ -923,7 +676,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端知识点/JavaScript类、对象和继承.html&title=《JavaScript类、对象和继承》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端知识点/JavaScript类、对象和继承.html&title=《JavaScript继承》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -933,7 +686,7 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端知识点/JavaScript类、对象和继承.html&title=《JavaScript类、对象和继承》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端知识点/JavaScript类、对象和继承.html&title=《JavaScript继承》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
@@ -943,7 +696,7 @@
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript类、对象和继承》 — 秦伟博客&url=http://blog.seoqp.com/前端知识点/JavaScript类、对象和继承.html&via=http://blog.seoqp.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript继承》 — 秦伟博客&url=http://blog.seoqp.com/前端知识点/JavaScript类、对象和继承.html&via=http://blog.seoqp.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
