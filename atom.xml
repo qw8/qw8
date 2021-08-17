@@ -151,9 +151,9 @@
     
       <category term="vue" scheme="http://blog.seoqp.com/tags/vue/"/>
     
-      <category term="ElementUI" scheme="http://blog.seoqp.com/tags/ElementUI/"/>
-    
       <category term="前端" scheme="http://blog.seoqp.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="ElementUI" scheme="http://blog.seoqp.com/tags/ElementUI/"/>
     
   </entry>
   
@@ -506,8 +506,6 @@
       <category term="前端知识点" scheme="http://blog.seoqp.com/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     
     
-      <category term="前端" scheme="http://blog.seoqp.com/tags/%E5%89%8D%E7%AB%AF/"/>
-    
       <category term="前端技能" scheme="http://blog.seoqp.com/tags/%E5%89%8D%E7%AB%AF%E6%8A%80%E8%83%BD/"/>
     
       <category term="PS" scheme="http://blog.seoqp.com/tags/PS/"/>
@@ -517,6 +515,8 @@
       <category term="SEO" scheme="http://blog.seoqp.com/tags/SEO/"/>
     
       <category term="重构" scheme="http://blog.seoqp.com/tags/%E9%87%8D%E6%9E%84/"/>
+    
+      <category term="前端" scheme="http://blog.seoqp.com/tags/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="移动端" scheme="http://blog.seoqp.com/tags/%E7%A7%BB%E5%8A%A8%E7%AB%AF/"/>
     
