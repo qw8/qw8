@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>JavaScript事件 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JavaScript,事件">
+    <meta name="description" content="事件冒泡与事件捕获事件冒泡：由最具体的元素（目标元素）向外传播到最不具体的元素 事件捕获：由最不确定的元素到目标元素 事件绑定的方式 嵌入 dom  1&amp;lt;button onclick=&quot;func()&quot;&amp;gt;按钮&amp;lt;/button&amp;gt;   直接绑定  1btn.onclick = function() &amp;#123;&amp;#125;;   事件监听  1btn.addEventListen">
+<meta name="keywords" content="JavaScript,事件">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript事件">
+<meta property="og:url" content="http://blog.seoqp.com/前端知识点/JavaScript事件.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="事件冒泡与事件捕获事件冒泡：由最具体的元素（目标元素）向外传播到最不具体的元素 事件捕获：由最不确定的元素到目标元素 事件绑定的方式 嵌入 dom  1&amp;lt;button onclick=&quot;func()&quot;&amp;gt;按钮&amp;lt;/button&amp;gt;   直接绑定  1btn.onclick = function() &amp;#123;&amp;#125;;   事件监听  1btn.addEventListen">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2021-08-13T04:24:48.024Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript事件">
+<meta name="twitter:description" content="事件冒泡与事件捕获事件冒泡：由最具体的元素（目标元素）向外传播到最不具体的元素 事件捕获：由最不确定的元素到目标元素 事件绑定的方式 嵌入 dom  1&amp;lt;button onclick=&quot;func()&quot;&amp;gt;按钮&amp;lt;/button&amp;gt;   直接绑定  1btn.onclick = function() &amp;#123;&amp;#125;;   事件监听  1btn.addEventListen">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://coding.net/u/qw6" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                coding
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">JavaScript事件</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">JavaScript事件</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-03-07T13:10:40.000Z" itemprop="datePublished" class="page-time">
+  2020-03-07
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件冒泡与事件捕获"><span class="post-toc-number">1.</span> <span class="post-toc-text">事件冒泡与事件捕获</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件绑定的方式"><span class="post-toc-number">2.</span> <span class="post-toc-text">事件绑定的方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件循环"><span class="post-toc-number">3.</span> <span class="post-toc-text">事件循环</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件委托是什么"><span class="post-toc-number">4.</span> <span class="post-toc-text">事件委托是什么</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件绑定与普通事件有什么区别"><span class="post-toc-number">5.</span> <span class="post-toc-text">事件绑定与普通事件有什么区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#IE-和-DOM-事件流的区别"><span class="post-toc-number">6.</span> <span class="post-toc-text">IE 和 DOM 事件流的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何阻止事件冒泡和默认事件？"><span class="post-toc-number">7.</span> <span class="post-toc-text">如何阻止事件冒泡和默认事件？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件、IE-与火狐的事件机制有什么区别？-如何阻止冒泡？"><span class="post-toc-number">8.</span> <span class="post-toc-text">事件、IE 与火狐的事件机制有什么区别？ 如何阻止冒泡？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何阻止冒泡与默认行为"><span class="post-toc-number">9.</span> <span class="post-toc-text">如何阻止冒泡与默认行为</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-JavaScript事件"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">JavaScript事件</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-03-07 21:10:40" datetime="2020-03-07T13:10:40.000Z"  itemprop="datePublished">2020-03-07</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="事件冒泡与事件捕获"><a href="#事件冒泡与事件捕获" class="headerlink" title="事件冒泡与事件捕获"></a>事件冒泡与事件捕获</h3><p>事件冒泡：由最具体的元素（目标元素）向外传播到最不具体的元素</p>
+<p>事件捕获：由最不确定的元素到目标元素</p>
+<h3 id="事件绑定的方式"><a href="#事件绑定的方式" class="headerlink" title="事件绑定的方式"></a>事件绑定的方式</h3><ul>
+<li>嵌入 dom</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">onclick</span>=<span class="string">"func()"</span>&gt;</span>按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>直接绑定</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>事件监听</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">btn.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="事件循环"><a href="#事件循环" class="headerlink" title="事件循环"></a>事件循环</h3><p>事件循环是一个单线程循环，用于监视调用堆栈并检查是否有工作即将在任务队列中完成。</p>
+<p>如果调用堆栈为空并且任务队列中有回调函数，则将回调函数出队并推送到调用堆栈中执行。</p>
+<h3 id="事件委托是什么"><a href="#事件委托是什么" class="headerlink" title="事件委托是什么"></a>事件委托是什么</h3><p>利用事件冒泡的原理，让自己的所触发的事件，让他的父元素代替执行！</p>
+<p>解析：</p>
+<p>1、那什么样的事件可以用事件委托，什么样的事件不可以用呢？</p>
+<ul>
+<li>适合用事件委托的事件：click，mousedown，mouseup，keydown，keyup，keypress。</li>
+<li>值得注意的是，mouseover 和 mouseout 虽然也有事件冒泡，但是处理它们的时候需要特别的注意，因为需要经常计算它们的位置，处理起来不太容易。</li>
+<li>不适合的就有很多了，举个例子，mousemove，每次都要计算它的位置，非常不好把控，在不如说 focus，blur 之类的，本身就没用冒泡的特性，自然就不用事件委托了。</li>
+</ul>
+<p>2、为什么要用事件委托</p>
+<ul>
+<li>提高性能</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li&gt;苹果&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;香蕉&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;凤梨&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line"></span><br><span class="line">// good</span><br><span class="line">document.querySelector(&apos;ul&apos;).onclick = (event) =&gt; &#123;</span><br><span class="line">  let target = event.target</span><br><span class="line">  if (target.nodeName === &apos;LI&apos;) &#123;</span><br><span class="line">    console.log(target.innerHTML)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// bad</span><br><span class="line">document.querySelectorAll(&apos;li&apos;).forEach((e) =&gt; &#123;</span><br><span class="line">  e.onclick = function() &#123;</span><br><span class="line">    console.log(this.innerHTML)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>新添加的元素还会有之前的事件。</li>
+</ul>
+<p>3、事件冒泡与事件委托的对比</p>
+<ul>
+<li>事件冒泡：box 内部无论是什么元素，点击后都会触发 box 的点击事件</li>
+<li>事件委托：可以对 box 内部的元素进行筛选</li>
+</ul>
+<p>4、事件委托怎么取索引？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul id=<span class="string">"ul"</span>&gt;</span><br><span class="line">    &lt;li&gt;aaaaaaaa&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">    &lt;li&gt;事件委托了 点击当前，如何获取 这个点击的下标&lt;/</span>li&gt;</span><br><span class="line">    &lt;li&gt;cccccccc&lt;<span class="regexp">/li&gt;</span></span><br><span class="line"><span class="regexp">&lt;/u</span>l&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> oUl = <span class="built_in">document</span>.getElementById(<span class="string">"ul"</span>);</span><br><span class="line">        <span class="keyword">var</span> aLi = oUl.getElementsByTagName(<span class="string">"li"</span>);</span><br><span class="line">        oUl.onclick = <span class="function"><span class="keyword">function</span> (<span class="params">ev</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> ev = ev || <span class="built_in">window</span>.event;</span><br><span class="line">            <span class="keyword">var</span> target = ev.target || ev.srcElement;</span><br><span class="line">            <span class="keyword">if</span> (target.nodeName.toLowerCase() == <span class="string">"li"</span>) &#123;</span><br><span class="line">                <span class="keyword">var</span> that = target;</span><br><span class="line">                <span class="keyword">var</span> index;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; aLi.length; i++)</span><br><span class="line">                    <span class="keyword">if</span> (aLi[i] === target) index = i;</span><br><span class="line">                <span class="keyword">if</span> (index &gt;= <span class="number">0</span>) alert(<span class="string">'我的下标是第'</span> + index + <span class="string">'个'</span>);</span><br><span class="line">                target.style.background = <span class="string">"red"</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>拓展：</p>
+<ul>
+<li>键盘事件：keydown keypress keyup</li>
+<li>鼠标事件：mousedown mouseup mousemove mouseout mouseover</li>
+</ul>
+<p><a href="https://github.com/qiilee/js/tree/master/JS/%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98" target="_blank" rel="noopener">参考</a></p>
+<h3 id="事件绑定与普通事件有什么区别"><a href="#事件绑定与普通事件有什么区别" class="headerlink" title="事件绑定与普通事件有什么区别"></a>事件绑定与普通事件有什么区别</h3><ul>
+<li>用普通事件添加相同事件，下面会覆盖上面的，而事件绑定不会</li>
+<li>普通事件是针对非 dom 元素，事件绑定是针对 dom 元素的事件</li>
+</ul>
+<h3 id="IE-和-DOM-事件流的区别"><a href="#IE-和-DOM-事件流的区别" class="headerlink" title="IE 和 DOM 事件流的区别"></a>IE 和 DOM 事件流的区别</h3><p>1.事件流的区别</p>
+<p>IE 采用冒泡型事件 Netscape 使用捕获型事件 DOM 使用先捕获后冒泡型事件<br>示例：</p>
+<p>复制代码代码如下:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span>&gt;</span>点击这里<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>冒泡型事件模型： button-&gt;div-&gt;body (IE 事件流)</p>
+<p>捕获型事件模型： body-&gt;div-&gt;button (Netscape 事件流)</p>
+<p>DOM 事件模型： body-&gt;div-&gt;button-&gt;button-&gt;div-&gt;body (先捕获后冒泡)</p>
+<p>2.事件侦听函数的区别</p>
+<p>IE 使用:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="built_in">Object</span>].attachEvent(<span class="string">"name_of_event_handler"</span>, fnHandler); <span class="comment">//绑定函数</span></span><br><span class="line">[<span class="built_in">Object</span>].detachEvent(<span class="string">"name_of_event_handler"</span>, fnHandler); <span class="comment">//移除绑定</span></span><br></pre></td></tr></table></figure>
+
+<p>DOM 使用：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="built_in">Object</span>].addEventListener(<span class="string">"name_of_event"</span>, fnHandler, bCapture); <span class="comment">//绑定函数</span></span><br><span class="line">[<span class="built_in">Object</span>].removeEventListener(<span class="string">"name_of_event"</span>, fnHandler, bCapture); <span class="comment">//移除绑定</span></span><br></pre></td></tr></table></figure>
+
+<p>bCapture 参数用于设置事件绑定的阶段，true 为捕获阶段，false 为冒泡阶段。</p>
+<h3 id="如何阻止事件冒泡和默认事件？"><a href="#如何阻止事件冒泡和默认事件？" class="headerlink" title="如何阻止事件冒泡和默认事件？"></a>如何阻止事件冒泡和默认事件？</h3><p>阻止浏览器的默认行为<br>window.event?window.event.returnValue=false:e.preventDefault();</p>
+<p>停止事件冒泡<br>window.event?window.event.cancelBubble=true:e.stopPropagation();<br>原生 JavaScript 中，return false;只阻止默认行为，不阻止冒泡，jQuery 中的 return false;既阻止默认行为，又阻止冒泡</p>
+<h3 id="事件、IE-与火狐的事件机制有什么区别？-如何阻止冒泡？"><a href="#事件、IE-与火狐的事件机制有什么区别？-如何阻止冒泡？" class="headerlink" title="事件、IE 与火狐的事件机制有什么区别？ 如何阻止冒泡？"></a>事件、IE 与火狐的事件机制有什么区别？ 如何阻止冒泡？</h3><ol>
+<li>我们在网页中的某个操作（有的操作对应多个事件）。例如：当我们点击一个按钮就会产生一个事件。是可以被 JavaScript 侦测到的行为</li>
+<li>事件处理机制：IE 是事件冒泡、firefox 同时支持两种事件模型，也就是：捕获型事件和冒泡型事件</li>
+<li>ev.stopPropagation();<br>注意旧 ie 的方法：ev.cancelBubble = true;</li>
+</ol>
+<h3 id="如何阻止冒泡与默认行为"><a href="#如何阻止冒泡与默认行为" class="headerlink" title="如何阻止冒泡与默认行为"></a>如何阻止冒泡与默认行为</h3><ul>
+<li>阻止冒泡行为：非 IE 浏览器 stopPropagation()，IE 浏览器 window.event.cancelBubble = true</li>
+<li>阻止默认行为：非 IE 浏览器 preventDefault()，IE 浏览器 window.event.returnValue = false</li>
+</ul>
+<p>解析：</p>
+<p>当需要阻止冒泡行为时，可以使用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">stopBubble</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//如果提供了事件对象，则这是一个非IE浏览器</span></span><br><span class="line">  <span class="keyword">if</span> (e &amp;&amp; e.stopPropagation)</span><br><span class="line">    <span class="comment">//因此它支持W3C的stopPropagation()方法</span></span><br><span class="line">    e.stopPropagation();</span><br><span class="line">  <span class="comment">//否则，我们需要使用IE的方式来取消事件冒泡</span></span><br><span class="line">  <span class="keyword">else</span> <span class="built_in">window</span>.event.cancelBubble = <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>当需要阻止默认行为时，可以使用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//阻止浏览器的默认行为</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">stopDefault</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">  <span class="comment">//阻止默认浏览器动作(W3C)</span></span><br><span class="line">  <span class="keyword">if</span> (e &amp;&amp; e.preventDefault) e.preventDefault();</span><br><span class="line">  <span class="comment">//IE中阻止函数器默认动作的方式</span></span><br><span class="line">  <span class="keyword">else</span> <span class="built_in">window</span>.event.returnValue = <span class="literal">false</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2021-08-13T04:24:48.024Z" itemprop="dateUpdated">2021-08-13 12:24:48</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/前端知识点/JavaScript事件.html" target="_blank" rel="external">http://blog.seoqp.com/前端知识点/JavaScript事件.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://blog.seoqp.com">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/事件/">事件</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端知识点/JavaScript事件.html&title=《JavaScript事件》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端知识点/JavaScript事件.html&title=《JavaScript事件》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.seoqp.com/前端知识点/JavaScript事件.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript事件》 — 秦伟博客&url=http://blog.seoqp.com/前端知识点/JavaScript事件.html&via=http://blog.seoqp.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.seoqp.com/前端知识点/JavaScript事件.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/前端知识点/JavaScript函数.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">JavaScript函数</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/前端知识点/JavaScript数据处理.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">JavaScript数据处理</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p id="sitetime"></p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p><span>Copyright &copy; 2018 - 2021 <a
+                href="http://blog.bluedream.site/" target="_blank">秦伟的个人博客</a>All Rights Reserved.</span>
+            <span>
+                部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除。
+                
+                
+            </span>
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); //北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = " 本网站已安全运行" +/*diffYears+" 年 "+*/diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端知识点/JavaScript事件.html&title=《JavaScript事件》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端知识点/JavaScript事件.html&title=《JavaScript事件》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.seoqp.com/前端知识点/JavaScript事件.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript事件》 — 秦伟博客&url=http://blog.seoqp.com/前端知识点/JavaScript事件.html&via=http://blog.seoqp.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.seoqp.com/前端知识点/JavaScript事件.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIUlEQVR42u3a22oDMQwFwPz/T2+hTy00y5HklMQeP4Xt3mYLwvbR4xGP63s8+/3syM/j1WsfrxgYGBgfy7hux/05qz5K9bl/PB0DA+MARvVhzz7E/fn3z6qej4GBgZFMB5NS2DuOgYGBMWHk68e8KN8fwcDAwMgXsfc3ur8q/+vL1+IYGBgfyJgHA6/7/a/5BgYGxlsyruJItt6q22fXeGBgYOzNmG/KV1srkpqZV9dl2QIGBsYbM1YFij32sskiBgbG1ozqVC8vppMPUQ0PMDAw9mbkoWOOnDSE5Y0dhf8DBgbGFoweqRob5JO8vOD+2jXEwMDYlNF7lXwKWJiftj4HBgbGmYy80SF/uWoY0JuSYmBg7M3oLWWrLRf5qrNZuDEwMLZm9KaD1Si0GnNW408MDIwTGPn21mQGmlw1CVYxMDB2ZeSh4yvOTACjnhEMDIwPZ0yaIarhYjXaLBR6DAyMrRnVFodqJLAqCi3cEwMDY2tG/orNW8fPGiWxGBgY2zGq075eOV5LxcDAOJmRl7zemXlgWd6kw8DA2JpRnfD1mjCqzRajJg8MDIztGL2Cuwo2L7sYGBgnMPLRW6ZWg89e2ImBgXECY7JwTV66Gic0mzYwMDAOYExaJfLJXx6LJveP1sEYGBiHMXqbYtWi3GxHw8DAwIibtOZJRX4HDAyM0xjVRWwv+FzbEIaBgXEOo3rTagzQa7OYRKcYGBgbMb4AUQGtY1M1SXsAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

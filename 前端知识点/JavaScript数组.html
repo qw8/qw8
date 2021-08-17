@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>JavaScript数组 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JavaScript,数组">
+    <meta name="description" content="求数组的最大值Math.max.apply(null, 数组) 123var a = [1, 2, 3, 5];alert(Math.max.apply(null, a)); //最大值alert(Math.min.apply(null, a)); //最小值  列举一下JavaScript数组有哪些原生方法？ arr.concat(arr1, arr2, arrn);  arr.join(“,”">
+<meta name="keywords" content="JavaScript,数组">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript数组">
+<meta property="og:url" content="http://blog.seoqp.com/前端知识点/JavaScript数组.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="求数组的最大值Math.max.apply(null, 数组) 123var a = [1, 2, 3, 5];alert(Math.max.apply(null, a)); //最大值alert(Math.min.apply(null, a)); //最小值  列举一下JavaScript数组有哪些原生方法？ arr.concat(arr1, arr2, arrn);  arr.join(“,”">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2021-08-13T04:24:20.665Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript数组">
+<meta name="twitter:description" content="求数组的最大值Math.max.apply(null, 数组) 123var a = [1, 2, 3, 5];alert(Math.max.apply(null, a)); //最大值alert(Math.min.apply(null, a)); //最小值  列举一下JavaScript数组有哪些原生方法？ arr.concat(arr1, arr2, arrn);  arr.join(“,”">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://coding.net/u/qw6" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                coding
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">JavaScript数组</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">JavaScript数组</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-02-06T13:10:40.000Z" itemprop="datePublished" class="page-time">
+  2020-02-06
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#求数组的最大值"><span class="post-toc-number">1.</span> <span class="post-toc-text">求数组的最大值</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#列举一下JavaScript数组有哪些原生方法？"><span class="post-toc-number">2.</span> <span class="post-toc-text">列举一下JavaScript数组有哪些原生方法？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数组方法-pop-push-unshift-shift"><span class="post-toc-number">3.</span> <span class="post-toc-text">数组方法 pop() push() unshift() shift()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数组的常用方法"><span class="post-toc-number">4.</span> <span class="post-toc-text">数组的常用方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Array-slice-与-Array-splice-的区别？"><span class="post-toc-number">5.</span> <span class="post-toc-text">Array.slice() 与 Array.splice() 的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数组去重的方法（参考链接）"><span class="post-toc-number">6.</span> <span class="post-toc-text">数组去重的方法（参考链接）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#去除数组重复成员的方法"><span class="post-toc-number">7.</span> <span class="post-toc-text">去除数组重复成员的方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#分别阐述-split-slice-splice-join-？"><span class="post-toc-number">8.</span> <span class="post-toc-text">分别阐述 split(),slice(),splice(),join()？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript-数组的函数-map-forEach-reduce-filter"><span class="post-toc-number">9.</span> <span class="post-toc-text">JavaScript 数组的函数 map/forEach/reduce/filter</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#split-join-的区别"><span class="post-toc-number">10.</span> <span class="post-toc-text">split() join()的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#sort-排序原理"><span class="post-toc-number">11.</span> <span class="post-toc-text">sort 排序原理</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-JavaScript数组"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">JavaScript数组</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-02-06 21:10:40" datetime="2020-02-06T13:10:40.000Z"  itemprop="datePublished">2020-02-06</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="求数组的最大值"><a href="#求数组的最大值" class="headerlink" title="求数组的最大值"></a>求数组的最大值</h3><p>Math.max.apply(null, 数组)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>];</span><br><span class="line">alert(<span class="built_in">Math</span>.max.apply(<span class="literal">null</span>, a)); <span class="comment">//最大值</span></span><br><span class="line">alert(<span class="built_in">Math</span>.min.apply(<span class="literal">null</span>, a)); <span class="comment">//最小值</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="列举一下JavaScript数组有哪些原生方法？"><a href="#列举一下JavaScript数组有哪些原生方法？" class="headerlink" title="列举一下JavaScript数组有哪些原生方法？"></a>列举一下JavaScript数组有哪些原生方法？</h3><ul>
+<li><p>arr.concat(arr1, arr2, arrn);</p>
+</li>
+<li><p>arr.join(“,”);</p>
+</li>
+<li><p>arr.sort(func);</p>
+</li>
+<li><p>arr.pop();</p>
+</li>
+<li><p>arr.push(e1, e2, en);</p>
+</li>
+<li><p>arr.shift();</p>
+</li>
+<li><p>unshift(e1, e2, en);</p>
+</li>
+<li><p>arr.reverse();</p>
+</li>
+<li><p>arr.slice(start, end);            </p>
+</li>
+<li><p>arr.splice(index, count, e1, e2, en);  </p>
+</li>
+<li><p>arr.indexOf(el);</p>
+</li>
+<li><p>arr.includes(el);   // ES6</p>
+</li>
+<li></li>
+<li><p>Array.concat( ) 连接数组</p>
+</li>
+<li><p>Array.join( ) 将数组元素连接起来以构建一个字符串</p>
+</li>
+<li><p>Array.length 数组的大小</p>
+</li>
+<li><p>Array.pop( ) 删除并返回数组的最后一个元素</p>
+</li>
+<li><p>Array.push( ) 给数组添加元素</p>
+</li>
+<li><p>Array.reverse( ) 颠倒数组中元素的顺序</p>
+</li>
+<li><p>Array.shift( ) 将元素移出数组</p>
+</li>
+<li><p>Array.slice( ) 返回数组的一部分</p>
+</li>
+<li><p>Array.sort( ) 对数组元素进行排序</p>
+</li>
+<li><p>Array.splice( ) 插入、删除或替换数组的元素</p>
+</li>
+<li><p>Array.toLocaleString( ) 把数组转换成局部字符串</p>
+</li>
+<li><p>Array.toString( ) 将数组转换成一个字符串</p>
+</li>
+<li><p>Array.unshift( ) 在数组头部插入一个元素</p>
+</li>
+</ul>
+<h3 id="数组方法-pop-push-unshift-shift"><a href="#数组方法-pop-push-unshift-shift" class="headerlink" title="数组方法 pop() push() unshift() shift()"></a>数组方法 pop() push() unshift() shift()</h3><ul>
+<li>arr.pop() 从后面删除元素，只能是一个，返回值是删除的元素</li>
+<li>arr.push() 从后面添加元素，返回值为添加完后的数组的长度</li>
+<li>arr.unshift() 从前面添加元素, 返回值是添加完后的数组的长度</li>
+<li>arr.shift() 从前面删除元素，只能删除一个 返回值是删除的元素</li>
+</ul>
+<h3 id="数组的常用方法"><a href="#数组的常用方法" class="headerlink" title="数组的常用方法"></a>数组的常用方法</h3><ol>
+<li>Array.map()</li>
+</ol>
+<p>此方法是将数组中的每个元素调用一个提供的函数，结果作为一个新的数组返回，并没有改变原来的数组</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">let</span> newArr = arr.map(<span class="function"><span class="params">x</span> =&gt;</span> x * <span class="number">2</span>);</span><br><span class="line"><span class="comment">//arr= [1, 2, 3, 4, 5]   原数组保持不变</span></span><br><span class="line"><span class="comment">//newArr = [2, 4, 6, 8, 10] 返回新数组</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>Array.forEach()</li>
+</ol>
+<p>此方法是将数组中的每个元素执行传进提供的函数，没有返回值，直接改变原数组，注意和 map 方法区分</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">num.forEach(<span class="function"><span class="params">x</span> =&gt;</span> x * <span class="number">2</span>);</span><br><span class="line"><span class="comment">// arr = [2, 4, 6, 8, 10]  数组改变,注意和map区分</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>Array.filter()</li>
+</ol>
+<p>此方法是将所有元素进行判断，将满足条件的元素作为一个新的数组返回</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">    <span class="keyword">const</span> isBigEnough =&gt; <span class="function"><span class="params">value</span> =&gt;</span> value &gt;= <span class="number">3</span></span><br><span class="line">    <span class="keyword">let</span> newArr = arr.filter(isBigEnough )</span><br><span class="line">    <span class="comment">//newNum = [3, 4, 5] 满足条件的元素返回为一个新的数组</span></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>Array.every()</li>
+</ol>
+<p>此方法是将所有元素进行判断返回一个布尔值，如果所有元素都满足判断条件，则返回 true，否则为 false：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">    <span class="keyword">const</span> isLessThan4 =&gt; <span class="function"><span class="params">value</span> =&gt;</span> value &lt; <span class="number">4</span></span><br><span class="line">    <span class="keyword">const</span> isLessThan6 =&gt; <span class="function"><span class="params">value</span> =&gt;</span> value &lt; <span class="number">6</span></span><br><span class="line">    arr.every(isLessThan4 ) <span class="comment">//false</span></span><br><span class="line">    arr.every(isLessThan6 ) <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>Array.some()</li>
+</ol>
+<p>此方法是将所有元素进行判断返回一个布尔值，如果存在元素都满足判断条件，则返回 true，若所有元素都不满足判断条件，则返回 false：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr= [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">    <span class="keyword">const</span> isLessThan4 =&gt; <span class="function"><span class="params">value</span> =&gt;</span> value &lt; <span class="number">4</span></span><br><span class="line">    <span class="keyword">const</span> isLessThan6 =&gt; <span class="function"><span class="params">value</span> =&gt;</span> value &gt; <span class="number">6</span></span><br><span class="line">    arr.some(isLessThan4 ) <span class="comment">//true</span></span><br><span class="line">    arr.some(isLessThan6 ) <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>Array.reduce()</li>
+</ol>
+<p>此方法是所有元素调用返回函数，返回值为最后结果,传入的值必须是函数类型：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line"><span class="keyword">const</span> add = <span class="function">(<span class="params">a, b</span>) =&gt;</span> a + b;</span><br><span class="line"><span class="keyword">let</span> sum = arr.reduce(add);</span><br><span class="line"><span class="comment">//sum = 15  相当于累加的效果</span></span><br></pre></td></tr></table></figure>
+
+<p>与之相对应的还有一个 Array.reduceRight() 方法，区别是这个是从右向左操作的</p>
+<ol start="7">
+<li>Array.push()</li>
+</ol>
+<p>此方法是在数组的后面添加新加元素，此方法改变了数组的长度：</p>
+<ol start="8">
+<li>Array.pop()</li>
+</ol>
+<p>此方法在数组后面删除最后一个元素，并返回数组，此方法改变了数组的长度：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">arr.pop();</span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">//[1, 2, 3, 4]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr.length); <span class="comment">//4</span></span><br></pre></td></tr></table></figure>
+
+<ol start="9">
+<li>Array.shift()</li>
+</ol>
+<p>此方法在数组后面删除第一个元素，并返回数组，此方法改变了数组的长度：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">arr.shift();</span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">//[2, 3, 4, 5]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr.length); <span class="comment">//4</span></span><br></pre></td></tr></table></figure>
+
+<ol start="10">
+<li>Array.unshift()</li>
+</ol>
+<p>此方法是将一个或多个元素添加到数组的开头，并返回新数组的长度：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">arr.unshift(<span class="number">6</span>, <span class="number">7</span>);</span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">//[6, 7, 2, 3, 4, 5]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr.length); <span class="comment">//7</span></span><br></pre></td></tr></table></figure>
+
+<ol start="11">
+<li>Array.isArray()</li>
+</ol>
+<p>判断一个对象是不是数组，返回的是布尔值</p>
+<ol start="12">
+<li>Array.concat()</li>
+</ol>
+<p>此方法是一个可以将多个数组拼接成一个数组：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr1 = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">      arr2 = [<span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">  <span class="keyword">let</span> arr = arr1.concat(arr2)</span><br><span class="line">  <span class="built_in">console</span>.log(arr)<span class="comment">//[1, 2, 3, 4, 5]</span></span><br></pre></td></tr></table></figure>
+
+<ol start="13">
+<li><p>Array.toString()</p>
+<p>此方法将数组转化为字符串：</p>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">   <span class="keyword">let</span> str = arr.toString()</span><br><span class="line">   <span class="built_in">console</span>.log(str)<span class="comment">// 1,2,3,4,5</span></span><br></pre></td></tr></table></figure>
+
+<ol start="14">
+<li><p>Array.join()</p>
+<p>此方法也是将数组转化为字符串：</p>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">   <span class="keyword">let</span> str1 = arr.toString()</span><br><span class="line">   <span class="keyword">let</span> str2 = arr.toString(<span class="string">','</span>)</span><br><span class="line">   <span class="keyword">let</span> str3 = arr.toString(<span class="string">'##'</span>)</span><br><span class="line">   <span class="built_in">console</span>.log(str1)<span class="comment">// 12345</span></span><br><span class="line">   <span class="built_in">console</span>.log(str2)<span class="comment">// 1,2,3,4,5</span></span><br><span class="line">   <span class="built_in">console</span>.log(str3)<span class="comment">// 1##2##3##4##5</span></span><br></pre></td></tr></table></figure>
+
+<p>通过例子可以看出和 toString 的区别，可以设置元素之间的间隔~</p>
+<ol start="15">
+<li>Array.splice(开始位置， 删除的个数，元素)</li>
+</ol>
+<p>万能方法，可以实现增删改：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];</span><br><span class="line">     <span class="keyword">let</span> arr1 = arr.splice(<span class="number">2</span>, <span class="number">0</span> <span class="string">'haha'</span>)</span><br><span class="line">     <span class="keyword">let</span> arr2 = arr.splice(<span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">     <span class="keyword">let</span> arr1 = arr.splice(<span class="number">2</span>, <span class="number">1</span> <span class="string">'haha'</span>)</span><br><span class="line">     <span class="built_in">console</span>.log(arr1) <span class="comment">//[1, 2, 'haha', 3, 4, 5]新增一个元素</span></span><br><span class="line">     <span class="built_in">console</span>.log(arr2) <span class="comment">//[1, 2] 删除三个元素</span></span><br><span class="line">     <span class="built_in">console</span>.log(arr3) <span class="comment">//[1, 2, 'haha', 4, 5] 替换一个元素</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Array-slice-与-Array-splice-的区别？"><a href="#Array-slice-与-Array-splice-的区别？" class="headerlink" title="Array.slice() 与 Array.splice() 的区别？"></a>Array.slice() 与 Array.splice() 的区别？</h3><p>slice – “读取”数组指定的元素，不会对原数组进行修改</p>
+<ul>
+<li>语法：arr.slice(start, end)</li>
+<li>start 指定选取开始位置（含）</li>
+<li>end 指定选取结束位置（不含）</li>
+</ul>
+<p>splice</p>
+<ul>
+<li>“操作”数组指定的元素，会修改原数组，返回被删除的元素</li>
+<li>语法：arr.splice(index, count, [insert Elements])</li>
+<li>index 是操作的起始位置</li>
+<li>count = 0 插入元素，count &gt; 0 删除元素</li>
+<li>[insert Elements] 向数组新插入的元素</li>
+</ul>
+<h3 id="数组去重的方法（参考链接）"><a href="#数组去重的方法（参考链接）" class="headerlink" title="数组去重的方法（参考链接）"></a>数组去重的方法（<a href="https://github.com/mqyqingfeng/Blog/issues/27" target="_blank" rel="noopener">参考链接</a>）</h3><p>推荐的两种方法：</p>
+<p>1、先将原数组进行排序，使重复元素在相邻位置，创建新数组，并赋值元数组的第一项，检查原数组中的第i个元素与新数组中的最后一个元素是否相同，如果不相同，则将该元素存入新数组中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function unique(arr)&#123; </span><br><span class="line">    arr.sort(); //先排序 ，这里不需要参数</span><br><span class="line">    var res = [arr[0]];  </span><br><span class="line">    for (var i = 1; i &lt; arr.length; i++) &#123;  </span><br><span class="line">        if (arr[i] !== res[res.length - 1]) &#123;   </span><br><span class="line">        res.push(this[i]); </span><br><span class="line">      &#125; </span><br><span class="line">   &#125; </span><br><span class="line">   return res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2、创建一个空对象和一个空数组，将数组的数值以对象属性的形式保存，并赋值1，push到新数组中，后续遍历数组时通过数组的值以属性的方式访问对象，从而达到验证重复的目的。（较推荐）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function unique(arr) &#123; </span><br><span class="line">var res = [];</span><br><span class="line">var hash = &#123;&#125;;</span><br><span class="line">for (var i = 0; i &lt; arr.length; i++) &#123;  </span><br><span class="line">    if (!hash[arr[i]]) &#123;   </span><br><span class="line">       res.push(arr[i]);  </span><br><span class="line">       hash[arr[i]] = 1; </span><br><span class="line">      &#125; </span><br><span class="line">   &#125; </span><br><span class="line">   return res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="去除数组重复成员的方法"><a href="#去除数组重复成员的方法" class="headerlink" title="去除数组重复成员的方法"></a>去除数组重复成员的方法</h3><p>方法 1 扩展运算符和 Set 结构相结合，就可以去除数组的重复成员</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 去除数组的重复成员</span></span><br><span class="line">[...new <span class="built_in">Set</span>([<span class="number">1</span>, <span class="number">2</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">5</span>])];</span><br><span class="line"><span class="comment">// [1, 2, 3, 4, 5]</span></span><br></pre></td></tr></table></figure>
+
+<p>方法 2</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dedupe</span>(<span class="params">array</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(array));</span><br><span class="line">&#125;</span><br><span class="line">dedupe([<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]); <span class="comment">// [1, 2, 3]</span></span><br></pre></td></tr></table></figure>
+
+<p>ES5</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arry</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">const</span> temp = [];</span><br><span class="line">  arry.forEach(<span class="function"><span class="params">e</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (temp.indexOf(e) == <span class="number">-1</span>) &#123;</span><br><span class="line">      temp.push(e);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>ES6</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">Array</span>.from(<span class="keyword">new</span> <span class="built_in">Set</span>(arr));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="分别阐述-split-slice-splice-join-？"><a href="#分别阐述-split-slice-splice-join-？" class="headerlink" title="分别阐述 split(),slice(),splice(),join()？"></a>分别阐述 split(),slice(),splice(),join()？</h3><ul>
+<li>join()用于把数组中的所有元素拼接起来放入一个字符串。所带的参数为分割字符串的分隔符，默认是以逗号分开。归属于 Array</li>
+<li>split()即把字符串分离开，以数组方式存储。归属于 Stringstring</li>
+<li>slice() 方法可从已有的数组中返回选定的元素。该方法并不会修改数组，而是返回一个子数组。如果想删除数组中的一段元素，应该使用方法 Array.splice()</li>
+<li>splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。返回的是含有被删除的元素的数组。</li>
+</ul>
+<h3 id="JavaScript-数组的函数-map-forEach-reduce-filter"><a href="#JavaScript-数组的函数-map-forEach-reduce-filter" class="headerlink" title="JavaScript 数组的函数 map/forEach/reduce/filter"></a>JavaScript 数组的函数 map/forEach/reduce/filter</h3><ol>
+<li><strong>map</strong></li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// map</span></span><br><span class="line"><span class="comment">//作用：对数组进行遍历</span></span><br><span class="line"><span class="comment">//返回值：新的数组</span></span><br><span class="line"><span class="comment">//是否改变：否</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">var</span> ret = arr.map(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> value + <span class="number">1</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(ret); <span class="comment">//[3,6,4,5]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">//[2,5,3,4]</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><strong>forEach</strong></li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// forEach 方法</span></span><br><span class="line"><span class="comment">// 作用：遍历数组的每一项</span></span><br><span class="line"><span class="comment">// 返回值：undefined</span></span><br><span class="line"><span class="comment">// 是否改变：否</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">var</span> ret = arr.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(value); <span class="comment">// 2, 5, 3, 4</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(ret); <span class="comment">//undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">//[2,5,3,4]</span></span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li><strong>reduce</strong></li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// reduce 方法</span></span><br><span class="line"><span class="comment">// 作用：对数组进行迭代，然后两两进行操作，最后返回一个值</span></span><br><span class="line"><span class="comment">// 返回值：return出来的结果</span></span><br><span class="line"><span class="comment">// 是否改变：不会</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">var</span> ret = arr.reduce(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> a * b;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(ret); <span class="comment">// 24</span></span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">// [1, 2, 3, 4]</span></span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li><strong>filter</strong></li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// filter 过滤</span></span><br><span class="line"><span class="comment">// 作用： 筛选一部分元素</span></span><br><span class="line"><span class="comment">// 返回值： 一个满足筛选条件的新数组</span></span><br><span class="line"><span class="comment">// 是否改变原有数组：不会</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">2</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">4</span>];</span><br><span class="line"><span class="keyword">var</span> ret = arr.filter(<span class="function"><span class="keyword">function</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> value &gt; <span class="number">3</span>;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(ret); <span class="comment">//[5,4]</span></span><br><span class="line"><span class="built_in">console</span>.log(arr); <span class="comment">//[2,5,3,4]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="split-join-的区别"><a href="#split-join-的区别" class="headerlink" title="split() join()的区别"></a>split() join()的区别</h3><p>join()：用于把数组中的所有元素通过指定的分隔符进行分隔放入一个字符串。</p>
+<p>split()：用于把一个字符串通过指定的分隔符进行分隔成数组.</p>
+<h3 id="sort-排序原理"><a href="#sort-排序原理" class="headerlink" title="sort 排序原理"></a>sort 排序原理</h3><p>冒泡排序法</p>
+<p>解析：</p>
+<p>冒泡排序法的原理：</p>
+<ul>
+<li>比较相邻的元素。如果第一个比第二个大，就交换他们两个。</li>
+<li>对每一对相邻元素做同样的工作，从开始第一对到结尾的最后一对。在这一点，最后的元素应该会是最大的数。</li>
+<li>针对所有的元素重复以上的步骤，除了最后一个。</li>
+<li>持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">2</span>];</span><br><span class="line"><span class="comment">// sort()方法的比较逻辑为：</span></span><br><span class="line"><span class="comment">// 第一轮：1和5比，1和4比，1和2比</span></span><br><span class="line"><span class="comment">// 第二轮：5和4比，5和2比</span></span><br><span class="line"><span class="comment">// 第三轮：4和2比</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 一.sort排序规则 return大于0则交换数组相邻2个元素的位置</span></span><br><span class="line"><span class="comment">// 二.arr.sort(function (a,b) &#123;&#125;)中</span></span><br><span class="line"><span class="comment">//         a --&gt;代表每一次执行匿名函时候，找到的数组中的当前项；</span></span><br><span class="line"><span class="comment">//         b --&gt;代表当前项的后一项；</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 1.升序</span></span><br><span class="line"><span class="keyword">var</span> apple = [<span class="number">45</span>, <span class="number">42</span>, <span class="number">10</span>, <span class="number">147</span>, <span class="number">7</span>, <span class="number">65</span>, <span class="number">-74</span>];</span><br><span class="line"><span class="comment">// ①默认法,缺点:只根据首位排序</span></span><br><span class="line"><span class="built_in">console</span>.log(apple.sort());</span><br><span class="line"><span class="comment">// ②指定排序规则法,return可返回任何值</span></span><br><span class="line"><span class="built_in">console</span>.log(</span><br><span class="line">  apple.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a - b; <span class="comment">//若return返回值大于0(即a＞b),则a,b交换位置</span></span><br><span class="line">  &#125;)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="comment">//2.降序</span></span><br><span class="line"><span class="keyword">var</span> arr = [<span class="number">45</span>, <span class="number">42</span>, <span class="number">10</span>, <span class="number">111</span>, <span class="number">7</span>, <span class="number">65</span>, <span class="number">-74</span>];</span><br><span class="line"><span class="built_in">console</span>.log(</span><br><span class="line">  apple.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> b - a; <span class="comment">//若return返回值大于零(即b＞a),则a,b交换位置</span></span><br><span class="line">  &#125;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>原文：<a href="https://blog.csdn.net/soraru/article/details/82255616" target="_blank" rel="noopener">https://blog.csdn.net/soraru/article/details/82255616</a><br><a href="https://www.cnblogs.com/huoxiao/p/10239284.html" target="_blank" rel="noopener">https://www.cnblogs.com/huoxiao/p/10239284.html</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2021-08-13T04:24:20.665Z" itemprop="dateUpdated">2021-08-13 12:24:20</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/前端知识点/JavaScript数组.html" target="_blank" rel="external">http://blog.seoqp.com/前端知识点/JavaScript数组.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="http://blog.seoqp.com">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数组/">数组</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端知识点/JavaScript数组.html&title=《JavaScript数组》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端知识点/JavaScript数组.html&title=《JavaScript数组》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.seoqp.com/前端知识点/JavaScript数组.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript数组》 — 秦伟博客&url=http://blog.seoqp.com/前端知识点/JavaScript数组.html&via=http://blog.seoqp.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.seoqp.com/前端知识点/JavaScript数组.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/前端知识点/JavaScript数据处理.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">JavaScript数据处理</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/前端知识点/JavaScript原型链.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">JavaScript原型链</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p id="sitetime"></p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p><span>Copyright &copy; 2018 - 2021 <a
+                href="http://blog.bluedream.site/" target="_blank">秦伟的个人博客</a>All Rights Reserved.</span>
+            <span>
+                部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除。
+                
+                
+            </span>
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); //北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = " 本网站已安全运行" +/*diffYears+" 年 "+*/diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端知识点/JavaScript数组.html&title=《JavaScript数组》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端知识点/JavaScript数组.html&title=《JavaScript数组》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.seoqp.com/前端知识点/JavaScript数组.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript数组》 — 秦伟博客&url=http://blog.seoqp.com/前端知识点/JavaScript数组.html&via=http://blog.seoqp.com" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.seoqp.com/前端知识点/JavaScript数组.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJ0lEQVR42u3aMW7DMAwF0Nz/0inQqUPsfJJ2kUhPUxCkkp8HliL5eMTr+buOPh998/f76t8+7lgYGBhfy3iervMjr3opybnnLwgDA2MHRn7YJOyen1X9PQYGBsb5dtXELtkhORcDAwOjul0SNCeXWAwMDIzqJTa/iM4vqzfexTEwML6QMW8M3Pf5X/sbGBgYH8l4FlcSOvM0sfcML3bGwMBYmjEvyldHKxJMHl0v6y1gYGB8MKO6dfL7eSu0nCxiYGAszagWy5LSW96ezF9c1CjFwMBYlJGPU+Rtg8lAWLWdgIGBsQOjVz6bD5NVmxDRtRkDA2MDxlVBNh+e6DVKCwkiBgbGQoy8ND8Ppnk7IUkHMTAw9mFU25CTdmN1dKMQuDEwMJZmJPE4TwonIxTVszAwMHZg5GW1fOWtzbyd+SY1xMDA2IZRvcT2HreaUDaHLTAwMJZm9IYhqgNhvdB8yMPAwNiS0Rv8uqolmYMxMDB2YEyK+IWti2W7izuxGBgYX87IL4p3jHblYxlvgi8GBsZmjCTkTUYiesMcUccVAwNjUUY12FXbBr1hi94ICAYGxqqM+SDFvNw/CbsYGBg7MHr5VZ7YzdPHCx4dAwNjCUb14npHuMxbpId7YmBgbMCYl/h7Jbnqf4PDizEGBgZGPHgxKcblaeKL0zEwMDBaKWOvU5HvgIGBsRujVywrh8XBjAQGBsbOjEli10vy8rvnZQAMDIxvZfwAreVlq5O9D3AAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>
