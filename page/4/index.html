@@ -25,7 +25,7 @@
 <meta name="keywords" content="前端知识、全栈知识、SEO知识、前端学习链接、全栈学习链接、个人博客、前端面试题">
 <meta property="og:type" content="website">
 <meta property="og:title" content="秦伟博客">
-<meta property="og:url" content="http://blog.seoqp.com/page/4/index.html">
+<meta property="og:url" content="http://qvchat.com/page/4/index.html">
 <meta property="og:site_name" content="秦伟博客">
 <meta property="og:description" content="前端、全栈、SEO的知识点、面试题与学习链接的整理">
 <meta property="og:locale" content="zh-CN">
@@ -123,9 +123,9 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://coding.net/u/qw6" target="_blank" >
+              <a href="https://gitee.com/qw66" target="_blank" >
                 <i class="icon icon-lg icon-code"></i>
-                coding
+                gitee
               </a>
             </li>
         
@@ -180,7 +180,216 @@
     <ul class="post-list">
     
         <li class="post-list-item fade">
-            <article id="post-JavaScript函数"
+            <article id="post-前端知识点/JavaScript闭包"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-06-09 20:50:00" datetime="2020-06-09T12:50:00.000Z"  itemprop="datePublished">2020-06-09</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/前端知识点/JavaScript闭包.html">JavaScript闭包</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        说说你对闭包的理解（什么是闭包（closure），为什么要用它？）使用闭包主要是为了设计私有的方法和变量。闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量，利用闭包可以突破作用链域。在js中，函数即闭包，只有函数才会产生作用域的概念。
+闭包有三个特性：
+
+函数内再嵌套函数
+函数内部可以引用外部的参数和变量
+参数和变量不会被垃圾回收机制回收
+
+优点：
+
+希望一个变量长期存储在内存中。
+避免全局变量的污染。
+私有成员的存在。
+
+缺点：
+
+...
+    
+
+        <a href="/前端知识点/JavaScript闭包.html" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闭包/">闭包</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-前端面试题/JavaScript编程题"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-05-28 10:41:39" datetime="2020-05-28T02:41:39.000Z"  itemprop="datePublished">2020-05-28</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端面试题/">前端面试题</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/前端面试题/JavaScript编程题.html">JavaScript编程题</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        常考代码题简单实现 Function.bind 函数？12345678910111213if (!Function.prototype.bind) &#123;  Function.prototype.bind = function(that) &#123;    var func = this, args = arguments;    return function() &#123;      return func.apply(that, Array.prototype.slice.call(args, 1)); ...
+    
+
+        <a href="/前端面试题/JavaScript编程题.html" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程题/">编程题</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-前端面试题/JavaScript不常考"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-05-18 20:41:19" datetime="2020-05-18T12:41:19.000Z"  itemprop="datePublished">2020-05-18</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端面试题/">前端面试题</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/前端面试题/JavaScript不常考.html">JavaScript不常考</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        如何测试前端代码? 知道 BDD, TDD, Unit Test 么? 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qUnit..)了解 BDD 行为驱动开发与 TDD 测试驱动开发已经单元测试相关概念
+检测浏览器版本版本有哪些方式？
+根据 navigator.userAgent   //  UA.toLowerCase().indexOf(‘chrome’)
+根据 window 对象的成员       // ‘ActiveXObject’ in window
+
+作用域-编译期执行期以及全局局...
+    
+
+        <a href="/前端面试题/JavaScript不常考.html" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BOM/">BOM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DOM/">DOM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-前端知识点/JavaScript对象"
+  class="article-card article-type-post" itemprop="blogPost">
+
+    <div class="post-meta">
+        <time class="post-time" title="2020-04-18 22:10:40" datetime="2020-04-18T14:10:40.000Z"  itemprop="datePublished">2020-04-18</time>
+
+        
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+
+
+    </div>
+
+    
+
+
+  
+    <h3 class="post-title" itemprop="name">
+      <a class="post-title-link" href="/前端知识点/JavaScript对象.html">JavaScript对象</a>
+    </h3>
+  
+
+
+
+
+    <div class="post-content" id="post-content" itemprop="postContent">
+
+    
+        JavaScript如何实现一个类（类的定义），怎么实例化这个类？构造函数法（this + prototype） – 用 new 关键字 生成实例对象缺点：用到了 this 和 prototype，编写复杂，可读性差
+123456789function Mobile(name, price)&#123;   this.name = name;//通过this，表明这是一个构造函数   this.price = price; &#125; Mobile.prototype.sell = function()&#123;  ...
+    
+
+        <a href="/前端知识点/JavaScript对象.html" class="post-more waves-effect waves-button">
+            阅读全文…
+        </a>
+    </div>
+    
+    <div class="post-footer">
+        
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/对象/">对象</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/类/">类</a></li></ul>
+
+    </div>
+    
+</article>
+
+        </li>
+    
+        <li class="post-list-item fade">
+            <article id="post-前端知识点/JavaScript函数"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -220,7 +429,7 @@ RegExp
 Error
 Symbol
 
-简述创建函数的几种方式123456789101112//第一种（函数声明）：function sum1(num1,num2)&#123;   return num1+num2;&#125;//第二种（函数表达式）：var sum2 ...
+简述创建函数的几种方式123456789101112//第一种（函数声明）：function sum1(num1,num2)&#123;   return num1+num2;&#125;//第二种（函数表达式）：var sum2 = function(num1,num2)&#123;   return num1+num2;&#125;//第三种（函数对象方式）...
     
 
         <a href="/前端知识点/JavaScript函数.html" class="post-more waves-effect waves-button">
@@ -239,7 +448,7 @@ Symbol
         </li>
     
         <li class="post-list-item fade">
-            <article id="post-JavaScript事件"
+            <article id="post-前端知识点/JavaScript事件"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -282,7 +491,9 @@ Symbol
 
 事件监听
 
-1btn.addEventLis...
+1btn.addEventListener("click", function() &#123;&#125;);
+
+事件循环事件循环是一个单线程循环，用于监视调用堆...
     
 
         <a href="/前端知识点/JavaScript事件.html" class="post-more waves-effect waves-button">
@@ -301,7 +512,7 @@ Symbol
         </li>
     
         <li class="post-list-item fade">
-            <article id="post-JavaScript数据处理"
+            <article id="post-前端知识点/JavaScript数据处理"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -331,7 +542,7 @@ Symbol
     
         字符串转换成对象12var obj = JSON.parse(data);console.log(JSON.stringify(data.data));
 
-说明：①php中json_encode()转换返回给前端页面时，用“.”读取不到，是因为返回的是字符串格式，就是最外层带了引号的json数据格式，可以用var obj = JSON.parse(data);转换成对象，也可以用tp框架中的...
+说明：①php中json_encode()转换返回给前端页面时，用“.”读取不到，是因为返回的是字符串格式，就是最外层带了引号的json数据格式，可以用var obj = JSON.parse(data);转换成对象，也可以用tp框架中的$this-&gt;ajaxReturn();②另外在vue中，有时候打印对象或者数组时，可能会出现看不懂其数据结构，可以用cons...
     
 
         <a href="/前端知识点/JavaScript数据处理.html" class="post-more waves-effect waves-button">
@@ -350,7 +561,7 @@ Symbol
         </li>
     
         <li class="post-list-item fade">
-            <article id="post-JavaScript数组"
+            <article id="post-前端知识点/JavaScript数组"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -378,13 +589,26 @@ Symbol
     <div class="post-content" id="post-content" itemprop="postContent">
 
     
-        求数组的最大值Math.max.apply(null, 数组)
-123var a = [1, 2, 3, 5];alert(Math.max.apply(null, a)); //最大值alert(Math.min.apply(null, a)); //最小值
+        数组方法
+Array.length：数组的大小
 
-列举一下JavaScript数组有哪些原生方法？
-arr.concat(arr1, arr2, arrn);
+join()：用指定的分隔符将数组每一项拼接为字符串
 
-arr.join(...
+push() ：向数组的末尾添加新元素，返回值为添加完后的数组的长度
+
+pop()：删除数组的最后一项，返回值是删除的元素
+
+shift()：删除数组的第一项， 返回值是删除的元素
+
+unshift()：向数组首位添加新元素，返回值是添加完后的数组的长度
+
+slice()：按照条件查找出其中的部分元素
+
+splice()：对数组进行增删改
+
+fill(): 方法能使用特定值填充数组中的一个或多个元素
+
+filter(...
     
 
         <a href="/前端知识点/JavaScript数组.html" class="post-more waves-effect waves-button">
@@ -403,7 +627,7 @@ arr.join(...
         </li>
     
         <li class="post-list-item fade">
-            <article id="post-JavaScript原型链"
+            <article id="post-前端知识点/JavaScript原型链"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -434,7 +658,9 @@ arr.join(...
         面向对象原理：​    1）目标：实现封装、继承、多态等面向对象的基本功能。
 ​    2）原理：原型链是面向对象的基础,使用prototype、function 、new、this模拟面向对象的类。
 ​          JavaScript是面向对象语言，但不使用类（根本不存在类）。JavaScript的面向对象是基于prototype和function的，而不是基于类的。
-介绍Java...
+介绍JavaScript的原型，原型链？有什么特点？原型：
+
+JavaScript的所有对象中都包含了一个 [proto] 内部属性，这个属性所...
     
 
         <a href="/前端知识点/JavaScript原型链.html" class="post-more waves-effect waves-button">
@@ -453,7 +679,7 @@ arr.join(...
         </li>
     
         <li class="post-list-item fade">
-            <article id="post-JavaScript知识点"
+            <article id="post-前端知识点/JavaScript知识点"
   class="article-card article-type-post" itemprop="blogPost">
 
     <div class="post-meta">
@@ -488,7 +714,7 @@ arr.join(...
 12345function  isArray（val）&#123;	if（typeof(val).push ===&apos;undefined&apos;)&#123;		return fa	&#125;&#125;
 
 2.判断基本类型
-12345Object.prototype....
+12345Object.prototype.toString.call(null); // &quot;[object Null]&quot;Object.prototype....
     
 
         <a href="/前端知识点/JavaScript知识点.html" class="post-more waves-effect waves-button">
@@ -499,215 +725,6 @@ arr.join(...
     <div class="post-footer">
         
 	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-JavaScript作用域"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2020-01-07 21:10:40" datetime="2020-01-07T13:10:40.000Z"  itemprop="datePublished">2020-01-07</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/前端知识点/JavaScript作用域.html">JavaScript作用域</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        作用域的概念及作用概念： 对变量起保护作用的一块区域，一个函数可以访问其他函数中的变量。
-
-在Java、C等语言中，作用域为for语句、if语句或{}内的一块区域，称为作用域；
-而在 JavaScript 中，作用域为function(){}内的区域，称为函数作用域。
-
-作用： 作用域外部无法获取到作用域内部声明的变量，作用域内部能够获取到作用域外界声明的变量。
-分类：块作用域、词法作用域、...
-    
-
-        <a href="/前端知识点/JavaScript作用域.html" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/作用域/">作用域</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-jQuery"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-12-22 18:22:11" datetime="2019-12-22T10:22:11.000Z"  itemprop="datePublished">2019-12-22</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/前端知识点/jQuery.html">JQuery</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        jQuery 的实现原理？
-(function(window, undefined) {})(window);
-
-jQuery 利用 JS 函数作用域的特性，采用立即调用表达式包裹了自身，解决命名空间和变量污染问题
-
-window.jQuery = window.$ = jQuery;
-
-在闭包当中将 jQuery 和 $ 绑定到 window 上，从而将 jQuery 和 $ 暴露为全局变...
-    
-
-        <a href="/前端知识点/jQuery.html" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JQuery/">JQuery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Zepto/">Zepto</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery-UI/">jQuery UI</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-Node"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-12-08 19:25:55" datetime="2019-12-08T11:25:55.000Z"  itemprop="datePublished">2019-12-08</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/前端知识点/Node.html">Node</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        对 Node 的优点和缺点提出了自己的看法？优点：
-
-因为 Node 是基于事件驱动和无阻塞的，所以非常适合处理并发请求，因此构建在 Node 上的代理服务器相比其他技术实现（如 Ruby）的服务器表现要好得多。
-与 Node 代理服务器交互的客户端代码是由 javascript 语言编写的，因此客户端和服务器端都用同一种语言编写，这是非常美妙的事情。
-擅长处理高并发，适合I/O密集型应用。...
-    
-
-        <a href="/前端知识点/Node.html" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/事件循环/">事件循环</a></li></ul>
-
-    </div>
-    
-</article>
-
-        </li>
-    
-        <li class="post-list-item fade">
-            <article id="post-npm常用命令"
-  class="article-card article-type-post" itemprop="blogPost">
-
-    <div class="post-meta">
-        <time class="post-time" title="2019-11-24 11:10:20" datetime="2019-11-24T03:10:20.000Z"  itemprop="datePublished">2019-11-24</time>
-
-        
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
-
-
-
-    </div>
-
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/前端知识点/npm常用命令.html">npm常用命令</a>
-    </h3>
-  
-
-
-
-
-    <div class="post-content" id="post-content" itemprop="postContent">
-
-    
-        1， 首先是安装命令
-12345678910//全局安装npm install 模块名 -g//本地安装npm install 模块名//一次性安装多个npm install 模块1 模块2 模块3 //安装开发时依赖包npm install 模块名 --save-dev//安装运行时依赖包npm install 模块名 --save
-
-2， 查看安装的目录
-1234//查看项目中模块所在的...
-    
-
-        <a href="/前端知识点/npm常用命令.html" class="post-more waves-effect waves-button">
-            阅读全文…
-        </a>
-    </div>
-    
-    <div class="post-footer">
-        
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/node/">node</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/npm/">npm</a></li></ul>
 
     </div>
     
@@ -761,7 +778,7 @@ window.jQuery = window.$ = jQuery;
     </div>
 
     <div class="bottom">
-        <p><span>Copyright &copy; 2018 - 2021 <a
+        <p><span>Copyright &copy; 2018 - 2023 <a
                 href="http://blog.bluedream.site/" target="_blank">秦伟的个人博客</a>All Rights Reserved.</span>
             <span>
                 部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除。
@@ -816,7 +833,7 @@ window.jQuery = window.$ = jQuery;
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/page/4/&title=秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://qvchat.com/page/4/&title=秦伟博客&pic=http://qvchat.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -826,22 +843,22 @@ window.jQuery = window.$ = jQuery;
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/page/4/&title=秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://qvchat.com/page/4/&title=秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.seoqp.com/page/4/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://qvchat.com/page/4/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=秦伟博客&url=http://blog.seoqp.com/page/4/&via=http://blog.seoqp.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=秦伟博客&url=http://qvchat.com/page/4/&via=http://qvchat.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.seoqp.com/page/4/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://qvchat.com/page/4/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -852,7 +869,7 @@ window.jQuery = window.$ = jQuery;
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABxUlEQVR42u3aS27DMAwFwNz/0u42QGD7kZLZtBitCqeRxlkQ/Oj1itfxtt6ffH76/vzsu587bF64uLjL3ONyJUcm6+wlcwMuLu489yxinP1Pj5Xvf/ocFxf3K7lV+nXYwsXF/d/cpGTCxcX9W9xqynJTohRf+5FaDRcXd4Gbdymf+/uR/i4uLm6LexRXNd3Jm7DR6bi4uCPcPKBcJxx5KyTZ7WZnXFzch7krjc68XCm0PK4vc+Di4o5zq1esemPXpQscuLi4g9wkSuSlTp7Q5D8HLi7uJHelSbqS6FS/hYuLO89daWv2rl+sXPXAxcV9mttLMqopSF4O3TzBxcUd51bbGQk9D47Rnri4uCPc3kClN2TtFU4b5j+4uLgL3JXtyh2X1lVRXFzceW5y2K4hay/w4eLi/ha3OupYuaDZHLLi4uIOcvPrldUmyIa0JqHg4uJu4h7FVT2gmvRE74GLi/swtxpcek2QJMVZv8CBi4u7l9u7epUnQ72U6PRTXFzcQW6vKEraHIU6LDkXFxf3K7lJeNpVbm0IZLi4uCPcfPhRHbJG4Q8XF3eQu6u5WW2glJsmuLi4I9zq4HN94NoLf7i4uCPcH36aPw01E3DhAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAAAAAAZai4+AAABSklEQVR42u3aMZLCMAwF0Nz/0mxLQ/iSHWbWeq4YQuxHEVmRfF3xeAXj/pfXEwML6yBWdbH3b/L587WwsCazkuk+EXvzfLkXCwsrmO5+G74PNFhYWLsCRL48FhZWzkqS5updP8rlsbCOYPVeQXufH6lvYWH9c9arONbrrtEqWFjDWPkDXN1Qq9swFhbWffskKd32GjNRmQkLawCrUNYp5rfV0nC5soWFdRCr+nj3QkBeTsLCwqpuyUkoWbmKhTWNVU1t8/JQHiyauTwW1kGsPHXeVU6KQgwW1khWr7nSCwFJuQoLC2spzS02bL70fLCwBrB6RwHy5Dj/21hYk1kr5+J6aXF5YSysMaw8KPRea/MmKBYWVpLU7kqXo60aCwtrE2tD9xULC2shCV5pfGJhTWatHMVrNjJXej5YWMexeqlwtbT0yMDCOoH1BxO2xW1i/tloAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
@@ -953,5 +970,18 @@ MathJax.Hub.Queue(function() {
     }
 </script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 </html>

@@ -25,22 +25,22 @@
 <meta name="keywords" content="HTTP,前端通信">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTTP">
-<meta property="og:url" content="http://blog.seoqp.com/前端面试题/HTTP.html">
+<meta property="og:url" content="http://qvchat.com/前端面试题/HTTP.html">
 <meta property="og:site_name" content="秦伟博客">
 <meta property="og:description" content="一面中，如果有笔试，考HTTP协议的可能性较大。 前言一面要讲的内容：  HTTP协议的主要特点 HTTP报文的组成部分 HTTP方法 get 和 post的区别 HTTP状态码 什么是持久连接 什么是管线化  二面要讲的内容；  缓存 CSRF攻击  HTTP协议的主要特点 简单快速 灵活 无连接 无状态   通常我们要答出以上四个内容。如果实在记不住，一定要记得后面的两个：无连接、无状态。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://blog.seoqp.com/img/loading.gif">
-<meta property="og:image" content="http://blog.seoqp.com/img/loading.gif">
-<meta property="og:image" content="http://blog.seoqp.com/img/loading.gif">
-<meta property="og:image" content="http://blog.seoqp.com/img/loading.gif">
-<meta property="og:image" content="http://blog.seoqp.com/img/loading.gif">
-<meta property="og:image" content="http://blog.seoqp.com/img/loading.gif">
-<meta property="og:image" content="http://blog.seoqp.com/img/loading.gif">
-<meta property="og:updated_time" content="2021-08-13T04:26:38.103Z">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:updated_time" content="2022-08-05T04:00:48.165Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP">
 <meta name="twitter:description" content="一面中，如果有笔试，考HTTP协议的可能性较大。 前言一面要讲的内容：  HTTP协议的主要特点 HTTP报文的组成部分 HTTP方法 get 和 post的区别 HTTP状态码 什么是持久连接 什么是管线化  二面要讲的内容；  缓存 CSRF攻击  HTTP协议的主要特点 简单快速 灵活 无连接 无状态   通常我们要答出以上四个内容。如果实在记不住，一定要记得后面的两个：无连接、无状态。">
-<meta name="twitter:image" content="http://blog.seoqp.com/img/loading.gif">
+<meta name="twitter:image" content="http://qvchat.com/img/loading.gif">
     
         <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
     
@@ -132,9 +132,9 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://coding.net/u/qw6" target="_blank" >
+              <a href="https://gitee.com/qw66" target="_blank" >
                 <i class="icon icon-lg icon-code"></i>
-                coding
+                gitee
               </a>
             </li>
         
@@ -196,12 +196,12 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP协议的主要特点"><span class="post-toc-number">2.</span> <span class="post-toc-text">HTTP协议的主要特点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP报文的组成部分"><span class="post-toc-number">3.</span> <span class="post-toc-text">HTTP报文的组成部分</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP方法"><span class="post-toc-number">4.</span> <span class="post-toc-text">HTTP方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#get-和-post的区别"><span class="post-toc-number">5.</span> <span class="post-toc-text">get 和 post的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http状态码"><span class="post-toc-number">6.</span> <span class="post-toc-text">http状态码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP-状态码"><span class="post-toc-number">7.</span> <span class="post-toc-text">HTTP 状态码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#持久链接-http长连接"><span class="post-toc-number">8.</span> <span class="post-toc-text">持久链接/http长连接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#长连接中的管线化"><span class="post-toc-number">9.</span> <span class="post-toc-text">长连接中的管线化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http状态码有那些？分别代表是什么意思？"><span class="post-toc-number">10.</span> <span class="post-toc-text">http状态码有那些？分别代表是什么意思？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一个页面从输入-URL-到页面加载显示完成，这个过程中都发生了什么？（流程说的越详细越好）"><span class="post-toc-number">11.</span> <span class="post-toc-text">一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？（流程说的越详细越好）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#说说TCP传输的三次握手四次挥手策略"><span class="post-toc-number">12.</span> <span class="post-toc-text">说说TCP传输的三次握手四次挥手策略</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#断开一个TCP连接则需要“四次握手”："><span class="post-toc-number">13.</span> <span class="post-toc-text">断开一个TCP连接则需要“四次握手”：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TCP和UDP的区别"><span class="post-toc-number">14.</span> <span class="post-toc-text">TCP和UDP的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP和HTTPS"><span class="post-toc-number">15.</span> <span class="post-toc-text">HTTP和HTTPS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么HTTPS安全"><span class="post-toc-number">16.</span> <span class="post-toc-text">为什么HTTPS安全</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于Http-2-0-你知道多少？"><span class="post-toc-number">17.</span> <span class="post-toc-text">关于Http 2.0 你知道多少？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GET和POST的区别，何时使用POST？"><span class="post-toc-number">18.</span> <span class="post-toc-text">GET和POST的区别，何时使用POST？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#说说网络分层里七层模型是哪七层"><span class="post-toc-number">19.</span> <span class="post-toc-text">说说网络分层里七层模型是哪七层</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#讲讲304缓存的原理"><span class="post-toc-number">20.</span> <span class="post-toc-text">讲讲304缓存的原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP-2-与-HTTP-1-x-的关键区别"><span class="post-toc-number">21.</span> <span class="post-toc-text">HTTP/2 与 HTTP/1.x 的关键区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一个页面从输入-URL-到页面加载显示完成，这个过程中都发生了什么？"><span class="post-toc-number">22.</span> <span class="post-toc-text">一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http-无状态无连接"><span class="post-toc-number">23.</span> <span class="post-toc-text">http 无状态无连接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http协议无状态中的-状态-到底指的是什么？"><span class="post-toc-number">24.</span> <span class="post-toc-text">http协议无状态中的 状态 到底指的是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http-cache：就是-http-缓存"><span class="post-toc-number">25.</span> <span class="post-toc-text">http-cache：就是 http 缓存</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Http2-是什么"><span class="post-toc-number">26.</span> <span class="post-toc-text">Http2 是什么</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Http-请求的整个过程"><span class="post-toc-number">27.</span> <span class="post-toc-text">Http 请求的整个过程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http-缓存配置怎么设置"><span class="post-toc-number">28.</span> <span class="post-toc-text">http 缓存配置怎么设置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在-HTTP-响应-Header-中，set-cookie-选项有哪些，分别代表什么含义？"><span class="post-toc-number">29.</span> <span class="post-toc-text">在 HTTP 响应 Header 中，set-cookie 选项有哪些，分别代表什么含义？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#请你谈谈-Cookie-的弊端？"><span class="post-toc-number">30.</span> <span class="post-toc-text">请你谈谈 Cookie 的弊端？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#本地存储（Local-Storage-）和-cookies（储存在用户本地终端上的数据）之间的区别是什么？"><span class="post-toc-number">31.</span> <span class="post-toc-text">本地存储（Local Storage ）和 cookies（储存在用户本地终端上的数据）之间的区别是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Accept-和-Content-Type"><span class="post-toc-number">32.</span> <span class="post-toc-text">Accept 和 Content-Type</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http-协议缓存机制"><span class="post-toc-number">33.</span> <span class="post-toc-text">http 协议缓存机制</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何处理不让别人盗用你的图片，访问你的服务器资源"><span class="post-toc-number">34.</span> <span class="post-toc-text">如何处理不让别人盗用你的图片，访问你的服务器资源</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Http-与-Https-的区别"><span class="post-toc-number">35.</span> <span class="post-toc-text">Http 与 Https 的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是-Http-协议无状态协议-怎么解决-Http-协议无状态协议"><span class="post-toc-number">36.</span> <span class="post-toc-text">什么是 Http 协议无状态协议?怎么解决 Http 协议无状态协议?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常用的-HTTP-方法有哪些"><span class="post-toc-number">37.</span> <span class="post-toc-text">常用的 HTTP 方法有哪些</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一次完整的-HTTP-请求所经历的-7-个步骤"><span class="post-toc-number">38.</span> <span class="post-toc-text">一次完整的 HTTP 请求所经历的 7 个步骤</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三次握手"><span class="post-toc-number">39.</span> <span class="post-toc-text">三次握手</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#四次挥手"><span class="post-toc-number">40.</span> <span class="post-toc-text">四次挥手</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#线程与进程的区别"><span class="post-toc-number">41.</span> <span class="post-toc-text">线程与进程的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#WEB-应用从服务器主动推送-Data-到客户端有那些方式？"><span class="post-toc-number">42.</span> <span class="post-toc-text">WEB 应用从服务器主动推送 Data 到客户端有那些方式？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#请简述如何在-HTML-中开启和关闭-DNS-预读取"><span class="post-toc-number">43.</span> <span class="post-toc-text">请简述如何在 HTML 中开启和关闭 DNS 预读取?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TCP-和-UDP-的区别"><span class="post-toc-number">44.</span> <span class="post-toc-text">TCP 和 UDP 的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Web-Worker-和-webSocket"><span class="post-toc-number">45.</span> <span class="post-toc-text">Web Worker 和 webSocket</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP协议的主要特点"><span class="post-toc-number">2.</span> <span class="post-toc-text">HTTP协议的主要特点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP报文的组成部分"><span class="post-toc-number">3.</span> <span class="post-toc-text">HTTP报文的组成部分</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP方法"><span class="post-toc-number">4.</span> <span class="post-toc-text">HTTP方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#get-和-post的区别"><span class="post-toc-number">5.</span> <span class="post-toc-text">get 和 post的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http状态码"><span class="post-toc-number">6.</span> <span class="post-toc-text">http状态码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP-状态码"><span class="post-toc-number">7.</span> <span class="post-toc-text">HTTP 状态码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#持久链接-http长连接"><span class="post-toc-number">8.</span> <span class="post-toc-text">持久链接/http长连接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#长连接中的管线化"><span class="post-toc-number">9.</span> <span class="post-toc-text">长连接中的管线化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http状态码有那些？分别代表是什么意思？"><span class="post-toc-number">10.</span> <span class="post-toc-text">http状态码有那些？分别代表是什么意思？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一个页面从输入-URL-到页面加载显示完成，这个过程中都发生了什么？（流程说的越详细越好）"><span class="post-toc-number">11.</span> <span class="post-toc-text">一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？（流程说的越详细越好）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#说说TCP传输的三次握手四次挥手策略"><span class="post-toc-number">12.</span> <span class="post-toc-text">说说TCP传输的三次握手四次挥手策略</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#断开一个TCP连接则需要“四次握手”："><span class="post-toc-number">13.</span> <span class="post-toc-text">断开一个TCP连接则需要“四次握手”：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TCP和UDP的区别"><span class="post-toc-number">14.</span> <span class="post-toc-text">TCP和UDP的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP和HTTPS"><span class="post-toc-number">15.</span> <span class="post-toc-text">HTTP和HTTPS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么HTTPS安全"><span class="post-toc-number">16.</span> <span class="post-toc-text">为什么HTTPS安全</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于Http-2-0-你知道多少？"><span class="post-toc-number">17.</span> <span class="post-toc-text">关于Http 2.0 你知道多少？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GET和POST的区别，何时使用POST？"><span class="post-toc-number">18.</span> <span class="post-toc-text">GET和POST的区别，何时使用POST？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#说说网络分层里七层模型是哪七层"><span class="post-toc-number">19.</span> <span class="post-toc-text">说说网络分层里七层模型是哪七层</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#讲讲304缓存的原理"><span class="post-toc-number">20.</span> <span class="post-toc-text">讲讲304缓存的原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP-2-与-HTTP-1-x-的关键区别"><span class="post-toc-number">21.</span> <span class="post-toc-text">HTTP/2 与 HTTP/1.x 的关键区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一个页面从输入-URL-到页面加载显示完成，这个过程中都发生了什么？"><span class="post-toc-number">22.</span> <span class="post-toc-text">一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http-无状态无连接"><span class="post-toc-number">23.</span> <span class="post-toc-text">http 无状态无连接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http协议无状态中的-状态-到底指的是什么？"><span class="post-toc-number">24.</span> <span class="post-toc-text">http协议无状态中的 状态 到底指的是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http-cache：就是-http-缓存"><span class="post-toc-number">25.</span> <span class="post-toc-text">http-cache：就是 http 缓存</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Http2-是什么"><span class="post-toc-number">26.</span> <span class="post-toc-text">Http2 是什么</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Http-请求的整个过程"><span class="post-toc-number">27.</span> <span class="post-toc-text">Http 请求的整个过程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http-缓存配置怎么设置"><span class="post-toc-number">28.</span> <span class="post-toc-text">http 缓存配置怎么设置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Accept-和-Content-Type"><span class="post-toc-number">29.</span> <span class="post-toc-text">Accept 和 Content-Type</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http-协议缓存机制"><span class="post-toc-number">30.</span> <span class="post-toc-text">http 协议缓存机制</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何处理不让别人盗用你的图片，访问你的服务器资源"><span class="post-toc-number">31.</span> <span class="post-toc-text">如何处理不让别人盗用你的图片，访问你的服务器资源</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Http-与-Https-的区别"><span class="post-toc-number">32.</span> <span class="post-toc-text">Http 与 Https 的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是-Http-协议无状态协议-怎么解决-Http-协议无状态协议"><span class="post-toc-number">33.</span> <span class="post-toc-text">什么是 Http 协议无状态协议?怎么解决 Http 协议无状态协议?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常用的-HTTP-方法有哪些"><span class="post-toc-number">34.</span> <span class="post-toc-text">常用的 HTTP 方法有哪些</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一次完整的-HTTP-请求所经历的-7-个步骤"><span class="post-toc-number">35.</span> <span class="post-toc-text">一次完整的 HTTP 请求所经历的 7 个步骤</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三次握手"><span class="post-toc-number">36.</span> <span class="post-toc-text">三次握手</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#四次挥手"><span class="post-toc-number">37.</span> <span class="post-toc-text">四次挥手</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#线程与进程的区别"><span class="post-toc-number">38.</span> <span class="post-toc-text">线程与进程的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#WEB-应用从服务器主动推送-Data-到客户端有那些方式？"><span class="post-toc-number">39.</span> <span class="post-toc-text">WEB 应用从服务器主动推送 Data 到客户端有那些方式？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#请简述如何在-HTML-中开启和关闭-DNS-预读取"><span class="post-toc-number">40.</span> <span class="post-toc-text">请简述如何在 HTML 中开启和关闭 DNS 预读取?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TCP-和-UDP-的区别"><span class="post-toc-number">41.</span> <span class="post-toc-text">TCP 和 UDP 的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Web-Worker-和-webSocket"><span class="post-toc-number">42.</span> <span class="post-toc-text">Web Worker 和 webSocket</span></a></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-HTTP"
+<article id="post-前端面试题/HTTP"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
@@ -715,32 +715,6 @@
 <p>Cache-Control: max-age=0 以秒为单位<br>If-Modified-Since: Mon, 19 Nov 2012 08:38:01 GMT 缓存文件的最后修改时间。<br>If-None-Match: “0693f67a67cc1:0” 缓存文件的 Etag 值<br>Cache-Control: no-cache 不使用缓存<br>Pragma: no-cache 不使用缓存</p>
 <p>Response</p>
 <p>Cache-Control: public 响应被缓存，并且在多用户间共享，  （公有缓存和私有缓存的区别，请看另一节）<br>Cache-Control: private 响应只能作为私有缓存，不能在用户之间共享<br>Cache-Control:no-cache 提醒浏览器要从服务器提取文档进行验证<br>Cache-Control:no-store 绝对禁止缓存（用于机密，敏感文件）<br>Cache-Control: max-age=60 60 秒之后缓存过期（相对时间）<br>Date: Mon, 19 Nov 2012 08:39:00 GMT 当前 response 发送的时间<br>Expires: Mon, 19 Nov 2012 08:40:01 GMT 缓存过期的时间（绝对时间）<br>Last-Modified: Mon, 19 Nov 2012 08:38:01 GMT 服务器端文件的最后修改时间<br>ETag: “20b1add7ec1cd1:0” 服务器端文件的 Etag 值</p>
-<h3 id="在-HTTP-响应-Header-中，set-cookie-选项有哪些，分别代表什么含义？"><a href="#在-HTTP-响应-Header-中，set-cookie-选项有哪些，分别代表什么含义？" class="headerlink" title="在 HTTP 响应 Header 中，set-cookie 选项有哪些，分别代表什么含义？"></a>在 HTTP 响应 Header 中，set-cookie 选项有哪些，分别代表什么含义？</h3><p>Set-Cookie: <cookie-name>=<cookie-value></cookie-value></cookie-name></p>
-<ul>
-<li>Expires=<code>&lt;date&gt;</code></li>
-<li>Max-Age=<code>&lt;non-zero-digit&gt;</code></li>
-<li>Domain=<code>&lt;domain-value&gt;</code></li>
-<li>Path=<code>&lt;path-value&gt;</code></li>
-<li>Secure</li>
-<li>HttpOnly</li>
-<li>SameSite=Strict</li>
-<li>SameSite=Lax</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">name = name; <span class="comment">// 需要设置cookie的值(name不能使用";"和","号),有多个name值时用";"分隔例如：name1=name1;name2=name2;name3=name3</span></span><br><span class="line"></span><br><span class="line">expires; <span class="comment">//cookie的有效期限,格式为:expires="Wdy,DD-Mon-YYYY HH:MM:SS"</span></span><br><span class="line"></span><br><span class="line">path; <span class="comment">//设置cookie支持的路径,如果path是一个路径，则cookie对这个目录下的所有文件及子目录生效，例如：path="/cgi-bin/"，如果path是一个文件，则cookie指对这个文件生效，例如：path="/cgi-bin/cookie.cgi"</span></span><br><span class="line"></span><br><span class="line">domain; <span class="comment">//对cookie生效的域名，例如：domain="gzdzw.51.net"</span></span><br><span class="line"></span><br><span class="line">secure; <span class="comment">//如果给出此标志，表示cookie只能通过SSL协议的https服务器来传递,cookie的接收是通过设置环境变量HTTP_COOKIE来实现的，CGI程序可以通过检索该变量获取cookie信息</span></span><br></pre></td></tr></table></figure>
-
-<p>解析：Cookie 相关的 Http 头</p>
-<p>有两个 Http 头部和 Cookie 有关：Set-Cookie 和 Cookie</p>
-<ul>
-<li>Set-Cookie 由服务器发送，它包含在响应请求的头部中。它用于在客户端创建一个 Cookie</li>
-<li>Cookie 头由客户端发送，包含在 HTTP 请求的头部中。注意，只有 cookie 的 domain 和 path 与请求的 URL 匹配才会发送这个 cookie。</li>
-</ul>
-<h3 id="请你谈谈-Cookie-的弊端？"><a href="#请你谈谈-Cookie-的弊端？" class="headerlink" title="请你谈谈 Cookie 的弊端？"></a>请你谈谈 Cookie 的弊端？</h3><ol>
-<li><code>Cookie</code>数量和长度的限制。每个 domain 最多只能有 20 条 cookie，每个 cookie 长度不能超过 4KB，否则会被截掉。</li>
-<li>安全性问题。如果 cookie 被人拦截了，那人就可以取得所有的 session 信息。即使加密也与事无补，因为拦截者并不需要知道 cookie 的意义，他只要原样转发 cookie 就可以达到目的了。</li>
-<li>有些状态不可能保存在客户端。例如，为了防止重复提交表单，我们需要在服务器端保存一个计数器。如果我们把这个计数器保存在客户端，那么它起不到任何作用。</li>
-</ol>
-<h3 id="本地存储（Local-Storage-）和-cookies（储存在用户本地终端上的数据）之间的区别是什么？"><a href="#本地存储（Local-Storage-）和-cookies（储存在用户本地终端上的数据）之间的区别是什么？" class="headerlink" title="本地存储（Local Storage ）和 cookies（储存在用户本地终端上的数据）之间的区别是什么？"></a>本地存储（Local Storage ）和 cookies（储存在用户本地终端上的数据）之间的区别是什么？</h3><p>Cookies:服务器和客户端都可以访问；大小只有 4KB 左右；有有效期，过期后将会删除；</p>
-<p>本地存储：只有本地浏览器端可访问数据，服务器不能访问本地存储直到故意通过 POST 或者 GET 的通道发送到服务器；每个域 5MB；没有过期数据，它将保留知道用户从浏览器清除或者使用 Javascript 代码移除</p>
 <h3 id="Accept-和-Content-Type"><a href="#Accept-和-Content-Type" class="headerlink" title="Accept 和 Content-Type"></a>Accept 和 Content-Type</h3><p>Accept 请求头用来告知客户端可以处理的内容类型，这种内容类型用 MIME 类型来表示。<br>服务器使用 Content-Type 应答头通知客户端它的选择。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Accept: text/html</span><br><span class="line">Accept: image/*</span><br><span class="line">Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8</span><br></pre></td></tr></table></figure>
 
@@ -857,17 +831,17 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2021-08-13T04:26:38.103Z" itemprop="dateUpdated">2021-08-13 12:26:38</time>
+    最后更新时间：<time datetime="2022-08-05T04:00:48.165Z" itemprop="dateUpdated">2022-08-05 12:00:48</time>
 </span><br>
 
 
         
-        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/前端面试题/HTTP.html" target="_blank" rel="external">http://blog.seoqp.com/前端面试题/HTTP.html</a>
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/前端面试题/HTTP.html" target="_blank" rel="external">http://qvchat.com/前端面试题/HTTP.html</a>
         
     </div>
     
     <footer>
-        <a href="http://blog.seoqp.com">
+        <a href="http://qvchat.com">
             <img src="/img/avatar.jpg" alt="秦伟">
             秦伟
         </a>
@@ -893,7 +867,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端面试题/HTTP.html&title=《HTTP》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://qvchat.com/前端面试题/HTTP.html&title=《HTTP》 — 秦伟博客&pic=http://qvchat.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -903,22 +877,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端面试题/HTTP.html&title=《HTTP》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://qvchat.com/前端面试题/HTTP.html&title=《HTTP》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.seoqp.com/前端面试题/HTTP.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://qvchat.com/前端面试题/HTTP.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《HTTP》 — 秦伟博客&url=http://blog.seoqp.com/前端面试题/HTTP.html&via=http://blog.seoqp.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《HTTP》 — 秦伟博客&url=http://qvchat.com/前端面试题/HTTP.html&via=http://qvchat.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.seoqp.com/前端面试题/HTTP.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://qvchat.com/前端面试题/HTTP.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -1071,7 +1045,7 @@
     </div>
 
     <div class="bottom">
-        <p><span>Copyright &copy; 2018 - 2021 <a
+        <p><span>Copyright &copy; 2018 - 2023 <a
                 href="http://blog.bluedream.site/" target="_blank">秦伟的个人博客</a>All Rights Reserved.</span>
             <span>
                 部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除。
@@ -1126,7 +1100,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端面试题/HTTP.html&title=《HTTP》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://qvchat.com/前端面试题/HTTP.html&title=《HTTP》 — 秦伟博客&pic=http://qvchat.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -1136,22 +1110,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端面试题/HTTP.html&title=《HTTP》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://qvchat.com/前端面试题/HTTP.html&title=《HTTP》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.seoqp.com/前端面试题/HTTP.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://qvchat.com/前端面试题/HTTP.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《HTTP》 — 秦伟博客&url=http://blog.seoqp.com/前端面试题/HTTP.html&via=http://blog.seoqp.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《HTTP》 — 秦伟博客&url=http://qvchat.com/前端面试题/HTTP.html&via=http://qvchat.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.seoqp.com/前端面试题/HTTP.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://qvchat.com/前端面试题/HTTP.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -1162,7 +1136,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3aQYoCMRAFUO9/aQdmNTB0/FWJaCevVyJo52Xxqark8Yif5+8z/vz3m//P1W/H3yx+MDAwbst4Dp/kBeMXj6lXa8jXhoGBcQ4jCdkkQPPgHm9lvjYMDAyMpKQbLyXflHxrMDAwMKp/l5Ru1UIQAwMDo9fEjpvSakxXf7WsF8fAwLghY9XBwDs+f+B8AwMD48sYz+JTbVmTcMzj9XJVGBgYWzOWDeXjkrF62DlO19VnCxgYGN/LmC/U8sZyppWNwBgYGJsyetfCktckIZ68JQpuDAyMTRm9QnAcr9VR/nihhZMNDAyMwxjV4KuGb28Ad/leDAyMYxjVBHv3wUAh9DEwMLZmJIVdPrhf27LmrTUGBsYJjORlefytGqglBSgGBsY5jGqkJuO5vDTsFaaF81gMDIybM5I4W/X9zLWMF802BgbGMYz8Elgemr1RWrO2xcDAOIBRHXVVB21JG9xbFQYGxt6M/EJY77Qhx48b16iRxsDA2JqRR+fMNYik6c23DwMD4xzGfGO5NiiblzkwMDCOZ+Rj/WrrW71aUZjtYWBgbMSYibx8ifNRW347BgbGRozeCH6+QOy1uJe/wsDA2JoxU2slgHwLZgZ8GBgYJzDmQ7ZXRFa34EUjjYGBcQAjGYTlren8RY3yJA0DAwMjjs7kCGG8Hc0yEQMDAyMuGRNeHu6Fw1cMDIwDGHkTO391oze8w8DAOJkxf8+q1+jm1zt668HAwNiC8QOw+/UbBr1WswAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMElEQVR42u3aS3LcMAwFQN//0pOtXY7k98BxUiKbK5VGH7YWGJDAx0c8Xp/G9/Pfj+/vunrC1Zm3DQwMjMcyXrfjakJXv95fmXyg5Ml/eSYGBsYBjPtQ2AbW+6kk0TKfGwYGBkbLSIJjG8oxMDAwWkYylTaY/oeAi4GB8UDGbyxEk0knn+/Na3EMDIwHMvJd939//Cv1DQwMjEcxXuXIQ2demMzD6+WsMDAwtmbkAe4++WvbLGZ3/XAlBgbG1owkUM7O5yWE2dujTBYDA2M7Rh742oA7Ky3MNuwwMDD2Y+QvmBUAVooQRXKJgYFxAKMNsm3xIHlyvj0XVWIxMDCOYczaLPJF6SyJHOaqGBgYD2S0LQ55gpg3baykm18qsRgYGFsz1guNbVtGuz33w/UYGBgHMPLbVgLlbMEcZYAYGBhbM5Kx3jaxUkiYncfAwNiJkYewvCSwXmxojzEwMPZmJBtqs8Jk0lTRpp7FPwYGBsZ2jLZ4uZ4Ito1fERIDA2NrRt7g1QblHN++K1qFY2BgbMSYbfq3L1sJxNFfAgYGxgGMe0xbdMwTzXc1nGFgYJzDWN8aW9+qywurGBgYJzBe5Wg33daDbFGJxcDA2JTRBrj3poZ5QMfAwMBoE7tZe0T+aWZzwMDAOIExC3wtslhbt6EfAwMDY6G1a9aoUbMxMDAwFgqcLTjf2ntDaoiBgfEoRhIKZ+1cyUI3D+IYGBhnMtrmhnyDLA/WsyliYGAcwPgDPyUi4M50eL8AAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 
@@ -1263,5 +1237,18 @@ MathJax.Hub.Queue(function() {
     }
 </script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 </html>

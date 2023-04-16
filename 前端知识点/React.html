@@ -25,14 +25,16 @@
 <meta name="keywords" content="React,redux,组件">
 <meta property="og:type" content="article">
 <meta property="og:title" content="React">
-<meta property="og:url" content="http://blog.seoqp.com/前端知识点/React.html">
+<meta property="og:url" content="http://qvchat.com/前端知识点/React.html">
 <meta property="og:site_name" content="秦伟博客">
 <meta property="og:description" content="React 是什么？React 不是 MV* 框架，用于构建用户界面的 JavaScript 库，侧重于 View 层 React 主要的原理：  虚拟 DOM + diff 算法 -&amp;gt; 不直接操作 DOM 对象 Components 组件 -&amp;gt; Virtual DOM 的节点 State 触发视图的渲染 -&amp;gt; 单向数据绑定 React 解决方案：React + Redux +">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-08-13T04:23:21.419Z">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:updated_time" content="2022-07-21T09:08:51.035Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React">
 <meta name="twitter:description" content="React 是什么？React 不是 MV* 框架，用于构建用户界面的 JavaScript 库，侧重于 View 层 React 主要的原理：  虚拟 DOM + diff 算法 -&amp;gt; 不直接操作 DOM 对象 Components 组件 -&amp;gt; Virtual DOM 的节点 State 触发视图的渲染 -&amp;gt; 单向数据绑定 React 解决方案：React + Redux +">
+<meta name="twitter:image" content="http://qvchat.com/img/loading.gif">
     
         <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
     
@@ -124,9 +126,9 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://coding.net/u/qw6" target="_blank" >
+              <a href="https://gitee.com/qw66" target="_blank" >
                 <i class="icon icon-lg icon-code"></i>
-                coding
+                gitee
               </a>
             </li>
         
@@ -188,12 +190,12 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-是什么？"><span class="post-toc-number">1.</span> <span class="post-toc-text">React 是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#react-router-路由系统的实现原理？"><span class="post-toc-number">2.</span> <span class="post-toc-text">react-router 路由系统的实现原理？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-中-keys-的作用是什么？"><span class="post-toc-number">3.</span> <span class="post-toc-text">React 中 keys 的作用是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#传入-setState-函数的第二个参数的作用是什么？"><span class="post-toc-number">4.</span> <span class="post-toc-text">传入 setState 函数的第二个参数的作用是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-中-refs-的作用是什么"><span class="post-toc-number">5.</span> <span class="post-toc-text">React 中 refs 的作用是什么</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在生命周期中的哪一步你应该发起-AJAX-请求"><span class="post-toc-number">6.</span> <span class="post-toc-text">在生命周期中的哪一步你应该发起 AJAX 请求</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#shouldComponentUpdate-的作用"><span class="post-toc-number">7.</span> <span class="post-toc-text">shouldComponentUpdate 的作用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何告诉-React-它应该编译生产环境版"><span class="post-toc-number">8.</span> <span class="post-toc-text">如何告诉 React 它应该编译生产环境版</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#概述下-React-中的事件处理逻辑"><span class="post-toc-number">9.</span> <span class="post-toc-text">概述下 React 中的事件处理逻辑</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#createElement-与-cloneElement-的区别是什么"><span class="post-toc-number">10.</span> <span class="post-toc-text">createElement 与 cloneElement 的区别是什么</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#redux中间件"><span class="post-toc-number">11.</span> <span class="post-toc-text">redux中间件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#redux有什么缺点"><span class="post-toc-number">12.</span> <span class="post-toc-text">redux有什么缺点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#react组件的划分业务组件技术组件？"><span class="post-toc-number">13.</span> <span class="post-toc-text">react组件的划分业务组件技术组件？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#react生命周期函数"><span class="post-toc-number">14.</span> <span class="post-toc-text">react生命周期函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#react性能优化是哪个周期函数"><span class="post-toc-number">15.</span> <span class="post-toc-text">react性能优化是哪个周期函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么虚拟dom会提高性能"><span class="post-toc-number">16.</span> <span class="post-toc-text">为什么虚拟dom会提高性能</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#diff算法"><span class="post-toc-number">17.</span> <span class="post-toc-text">diff算法?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#react性能优化方案"><span class="post-toc-number">18.</span> <span class="post-toc-text">react性能优化方案</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#当你调用-setState-的时候，发生了什么事？"><span class="post-toc-number">19.</span> <span class="post-toc-text">当你调用 setState 的时候，发生了什么事？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-项目用过什么脚手架（本题是开放性题目）"><span class="post-toc-number">20.</span> <span class="post-toc-text">React 项目用过什么脚手架（本题是开放性题目）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么时候在功能组件-Class-Component-上使用类组件-Functional-Component-？"><span class="post-toc-number">21.</span> <span class="post-toc-text">什么时候在功能组件( Class Component )上使用类组件( Functional Component )？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-中-keys-的作用是什么？-1"><span class="post-toc-number">22.</span> <span class="post-toc-text">React 中 keys 的作用是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-优势"><span class="post-toc-number">23.</span> <span class="post-toc-text">React 优势</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#react-diff-原理（常考，大厂必考）"><span class="post-toc-number">24.</span> <span class="post-toc-text">react diff 原理（常考，大厂必考）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#react-生命周期函数"><span class="post-toc-number">25.</span> <span class="post-toc-text">react 生命周期函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#shouldComponentUpdate-是做什么的？（react-性能优化是哪个周期函数？）"><span class="post-toc-number">26.</span> <span class="post-toc-text">shouldComponentUpdate 是做什么的？（react 性能优化是哪个周期函数？）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么虚拟-dom-会提高性能-必考"><span class="post-toc-number">27.</span> <span class="post-toc-text">为什么虚拟 dom 会提高性能?(必考)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-中-refs-的作用是什么？"><span class="post-toc-number">28.</span> <span class="post-toc-text">React 中 refs 的作用是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#redux-有什么缺点"><span class="post-toc-number">29.</span> <span class="post-toc-text">redux 有什么缺点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#简述-flux-思想"><span class="post-toc-number">30.</span> <span class="post-toc-text">简述 flux 思想</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#了解-redux-么，说一下-redux-吧"><span class="post-toc-number">31.</span> <span class="post-toc-text">了解 redux 么，说一下 redux 吧</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-中有三种构建组件的方式"><span class="post-toc-number">32.</span> <span class="post-toc-text">React 中有三种构建组件的方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#react-组件的划分业务组件技术组件？"><span class="post-toc-number">33.</span> <span class="post-toc-text">react 组件的划分业务组件技术组件？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#描述事件在-React-中的处理方式"><span class="post-toc-number">34.</span> <span class="post-toc-text">描述事件在 React 中的处理方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#应该在-React-组件的何处发起-Ajax-请求"><span class="post-toc-number">35.</span> <span class="post-toc-text">应该在 React 组件的何处发起 Ajax 请求</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在构造函数中-调用-super-props-的目的是什么"><span class="post-toc-number">36.</span> <span class="post-toc-text">(在构造函数中)调用 super(props) 的目的是什么</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#除了在构造函数中绑定-this，还有其它方式吗"><span class="post-toc-number">37.</span> <span class="post-toc-text">除了在构造函数中绑定 this，还有其它方式吗</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么建议传递给-setState-的参数是一个-callback-而不是一个对象"><span class="post-toc-number">38.</span> <span class="post-toc-text">为什么建议传递给 setState 的参数是一个 callback 而不是一个对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#何为高阶组件-higher-order-component"><span class="post-toc-number">39.</span> <span class="post-toc-text">何为高阶组件(higher order component)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#何为受控组件-controlled-component"><span class="post-toc-number">40.</span> <span class="post-toc-text">何为受控组件(controlled component)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在-React-当中-Element-和-Component-有何区别？"><span class="post-toc-number">41.</span> <span class="post-toc-text">在 React 当中 Element 和 Component 有何区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#组件的-状态-state-和属性-props-之间有何区别"><span class="post-toc-number">42.</span> <span class="post-toc-text">(组件的)状态(state)和属性(props)之间有何区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#展示组件-Presentational-component-和容器组件-Container-component-之间有何区别？"><span class="post-toc-number">43.</span> <span class="post-toc-text">展示组件(Presentational component)和容器组件(Container component)之间有何区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#类组件-Class-component-和-函数式组件-Functional-component-之间有何区别？"><span class="post-toc-number">44.</span> <span class="post-toc-text">类组件(Class component)和 函数式组件(Functional component)之间有何区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#createElement-和-cloneElement-有什么区别？"><span class="post-toc-number">45.</span> <span class="post-toc-text">createElement 和 cloneElement 有什么区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#setState-和-replaceState-的区别"><span class="post-toc-number">46.</span> <span class="post-toc-text">setState 和 replaceState 的区别</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-是什么？"><span class="post-toc-number">1.</span> <span class="post-toc-text">React 是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-组件生命周期"><span class="post-toc-number">2.</span> <span class="post-toc-text">React 组件生命周期</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#挂载"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">挂载</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#更新"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">更新</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#卸载"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">卸载</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为啥要用Hook"><span class="post-toc-number">3.</span> <span class="post-toc-text">为啥要用Hook</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-Hook是React16-8的新增特性，它可以让我们在不编写class的情况下使用state以及其他的React特性（比如生命周期）。"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">1.Hook是React16.8的新增特性，它可以让我们在不编写class的情况下使用state以及其他的React特性（比如生命周期）。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-class相比函数式组件的优势："><span class="post-toc-number">3.2.</span> <span class="post-toc-text">2.class相比函数式组件的优势：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-Class组件存在的问题："><span class="post-toc-number">3.3.</span> <span class="post-toc-text">3.Class组件存在的问题：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Hook优点"><span class="post-toc-number">4.</span> <span class="post-toc-text">Hook优点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-中setState更新state何时同步何时异步？"><span class="post-toc-number">5.</span> <span class="post-toc-text">React 中setState更新state何时同步何时异步？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#要探究setState为什么可能是异步的，先了解setState执行后会发生什么？"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">要探究setState为什么可能是异步的，先了解setState执行后会发生什么？</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#setState何时同步何时异步？"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">setState何时同步何时异步？</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#React是怎样控制异步和同步的呢？"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">React是怎样控制异步和同步的呢？</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#多个setState调用会合并处理"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">多个setState调用会合并处理</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#参数为函数的setState用法"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">参数为函数的setState用法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#在同一个事件处理程序中不要混用"><span class="post-toc-number">5.6.</span> <span class="post-toc-text">在同一个事件处理程序中不要混用</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#react-router-路由系统的实现原理？"><span class="post-toc-number">6.</span> <span class="post-toc-text">react-router 路由系统的实现原理？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-中-keys-的作用是什么？"><span class="post-toc-number">7.</span> <span class="post-toc-text">React 中 keys 的作用是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#传入-setState-函数的第二个参数的作用是什么？"><span class="post-toc-number">8.</span> <span class="post-toc-text">传入 setState 函数的第二个参数的作用是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-中-refs-的作用是什么"><span class="post-toc-number">9.</span> <span class="post-toc-text">React 中 refs 的作用是什么</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在生命周期中的哪一步你应该发起-AJAX-请求"><span class="post-toc-number">10.</span> <span class="post-toc-text">在生命周期中的哪一步你应该发起 AJAX 请求</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#shouldComponentUpdate-的作用"><span class="post-toc-number">11.</span> <span class="post-toc-text">shouldComponentUpdate 的作用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何告诉-React-它应该编译生产环境版"><span class="post-toc-number">12.</span> <span class="post-toc-text">如何告诉 React 它应该编译生产环境版</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#概述下-React-中的事件处理逻辑"><span class="post-toc-number">13.</span> <span class="post-toc-text">概述下 React 中的事件处理逻辑</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#createElement-与-cloneElement-的区别是什么"><span class="post-toc-number">14.</span> <span class="post-toc-text">createElement 与 cloneElement 的区别是什么</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#redux中间件"><span class="post-toc-number">15.</span> <span class="post-toc-text">redux中间件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#redux有什么缺点"><span class="post-toc-number">16.</span> <span class="post-toc-text">redux有什么缺点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#react组件的划分业务组件技术组件？"><span class="post-toc-number">17.</span> <span class="post-toc-text">react组件的划分业务组件技术组件？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#react生命周期函数"><span class="post-toc-number">18.</span> <span class="post-toc-text">react生命周期函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#react性能优化是哪个周期函数"><span class="post-toc-number">19.</span> <span class="post-toc-text">react性能优化是哪个周期函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么虚拟dom会提高性能"><span class="post-toc-number">20.</span> <span class="post-toc-text">为什么虚拟dom会提高性能</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#diff算法"><span class="post-toc-number">21.</span> <span class="post-toc-text">diff算法?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#react性能优化方案"><span class="post-toc-number">22.</span> <span class="post-toc-text">react性能优化方案</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#当你调用-setState-的时候，发生了什么事？"><span class="post-toc-number">23.</span> <span class="post-toc-text">当你调用 setState 的时候，发生了什么事？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-项目用过什么脚手架（本题是开放性题目）"><span class="post-toc-number">24.</span> <span class="post-toc-text">React 项目用过什么脚手架（本题是开放性题目）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么时候在功能组件-Class-Component-上使用类组件-Functional-Component-？"><span class="post-toc-number">25.</span> <span class="post-toc-text">什么时候在功能组件( Class Component )上使用类组件( Functional Component )？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-中-keys-的作用是什么？-1"><span class="post-toc-number">26.</span> <span class="post-toc-text">React 中 keys 的作用是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-优势"><span class="post-toc-number">27.</span> <span class="post-toc-text">React 优势</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#react-diff-原理（常考，大厂必考）"><span class="post-toc-number">28.</span> <span class="post-toc-text">react diff 原理（常考，大厂必考）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#react-生命周期函数"><span class="post-toc-number">29.</span> <span class="post-toc-text">react 生命周期函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#shouldComponentUpdate-是做什么的？（react-性能优化是哪个周期函数？）"><span class="post-toc-number">30.</span> <span class="post-toc-text">shouldComponentUpdate 是做什么的？（react 性能优化是哪个周期函数？）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么虚拟-dom-会提高性能-必考"><span class="post-toc-number">31.</span> <span class="post-toc-text">为什么虚拟 dom 会提高性能?(必考)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-中-refs-的作用是什么？"><span class="post-toc-number">32.</span> <span class="post-toc-text">React 中 refs 的作用是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#redux-有什么缺点"><span class="post-toc-number">33.</span> <span class="post-toc-text">redux 有什么缺点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#简述-flux-思想"><span class="post-toc-number">34.</span> <span class="post-toc-text">简述 flux 思想</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#了解-redux-么，说一下-redux-吧"><span class="post-toc-number">35.</span> <span class="post-toc-text">了解 redux 么，说一下 redux 吧</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#React-中有三种构建组件的方式"><span class="post-toc-number">36.</span> <span class="post-toc-text">React 中有三种构建组件的方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#react-组件的划分业务组件技术组件？"><span class="post-toc-number">37.</span> <span class="post-toc-text">react 组件的划分业务组件技术组件？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#描述事件在-React-中的处理方式"><span class="post-toc-number">38.</span> <span class="post-toc-text">描述事件在 React 中的处理方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#应该在-React-组件的何处发起-Ajax-请求"><span class="post-toc-number">39.</span> <span class="post-toc-text">应该在 React 组件的何处发起 Ajax 请求</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在构造函数中-调用-super-props-的目的是什么"><span class="post-toc-number">40.</span> <span class="post-toc-text">(在构造函数中)调用 super(props) 的目的是什么</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#除了在构造函数中绑定-this，还有其它方式吗"><span class="post-toc-number">41.</span> <span class="post-toc-text">除了在构造函数中绑定 this，还有其它方式吗</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么建议传递给-setState-的参数是一个-callback-而不是一个对象"><span class="post-toc-number">42.</span> <span class="post-toc-text">为什么建议传递给 setState 的参数是一个 callback 而不是一个对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#何为高阶组件-higher-order-component"><span class="post-toc-number">43.</span> <span class="post-toc-text">何为高阶组件(higher order component)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#何为受控组件-controlled-component"><span class="post-toc-number">44.</span> <span class="post-toc-text">何为受控组件(controlled component)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在-React-当中-Element-和-Component-有何区别？"><span class="post-toc-number">45.</span> <span class="post-toc-text">在 React 当中 Element 和 Component 有何区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#组件的-状态-state-和属性-props-之间有何区别"><span class="post-toc-number">46.</span> <span class="post-toc-text">(组件的)状态(state)和属性(props)之间有何区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#展示组件-Presentational-component-和容器组件-Container-component-之间有何区别？"><span class="post-toc-number">47.</span> <span class="post-toc-text">展示组件(Presentational component)和容器组件(Container component)之间有何区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#类组件-Class-component-和-函数式组件-Functional-component-之间有何区别？"><span class="post-toc-number">48.</span> <span class="post-toc-text">类组件(Class component)和 函数式组件(Functional component)之间有何区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#createElement-和-cloneElement-有什么区别？"><span class="post-toc-number">49.</span> <span class="post-toc-text">createElement 和 cloneElement 有什么区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#setState-和-replaceState-的区别"><span class="post-toc-number">50.</span> <span class="post-toc-text">setState 和 replaceState 的区别</span></a></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-React"
+<article id="post-前端知识点/React"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
@@ -222,6 +224,110 @@
 <li>State 触发视图的渲染 -&gt; 单向数据绑定</li>
 <li>React 解决方案：React + Redux + react-router + Fetch + webpack</li>
 </ul>
+<h3 id="React-组件生命周期"><a href="#React-组件生命周期" class="headerlink" title="React 组件生命周期"></a>React 组件生命周期</h3><p>组件的生命周期可分成三个状态：</p>
+<ul>
+<li>Mounting(挂载)：已插入真实 DOM</li>
+<li>Updating(更新)：正在被重新渲染</li>
+<li>Unmounting(卸载)：已移出真实 DOM</li>
+</ul>
+<h4 id="挂载"><a href="#挂载" class="headerlink" title="挂载"></a>挂载</h4><p>当组件实例被创建并插入 DOM 中时，其生命周期调用顺序如下：</p>
+<ul>
+<li><code>constructor()</code>: 在 React 组件挂载之前，会调用它的构造函数。</li>
+<li><code>getDerivedStateFromProps()</code>: 在调用 render 方法之前调用，并且在初始挂载及后续更新时都会被调用。</li>
+<li><code>render()</code>: render() 方法是 class 组件中唯一必须实现的方法。</li>
+<li><code>componentDidMount()</code>: 在组件挂载后（插入 DOM 树中）立即调用。</li>
+</ul>
+<p>render() 方法是 class 组件中唯一必须实现的方法，其他方法可以根据自己的需要来实现。</p>
+<h4 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h4><p>每当组件的 state 或 props 发生变化时，组件就会更新。</p>
+<p>当组件的 props 或 state 发生变化时会触发更新。组件更新的生命周期调用顺序如下：</p>
+<ul>
+<li><code>getDerivedStateFromProps()</code>: 在调用 render 方法之前调用，并且在初始挂载及后续更新时都会被调用。根据 shouldComponentUpdate() 的返回值，判断 React 组件的输出是否受当前 state 或 props 更改的影响。</li>
+<li><code>shouldComponentUpdate()</code>:当 props 或 state 发生变化时，shouldComponentUpdate() 会在渲染执行之前被调用。</li>
+<li><code>render()</code>: render() 方法是 class 组件中唯一必须实现的方法。</li>
+<li><code>getSnapshotBeforeUpdate()</code>: 在最近一次渲染输出（提交到 DOM 节点）之前调用。</li>
+<li><code>componentDidUpdate()</code>: 在更新后会被立即调用。</li>
+</ul>
+<p>render() 方法是 class 组件中唯一必须实现的方法，其他方法可以根据自己的需要来实现。</p>
+<h4 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h4><p>当组件从 DOM 中移除时会调用如下方法：</p>
+<ul>
+<li><code>componentWillUnmount()</code>: 在组件卸载及销毁之前直接调用。</li>
+</ul>
+<h3 id="为啥要用Hook"><a href="#为啥要用Hook" class="headerlink" title="为啥要用Hook"></a>为啥要用Hook</h3><h4 id="1-Hook是React16-8的新增特性，它可以让我们在不编写class的情况下使用state以及其他的React特性（比如生命周期）。"><a href="#1-Hook是React16-8的新增特性，它可以让我们在不编写class的情况下使用state以及其他的React特性（比如生命周期）。" class="headerlink" title="1.Hook是React16.8的新增特性，它可以让我们在不编写class的情况下使用state以及其他的React特性（比如生命周期）。"></a>1.Hook是React16.8的新增特性，它可以让我们在不编写class的情况下使用state以及其他的React特性（比如生命周期）。</h4><h4 id="2-class相比函数式组件的优势："><a href="#2-class相比函数式组件的优势：" class="headerlink" title="2.class相比函数式组件的优势："></a>2.class相比函数式组件的优势：</h4><p>class组件内部可以定义自己的state，用来保存组件自己内部的状态；函数式组件不可以，因为函数每次调用都会产生新的临时变量。<br>class组件有自己的生命周期，可以在对应的生命周期中完成自己的逻辑；比如在componentDidMount中发送网络请求，并且该生命周期函数只会执行一次；函数式组件在学习hooks之前，如果在函数中发送网络请求，意味着每次重新渲染都会重新发送一次网络请求。<br>class组件可以在状态改变时只重新执行render函数以及我们希望重新调用的生命周期函数componentDidUpdate等；函数式组件在重新渲染时，整个函数都会被执行，似乎没有什么地方可以只让它们调用一次；<br>在Hook之前，以上情况通常都用class。</p>
+<h4 id="3-Class组件存在的问题："><a href="#3-Class组件存在的问题：" class="headerlink" title="3.Class组件存在的问题："></a>3.Class组件存在的问题：</h4><p>复杂组件变得难以理解： 最初编写class组件时，往往逻辑比较简单，但是业务增多，class组件就会越来越复杂；<br>比如componentDidMount中，可能就会有大量逻辑代码，包括网络请求，一些事件的监听（还需要在componentWillUnmount中移除）；<br>而对于这样的class实际上很难拆分，因为这些逻辑往往混在一起，强行拆分反而会造成过度设计，增加代码的复杂度。<br>难以理解的class： ES6中class相当于React的一个障碍；<br>在class中，我们必须搞清楚this的指向到底是谁，所以需要花很多的精力去学习this； 虽然掌握this是必要，但是处理起来依然很麻烦<br>组件复用状态很难： 在之前为了一些状态的复用，我们需要通过高阶组件或render props；<br>像redux中connect或者react-route中的withRouter，这些高阶组件设计的目的就是为了状态的复用。<br>或者类似于Provider，Consumer来共享一些状态，但是多次使用Consumer时，就会有很多嵌套；</p>
+<h3 id="Hook优点"><a href="#Hook优点" class="headerlink" title="Hook优点"></a>Hook优点</h3><p>可以让我们在不编写class的情况下使用state以及其他的React特性；也可以延伸很多用法解决上述问题。</p>
+<p>Hook使用场景： Hook的出现基本可以替代class组件（除了个别场景）；<br>若项目比较旧，并不需要直接将所有代码重构为Hooks，因为它完全向下兼容，可以渐进式地来使用；<br>Hook只能在函数组件中使用，不能在类组件，或者函数组件之外的地方使用；</p>
+<h3 id="React-中setState更新state何时同步何时异步？"><a href="#React-中setState更新state何时同步何时异步？" class="headerlink" title="React 中setState更新state何时同步何时异步？"></a>React 中setState更新state何时同步何时异步？</h3><p>React中constructor是唯一可以初始化state的地方，也可以把它理解成一个钩子函数，该函数最先执行且只执行一次。</p>
+<p>更新状态不要直接修改this.state。虽然状态可以改变，但不会触发组件的更新。</p>
+<p>应当使用this.setState()，该方法接收两种参数：对象或函数。</p>
+<ol>
+<li>对象：即想要修改的state</li>
+<li>函数：接收两个函数，第一个函数接受两个参数，第一个是当前state，第二个是当前props，该函数返回一个对象，和直接传递对象参数是一样的，就是要修改的state；第二个函数参数是state改变后触发的回调。</li>
+</ol>
+<p>回到主题，setState可能是异步的。对此官方有这样一段描述：setState() does not always immediately update the component. It may batch or defer the update until later. This makes reading this.state right after calling setState()a potential pitfall.</p>
+<p>关键词：batch、defer、may。</p>
+<h4 id="要探究setState为什么可能是异步的，先了解setState执行后会发生什么？"><a href="#要探究setState为什么可能是异步的，先了解setState执行后会发生什么？" class="headerlink" title="要探究setState为什么可能是异步的，先了解setState执行后会发生什么？"></a>要探究setState为什么可能是异步的，先了解setState执行后会发生什么？</h4><p>事实上setState内部执行过程是很复杂的，大致过程包括更新state，创建新的VNode，再经过diff算法比对差异，决定渲染哪一部分以及怎么渲染，最终形成最新的UI。这一过程包含组件的四个生命周期函数。</p>
+<ul>
+<li>shouleComponentUpdate</li>
+<li>componentWillUpdate</li>
+<li>render</li>
+<li>componentDidUpdate</li>
+</ul>
+<p>需要注意的是如果子组件的数据依赖于父组件，还会执行一个钩子函数<code>componentWillReceiveProps</code>。</p>
+<p>假如setState是同步更新的，每更新一次，这个过程都要完整执行一次，无疑会造成性能问题。事实上这些生命周期为纯函数，对性能还好，但是diff比较、更新DOM总消耗时间和性能吧。</p>
+<p>此外为了批次和效能，多个setState有可能在执行过程中还会被合并，所以setState延时异步更新是很合理的。</p>
+<h4 id="setState何时同步何时异步？"><a href="#setState何时同步何时异步？" class="headerlink" title="setState何时同步何时异步？"></a>setState何时同步何时异步？</h4><p><strong>由React控制的事件处理程序，以及生命周期函数调用setState不会同步更新state</strong> 。</p>
+<p><strong>React控制之外的事件中调用setState是同步更新的。比如原生js绑定的事件，setTimeout/setInterval等</strong>。</p>
+<p>大部分开发中用到的都是React封装的事件，比如onChange、onClick、onTouchMove等，这些事件处理程序中的setState都是异步处理的。</p>
+<p>看以下case：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constructor</span>() &#123;</span><br><span class="line">  <span class="keyword">this</span>.state = &#123;</span><br><span class="line">    count: <span class="number">10</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">this</span>.handleClickOne = <span class="keyword">this</span>.handleClickOne.bind(<span class="keyword">this</span>)</span><br><span class="line">  <span class="keyword">this</span>.handleClickTwo = <span class="keyword">this</span>.handleClickTwo.bind(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">render() &#123;</span><br><span class="line">  <span class="keyword">return</span> (</span><br><span class="line">    &lt;button onClick=&#123;<span class="keyword">this</span>.hanldeClickOne&#125;&gt;clickOne&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">    &lt;button onClick=&#123;this.hanldeClickTwo&#125;&gt;clickTwo&lt;/</span>button&gt;</span><br><span class="line">    &lt;button id=<span class="string">"btn"</span>&gt;clickTwo&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">  )</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">handleClickOne() &#123;</span></span><br><span class="line"><span class="regexp">  this.setState(&#123; count: this.state.count + 1&#125;)</span></span><br><span class="line"><span class="regexp">  console.log(this.state.count)</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>输出：10</p>
+<p>由此可以看出该事件处理程序中的setState是异步更新state的。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">componentDidMount() &#123;</span><br><span class="line">  <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>).addEventListener(<span class="string">'clcik'</span>, () =&gt; &#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123; <span class="attr">count</span>: <span class="keyword">this</span>.state.count + <span class="number">1</span>&#125;)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.state.count)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出： 11</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">handleClickTwo() &#123;</span><br><span class="line">  setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">this</span>.setState(&#123; <span class="attr">count</span>: <span class="keyword">this</span>.state.count + <span class="number">1</span>&#125;)</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.state.count)</span><br><span class="line">  &#125;, <span class="number">10</span>)  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出： 11</p>
+<p>以上两种方式绕过React，通过js的事件绑定程序 addEventListener 和使用setTimeout/setInterval 等 React 无法掌控的 APIs情况下，setState是同步更新state。</p>
+<h4 id="React是怎样控制异步和同步的呢？"><a href="#React是怎样控制异步和同步的呢？" class="headerlink" title="React是怎样控制异步和同步的呢？"></a>React是怎样控制异步和同步的呢？</h4><p>在 React 的 setState 函数实现中，会根据一个变量 isBatchingUpdates 判断是直接更新 this.state 还是放到队列中延时更新，而 isBatchingUpdates 默认是 false，表示 setState 会同步更新 this.state；但是，有一个函数 batchedUpdates，该函数会把 isBatchingUpdates 修改为 true，而当 React 在调用事件处理函数之前就会先调用这个 batchedUpdates将isBatchingUpdates修改为true，这样由 React 控制的事件处理过程 setState 不会同步更新 this.state。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://upload-images.jianshu.io/upload_images/5256541-992ce78e70151b57.jpg?imageMogr2/auto-orient/strip|imageView2/2/w/720/format/webp" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<h4 id="多个setState调用会合并处理"><a href="#多个setState调用会合并处理" class="headerlink" title="多个setState调用会合并处理"></a>多个setState调用会合并处理</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">render() &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'render'</span>)</span><br><span class="line">&#125;</span><br><span class="line">hanldeClick() &#123;</span><br><span class="line">  <span class="keyword">this</span>.setState(&#123; <span class="attr">name</span>: <span class="string">'jack'</span> &#125;)</span><br><span class="line">  <span class="keyword">this</span>.setState(&#123; <span class="attr">age</span>: <span class="number">12</span> &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在hanldeClick处理程序中调用了两次setState，但是render只执行了一次。因为React会将多个this.setState产生的修改放在一个队列里进行批延时处理。</p>
+<h4 id="参数为函数的setState用法"><a href="#参数为函数的setState用法" class="headerlink" title="参数为函数的setState用法"></a>参数为函数的setState用法</h4><p>先看以下case：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">handleClick() &#123;</span><br><span class="line">  <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">    count: <span class="keyword">this</span>.state.count + <span class="number">1</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>以上操作存在潜在的陷阱，不应该依靠它们的值来计算下一个状态。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">handleClick() &#123;</span><br><span class="line">  <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">    count: <span class="keyword">this</span>.state.count + <span class="number">1</span></span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">    count: <span class="keyword">this</span>.state.count + <span class="number">1</span></span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">    count: <span class="keyword">this</span>.state.count + <span class="number">1</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最终的结果只加了1</p>
+<p>因为调用this.setState时，并没有立即更改this.state，所以this.setState只是在反复设置同一个值而已，上面的代码等同于这样</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">handleClick() &#123;</span><br><span class="line">  <span class="keyword">const</span> count = <span class="keyword">this</span>.state.count</span><br><span class="line"></span><br><span class="line">  <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">    count: count + <span class="number">1</span></span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">    count: count + <span class="number">1</span></span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">    count: count + <span class="number">1</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>count相当于一个快照，所以不管重复多少次，结果都是加1。</p>
+<p>此外假如setState更新state后我希望做一些事情，而setState可能是异步的，那我怎么知道它什么时候执行完成。所以setState提供了函数式用法，接收两个函数参数，第一个函数调用更新state，第二个函数是更新完之后的回调。</p>
+<p>第一个函数接收先前的状态作为第一个参数，将此次更新被应用时的props做为第二个参数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">increment(state, props) &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    count: state.count + <span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">handleClick() &#123;</span><br><span class="line">  <span class="keyword">this</span>.setState(<span class="keyword">this</span>.increment)</span><br><span class="line">  <span class="keyword">this</span>.setState(<span class="keyword">this</span>.increment)</span><br><span class="line">  <span class="keyword">this</span>.setState(<span class="keyword">this</span>.increment)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结果: 13</p>
+<p>对于多次调用函数式setState的情况，React会保证调用每次increment时，state都已经合并了之前的状态修改结果。</p>
+<p>也就是说，第一次调用this.setState(increment)，传给increment的state参数的count是10，第二调用是11，第三次调用是12，最终handleClick执行完成后的结果就是this.state.count变成了13。</p>
+<p>值得注意的是：在increment函数被调用时，this.state并没有被改变，依然要等到render函数被重新执行时（或者shouldComponentUpdate函数返回false之后）才被改变，因为render只执行一次。</p>
+<p>让setState接受一个函数的API的设计是相当棒的！不仅符合函数式编程的思想，让开发者写出没有副作用的函数，而且我们并不去修改组件状态，只是把要改变的状态和结果返回给React，维护状态的活完全交给React去做。正是把流程的控制权交给了React，所以React才能协调多个setState调用的关系。</p>
+<h4 id="在同一个事件处理程序中不要混用"><a href="#在同一个事件处理程序中不要混用" class="headerlink" title="在同一个事件处理程序中不要混用"></a>在同一个事件处理程序中不要混用</h4><p>case:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">increment(state, props) &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    count: state.count + <span class="number">1</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">handleClick() &#123;</span><br><span class="line">  <span class="keyword">this</span>.setState(<span class="keyword">this</span>.increment)</span><br><span class="line">  <span class="keyword">this</span>.setState(&#123; <span class="attr">count</span>: <span class="keyword">this</span>.state.count + <span class="number">1</span> &#125;)</span><br><span class="line">  <span class="keyword">this</span>.setState(<span class="keyword">this</span>.increment)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结果： 12</p>
+<p>第一次执行setState，count为11，第二次执行，this.state仍然是没有更新的状态，所以this.state.count又打回了原形为10，加1以后变成11，最后再执行setState，所以最终count的结果是12。（render依然只执行一次）</p>
+<p>setState的第二个回调参数会在更新state，重新触发render后执行。</p>
 <h3 id="react-router-路由系统的实现原理？"><a href="#react-router-路由系统的实现原理？" class="headerlink" title="react-router 路由系统的实现原理？"></a>react-router 路由系统的实现原理？</h3><ul>
 <li>实现原理：location 与 components 之间的同步</li>
 </ul>
@@ -443,17 +549,17 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2021-08-13T04:23:21.419Z" itemprop="dateUpdated">2021-08-13 12:23:21</time>
+    最后更新时间：<time datetime="2022-07-21T09:08:51.035Z" itemprop="dateUpdated">2022-07-21 17:08:51</time>
 </span><br>
 
 
         
-        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/前端知识点/React.html" target="_blank" rel="external">http://blog.seoqp.com/前端知识点/React.html</a>
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/前端知识点/React.html" target="_blank" rel="external">http://qvchat.com/前端知识点/React.html</a>
         
     </div>
     
     <footer>
-        <a href="http://blog.seoqp.com">
+        <a href="http://qvchat.com">
             <img src="/img/avatar.jpg" alt="秦伟">
             秦伟
         </a>
@@ -479,7 +585,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端知识点/React.html&title=《React》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://qvchat.com/前端知识点/React.html&title=《React》 — 秦伟博客&pic=http://qvchat.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -489,22 +595,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端知识点/React.html&title=《React》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://qvchat.com/前端知识点/React.html&title=《React》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.seoqp.com/前端知识点/React.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://qvchat.com/前端知识点/React.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《React》 — 秦伟博客&url=http://blog.seoqp.com/前端知识点/React.html&via=http://blog.seoqp.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《React》 — 秦伟博客&url=http://qvchat.com/前端知识点/React.html&via=http://qvchat.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.seoqp.com/前端知识点/React.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://qvchat.com/前端知识点/React.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -657,7 +763,7 @@
     </div>
 
     <div class="bottom">
-        <p><span>Copyright &copy; 2018 - 2021 <a
+        <p><span>Copyright &copy; 2018 - 2023 <a
                 href="http://blog.bluedream.site/" target="_blank">秦伟的个人博客</a>All Rights Reserved.</span>
             <span>
                 部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除。
@@ -712,7 +818,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端知识点/React.html&title=《React》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://qvchat.com/前端知识点/React.html&title=《React》 — 秦伟博客&pic=http://qvchat.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -722,22 +828,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端知识点/React.html&title=《React》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://qvchat.com/前端知识点/React.html&title=《React》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.seoqp.com/前端知识点/React.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://qvchat.com/前端知识点/React.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《React》 — 秦伟博客&url=http://blog.seoqp.com/前端知识点/React.html&via=http://blog.seoqp.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《React》 — 秦伟博客&url=http://qvchat.com/前端知识点/React.html&via=http://qvchat.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.seoqp.com/前端知识点/React.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://qvchat.com/前端知识点/React.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -748,7 +854,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJklEQVR42u3aQY7EIAwF0b7/pZntbJKubzMjYYpVK1KAl5YssP354LF+jacnT2+9z5bO2RoyZMg4lrFeR23hpyfvz8m6j1QZMmRcwHgPl+Q3CZoczPcmQ4YMGa2pcVDesJYMGTJkgCC7KxzLkCFDRucSywMiD7tk/s13cRkyZBzI4Jv4/99/Ut+QIUPGUYwVDpLKf8fzo2GwKxkyZIxm8ABXOyymeH7skyFDxp2MztWRX4B5UOYtGjJkyJjN4On+/m0xLUIE88iQIWM0o5/QT5P7tYC7LV8oQ4aMwxl8sVoITj9N7aApQ4aMeQyeGkuDL98QaTJD/4AMGTKGMshie7sdeJkhfUuGDBmzGeTY1ylk8vIA+d5xs4UMGTIOZ3AAudZ2LrG1skT8P8iQIeNABn8tzcbXPkRKkiFDxp2MWmGAzMMby9JjqAwZMmYzeGq+dmXtfJSALUOGjAsY/IrIU/m1hlTe6vqlD1eGDBmDGDzk7dpKOkOtzCBDhox5jPQAh74HCNMk0MdXWRkyZFzASANumu/iBQNeIpUhQ8adDB74Ok9QvYIn42TIkDGUscKRNkPsSt4FJUwZMmSMY/CRbihNqKUF1OKQIUPGsYy9QbbWNkGC9Zc9yJAh4wJGLaFfC9NpCEa7kiFDhgzcpJW2c/GDYNAnIkOGjOsZqzFqh0hUTJUhQ8YFDLIwwaThstbSIUOGjNsYrasj2FatRaxzYJUhQ8Ygxg8HKJNhVgYi3wAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3awYrDMAyE4bz/S3thTwuL3ZmRU7D8+1RKmvjLQZUsPY+8xu+afTP+rPVvx781u+Z5Y8GAAeNYxliuNcPFzK5Zk9Z7gwEDxj0MJVAqpA8PKwTiD3uGAQMGjHIIVsKonibCgAEDxq50LSt9YcCAAaNSxLrb3UvdVovDgAHjQIbbGPjm5xf7GzBgwDiEMV5YWdFbeiIMGDBaM5TWo3usn0XI7IDvWZ/2wYABowUju5Fe3GatUOXdT/83YMCA0Y6hNBT10KyH4AwWNgZgwIBxOMMtMt0xi0qrwGh2woABozXDLRdLcT069FcO9WDAgHEDQ3lwFkx3DYQZZTMMGDDaMdxw5pa7bktAeeswYMC4jaEcpYUlpRk09Xva7UwYMGAczqgf5SvJX+WeUnIJAwaM1ozwSMsMsnqwroxfwIABoytj19BDfZVKZRgwYFzAcA+23M/ZAJmRLMKAAaM1wy0s3U1nLYTsxcGAAaM3wy1T3U24dwvHNWDAgHENoz6w5Ra6SvIX/lfAgAGjHUMZhsjalvpxm5sUTluYMGDAaMdQYpe7Ufduj7yMkA0DBowWjKzRmPH0NNEe+4ABA0ZrhhvmKi8ia0zCgAEDhhsEs6OxSippDKvBgAHjAoY7eOEmhVmL1Ch6YcCAAUMuYvVvsnbCdM8wYMCAIXcVskRQHzgL62wYMGC0YLhjEO5xmDLAkSWXMGDAuIGxqzFQH8vQw32IhAEDxnmMH0cGGQYE2Ls4AAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
@@ -849,5 +955,18 @@ MathJax.Hub.Queue(function() {
     }
 </script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 </html>

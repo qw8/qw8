@@ -21,22 +21,22 @@
     
     
     <meta name="keywords" content="事件循环,存储技术,事件机制,跨域,Service Worker,渲染机制,浏览器内核">
-    <meta name="description" content="常见的浏览器端的存储技术有哪些？浏览器本地存储 在较高版本的浏览器中，js提供了sessionStorage和globalStorage。在HTML5中提供了localStorage来取代globalStorage  html5中的Web Storage包括了两种存储方式：sessionStorage和localStorage  sessionStorage用于本地存储一个会话（session）中">
+    <meta name="description" content="浏览器端的存储技术有哪些？cookiecookie又叫会话跟踪技术（会员卡的意思）由web服务器保存在用户浏览器上的小文本文件，包含用户的相关信息。cookie 其实最开始是服务器端用于记录用户状态的一种方式，由服务器设置，在客户端存储，然后每次发起同源请求时，发送给服务器端。cookie 最多能存储 4 k 数据，它的生存时间由 expires 属性指定，并且 cookie 只能被同源的页面访问">
 <meta name="keywords" content="事件循环,存储技术,事件机制,跨域,Service Worker,渲染机制,浏览器内核">
 <meta property="og:type" content="article">
 <meta property="og:title" content="浏览器">
-<meta property="og:url" content="http://blog.seoqp.com/前端知识点/浏览器.html">
+<meta property="og:url" content="http://qvchat.com/前端知识点/浏览器.html">
 <meta property="og:site_name" content="秦伟博客">
-<meta property="og:description" content="常见的浏览器端的存储技术有哪些？浏览器本地存储 在较高版本的浏览器中，js提供了sessionStorage和globalStorage。在HTML5中提供了localStorage来取代globalStorage  html5中的Web Storage包括了两种存储方式：sessionStorage和localStorage  sessionStorage用于本地存储一个会话（session）中">
+<meta property="og:description" content="浏览器端的存储技术有哪些？cookiecookie又叫会话跟踪技术（会员卡的意思）由web服务器保存在用户浏览器上的小文本文件，包含用户的相关信息。cookie 其实最开始是服务器端用于记录用户状态的一种方式，由服务器设置，在客户端存储，然后每次发起同源请求时，发送给服务器端。cookie 最多能存储 4 k 数据，它的生存时间由 expires 属性指定，并且 cookie 只能被同源的页面访问">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://blog.seoqp.com/img/loading.gif">
-<meta property="og:image" content="http://blog.seoqp.com/img/loading.gif">
-<meta property="og:image" content="http://blog.seoqp.com/img/loading.gif">
-<meta property="og:updated_time" content="2021-08-13T04:30:30.440Z">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:updated_time" content="2022-08-13T09:13:49.508Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浏览器">
-<meta name="twitter:description" content="常见的浏览器端的存储技术有哪些？浏览器本地存储 在较高版本的浏览器中，js提供了sessionStorage和globalStorage。在HTML5中提供了localStorage来取代globalStorage  html5中的Web Storage包括了两种存储方式：sessionStorage和localStorage  sessionStorage用于本地存储一个会话（session）中">
-<meta name="twitter:image" content="http://blog.seoqp.com/img/loading.gif">
+<meta name="twitter:description" content="浏览器端的存储技术有哪些？cookiecookie又叫会话跟踪技术（会员卡的意思）由web服务器保存在用户浏览器上的小文本文件，包含用户的相关信息。cookie 其实最开始是服务器端用于记录用户状态的一种方式，由服务器设置，在客户端存储，然后每次发起同源请求时，发送给服务器端。cookie 最多能存储 4 k 数据，它的生存时间由 expires 属性指定，并且 cookie 只能被同源的页面访问">
+<meta name="twitter:image" content="http://qvchat.com/img/loading.gif">
     
         <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
     
@@ -128,9 +128,9 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://coding.net/u/qw6" target="_blank" >
+              <a href="https://gitee.com/qw66" target="_blank" >
                 <i class="icon icon-lg icon-code"></i>
-                coding
+                gitee
               </a>
             </li>
         
@@ -192,12 +192,12 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#常见的浏览器端的存储技术有哪些？"><span class="post-toc-number">1.</span> <span class="post-toc-text">常见的浏览器端的存储技术有哪些？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#浏览器本地存储"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">浏览器本地存储</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cookie"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">cookie</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#localStorage"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">localStorage</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#sessionStorage"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">sessionStorage</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#描述-cookies、sessionStorage-和-localStorage-的区别？"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">描述 cookies、sessionStorage 和 localStorage 的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#web-storage（包含sessionStorage和localStorage）和cookie的区别"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">web storage（包含sessionStorage和localStorage）和cookie的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cookie-和session-的区别："><span class="post-toc-number">1.7.</span> <span class="post-toc-text">cookie 和session 的区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#谈谈Cookie的弊端"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">谈谈Cookie的弊端</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何实现浏览器内多个标签页之间的通信"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">如何实现浏览器内多个标签页之间的通信?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安全性"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">安全性</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#事件机制"><span class="post-toc-number">2.</span> <span class="post-toc-text">事件机制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#请解释什么是事件代理"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">请解释什么是事件代理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件触发三阶段"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">事件触发三阶段</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#注册事件"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">注册事件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件代理"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">事件代理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍DOM0，DOM2，DOM3事件处理方式区别"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">介绍DOM0，DOM2，DOM3事件处理方式区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件的三个阶段"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">事件的三个阶段</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍事件“捕获”和“冒泡”执行顺序和事件的执行次数？"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">介绍事件“捕获”和“冒泡”执行顺序和事件的执行次数？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在一个DOM上同时绑定两个点击事件：一个用捕获，一个用冒泡。事件会执行几次，先执行冒泡还是捕获？"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">在一个DOM上同时绑定两个点击事件：一个用捕获，一个用冒泡。事件会执行几次，先执行冒泡还是捕获？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件的代理-委托"><span class="post-toc-number">2.9.</span> <span class="post-toc-text">事件的代理/委托</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DOM事件的总结"><span class="post-toc-number">2.10.</span> <span class="post-toc-text">DOM事件的总结</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DOM事件模型"><span class="post-toc-number">2.11.</span> <span class="post-toc-text">DOM事件模型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#冒泡的流程"><span class="post-toc-number">2.12.</span> <span class="post-toc-text">冒泡的流程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#IE与火狐的事件机制有什么区别？-如何阻止冒泡？"><span class="post-toc-number">2.13.</span> <span class="post-toc-text">IE与火狐的事件机制有什么区别？ 如何阻止冒泡？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何添加-html-元素的事件，有几种方法？请列举"><span class="post-toc-number">2.14.</span> <span class="post-toc-text">如何添加 html 元素的事件，有几种方法？请列举</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件模型"><span class="post-toc-number">2.15.</span> <span class="post-toc-text">事件模型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何自定义事件"><span class="post-toc-number">2.16.</span> <span class="post-toc-text">如何自定义事件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#IE的事件处理和W3C的事件处理有哪些区别？"><span class="post-toc-number">2.17.</span> <span class="post-toc-text">IE的事件处理和W3C的事件处理有哪些区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#W3C事件的-target-与-currentTarget-的区别？"><span class="post-toc-number">2.18.</span> <span class="post-toc-text">W3C事件的 target 与 currentTarget 的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何派发事件-dispatchEvent-？（如何进行事件广播？）"><span class="post-toc-number">2.19.</span> <span class="post-toc-text">如何派发事件(dispatchEvent)？（如何进行事件广播？）</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#跨域"><span class="post-toc-number">3.</span> <span class="post-toc-text">跨域</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JSONP"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">JSONP</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#浏览器端的存储技术有哪些？"><span class="post-toc-number">1.</span> <span class="post-toc-text">浏览器端的存储技术有哪些？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cookie"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">cookie</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#特点："><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">特点：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Cookie-的弊端"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Cookie 的弊端</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#改进办法"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">改进办法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#cookie的作用"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">cookie的作用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#存储位置"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">存储位置</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#操作方式"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">操作方式</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是Cookie-隔离？（或者说：请求资源的时候不要带cookie怎么做）"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">什么是Cookie 隔离？（或者说：请求资源的时候不要带cookie怎么做）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Cookie如何防范XSS攻击"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Cookie如何防范XSS攻击</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在-HTTP-响应-Header-中，set-cookie-选项有哪些，分别代表什么含义？"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">在 HTTP 响应 Header 中，set-cookie 选项有哪些，分别代表什么含义？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#localStorage"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">localStorage</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#sessionStorage"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">sessionStorage</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#描述-cookies、sessionStorage-和-localStorage-的区别？"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">描述 cookies、sessionStorage 和 localStorage 的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cookie-和session-的区别："><span class="post-toc-number">1.9.</span> <span class="post-toc-text">cookie 和session 的区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#web-storage（包含sessionStorage和localStorage）和cookie的区别"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">web storage（包含sessionStorage和localStorage）和cookie的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何实现浏览器内多个标签页之间的通信"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">如何实现浏览器内多个标签页之间的通信?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安全性"><span class="post-toc-number">1.12.</span> <span class="post-toc-text">安全性</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#事件机制"><span class="post-toc-number">2.</span> <span class="post-toc-text">事件机制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#请解释什么是事件代理"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">请解释什么是事件代理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件触发三阶段"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">事件触发三阶段</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#注册事件"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">注册事件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件代理"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">事件代理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍DOM0，DOM2，DOM3事件处理方式区别"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">介绍DOM0，DOM2，DOM3事件处理方式区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件的三个阶段"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">事件的三个阶段</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍事件“捕获”和“冒泡”执行顺序和事件的执行次数？"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">介绍事件“捕获”和“冒泡”执行顺序和事件的执行次数？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在一个DOM上同时绑定两个点击事件：一个用捕获，一个用冒泡。事件会执行几次，先执行冒泡还是捕获？"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">在一个DOM上同时绑定两个点击事件：一个用捕获，一个用冒泡。事件会执行几次，先执行冒泡还是捕获？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件的代理-委托"><span class="post-toc-number">2.9.</span> <span class="post-toc-text">事件的代理/委托</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DOM事件的总结"><span class="post-toc-number">2.10.</span> <span class="post-toc-text">DOM事件的总结</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DOM事件模型"><span class="post-toc-number">2.11.</span> <span class="post-toc-text">DOM事件模型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#冒泡的流程"><span class="post-toc-number">2.12.</span> <span class="post-toc-text">冒泡的流程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#IE与火狐的事件机制有什么区别？-如何阻止冒泡？"><span class="post-toc-number">2.13.</span> <span class="post-toc-text">IE与火狐的事件机制有什么区别？ 如何阻止冒泡？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何添加-html-元素的事件，有几种方法？请列举"><span class="post-toc-number">2.14.</span> <span class="post-toc-text">如何添加 html 元素的事件，有几种方法？请列举</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件模型"><span class="post-toc-number">2.15.</span> <span class="post-toc-text">事件模型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何自定义事件"><span class="post-toc-number">2.16.</span> <span class="post-toc-text">如何自定义事件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#IE的事件处理和W3C的事件处理有哪些区别？"><span class="post-toc-number">2.17.</span> <span class="post-toc-text">IE的事件处理和W3C的事件处理有哪些区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#W3C事件的-target-与-currentTarget-的区别？"><span class="post-toc-number">2.18.</span> <span class="post-toc-text">W3C事件的 target 与 currentTarget 的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何派发事件-dispatchEvent-？（如何进行事件广播？）"><span class="post-toc-number">2.19.</span> <span class="post-toc-text">如何派发事件(dispatchEvent)？（如何进行事件广播？）</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#跨域"><span class="post-toc-number">3.</span> <span class="post-toc-text">跨域</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JSONP"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">JSONP</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-浏览器"
+<article id="post-前端知识点/浏览器"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
@@ -218,36 +218,93 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h2 id="常见的浏览器端的存储技术有哪些？"><a href="#常见的浏览器端的存储技术有哪些？" class="headerlink" title="常见的浏览器端的存储技术有哪些？"></a>常见的浏览器端的存储技术有哪些？</h2><h3 id="浏览器本地存储"><a href="#浏览器本地存储" class="headerlink" title="浏览器本地存储"></a>浏览器本地存储</h3><ul>
-<li><p>在较高版本的浏览器中，js提供了sessionStorage和globalStorage。在HTML5中提供了localStorage来取代globalStorage</p>
+            <h2 id="浏览器端的存储技术有哪些？"><a href="#浏览器端的存储技术有哪些？" class="headerlink" title="浏览器端的存储技术有哪些？"></a>浏览器端的存储技术有哪些？</h2><h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><p>cookie又叫会话跟踪技术（会员卡的意思）由web服务器保存在用户浏览器上的小文本文件，包含用户的相关信息。cookie 其实最开始是服务器端用于记录用户状态的一种方式，由服务器设置，在客户端存储，然后每次发起同源请求时，发送给服务器端。cookie 最多能存储 4 k 数据，它的生存时间由 expires 属性指定，并且 cookie 只能被同源的页面访问共享。</p>
+<p>我的理解是 cookie 是服务器提供的一种用于维护会话状态信息的数据，通过服务器发送到浏览器，浏览器保存在本地，当下一次有同源的请求时，将保存的 cookie 值添加到请求头部，发送给服务端。这可以用来实现记录用户登录状态等功能。cookie 一般可以存储 4k 大小的数据，并且只能够被同源的网页所共享访问。</p>
+<p>服务器端可以使用 Set-Cookie 的响应头部来配置 cookie 信息。一条cookie 包括了9个属性值 name、value、expires、domain、path、secure、HttpOnly、SameSite、Priority。其中 name 和 value 分别是 cookie 的名字和值。expires 指定了 cookie 失效的时间，domain 是域名、path是路径，domain 和 path 一起限制了 cookie 能够被哪些 url 访问。secure 规定了 cookie 只能在确保安全的情况下传输，HttpOnly 规定了这个 cookie 只能被服务器访问，不能使用 js 脚本访问。SameSite 属性用来限制第三方 cookie，可以有效防止 CSRF 攻击，从而减少安全风险。Priority 是 chrome 的提案，定义了三种优先级，当 cookie 数量超出时低优先级的 cookie 会被优先清除。</p>
+<p>在发生 xhr 的跨域请求的时候，即使是同源下的 cookie，也不会被自动添加到请求头部，除非显示地规定。</p>
+<p>cookie是存放在浏览器中的，在每一个浏览器安装目录下，都存在一个文件夹，存放着不同域下对应的cookie。<strong>当浏览器通过http请求某一个域时，此时浏览器就会将该域下面的cookie自动放入request header中</strong>。我们需要注意，浏览器自动帮我们携带，此时如果很多无关紧要的数据都存放在cookie中，都会随着请求发送给后台，这样就无形当中增加了网络开销。此时我们再想想什么数据在每一次都需要?其实我们的身份认证信息在每一次都需要携带，所以存放在cookie的数据最合适的是身份认证信息，其他信息都不合适。</p>
+<p>详细资料可以参考：<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies" target="_blank" rel="noopener">《HTTP cookies》 </a><br><a href="https://segmentfault.com/a/1190000004556040" target="_blank" rel="noopener">《聊一聊 cookie》 </a></p>
+<h4 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h4><ul>
+<li><p>禁用cookie后，用户无法正常注册登录</p>
 </li>
-<li><p>html5中的Web Storage包括了两种存储方式：sessionStorage和localStorage</p>
+<li><p>cookie与浏览器相关，不同浏览器之间保存的cookie是不能互相访问的；<code>cookie</code>还需要指定作用域，不可以跨域调用。</p>
 </li>
-<li><p>sessionStorage用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储</p>
+<li><p>cookie的安全性不高，易受xss攻击</p>
 </li>
-<li><p>而localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的</p>
+<li><p>cookie值的类型先定位string类型，cookie大小一般只有4kb，可以进行单独配置</p>
+</li>
+<li><p>持久保存客户端数据提供了方便，分担了服务器存储的负担，极高的扩展性和可用性</p>
 </li>
 </ul>
-<h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><p>h5 之前，存储主要用 cookies，缺点是在请求头上带着数据，导致流量增加。大小限制 4k</p>
-<p><strong>操作方式：</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 GMT;path=/" </span><br><span class="line">// 设置 cookie</span><br><span class="line">document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT" // 删除 cookie</span><br></pre></td></tr></table></figure>
+<h4 id="Cookie-的弊端"><a href="#Cookie-的弊端" class="headerlink" title="Cookie 的弊端"></a>Cookie 的弊端</h4><ul>
+<li><code>Cookie</code>数量和长度的限制。每个 domain 特定的域名下最多只能有 20 条 cookie，每个 cookie 长度不能超过 4KB，否则会被截掉。</li>
+<li>安全性问题。如果 cookie 被人拦截了，那人就可以取得所有的 session 信息。即使加密也与事无补，因为拦截者并不需要知道 cookie 的意义，他只要原样转发 cookie 就可以达到目的了。</li>
+<li>有些状态不可能保存在客户端。例如，为了防止重复提交表单，我们需要在服务器端保存一个计数器。如果我们把这个计数器保存在客户端，那么它起不到任何作用。</li>
+<li>在请求头上带着数据，导致流量增加。</li>
+</ul>
+<h3 id="改进办法"><a href="#改进办法" class="headerlink" title="改进办法"></a>改进办法</h3><ul>
+<li>通过良好的编程，控制保存在cookie中的session对象的大小。</li>
+<li>通过加密和安全传输技术（SSL），减少cookie被破解的可能性。</li>
+<li>只在cookie中存放不敏感数据，即使被盗也不会有重大损失。</li>
+<li>控制cookie的生命期，使之不会永远有效。偷盗者很可能拿到一个过期的cookie。</li>
+</ul>
+<h4 id="cookie的作用"><a href="#cookie的作用" class="headerlink" title="cookie的作用"></a>cookie的作用</h4><ul>
+<li>保存用户登录状态。例如将用户id存储于一个cookie内，这样当用户下次访问该页面时就不需要重新登录了，现在很多论坛和社区都提供这样的功能。cookie还可以设置过期时间，当超过时间期限后，cookie就会自动消失。因此，系统往往可以提示用户保持登录状态的时间：常见选项有一个月、三个 月、一年等。</li>
+<li>跟踪用户行为。例如一个天气预报网站，能够根据用户选择的地区显示当地的天气情况。如果每次都需要选择所在地是烦琐的，当利用了 cookie后就会显得很人性化了，系统能够记住上一次访问的地区，当下次再打开该页面时，它就会自动显示上次用户所在地区的天气情况。因为一切都是在后台完成，所以这样的页面就像为某个用户所定制的一样，使用起来非常方便。</li>
+<li>定制页面。如果网站提供了换肤或更换布局的功能，那么可以使用cookie来记录用户的选项，例如：背景色、分辨率等。当用户下次访问时，仍然可以保存上一次访问的界面风格。</li>
+</ul>
+<h4 id="存储位置"><a href="#存储位置" class="headerlink" title="存储位置"></a>存储位置</h4><p>浏览器控制面板(f12) - Application选项里面 - 左侧cookie</p>
+<p>通过控制面板删除选中的或者全部的cookie</p>
+<h4 id="操作方式"><a href="#操作方式" class="headerlink" title="操作方式"></a>操作方式</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 设置 cookie</span><br><span class="line">document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 GMT;path=/" </span><br><span class="line">// 删除 cookie</span><br><span class="line">document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT"</span><br></pre></td></tr></table></figure>
 
-<p>设置 cookie 的方法比较简单，其中有几个参数可以添加</p>
+<p>设置 cookie 的方法比较简单，其中除了键和值，还有几个参数可以添加</p>
 <p><strong>expires</strong><br>过期时间，当过了到期日期时，浏览器会自动删除该 cookie，如果想删除一个 cookie，只需要把它过期时间设置成过去的时间即可<br>比如希望设置过期时间一年：new Date().getTime() + 365 _ 24 _ 60 _ 60 _ 1000</p>
 <p>如果不设置过期时间，则表示这个 cookie 生命周期为浏览器会话期间，只要关闭浏览器窗口，cookie 就消失了。</p>
 <p><strong>path</strong><br>路径，值可以是一个目录，或者是一个路径。</p>
 <p>如果 cc.com/test/index.html 建立了一个 cookie，那么在 cc.com/test/目录里的所有页面，以及该目录下面任何子目录里的页面都可以访问这个 cookie。因此在 cc.com/test/test2/test3 里的任何页面都可以访问 cc.com/test/index.html 建立的 cookie。若 cc.com/test/ 若想访问 cc.com/test/index.html 设置的 cookes，需要把 cookies 的 path 属性设置成“/”。<br>在指定路径的时候，凡是来自同一服务器，URL 里有相同路径的所有 WEB 页面都可以共享 cookies。</p>
 <p><strong>domain</strong><br>主机名，是指同一个域下的不同主机，例如：<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> 和 map.baidu.com 就是两个不同的主机名。默认情况下，一个主机中创建的 cookie 在另一个主机下是不能被访问的，但可以通过 domain 参数来实现对其的控制：document.cookie = “name=value;domain=.baidu.com”，这样，所有*.baidu.com 的主机都可以访问该 cookie。</p>
-<h3 id="localStorage"><a href="#localStorage" class="headerlink" title="localStorage"></a>localStorage</h3><p>以键值对(Key-Value)的方式存储，永久存储，永不失效，除非手动删除。IE8+支持，每个域名限制 5M</p>
+<h3 id="什么是Cookie-隔离？（或者说：请求资源的时候不要带cookie怎么做）"><a href="#什么是Cookie-隔离？（或者说：请求资源的时候不要带cookie怎么做）" class="headerlink" title="什么是Cookie 隔离？（或者说：请求资源的时候不要带cookie怎么做）"></a>什么是Cookie 隔离？（或者说：请求资源的时候不要带cookie怎么做）</h3><ul>
+<li>通过使用多个非主要域名来请求静态文件，如果静态文件都放在主域名下，那静态文件请求的时候都带有的cookie的数据提交给server的，非常浪费流量，所以不如隔离开，静态资源放CDN。</li>
+<li>因为cookie有域的限制，因此不能跨域提交请求，故使用非主要域名的时候，请求头中就不会带有cookie数据，这样可以降低请求头的大小，降低请求时间，从而达到降低整体请求延时的目的。</li>
+<li>同时这种方式不会将cookie传入Web Server，也减少了Web Server对cookie的处理分析环节，提高了webserver的http请求的解析速度。</li>
+</ul>
+<h3 id="Cookie如何防范XSS攻击"><a href="#Cookie如何防范XSS攻击" class="headerlink" title="Cookie如何防范XSS攻击"></a>Cookie如何防范XSS攻击</h3><p>XSS（跨站脚本攻击）是指攻击者在返回的HTML中嵌入javascript脚本，为了减轻这些攻击，需要在HTTP头部配上，set-cookie：</p>
+<ul>
+<li>httponly-这个属性可以防止XSS,它会禁止javascript脚本来访问cookie。</li>
+<li>secure - 这个属性告诉浏览器仅在请求为https的时候发送cookie。</li>
+</ul>
+<p>结果应该是这样的：Set-Cookie=…..</p>
+<h3 id="在-HTTP-响应-Header-中，set-cookie-选项有哪些，分别代表什么含义？"><a href="#在-HTTP-响应-Header-中，set-cookie-选项有哪些，分别代表什么含义？" class="headerlink" title="在 HTTP 响应 Header 中，set-cookie 选项有哪些，分别代表什么含义？"></a>在 HTTP 响应 Header 中，set-cookie 选项有哪些，分别代表什么含义？</h3><p>Set-Cookie: <cookie-name>=<cookie-value></cookie-value></cookie-name></p>
+<ul>
+<li>Expires=<code>&lt;date&gt;</code></li>
+<li>Max-Age=<code>&lt;non-zero-digit&gt;</code></li>
+<li>Domain=<code>&lt;domain-value&gt;</code></li>
+<li>Path=<code>&lt;path-value&gt;</code></li>
+<li>Secure</li>
+<li>HttpOnly</li>
+<li>SameSite=Strict</li>
+<li>SameSite=Lax</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">name = name; <span class="comment">// 需要设置cookie的值(name不能使用";"和","号),有多个name值时用";"分隔例如：name1=name1;name2=name2;name3=name3</span></span><br><span class="line"></span><br><span class="line">expires; <span class="comment">//cookie的有效期限,格式为:expires="Wdy,DD-Mon-YYYY HH:MM:SS"</span></span><br><span class="line"></span><br><span class="line">path; <span class="comment">//设置cookie支持的路径,如果path是一个路径，则cookie对这个目录下的所有文件及子目录生效，例如：path="/cgi-bin/"，如果path是一个文件，则cookie指对这个文件生效，例如：path="/cgi-bin/cookie.cgi"</span></span><br><span class="line"></span><br><span class="line">domain; <span class="comment">//对cookie生效的域名，例如：domain="gzdzw.51.net"</span></span><br><span class="line"></span><br><span class="line">secure; <span class="comment">//如果给出此标志，表示cookie只能通过SSL协议的https服务器来传递,cookie的接收是通过设置环境变量HTTP_COOKIE来实现的，CGI程序可以通过检索该变量获取cookie信息</span></span><br></pre></td></tr></table></figure>
+
+<p>解析：Cookie 相关的 Http 头</p>
+<p>有两个 Http 头部和 Cookie 有关：Set-Cookie 和 Cookie</p>
+<ul>
+<li>Set-Cookie 由服务器发送，它包含在响应请求的头部中。它<strong>用于在客户端创建一个 Cookie</strong></li>
+<li>Cookie 头由客户端发送，包含在 HTTP 请求的头部中。注意，只有 cookie 的 domain 和 path 与请求的 URL 匹配才会发送这个 cookie。</li>
+</ul>
+<h3 id="localStorage"><a href="#localStorage" class="headerlink" title="localStorage"></a>localStorage</h3><p><code>localStorage</code>是以键值对(Key-Value)的方式持久化的本地存储，永久存储，永不失效，除非手动删除。IE8+支持，每个域名限制 5M</p>
 <p>打开同域的新页面也能访问得到</p>
 <p>操作方式：</p>
 <p>window.localStorage.username = ‘hehe’ // 设置<br>window.localStorage.setItem(‘username’, ‘hehe’) // 设置<br>window.localStorage.getItem(‘username’) // 读取<br>window.localStorage.removeItem(‘username’) // 删除<br>window.localStorage.key(1) // 读取索引为 1 的值<br>window.localStorage.clear() // 清除所有<br>可以存储数组、数字、对象等可以被序列化为字符串的内容</p>
-<h3 id="sessionStorage"><a href="#sessionStorage" class="headerlink" title="sessionStorage"></a>sessionStorage</h3><p>sessionStorage 操作的方法与 localStroage 是一样的，区别在于 sessionStorage 在关闭页面后即被清空，而 localStorage 则会一直保存。很多时候数据只需要在用户浏览一组页面期间使用，关闭窗口后数据就可以丢弃了，这种情况使用 sessionStorage 就比较方便。</p>
+<h3 id="sessionStorage"><a href="#sessionStorage" class="headerlink" title="sessionStorage"></a>sessionStorage</h3><p><code>sessionStorage</code>用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此<code>sessionStorage</code>不是一种持久化的本地存储，仅仅是会话级别的存储。</p>
+<p>sessionStorage 是 html5 提供的一种浏览器本地存储的方法，它借鉴了服务器端 session 的概念，代表的是一次会话中所保存的数据。它一般能够存储 5M 或者更大的数据，它在当前窗口关闭后就失效了，并且sessionStorage 只能被<strong>同一个窗口的同源页面</strong>所访问共享。</p>
+<p>sessionStorage 操作的方法与 localStroage 是一样的，区别在于 sessionStorage 在关闭页面后即被清空，而 localStorage 则会一直保存。很多时候数据只需要在用户浏览一组页面期间使用，关闭窗口后数据就可以丢弃了，这种情况使用 sessionStorage 就比较方便。</p>
 <p>注意，刷新页面 sessionStorage 不会清除，但是打开同域新页面访问不到</p>
 <h3 id="描述-cookies、sessionStorage-和-localStorage-的区别？"><a href="#描述-cookies、sessionStorage-和-localStorage-的区别？" class="headerlink" title="描述 cookies、sessionStorage 和 localStorage 的区别？"></a>描述 cookies、sessionStorage 和 localStorage 的区别？</h3><p>他们都是保存在浏览器端的存储方式。</p>
 <p><strong>与服务器交互：</strong></p>
 <ul>
-<li><p>cookie 是网站为了标示用户身份而储存在用户本地终端上的数据（通常经过加密）</p>
+<li><p>cookie 是网站为了标示用户身份而储存在用户本地终端上的数据（通常经过加密），服务器和客户端都可以访问。</p>
 </li>
 <li><p>cookie 始终会<strong>在同源 http 请求头中携带</strong>（即使不需要），在浏览器和服务器间来回传递。</p>
 <p>因为每次 http 请求都会携带 cookie，所以 cookie 只适合保存很小的数据，如会话标识。</p>
@@ -255,30 +312,55 @@
 <li><p>sessionStorage 和 localStorage 不会自动把数据发给服务器，仅<strong>在客户端（即浏览器）中保存</strong></p>
 </li>
 </ul>
-<p><strong>存储大小：</strong></p>
-<ul>
-<li>cookie 数据根据不同浏览器限制，大小一般不能超过 4k</li>
-<li>sessionStorage 和 localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大</li>
-</ul>
-<p><strong>有期时间：</strong></p>
+<p><strong>有效时间：</strong></p>
 <ul>
 <li><p>localStorage    保存在本浏览器数据缓存区，用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。</p>
 </li>
-<li><p>sessionStorage    用于本地存储一个session中的数据，这些数据保存在当前会话窗口，数据在当前浏览器窗口关闭后自动删除</p>
+<li><p>sessionStorage    用于本地存储一个session中的数据，这些数据保存在当前会话窗口，数据在当前浏览器窗口关闭（页面会话结束）后自动删除。</p>
+<p>重新加载或恢复页面仍会保持原来的页面会话，<strong>在新标签或窗口</strong>打开一个页面时会在顶级浏览上下文中初始化一个新的会话。</p>
 <p><strong>Storage共同点：都是保存在浏览器端、仅同源可用的存储方式</strong></p>
 </li>
 <li><p>cookie    设置的cookie过期时间之前一直有效，与浏览器是否关闭无关</p>
 </li>
 </ul>
-<p><strong>存储格式：</strong>cookie只能以字符串格式保存；webStorage以key-value格式保存，更便于存取（sessionStorage.setItem(“key”,”value”)，sessionStorage.getItem(“key”)）；</p>
+<p><strong>存储大小：</strong></p>
+<ul>
+<li>cookie 数据根据不同浏览器限制，大小一般不能超过 4k</li>
+<li>sessionStorage 和 localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大</li>
+</ul>
+<p><strong>存储格式：</strong></p>
+<p>cookie只能以字符串格式保存；</p>
+<p>webStorage以key-value格式保存，更便于存取（sessionStorage.setItem(“key”,”value”)，sessionStorage.getItem(“key”)）；</p>
 <p><strong>作用域不同：</strong></p>
 <ul>
-<li>sessionStorage 不在不同的浏览器页面中共享，即使是同一个页面；</li>
-<li>localStorage 在所有同源窗口中都是共享的；</li>
-<li>cookie 也是在所有同源窗口中都是共享的。</li>
-<li>在浏览器多个 tab 页中，cookie、localStorage 可以共享数据，sessionStorage 仅保存在当前 tab 页中不能共享。</li>
+<li><p>sessionStorage 只在同源的同窗口（或标签页）中共享数据，也就是只在当前会话中共享。</p>
+<p>不在不同的浏览器页面中共享，即使是同一个页面（比如同一页面打开为两个标签页）</p>
+</li>
+<li><p>localStorage 在所有同源窗口中都是共享的；</p>
+</li>
+<li><p>cookie 也是在所有同源窗口中都是共享的。</p>
+</li>
+<li><p>在浏览器多个 tab 页中，cookie、localStorage 可以共享数据，sessionStorage 仅保存在当前 tab 页中不能共享。</p>
+</li>
 </ul>
-<p><a href="http://www.w3school.com.cn/html5/html_5_webstorage.asp" target="_blank" rel="noopener">参考链接</a></p>
+<p><strong>操作方法：</strong></p>
+<p><code>Web Storage</code>拥有<code>setItem,getItem,removeItem,clear</code>等方法，不像<code>cookie</code>需要前端开发者自己封装<code>setCookie，getCookie</code>。</p>
+<p>上面几种方式都是存储少量数据的时候的存储方式，当我们需要在本地存储大量数据的时候，我们可以使用浏览器的 indexDB 这是浏览器提供的一种本地的数据库存储机制。它不是关系型数据库，它内部采用对象仓库的形式存储数据，它更接近 NoSQL 数据库。<br>   <a href="http://www.ruanyifeng.com/blog/2018/07/indexeddb.html" target="_blank" rel="noopener">《浏览器数据库 IndexedDB 入门教程》</a></p>
+<h3 id="cookie-和session-的区别："><a href="#cookie-和session-的区别：" class="headerlink" title="cookie 和session 的区别："></a>cookie 和session 的区别：</h3><ul>
+<li><code>session</code>： 是一个抽象概念，开发者为了实现中断和继续等操作，将 <code>user agent</code>和 <code>server</code> 之间一对一的交互，抽象为“会话”，进而衍生出“会话状态”，也就是 <code>session</code> 的概念</li>
+<li><code>cookie</code>：它是一个世纪存在的东西，<code>http</code> 协议中定义在 <code>header</code> 中的字段，可以认为是 <code>session</code> 的一种后端无状态实现</li>
+</ul>
+<blockquote>
+<p>现在我们常说的 <code>session</code>，是为了绕开 <code>cookie</code> 的各种限制，通常借助 <code>cookie</code>本身和后端存储实现的，一种更高级的会话状态实现</p>
+</blockquote>
+<p><code>session</code> 的常见实现要借助<code>cookie</code>来发送 <code>sessionID</code></p>
+<ol>
+<li>cookie数据存放在客户的浏览器上，session数据放在服务器上。</li>
+<li>cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗<br>考虑到安全应当使用session。</li>
+<li>session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能<br>考虑到减轻服务器性能方面，应当使用COOKIE。</li>
+<li>单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。</li>
+<li>所以个人建议：<br>将登陆信息等重要信息存放为SESSION<br>其他信息如果需要保留，可以放在COOKIE中</li>
+</ol>
 <h3 id="web-storage（包含sessionStorage和localStorage）和cookie的区别"><a href="#web-storage（包含sessionStorage和localStorage）和cookie的区别" class="headerlink" title="web storage（包含sessionStorage和localStorage）和cookie的区别"></a>web storage（包含sessionStorage和localStorage）和cookie的区别</h3><p>Cookie的作用<strong>是与服务器进行交互</strong>，作为HTTP规范的一部分而存在</p>
 <p>而Web Storage仅仅是为了<strong>在本地“存储”数据</strong>而生。</p>
 <p>cookie 数据还有路径（path）的概念，可以限制 cookie 只属于某个路径下。</p>
@@ -295,37 +377,6 @@
 </li>
 <li><p>localStorage和sessionStorage都具有相同的操作方法，例如setItem、getItem和removeItem等</p>
 </li>
-</ul>
-<h3 id="cookie-和session-的区别："><a href="#cookie-和session-的区别：" class="headerlink" title="cookie 和session 的区别："></a>cookie 和session 的区别：</h3><ul>
-<li><code>session</code>： 是一个抽象概念，开发者为了实现中断和继续等操作，将 <code>user agent</code>和 <code>server</code> 之间一对一的交互，抽象为“会话”，进而衍生出“会话状态”，也就是 <code>session</code> 的概念</li>
-<li><code>cookie</code>：它是一个世纪存在的东西，<code>http</code> 协议中定义在 <code>header</code> 中的字段，可以认为是 <code>session</code> 的一种后端无状态实现</li>
-</ul>
-<blockquote>
-<p>现在我们常说的 <code>session</code>，是为了绕开 <code>cookie</code> 的各种限制，通常借助 <code>cookie</code>本身和后端存储实现的，一种更高级的会话状态实现</p>
-</blockquote>
-<p><code>session</code> 的常见实现要借助<code>cookie</code>来发送 <code>sessionID</code></p>
-<p>1、cookie数据存放在客户的浏览器上，session数据放在服务器上。</p>
-<p>2、cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗</p>
-<ul>
-<li>考虑到安全应当使用session。</li>
-</ul>
-<p>3、session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能</p>
-<ul>
-<li>考虑到减轻服务器性能方面，应当使用COOKIE。</li>
-</ul>
-<p>4、单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。</p>
-<p>5、所以个人建议：</p>
-<ul>
-<li>将登陆信息等重要信息存放为SESSION</li>
-<li>其他信息如果需要保留，可以放在COOKIE中</li>
-</ul>
-<h3 id="谈谈Cookie的弊端"><a href="#谈谈Cookie的弊端" class="headerlink" title="谈谈Cookie的弊端"></a>谈谈Cookie的弊端</h3><p>cookie虽然在持久保存客户端数据提供了方便，分担了服务器存储的负担，但还是有很多局限性的</p>
-<ul>
-<li>1.每个特定的域名下最多生成20个cookie， 个数有限制（IE6或更低版本最多20个cookie）</li>
-<li>2.Firefox、IE7和之后的版本最后可以有50个cookie，chrome和Safari没有做硬性限制</li>
-<li>3.IE 和 Opera 会清理近期最少使用的 cookie，Firefox 会随机清理 cookie</li>
-<li>4.cookie 的最大大约为 4096 字节，为了兼容性，一般设置不超过 4095 字节</li>
-<li>5.如果 cookie 被人拦截了，就可以取得所有的 session 信息</li>
 </ul>
 <h3 id="如何实现浏览器内多个标签页之间的通信"><a href="#如何实现浏览器内多个标签页之间的通信" class="headerlink" title="如何实现浏览器内多个标签页之间的通信?"></a>如何实现浏览器内多个标签页之间的通信?</h3><p>调用 localstorge、cookies 等本地存储方式，注意sessionstorge不可以哦</p>
 <h3 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h3><p>需要注意的是，不是什么数据都适合放在 Cookie、localStorage 和 sessionStorage 中的，因为它们保存在本地容易被篡改，使用它们的时候，需要时刻注意是否有代码存在 XSS 注入的风险。所以千万不要用它们存储你系统中的敏感数据。</p>
@@ -946,17 +997,17 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2021-08-13T04:30:30.440Z" itemprop="dateUpdated">2021-08-13 12:30:30</time>
+    最后更新时间：<time datetime="2022-08-13T09:13:49.508Z" itemprop="dateUpdated">2022-08-13 17:13:49</time>
 </span><br>
 
 
         
-        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/前端知识点/浏览器.html" target="_blank" rel="external">http://blog.seoqp.com/前端知识点/浏览器.html</a>
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/前端知识点/浏览器.html" target="_blank" rel="external">http://qvchat.com/前端知识点/浏览器.html</a>
         
     </div>
     
     <footer>
-        <a href="http://blog.seoqp.com">
+        <a href="http://qvchat.com">
             <img src="/img/avatar.jpg" alt="秦伟">
             秦伟
         </a>
@@ -982,7 +1033,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端知识点/浏览器.html&title=《浏览器》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://qvchat.com/前端知识点/浏览器.html&title=《浏览器》 — 秦伟博客&pic=http://qvchat.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -992,22 +1043,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端知识点/浏览器.html&title=《浏览器》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://qvchat.com/前端知识点/浏览器.html&title=《浏览器》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.seoqp.com/前端知识点/浏览器.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://qvchat.com/前端知识点/浏览器.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《浏览器》 — 秦伟博客&url=http://blog.seoqp.com/前端知识点/浏览器.html&via=http://blog.seoqp.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《浏览器》 — 秦伟博客&url=http://qvchat.com/前端知识点/浏览器.html&via=http://qvchat.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.seoqp.com/前端知识点/浏览器.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://qvchat.com/前端知识点/浏览器.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -1160,7 +1211,7 @@
     </div>
 
     <div class="bottom">
-        <p><span>Copyright &copy; 2018 - 2021 <a
+        <p><span>Copyright &copy; 2018 - 2023 <a
                 href="http://blog.bluedream.site/" target="_blank">秦伟的个人博客</a>All Rights Reserved.</span>
             <span>
                 部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除。
@@ -1215,7 +1266,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端知识点/浏览器.html&title=《浏览器》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://qvchat.com/前端知识点/浏览器.html&title=《浏览器》 — 秦伟博客&pic=http://qvchat.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -1225,22 +1276,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端知识点/浏览器.html&title=《浏览器》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://qvchat.com/前端知识点/浏览器.html&title=《浏览器》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.seoqp.com/前端知识点/浏览器.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://qvchat.com/前端知识点/浏览器.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《浏览器》 — 秦伟博客&url=http://blog.seoqp.com/前端知识点/浏览器.html&via=http://blog.seoqp.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《浏览器》 — 秦伟博客&url=http://qvchat.com/前端知识点/浏览器.html&via=http://qvchat.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.seoqp.com/前端知识点/浏览器.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://qvchat.com/前端知识点/浏览器.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -1251,7 +1302,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACGklEQVR42u3aQXLDMAgF0Nz/0ukBWjsfUDpj6XmVycQ2rwuKgNcrvt7BdXXX/fe/P1/dteDCwMB4LCMJrhru1Tf3T7h/74c/HAYGxgGMXlrshdt774eYMTAwMHqPvoDdp3IMDAyMOSMp5uYFIgYGBkbvELu2YXf/yy+exTEwMB7IyIP4/89fmW9gYGA8ivEuXgkySZ2TJPtHVBgYGFsz8gSXl4x5Sq0ecT/8EgMDY2tG8uhVDbikuTYCY2BgHMPIy8FkCaM3KuiNNjEwMPZjVMu43pJEksqrI8xmLxADA+OxjElR2GvV5e9trllgYGBsxMhLt0mbrIcpjzMxMDA2ZUzCyptu1aFCuRjFwMA4gFFtn+VBV8eTPSoGBsbJjFWv6bXVCqUkBgbG1ozJElh1kJAfUHMSBgbGCYz5SkQeYrXptnjZAgMD4+GM/ChbDbfasKu+97JriIGBcQCjOiVcu5BRPUhjYGDszejdtiqgvIiMzuIYGBjHMKqJr9o+m6fXBSdyDAyMxzKS5n6eanuH0mpjDgMD4zRGr4DrFXnVMUN5kImBgbER4128qqsYk/FAsyjEwMDYjlFNdtWU+g3ea3JhYGA8llFt8eeH27XrGlGFi4GBsTWjV7r1VjQm/xOi+QYGBgZGa8FiXghGpSEGBgZGayQwKTrz4hUDA+MERvUgOg+lOtTEwMA4mdFbdPjGeKC69oGBgXEA4wdG1CLg5r8DZwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3azWrDMBBF4bz/S7vQVSFYPnfGLsnoaBVKsfRpMcyPXi+8jt919vvvev/7+3fOvnb2l9uWDBkyvpZxLFe6/dkhDrDINZ3uIkOGjA0YJMiuN0uPmwb3izPLkCFDBk77SPBdX40MGTJkPMFYp4m8KJUhQ4aMNaNTWJKj8xbb47W4DBkyvpDRHww89/tf5xsyZMj4SMYRrloy1ymA0alkyJAxmkFSPT4w6CdwfGyAMlwZMmQMYqTN+nTQmAbrVtNNhgwZQxl8lNgJtemNxk09GTJkjGakn0jHjWkIJp00tKMMGTJGMGrhkj//6uSqwUlkyJCxGYMH3zSk1tI7EoJlyJCxA4MEx9pmtRYeL4NlyJCxDyNN+8jTilpITQtmGTJk7MOopWW1MM2Ty6DBJ0OGjNGM/uMw3nrjh+btPxkyZOzA6Dz24k8u0tQwLoBlyJCxAYMXpWlTrDYcja9GhgwZGzBqbbJ+0EwfpV0UrjJkyBjKIOUrHx7ULoI/FLv4HxkyZAxl1B43pIMBfgXpczQZMmTsybjrWGni2HlAJkOGjNmM/kOHWkLZWeg7MmTIGMSoNeJ5sVobScYXIUOGjNGMe6M1TzEJlRfSMmTI2IGRBtl0DNkZgrZGmDJkyBjH4AUtP25nMBBfkAwZMmSU2m1p8tdJKGXIkCGDjyd5Icp3QW0+GTJkbMB4YhhA0j7+yAMFXBkyZAxl1AYDfADAD5QmkTfMN2TIkPHpjB9/4BQZKjNqhgAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 
@@ -1352,5 +1403,18 @@ MathJax.Hub.Queue(function() {
     }
 </script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 </html>

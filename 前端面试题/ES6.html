@@ -21,18 +21,27 @@
     
     
     <meta name="keywords" content="JavaScript,ES6">
-    <meta name="description" content="ES5、ES6和ES2015有什么区别? ES2015特指在2015年发布的新一代JS语言标准，ES6泛指下一代JS语言标准，包含ES2015、ES2016、ES2017、ES2018等。现阶段在绝大部分场景下，ES2015默认等同ES6。ES5泛指上一代语言标准。ES2015可以理解为ES5和ES6的时间分界线  ES6的了解es6 是一个新的标准，它包含了许多新的语言特性和库，是 JS 最实质">
+    <meta name="description" content="ES6（2015）1. 类（class）12345678910class Man &amp;#123;  constructor(name) &amp;#123;    this.name = &apos;小豪&apos;;  &amp;#125;  console() &amp;#123;    console.log(this.name);  &amp;#125;&amp;#125;const man = new Man(&apos;小豪&apos;);man.console()">
 <meta name="keywords" content="JavaScript,ES6">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ES6">
-<meta property="og:url" content="http://blog.seoqp.com/前端面试题/ES6.html">
+<meta property="og:url" content="http://qvchat.com/前端面试题/ES6.html">
 <meta property="og:site_name" content="秦伟博客">
-<meta property="og:description" content="ES5、ES6和ES2015有什么区别? ES2015特指在2015年发布的新一代JS语言标准，ES6泛指下一代JS语言标准，包含ES2015、ES2016、ES2017、ES2018等。现阶段在绝大部分场景下，ES2015默认等同ES6。ES5泛指上一代语言标准。ES2015可以理解为ES5和ES6的时间分界线  ES6的了解es6 是一个新的标准，它包含了许多新的语言特性和库，是 JS 最实质">
+<meta property="og:description" content="ES6（2015）1. 类（class）12345678910class Man &amp;#123;  constructor(name) &amp;#123;    this.name = &apos;小豪&apos;;  &amp;#125;  console() &amp;#123;    console.log(this.name);  &amp;#125;&amp;#125;const man = new Man(&apos;小豪&apos;);man.console()">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-08-13T04:27:05.920Z">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:updated_time" content="2022-07-18T15:20:35.445Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ES6">
-<meta name="twitter:description" content="ES5、ES6和ES2015有什么区别? ES2015特指在2015年发布的新一代JS语言标准，ES6泛指下一代JS语言标准，包含ES2015、ES2016、ES2017、ES2018等。现阶段在绝大部分场景下，ES2015默认等同ES6。ES5泛指上一代语言标准。ES2015可以理解为ES5和ES6的时间分界线  ES6的了解es6 是一个新的标准，它包含了许多新的语言特性和库，是 JS 最实质">
+<meta name="twitter:description" content="ES6（2015）1. 类（class）12345678910class Man &amp;#123;  constructor(name) &amp;#123;    this.name = &apos;小豪&apos;;  &amp;#125;  console() &amp;#123;    console.log(this.name);  &amp;#125;&amp;#125;const man = new Man(&apos;小豪&apos;);man.console()">
+<meta name="twitter:image" content="http://qvchat.com/img/loading.gif">
     
         <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
     
@@ -124,9 +133,9 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://coding.net/u/qw6" target="_blank" >
+              <a href="https://gitee.com/qw66" target="_blank" >
                 <i class="icon icon-lg icon-code"></i>
-                coding
+                gitee
               </a>
             </li>
         
@@ -188,12 +197,12 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ES5、ES6和ES2015有什么区别"><span class="post-toc-number">1.</span> <span class="post-toc-text">ES5、ES6和ES2015有什么区别?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ES6的了解"><span class="post-toc-number">2.</span> <span class="post-toc-text">ES6的了解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#谈一谈你了解ECMAScript6的新特性？"><span class="post-toc-number">3.</span> <span class="post-toc-text">谈一谈你了解ECMAScript6的新特性？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#日常前端代码开发中，有哪些值得用ES6去改进的编程优化或者规范？"><span class="post-toc-number">4.</span> <span class="post-toc-text">日常前端代码开发中，有哪些值得用ES6去改进的编程优化或者规范？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#var、let、const-的区别"><span class="post-toc-number">5.</span> <span class="post-toc-text">var、let、const 的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#let有什么用，有了var为什么还要用let？"><span class="post-toc-number">6.</span> <span class="post-toc-text">let有什么用，有了var为什么还要用let？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JS-块级作用域、变量提升"><span class="post-toc-number">7.</span> <span class="post-toc-text">JS 块级作用域、变量提升</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#var-let-在-for-循环中的区别"><span class="post-toc-number">8.</span> <span class="post-toc-text">var let 在 for 循环中的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何避免回调函数嵌套？"><span class="post-toc-number">9.</span> <span class="post-toc-text">如何避免回调函数嵌套？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Promise是什么，有什么作用？"><span class="post-toc-number">10.</span> <span class="post-toc-text">Promise是什么，有什么作用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Promise-的构造函数"><span class="post-toc-number">11.</span> <span class="post-toc-text">Promise 的构造函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#async函数是什么，有什么作用？"><span class="post-toc-number">12.</span> <span class="post-toc-text">async函数是什么，有什么作用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#async、await"><span class="post-toc-number">13.</span> <span class="post-toc-text">async、await</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#箭头函数和普通函数有什么区别"><span class="post-toc-number">14.</span> <span class="post-toc-text">箭头函数和普通函数有什么区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#举一些ES6对Function函数类型做的常用升级优化"><span class="post-toc-number">15.</span> <span class="post-toc-text">举一些ES6对Function函数类型做的常用升级优化?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#模板字符串"><span class="post-toc-number">16.</span> <span class="post-toc-text">模板字符串</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#module、export、import是什么，有什么作用？"><span class="post-toc-number">17.</span> <span class="post-toc-text">module、export、import是什么，有什么作用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ES6-如何动态加载-import"><span class="post-toc-number">18.</span> <span class="post-toc-text">ES6 如何动态加载 import</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是-Babel"><span class="post-toc-number">19.</span> <span class="post-toc-text">什么是 Babel</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Object-is-与原来的比较操作符“-”、“-”的区别？"><span class="post-toc-number">20.</span> <span class="post-toc-text">Object.is() 与原来的比较操作符“ ===”、“ ==”的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#for…in-和for…of有什么区别？"><span class="post-toc-number">21.</span> <span class="post-toc-text">for…in 和for…of有什么区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Symbol是什么，有什么作用？"><span class="post-toc-number">22.</span> <span class="post-toc-text">Symbol是什么，有什么作用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Set是什么，有什么作用？"><span class="post-toc-number">23.</span> <span class="post-toc-text">Set是什么，有什么作用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Map是什么，有什么作用？"><span class="post-toc-number">24.</span> <span class="post-toc-text">Map是什么，有什么作用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Proxy是什么，有什么作用？"><span class="post-toc-number">25.</span> <span class="post-toc-text">Proxy是什么，有什么作用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reflect是什么，有什么作用？"><span class="post-toc-number">26.</span> <span class="post-toc-text">Reflect是什么，有什么作用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#举一些ES6对String字符串类型做的常用升级优化"><span class="post-toc-number">27.</span> <span class="post-toc-text">举一些ES6对String字符串类型做的常用升级优化?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#举一些ES6对Array数组类型做的常用升级优化"><span class="post-toc-number">28.</span> <span class="post-toc-text">举一些ES6对Array数组类型做的常用升级优化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#举一些ES6对Number数字类型做的常用升级优化"><span class="post-toc-number">29.</span> <span class="post-toc-text">举一些ES6对Number数字类型做的常用升级优化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#举一些ES6对Object类型做的常用升级优化-重要"><span class="post-toc-number">30.</span> <span class="post-toc-text">举一些ES6对Object类型做的常用升级优化?(重要)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ES6-都有什么-Iterator-遍历器"><span class="post-toc-number">31.</span> <span class="post-toc-text">ES6 都有什么 Iterator 遍历器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Iterator是什么，有什么作用？-重要"><span class="post-toc-number">32.</span> <span class="post-toc-text">Iterator是什么，有什么作用？(重要)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Generator函数是什么，有什么作用？"><span class="post-toc-number">33.</span> <span class="post-toc-text">Generator函数是什么，有什么作用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Generator"><span class="post-toc-number">34.</span> <span class="post-toc-text">Generator</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Class、extends是什么，有什么作用？"><span class="post-toc-number">35.</span> <span class="post-toc-text">Class、extends是什么，有什么作用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AMD，CMD，CommonJs，ES6-Module：解决原始无模块化的痛点"><span class="post-toc-number">36.</span> <span class="post-toc-text">AMD，CMD，CommonJs，ES6 Module：解决原始无模块化的痛点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Class-的讲解"><span class="post-toc-number">37.</span> <span class="post-toc-text">Class 的讲解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ECMAScript6-怎么写class么，为什么会出现class这种东西"><span class="post-toc-number">38.</span> <span class="post-toc-text">ECMAScript6 怎么写class么，为什么会出现class这种东西?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ES6-中类的定义"><span class="post-toc-number">39.</span> <span class="post-toc-text">ES6 中类的定义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解构赋值及其原理"><span class="post-toc-number">40.</span> <span class="post-toc-text">解构赋值及其原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#总结：解构赋值的规则是："><span class="post-toc-number">41.</span> <span class="post-toc-text">总结：解构赋值的规则是：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Array-from-与-Array-reduce"><span class="post-toc-number">42.</span> <span class="post-toc-text">Array.from() 与 Array.reduce()</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ES6（2015）"><span class="post-toc-number">1.</span> <span class="post-toc-text">ES6（2015）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-类（class）"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">1. 类（class）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-模块化-ES-Module"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">2. 模块化(ES Module)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-箭头（Arrow）函数"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">3. 箭头（Arrow）函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-函数参数默认值"><span class="post-toc-number">1.0.4.</span> <span class="post-toc-text">4. 函数参数默认值</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-模板字符串"><span class="post-toc-number">1.0.5.</span> <span class="post-toc-text">5. 模板字符串</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-解构赋值"><span class="post-toc-number">1.0.6.</span> <span class="post-toc-text">6. 解构赋值</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-延展操作符"><span class="post-toc-number">1.0.7.</span> <span class="post-toc-text">7. 延展操作符</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-对象属性简写"><span class="post-toc-number">1.0.8.</span> <span class="post-toc-text">8. 对象属性简写</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-Promise"><span class="post-toc-number">1.0.9.</span> <span class="post-toc-text">9. Promise</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-let和const"><span class="post-toc-number">1.0.10.</span> <span class="post-toc-text">10. let和const</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ES7（2016）"><span class="post-toc-number">2.</span> <span class="post-toc-text">ES7（2016）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-Array-prototype-includes"><span class="post-toc-number">2.0.1.</span> <span class="post-toc-text">1. Array.prototype.includes()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-指数操作符"><span class="post-toc-number">2.0.2.</span> <span class="post-toc-text">2. 指数操作符</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ES8（2017）"><span class="post-toc-number">3.</span> <span class="post-toc-text">ES8（2017）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-async-await"><span class="post-toc-number">3.0.1.</span> <span class="post-toc-text">1. async/await</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-Object-values"><span class="post-toc-number">3.0.2.</span> <span class="post-toc-text">2. Object.values()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-Object-entries"><span class="post-toc-number">3.0.3.</span> <span class="post-toc-text">3. Object.entries()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-String-padding"><span class="post-toc-number">3.0.4.</span> <span class="post-toc-text">4. String padding</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-函数参数列表结尾允许逗号"><span class="post-toc-number">3.0.5.</span> <span class="post-toc-text">5. 函数参数列表结尾允许逗号</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-Object-getOwnPropertyDescriptors"><span class="post-toc-number">3.0.6.</span> <span class="post-toc-text">6. Object.getOwnPropertyDescriptors()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-SharedArrayBuffer对象"><span class="post-toc-number">3.0.7.</span> <span class="post-toc-text">7. SharedArrayBuffer对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-Atomics对象"><span class="post-toc-number">3.0.8.</span> <span class="post-toc-text">8. Atomics对象</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ES9（2018）"><span class="post-toc-number">4.</span> <span class="post-toc-text">ES9（2018）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-异步迭代"><span class="post-toc-number">4.0.1.</span> <span class="post-toc-text">1. 异步迭代</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-Promise-finally"><span class="post-toc-number">4.0.2.</span> <span class="post-toc-text">2. Promise.finally()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-Rest-Spread-属性"><span class="post-toc-number">4.0.3.</span> <span class="post-toc-text">3. Rest/Spread 属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-正则表达式命名捕获组"><span class="post-toc-number">4.0.4.</span> <span class="post-toc-text">4. 正则表达式命名捕获组</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-正则表达式反向断言"><span class="post-toc-number">4.0.5.</span> <span class="post-toc-text">5. 正则表达式反向断言</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-正则表达式dotAll模式"><span class="post-toc-number">4.0.6.</span> <span class="post-toc-text">6. 正则表达式dotAll模式</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ES10（2019）"><span class="post-toc-number">5.</span> <span class="post-toc-text">ES10（2019）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-Array-flat-和Array-flatMap"><span class="post-toc-number">5.0.1.</span> <span class="post-toc-text">1. Array.flat()和Array.flatMap()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-String-trimStart-和String-trimEnd"><span class="post-toc-number">5.0.2.</span> <span class="post-toc-text">2. String.trimStart()和String.trimEnd()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-String-prototype-matchAll"><span class="post-toc-number">5.0.3.</span> <span class="post-toc-text">3. String.prototype.matchAll</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-Symbol-prototype-description"><span class="post-toc-number">5.0.4.</span> <span class="post-toc-text">4. Symbol.prototype.description</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-Object-fromEntries"><span class="post-toc-number">5.0.5.</span> <span class="post-toc-text">5. Object.fromEntries()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-可选-Catch"><span class="post-toc-number">5.0.6.</span> <span class="post-toc-text">6. 可选 Catch</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ES11（2020）"><span class="post-toc-number">6.</span> <span class="post-toc-text">ES11（2020）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-Nullish-coalescing-Operator-空值处理"><span class="post-toc-number">6.0.1.</span> <span class="post-toc-text">1. Nullish coalescing Operator(空值处理)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-Optional-chaining（可选链）"><span class="post-toc-number">6.0.2.</span> <span class="post-toc-text">2. Optional chaining（可选链）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-Promise-allSettled"><span class="post-toc-number">6.0.3.</span> <span class="post-toc-text">3. Promise.allSettled</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-import"><span class="post-toc-number">6.0.4.</span> <span class="post-toc-text">4. import()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-新基本数据类型BigInt"><span class="post-toc-number">6.0.5.</span> <span class="post-toc-text">5. 新基本数据类型BigInt</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-globalThis"><span class="post-toc-number">6.0.6.</span> <span class="post-toc-text">6. globalThis</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#ES12（2021）"><span class="post-toc-number">7.</span> <span class="post-toc-text">ES12（2021）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-replaceAll"><span class="post-toc-number">7.0.1.</span> <span class="post-toc-text">1. replaceAll</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-Promise-any"><span class="post-toc-number">7.0.2.</span> <span class="post-toc-text">2. Promise.any</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-WeakRefs"><span class="post-toc-number">7.0.3.</span> <span class="post-toc-text">3. WeakRefs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-逻辑运算符和赋值表达式"><span class="post-toc-number">7.0.4.</span> <span class="post-toc-text">4. 逻辑运算符和赋值表达式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-数字分隔符"><span class="post-toc-number">7.0.5.</span> <span class="post-toc-text">5. 数字分隔符</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#箭头函数"><span class="post-toc-number">7.0.6.</span> <span class="post-toc-text">箭头函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ES5、ES6和ES2015有什么区别"><span class="post-toc-number">7.0.7.</span> <span class="post-toc-text">ES5、ES6和ES2015有什么区别?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ES6的了解"><span class="post-toc-number">7.0.8.</span> <span class="post-toc-text">ES6的了解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#谈一谈你了解ECMAScript6的新特性？"><span class="post-toc-number">7.0.9.</span> <span class="post-toc-text">谈一谈你了解ECMAScript6的新特性？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#日常前端代码开发中，有哪些值得用ES6去改进的编程优化或者规范？"><span class="post-toc-number">7.0.10.</span> <span class="post-toc-text">日常前端代码开发中，有哪些值得用ES6去改进的编程优化或者规范？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#var、let、const-的区别"><span class="post-toc-number">7.0.11.</span> <span class="post-toc-text">var、let、const 的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#let有什么用，有了var为什么还要用let？"><span class="post-toc-number">7.0.12.</span> <span class="post-toc-text">let有什么用，有了var为什么还要用let？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JS-块级作用域、变量提升"><span class="post-toc-number">7.0.13.</span> <span class="post-toc-text">JS 块级作用域、变量提升</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#var-let-在-for-循环中的区别"><span class="post-toc-number">7.0.14.</span> <span class="post-toc-text">var let 在 for 循环中的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何避免回调函数嵌套？"><span class="post-toc-number">7.0.15.</span> <span class="post-toc-text">如何避免回调函数嵌套？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Promise是什么，有什么作用？"><span class="post-toc-number">7.0.16.</span> <span class="post-toc-text">Promise是什么，有什么作用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Promise-的构造函数"><span class="post-toc-number">7.0.17.</span> <span class="post-toc-text">Promise 的构造函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#async函数是什么，有什么作用？"><span class="post-toc-number">7.0.18.</span> <span class="post-toc-text">async函数是什么，有什么作用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#async、await"><span class="post-toc-number">7.0.19.</span> <span class="post-toc-text">async、await</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#箭头函数和普通函数有什么区别"><span class="post-toc-number">7.0.20.</span> <span class="post-toc-text">箭头函数和普通函数有什么区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#举一些ES6对Function函数类型做的常用升级优化"><span class="post-toc-number">7.0.21.</span> <span class="post-toc-text">举一些ES6对Function函数类型做的常用升级优化?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#模板字符串"><span class="post-toc-number">7.0.22.</span> <span class="post-toc-text">模板字符串</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#module、export、import是什么，有什么作用？"><span class="post-toc-number">7.0.23.</span> <span class="post-toc-text">module、export、import是什么，有什么作用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ES6-如何动态加载-import"><span class="post-toc-number">7.0.24.</span> <span class="post-toc-text">ES6 如何动态加载 import</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是-Babel"><span class="post-toc-number">7.0.25.</span> <span class="post-toc-text">什么是 Babel</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Object-is-与原来的比较操作符“-”、“-”的区别？"><span class="post-toc-number">7.0.26.</span> <span class="post-toc-text">Object.is() 与原来的比较操作符“ ===”、“ ==”的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#for…in-和for…of有什么区别？"><span class="post-toc-number">7.0.27.</span> <span class="post-toc-text">for…in 和for…of有什么区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Symbol是什么，有什么作用？"><span class="post-toc-number">7.0.28.</span> <span class="post-toc-text">Symbol是什么，有什么作用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Set是什么，有什么作用？"><span class="post-toc-number">7.0.29.</span> <span class="post-toc-text">Set是什么，有什么作用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Map是什么，有什么作用？"><span class="post-toc-number">7.0.30.</span> <span class="post-toc-text">Map是什么，有什么作用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Proxy是什么，有什么作用？"><span class="post-toc-number">7.0.31.</span> <span class="post-toc-text">Proxy是什么，有什么作用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reflect是什么，有什么作用？"><span class="post-toc-number">7.0.32.</span> <span class="post-toc-text">Reflect是什么，有什么作用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#举一些ES6对String字符串类型做的常用升级优化"><span class="post-toc-number">7.0.33.</span> <span class="post-toc-text">举一些ES6对String字符串类型做的常用升级优化?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#举一些ES6对Array数组类型做的常用升级优化"><span class="post-toc-number">7.0.34.</span> <span class="post-toc-text">举一些ES6对Array数组类型做的常用升级优化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#举一些ES6对Number数字类型做的常用升级优化"><span class="post-toc-number">7.0.35.</span> <span class="post-toc-text">举一些ES6对Number数字类型做的常用升级优化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#举一些ES6对Object类型做的常用升级优化-重要"><span class="post-toc-number">7.0.36.</span> <span class="post-toc-text">举一些ES6对Object类型做的常用升级优化?(重要)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ES6-都有什么-Iterator-遍历器"><span class="post-toc-number">7.0.37.</span> <span class="post-toc-text">ES6 都有什么 Iterator 遍历器</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Iterator是什么，有什么作用？-重要"><span class="post-toc-number">7.0.38.</span> <span class="post-toc-text">Iterator是什么，有什么作用？(重要)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Generator函数是什么，有什么作用？"><span class="post-toc-number">7.0.39.</span> <span class="post-toc-text">Generator函数是什么，有什么作用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Generator"><span class="post-toc-number">7.0.40.</span> <span class="post-toc-text">Generator</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Class、extends是什么，有什么作用？"><span class="post-toc-number">7.0.41.</span> <span class="post-toc-text">Class、extends是什么，有什么作用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AMD，CMD，CommonJs，ES6-Module：解决原始无模块化的痛点"><span class="post-toc-number">7.0.42.</span> <span class="post-toc-text">AMD，CMD，CommonJs，ES6 Module：解决原始无模块化的痛点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Class-的讲解"><span class="post-toc-number">7.0.43.</span> <span class="post-toc-text">Class 的讲解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ECMAScript6-怎么写class么，为什么会出现class这种东西"><span class="post-toc-number">7.0.44.</span> <span class="post-toc-text">ECMAScript6 怎么写class么，为什么会出现class这种东西?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ES6-中类的定义"><span class="post-toc-number">7.0.45.</span> <span class="post-toc-text">ES6 中类的定义</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解构赋值及其原理"><span class="post-toc-number">7.0.46.</span> <span class="post-toc-text">解构赋值及其原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#总结：解构赋值的规则是："><span class="post-toc-number">7.0.47.</span> <span class="post-toc-text">总结：解构赋值的规则是：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Array-from-与-Array-reduce"><span class="post-toc-number">7.0.48.</span> <span class="post-toc-text">Array.from() 与 Array.reduce()</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-ES6"
+<article id="post-前端面试题/ES6"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
@@ -214,7 +223,228 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h3 id="ES5、ES6和ES2015有什么区别"><a href="#ES5、ES6和ES2015有什么区别" class="headerlink" title="ES5、ES6和ES2015有什么区别?"></a>ES5、ES6和ES2015有什么区别?</h3><blockquote>
+            <h1 id="ES6（2015）"><a href="#ES6（2015）" class="headerlink" title="ES6（2015）"></a>ES6（2015）</h1><h3 id="1-类（class）"><a href="#1-类（class）" class="headerlink" title="1. 类（class）"></a>1. 类（class）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Man &#123;</span><br><span class="line">  constructor(name) &#123;</span><br><span class="line">    this.name = <span class="string">'小豪'</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="title">console</span></span>() &#123;</span><br><span class="line">    console.log(this.name);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">const man = new Man(<span class="string">'小豪'</span>);</span><br><span class="line">man.console(); // 小豪</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-模块化-ES-Module"><a href="#2-模块化-ES-Module" class="headerlink" title="2. 模块化(ES Module)"></a>2. 模块化(ES Module)</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 模块 A 导出一个方法</span><br><span class="line"><span class="built_in">export</span> const sub = (a, b) =&gt; a + b;</span><br><span class="line">// 模块 B 导入使用</span><br><span class="line">import &#123; sub &#125; from <span class="string">'./A'</span>;</span><br><span class="line">console.log(sub(1, 2)); // 3</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-箭头（Arrow）函数"><a href="#3-箭头（Arrow）函数" class="headerlink" title="3. 箭头（Arrow）函数"></a>3. 箭头（Arrow）函数</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const func = (a, b) =&gt; a + b;</span><br><span class="line">func(1, 2); // 3</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-函数参数默认值"><a href="#4-函数参数默认值" class="headerlink" title="4. 函数参数默认值"></a>4. 函数参数默认值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> foo(age = 25,)&#123; // ...&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-模板字符串"><a href="#5-模板字符串" class="headerlink" title="5. 模板字符串"></a>5. 模板字符串</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const name = <span class="string">'小豪'</span>;</span><br><span class="line">const str = `Your name is <span class="variable">$&#123;name&#125;</span>`;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-解构赋值"><a href="#6-解构赋值" class="headerlink" title="6. 解构赋值"></a>6. 解构赋值</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> a = 1, b= 2;</span><br><span class="line">[a, b] = [b, a]; // a 2  b 1</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-延展操作符"><a href="#7-延展操作符" class="headerlink" title="7. 延展操作符"></a>7. 延展操作符</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> a = [...<span class="string">'hello world'</span>]; // [<span class="string">"h"</span>, <span class="string">"e"</span>, <span class="string">"l"</span>, <span class="string">"l"</span>, <span class="string">"o"</span>, <span class="string">" "</span>, <span class="string">"w"</span>, <span class="string">"o"</span>, <span class="string">"r"</span>, <span class="string">"l"</span>, <span class="string">"d"</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-对象属性简写"><a href="#8-对象属性简写" class="headerlink" title="8. 对象属性简写"></a>8. 对象属性简写</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const name=<span class="string">'小豪'</span>,</span><br><span class="line">const obj = &#123; name &#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="9-Promise"><a href="#9-Promise" class="headerlink" title="9. Promise"></a>9. Promise</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Promise.resolve().<span class="keyword">then</span>(() =&gt; &#123; console.log(2); &#125;);</span><br><span class="line">console.log(1);</span><br><span class="line">// 先打印 1 ，再打印 2</span><br></pre></td></tr></table></figure>
+
+<h3 id="10-let和const"><a href="#10-let和const" class="headerlink" title="10. let和const"></a>10. let和const</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> name = <span class="string">'小豪'</span>；</span><br><span class="line">const arr = [];</span><br></pre></td></tr></table></figure>
+
+<h1 id="ES7（2016）"><a href="#ES7（2016）" class="headerlink" title="ES7（2016）"></a>ES7（2016）</h1><h3 id="1-Array-prototype-includes"><a href="#1-Array-prototype-includes" class="headerlink" title="1. Array.prototype.includes()"></a>1. Array.prototype.includes()</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1].includes(1); // <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-指数操作符"><a href="#2-指数操作符" class="headerlink" title="2. 指数操作符"></a>2. 指数操作符</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2**10; // 1024</span><br></pre></td></tr></table></figure>
+
+<h1 id="ES8（2017）"><a href="#ES8（2017）" class="headerlink" title="ES8（2017）"></a>ES8（2017）</h1><h3 id="1-async-await"><a href="#1-async-await" class="headerlink" title="1. async/await"></a>1. async/await</h3><p>异步终极解决方案</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">async <span class="function"><span class="title">getData</span></span>()&#123;</span><br><span class="line">    const res = await api.getTableData(); // await 异步任务</span><br><span class="line">    // <span class="keyword">do</span> something    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-Object-values"><a href="#2-Object-values" class="headerlink" title="2. Object.values()"></a>2. Object.values()</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object.values(&#123;a: 1, b: 2, c: 3&#125;); // [1, 2, 3]</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-Object-entries"><a href="#3-Object-entries" class="headerlink" title="3. Object.entries()"></a>3. Object.entries()</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object.entries(&#123;a: 1, b: 2, c: 3&#125;); // [[<span class="string">"a"</span>, 1], [<span class="string">"b"</span>, 2], [<span class="string">"c"</span>, 3]]</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-String-padding"><a href="#4-String-padding" class="headerlink" title="4. String padding"></a>4. String padding</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// padStart</span><br><span class="line"><span class="string">'hello'</span>.padStart(10); // <span class="string">"     hello"</span></span><br><span class="line">// padEnd</span><br><span class="line"><span class="string">'hello'</span>.padEnd(10) <span class="string">"hello     "</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-函数参数列表结尾允许逗号"><a href="#5-函数参数列表结尾允许逗号" class="headerlink" title="5. 函数参数列表结尾允许逗号"></a>5. 函数参数列表结尾允许逗号</h3><h3 id="6-Object-getOwnPropertyDescriptors"><a href="#6-Object-getOwnPropertyDescriptors" class="headerlink" title="6. Object.getOwnPropertyDescriptors()"></a>6. Object.getOwnPropertyDescriptors()</h3><blockquote>
+<p>获取一个对象的所有自身属性的描述符,如果没有任何自身属性，则返回空对象。</p>
+</blockquote>
+<h3 id="7-SharedArrayBuffer对象"><a href="#7-SharedArrayBuffer对象" class="headerlink" title="7. SharedArrayBuffer对象"></a>7. SharedArrayBuffer对象</h3><blockquote>
+<p>SharedArrayBuffer 对象用来表示一个通用的，固定长度的原始二进制数据缓冲区，</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line"> * </span><br><span class="line"> * @param &#123;*&#125; length 所创建的数组缓冲区的大小，以字节(byte)为单位。  </span><br><span class="line"> * @returns &#123;SharedArrayBuffer&#125; 一个大小指定的新 SharedArrayBuffer 对象。其内容被初始化为 0。</span><br><span class="line"> */</span><br><span class="line">new SharedArrayBuffer(10)</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-Atomics对象"><a href="#8-Atomics对象" class="headerlink" title="8. Atomics对象"></a>8. Atomics对象</h3><blockquote>
+<p>Atomics 对象提供了一组静态方法用来对 SharedArrayBuffer 对象进行原子操作。</p>
+</blockquote>
+<h1 id="ES9（2018）"><a href="#ES9（2018）" class="headerlink" title="ES9（2018）"></a>ES9（2018）</h1><h3 id="1-异步迭代"><a href="#1-异步迭代" class="headerlink" title="1. 异步迭代"></a>1. 异步迭代</h3><p>await可以和for…of循环一起使用，以串行的方式运行异步操作</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">async <span class="keyword">function</span> process(array) &#123;</span><br><span class="line">  <span class="keyword">for</span> await (<span class="built_in">let</span> i of array) &#123;</span><br><span class="line">    // doSomething(i);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-Promise-finally"><a href="#2-Promise-finally" class="headerlink" title="2. Promise.finally()"></a>2. Promise.finally()</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Promise.resolve().<span class="keyword">then</span>().catch(e =&gt; e).finally();</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-Rest-Spread-属性"><a href="#3-Rest-Spread-属性" class="headerlink" title="3. Rest/Spread 属性"></a>3. Rest/Spread 属性</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const values = [1, 2, 3, 5, 6];</span><br><span class="line">console.log( Math.max(...values) ); // 6</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-正则表达式命名捕获组"><a href="#4-正则表达式命名捕获组" class="headerlink" title="4. 正则表达式命名捕获组"></a>4. 正则表达式命名捕获组</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const reg = /(?&lt;year&gt;[0-9]&#123;4&#125;)-(?&lt;month&gt;[0-9]&#123;2&#125;)-(?&lt;day&gt;[0-9]&#123;2&#125;)/;</span><br><span class="line">const match = reg.exec(<span class="string">'2021-02-23'</span>);</span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://segmentfault.com/img/remote/1460000039272643" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+
+
+<h3 id="5-正则表达式反向断言"><a href="#5-正则表达式反向断言" class="headerlink" title="5. 正则表达式反向断言"></a>5. 正则表达式反向断言</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">(?=p)、(?&lt;=p)  p 前面(位置)、p 后面(位置)</span><br><span class="line">(?!p)、(?&lt;!p&gt;) 除了 p 前面(位置)、除了 p 后面(位置)</span><br><span class="line">(?&lt;=w)</span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://segmentfault.com/img/remote/1460000039272644" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<p>`(?</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://segmentfault.com/img/remote/1460000039272648" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+
+
+<h3 id="6-正则表达式dotAll模式"><a href="#6-正则表达式dotAll模式" class="headerlink" title="6. 正则表达式dotAll模式"></a>6. 正则表达式dotAll模式</h3><blockquote>
+<p>正则表达式中点.匹配除回车外的任何单字符，标记s改变这种行为，允许行终止符的出现</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/hello.world/.<span class="built_in">test</span>(<span class="string">'hello\nworld'</span>);  // <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://segmentfault.com/img/remote/1460000039272649" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+
+
+
+
+
+
+<h1 id="ES10（2019）"><a href="#ES10（2019）" class="headerlink" title="ES10（2019）"></a>ES10（2019）</h1><h3 id="1-Array-flat-和Array-flatMap"><a href="#1-Array-flat-和Array-flatMap" class="headerlink" title="1. Array.flat()和Array.flatMap()"></a>1. Array.flat()和Array.flatMap()</h3><p>flat()</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1, 2, [3, 4]].flat(Infinity); // [1, 2, 3, 4]</span><br></pre></td></tr></table></figure>
+
+<p>flatMap()</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[1, 2, 3, 4].flatMap(a =&gt; [a**2]); // [1, 4, 9, 16]</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-String-trimStart-和String-trimEnd"><a href="#2-String-trimStart-和String-trimEnd" class="headerlink" title="2. String.trimStart()和String.trimEnd()"></a>2. String.trimStart()和String.trimEnd()</h3><p>去除字符串首尾空白字符</p>
+<h3 id="3-String-prototype-matchAll"><a href="#3-String-prototype-matchAll" class="headerlink" title="3. String.prototype.matchAll"></a>3. String.prototype.matchAll</h3><blockquote>
+<p>matchAll（）为所有匹配的匹配对象返回一个迭代器</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const raw_arr = <span class="string">'test1  test2  test3'</span>.matchAll((/t(e)(st(\d?))/g));</span><br><span class="line">const arr = [...raw_arr];</span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://segmentfault.com/img/remote/1460000039272646" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+
+
+<h3 id="4-Symbol-prototype-description"><a href="#4-Symbol-prototype-description" class="headerlink" title="4. Symbol.prototype.description"></a>4. Symbol.prototype.description</h3><blockquote>
+<p>只读属性，回 Symbol 对象的可选描述的字符串。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Symbol(<span class="string">'description'</span>).description; // <span class="string">'description'</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-Object-fromEntries"><a href="#5-Object-fromEntries" class="headerlink" title="5. Object.fromEntries()"></a>5. Object.fromEntries()</h3><blockquote>
+<p>返回一个给定对象自身可枚举属性的键值对数组</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// 通过 Object.fromEntries， 可以将 Map 转化为 Object:</span><br><span class="line">const map = new Map([ [<span class="string">'foo'</span>, <span class="string">'bar'</span>], [<span class="string">'baz'</span>, 42] ]);</span><br><span class="line">console.log(Object.fromEntries(map)); // &#123; foo: <span class="string">"bar"</span>, baz: 42 &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-可选-Catch"><a href="#6-可选-Catch" class="headerlink" title="6. 可选 Catch"></a>6. 可选 Catch</h3><h1 id="ES11（2020）"><a href="#ES11（2020）" class="headerlink" title="ES11（2020）"></a>ES11（2020）</h1><h3 id="1-Nullish-coalescing-Operator-空值处理"><a href="#1-Nullish-coalescing-Operator-空值处理" class="headerlink" title="1. Nullish coalescing Operator(空值处理)"></a>1. Nullish coalescing Operator(空值处理)</h3><p>表达式在 ?? 的左侧 运算符求值为undefined或null，返回其右侧。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> user = &#123;</span><br><span class="line">    u1: 0,</span><br><span class="line">    u2: <span class="literal">false</span>,</span><br><span class="line">    u3: null,</span><br><span class="line">    u4: undefined</span><br><span class="line">    u5: <span class="string">''</span>,</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">let</span> u2 = user.u2 ?? <span class="string">'用户2'</span>  // <span class="literal">false</span></span><br><span class="line"><span class="built_in">let</span> u3 = user.u3 ?? <span class="string">'用户3'</span>  // 用户3</span><br><span class="line"><span class="built_in">let</span> u4 = user.u4 ?? <span class="string">'用户4'</span>  // 用户4</span><br><span class="line"><span class="built_in">let</span> u5 = user.u5 ?? <span class="string">'用户5'</span>  // <span class="string">''</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-Optional-chaining（可选链）"><a href="#2-Optional-chaining（可选链）" class="headerlink" title="2. Optional chaining（可选链）"></a>2. Optional chaining（可选链）</h3><p>?.用户检测不确定的中间节点</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> user = &#123;&#125;</span><br><span class="line"><span class="built_in">let</span> u1 = user.childer.name // TypeError: Cannot <span class="built_in">read</span> property <span class="string">'name'</span> of undefined</span><br><span class="line"><span class="built_in">let</span> u1 = user.childer?.name // undefined</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-Promise-allSettled"><a href="#3-Promise-allSettled" class="headerlink" title="3. Promise.allSettled"></a>3. Promise.allSettled</h3><blockquote>
+<p>返回一个在所有给定的promise已被决议或被拒绝后决议的promise，并带有一个对象数组，每个对象表示对应的promise结果</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const promise1 = Promise.resolve(3);</span><br><span class="line">const promise2 = 42;</span><br><span class="line">const promise3 = new Promise((resolve, reject) =&gt; reject(<span class="string">'我是失败的Promise_1'</span>));</span><br><span class="line">const promise4 = new Promise((resolve, reject) =&gt; reject(<span class="string">'我是失败的Promise_2'</span>));</span><br><span class="line">const promiseList = [promise1,promise2,promise3, promise4]</span><br><span class="line">Promise.allSettled(promiseList)</span><br><span class="line">.<span class="keyword">then</span>(values=&gt;&#123;</span><br><span class="line">  console.log(values)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://segmentfault.com/img/remote/1460000039272647" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+
+
+<h3 id="4-import"><a href="#4-import" class="headerlink" title="4. import()"></a>4. import()</h3><p>按需导入</p>
+<h3 id="5-新基本数据类型BigInt"><a href="#5-新基本数据类型BigInt" class="headerlink" title="5. 新基本数据类型BigInt"></a>5. 新基本数据类型BigInt</h3><blockquote>
+<p>任意精度的整数</p>
+</blockquote>
+<h3 id="6-globalThis"><a href="#6-globalThis" class="headerlink" title="6. globalThis"></a>6. globalThis</h3><ul>
+<li>浏览器：window</li>
+<li>worker：self</li>
+<li>node：global</li>
+</ul>
+<h1 id="ES12（2021）"><a href="#ES12（2021）" class="headerlink" title="ES12（2021）"></a>ES12（2021）</h1><h3 id="1-replaceAll"><a href="#1-replaceAll" class="headerlink" title="1. replaceAll"></a>1. replaceAll</h3><blockquote>
+<p>返回一个全新的字符串，所有符合匹配规则的字符都将被替换掉</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const str = <span class="string">'hello world'</span>;</span><br><span class="line">str.replaceAll(<span class="string">'l'</span>, <span class="string">''</span>); // <span class="string">"heo word"</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-Promise-any"><a href="#2-Promise-any" class="headerlink" title="2. Promise.any"></a>2. Promise.any</h3><blockquote>
+<p>Promise.any() 接收一个Promise可迭代对象，只要其中的一个 promise 成功，就返回那个已经成功的 promise 。如果可迭代对象中没有一个 promise 成功（即所有的 promises 都失败/拒绝），就返回一个失败的 promise</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">const promise1 = new Promise((resolve, reject) =&gt; reject(<span class="string">'我是失败的Promise_1'</span>));</span><br><span class="line">const promise2 = new Promise((resolve, reject) =&gt; reject(<span class="string">'我是失败的Promise_2'</span>));</span><br><span class="line">const promiseList = [promise1, promise2];</span><br><span class="line">Promise.any(promiseList)</span><br><span class="line">.<span class="keyword">then</span>(values=&gt;&#123;</span><br><span class="line">  console.log(values);</span><br><span class="line">&#125;)</span><br><span class="line">.catch(e=&gt;&#123;</span><br><span class="line">  console.log(e);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://segmentfault.com/img/remote/1460000039272645" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+
+
+<h3 id="3-WeakRefs"><a href="#3-WeakRefs" class="headerlink" title="3. WeakRefs"></a>3. WeakRefs</h3><blockquote>
+<p>使用WeakRefs的Class类创建对对象的弱引用(对对象的弱引用是指当该对象应该被GC回收时不会阻止GC的回收行为)</p>
+</blockquote>
+<h3 id="4-逻辑运算符和赋值表达式"><a href="#4-逻辑运算符和赋值表达式" class="headerlink" title="4. 逻辑运算符和赋值表达式"></a>4. 逻辑运算符和赋值表达式</h3><blockquote>
+<p>逻辑运算符和赋值表达式，新特性结合了逻辑运算符（&amp;&amp;，||，??）和赋值表达式而JavaScript已存在的 复合赋值运算符有：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a ||= b</span><br><span class="line">//等价于</span><br><span class="line">a = a || (a = b)</span><br><span class="line"></span><br><span class="line">a &amp;&amp;= b</span><br><span class="line">//等价于</span><br><span class="line">a = a &amp;&amp; (a = b)</span><br><span class="line"></span><br><span class="line">a ??= b</span><br><span class="line">//等价于</span><br><span class="line">a = a ?? (a = b)</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-数字分隔符"><a href="#5-数字分隔符" class="headerlink" title="5. 数字分隔符"></a>5. 数字分隔符</h3><blockquote>
+<p>数字分隔符，可以在数字之间创建可视化分隔符，通过_下划线来分割数字，使数字更具可读性</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const money = 1_000_000_000;</span><br><span class="line">//等价于</span><br><span class="line">const money = 1000000000;</span><br><span class="line"></span><br><span class="line">1_000_000_000 === 1000000000; // <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://segmentfault.com/img/remote/1460000039272650" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<p>以上内容来自<a href="https://segmentfault.com/a/1190000039272641" target="_blank" rel="noopener">https://segmentfault.com/a/1190000039272641</a></p>
+<h3 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a>箭头函数</h3><p>一、ES6标准新增加了一种新的匿名函数定义方法:箭头函数(Arrow Function)。箭头函数并没有替代以前定义匿名函数的方法，只是新增的一种定义匿名函数的方式！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// 正常函数</span><br><span class="line">function name(形参列表)&#123;代码块&#125;</span><br><span class="line"></span><br><span class="line">// ES6之前的匿名函数</span><br><span class="line">function(形参列表)&#123;代码块&#125;</span><br><span class="line">function(x,y)&#123;return x+y&#125;</span><br><span class="line"></span><br><span class="line">// ES6新特性箭头函数</span><br><span class="line">(形参列表)=&gt;&#123;代码块&#125;</span><br><span class="line">x =&gt; x+1 ; // 只有一个形参省略括号</span><br><span class="line">x =&gt; (&#123;foo: x&#125;); // 返回对象字面量表达式</span><br><span class="line">(x,y) =&gt; x+y;</span><br><span class="line">(x,y) =&gt; &#123;return x+y&#125;</span><br></pre></td></tr></table></figure>
+
+<p>二、箭头函数没有定义this绑定。</p>
+<p>箭头函数最大的好处是解决了匿名函数的this指向问题，有利于封装回调函数。箭头函数体内的this对象，就是定义该函数时所在的作用域指向的对象，而不是使用时所在的作用域指向的对象。（简述：箭头函数的this是继承所在作用域的this）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">var obj = &#123;</span><br><span class="line">  msg: &quot;你好&quot;,</span><br><span class="line">  fn1: function () &#123;</span><br><span class="line">    //  你好</span><br><span class="line">    console.log(this.msg);</span><br><span class="line">    // undefined （this指向该当前对象）</span><br><span class="line">    setTimeout(function () &#123;</span><br><span class="line">      console.log(this.msg);</span><br><span class="line">    &#125;, 500);</span><br><span class="line">    // 你好 （this指向定义该箭头函数时所在的作用域）</span><br><span class="line">    setTimeout(() =&gt; &#123;</span><br><span class="line">      console.log(this.msg);</span><br><span class="line">    &#125;, 500);</span><br><span class="line">  &#125;,</span><br><span class="line">  fn2: () =&gt; &#123;</span><br><span class="line">    // undefined （this指向window）</span><br><span class="line">    console.log(this.msg);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>三、箭头函数不绑定Arguments 对象，不能用作构造器，没有prototype属性，yield关键字通常不能在箭头函数中使用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var fn1 = function (x) &#123;</span><br><span class="line">  // arguments数组</span><br><span class="line">  console.log(arguments);</span><br><span class="line">&#125;;</span><br><span class="line">var fn2 = (x) =&gt; &#123;</span><br><span class="line">  // ReferenceError</span><br><span class="line">  console.log(arguments);</span><br><span class="line">&#125;;</span><br><span class="line">fn2.prototype; // undefined</span><br><span class="line">let fn3 = new fn2(); // ReferenceError</span><br></pre></td></tr></table></figure>
+
+<p>四、其他</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">// 三元运算</span><br><span class="line">var simple = a =&gt; a &gt; 10 ? 15 : a;</span><br><span class="line">simple(18); // 15</span><br><span class="line">simple(8); // 8</span><br><span class="line"></span><br><span class="line">// 递归</span><br><span class="line">var mult = (x) =&gt; ( x==0 ?  1 : x*mult(x-1) );</span><br><span class="line">mult(5); // 120</span><br><span class="line"></span><br><span class="line">// 标准的闭包函数</span><br><span class="line">function fn1() &#123;</span><br><span class="line">  var i = 0;</span><br><span class="line">  return function fn2() &#123; return ++i; &#125;;</span><br><span class="line">&#125;</span><br><span class="line">fn1()(); // 1</span><br><span class="line">var v = fn1();</span><br><span class="line">v(); //1 </span><br><span class="line">v(); //2</span><br><span class="line"></span><br><span class="line">//箭头函数体的闭包（ i=0 是默认参数）</span><br><span class="line">var Add = (i = 0) =&gt; &#123;</span><br><span class="line">  return () =&gt; ++i;</span><br><span class="line">&#125;;</span><br><span class="line">//因为仅有一个返回，return 及括号（）也可以省略</span><br><span class="line">var Add = (i = 0) =&gt; () =&gt; ++i;</span><br><span class="line"></span><br><span class="line">var q = Add ();</span><br><span class="line">q(); //1 </span><br><span class="line">q(); //2</span><br><span class="line"></span><br><span class="line">// 箭头函数内定义的变量及其作用域</span><br><span class="line"></span><br><span class="line">// 常规写法 函数体内var let定义的变量是局部变量</span><br><span class="line">var whatTime = () =&gt; &#123;</span><br><span class="line">  let now = new Date();</span><br><span class="line">  // var now = new Date();</span><br><span class="line">  return now.getHours() &gt; 17 ? &quot;晚上好&quot; : &quot;日安&quot;;</span><br><span class="line">&#125;;</span><br><span class="line">whatTime(); // &quot;晚上好&quot;</span><br><span class="line">console.log(now); // ReferenceError: now is not defined</span><br><span class="line"></span><br><span class="line">// 参数括号内定义的变量是局部变量（默认参数）</span><br><span class="line">var whatTime = (now = new Date()) =&gt; (now.getHours() &gt; 17 ? &quot;晚上好&quot; : &quot;日安&quot;);</span><br><span class="line">whatTime(); // &quot;晚上好&quot;</span><br><span class="line">console.log(now); // ReferenceError: now is not defined</span><br><span class="line"></span><br><span class="line">// 对比：函数体内&#123;&#125;不使用var定义的变量是全局变量</span><br><span class="line">var whatTime = () =&gt; &#123;</span><br><span class="line">  now = new Date();</span><br><span class="line">  return now.getHours() &gt; 17 ? &quot;晚上好&quot; : &quot;日安&quot;;</span><br><span class="line">&#125;;</span><br><span class="line">whatTime(); // &quot;晚上好&quot;</span><br><span class="line">console.log(now); // Thu Oct 14 2021 18:21:21 GMT+0800 (中国标准时间)</span><br></pre></td></tr></table></figure>
+
+<p>原文链接：<a href="https://blog.csdn.net/lusy258/article/details/120767707" target="_blank" rel="noopener">https://blog.csdn.net/lusy258/article/details/120767707</a></p>
+<h3 id="ES5、ES6和ES2015有什么区别"><a href="#ES5、ES6和ES2015有什么区别" class="headerlink" title="ES5、ES6和ES2015有什么区别?"></a>ES5、ES6和ES2015有什么区别?</h3><blockquote>
 <p><code>ES2015</code>特指在<code>2015</code>年发布的新一代<code>JS</code>语言标准，<code>ES6</code>泛指下一代JS语言标准，包含<code>ES2015</code>、<code>ES2016</code>、<code>ES2017</code>、<code>ES2018</code>等。现阶段在绝大部分场景下，<code>ES2015</code>默认等同<code>ES6</code>。<code>ES5</code>泛指上一代语言标准。<code>ES2015</code>可以理解为<code>ES5</code>和<code>ES6</code>的时间分界线</p>
 </blockquote>
 <h3 id="ES6的了解"><a href="#ES6的了解" class="headerlink" title="ES6的了解"></a>ES6的了解</h3><p>es6 是一个新的标准，它包含了许多新的语言特性和库，是 JS 最实质性的一次升级。<br>比如’箭头函数’、’字符串模板’、’generators(生成器)’、’async/await’、’解构赋值’、’class’等等，还有就是引入 module 模块的概念。</p>
@@ -827,17 +1057,17 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2021-08-13T04:27:05.920Z" itemprop="dateUpdated">2021-08-13 12:27:05</time>
+    最后更新时间：<time datetime="2022-07-18T15:20:35.445Z" itemprop="dateUpdated">2022-07-18 23:20:35</time>
 </span><br>
 
 
         
-        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/前端面试题/ES6.html" target="_blank" rel="external">http://blog.seoqp.com/前端面试题/ES6.html</a>
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/前端面试题/ES6.html" target="_blank" rel="external">http://qvchat.com/前端面试题/ES6.html</a>
         
     </div>
     
     <footer>
-        <a href="http://blog.seoqp.com">
+        <a href="http://qvchat.com">
             <img src="/img/avatar.jpg" alt="秦伟">
             秦伟
         </a>
@@ -863,7 +1093,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端面试题/ES6.html&title=《ES6》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://qvchat.com/前端面试题/ES6.html&title=《ES6》 — 秦伟博客&pic=http://qvchat.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -873,22 +1103,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端面试题/ES6.html&title=《ES6》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://qvchat.com/前端面试题/ES6.html&title=《ES6》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.seoqp.com/前端面试题/ES6.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://qvchat.com/前端面试题/ES6.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ES6》 — 秦伟博客&url=http://blog.seoqp.com/前端面试题/ES6.html&via=http://blog.seoqp.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ES6》 — 秦伟博客&url=http://qvchat.com/前端面试题/ES6.html&via=http://qvchat.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.seoqp.com/前端面试题/ES6.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://qvchat.com/前端面试题/ES6.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -920,9 +1150,9 @@
 
   
     <div class="waves-block waves-effect next">
-      <a href="/前端知识点/HTML.html" id="post-next" class="post-nav-link">
+      <a href="/前端知识点/HTML知识点.html" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">HTML</h4>
+        <h4 class="title">HTML知识点</h4>
       </a>
     </div>
   
@@ -1041,7 +1271,7 @@
     </div>
 
     <div class="bottom">
-        <p><span>Copyright &copy; 2018 - 2021 <a
+        <p><span>Copyright &copy; 2018 - 2023 <a
                 href="http://blog.bluedream.site/" target="_blank">秦伟的个人博客</a>All Rights Reserved.</span>
             <span>
                 部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除。
@@ -1096,7 +1326,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端面试题/ES6.html&title=《ES6》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://qvchat.com/前端面试题/ES6.html&title=《ES6》 — 秦伟博客&pic=http://qvchat.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -1106,22 +1336,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端面试题/ES6.html&title=《ES6》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://qvchat.com/前端面试题/ES6.html&title=《ES6》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.seoqp.com/前端面试题/ES6.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://qvchat.com/前端面试题/ES6.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ES6》 — 秦伟博客&url=http://blog.seoqp.com/前端面试题/ES6.html&via=http://blog.seoqp.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《ES6》 — 秦伟博客&url=http://qvchat.com/前端面试题/ES6.html&via=http://qvchat.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.seoqp.com/前端面试题/ES6.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://qvchat.com/前端面试题/ES6.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -1132,7 +1362,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLElEQVR42u3a0Y6jMAwF0P7/T7OvIyHotZ2uRDh5QqMCOa3kSeL7+cTjOI2/fz9/5nxvcn31hGUDAwPjsYzjdpxfefWE/C05I5kbBgbGexj3k7svrMl1FZzPDQMDA6P6mbyMVr8UDAwMjOoUe+VyQsLAwMBINrGT1/cWlD/Zi2NgYDyQkZ+6///rn/Q3MDAwHsU4imPeBug1AL7MCgMDY2tGr4V5v0SrLvKSoEa0lcXAwNiUkdzcLH9xUCwJn32q1R0DA2MjxrKgQ7FhmTyz9xwMDIy9GWtDEtWyvuzsEAMDYztGvjVNimM1wFFdFH45NcTAwHgZIz8gSxiT47nmehYDA2MjRq/kTQ7s8kVhr/RjYGC8h9E7gPtdOzNpdmJgYOzKSArlPPhVjVCU54aBgfFiRv64tT2KPC6GgYHxBkbvEL+3fa22SJPS/OU3wcDA2ILRK7iTYr2qAXDZwsTAwNiOMTnur040/w+QRy4WdC0wMDAexciXdNWtbN5mmIQ/MDAw3sCYZK6qxXTeJCjsxTEwMDZlTNqQ+RHbJExWXuFiYGA8nFE9CIsaioPyveAuDAyMjRhHceTtgcmSsRzjwMDA2JoxKY695kEesFg2dQwMjC0Y8yBX0m7Mt6PVtgQGBsZ7GL0ARG9pmH8Rha0vBgYGRszIW5W9sMXlezEwMDDi4FcvVNELlmFgYLyNkW9i86lPIh3luAYGBsbWjHzruKpAJ4DqrDAwMDZl/AMuO0a8iBbrxAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABwUlEQVR42u3aQY7CMAwFUO5/6Y40q9kUvu00YaSXFaKlPFhY9k9er3hdvyu/5/qz7u5MntlcuLi4Y+71dt1x767efTZ/586Ai4u7n5sXppyePDM34OLifie3Sk/6E1xc3P/OzctQr8XBxcX9Nm4y/ExGoGpxXDCr4eLiDrjVwPSJ1w/mu7i4uEXuVVy9liUvWB++HRcXdws3GV2SSlINQCfjEC4u7tPcfFzJR5FeYBrdg4uLu4WbH5aqRhjzQKQQm+Li4i7lzoOM3lGM3kCFi4t7lrvqar6hkjRYuLi4e7h5c3MqSG2OPbi4uAPuZFe2Wqp6JQ8XF/csNy8xyRfngWxhkwYXF3cjN98gyePUXsn78LNxcXEPcfPSU91WaYakuLi427nVj/VmkPy4RjMwxcXFXcqdHMbKW5NkcIr+OFxc3I3cPELthaSTiBYXF/cUN19PbLEUno+Li7uFWy0oPeL7lqh3FRcX92luHnommyu9LZPCIS1cXNyN3CTKTNqX6pbqsvYFFxf3ELdaqqobM1EvhouL+5XcfJskj0XyUoiLi7uT2ztcVe1A8uK4IBbBxcUdcFdNHHnj0vsxuLi4W7g/Ze4u5dmZzIwAAAAASUVORK5CYII=" alt="微信分享二维码">
 </div>
 
 
@@ -1233,5 +1463,18 @@ MathJax.Hub.Queue(function() {
     }
 </script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 </html>

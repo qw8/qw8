@@ -25,16 +25,16 @@
 <meta name="keywords" content="CSRF,XSS,SQL注入,HTTPS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Web安全">
-<meta property="og:url" content="http://blog.seoqp.com/前端知识点/Web安全.html">
+<meta property="og:url" content="http://qvchat.com/前端知识点/Web安全.html">
 <meta property="og:site_name" content="秦伟博客">
 <meta property="og:description" content="CSRF 问的不难，一般问：   CSRF的基本概念、缩写、全称 攻击原理 防御措施   如果把攻击原理和防御措施掌握好，基本没什么问题。  CSRF的基本概念CSRF（Cross-site request forgery）：跨站请求伪造。  伪造合法请求，让用户在不知情的情况下以登录的身份访问，利用用户信任达到攻击目的。  对服务器来说这个请求是完全合法的，但是却完成了攻击者所期望的一个操作，比">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://blog.seoqp.com/img/loading.gif">
-<meta property="og:updated_time" content="2021-08-13T04:34:09.419Z">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:updated_time" content="2022-08-13T10:26:42.118Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Web安全">
 <meta name="twitter:description" content="CSRF 问的不难，一般问：   CSRF的基本概念、缩写、全称 攻击原理 防御措施   如果把攻击原理和防御措施掌握好，基本没什么问题。  CSRF的基本概念CSRF（Cross-site request forgery）：跨站请求伪造。  伪造合法请求，让用户在不知情的情况下以登录的身份访问，利用用户信任达到攻击目的。  对服务器来说这个请求是完全合法的，但是却完成了攻击者所期望的一个操作，比">
-<meta name="twitter:image" content="http://blog.seoqp.com/img/loading.gif">
+<meta name="twitter:image" content="http://qvchat.com/img/loading.gif">
     
         <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
     
@@ -126,9 +126,9 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://coding.net/u/qw6" target="_blank" >
+              <a href="https://gitee.com/qw66" target="_blank" >
                 <i class="icon icon-lg icon-code"></i>
-                coding
+                gitee
               </a>
             </li>
         
@@ -190,12 +190,12 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CSRF"><span class="post-toc-number">1.</span> <span class="post-toc-text">CSRF</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CSRF的基本概念"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">CSRF的基本概念</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CSRF-攻击攻击原理及过程如下"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">CSRF 攻击攻击原理及过程如下</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#特点"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">特点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CSRF如何防御"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">CSRF如何防御</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#XSS"><span class="post-toc-number">2.</span> <span class="post-toc-text">XSS</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#XSS的基本概念"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">XSS的基本概念</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#XSS的攻击原理"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">XSS的攻击原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#XSS的攻击方式"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">XSS的攻击方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#XSS的防范措施（encode-过滤）"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">XSS的防范措施（encode + 过滤）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#XSS-防范方法"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">XSS 防范方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原因"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">原因</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#危害"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">危害</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#参考资料："><span class="post-toc-number">2.8.</span> <span class="post-toc-text">参考资料：</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#其他"><span class="post-toc-number">3.</span> <span class="post-toc-text">其他</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CSRF-和-XSS-的区别"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">CSRF 和 XSS 的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SQL注入原理"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">SQL注入原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http2-和-https-的关系"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">http2 和 https 的关系</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTPS实现原理"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">HTTPS实现原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么-HTTPS-安全"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">为什么 HTTPS 安全</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是点击劫持？如何防范？"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">什么是点击劫持？如何防范？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#域名收敛是什么？"><span class="post-toc-number">3.7.</span> <span class="post-toc-text">域名收敛是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何防范-Web-前端攻击？"><span class="post-toc-number">3.8.</span> <span class="post-toc-text">如何防范 Web 前端攻击？</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CSRF"><span class="post-toc-number">1.</span> <span class="post-toc-text">CSRF</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CSRF的基本概念"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">CSRF的基本概念</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CSRF-攻击攻击原理及过程如下"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">CSRF 攻击攻击原理及过程如下</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#特点"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">特点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CSRF如何防御"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">CSRF如何防御</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#XSS"><span class="post-toc-number">2.</span> <span class="post-toc-text">XSS</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#XSS的基本概念"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">XSS的基本概念</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#XSS的攻击原理"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">XSS的攻击原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#XSS的攻击方式"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">XSS的攻击方式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#XSS的防范措施（encode-过滤）"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">XSS的防范措施（encode + 过滤）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#XSS-防范方法"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">XSS 防范方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原因"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">原因</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#危害"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">危害</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#参考资料："><span class="post-toc-number">2.8.</span> <span class="post-toc-text">参考资料：</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#其他"><span class="post-toc-number">3.</span> <span class="post-toc-text">其他</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CSRF-和-XSS-的区别"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">CSRF 和 XSS 的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SQL注入原理"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">SQL注入原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http2-和-https-的关系"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">http2 和 https 的关系</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTPS实现原理"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">HTTPS实现原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么-HTTPS-安全"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">为什么 HTTPS 安全</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是点击劫持？如何防范？"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">什么是点击劫持？如何防范？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#域名收敛是什么？"><span class="post-toc-number">3.7.</span> <span class="post-toc-text">域名收敛是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何防范-Web-前端攻击？"><span class="post-toc-number">3.8.</span> <span class="post-toc-text">如何防范 Web 前端攻击？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是-XSS-攻击？如何防范-XSS-攻击？"><span class="post-toc-number">3.9.</span> <span class="post-toc-text">什么是 XSS 攻击？如何防范 XSS 攻击？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是-CSRF-攻击？如何防范-CSRF-攻击？"><span class="post-toc-number">3.10.</span> <span class="post-toc-text">什么是 CSRF 攻击？如何防范 CSRF 攻击？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是-CSP？"><span class="post-toc-number">3.11.</span> <span class="post-toc-text">什么是 CSP？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是-Samesite-Cookie-属性？"><span class="post-toc-number">3.12.</span> <span class="post-toc-text">什么是 Samesite Cookie 属性？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是点击劫持？如何防范点击劫持？"><span class="post-toc-number">3.13.</span> <span class="post-toc-text">什么是点击劫持？如何防范点击劫持？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SQL-注入攻击？"><span class="post-toc-number">3.14.</span> <span class="post-toc-text">SQL 注入攻击？</span></a></li></ol></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-Web安全"
+<article id="post-前端知识点/Web安全"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
@@ -466,6 +466,43 @@
 <p>服务器端设置 X-Frame-Options 响应头，防止页面被内嵌</p>
 </li>
 </ul>
+<h3 id="什么是-XSS-攻击？如何防范-XSS-攻击？"><a href="#什么是-XSS-攻击？如何防范-XSS-攻击？" class="headerlink" title="什么是 XSS 攻击？如何防范 XSS 攻击？"></a>什么是 XSS 攻击？如何防范 XSS 攻击？</h3><p>XSS 攻击指的是跨站脚本攻击，是一种代码注入攻击。攻击者通过在网站注入恶意脚本，使之在用户的浏览器上运行，从而盗取用户的信息如 cookie 等。</p>
+<p>XSS 的本质是因为网站没有对恶意代码进行过滤，与正常的代码混合在一起了，浏览器没有办法分辨哪些脚本是可信的，从而导致了恶意代码的执行。</p>
+<p>XSS 一般分为存储型、反射型和 DOM 型。</p>
+<p>存储型指的是恶意代码提交到了网站的数据库中，当用户请求数据的时候，服务器将其拼接为 HTML 后返回给了用户，从而导致了恶意代码的执行。</p>
+<p>反射型指的是攻击者构建了特殊的 URL，当服务器接收到请求后，从 URL 中获取数据，拼接到 HTML 后返回，从而导致了恶意代码的执行。</p>
+<p>DOM 型指的是攻击者构建了特殊的 URL，用户打开网站后，js 脚本从 URL 中获取数据，从而导致了恶意代码的执行。</p>
+<p>XSS 攻击的预防可以从两个方面入手，一个是恶意代码提交的时候，一个是浏览器执行恶意代码的时候。</p>
+<p>对于第一个方面，如果我们对存入数据库的数据都进行的转义处理，但是一个数据可能在多个地方使用，有的地方可能不需要转义，由于我们没有办法判断数据最后的使用场景，所以直接在输入端进行恶意代码的处理，其实是不太可靠的。</p>
+<p>因此我们可以从浏览器的执行来进行预防，一种是使用纯前端的方式，不用服务器端拼接后返回。另一种是对需要插入到 HTML 中的代码做好充分的转义。对于 DOM 型的攻击，主要是前端脚本的不可靠而造成的，我们对于数据获取渲染和字符串拼接的时候应该对可能出现的恶意代码情况进行判断。</p>
+<p>还有一些方式，比如使用 CSP ，CSP 的本质是建立一个白名单，告诉浏览器哪些外部资源可以加载和执行，从而防止恶意代码的注入攻击。</p>
+<p>还可以对一些敏感信息进行保护，比如 cookie 使用 http-only ，使得脚本无法获取。也可以使用验证码，避免脚本伪装成用户执行一些操作。</p>
+<p>详细资料可以参考：<br><a href="https://juejin.im/post/5bad9140e51d450e935c6d64" target="_blank" rel="noopener">《前端安全系列（一）：如何防止 XSS 攻击？》</a></p>
+<h3 id="什么是-CSRF-攻击？如何防范-CSRF-攻击？"><a href="#什么是-CSRF-攻击？如何防范-CSRF-攻击？" class="headerlink" title="什么是 CSRF 攻击？如何防范 CSRF 攻击？"></a>什么是 CSRF 攻击？如何防范 CSRF 攻击？</h3><p>CSRF 攻击指的是跨站请求伪造攻击，攻击者诱导用户进入一个第三方网站，然后该网站向被攻击网站发送跨站请求。如果用户在被<br>攻击网站中保存了登录状态，那么攻击者就可以利用这个登录状态，绕过后台的用户验证，冒充用户向服务器执行一些操作。</p>
+<p>CSRF 攻击的本质是利用了 cookie 会在同源请求中携带发送给服务器的特点，以此来实现用户的冒充。</p>
+<p>一般的 CSRF 攻击类型有三种：</p>
+<p>第一种是 GET 类型的 CSRF 攻击，比如在网站中的一个 img 标签里构建一个请求，当用户打开这个网站的时候就会自动发起提<br>交。</p>
+<p>第二种是 POST 类型的 CSRF 攻击，比如说构建一个表单，然后隐藏它，当用户进入页面时，自动提交这个表单。</p>
+<p>第三种是链接类型的 CSRF 攻击，比如说在 a 标签的 href 属性里构建一个请求，然后诱导用户去点击。</p>
+<p>CSRF 可以用下面几种方法来防护：</p>
+<p>第一种是同源检测的方法，服务器根据 http 请求头中 origin 或者 referer 信息来判断请求是否为允许访问的站点，从而对请求进行过滤。当 origin 或者 referer 信息都不存在的时候，直接阻止。这种方式的缺点是有些情况下 referer 可以被伪造。还有就是我们这种方法同时把搜索引擎的链接也给屏蔽了，所以一般网站会允许搜索引擎的页面请求，但是相应的页面请求这种请求方式也可能被攻击者给利用。</p>
+<p>第二种方法是使用 CSRF Token 来进行验证，服务器向用户返回一个随机数 Token ，当网站再次发起请求时，在请求参数中加入服务器端返回的 token ，然后服务器对这个 token 进行验证。这种方法解决了使用 cookie 单一验证方式时，可能会被冒用的问题，但是这种方法存在一个缺点就是，我们需要给网站中的所有请求都添加上这个 token，操作比较繁琐。还有一个问题是一般不会只有一台网站服务器，如果我们的请求经过负载平衡转移到了其他的服务器，但是这个服务器的 session 中没有保留这个 token 的话，就没有办法验证了。这种情况我们可以通过改变 token 的构建方式来解决。</p>
+<p>第三种方式使用双重 Cookie 验证的办法，服务器在用户访问网站页面时，向请求域名注入一个Cookie，内容为随机字符串，然后当用户再次向服务器发送请求的时候，从 cookie 中取出这个字符串，添加到 URL 参数中，然后服务器通过对 cookie 中的数据和参数中的数据进行比较，来进行验证。使用这种方式是利用了攻击者只能利用 cookie，但是不能访问获取 cookie 的特点。并且这种方法比 CSRF Token 的方法更加方便，并且不涉及到分布式访问的问题。这种方法的缺点是如果网站存在 XSS 漏洞的，那么这种方式会失效。同时这种方式不能做到子域名的隔离。</p>
+<p>第四种方式是使用在设置 cookie 属性的时候设置 Samesite ，限制 cookie 不能作为被第三方使用，从而可以避免被攻击者利用。Samesite 一共有两种模式，一种是严格模式，在严格模式下 cookie 在任何情况下都不可能作为第三方 Cookie 使用，在宽松模式下，cookie 可以被请求是 GET 请求，且会发生页面跳转的请求所使用。</p>
+<p>详细资料可以参考：<br><a href="https://juejin.im/post/5bc009996fb9a05d0a055192" target="_blank" rel="noopener">《前端安全系列之二：如何防止 CSRF 攻击？》</a><br><a href="https://www.jianshu.com/p/1f9c71850299" target="_blank" rel="noopener">《[ HTTP 趣谈] origin, referer 和 host 区别》</a></p>
+<h3 id="什么是-CSP？"><a href="#什么是-CSP？" class="headerlink" title="什么是 CSP？"></a>什么是 CSP？</h3><p>CSP 指的是内容安全策略，它的本质是建立一个白名单，告诉浏览器哪些外部资源可以加载和执行。我们只需要配置规则，如何拦截由浏览器自己来实现。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">通常有两种方式来开启 CSP</span><br><span class="line">一种是设置 HTTP 首部中的 Content-Security-Policy</span><br><span class="line">一种是设置 meta 标签的方式 &lt;metahttp-equiv=&quot;Content-Security-Policy&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>详细资料可以参考：<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CSP" target="_blank" rel="noopener">《内容安全策略（CSP）》</a><br><a href="https://juejin.im/book/5bdc715fe51d454e755f75ef/section/5bdc721851882516c33430a2" target="_blank" rel="noopener">《前端面试之道》</a></p>
+<h3 id="什么是-Samesite-Cookie-属性？"><a href="#什么是-Samesite-Cookie-属性？" class="headerlink" title="什么是 Samesite Cookie 属性？"></a>什么是 Samesite Cookie 属性？</h3><p>Samesite Cookie 表示同站 cookie，避免 cookie 被第三方所利用。</p>
+<p>将 Samesite 设为 strict ，这种称为严格模式，表示这个 cookie 在任何情况下都不可能作为第三方 cookie。</p>
+<p>将 Samesite 设为 Lax ，这种模式称为宽松模式，如果这个请求是个 GET 请求，并且这个请求改变了当前页面或者打开了新的页面，那么这个 cookie 可以作为第三方 cookie，其余情况下都不能作为第三方 cookie。</p>
+<p>使用这种方法的缺点是，因为它不支持子域，所以子域没有办法与主域共享登录信息，每次转入子域的网站，都回重新登录。还有一个问题就是它的兼容性不够好。</p>
+<h3 id="什么是点击劫持？如何防范点击劫持？"><a href="#什么是点击劫持？如何防范点击劫持？" class="headerlink" title="什么是点击劫持？如何防范点击劫持？"></a>什么是点击劫持？如何防范点击劫持？</h3><p>点击劫持是一种视觉欺骗的攻击手段，攻击者将需要攻击的网站通过 iframe 嵌套的方式嵌入自己的网页中，并将 iframe 设置为透明，在页面中透出一个按钮诱导用户点击。</p>
+<p>我们可以在 http 相应头中设置 X-FRAME-OPTIONS 来防御用 iframe 嵌套的点击劫持攻击。通过不同的值，可以规定页面在特定的一些情况才能作为 iframe 来使用。</p>
+<p>详细资料可以参考：<br><a href="https://www.jianshu.com/p/251704d8ff18" target="_blank" rel="noopener">《web 安全之–点击劫持攻击与防御技术简介》</a></p>
+<h3 id="SQL-注入攻击？"><a href="#SQL-注入攻击？" class="headerlink" title="SQL 注入攻击？"></a>SQL 注入攻击？</h3><p>SQL 注入攻击指的是攻击者在 HTTP 请求中注入恶意的 SQL 代码，服务器使用参数构建数据库 SQL 命令时，恶意 SQL 被一起构造，破坏原有 SQL 结构，并在数据库中执行，达到编写程序时意料之外结果的攻击行为。</p>
+<p>详细资料可以参考：<br><a href="https://juejin.im/post/5bd5b820e51d456f72531fa8" target="_blank" rel="noopener">《Web 安全漏洞之 SQL 注入》</a><br><a href="http://blog.720ui.com/2016/security_web/#SQL%E6%B3%A8%E5%85%A5%E6%94%BB%E5%87%BB" target="_blank" rel="noopener">《如何防范常见的 Web 攻击》</a></p>
 
         </div>
 
@@ -474,17 +511,17 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2021-08-13T04:34:09.419Z" itemprop="dateUpdated">2021-08-13 12:34:09</time>
+    最后更新时间：<time datetime="2022-08-13T10:26:42.118Z" itemprop="dateUpdated">2022-08-13 18:26:42</time>
 </span><br>
 
 
         
-        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/前端知识点/Web安全.html" target="_blank" rel="external">http://blog.seoqp.com/前端知识点/Web安全.html</a>
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/前端知识点/Web安全.html" target="_blank" rel="external">http://qvchat.com/前端知识点/Web安全.html</a>
         
     </div>
     
     <footer>
-        <a href="http://blog.seoqp.com">
+        <a href="http://qvchat.com">
             <img src="/img/avatar.jpg" alt="秦伟">
             秦伟
         </a>
@@ -510,7 +547,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端知识点/Web安全.html&title=《Web安全》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://qvchat.com/前端知识点/Web安全.html&title=《Web安全》 — 秦伟博客&pic=http://qvchat.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -520,22 +557,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端知识点/Web安全.html&title=《Web安全》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://qvchat.com/前端知识点/Web安全.html&title=《Web安全》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.seoqp.com/前端知识点/Web安全.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://qvchat.com/前端知识点/Web安全.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Web安全》 — 秦伟博客&url=http://blog.seoqp.com/前端知识点/Web安全.html&via=http://blog.seoqp.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Web安全》 — 秦伟博客&url=http://qvchat.com/前端知识点/Web安全.html&via=http://qvchat.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.seoqp.com/前端知识点/Web安全.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://qvchat.com/前端知识点/Web安全.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -688,7 +725,7 @@
     </div>
 
     <div class="bottom">
-        <p><span>Copyright &copy; 2018 - 2021 <a
+        <p><span>Copyright &copy; 2018 - 2023 <a
                 href="http://blog.bluedream.site/" target="_blank">秦伟的个人博客</a>All Rights Reserved.</span>
             <span>
                 部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除。
@@ -743,7 +780,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端知识点/Web安全.html&title=《Web安全》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://qvchat.com/前端知识点/Web安全.html&title=《Web安全》 — 秦伟博客&pic=http://qvchat.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -753,22 +790,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端知识点/Web安全.html&title=《Web安全》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://qvchat.com/前端知识点/Web安全.html&title=《Web安全》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.seoqp.com/前端知识点/Web安全.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://qvchat.com/前端知识点/Web安全.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Web安全》 — 秦伟博客&url=http://blog.seoqp.com/前端知识点/Web安全.html&via=http://blog.seoqp.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Web安全》 — 秦伟博客&url=http://qvchat.com/前端知识点/Web安全.html&via=http://qvchat.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.seoqp.com/前端知识点/Web安全.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://qvchat.com/前端知识点/Web安全.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -779,7 +816,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIUlEQVR42u3aS27DMAwFwNz/0u42QGv7UaILWBqtCtVxNFkQ/OjzidfxtX7vfO///tT1/tk7P08sDAyM1zKOy3X9zNlxz3auYfn3/vEeDAyMDRh5WJw/7hPfi4GBgXGdruXBNEkHMTAwMLoYM58aI2FgYGBUy9Rqgyxvzz1ei2NgYLyQkXfd///vR+YbGBgYr2IcxTWPzxPKwqkwMDCWZuQBLiflIbU6VLh5EgMDY1FGcs0rT+CqBXDebrsBY2BgbMCopoD5Fa7eSxun78HAwNiMkfeyuhLB6k7DzAEDA+NVjJkR5kyrbuznu4FhYGAszehK0aoXMvIgPjjUxMDAWIKRlKNjg4Guq2bJqTAwMHZg5KF2LK0ce1th/ICBgbEZY76k7CVFpS8GBsY2jLHyshp2k6Z/eWCAgYGxNCMfMeZHrAbZcsmKgYGxMaNrMJBTx65onP4XAwNjaUbe9kr2q88k4b4MwMDAWI6RB8dqIyz5zcZKVgwMjJ0ZSZo4nwjmpWnheQwMjA0Y+Rgy2ZkfkZaHoxgYGJsxehO4vBieOgMGBsaijKO4bq5nJVe44vHAVG6LgYGxECNfVVL1iNUB5+DCwMB4LSMPsnkLrFq+znf4MTAwdmDkga9aZHa9vzwYwMDA2JiRX+FKnmn7FgwMDIw4EcwbeV1vw8DA2Icxc8Fi7CiFI+aXLTAwMBZlVEvH6558tSWXN+YaJh4YGBjvY/wANeGJh1yqKkAAAAAASUVORK5CYII=" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACK0lEQVR42u3aSW7DMAwF0N7/0inQVYHA9iflFLX4tAoySHpeKOLw9RWP1884ev17vL//Ps/RbEfv3DYwMDAey3idjuryR5t4BSN5TIerYGBgDGAkh+z5YtXtVg/3iz1jYGBgtJY//1XvWMfAwMBYCVzPL4LVOBQDAwOjF8Tml7/zJFr+6UdicQwMjAcy1gsDn3v9p/UNDAyMf8l4FUcvQZaXNpu7wsDA2JqRNEzkabX1C1ye1ItuuBgYGBsxzifqBaXV9ov1B4qBgTGBUW35Wkm35YdsTsXAwNiVUS1A5sWD3sWuuSIGBsYYRvKDlZaL6rFbuJJiYGCMYfSmW1m+WnIoXA0xMDDGMPK0frVsmTyC5LDGwMCYw8hD1uqmVxo1CgEtBgbGAEZvc/lWeu0UedkAAwNjGqNaekxmqG46L4hiYGBMYFRbH5KAc/1q2AuAMTAwZjKqR141fZYHsdVHg4GBsROjmia79xjNj/KLvwQMDIytGXe1U6wEtHmj2MV3MDAwNmWsp/vPD9P802q7BgYGxkxGucWhdZmrtm5EITEGBsbWjDx9Vm0a6wWueSmi8CUMDIyHM1bKkEnqrRfulh8EBgbG1oxe81a1FaPXXpaURTEwMOYwkkO21+yV43tpOAwMjGmMZOrqQbxSGGiGshgYGOMZdzVe9EqeFxgMDAyM5YaM/FfNEiYGBsYAxl1BbC/czXkYGBgzGb3CQF5ozBP9nwh6MTAwHs74BkUz9Rvfejv/AAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
@@ -880,5 +917,18 @@ MathJax.Hub.Queue(function() {
     }
 </script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 </html>

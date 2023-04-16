@@ -25,11 +25,11 @@
 <meta name="keywords" content="JavaScript,闭包">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaScript闭包">
-<meta property="og:url" content="http://blog.seoqp.com/前端知识点/JavaScript闭包.html">
+<meta property="og:url" content="http://qvchat.com/前端知识点/JavaScript闭包.html">
 <meta property="og:site_name" content="秦伟博客">
 <meta property="og:description" content="说说你对闭包的理解（什么是闭包（closure），为什么要用它？）使用闭包主要是为了设计私有的方法和变量。闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量，利用闭包可以突破作用链域。在js中，函数即闭包，只有函数才会产生作用域的概念。 闭包有三个特性：  函数内再嵌套函数 函数内部可以引用外部的参数和变量 参数">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2021-08-13T04:26:09.475Z">
+<meta property="og:updated_time" content="2022-07-13T16:00:43.588Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript闭包">
 <meta name="twitter:description" content="说说你对闭包的理解（什么是闭包（closure），为什么要用它？）使用闭包主要是为了设计私有的方法和变量。闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量，利用闭包可以突破作用链域。在js中，函数即闭包，只有函数才会产生作用域的概念。 闭包有三个特性：  函数内再嵌套函数 函数内部可以引用外部的参数和变量 参数">
@@ -124,9 +124,9 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://coding.net/u/qw6" target="_blank" >
+              <a href="https://gitee.com/qw66" target="_blank" >
                 <i class="icon icon-lg icon-code"></i>
-                coding
+                gitee
               </a>
             </li>
         
@@ -188,12 +188,12 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#说说你对闭包的理解（什么是闭包（closure），为什么要用它？）"><span class="post-toc-number">1.</span> <span class="post-toc-text">说说你对闭包的理解（什么是闭包（closure），为什么要用它？）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#闭包（参考链接）"><span class="post-toc-number">2.</span> <span class="post-toc-text">闭包（参考链接）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#闭包由来"><span class="post-toc-number">3.</span> <span class="post-toc-text">闭包由来</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#JavaScript-变量"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">JavaScript 变量</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#计数器困境"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">计数器困境</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#设想下如果你想统计一些数值，且该计数器在所有函数中都是可用的。"><span class="post-toc-number">3.2.1.</span> <span class="post-toc-text">设想下如果你想统计一些数值，且该计数器在所有函数中都是可用的。</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#如果我在函数内声明计数器，如果没有调用函数将无法修改计数器的值："><span class="post-toc-number">3.2.2.</span> <span class="post-toc-text">如果我在函数内声明计数器，如果没有调用函数将无法修改计数器的值：</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript-内嵌函数"><span class="post-toc-number">4.</span> <span class="post-toc-text">JavaScript 内嵌函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#内嵌函数-plus-可以访问父函数的-counter-变量："><span class="post-toc-number">4.1.</span> <span class="post-toc-text">内嵌函数 plus() 可以访问父函数的 counter 变量：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript-闭包"><span class="post-toc-number">5.</span> <span class="post-toc-text">JavaScript 闭包</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#说说你对闭包的理解（什么是闭包（closure），为什么要用它？）"><span class="post-toc-number">1.</span> <span class="post-toc-text">说说你对闭包的理解（什么是闭包（closure），为什么要用它？）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#闭包的优缺点"><span class="post-toc-number">2.</span> <span class="post-toc-text">闭包的优缺点</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#优点："><span class="post-toc-number">2.1.</span> <span class="post-toc-text">优点：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#缺点："><span class="post-toc-number">2.2.</span> <span class="post-toc-text">缺点：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#闭包（参考链接）"><span class="post-toc-number">3.</span> <span class="post-toc-text">闭包（参考链接）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#闭包由来"><span class="post-toc-number">4.</span> <span class="post-toc-text">闭包由来</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#JavaScript-变量"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">JavaScript 变量</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#计数器困境"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">计数器困境</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#设想下如果你想统计一些数值，且该计数器在所有函数中都是可用的。"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">设想下如果你想统计一些数值，且该计数器在所有函数中都是可用的。</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#如果我在函数内声明计数器，如果没有调用函数将无法修改计数器的值："><span class="post-toc-number">4.2.2.</span> <span class="post-toc-text">如果我在函数内声明计数器，如果没有调用函数将无法修改计数器的值：</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript-内嵌函数"><span class="post-toc-number">5.</span> <span class="post-toc-text">JavaScript 内嵌函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#内嵌函数-plus-可以访问父函数的-counter-变量："><span class="post-toc-number">5.1.</span> <span class="post-toc-text">内嵌函数 plus() 可以访问父函数的 counter 变量：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript-闭包"><span class="post-toc-number">6.</span> <span class="post-toc-text">JavaScript 闭包</span></a></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-JavaScript闭包"
+<article id="post-前端知识点/JavaScript闭包"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
@@ -240,6 +240,17 @@
 <p>虽然 sayHi 函数已经执行完毕，但是其活动对象也不会被销毁，因为 test 函数仍然引用着 sayHi 函数中的变量 name，这就是闭包。<br>但也因为闭包引用着另一个函数的变量，导致另一个函数已经不使用了也无法销毁，所以闭包使用过多，会占用较多的内存，这也是一个副作用。</p>
 <p>解析：</p>
 <p>由于在 ECMA2015 中，只有函数才能分割作用域，函数内部可以访问当前作用域的变量，但是外部无法访问函数内部的变量，所以闭包可以理解成“定义在一个函数内部的函数，外部可以通过内部返回的函数访问内部函数的变量“。在本质上，闭包是将函数内部和函数外部连接起来的桥梁。</p>
+<h3 id="闭包的优缺点"><a href="#闭包的优缺点" class="headerlink" title="闭包的优缺点"></a>闭包的优缺点</h3><p>定义：函数A返回了一个函数B，函数B中使用了函数A的变量，且函数B在外部环境中执行，就产生了一个闭包。简单理解闭包其实就是等于一个函数+局部变量，实际使用过程中主要用来封装变量。</p>
+<h4 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h4><p>1.可以访问到函数内部的局部变量，</p>
+<p>2.可以避免全局变量的污染，</p>
+<p>3.这些变量的值始终保持在内存中，不会在外层函数调用后被自动清除。</p>
+<h4 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h4><p>1.会增大内存使用量</p>
+<p>2.滥用闭包会影响性能，导致内存泄漏等问题。</p>
+<p>解决方法：在退出函数之前，将不使用的局部变量全部删除</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function fn()&#123;</span><br><span class="line">    let a=1;</span><br><span class="line">    return function()&#123;</span><br><span class="line">        console.log(a)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var fn2=fn();</span><br><span class="line">fn2();</span><br><span class="line">fn2();</span><br></pre></td></tr></table></figure>
+
+<p>内存泄漏：某些变量、函数等不再需要占用内存的时候，由于某些原因，内存没有被回收。</p>
+<p>变量始终存在的原因：虽然函数A已经弹出了调用栈，JS引擎会通过逃逸分析将函数A中的变量存储在堆上，函数B访问的是堆上的变量值。</p>
 <h3 id="闭包（参考链接）"><a href="#闭包（参考链接）" class="headerlink" title="闭包（参考链接）"></a>闭包（<a href="http://www.cnblogs.com/TomXu/archive/2012/01/31/2330252.html#3929475" target="_blank" rel="noopener">参考链接</a>）</h3><p>闭包是代码块和创建该代码块的上下文中数据的结合。</p>
 <p>闭包是指有权访问另一个函数作用域中的变量的函数。创建闭包的常见方式，就是在一个函数内部创建另一个函数。（红宝书P178）。</p>
 <p>例子1：</p>
@@ -292,17 +303,17 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2021-08-13T04:26:09.475Z" itemprop="dateUpdated">2021-08-13 12:26:09</time>
+    最后更新时间：<time datetime="2022-07-13T16:00:43.588Z" itemprop="dateUpdated">2022-07-14 00:00:43</time>
 </span><br>
 
 
         
-        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/前端知识点/JavaScript闭包.html" target="_blank" rel="external">http://blog.seoqp.com/前端知识点/JavaScript闭包.html</a>
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/前端知识点/JavaScript闭包.html" target="_blank" rel="external">http://qvchat.com/前端知识点/JavaScript闭包.html</a>
         
     </div>
     
     <footer>
-        <a href="http://blog.seoqp.com">
+        <a href="http://qvchat.com">
             <img src="/img/avatar.jpg" alt="秦伟">
             秦伟
         </a>
@@ -328,7 +339,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端知识点/JavaScript闭包.html&title=《JavaScript闭包》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://qvchat.com/前端知识点/JavaScript闭包.html&title=《JavaScript闭包》 — 秦伟博客&pic=http://qvchat.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -338,22 +349,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端知识点/JavaScript闭包.html&title=《JavaScript闭包》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://qvchat.com/前端知识点/JavaScript闭包.html&title=《JavaScript闭包》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.seoqp.com/前端知识点/JavaScript闭包.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://qvchat.com/前端知识点/JavaScript闭包.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript闭包》 — 秦伟博客&url=http://blog.seoqp.com/前端知识点/JavaScript闭包.html&via=http://blog.seoqp.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript闭包》 — 秦伟博客&url=http://qvchat.com/前端知识点/JavaScript闭包.html&via=http://qvchat.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.seoqp.com/前端知识点/JavaScript闭包.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://qvchat.com/前端知识点/JavaScript闭包.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -506,7 +517,7 @@
     </div>
 
     <div class="bottom">
-        <p><span>Copyright &copy; 2018 - 2021 <a
+        <p><span>Copyright &copy; 2018 - 2023 <a
                 href="http://blog.bluedream.site/" target="_blank">秦伟的个人博客</a>All Rights Reserved.</span>
             <span>
                 部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除。
@@ -561,7 +572,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端知识点/JavaScript闭包.html&title=《JavaScript闭包》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://qvchat.com/前端知识点/JavaScript闭包.html&title=《JavaScript闭包》 — 秦伟博客&pic=http://qvchat.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -571,22 +582,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端知识点/JavaScript闭包.html&title=《JavaScript闭包》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://qvchat.com/前端知识点/JavaScript闭包.html&title=《JavaScript闭包》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.seoqp.com/前端知识点/JavaScript闭包.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://qvchat.com/前端知识点/JavaScript闭包.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript闭包》 — 秦伟博客&url=http://blog.seoqp.com/前端知识点/JavaScript闭包.html&via=http://blog.seoqp.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript闭包》 — 秦伟博客&url=http://qvchat.com/前端知识点/JavaScript闭包.html&via=http://qvchat.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.seoqp.com/前端知识点/JavaScript闭包.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://qvchat.com/前端知识点/JavaScript闭包.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -597,7 +608,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMUlEQVR42u3aSW7EMAwF0b7/pZ1tb6TUJ5UAFsurRg+yngMw4vD54Ov5ulbvrz5drbZ6vfrVgUuGDBmvZTzbi9+A/Hb/fu07MmTImMPgYZGHzv33yTt8HRkyZMggN+NhOg3KMmTIkNEJpmnCud+oDBkyZOwZJJncf59vt5MAH8jFZciQ8UIGD5T///pP+hsyZMh4FeMJL34bEoKP7UqGDBlXM9Jt8XSXH/LI0AbajwwZMgYw+kvXSmak3IbCtwwZMq5mkE2nRz3+OEhpL0h0ZciQcR2DhNSzgxSngnXwF5AhQ8YVjLRkxock+KGw1oqQIUPGBEZaiK8d5vhoVydYy5Ah41bGfiFeMktXI4lu8PhkyJAxgMFbAmmToDNsETwaGTJkXM0gYxDpGYysRgJ6Gr5lyJAxh8HLW2dHNHiZ75faoQwZMgYwSLG+NtNBgi9JYmXIkCGDb500A3ihrdZUWCaxMmTIuI7BS12do2GnLRqX7WTIkHEdIz20kUBMHkF6rotzcRkyZFzHSINsqzQWDmSgVFaGDBljGLUSW639uY+WaVCWIUPGBEat6N85UPJA3+pvyJAh4+WMJ7w6BbV0i/GhUIYMGZcy0lEtHi5rjck0uMuQIWMOozaSVSuQ1RoSqJAnQ4aMAYxTgxd8hdr/hLgxIEOGjJGMNOntF/WCo6EMGTJk4HIbOUTWmpfLNWXIkDGAkTYD0mZkv6kpQ4aMyYx+i7E2okFS305qLUOGjCsYP6gn0T8j2sjiAAAAAElFTkSuQmCC" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLklEQVR42u3aQW6EMBAEwPz/0xspp0gr2G4bomAXp5Ug2MXB8Uz76yu+Xj/X79/n1/uTR+98v3v0/AUXBgbGYxn5hI6GOZ9uMuLRe5K5YWBg7MPIF9kc8GHg06nnc8PAwMBIfrdLNgYGBsbfLLgJJvko+SfDwMDAyBtnVxWx+ce6uBbHwMB4IGN+4Pt+355vYGBg/HvGq7zGgsZ8eR2cFQYGxtKMpKRsB7gqtkzufqhrMTAwFmIkAycttrFyd+wYR4HBwMBYgjEWOl7c1i/vYmBg7MNIAPON+4Tdxp8fanEMDIylGW1RmpeaY/ik6MXAwNiT0bb18+Z+ezcqZTEwMJZmzJzRmGnot224opTFwMBYjtGGjmOL8liLrWBjYGBswLjj2ET7zvzYR91uw8DAWILR/tl5MHnt4hsdv8DAwNiGMVOUtsFnHjNEHwIDA2MDRhEWxoe9oi3d9BuifAMDA2MJxszB07HjEYPTPZoPBgbG0ox2i9YGjWMNu7FwAgMDY1VGvvlLWmz5EYocHz2JgYGxASMZsm235QHAWMxZdw0xMDAey2i3gPmxsPajtBvKIh7AwMB4OONVXnlg2ZJmtpsYGBhrM9rFrt3Y5UvzVYc2MDAwVmXcEQDk5ehMbICBgbEbo+23z0SYt4QEGBgYGOXimx8La/8BfAgGMDAwMCaWzjz+zIvhwzwWAwNjUUYeYbYNuDwSGIsZMDAwdmDMBwNj27uZUQYxGBgYz2N8A8SKQc8UyqL9AAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
@@ -698,5 +709,18 @@ MathJax.Hub.Queue(function() {
     }
 </script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 </html>

@@ -21,23 +21,23 @@
     
     
     <meta name="keywords" content="webpack">
-    <meta name="description" content="webpack与grunt、gulp的不同？三者都是前端构建工具，grunt和gulp在早期比较流行，现在webpack相对来说比较主流，不过一些轻量化的任务还是会用gulp来处理，比如单独打包CSS文件等。 grunt和gulp是基于任务和流（Task、Stream）的。类似jQuery，找到一个（或一类）文件，对其做一系列链式操作，更新流上的数据， 整条链式操作构成了一个任务，多个任务就构成了">
+    <meta name="description" content="谈谈你对 webpack 的看法我当时使用 webpack 的一个最主要原因是为了简化页面依赖的管理，并且通过将其打包为一个文件来降低页面加载时请求的资源数。 我认为 webpack 的主要原理是，它将所有的资源都看成是一个模块，并且把页面逻辑当作一个整体，通过一个给定的入口文件，webpack 从这个文件开始，找到所有的依赖文件，将各个依赖文件模块通过 loader 和 plugins 处理后，">
 <meta name="keywords" content="webpack">
 <meta property="og:type" content="article">
 <meta property="og:title" content="webpack">
-<meta property="og:url" content="http://blog.seoqp.com/前端知识点/webpack.html">
+<meta property="og:url" content="http://qvchat.com/前端知识点/webpack.html">
 <meta property="og:site_name" content="秦伟博客">
-<meta property="og:description" content="webpack与grunt、gulp的不同？三者都是前端构建工具，grunt和gulp在早期比较流行，现在webpack相对来说比较主流，不过一些轻量化的任务还是会用gulp来处理，比如单独打包CSS文件等。 grunt和gulp是基于任务和流（Task、Stream）的。类似jQuery，找到一个（或一类）文件，对其做一系列链式操作，更新流上的数据， 整条链式操作构成了一个任务，多个任务就构成了">
+<meta property="og:description" content="谈谈你对 webpack 的看法我当时使用 webpack 的一个最主要原因是为了简化页面依赖的管理，并且通过将其打包为一个文件来降低页面加载时请求的资源数。 我认为 webpack 的主要原理是，它将所有的资源都看成是一个模块，并且把页面逻辑当作一个整体，通过一个给定的入口文件，webpack 从这个文件开始，找到所有的依赖文件，将各个依赖文件模块通过 loader 和 plugins 处理后，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://blog.seoqp.com/img/loading.gif">
-<meta property="og:image" content="http://blog.seoqp.com/img/loading.gif">
-<meta property="og:image" content="http://blog.seoqp.com/img/loading.gif">
-<meta property="og:image" content="http://blog.seoqp.com/img/loading.gif">
-<meta property="og:updated_time" content="2021-08-24T17:25:52.378Z">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:image" content="http://qvchat.com/img/loading.gif">
+<meta property="og:updated_time" content="2023-04-14T16:37:50.201Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="webpack">
-<meta name="twitter:description" content="webpack与grunt、gulp的不同？三者都是前端构建工具，grunt和gulp在早期比较流行，现在webpack相对来说比较主流，不过一些轻量化的任务还是会用gulp来处理，比如单独打包CSS文件等。 grunt和gulp是基于任务和流（Task、Stream）的。类似jQuery，找到一个（或一类）文件，对其做一系列链式操作，更新流上的数据， 整条链式操作构成了一个任务，多个任务就构成了">
-<meta name="twitter:image" content="http://blog.seoqp.com/img/loading.gif">
+<meta name="twitter:description" content="谈谈你对 webpack 的看法我当时使用 webpack 的一个最主要原因是为了简化页面依赖的管理，并且通过将其打包为一个文件来降低页面加载时请求的资源数。 我认为 webpack 的主要原理是，它将所有的资源都看成是一个模块，并且把页面逻辑当作一个整体，通过一个给定的入口文件，webpack 从这个文件开始，找到所有的依赖文件，将各个依赖文件模块通过 loader 和 plugins 处理后，">
+<meta name="twitter:image" content="http://qvchat.com/img/loading.gif">
     
         <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
     
@@ -129,9 +129,9 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="https://coding.net/u/qw6" target="_blank" >
+              <a href="https://gitee.com/qw66" target="_blank" >
                 <i class="icon icon-lg icon-code"></i>
-                coding
+                gitee
               </a>
             </li>
         
@@ -193,12 +193,12 @@
     <aside class="post-widget">
         <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
             <h4>TOC</h4>
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack与grunt、gulp的不同？"><span class="post-toc-number">1.</span> <span class="post-toc-text">webpack与grunt、gulp的不同？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#与webpack类似的工具还有哪些？谈谈你为什么最终选择（或放弃）使用webpack？"><span class="post-toc-number">2.</span> <span class="post-toc-text">与webpack类似的工具还有哪些？谈谈你为什么最终选择（或放弃）使用webpack？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#有哪些常见的Loader？他们是解决什么问题的？"><span class="post-toc-number">3.</span> <span class="post-toc-text">有哪些常见的Loader？他们是解决什么问题的？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#有哪些常见的Plugin？他们是解决什么问题的？"><span class="post-toc-number">4.</span> <span class="post-toc-text">有哪些常见的Plugin？他们是解决什么问题的？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Loader和Plugin的不同？"><span class="post-toc-number">5.</span> <span class="post-toc-text">Loader和Plugin的不同？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack的构建流程是什么-从读取配置到输出文件这个过程尽量说全"><span class="post-toc-number">6.</span> <span class="post-toc-text">webpack的构建流程是什么?从读取配置到输出文件这个过程尽量说全</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#是否写过Loader和Plugin？描述一下编写loader或plugin的思路？"><span class="post-toc-number">7.</span> <span class="post-toc-text">是否写过Loader和Plugin？描述一下编写loader或plugin的思路？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack的热更新是如何做到的？说明其原理？"><span class="post-toc-number">8.</span> <span class="post-toc-text">webpack的热更新是如何做到的？说明其原理？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何利用webpack来优化前端性能？（提高性能和体验）"><span class="post-toc-number">9.</span> <span class="post-toc-text">如何利用webpack来优化前端性能？（提高性能和体验）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何提高webpack的构建速度？"><span class="post-toc-number">10.</span> <span class="post-toc-text">如何提高webpack的构建速度？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#怎么配置单页应用？怎么配置多页应用？"><span class="post-toc-number">11.</span> <span class="post-toc-text">怎么配置单页应用？怎么配置多页应用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#npm打包时需要注意哪些？如何利用webpack来更好的构建？"><span class="post-toc-number">12.</span> <span class="post-toc-text">npm打包时需要注意哪些？如何利用webpack来更好的构建？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何在vue项目中实现按需加载？"><span class="post-toc-number">13.</span> <span class="post-toc-text">如何在vue项目中实现按需加载？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端为什么要进行打包和构建？"><span class="post-toc-number">14.</span> <span class="post-toc-text">前端为什么要进行打包和构建？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#module-chunk-bundle区别"><span class="post-toc-number">15.</span> <span class="post-toc-text">module chunk bundle区别</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#module-各个源码文件，webpack中一切皆模块"><span class="post-toc-number">15.0.1.</span> <span class="post-toc-text">module - 各个源码文件，webpack中一切皆模块</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#chunk-多模块合并成的"><span class="post-toc-number">15.0.2.</span> <span class="post-toc-text">chunk - 多模块合并成的</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#bundle-最终输出文件"><span class="post-toc-number">15.0.3.</span> <span class="post-toc-text">bundle -最终输出文件</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#loader和plugin的区别"><span class="post-toc-number">16.</span> <span class="post-toc-text">loader和plugin的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#babel和webpack的区别"><span class="post-toc-number">17.</span> <span class="post-toc-text">babel和webpack的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack如何实现懒加载"><span class="post-toc-number">18.</span> <span class="post-toc-text">webpack如何实现懒加载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何产出一个lib"><span class="post-toc-number">19.</span> <span class="post-toc-text">如何产出一个lib</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#babel-polyfill-babel-runtime-区别"><span class="post-toc-number">20.</span> <span class="post-toc-text">babel-polyfill babel-runtime 区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么-Proxy-不能被-Polyfill"><span class="post-toc-number">21.</span> <span class="post-toc-text">为什么 Proxy 不能被 Polyfill</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack优化构建速度"><span class="post-toc-number">22.</span> <span class="post-toc-text">webpack优化构建速度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack优化产出代码"><span class="post-toc-number">23.</span> <span class="post-toc-text">webpack优化产出代码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack3和webpack4的区别"><span class="post-toc-number">24.</span> <span class="post-toc-text">webpack3和webpack4的区别</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#loader-和-plugin-不同"><span class="post-toc-number"></span> <span class="post-toc-text">loader 和 plugin 不同</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack构建流程"><span class="post-toc-number">1.</span> <span class="post-toc-text">webpack构建流程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何利用webpack来优化前端性能"><span class="post-toc-number">2.</span> <span class="post-toc-text">如何利用webpack来优化前端性能</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是bundle-什么是chunk，什么是module"><span class="post-toc-number">3.</span> <span class="post-toc-text">什么是bundle,什么是chunk，什么是module?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack-dev-server和http服务器如nginx有什么区别"><span class="post-toc-number">4.</span> <span class="post-toc-text">webpack-dev-server和http服务器如nginx有什么区别?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DefinePlugin"><span class="post-toc-number">5.</span> <span class="post-toc-text">DefinePlugin</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DllPlugin"><span class="post-toc-number">6.</span> <span class="post-toc-text">DllPlugin</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#happyPack开启多线程loader转换"><span class="post-toc-number">7.</span> <span class="post-toc-text">happyPack开启多线程loader转换</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#概念"><span class="post-toc-number">8.</span> <span class="post-toc-text">概念</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#install"><span class="post-toc-number">9.</span> <span class="post-toc-text">install</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#entry"><span class="post-toc-number">10.</span> <span class="post-toc-text">entry</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#output"><span class="post-toc-number">11.</span> <span class="post-toc-text">output</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Loader"><span class="post-toc-number">12.</span> <span class="post-toc-text">Loader</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Plugins"><span class="post-toc-number">13.</span> <span class="post-toc-text">Plugins</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#产品阶段的构建"><span class="post-toc-number">14.</span> <span class="post-toc-text">产品阶段的构建</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#优化插件"><span class="post-toc-number">15.</span> <span class="post-toc-text">优化插件</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#谈谈你对-webpack-的看法"><span class="post-toc-number">1.</span> <span class="post-toc-text">谈谈你对 webpack 的看法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack的作用是什么，谈谈你对它的理解？"><span class="post-toc-number">2.</span> <span class="post-toc-text">webpack的作用是什么，谈谈你对它的理解？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack的工作原理"><span class="post-toc-number">3.</span> <span class="post-toc-text">webpack的工作原理?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack打包原理"><span class="post-toc-number">4.</span> <span class="post-toc-text">webpack打包原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack的核心概念"><span class="post-toc-number">5.</span> <span class="post-toc-text">webpack的核心概念</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#null"><span class="post-toc-number">6.</span> <span class="post-toc-text"> </span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Webpack的基本功能有哪些？"><span class="post-toc-number">7.</span> <span class="post-toc-text">Webpack的基本功能有哪些？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#gulp-grunt-与-webpack的区别是什么"><span class="post-toc-number">8.</span> <span class="post-toc-text">gulp/grunt 与 webpack的区别是什么?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack是解决什么问题而生的"><span class="post-toc-number">9.</span> <span class="post-toc-text">webpack是解决什么问题而生的?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#你是如何提高webpack构件速度的"><span class="post-toc-number">10.</span> <span class="post-toc-text">你是如何提高webpack构件速度的?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#npm打包时需要注意哪些？如何利用webpack来更好的构建？"><span class="post-toc-number">11.</span> <span class="post-toc-text">npm打包时需要注意哪些？如何利用webpack来更好的构建？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端为什么要进行打包和构建？"><span class="post-toc-number">12.</span> <span class="post-toc-text">前端为什么要进行打包和构建？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack的构建流程是什么-从读取配置到输出文件这个过程尽量说全"><span class="post-toc-number">13.</span> <span class="post-toc-text">webpack的构建流程是什么?从读取配置到输出文件这个过程尽量说全</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#怎么配置单页应用？怎么配置多页应用？"><span class="post-toc-number">14.</span> <span class="post-toc-text">怎么配置单页应用？怎么配置多页应用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Loader机制的作用是什么？"><span class="post-toc-number">15.</span> <span class="post-toc-text">Loader机制的作用是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常用loader"><span class="post-toc-number">16.</span> <span class="post-toc-text">常用loader</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Plugin（插件）的作用是什么？"><span class="post-toc-number">17.</span> <span class="post-toc-text">Plugin（插件）的作用是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是bundle，什么是chunk，什么是module"><span class="post-toc-number">18.</span> <span class="post-toc-text">什么是bundle，什么是chunk，什么是module</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常见Plugins"><span class="post-toc-number">19.</span> <span class="post-toc-text">常见Plugins</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ExtractTextPlugin插件的作用"><span class="post-toc-number">20.</span> <span class="post-toc-text">ExtractTextPlugin插件的作用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#sourceMap"><span class="post-toc-number">21.</span> <span class="post-toc-text">sourceMap</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HMR热模块更新"><span class="post-toc-number">22.</span> <span class="post-toc-text">HMR热模块更新</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack如何配置多入口文件"><span class="post-toc-number">23.</span> <span class="post-toc-text">webpack如何配置多入口文件?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#babel-相关-polyfill-以及-runtime-区别，-ES-stage-含义，preset–env-作用等等"><span class="post-toc-number">24.</span> <span class="post-toc-text">babel 相关: polyfill 以及 runtime 区别， ES stage 含义，preset–env 作用等等</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是模热更新？有什么优点？"><span class="post-toc-number">25.</span> <span class="post-toc-text">什么是模热更新？有什么优点？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#lazy-loading（模块懒加载）"><span class="post-toc-number">26.</span> <span class="post-toc-text">lazy loading（模块懒加载）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是长缓存？在webpack中如何做到长缓存优化？"><span class="post-toc-number">27.</span> <span class="post-toc-text">什么是长缓存？在webpack中如何做到长缓存优化？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是Tree-sharking"><span class="post-toc-number">28.</span> <span class="post-toc-text">什么是Tree-sharking?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack-dev-server-和-http服务器的区别"><span class="post-toc-number">29.</span> <span class="post-toc-text">webpack-dev-server 和 http服务器的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack与grunt、gulp的不同？"><span class="post-toc-number">30.</span> <span class="post-toc-text">webpack与grunt、gulp的不同？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#与webpack类似的工具还有哪些？谈谈你为什么最终选择（或放弃）使用webpack？"><span class="post-toc-number">31.</span> <span class="post-toc-text">与webpack类似的工具还有哪些？谈谈你为什么最终选择（或放弃）使用webpack？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#有哪些常见的Loader？他们是解决什么问题的？"><span class="post-toc-number">32.</span> <span class="post-toc-text">有哪些常见的Loader？他们是解决什么问题的？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#有哪些常见的Plugin？他们是解决什么问题的？"><span class="post-toc-number">33.</span> <span class="post-toc-text">有哪些常见的Plugin？他们是解决什么问题的？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Loader和Plugin的不同？"><span class="post-toc-number">34.</span> <span class="post-toc-text">Loader和Plugin的不同？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack的构建流程是什么-从读取配置到输出文件这个过程尽量说全-1"><span class="post-toc-number">35.</span> <span class="post-toc-text">webpack的构建流程是什么?从读取配置到输出文件这个过程尽量说全</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#是否写过Loader和Plugin？描述一下编写loader或plugin的思路？"><span class="post-toc-number">36.</span> <span class="post-toc-text">是否写过Loader和Plugin？描述一下编写loader或plugin的思路？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack的热更新是如何做到的？说明其原理？"><span class="post-toc-number">37.</span> <span class="post-toc-text">webpack的热更新是如何做到的？说明其原理？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何利用webpack来优化前端性能？（提高性能和体验）"><span class="post-toc-number">38.</span> <span class="post-toc-text">如何利用webpack来优化前端性能？（提高性能和体验）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何提高webpack的构建速度？"><span class="post-toc-number">39.</span> <span class="post-toc-text">如何提高webpack的构建速度？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#怎么配置单页应用？怎么配置多页应用？-1"><span class="post-toc-number">40.</span> <span class="post-toc-text">怎么配置单页应用？怎么配置多页应用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#npm打包时需要注意哪些？如何利用webpack来更好的构建？-1"><span class="post-toc-number">41.</span> <span class="post-toc-text">npm打包时需要注意哪些？如何利用webpack来更好的构建？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何在vue项目中实现按需加载？"><span class="post-toc-number">42.</span> <span class="post-toc-text">如何在vue项目中实现按需加载？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端为什么要进行打包和构建？-1"><span class="post-toc-number">43.</span> <span class="post-toc-text">前端为什么要进行打包和构建？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#module-chunk-bundle区别"><span class="post-toc-number">44.</span> <span class="post-toc-text">module chunk bundle区别</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#module-各个源码文件，webpack中一切皆模块"><span class="post-toc-number">44.0.1.</span> <span class="post-toc-text">module - 各个源码文件，webpack中一切皆模块</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#chunk-多模块合并成的"><span class="post-toc-number">44.0.2.</span> <span class="post-toc-text">chunk - 多模块合并成的</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#bundle-最终输出文件"><span class="post-toc-number">44.0.3.</span> <span class="post-toc-text">bundle -最终输出文件</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#loader和plugin的区别"><span class="post-toc-number">45.</span> <span class="post-toc-text">loader和plugin的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#babel和webpack的区别"><span class="post-toc-number">46.</span> <span class="post-toc-text">babel和webpack的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack如何实现懒加载"><span class="post-toc-number">47.</span> <span class="post-toc-text">webpack如何实现懒加载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何产出一个lib"><span class="post-toc-number">48.</span> <span class="post-toc-text">如何产出一个lib</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#babel-polyfill-babel-runtime-区别"><span class="post-toc-number">49.</span> <span class="post-toc-text">babel-polyfill babel-runtime 区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么-Proxy-不能被-Polyfill"><span class="post-toc-number">50.</span> <span class="post-toc-text">为什么 Proxy 不能被 Polyfill</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack优化构建速度"><span class="post-toc-number">51.</span> <span class="post-toc-text">webpack优化构建速度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack优化产出代码"><span class="post-toc-number">52.</span> <span class="post-toc-text">webpack优化产出代码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack3和webpack4的区别"><span class="post-toc-number">53.</span> <span class="post-toc-text">webpack3和webpack4的区别</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#loader-和-plugin-不同"><span class="post-toc-number"></span> <span class="post-toc-text">loader 和 plugin 不同</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack构建流程"><span class="post-toc-number">1.</span> <span class="post-toc-text">webpack构建流程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何利用webpack来优化前端性能"><span class="post-toc-number">2.</span> <span class="post-toc-text">如何利用webpack来优化前端性能</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是bundle-什么是chunk，什么是module"><span class="post-toc-number">3.</span> <span class="post-toc-text">什么是bundle,什么是chunk，什么是module?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack-dev-server和http服务器如nginx有什么区别"><span class="post-toc-number">4.</span> <span class="post-toc-text">webpack-dev-server和http服务器如nginx有什么区别?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DefinePlugin"><span class="post-toc-number">5.</span> <span class="post-toc-text">DefinePlugin</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DllPlugin"><span class="post-toc-number">6.</span> <span class="post-toc-text">DllPlugin</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#happyPack开启多线程loader转换"><span class="post-toc-number">7.</span> <span class="post-toc-text">happyPack开启多线程loader转换</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#概念"><span class="post-toc-number">8.</span> <span class="post-toc-text">概念</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#install"><span class="post-toc-number">9.</span> <span class="post-toc-text">install</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#entry"><span class="post-toc-number">10.</span> <span class="post-toc-text">entry</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#output"><span class="post-toc-number">11.</span> <span class="post-toc-text">output</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Loader"><span class="post-toc-number">12.</span> <span class="post-toc-text">Loader</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Plugins"><span class="post-toc-number">13.</span> <span class="post-toc-text">Plugins</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#产品阶段的构建"><span class="post-toc-number">14.</span> <span class="post-toc-text">产品阶段的构建</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#优化插件"><span class="post-toc-number">15.</span> <span class="post-toc-text">优化插件</span></a></li></ol>
         </nav>
     </aside>
 
 
-<article id="post-webpack"
+<article id="post-前端知识点/webpack"
   class="post-article article-type-post fade" itemprop="blogPost">
 
     <div class="post-card">
@@ -219,7 +219,152 @@
 
         </div>
         <div class="post-content" id="post-content" itemprop="postContent">
-            <h3 id="webpack与grunt、gulp的不同？"><a href="#webpack与grunt、gulp的不同？" class="headerlink" title="webpack与grunt、gulp的不同？"></a>webpack与grunt、gulp的不同？</h3><p>三者都是前端构建工具，grunt和gulp在早期比较流行，现在webpack相对来说比较主流，不过一些轻量化的任务还是会用gulp来处理，比如单独打包CSS文件等。</p>
+            <h3 id="谈谈你对-webpack-的看法"><a href="#谈谈你对-webpack-的看法" class="headerlink" title="谈谈你对 webpack 的看法"></a>谈谈你对 webpack 的看法</h3><p>我当时使用 webpack 的一个最主要原因是为了简化页面依赖的管理，并且通过将其打包为一个文件来降低页面加载时请求的资源<br>数。</p>
+<p>我认为 webpack 的主要原理是，它将所有的资源都看成是一个模块，并且把页面逻辑当作一个整体，通过一个给定的入口文件，webpack 从这个文件开始，找到所有的依赖文件，将各个依赖文件模块通过 loader 和 plugins 处理后，然后打包在一起，最后输出一个浏览器可识别的 JS 文件。</p>
+<p>Webpack 具有四个核心的概念，分别是 Entry（入口）、Output（输出）、loader 和 Plugins（插件）。</p>
+<p>Entry 是 webpack 的入口起点，它指示 webpack 应该从哪个模块开始着手，来作为其构建内部依赖图的开始。</p>
+<p>Output 属性告诉 webpack 在哪里输出它所创建的打包文件，也可指定打包文件的名称，默认位置为 ./dist。</p>
+<p>loader 可以理解为 webpack 的编译器，它使得 webpack 可以处理一些非 JavaScript 文件。在对 loader 进行配置的时候，test 属性，标志有哪些后缀的文件应该被处理，是一个正则表达式。use 属性，指定 test 类型的文件应该使用哪个 loader 进行预处理。常用的 loader 有 css-loader、style-loader 等。</p>
+<p>插件可以用于执行范围更广的任务，包括打包、优化、压缩、搭建服务器等等，要使用一个插件，一般是先使用 npm 包管理器进行安装，然后在配置文件中引入，最后将其实例化后传递给 plugins 数组属性。</p>
+<p>使用 webpack 的确能够提供我们对于项目的管理，但是它的缺点就是调试和配置起来太麻烦了。但现在 webpack4.0 的免配置一定程度上解决了这个问题。但是我感觉就是对我来说，就是一个黑盒，很多时候出现了问题，没有办法很好的定位。</p>
+<p>详细资料可以参考：<br><a href="https://juejin.im/post/5b38d27451882574d87aa5d5#heading-0" target="_blank" rel="noopener">《不聊 webpack 配置，来说说它的原理》</a><br><a href="https://juejin.im/entry/5b5724d05188251aa01647fd" target="_blank" rel="noopener">《前端工程化——构建工具选型：grunt、gulp、webpack》</a><br><a href="https://juejin.im/post/5afa9cd0f265da0b981b9af9#heading-0" target="_blank" rel="noopener">《浅入浅出 webpack》</a><br><a href="https://juejin.im/entry/5ae5c8c9f265da0b9f400d8e" target="_blank" rel="noopener">《前端构建工具发展及其比较》</a></p>
+<h3 id="webpack的作用是什么，谈谈你对它的理解？"><a href="#webpack的作用是什么，谈谈你对它的理解？" class="headerlink" title="webpack的作用是什么，谈谈你对它的理解？"></a>webpack的作用是什么，谈谈你对它的理解？</h3><p>现在的前端网页功能丰富，特别是SPA（single page web application 单页应用）技术流行后，JavaScript的复杂度增加和需要一大堆依赖包，还需要解决Scss，Less……新增样式的扩展写法的编译工作。</p>
+<p>所以现代化的前端已经完全依赖于webpack的辅助了。</p>
+<p>现在最流行的三个前端框架，可以说和webpack已经紧密相连，框架官方都推出了和自身框架依赖的webpack构建工具。</p>
+<p>react.js+WebPack</p>
+<p>vue.js+WebPack</p>
+<p>AngluarJS+WebPack</p>
+<h3 id="webpack的工作原理"><a href="#webpack的工作原理" class="headerlink" title="webpack的工作原理?"></a>webpack的工作原理?</h3><p>WebPack可以看做是模块打包机：它做的事情是，分析你的项目结构，找到JavaScript模块以及其它的一些浏览器不能直接运行的拓展语言（Sass，TypeScript等），并将其转换和打包为合适的格式供浏览器使用。在3.0出现后，Webpack还肩负起了优化项目的责任。</p>
+<h3 id="webpack打包原理"><a href="#webpack打包原理" class="headerlink" title="webpack打包原理"></a>webpack打包原理</h3><p>把一切都视为模块：不管是 css、JS、Image 还是 html 都可以互相引用，通过定义 entry.js，对所有依赖的文件进行跟踪，将各个模块通过 loader 和 plugins 处理，然后打包在一起。</p>
+<p>按需加载：打包过程中 Webpack 通过 Code Splitting 功能将文件分为多个 chunks，还可以将重复的部分单独提取出来作为 commonChunk，从而实现按需加载。把所有依赖打包成一个 bundle.js 文件，通过代码分割成单元片段并按需加载</p>
+<h3 id="webpack的核心概念"><a href="#webpack的核心概念" class="headerlink" title="webpack的核心概念"></a>webpack的核心概念</h3><ul>
+<li>Entry：入口，Webpack 执行构建的第一步将从 Entry 开始，可抽象成输入。告诉webpack要使用哪个模块作为构建项目的起点，默认为./src/index.js</li>
+<li>output ：出口，告诉webpack在哪里输出它打包好的代码以及如何命名，默认为./dist</li>
+<li>Module：模块，在 Webpack 里一切皆模块，一个模块对应着一个文件。Webpack 会从配置的 Entry 开始递归找出所有依赖的模块。</li>
+<li>Chunk：代码块，一个 Chunk 由多个模块组合而成，用于代码合并与分割。</li>
+<li>Loader：模块转换器，用于把模块原内容按照需求转换成新内容。</li>
+<li>Plugin：扩展插件，在 Webpack 构建流程中的特定时机会广播出对应的事件，插件可以监听这些事件的发生，在特定时机做对应的事情。</li>
+</ul>
+<h3 id><a href="#" class="headerlink" title=" "></a> </h3><h3 id="Webpack的基本功能有哪些？"><a href="#Webpack的基本功能有哪些？" class="headerlink" title="Webpack的基本功能有哪些？"></a>Webpack的基本功能有哪些？</h3><ul>
+<li>代码转换：TypeScript 编译成 JavaScript、SCSS 编译成 CSS 等等</li>
+<li>文件优化：压缩 JavaScript、CSS、html 代码，压缩合并图片等</li>
+<li>代码分割：提取多个页面的公共代码、提取首屏不需要执行部分的代码让其异步加载</li>
+<li>模块合并：在采用模块化的项目有很多模块和文件，需要构建功能把模块分类合并成一个文件</li>
+<li>自动刷新：监听本地源代码的变化，自动构建，刷新浏览器</li>
+<li>代码校验：在代码被提交到仓库前需要检测代码是否符合规范，以及单元测试是否通过</li>
+<li>自动发布：更新完代码后，自动构建出线上发布代码并传输给发布系统。</li>
+</ul>
+<h3 id="gulp-grunt-与-webpack的区别是什么"><a href="#gulp-grunt-与-webpack的区别是什么" class="headerlink" title="gulp/grunt 与 webpack的区别是什么?"></a>gulp/grunt 与 webpack的区别是什么?</h3><p>三者都是前端构建工具，grunt和gulp在早期比较流行，现在webpack相对来说比较主流，不过一些轻量化的任务还是会用gulp来处理，比如单独打包CSS文件等。<br>grunt和gulp是基于任务和流（Task、Stream）的。</p>
+<p>类似jQuery，找到一个（或一类）文件，对其做一系列链式操作，更新流上的数据， 整条链式操作构成了一个任务，多个任务就构成了整个web的构建流程。<br>webpack是基于入口的。</p>
+<p>webpack会自动地递归解析入口所需要加载的所有资源文件，然后用不同的Loader来处理不同的文件，用Plugin来扩展webpack功能。</p>
+<h3 id="webpack是解决什么问题而生的"><a href="#webpack是解决什么问题而生的" class="headerlink" title="webpack是解决什么问题而生的?"></a>webpack是解决什么问题而生的?</h3><p>如果像以前开发时一个html文件可能会引用十几个js文件,而且顺序还不能乱，因为它们存在依赖关系，同时对于ES6+等新的语法，less, sass等CSS预处理都不能很好的解决……，此时就需要一个处理这些问题的工具。</p>
+<h3 id="你是如何提高webpack构件速度的"><a href="#你是如何提高webpack构件速度的" class="headerlink" title="你是如何提高webpack构件速度的?"></a>你是如何提高webpack构件速度的?</h3><p>多入口情况下，使用CommonsChunkPlugin来提取公共代码</p>
+<p>通过externals配置来提取常用库</p>
+<p>利用DllPlugin和DllReferencePlugin预编译资源模块通过DllPlugin来对那些我们</p>
+<p>引用但是绝对不会修改的npm包来进行预编译，再通过DllReferencePlugin将预编译的模块加载进来。</p>
+<p>使用Happypack 实现多线程加速编译</p>
+<p>使用webpack-uglify-paralle来提升uglifyPlugin的压缩速度。</p>
+<p>原理上webpack-uglify-parallel采用了多核并行压缩来提升压缩速度<br>使用Tree-shaking和Scope Hoisting来剔除多余代码</p>
+<h3 id="npm打包时需要注意哪些？如何利用webpack来更好的构建？"><a href="#npm打包时需要注意哪些？如何利用webpack来更好的构建？" class="headerlink" title="npm打包时需要注意哪些？如何利用webpack来更好的构建？"></a>npm打包时需要注意哪些？如何利用webpack来更好的构建？</h3><p>Npm是目前最大的 JavaScript 模块仓库，里面有来自全世界开发者上传的可复用模块。</p>
+<p>你可能只是JS模块的使用者，但是有些情况你也会去选择上传自己开发的模块。 </p>
+<p>关于NPM模块上传的方法可以去官网上进行学习，这里只讲解如何利用webpack来构建。</p>
+<p>NPM模块需要注意以下问题：</p>
+<ol>
+<li>要支持CommonJS模块化规范，所以要求打包后的最后结果也遵守该规则。</li>
+<li>Npm模块使用者的环境是不确定的，很有可能并不支持ES6，所以打包的最后结果应该是采用ES5编写的。并且如果ES5是经过转换的，请最好连同SourceMap一同上传。</li>
+<li>Npm包大小应该是尽量小（有些仓库会限制包大小）</li>
+<li>发布的模块不能将依赖的模块也一同打包，应该让用户选择性的去自行安装。这样可以避免模块应用者再次打包时出现底层模块被重复打包的情况。</li>
+<li>UI组件类的模块应该将依赖的其它资源文件，例如.css文件也需要包含在发布的模块里。</li>
+</ol>
+<h3 id="前端为什么要进行打包和构建？"><a href="#前端为什么要进行打包和构建？" class="headerlink" title="前端为什么要进行打包和构建？"></a>前端为什么要进行打包和构建？</h3><p>代码层面：</p>
+<ul>
+<li>体积更小（Tree-shaking、压缩、合并），加载更快</li>
+<li>编译高级语言和语法（TS、ES6、模块化、scss）</li>
+<li>兼容性和错误检查（polyfill,postcss,eslint）</li>
+</ul>
+<p>研发流程层面：</p>
+<ul>
+<li>统一、高效的开发环境</li>
+<li>统一的构建流程和产出标准</li>
+<li>集成公司构建规范（提测、上线）</li>
+</ul>
+<h3 id="webpack的构建流程是什么-从读取配置到输出文件这个过程尽量说全"><a href="#webpack的构建流程是什么-从读取配置到输出文件这个过程尽量说全" class="headerlink" title="webpack的构建流程是什么?从读取配置到输出文件这个过程尽量说全"></a>webpack的构建流程是什么?从读取配置到输出文件这个过程尽量说全</h3><p>Webpack 的运行流程是一个串行的过程，从启动到结束会依次执行以下流程：</p>
+<ul>
+<li>初始化参数：从配置文件和 Shell 语句中读取与合并参数，得出最终的参数；</li>
+<li>开始编译：用上一步得到的参数初始化 Compiler 对象，加载所有配置的插件，执行对象的 run 方法开始执行编译；</li>
+<li>确定入口：根据配置中的 entry 找出所有的入口文件；</li>
+<li>编译模块：从入口文件出发，调用所有配置的 Loader 对模块进行翻译，再找出该模块依赖的模块，再递归本步骤直到所有入口依赖的文件都经过了本步骤的处理；</li>
+<li>完成模块编译：在经过第4步使用 Loader 翻译完所有模块后，得到了每个模块被翻译后的最终内容以及它们之间的依赖关系；</li>
+<li>输出资源：根据入口和模块之间的依赖关系，组装成一个个包含多个模块的 Chunk，再把每个 Chunk 转换成一个单独的文件加入到输出列表，这步是可以修改输出内容的最后机会；</li>
+<li>输出完成：在确定好输出内容后，根据配置确定输出的路径和文件名，把文件内容写入到文件系统。</li>
+</ul>
+<p>在以上过程中，Webpack 会在特定的时间点广播出特定的事件，插件在监听到感兴趣的事件后会执行特定的逻辑，并且插件可以调用 Webpack 提供的 API 改变 Webpack 的运行结果。</p>
+<h3 id="怎么配置单页应用？怎么配置多页应用？"><a href="#怎么配置单页应用？怎么配置多页应用？" class="headerlink" title="怎么配置单页应用？怎么配置多页应用？"></a>怎么配置单页应用？怎么配置多页应用？</h3><p>单页应用可以理解为webpack的标准模式，直接在entry中指定单页应用的入口即可，这里不再赘述</p>
+<p>多页应用的话，可以使用webpack的 AutoWebPlugin来完成简单自动化的构建，但是前提是项目的目录结构必须遵守他预设的规范。多页应用中要注意的是：</p>
+<ul>
+<li>每个页面都有公共的代码，可以将这些代码抽离出来，避免重复的加载。比如，每个页面都引用了同一套css样式表</li>
+<li>随着业务的不断扩展，页面可能会不断的追加，所以一定要让入口的配置足够灵活，避免每次添加新页面还需要修改构建配置</li>
+</ul>
+<h3 id="Loader机制的作用是什么？"><a href="#Loader机制的作用是什么？" class="headerlink" title="Loader机制的作用是什么？"></a>Loader机制的作用是什么？</h3><p>webpack默认只能打包js文件，配置里的module.rules数组配置了一组规则，告诉 Webpack 在遇到哪些文件时使用哪些 Loader 去加载和转换打包成js。</p>
+<p>注意：</p>
+<p>use属性的值需要是一个由 Loader 名称组成的数组，Loader 的执行顺序是由后到前的；<br>每一个 Loader 都可以通过 URL querystring 的方式传入参数，例如css-loader?minimize中的minimize告诉css-loader要开启 CSS 压缩。</p>
+<h3 id="常用loader"><a href="#常用loader" class="headerlink" title="常用loader"></a>常用loader</h3><p>css-loader读取 合并CSS 文件<br>style-loader把 CSS 内容注入到 JavaScript 里<br>sass-loader 解析sass文件（安装sass-loader，node-sass）<br>postcss-loader自动添加浏览器兼容前缀（postcss.config配置）<br>url-loader将文件转换为base64 URI。<br>vue-loader处理vue文件。</p>
+<h3 id="Plugin（插件）的作用是什么？"><a href="#Plugin（插件）的作用是什么？" class="headerlink" title="Plugin（插件）的作用是什么？"></a>Plugin（插件）的作用是什么？</h3><p>Plugin 是用来扩展 Webpack 功能的，通过在构建流程里注入钩子实现，它给 Webpack 带来了很大的灵活性。</p>
+<p>Webpack 是通过plugins属性来配置需要使用的插件列表的。plugins属性是一个数组，里面的每一项都是插件的一个实例，在实例化一个组件时可以通过构造函数传入这个组件支持的配置属性。</p>
+<h3 id="什么是bundle，什么是chunk，什么是module"><a href="#什么是bundle，什么是chunk，什么是module" class="headerlink" title="什么是bundle，什么是chunk，什么是module"></a>什么是bundle，什么是chunk，什么是module</h3><p>bundle：是由webpack打包出来的文件</p>
+<p>chunk：是指webpack在进行模块依赖分析的时候，代码分割出来的代码块</p>
+<p>module：是开发中的单个模块</p>
+<h3 id="常见Plugins"><a href="#常见Plugins" class="headerlink" title="常见Plugins"></a>常见Plugins</h3><p>HtmlWbpackPlugin自动在打包结束后生成html文件，并引入bundle.js<br>cleanwebPackPlugin打包自动删除上次打包文件</p>
+<h3 id="ExtractTextPlugin插件的作用"><a href="#ExtractTextPlugin插件的作用" class="headerlink" title="ExtractTextPlugin插件的作用"></a>ExtractTextPlugin插件的作用</h3><p>ExtractTextPlugin插件的作用是提取出 JavaScript 代码里的 CSS 到一个单独的文件。</p>
+<p>对此你可以通过插件的filename属性，告诉插件输出的 CSS 文件名称是通过[name]_[contenthash:8].css字符串模版生成的，里面的[name]代表文件名称，[contenthash:8]代表根据文件内容算出的8位 hash 值， 还有很多配置选项可以在ExtractTextPlugin的主页上查到。</p>
+<h3 id="sourceMap"><a href="#sourceMap" class="headerlink" title="sourceMap"></a>sourceMap</h3><p>是一个映射关系，将打包后的文件隐射到源代码，用于定位报错位置</p>
+<p>配置方式:</p>
+<p>例如：devtool：‘source-map’<br>加不同前缀意义：</p>
+<ul>
+<li>inline:不生成映射关系文件，打包进main.js</li>
+<li>cheap: 1.只精确到行，不精确到列，打包速度快 2.只管业务代码，不管第三方模块</li>
+<li>module：不仅管业务代码，而且管第三方代码</li>
+<li>eval:执行效率最快，性能最好</li>
+</ul>
+<p>最佳实践：<br>开发环境：cheap-module-eval-source-map<br>线上环境：cheap-mudole-source-map</p>
+<h3 id="HMR热模块更新"><a href="#HMR热模块更新" class="headerlink" title="HMR热模块更新"></a>HMR热模块更新</h3><p>借助webpack.HotModuleReplacementPlugin()，devServer开启hot</p>
+<p>场景1：实现只刷新css，不影响js<br>场景2：js中实现热更新，只更新指定js模块</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if (module.hot) &#123;</span><br><span class="line">	module.hot.accept(’./library.js’, function() &#123;</span><br><span class="line">	// Do something with the updated library module…</span><br><span class="line">&#125;);&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="webpack如何配置多入口文件"><a href="#webpack如何配置多入口文件" class="headerlink" title="webpack如何配置多入口文件?"></a>webpack如何配置多入口文件?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">entry: &#123; home: resolve(__dirname, &quot;src/home/index.js&quot;), about: resolve(__dirname, &quot;src/about/index.js&quot;)&#125;</span><br></pre></td></tr></table></figure>
+
+<p>用于描述入口的对象。你可以使用如下属性：</p>
+<ul>
+<li>dependOn: 当前入口所依赖的入口。它们必须在该入口被加载前被加载。</li>
+<li>filename: 指定要输出的文件名称。</li>
+<li>import: 启动时需加载的模块。</li>
+<li>library: 指定 library 选项，为当前 entry 构建一个 library。</li>
+<li>runtime: 运行时 chunk 的名字。如果设置了，就会创建一个新的运行时 chunk。在 webpack 5.43.0 之后可将其设为 false 以避免一个新的运行时 chunk。</li>
+<li>publicPath: 当该入口的输出文件在浏览器中被引用时，为它们指定一个公共 URL 地址</li>
+</ul>
+<h3 id="babel-相关-polyfill-以及-runtime-区别，-ES-stage-含义，preset–env-作用等等"><a href="#babel-相关-polyfill-以及-runtime-区别，-ES-stage-含义，preset–env-作用等等" class="headerlink" title="babel 相关: polyfill 以及 runtime 区别， ES stage 含义，preset–env 作用等等"></a>babel 相关: polyfill 以及 runtime 区别， ES stage 含义，preset–env 作用等等</h3><p>  1.polyfill 以及 runtime 区别  </p>
+<p>babel-polyfill 的原理是当运行环境中并没有实现的一些方法，babel-polyfill会做兼容。</p>
+<p>babel-runtime 它是将es6编译成es5去执行。我们使用es6的语法来编写，最终会通过babel-runtime编译成es5.也就是说，不管浏览器是否支持ES6，只要是ES6的语法，它都会进行转码成ES5.所以就有很多冗余的代码。</p>
+<p>babel-polyfill 它是通过向全局对象和内置对象的prototype上添加方法来实现的。比如运行环境中不支持Array.prototype.find 方法，引入polyfill, 我们就可以使用es6方法来编写了，但是缺点就是会造成全局空间污染。</p>
+<p>babel-runtime: 它不会污染全局对象和内置对象的原型，比如说我们需要Promise，我们只需要import Promise from ‘babel-runtime/core-js/promise’即可，这样不仅避免污染全局对象，而且可以减少不必要的代码。</p>
+<p>  2.stage-x：指处于某一阶段的js语言提案<br>Stage 0 - 设想（Strawman）：只是一个想法，可能有 Babel插件。<br>Stage 1 - 建议（Proposal）：这是值得跟进的。<br>Stage 2 - 草案（Draft）：初始规范。<br>Stage 3 - 候选（Candidate）：完成规范并在浏览器上初步实现。<br>Stage 4 - 完成（Finished）：将添加到下一个年度版本发布中。</p>
+<ol start="3">
+<li>理解 babel-preset-env<br>babel-preset-es2015: 可以将es6的代码编译成es5.<br>babel-preset-es2016: 可以将es7的代码编译为es6.<br>babel-preset-es2017: 可以将es8的代码编译为es7.<br>babel-preset-latest: 支持现有所有ECMAScript版本的新特性</li>
+</ol>
+<h3 id="什么是模热更新？有什么优点？"><a href="#什么是模热更新？有什么优点？" class="headerlink" title="什么是模热更新？有什么优点？"></a>什么是模热更新？有什么优点？</h3><p>模块热更新是webpack的一个功能，它可以使得代码修改之后，不用刷新浏览器就可以更新。</p>
+<p>在应用过程中替换添加删出模块，无需重新加载整个页面，是高级版的自动刷新浏览器。</p>
+<p>优点：只更新变更内容，以节省宝贵的开发时间。调整样式更加快速，几乎相当于在浏览器中更改样式</p>
+<h3 id="lazy-loading（模块懒加载）"><a href="#lazy-loading（模块懒加载）" class="headerlink" title="lazy loading（模块懒加载）"></a>lazy loading（模块懒加载）</h3><p>借助import()语法异步引入组件，实现文件懒加载：prefetch,preloading<br>webpack提倡多写异步代码，提升代码利用率，从而提升页面性能<br>先加载主业务文件，prefetch利用网络空闲时间，异步加载组件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import(/* webpackPrefetch: true / ‘LoginModal’);</span><br></pre></td></tr></table></figure>
+
+<p>preload和主业务文件一起加载，异步加载组件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import(/ webpackPreload: true */ ‘ChartingLibrary’);</span><br></pre></td></tr></table></figure>
+
+<h3 id="什么是长缓存？在webpack中如何做到长缓存优化？"><a href="#什么是长缓存？在webpack中如何做到长缓存优化？" class="headerlink" title="什么是长缓存？在webpack中如何做到长缓存优化？"></a>什么是长缓存？在webpack中如何做到长缓存优化？</h3><p>浏览器在用户访问页面的时候，为了加快加载速度，会对用户访问的静态资源进行存储，但是每一次代码升级或者更新，都需要浏览器去下载新的代码，最方便和最简单的更新方式就是引入新的文件名称。</p>
+<p>在webpack中，可以在output给出输出的文件制定chunkhash，并且分离经常更新的代码和框架代码，通过NameModulesPlugin或者HashedModulesPlugin使再次打包文件名不变。</p>
+<h3 id="什么是Tree-sharking"><a href="#什么是Tree-sharking" class="headerlink" title="什么是Tree-sharking?"></a>什么是Tree-sharking?</h3><p>指打包中去除那些引入了但在代码中没用到的死代码。在wepack中js treeshaking通过UglifyJsPlugin来进行，css中通过purify-CSS来进行。</p>
+<h3 id="webpack-dev-server-和-http服务器的区别"><a href="#webpack-dev-server-和-http服务器的区别" class="headerlink" title="webpack-dev-server 和 http服务器的区别"></a>webpack-dev-server 和 http服务器的区别</h3><p>webpack-dev-server使用内存来存储webpack开发环境下的打包文件，并且可以使用模块热更新，比传统的http服务对开发更加有效。</p>
+<h3 id="webpack与grunt、gulp的不同？"><a href="#webpack与grunt、gulp的不同？" class="headerlink" title="webpack与grunt、gulp的不同？"></a>webpack与grunt、gulp的不同？</h3><p>三者都是前端构建工具，grunt和gulp在早期比较流行，现在webpack相对来说比较主流，不过一些轻量化的任务还是会用gulp来处理，比如单独打包CSS文件等。</p>
 <p>grunt和gulp是基于任务和流（Task、Stream）的。类似jQuery，找到一个（或一类）文件，对其做一系列链式操作，更新流上的数据， 整条链式操作构成了一个任务，多个任务就构成了整个web的构建流程。</p>
 <p>webpack是基于入口的。webpack会自动地递归解析入口所需要加载的所有资源文件，然后用不同的Loader来处理不同的文件，用Plugin来扩展webpack功能。</p>
 <p>所以总结一下：</p>
@@ -233,15 +378,19 @@
 <p>gulp更像后端开发者的思路，需要对于整个流程了如指掌 webpack更倾向于前端开发者的思路</p>
 <h3 id="与webpack类似的工具还有哪些？谈谈你为什么最终选择（或放弃）使用webpack？"><a href="#与webpack类似的工具还有哪些？谈谈你为什么最终选择（或放弃）使用webpack？" class="headerlink" title="与webpack类似的工具还有哪些？谈谈你为什么最终选择（或放弃）使用webpack？"></a>与webpack类似的工具还有哪些？谈谈你为什么最终选择（或放弃）使用webpack？</h3><p>同样是基于入口的打包工具还有以下几个主流的：</p>
 <ul>
-<li>webpack</li>
-<li>rollup</li>
-<li>parcel</li>
-</ul>
-<p><strong>从应用场景上来看：</strong></p>
-<ul>
-<li>webpack适用于大型复杂的前端站点构建</li>
-<li>rollup适用于基础库的打包，如vue、react</li>
-<li>parcel适用于简单的实验性项目，他可以满足低门槛的快速看到效果</li>
+<li><p>webpack</p>
+</li>
+<li><p>rollup</p>
+</li>
+<li><p>parcel</p>
+<p>从应用场景上来看：  </p>
+</li>
+<li><p>webpack适用于大型复杂的前端站点构建</p>
+</li>
+<li><p>rollup适用于基础库的打包，如vue、react</p>
+</li>
+<li><p>parcel适用于简单的实验性项目，他可以满足低门槛的快速看到效果</p>
+</li>
 </ul>
 <p>由于parcel在打包过程中给出的调试信息十分有限，所以一旦打包出错难以调试，所以不建议复杂的项目使用parcel</p>
 <h3 id="有哪些常见的Loader？他们是解决什么问题的？"><a href="#有哪些常见的Loader？他们是解决什么问题的？" class="headerlink" title="有哪些常见的Loader？他们是解决什么问题的？"></a>有哪些常见的Loader？他们是解决什么问题的？</h3><ul>
@@ -259,17 +408,19 @@
 <li>commons-chunk-plugin：提取公共代码</li>
 <li>uglifyjs-webpack-plugin：通过UglifyES压缩ES6代码</li>
 </ul>
-<h3 id="Loader和Plugin的不同？"><a href="#Loader和Plugin的不同？" class="headerlink" title="Loader和Plugin的不同？"></a>Loader和Plugin的不同？</h3><p><strong>不同的作用</strong></p>
+<h3 id="Loader和Plugin的不同？"><a href="#Loader和Plugin的不同？" class="headerlink" title="Loader和Plugin的不同？"></a>Loader和Plugin的不同？</h3><p>  不同的作用  </p>
 <ul>
-<li><strong>Loader</strong>直译为”加载器”。Webpack将一切文件视为模块，但是webpack原生是只能解析js文件，如果想将其他文件也打包的话，就会用到loader。 所以Loader的作用是让webpack拥有了加载和解析非JavaScript文件的能力。</li>
-<li><strong>Plugin</strong>直译为”插件”。Plugin可以扩展webpack的功能，让webpack具有更多的灵活性。 在 Webpack 运行的生命周期中会广播出许多事件，Plugin 可以监听这些事件，在合适的时机通过 Webpack 提供的 API 改变输出结果。</li>
+<li><p>Loader  直译为”加载器”。Webpack将一切文件视为模块，但是webpack原生是只能解析js文件，如果想将其他文件也打包的话，就会用到loader。 所以Loader的作用是让webpack拥有了加载和解析非JavaScript文件的能力。</p>
+</li>
+<li><p>Plugin  直译为”插件”。Plugin可以扩展webpack的功能，让webpack具有更多的灵活性。 在 Webpack 运行的生命周期中会广播出许多事件，Plugin 可以监听这些事件，在合适的时机通过 Webpack 提供的 API 改变输出结果。</p>
+<p>不同的用法  </p>
+</li>
+<li><p>Loader  在module.rules中配置，也就是说他作为模块的解析规则而存在。 类型为数组，每一项都是一个Object，里面描述了对于什么类型的文件（test），使用什么加载(loader)和使用的参数（options）</p>
+</li>
+<li><p>Plugin  在plugins中单独配置。 类型为数组，每一项是一个plugin的实例，参数都通过构造函数传入。</p>
+</li>
 </ul>
-<p><strong>不同的用法</strong></p>
-<ul>
-<li><strong>Loader</strong>在module.rules中配置，也就是说他作为模块的解析规则而存在。 类型为数组，每一项都是一个Object，里面描述了对于什么类型的文件（test），使用什么加载(loader)和使用的参数（options）</li>
-<li><strong>Plugin</strong>在plugins中单独配置。 类型为数组，每一项是一个plugin的实例，参数都通过构造函数传入。</li>
-</ul>
-<h3 id="webpack的构建流程是什么-从读取配置到输出文件这个过程尽量说全"><a href="#webpack的构建流程是什么-从读取配置到输出文件这个过程尽量说全" class="headerlink" title="webpack的构建流程是什么?从读取配置到输出文件这个过程尽量说全"></a>webpack的构建流程是什么?从读取配置到输出文件这个过程尽量说全</h3><p>Webpack 的运行流程是一个串行的过程，从启动到结束会依次执行以下流程：</p>
+<h3 id="webpack的构建流程是什么-从读取配置到输出文件这个过程尽量说全-1"><a href="#webpack的构建流程是什么-从读取配置到输出文件这个过程尽量说全-1" class="headerlink" title="webpack的构建流程是什么?从读取配置到输出文件这个过程尽量说全"></a>webpack的构建流程是什么?从读取配置到输出文件这个过程尽量说全</h3><p>Webpack 的运行流程是一个串行的过程，从启动到结束会依次执行以下流程：</p>
 <ol>
 <li>初始化参数：从配置文件和 Shell 语句中读取与合并参数，得出最终的参数；</li>
 <li>开始编译：用上一步得到的参数初始化 Compiler 对象，加载所有配置的插件，执行对象的 run 方法开始执行编译；</li>
@@ -288,7 +439,7 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/img/loading.gif" data-original="../images/webpack001.jpeg" alt="img" title>
+                    <img src="/img/loading.gif" data-original="../../images/webpack001.jpeg" alt="img" title>
                 </div>
                 <div class="image-caption">img</div>
             </figure>
@@ -319,13 +470,13 @@
 <li>使用webpack-uglify-parallel来提升uglifyPlugin的压缩速度。 原理上webpack-uglify-parallel采用了多核并行压缩来提升压缩速度</li>
 <li>使用Tree-shaking和Scope Hoisting来剔除多余代码</li>
 </ol>
-<h3 id="怎么配置单页应用？怎么配置多页应用？"><a href="#怎么配置单页应用？怎么配置多页应用？" class="headerlink" title="怎么配置单页应用？怎么配置多页应用？"></a>怎么配置单页应用？怎么配置多页应用？</h3><p>单页应用可以理解为webpack的标准模式，直接在entry中指定单页应用的入口即可，这里不再赘述</p>
+<h3 id="怎么配置单页应用？怎么配置多页应用？-1"><a href="#怎么配置单页应用？怎么配置多页应用？-1" class="headerlink" title="怎么配置单页应用？怎么配置多页应用？"></a>怎么配置单页应用？怎么配置多页应用？</h3><p>单页应用可以理解为webpack的标准模式，直接在entry中指定单页应用的入口即可，这里不再赘述</p>
 <p>多页应用的话，可以使用webpack的 AutoWebPlugin来完成简单自动化的构建，但是前提是项目的目录结构必须遵守他预设的规范。 多页应用中要注意的是：</p>
 <ul>
 <li>每个页面都有公共的代码，可以将这些代码抽离出来，避免重复的加载。比如，每个页面都引用了同一套css样式表</li>
 <li>随着业务的不断扩展，页面可能会不断的追加，所以一定要让入口的配置足够灵活，避免每次添加新页面还需要修改构建配置</li>
 </ul>
-<h3 id="npm打包时需要注意哪些？如何利用webpack来更好的构建？"><a href="#npm打包时需要注意哪些？如何利用webpack来更好的构建？" class="headerlink" title="npm打包时需要注意哪些？如何利用webpack来更好的构建？"></a>npm打包时需要注意哪些？如何利用webpack来更好的构建？</h3><p>Npm是目前最大的 JavaScript 模块仓库，里面有来自全世界开发者上传的可复用模块。你可能只是JS模块的使用者，但是有些情况你也会去选择上传自己开发的模块。 关于NPM模块上传的方法可以去官网上进行学习，这里只讲解如何利用webpack来构建。</p>
+<h3 id="npm打包时需要注意哪些？如何利用webpack来更好的构建？-1"><a href="#npm打包时需要注意哪些？如何利用webpack来更好的构建？-1" class="headerlink" title="npm打包时需要注意哪些？如何利用webpack来更好的构建？"></a>npm打包时需要注意哪些？如何利用webpack来更好的构建？</h3><p>Npm是目前最大的 JavaScript 模块仓库，里面有来自全世界开发者上传的可复用模块。你可能只是JS模块的使用者，但是有些情况你也会去选择上传自己开发的模块。 关于NPM模块上传的方法可以去官网上进行学习，这里只讲解如何利用webpack来构建。</p>
 <p>NPM模块需要注意以下问题：</p>
 <ol>
 <li>要支持CommonJS模块化规范，所以要求打包后的最后结果也遵守该规则。</li>
@@ -345,7 +496,7 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/img/loading.gif" data-original="../images/webpack002.jpeg" alt="img" title>
+                    <img src="/img/loading.gif" data-original="../../images/webpack002.jpeg" alt="img" title>
                 </div>
                 <div class="image-caption">img</div>
             </figure>
@@ -357,14 +508,14 @@
 <figure class="image-bubble">
                 <div class="img-lightbox">
                     <div class="overlay"></div>
-                    <img src="/img/loading.gif" data-original="../images/webpack003.png" alt="img" title>
+                    <img src="/img/loading.gif" data-original="../../images/webpack003.png" alt="img" title>
                 </div>
                 <div class="image-caption">img</div>
             </figure>
 
 <p>单页应用的按需加载 现在很多前端项目都是通过单页应用的方式开发的，但是随着业务的不断扩展，会面临一个严峻的问题——首次加载的代码量会越来越多，影响用户的体验。</p>
 <p>通过import(<em>)语句来控制加载时机，webpack内置了对于import(</em>)的解析，会将import(<em>)中引入的模块作为一个新的入口在生成一个chunk。 当代码执行到import(</em>)语句时，会去加载Chunk对应生成的文件。import()会返回一个Promise对象，所以为了让浏览器支持，需要事先注入Promise polyfill</p>
-<h3 id="前端为什么要进行打包和构建？"><a href="#前端为什么要进行打包和构建？" class="headerlink" title="前端为什么要进行打包和构建？"></a>前端为什么要进行打包和构建？</h3><p>代码层面：</p>
+<h3 id="前端为什么要进行打包和构建？-1"><a href="#前端为什么要进行打包和构建？-1" class="headerlink" title="前端为什么要进行打包和构建？"></a>前端为什么要进行打包和构建？</h3><p>代码层面：</p>
 <ul>
 <li>体积更小（Tree-shaking、压缩、合并），加载更快</li>
 <li>编译高级语言和语法（TS、ES6、模块化、scss）</li>
@@ -377,7 +528,7 @@
 <li>集成公司构建规范（提测、上线）</li>
 </ul>
 <h3 id="module-chunk-bundle区别"><a href="#module-chunk-bundle区别" class="headerlink" title="module chunk bundle区别"></a>module chunk bundle区别</h3><h5 id="module-各个源码文件，webpack中一切皆模块"><a href="#module-各个源码文件，webpack中一切皆模块" class="headerlink" title="module - 各个源码文件，webpack中一切皆模块"></a>module - 各个源码文件，webpack中一切皆模块</h5><h5 id="chunk-多模块合并成的"><a href="#chunk-多模块合并成的" class="headerlink" title="chunk - 多模块合并成的"></a>chunk - 多模块合并成的</h5><p>在 entry import() splitChunks 都可以定义chunk:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">entry: &#123;</span><br><span class="line">  index: path.join(srcPath, &apos;index.js&apos;),</span><br><span class="line">  other: path.join(srcPath, &apos;other.js&apos;)</span><br><span class="line">&#125;,</span><br><span class="line">import(&apos;./***/djdj.js&apos;).then(res=&gt;&#123;</span><br><span class="line">  console.log(res.data)</span><br><span class="line">&#125;)</span><br><span class="line">// splitChunks 代码分割；HtmlWebpackPlugin引用 chunk</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">entry: &#123;</span><br><span class="line">  index: path.join(srcPath, &apos;index.js&apos;),</span><br><span class="line">  other: path.join(srcPath, &apos;other.js&apos;)</span><br><span class="line">&#125;,</span><br><span class="line">import(&apos;./  */djdj.js&apos;).then(res=&gt;&#123;</span><br><span class="line">  console.log(res.data)</span><br><span class="line">&#125;)</span><br><span class="line">// splitChunks 代码分割；HtmlWebpackPlugin引用 chunk</span><br></pre></td></tr></table></figure>
 
 <h5 id="bundle-最终输出文件"><a href="#bundle-最终输出文件" class="headerlink" title="bundle -最终输出文件"></a>bundle -最终输出文件</h5><h3 id="loader和plugin的区别"><a href="#loader和plugin的区别" class="headerlink" title="loader和plugin的区别"></a>loader和plugin的区别</h3><p>loader 模块转换器 （less-&gt;css）<br>plugin 是扩展插件，如HtmlWebpackPlugin</p>
 <p>常见的loader和plugin有哪些？<br>Loader:</p>
@@ -417,12 +568,12 @@
 
 <p>1.5. 升级happypack插件（happypack可以进行多线程加速打包）<br>1.6.  ExtractTextWebpackPlugin调整，建议选用新的CSS文件提取kiii插件mini-css-extract-plugin，production模式，增加  minimizer</p>
 <h2 id="loader-和-plugin-不同"><a href="#loader-和-plugin-不同" class="headerlink" title="loader 和 plugin 不同"></a>loader 和 plugin 不同</h2><p>2.1. loader是使wenbpack拥有加载和解析非js文件的能力<br> 2.2. plugin 可以扩展webpack的功能，使得webpack更加灵活。可以在构建的过程中通过webpack的api改变输出的结果</p>
-<h3 id="webpack构建流程"><a href="#webpack构建流程" class="headerlink" title="webpack构建流程"></a>webpack构建流程</h3><p>3.1. 初始化参数，从配置文件和shell语句中读到的参数合并，得到最后的参数<br>3.2. 开始编译：用合并得到的参数初始化complier对象，加载是所有配置的插件，执行run方法开始编译<br>3.3. 确定入口，通过entry找到入口文件<br>3.4. 编译模块，从入口文件出发，调用所有配置的loader对模块进行解析翻译，在找到该模块依赖的模块进行处理<br>3.5. 完成模块编译，得到每个模块被翻译之后的最终的内容和依赖关系<br>3.6. 输出资源，根据入口和模块之间的依赖关系，组装成一个个包含多个模块的chunk，在把每个chunk转换成一个单独的文件加载到输出列表<br>3.7. 输出完成，确定输出的路径和文件名，把内容写到文件系统中<br><strong>在以上过程中，webpack会在特定的时间点广播出特定的事件，插件在舰艇感兴趣的事件后会执行特定的逻辑，改变webpack的运行结果</strong></p>
+<h3 id="webpack构建流程"><a href="#webpack构建流程" class="headerlink" title="webpack构建流程"></a>webpack构建流程</h3><p>3.1. 初始化参数，从配置文件和shell语句中读到的参数合并，得到最后的参数<br>3.2. 开始编译：用合并得到的参数初始化complier对象，加载是所有配置的插件，执行run方法开始编译<br>3.3. 确定入口，通过entry找到入口文件<br>3.4. 编译模块，从入口文件出发，调用所有配置的loader对模块进行解析翻译，在找到该模块依赖的模块进行处理<br>3.5. 完成模块编译，得到每个模块被翻译之后的最终的内容和依赖关系<br>3.6. 输出资源，根据入口和模块之间的依赖关系，组装成一个个包含多个模块的chunk，在把每个chunk转换成一个单独的文件加载到输出列表<br>3.7. 输出完成，确定输出的路径和文件名，把内容写到文件系统中<br>  在以上过程中，webpack会在特定的时间点广播出特定的事件，插件在舰艇感兴趣的事件后会执行特定的逻辑，改变webpack的运行结果  </p>
 <h3 id="如何利用webpack来优化前端性能"><a href="#如何利用webpack来优化前端性能" class="headerlink" title="如何利用webpack来优化前端性能"></a>如何利用webpack来优化前端性能</h3><p>5.1. 压缩代码。uglifyJsPlugin 压缩js代码， mini-css-extract-plugin 压缩css代码<br>5.2. 利用CDN加速，将引用的静态资源修改为CDN上对应的路径，可以利用webpack对于output参数和loader的publicpath参数来修改资源路径<br>5.3. 删除死代码（tree shaking），css需要使用Purify-CSS<br>5.4. 提取公共代码。webpack4移除了CommonsChunkPlugin (提取公共代码)，用optimization.splitChunks和optimization.runtimeChunk来代替</p>
 <h3 id="什么是bundle-什么是chunk，什么是module"><a href="#什么是bundle-什么是chunk，什么是module" class="headerlink" title="什么是bundle,什么是chunk，什么是module?"></a>什么是bundle,什么是chunk，什么是module?</h3><p>bundle:有webpack打包出来的文件<br> chunk：webpack在进行模块的依赖分析的时候，代码分割出来的代码块<br> module:开发中的单个模块</p>
 <h3 id="webpack-dev-server和http服务器如nginx有什么区别"><a href="#webpack-dev-server和http服务器如nginx有什么区别" class="headerlink" title="webpack-dev-server和http服务器如nginx有什么区别?"></a>webpack-dev-server和http服务器如nginx有什么区别?</h3><p>webpack-dev-server使用内存来存储webpack开发环境下的打包文件，并且可以使用模块热更新，他比传统的http服务对开发更加简单高效。</p>
 <h3 id="DefinePlugin"><a href="#DefinePlugin" class="headerlink" title="DefinePlugin"></a>DefinePlugin</h3><p>DefinePlugin ：允许创建一个在编译时可以配置的全局变量</p>
-<h3 id="DllPlugin"><a href="#DllPlugin" class="headerlink" title="DllPlugin"></a>DllPlugin</h3><p>使用DllPlugin可以减少基础模块编译次数，动态链接库插件，其原理是吧网页依赖的基础模块抽离出来打包到dll文件中，当需要导入的模块存在于某个dll中时，这个模块不再被打包，而是去dll中获取。在dll中大多包含的时常用的第三方模块，只要这些模块版本不升级，就只需要被编译一次。<br> <strong>注意</strong><br> DllPlugin参数中的name必须要和output.library值保持一致，并且生成的mainfest文件中会引用output.library值</p>
+<h3 id="DllPlugin"><a href="#DllPlugin" class="headerlink" title="DllPlugin"></a>DllPlugin</h3><p>使用DllPlugin可以减少基础模块编译次数，动态链接库插件，其原理是吧网页依赖的基础模块抽离出来打包到dll文件中，当需要导入的模块存在于某个dll中时，这个模块不再被打包，而是去dll中获取。在dll中大多包含的时常用的第三方模块，只要这些模块版本不升级，就只需要被编译一次。<br>   注意<br> DllPlugin参数中的name必须要和output.library值保持一致，并且生成的mainfest文件中会引用output.library值</p>
 <h3 id="happyPack开启多线程loader转换"><a href="#happyPack开启多线程loader转换" class="headerlink" title="happyPack开启多线程loader转换"></a>happyPack开启多线程loader转换</h3><p>运行在node.js之上的webpack时单线程模型，也就是只能一个一个文件进行处理，不能并行处理，happypack可以将任务分解给多个子进程，最后将结果发给主进程，js是单线程模型，只能通过这种多线程的方式提高性能</p>
 <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><figure class="image-bubble">
                 <div class="img-lightbox">
@@ -432,8 +583,8 @@
                 <div class="image-caption">clipboard.png</div>
             </figure>
 
-<p><strong>从一个空的配置文件逐步完成一个完整的设置进行打包文件</strong></p>
-<p><strong>不像大多数的模块打包机，webpack是收把项目当作一个整体，通过一个给定的的主文件，webpack将从这个文件开始找到你的项目的所有依赖文件，使用loaders处理它们，最后打包成一个或多个浏览器可识别的js文件</strong></p>
+<p>  从一个空的配置文件逐步完成一个完整的设置进行打包文件  </p>
+<p>  不像大多数的模块打包机，webpack是收把项目当作一个整体，通过一个给定的的主文件，webpack将从这个文件开始找到你的项目的所有依赖文件，使用loaders处理它们，最后打包成一个或多个浏览器可识别的js文件  </p>
 <h3 id="install"><a href="#install" class="headerlink" title="install"></a>install</h3><p>首先添加我们即将使用的包：</p>
 <figure class="highlight q"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack webpack-<span class="built_in">dev</span>-server --<span class="built_in">save</span>-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure>
 
@@ -455,14 +606,14 @@
 <figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">output</span>: &#123;</span><br><span class="line">        filename: <span class="string">'[name].js'</span>,</span><br><span class="line">        <span class="built_in">path</span>: <span class="built_in">path</span>.resolve(<span class="string">'./build'</span>)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
 <p>如今这么少的配置，就能够让你运行一个服务器并在本地使用命令npm start或者npm run build来打包我们的代码进行发布</p>
-<h3 id="Loader"><a href="#Loader" class="headerlink" title="Loader"></a>Loader</h3><p><strong>loader的作用</strong>：<br>1、实现对不同格式的文件的处理，比如说将scss转换为css，或者typescript转化为js<br>2、转换这些文件，从而使其能够被添加到依赖图中<br>loader是webpack最重要的部分之一，通过使用不同的Loader，我们能够调用外部的脚本或者工具，实现对不同格式文件的处理，loader需要在webpack.config.js里边单独用module进行配置，配置如下：</p>
+<h3 id="Loader"><a href="#Loader" class="headerlink" title="Loader"></a>Loader</h3><p>  loader的作用  ：<br>1、实现对不同格式的文件的处理，比如说将scss转换为css，或者typescript转化为js<br>2、转换这些文件，从而使其能够被添加到依赖图中<br>loader是webpack最重要的部分之一，通过使用不同的Loader，我们能够调用外部的脚本或者工具，实现对不同格式文件的处理，loader需要在webpack.config.js里边单独用module进行配置，配置如下：</p>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">test:</span> 匹配所处理文件的扩展名的正则表达式（必须）</span><br><span class="line"><span class="symbol">    loader:</span> loader的名称（必须）</span><br><span class="line">    include/exclude: 手动添加处理的文件，屏蔽不需要处理的文件（可选）</span><br><span class="line"><span class="symbol">    query:</span> 为loaders提供额外的设置选项</span><br><span class="line"><span class="symbol">    ex:</span> </span><br><span class="line">        var baseConfig = &#123;</span><br><span class="line">            <span class="comment">// ...</span></span><br><span class="line"><span class="symbol">            module:</span> &#123;</span><br><span class="line"><span class="symbol">                rules:</span> [</span><br><span class="line">                    &#123;</span><br><span class="line"><span class="symbol">                        test:</span> <span class="comment">/*匹配文件后缀名的正则*/</span>,</span><br><span class="line"><span class="symbol">                        use:</span> [</span><br><span class="line"><span class="symbol">                            loader:</span> <span class="comment">/*loader名字*/</span>,</span><br><span class="line"><span class="symbol">                            query:</span> <span class="comment">/*额外配置*/</span></span><br><span class="line">                        ]</span><br><span class="line">                    &#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
 
 <p>要是loader工作，我们需要一个正则表达式来标识我们要修改的文件，然后有一个数组表示<br>我们表示我们即将使用的Loader,当然我们需要的loader需要通过npm 进行安装。例如我们需要解析less的文件，那么webpack.config.js的配置如下：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">var</span> <span class="string">baseConfig</span> <span class="string">=</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">                entry:</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">                    main:</span> <span class="string">'./src/index.js'</span></span><br><span class="line">                <span class="string">&#125;,</span></span><br><span class="line"><span class="attr">                output:</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">                    filename:</span> <span class="string">'[name].js'</span><span class="string">,</span></span><br><span class="line"><span class="attr">                    path:</span> <span class="string">path.resolve('./build')</span></span><br><span class="line">                <span class="string">&#125;,</span></span><br><span class="line"><span class="attr">                devServer:</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">                    contentBase:</span> <span class="string">'./src'</span><span class="string">,</span></span><br><span class="line"><span class="attr">                    historyApiFallBack:</span> <span class="literal">true</span><span class="string">,</span></span><br><span class="line"><span class="attr">                    inline:</span> <span class="literal">true</span></span><br><span class="line">                <span class="string">&#125;,</span></span><br><span class="line"><span class="attr">                module:</span> <span class="string">&#123;</span></span><br><span class="line"><span class="attr">                    rules:</span> <span class="string">[</span></span><br><span class="line">                        <span class="string">&#123;</span></span><br><span class="line"><span class="attr">                            test:</span> <span class="string">/\.less$/,</span></span><br><span class="line"><span class="attr">                            use:</span> <span class="string">[</span></span><br><span class="line">                                <span class="string">&#123;loader:</span> <span class="string">'style-loader'</span><span class="string">&#125;,</span></span><br><span class="line">                                <span class="string">&#123;loader:</span> <span class="string">'css-loader'</span><span class="string">&#125;,</span></span><br><span class="line">                                <span class="string">&#123;loader:</span> <span class="string">'less-loader'</span><span class="string">&#125;</span></span><br><span class="line">                            <span class="string">],</span></span><br><span class="line"><span class="attr">                            exclude:</span> <span class="string">/node_modules/</span></span><br><span class="line">                        <span class="string">&#125;</span></span><br><span class="line">                    <span class="string">]</span></span><br><span class="line">                <span class="string">&#125;</span></span><br><span class="line">            <span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <p>这里介绍几个常用的loader：<br>babel-loader： 让下一代的js文件转换成现代浏览器能够支持的JS文件。<br>babel有些复杂，所以大多数都会新建一个.babelrc进行配置<br>css-loader,style-loader:两个建议配合使用，用来解析css文件，能够解释@import,url()如果需要解析less就在后面加一个less-loader<br>file-loader: 生成的文件名就是文件内容的MD5哈希值并会保留所引用资源的原始扩展名<br>url-loader: 功能类似 file-loader,但是文件大小低于指定的限制时，可以返回一个DataURL事实上，在使用less,scss,stylus这些的时候，npm会提示你差什么插件，差什么，你就安上就行了</p>
-<h3 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h3><p>plugins和loader很容易搞混，说都是外部引用有什么区别呢？ 事实上他们是两个完全不同的东西。这么说<strong>loaders负责的是处理源文件的如css、jsx，一次处理一个文件。而plugins并不是直接操作单个文件，</strong>它直接对整个构建过程起作用下面列举了一些我们常用的plugins和他的用法<br>ExtractTextWebpackPlugin: 它会将入口中引用css文件，都打包都独立的css文件中，而不是内嵌在js打包文件中。下面是他的应用</p>
+<h3 id="Plugins"><a href="#Plugins" class="headerlink" title="Plugins"></a>Plugins</h3><p>plugins和loader很容易搞混，说都是外部引用有什么区别呢？ 事实上他们是两个完全不同的东西。这么说  loaders负责的是处理源文件的如css、jsx，一次处理一个文件。而plugins并不是直接操作单个文件，  它直接对整个构建过程起作用下面列举了一些我们常用的plugins和他的用法<br>ExtractTextWebpackPlugin: 它会将入口中引用css文件，都打包都独立的css文件中，而不是内嵌在js打包文件中。下面是他的应用</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ExtractTextPlugin = <span class="built_in">require</span>(<span class="string">'extract-text-webpack-plugin'</span>)</span><br><span class="line">        <span class="keyword">var</span> lessRules = &#123;</span><br><span class="line">            use: [</span><br><span class="line">                &#123;<span class="attr">loader</span>: <span class="string">'css-loader'</span>&#125;,</span><br><span class="line">                &#123;<span class="attr">loader</span>: <span class="string">'less-loader'</span>&#125;</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">var</span> baseConfig = &#123;</span><br><span class="line">            <span class="comment">// ... </span></span><br><span class="line">            <span class="built_in">module</span>: &#123;</span><br><span class="line">                rules: [</span><br><span class="line">                    <span class="comment">// ...</span></span><br><span class="line">                    &#123;<span class="attr">test</span>: <span class="regexp">/\.less$/</span>, <span class="attr">use</span>: ExtractTextPlugin.extract(lessRules)&#125;</span><br><span class="line">                ]</span><br><span class="line">            &#125;,</span><br><span class="line">            plugins: [</span><br><span class="line">                <span class="keyword">new</span> ExtractTextPlugin(<span class="string">'main.css'</span>)</span><br><span class="line">            ]</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
 
 <p>HtmlWebpackPlugin:<br>作用： 依据一个简单的index.html模版，生成一个自动引用你打包后的js文件的新index.html</p>
@@ -492,17 +643,17 @@
     <div class="content">
         
 <span class="post-time">
-    最后更新时间：<time datetime="2021-08-24T17:25:52.378Z" itemprop="dateUpdated">2021-08-25 01:25:52</time>
+    最后更新时间：<time datetime="2023-04-14T16:37:50.201Z" itemprop="dateUpdated">2023-04-15 00:37:50</time>
 </span><br>
 
 
         
-        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/前端知识点/webpack.html" target="_blank" rel="external">http://blog.seoqp.com/前端知识点/webpack.html</a>
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/前端知识点/webpack.html" target="_blank" rel="external">http://qvchat.com/前端知识点/webpack.html</a>
         
     </div>
     
     <footer>
-        <a href="http://blog.seoqp.com">
+        <a href="http://qvchat.com">
             <img src="/img/avatar.jpg" alt="秦伟">
             秦伟
         </a>
@@ -528,7 +679,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端知识点/webpack.html&title=《webpack》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://qvchat.com/前端知识点/webpack.html&title=《webpack》 — 秦伟博客&pic=http://qvchat.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -538,22 +689,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端知识点/webpack.html&title=《webpack》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://qvchat.com/前端知识点/webpack.html&title=《webpack》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.seoqp.com/前端知识点/webpack.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://qvchat.com/前端知识点/webpack.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《webpack》 — 秦伟博客&url=http://blog.seoqp.com/前端知识点/webpack.html&via=http://blog.seoqp.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《webpack》 — 秦伟博客&url=http://qvchat.com/前端知识点/webpack.html&via=http://qvchat.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.seoqp.com/前端知识点/webpack.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://qvchat.com/前端知识点/webpack.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -585,9 +736,9 @@
 
   
     <div class="waves-block waves-effect next">
-      <a href="/其他/welcome.html" id="post-next" class="post-nav-link">
+      <a href="/其他/秦伟博客.html" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
-        <h4 class="title">welcome</h4>
+        <h4 class="title">秦伟博客</h4>
       </a>
     </div>
   
@@ -706,7 +857,7 @@
     </div>
 
     <div class="bottom">
-        <p><span>Copyright &copy; 2018 - 2021 <a
+        <p><span>Copyright &copy; 2018 - 2023 <a
                 href="http://blog.bluedream.site/" target="_blank">秦伟的个人博客</a>All Rights Reserved.</span>
             <span>
                 部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除。
@@ -761,7 +912,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://blog.seoqp.com/前端知识点/webpack.html&title=《webpack》 — 秦伟博客&pic=http://blog.seoqp.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://qvchat.com/前端知识点/webpack.html&title=《webpack》 — 秦伟博客&pic=http://qvchat.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -771,22 +922,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://blog.seoqp.com/前端知识点/webpack.html&title=《webpack》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://qvchat.com/前端知识点/webpack.html&title=《webpack》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://blog.seoqp.com/前端知识点/webpack.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://qvchat.com/前端知识点/webpack.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《webpack》 — 秦伟博客&url=http://blog.seoqp.com/前端知识点/webpack.html&via=http://blog.seoqp.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《webpack》 — 秦伟博客&url=http://qvchat.com/前端知识点/webpack.html&via=http://qvchat.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://blog.seoqp.com/前端知识点/webpack.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://qvchat.com/前端知识点/webpack.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -797,7 +948,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLElEQVR42u3ay47CMAwFUP7/pztbRohybRekJicrVGibw8KKH49HvI6n9Xzl9fPrXedPe33Ou7suWBgYGLdlHKfrnPHuxe+unD+h9xsMDIx9GOfhMg+150EzCabNUI6BgYERHOCSg2B+QMTAwMCYMHqhOU+GMTAwMCZJbPVl1SPjj3JxDAyMGzLyqvvvP3+lv4GBgXErxlFceUJ7/svkoFnYFQYGxtKMycGu9zk/ApYPmhgYGBsweuX+aqE/H7/ImwoYGBhrMwoHr7joNg/N1RCPgYGxNqNaaLt2OCPHXFwvxMDAWIgxH/MqnE+Lb8HAwNiHMRlxyAcgkidUk1gMDAyMasNg0gbo/XH/3oiBgbEBIy+oVUci8j+lV4bDwMDYh1Et6PeQedG/2iLFwMBYm9Eb/5oAJmMchWMrBgbGQoxeKT8f2+q1Ey6eGcHAwLg5Iwm1+fVqUJ6PaHxoZ2JgYCzBqG59HjqT55dHPTAwMJZmVFuPSei8qkhXzsUxMDA2YyQ3RwX6mJrDPmTkGBgY2zDysYlqgSxPa8vpMQYGxjaM3tjWJN2d7OFtwMXAwFiIcRRXr6w/2eIFnVgMDIybM/I1OdhVU9+Lt46BgbEE49tBNv8L8oDbnHHDwMC4OWOeuOYNy14SW2gMYGBgYMTpblK37zVQH1e9AAMDY1FGnu72GqLJYbHQ38DAwFiIkSSxvW+TLSbtBAwMjJ0Z1dRxUnTLt1tOYjEwMNZk/AEEO2C++VKxZwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACNUlEQVR42u3aQW7DMAwF0dz/0irQVYHU9nxKCSBqtOrCkfkagJFIvl54jd/Fnxl/1vsz70+m7youGTJkbMsYt+vqGR76/Vuu9uGxyZAh4xzGTALl/xS+A49NhgwZMtKESJLv/TFRhgwZMj7BIAfB2tVXhgwZMtJLbHoc5Ae+r97FZciQsSEjbQx88+8P9jdkyJCxCWOEixz+SDLll1sUlQwZMloz0oBqzYA0ZxaflCFDRlNGWmhDZa8wuHSk45/PypAh40gGv9DyZsB8+r58iwwZMg5gzAxM8ORL9kxbAjJkyDiNEQ834LBm2pOo2SlDhozWDPLKtHzGhy34SAf5rAwZMroy0rYlCZQcMdMdHpKvDBkyWjNqx74F2T3cDf0AyJAhoylj/iDIr6xpSS6+i8uQIeMYxn3q5Kmw1hDlh9SHhCtDhoxGDJ4EyYtTGC/wocaqDBkyWjPIFmlZnw941UbEZMiQcRqDh8hHMWqNAfID8PA9yJAhoyljJqBaoLU2Q/GbkSFDxuaMtEA28CKlunQsDM2MyJAh4zAGD5Rn95SKSngyZMhozahdFHlzkQRXG+ZAGBkyZLRgjHCtSqarGg/xiVWGDBkbMtYOWJAC3EzRLS3kyZAhoxOjlgRJaYw3BvgOxV8PGTJktGCkSXCmtVksn5GEK0OGjOMZpLi2qvSfHihlyJAhY9WltDZUgfobMmTIOIAxP+BVG4wg11TUrpAhQ0ZrRtoYSJ9MC/1pa1OGDBmtGT/grI50/pQLngAAAABJRU5ErkJggg==" alt="微信分享二维码">
 </div>
 
 
@@ -898,5 +1049,18 @@ MathJax.Hub.Queue(function() {
     }
 </script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script>
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 </html>
