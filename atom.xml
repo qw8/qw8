@@ -176,9 +176,9 @@
     
       <category term="JavaScript" scheme="https://qw66.gitee.io/tags/JavaScript/"/>
     
-      <category term="BOM" scheme="https://qw66.gitee.io/tags/BOM/"/>
-    
       <category term="DOM" scheme="https://qw66.gitee.io/tags/DOM/"/>
+    
+      <category term="BOM" scheme="https://qw66.gitee.io/tags/BOM/"/>
     
       <category term="事件循环" scheme="https://qw66.gitee.io/tags/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/"/>
     
@@ -230,9 +230,9 @@
       <category term="前端面试题" scheme="https://qw66.gitee.io/categories/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
     
     
-      <category term="MVVM" scheme="https://qw66.gitee.io/tags/MVVM/"/>
-    
       <category term="vue" scheme="https://qw66.gitee.io/tags/vue/"/>
+    
+      <category term="MVVM" scheme="https://qw66.gitee.io/tags/MVVM/"/>
     
   </entry>
   
@@ -286,9 +286,9 @@
       <category term="前端知识点" scheme="https://qw66.gitee.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     
     
-      <category term="MVVM" scheme="https://qw66.gitee.io/tags/MVVM/"/>
-    
       <category term="vue" scheme="https://qw66.gitee.io/tags/vue/"/>
+    
+      <category term="MVVM" scheme="https://qw66.gitee.io/tags/MVVM/"/>
     
   </entry>
   
@@ -367,11 +367,11 @@
     
       <category term="JavaScript" scheme="https://qw66.gitee.io/tags/JavaScript/"/>
     
+      <category term="DOM" scheme="https://qw66.gitee.io/tags/DOM/"/>
+    
       <category term="BOM" scheme="https://qw66.gitee.io/tags/BOM/"/>
     
       <category term="字符串" scheme="https://qw66.gitee.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-      <category term="DOM" scheme="https://qw66.gitee.io/tags/DOM/"/>
     
       <category term="同步异步" scheme="https://qw66.gitee.io/tags/%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5/"/>
     
