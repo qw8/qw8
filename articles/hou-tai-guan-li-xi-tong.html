@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>后台管理系统 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="管理系统">
+    <meta name="description" content="总是做后台管理系统，到底要怎么提升自己呢？很多人都来问我：我平时写的东西都是后台管理系统，根本就没啥亮点的东西，我也没啥进步，我该咋办呢？ 后台管理不丢人其实据我了解，大部分前端在公司其实就是做后台管理系统，偶尔做做移动端，那么大家都是做后台管理，你要怎么比别人强呢？其实就是一个点：你如何把后台管理系统做得更好 其实我也做过一段时间的后台管理系统，我总结了几点我的心得，分享给大家~ 多封装组件封装">
+<meta name="keywords" content="管理系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="后台管理系统">
+<meta property="og:url" content="https://qw66.gitee.io/articles/hou-tai-guan-li-xi-tong.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="总是做后台管理系统，到底要怎么提升自己呢？很多人都来问我：我平时写的东西都是后台管理系统，根本就没啥亮点的东西，我也没啥进步，我该咋办呢？ 后台管理不丢人其实据我了解，大部分前端在公司其实就是做后台管理系统，偶尔做做移动端，那么大家都是做后台管理，你要怎么比别人强呢？其实就是一个点：你如何把后台管理系统做得更好 其实我也做过一段时间的后台管理系统，我总结了几点我的心得，分享给大家~ 多封装组件封装">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2024-05-08T06:50:25.053Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="后台管理系统">
+<meta name="twitter:description" content="总是做后台管理系统，到底要怎么提升自己呢？很多人都来问我：我平时写的东西都是后台管理系统，根本就没啥亮点的东西，我也没啥进步，我该咋办呢？ 后台管理不丢人其实据我了解，大部分前端在公司其实就是做后台管理系统，偶尔做做移动端，那么大家都是做后台管理，你要怎么比别人强呢？其实就是一个点：你如何把后台管理系统做得更好 其实我也做过一段时间的后台管理系统，我总结了几点我的心得，分享给大家~ 多封装组件封装">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">后台管理系统</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">后台管理系统</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2023-12-14T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2023-12-15
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端文章/">前端文章</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#总是做后台管理系统，到底要怎么提升自己呢？"><span class="post-toc-number">1.</span> <span class="post-toc-text">总是做后台管理系统，到底要怎么提升自己呢？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#后台管理不丢人"><span class="post-toc-number">2.</span> <span class="post-toc-text">后台管理不丢人</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多封装组件"><span class="post-toc-number">3.</span> <span class="post-toc-text">多封装组件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多封装-Hooks"><span class="post-toc-number">4.</span> <span class="post-toc-text">多封装 Hooks</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多考虑边界条件"><span class="post-toc-number">5.</span> <span class="post-toc-text">多考虑边界条件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多想想产品优化"><span class="post-toc-number">6.</span> <span class="post-toc-text">多想想产品优化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多想想怎么提高效率"><span class="post-toc-number">7.</span> <span class="post-toc-text">多想想怎么提高效率</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多搞配置化"><span class="post-toc-number">8.</span> <span class="post-toc-text">多搞配置化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多看看别人怎么做的"><span class="post-toc-number">9.</span> <span class="post-toc-text">多看看别人怎么做的</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-articles/后台管理系统"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">后台管理系统</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2023-12-15 00:00:00" datetime="2023-12-14T16:00:00.000Z"  itemprop="datePublished">2023-12-15</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端文章/">前端文章</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="总是做后台管理系统，到底要怎么提升自己呢？"><a href="#总是做后台管理系统，到底要怎么提升自己呢？" class="headerlink" title="总是做后台管理系统，到底要怎么提升自己呢？"></a>总是做后台管理系统，到底要怎么提升自己呢？</h3><p>很多人都来问我：<strong>我平时写的东西都是后台管理系统，根本就没啥亮点的东西，我也没啥进步，我该咋办呢？</strong></p>
+<h3 id="后台管理不丢人"><a href="#后台管理不丢人" class="headerlink" title="后台管理不丢人"></a>后台管理不丢人</h3><p>其实据我了解，大部分前端在公司其实就是做后台管理系统，偶尔做做移动端，那么大家都是做后台管理，你要怎么比别人强呢？其实就是一个点：<strong>你如何把后台管理系统做得更好</strong></p>
+<p>其实我也做过一段时间的后台管理系统，我总结了几点我的心得，分享给大家~</p>
+<h3 id="多封装组件"><a href="#多封装组件" class="headerlink" title="多封装组件"></a>多封装组件</h3><p>封装是一个很普遍的操作，但是却很少人去做好这件事，我现在做后台管理系统的话我会做到<strong>极致的封装</strong>，只要是一个东西有两处地方复用到了，我肯定会抽取封装起来，在这个过程中，我也学到了很多 Vue3 的 API，也发现很多封装组件的技巧，比如</p>
+<ul>
+<li><strong>shallowRef 节省性能</strong></li>
+<li><strong>computed 的 getter 和 setter</strong></li>
+<li><strong>组件 props 类型的拓展</strong></li>
+<li><strong>组件封装的更加方便使用</strong></li>
+<li><strong>模板的极致复用</strong></li>
+<li><strong>命令式使用弹窗</strong></li>
+</ul>
+<h3 id="多封装-Hooks"><a href="#多封装-Hooks" class="headerlink" title="多封装 Hooks"></a>多封装 Hooks</h3><p>对于一些业务性的逻辑代码，或者共用的逻辑代码，都要有抽取成 Hooks 的意识，这有利于于后续代码的可维护性，并且抽取共用的 Hooks，有利于代码可复用性，提高代码开发效率，锻炼你的逻辑封装能力，我最近封装了很多 Hooks，比如</p>
+<ul>
+<li><strong>useClickoutside：点击目标区域以外触发事件</strong></li>
+<li><strong>useCommandComponent：命令式使用组件</strong></li>
+<li><strong>createModal：命令式使用弹窗</strong></li>
+<li><strong>useTemplate：本组件复用弹窗</strong></li>
+<li><strong>useGlobalState：局部状态管理</strong></li>
+<li><strong>useVirtualList：虚拟滚动</strong></li>
+<li>等等。。。</li>
+</ul>
+<h3 id="多考虑边界条件"><a href="#多考虑边界条件" class="headerlink" title="多考虑边界条件"></a>多考虑边界条件</h3><p>我发现很多人在做后台管理也好，做其他的东西也好，其实总是会考虑得没那么周全，其中一点就是，总是不考虑边界条件，不去考虑兜底，比如：</p>
+<ul>
+<li><strong>组件的参数兜底检验补全</strong></li>
+<li><strong>hooks的参数兜底补全</strong></li>
+<li><strong>接口请求数据出错、接口报错的兜底</strong></li>
+<li><strong>某些代码记得加 try catch 进行兜底</strong></li>
+<li><strong>代码执行先后顺序问题，怎么去控制按照顺序去执行</strong></li>
+</ul>
+<h3 id="多想想产品优化"><a href="#多想想产品优化" class="headerlink" title="多想想产品优化"></a>多想想产品优化</h3><p>其实优化不止是代码优化，也有产品优化，有时候其实产品经理想出来的点子，也是不合理的，这个时候你可以去提出自己的见解，让整个产品更好，当然代码的优化也是必须做的，比如：</p>
+<ul>
+<li><strong>防抖节流</strong></li>
+<li><strong>长列表的虚拟滚动</strong></li>
+<li><strong>大文件的分片上传</strong></li>
+<li><strong>多请求时的控制并发</strong></li>
+<li><strong>使用合适的 API ，节省性能</strong></li>
+<li><strong>多使用设计模式，提高代码健壮性</strong></li>
+</ul>
+<h3 id="多想想怎么提高效率"><a href="#多想想怎么提高效率" class="headerlink" title="多想想怎么提高效率"></a>多想想怎么提高效率</h3><p>你要知道，后台管理系统其实业务难度是有限的，但是其实你可以不要局限于项目，而是要经常去想想：</p>
+<ul>
+<li><strong>你能怎么在项目中去让自己进步</strong></li>
+<li><strong>你要怎么样去提升自己的开发效率</strong></li>
+<li><strong>你要怎么样去提升整个团队的开发效率</strong></li>
+</ul>
+<p>就比如我，我在开发后台管理系统的时候，我会做这些事：</p>
+<ul>
+<li><strong>发现某些别人不合理的开发习惯，可以记下来，反馈给团队</strong></li>
+<li><strong>为了团队开发规范，开发一些小工具，来助力团队的规范</strong></li>
+<li><strong>为了团队成员开发的效率，开发一些小工具，帮他们提升开发效率</strong></li>
+<li><strong>多为团队的组件库工具库贡献，这样也能提升整个团队的开发效率</strong></li>
+<li><strong>主动去封装一些比较难的组件，提升团队开发效率，使自己进步</strong></li>
+</ul>
+<h3 id="多搞配置化"><a href="#多搞配置化" class="headerlink" title="多搞配置化"></a>多搞配置化</h3><p>我记得我一年前去面试一个高级前端工程师的岗位时，面试官就问我一个问题：<strong>假如你开发一个后台管理系统，你怎么让你的团队成员更轻松去开发呢？</strong> 我当时回答说：<strong>制定规范！</strong> 然后面试官我没体会到他真正的意思</p>
+<p>现在我算是领会到了，面试官的意思是：<strong>你要怎么开发一个后台管理系统，让你的组员无脑地开发</strong></p>
+<p>那其实我觉得，把一些事情做成<strong>配置化</strong>，这样才能让别人开发的时候，更加方便、更加无脑~</p>
+<p>其实后台管理无非就几个东西：</p>
+<ul>
+<li><strong>表单</strong></li>
+<li><strong>表格</strong></li>
+<li><strong>图表</strong></li>
+</ul>
+<p>那么可以做相对应的配置器，让其他人只需要传入配置，就可以生成想要的页面效果，比如：</p>
+<ul>
+<li><strong>表单配置器</strong></li>
+<li><strong>表格配置器</strong></li>
+<li><strong>图表配置器</strong></li>
+</ul>
+<h3 id="多看看别人怎么做的"><a href="#多看看别人怎么做的" class="headerlink" title="多看看别人怎么做的"></a>多看看别人怎么做的</h3><p>github 上有很多很出名的后台管理系统，大家可以去看看人家是怎么写的，为啥你写的像入门级，人家写的像大佬级别，可以多看看多学学，我推荐给你们<strong>vben-admin</strong>，我从这个后台管理项目中真的学到好多东西！</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-05-08T06:50:25.053Z" itemprop="dateUpdated">2024-05-08 14:50:25</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/articles/hou-tai-guan-li-xi-tong.html" target="_blank" rel="external">https://qw66.gitee.io/articles/hou-tai-guan-li-xi-tong.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/管理系统/">管理系统</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/articles/hou-tai-guan-li-xi-tong.html&title=《后台管理系统》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/articles/hou-tai-guan-li-xi-tong.html&title=《后台管理系统》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/articles/hou-tai-guan-li-xi-tong.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《后台管理系统》 — 秦伟博客&url=https://qw66.gitee.io/articles/hou-tai-guan-li-xi-tong.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/articles/hou-tai-guan-li-xi-tong.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/articles/qian-duan-quan-xian-kai-fa.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">前端权限开发</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/articles/webpack-you-hua-shi-jian.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Webpack优化实践</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/articles/hou-tai-guan-li-xi-tong.html&title=《后台管理系统》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/articles/hou-tai-guan-li-xi-tong.html&title=《后台管理系统》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/articles/hou-tai-guan-li-xi-tong.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《后台管理系统》 — 秦伟博客&url=https://qw66.gitee.io/articles/hou-tai-guan-li-xi-tong.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/articles/hou-tai-guan-li-xi-tong.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3ay27DMAxE0fz/T7vbFoHpmaESVNTVKkhsR8cLgg+9XvK6fq337+vP9dPe76rvbS0YMGBsy7jKpf9BfY3y693nem8wYMA4h6E/umbo39ebtp8JAwYMGGZA1O/KXh8MGDBgZAVqVnz+i4ALAwaMTRh66KxLU70Mdu9aVovDgAFjQ0YWFr/z+SPzDRgwYGzFuMylhFq3ZM128ueZMGDAGM1wm/56wqcnglkxDAMGjHMY7oaUMrJTAN9d/wCDAQPGkQzlj932vZ5i6uPMh4ALAwaMEYz+EFG53g3Weum7bBYKAwaMTRhuO15PK/XmmnsEBAYMGCcw3HZ//4DFx4tYGDBgjGO4t2Ul6KrQ/LAfGDBgHMBwM8rsWIZy5CJLRmHAgDGV4Tbrs5FnVrgarwMGDBijGWGEbowq7dJ0VVkLAwaM0Qy9GadQO8gF3UQYMGBsyNCDqZ7G6Ucr3CL2dlcwYMAYzXATwc4RsaxkNUYFMGDAOIahbEs/kLGqWJVeNAwYMI5hKH/vHpjoD0TtMyMwYMAYysg21w++2TjT6OfBgAFjEGPtSEC5vpM+GqkhDBgwNmdc5uqESKUYDpt3MGDAGM3QVzaSzAYA2WgBBgwYsxl6kM3GA9k19iuDAQPGAYysf6WPCvTXlO0WBgwYMPopnZLwZWNRGDBgwMgYSpDNSuiH8QAMGDBGM/RhgH5gQg+j7lEPGDBgnMZolY7RUFM/cOY2+GDAgDGO8QNAkM/eRh+dNwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

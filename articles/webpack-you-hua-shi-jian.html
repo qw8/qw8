@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Webpack优化实践 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Webpack">
+    <meta name="description" content="Vue项目Webpack优化实践，构建效率提高50%前言 公司的前端项目使用Vue框架，Vue框架使用Webpack进行构建，随着项目不断迭代，项目逐渐变得庞大，然而项目的构建速度随之变得缓慢，于是对Webpack构建进行优化变得刻不容缓。经过不断的摸索和实践，通过以下方法优化后，项目的构建速度提高了50%。现将相关优化方法进行总结分享。 1、缩小文件的搜索范围1.1、优化Loader配置​">
+<meta name="keywords" content="Webpack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Webpack优化实践">
+<meta property="og:url" content="https://qw66.gitee.io/articles/webpack-you-hua-shi-jian.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="Vue项目Webpack优化实践，构建效率提高50%前言 公司的前端项目使用Vue框架，Vue框架使用Webpack进行构建，随着项目不断迭代，项目逐渐变得庞大，然而项目的构建速度随之变得缓慢，于是对Webpack构建进行优化变得刻不容缓。经过不断的摸索和实践，通过以下方法优化后，项目的构建速度提高了50%。现将相关优化方法进行总结分享。 1、缩小文件的搜索范围1.1、优化Loader配置​">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:updated_time" content="2024-02-18T02:48:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Webpack优化实践">
+<meta name="twitter:description" content="Vue项目Webpack优化实践，构建效率提高50%前言 公司的前端项目使用Vue框架，Vue框架使用Webpack进行构建，随着项目不断迭代，项目逐渐变得庞大，然而项目的构建速度随之变得缓慢，于是对Webpack构建进行优化变得刻不容缓。经过不断的摸索和实践，通过以下方法优化后，项目的构建速度提高了50%。现将相关优化方法进行总结分享。 1、缩小文件的搜索范围1.1、优化Loader配置​">
+<meta name="twitter:image" content="https://qw66.gitee.io/img/loading.gif">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Webpack优化实践</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Webpack优化实践</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2023-11-20T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2023-11-21
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端文章/">前端文章</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Vue项目Webpack优化实践，构建效率提高50"><span class="post-toc-number">1.</span> <span class="post-toc-text">Vue项目Webpack优化实践，构建效率提高50%</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1、缩小文件的搜索范围"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">1、缩小文件的搜索范围</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-1、优化Loader配置"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">1.1、优化Loader配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-2、优化resolve-modules配置"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">1.2、优化resolve.modules配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-3、优化resolve-alias配置"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">1.3、优化resolve.alias配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-4、优化resolve-extensions配置"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">1.4、优化resolve.extensions配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#优化措施："><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">优化措施：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-5、优化resolve-noParse配置"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">1.5、优化resolve.noParse配置</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2、减少冗余代码"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">2、减少冗余代码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3、使用HappyPack多进程解析和处理文件"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">3、使用HappyPack多进程解析和处理文件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4、使用ParallelUglifyPlugin多进程压缩代码文件"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">4、使用ParallelUglifyPlugin多进程压缩代码文件</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5、使用自动刷新"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">5、使用自动刷新</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6、开启模块热替换"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">6、开启模块热替换</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7、提取公共代码"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">7、提取公共代码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8、按需加载代码"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">8、按需加载代码</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#9、优化SourceMap"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">9、优化SourceMap</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#10、构建结果输出分析"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">10、构建结果输出分析</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-articles/Webpack优化实践"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Webpack优化实践</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2023-11-21 00:00:00" datetime="2023-11-20T16:00:00.000Z"  itemprop="datePublished">2023-11-21</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端文章/">前端文章</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="Vue项目Webpack优化实践，构建效率提高50"><a href="#Vue项目Webpack优化实践，构建效率提高50" class="headerlink" title="Vue项目Webpack优化实践，构建效率提高50%"></a>Vue项目Webpack优化实践，构建效率提高50%</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p> 公司的前端项目使用<code>Vue</code>框架，<code>Vue</code>框架使用<code>Webpack</code>进行构建，随着项目不断迭代，项目逐渐变得庞大，然而项目的构建速度随之变得缓慢，于是对<code>Webpack</code>构建进行优化变得刻不容缓。经过不断的摸索和实践，通过以下方法优化后，项目的构建速度提高了50%。现将相关优化方法进行总结分享。</p>
+<h2 id="1、缩小文件的搜索范围"><a href="#1、缩小文件的搜索范围" class="headerlink" title="1、缩小文件的搜索范围"></a>1、缩小文件的搜索范围</h2><h3 id="1-1、优化Loader配置"><a href="#1-1、优化Loader配置" class="headerlink" title="1.1、优化Loader配置"></a>1.1、优化<code>Loader</code>配置</h3><p>​       由于<code>Loader</code>对文件的转换操作很耗时，所以需要让尽可能少的文件被<code>Loader</code>处理。我们可以通过以下3方面优化<code>Loader</code>配置：（1）优化正则匹配（2）通过<code>cacheDirectory</code>选项开启缓存（3）通过<code>include</code>、<code>exclude</code>来减少被处理的文件。实践如下：</p>
+<p><strong>项目原配置：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  test: /\.js$/,</span><br><span class="line">  loader: &apos;babel-loader&apos;,</span><br><span class="line">  include: [resolve(&apos;src&apos;), resolve(&apos;test&apos;)]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>优化后配置：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  // 1、如果项目源码中只有js文件，就不要写成/\.jsx?$/，以提升正则表达式的性能</span><br><span class="line">  test: /\.js$/,</span><br><span class="line">  // 2、babel-loader支持缓存转换出的结果，通过cacheDirectory选项开启</span><br><span class="line">  loader: &apos;babel-loader?cacheDirectory&apos;,</span><br><span class="line">  // 3、只对项目根目录下的src 目录中的文件采用 babel-loader</span><br><span class="line">  include: [resolve(&apos;src&apos;)]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-2、优化resolve-modules配置"><a href="#1-2、优化resolve-modules配置" class="headerlink" title="1.2、优化resolve.modules配置"></a>1.2、优化<code>resolve.modules</code>配置</h3><p>​       <code>resolve.modules</code> 用于配置<code>Webpack</code>去哪些目录下寻找第三方模块。<code>resolve.modules</code>的默认值是［<code>node modules</code>］，含义是先去当前目录的<code>/node modules</code>目录下去找我们想找的模块，如果没找到，就去上一级目录<code>../node modules</code>中找，再没有就去<code>../ .. /node modules</code>中找，以此类推，这和<code>Node.js</code>的模块寻找机制很相似。当安装的第三方模块都放在项目根目录的<code>./node modules</code>目录下时，就没有必要按照默认的方式去一层层地寻找，可以指明存放第三方模块的绝对路径，以减少寻找。</p>
+<p><strong>优化后配置：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">resolve: &#123;</span><br><span class="line">// 使用绝对路径指明第三方模块存放的位置，以减少搜索步骤</span><br><span class="line">modules: [path.resolve(__dirname,&apos;node_modules&apos;)]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-3、优化resolve-alias配置"><a href="#1-3、优化resolve-alias配置" class="headerlink" title="1.3、优化resolve.alias配置"></a>1.3、优化<code>resolve.alias</code>配置</h3><p>​       <code>resolve.alias</code>配置项通过别名来将原导入路径映射成一个新的导入路径。</p>
+<p><strong>如项目中的配置使用：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">alias: &#123;</span><br><span class="line">  &apos;@&apos;: resolve(&apos;src&apos;),</span><br><span class="line">&#125;,</span><br><span class="line">// 通过以上的配置，引用src底下的common.js文件，就可以直接这么写</span><br><span class="line">import common from &apos;@/common.js&apos;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4、优化resolve-extensions配置"><a href="#1-4、优化resolve-extensions配置" class="headerlink" title="1.4、优化resolve.extensions配置"></a>1.4、优化<code>resolve.extensions</code>配置</h3><p>​       在导入语句没带文件后缀时，<code>Webpack</code> 会在自动带上后缀后去尝试询问文件是否存在。默认是：<code>extensions :[‘. js ‘,’. json ’]</code> 。也就是说，当遇到<code>require ( &#39;. /data ’）</code>这样的导入语句时，<code>Webpack</code>会先去寻找<code>./data .js</code> 文件，如果该文件不存在，就去寻找<code>./data.json</code> 文件，如果还是找不到就报错。如果这个列表越长，或者正确的后缀越往后，就会造成尝试的次数越多，所以 <code>resolve .extensions</code> 的配置也会影响到构建的性能。 </p>
+<h3 id="优化措施："><a href="#优化措施：" class="headerlink" title="优化措施："></a>优化措施：</h3><p> • 后缀尝试列表要尽可能小，不要将项目中不可能存在的情况写到后缀尝试列表中。</p>
+<p> • 频率出现最高的文件后缀要优先放在最前面，以做到尽快退出寻找过程。</p>
+<p> • 在源码中写导入语句时，要尽可能带上后缀，从而可以避免寻找过程。例如在确定的情况下将 <code>require(’. /data ’)</code>写成<code>require(’. /data.json ’)</code>，可以结合<code>enforceExtension</code> 和 <code>enforceModuleExtension</code>开启使用来强制开发者遵守这条优化</p>
+<h3 id="1-5、优化resolve-noParse配置"><a href="#1-5、优化resolve-noParse配置" class="headerlink" title="1.5、优化resolve.noParse配置"></a>1.5、优化<code>resolve.noParse</code>配置</h3><p>​       <code>noParse</code>配置项可以让<code>Webpack</code>忽略对部分没采用模块化的文件的递归解析和处理，这 样做的好处是能提高构建性能。原因是一些库如<code>jQuery</code>、<code>ChartJS</code> 庞大又没有采用模块化标准，让<code>Webpack</code>去解析这些文件既耗时又没有意义。 <code>noParse</code>是可选的配置项，类型需要是<code>RegExp</code> 、<code>[RegExp]</code>、<code>function</code>中的一种。例如，若想要忽略<code>jQuery</code> 、<code>ChartJS</code> ，<strong>则优化配置如下：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 使用正则表达式 </span><br><span class="line">noParse: /jquerylchartjs/ </span><br><span class="line">// 使用函数，从 Webpack3.0.0开始支持 </span><br><span class="line">noParse: (content)=&gt; &#123; </span><br><span class="line">// 返回true或false </span><br><span class="line">return /jquery|chartjs/.test(content); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="2、减少冗余代码"><a href="#2、减少冗余代码" class="headerlink" title="2、减少冗余代码"></a>2、减少冗余代码</h2><p>​        <code>babel-plugin-transform-runtime</code> 是<code>Babel</code>官方提供的一个插件，作用是减少冗余的代码 。 <code>Babel</code>在将<code>ES6</code>代码转换成<code>ES5</code>代码时，通常需要一些由<code>ES5</code>编写的辅助函数来完成新语法的实现，例如在转换 <code>class</code> <code>extent</code> 语法时会在转换后的 <code>ES5</code> 代码里注入 <code>extent</code> 辅助函数用于实现继承。<code>babel-plugin-transform-runtime</code>会将相关辅助函数进行替换成导入语句，从而减小<code>babel</code>编译出来的代码的文件大小。</p>
+<h2 id="3、使用HappyPack多进程解析和处理文件"><a href="#3、使用HappyPack多进程解析和处理文件" class="headerlink" title="3、使用HappyPack多进程解析和处理文件"></a>3、使用<code>HappyPack</code>多进程解析和处理文件</h2><p>​       由于有大量文件需要解析和处理，所以构建是文件读写和计算密集型的操作，特别是当文件数量变多后，<code>Webpack</code>构建慢的问题会显得更为严重。运行在 <code>Node</code>之上的<code>Webpack</code>是单线程模型的，也就是说<code>Webpack</code>需要一个一个地处理任务，不能同时处理多个任务。<code>Happy Pack</code> ( <a href="https://github.com/amireh/happypack" target="_blank" rel="noopener">https://github.com/amireh/happypack</a> ）就能让<code>Webpack</code>做到这一点，它将任务分解给多个子进程去并发执行，子进程处理完后再将结果发送给主进程。</p>
+<p><strong>项目中<code>HappyPack</code>使用配置：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">（1）HappyPack插件安装：</span><br><span class="line">    $ npm i -D happypack</span><br><span class="line">（2）webpack.base.conf.js 文件对module.rules进行配置</span><br><span class="line">    module: &#123;</span><br><span class="line">     rules: [</span><br><span class="line">      &#123;</span><br><span class="line">        test: /\.js$/,</span><br><span class="line">        // 将对.js 文件的处理转交给 id 为 babel 的HappyPack实例</span><br><span class="line">          use:[&apos;happypack/loader?id=babel&apos;],</span><br><span class="line">          include: [resolve(&apos;src&apos;), resolve(&apos;test&apos;),   </span><br><span class="line">            resolve(&apos;node_modules/webpack-dev-server/client&apos;)],</span><br><span class="line">        // 排除第三方插件</span><br><span class="line">          exclude:path.resolve(__dirname,&apos;node_modules&apos;),</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          test: /\.vue$/,</span><br><span class="line">          use: [&apos;happypack/loader?id=vue&apos;],</span><br><span class="line">        &#125;,</span><br><span class="line">      ]</span><br><span class="line">    &#125;,</span><br><span class="line">（3）webpack.prod.conf.js 文件进行配置    const HappyPack = require(&apos;happypack&apos;);</span><br><span class="line">    // 构造出共享进程池，在进程池中包含5个子进程</span><br><span class="line">    const HappyPackThreadPool = HappyPack.ThreadPool(&#123;size:5&#125;);</span><br><span class="line">    plugins: [</span><br><span class="line">       new HappyPack(&#123;</span><br><span class="line">         // 用唯一的标识符id，来代表当前的HappyPack是用来处理一类特定的文件</span><br><span class="line">         id:&apos;vue&apos;,</span><br><span class="line">         loaders:[</span><br><span class="line">           &#123;</span><br><span class="line">             loader:&apos;vue-loader&apos;,</span><br><span class="line">             options: vueLoaderConfig</span><br><span class="line">           &#125;</span><br><span class="line">         ],</span><br><span class="line">         threadPool: HappyPackThreadPool,</span><br><span class="line">       &#125;),</span><br><span class="line"></span><br><span class="line">       new HappyPack(&#123;</span><br><span class="line">         // 用唯一的标识符id，来代表当前的HappyPack是用来处理一类特定的文件</span><br><span class="line">         id:&apos;babel&apos;,</span><br><span class="line">         // 如何处理.js文件，用法和Loader配置中一样</span><br><span class="line">         loaders:[&apos;babel-loader?cacheDirectory&apos;],</span><br><span class="line">         threadPool: HappyPackThreadPool,</span><br><span class="line">       &#125;),</span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
+
+<h2 id="4、使用ParallelUglifyPlugin多进程压缩代码文件"><a href="#4、使用ParallelUglifyPlugin多进程压缩代码文件" class="headerlink" title="4、使用ParallelUglifyPlugin多进程压缩代码文件"></a>4、使用ParallelUglifyPlugin多进程压缩代码文件</h2><p>​       由于压缩<code>JavaScript</code> 代码时，需要先将代码解析成用 <code>Object</code> 抽象表示的 <code>AST</code> 语法树，再去应用各种规则分析和处理<code>AST</code> ，所以导致这个过程的计算量巨大，耗时非常多。当<code>Webpack</code>有多个<code>JavaScript</code> 文件需要输出和压缩时，原本会使用<code>UglifyJS</code>去一个一个压缩再输出，但是<code>ParallelUglifyPlugin</code>会开启多个子进程，将对多个文件的压缩工作分配给多个子进程去完成，每个子进程其实还是通过<code>UglifyJS</code>去压缩代码，但是变成了并行执行。所以 <code>ParallelUglify Plugin</code>能更快地完成对多个文件的压缩工作。</p>
+<p> <strong>项目中<code>ParallelUglifyPlugin</code>使用配置：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">（1）ParallelUglifyPlugin插件安装：</span><br><span class="line">     $ npm i -D webpack-parallel-uglify-plugin</span><br><span class="line">（2）webpack.prod.conf.js 文件进行配置</span><br><span class="line">    const ParallelUglifyPlugin =require(&apos;webpack-parallel-uglify-plugin&apos;);</span><br><span class="line">    plugins: [</span><br><span class="line">    new ParallelUglifyPlugin(&#123;</span><br><span class="line">      cacheDir: &apos;.cache/&apos;,</span><br><span class="line">      uglifyJs:&#123;</span><br><span class="line">        compress: &#123;</span><br><span class="line">          warnings: false</span><br><span class="line">        &#125;,</span><br><span class="line">        sourceMap: true</span><br><span class="line">      &#125;</span><br><span class="line">     &#125;),</span><br><span class="line">    ]</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<h2 id="5、使用自动刷新"><a href="#5、使用自动刷新" class="headerlink" title="5、使用自动刷新"></a>5、使用自动刷新</h2><p>​       借助自动化的手段，在监听到本地源码文件发生变化时，自动重新构建出可运行的代码后再控制浏览器刷新。<code>Webpack</code>将这些功能都内置了，并且提供了多种方案供我们选择。</p>
+<p> <strong>项目中自动刷新的配置：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">devServer: &#123;</span><br><span class="line">  watchOptions: &#123;</span><br><span class="line">    // 不监听的文件或文件夹，支持正则匹配</span><br><span class="line">    ignored: /node_modules/,</span><br><span class="line">    // 监听到变化后等300ms再去执行动作</span><br><span class="line">    aggregateTimeout: 300,</span><br><span class="line">    // 默认每秒询问1000次</span><br><span class="line">    poll: 1000</span><br><span class="line">  &#125;</span><br><span class="line">&#125;,</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<p><strong>相关优化措施：</strong> </p>
+<p>（1）配置忽略一些不监听的一些文件，如：<code>node_modules</code>。 </p>
+<p>（2）<code>watchOptions.aggregateTirneout</code> 的值越大性能越好，因为这能降低重新构建的频率。</p>
+<p>（3） <code>watchOptions.poll</code> 的值越小越好，因为这能降低检查的频率。</p>
+<h2 id="6、开启模块热替换"><a href="#6、开启模块热替换" class="headerlink" title="6、开启模块热替换"></a>6、开启模块热替换</h2><p>​       <code>DevServer</code> 还支持一种叫做模块热替换（ <code>Hot Module Replacement</code> ）的技术可在不刷新整个网页的情况下做到超灵敏实时预览。原理是在一个源码发生变化时，只需重新编译发生变化的模块，再用新输出的模块替换掉浏览器中对应的老模块 。模块热替换技术在很大程度上提升了开发效率和体验 。 </p>
+<p><strong>项目中模块热替换的配置：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">devServer: &#123;</span><br><span class="line">  hot: true,</span><br><span class="line">&#125;,</span><br><span class="line">plugins: [</span><br><span class="line">  new webpack.HotModuleReplacementPlugin(),</span><br><span class="line">// 显示被替换模块的名称</span><br><span class="line">  new webpack.NamedModulesPlugin(), // HMR shows correct file names</span><br><span class="line">]</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<h2 id="7、提取公共代码"><a href="#7、提取公共代码" class="headerlink" title="7、提取公共代码"></a>7、提取公共代码</h2><p>​        如果每个页面的代码都将这些公共的部分包含进去，则会造成以下问题 ： </p>
+<p> • 相同的资源被重复加载，浪费用户的流量和服务器的成本。</p>
+<p> • 每个页面需要加载的资源太大，导致网页首屏加载缓慢，影响用户体验。 </p>
+<p>​       如果将多个页面的公共代码抽离成单独的文件，就能优化以上问题 。<code>Webpack</code>内置了专门用于提取多个<code>Chunk</code>中的公共部分的插件<code>CommonsChunkPlugin</code>。 </p>
+<p><strong>项目中<code>CommonsChunkPlugin</code>的配置：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">// 所有在 package.json 里面依赖的包，都会被打包进 vendor.js 这个文件中。</span><br><span class="line">new webpack.optimize.CommonsChunkPlugin(&#123;</span><br><span class="line">  name: &apos;vendor&apos;,</span><br><span class="line">  minChunks: function(module, count) &#123;</span><br><span class="line">    return (</span><br><span class="line">      module.resource &amp;&amp;</span><br><span class="line">      /\.js$/.test(module.resource) &amp;&amp;</span><br><span class="line">      module.resource.indexOf(</span><br><span class="line">        path.join(__dirname, &apos;../node_modules&apos;)</span><br><span class="line">      ) === 0</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;),</span><br><span class="line">// 抽取出代码模块的映射关系</span><br><span class="line">new webpack.optimize.CommonsChunkPlugin(&#123;</span><br><span class="line">  name: &apos;manifest&apos;,</span><br><span class="line">  chunks: [&apos;vendor&apos;]</span><br><span class="line">&#125;),</span><br><span class="line">复制代码</span><br></pre></td></tr></table></figure>
+
+<h2 id="8、按需加载代码"><a href="#8、按需加载代码" class="headerlink" title="8、按需加载代码"></a>8、按需加载代码</h2><p>​       通过<code>vue</code>写的单页应用时，可能会有很多的路由引入。当打包构建的时候，<code>javascript</code>包会变得非常大，影响加载。如果我们能把不同路由对应的组件分割成不同的代码块，然后当路由被访问的时候才加载对应的组件，这样就更加高效了。这样会大大提高首屏显示的速度，但是可能其他的页面的速度就会降下来。 </p>
+<p><strong>项目中路由按需加载（懒加载）的配置：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const Foo = () =&gt; import(&apos;./Foo.vue&apos;)</span><br><span class="line">const router = new VueRouter(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    &#123; path: &apos;/foo&apos;, component: Foo &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="9、优化SourceMap"><a href="#9、优化SourceMap" class="headerlink" title="9、优化SourceMap"></a>9、优化SourceMap</h2><p>​       我们在项目进行打包后，会将开发中的多个文件代码打包到一个文件中，并且经过压缩，去掉多余的空格，且<code>babel</code>编译化后，最终会用于线上环境，那么这样处理后的代码和源代码会有很大的差别，当有<code>bug</code>的时候，我们只能定位到压缩处理后的代码位置，无法定位到开发环境中的代码，对于开发不好调式，因此<code>sourceMap</code>出现了，它就是为了解决不好调式代码问题的。</p>
+<p> <strong><code>SourceMap</code>的可选值如下：</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://user-gold-cdn.xitu.io/2018/12/23/167dba50e9d02b22?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<p><strong>开发环境推荐： <code>cheap-module-eval-source-map</code></strong> </p>
+<p><strong>生产环境推荐： `cheap-module-source-map</strong>`</p>
+<p><strong>原因如下：</strong> </p>
+<ol>
+<li>源代码中的列信息是没有任何作用，因此我们打包后的文件不希望包含列相关信息，只有行信息能建立打包前后的依赖关系。因此不管是开发环境或生产环境，我们都希望添加<code>cheap</code>的基本类型来忽略打包前后的列信息。 </li>
+<li>不管是开发环境还是正式环境，我们都希望能定位到<code>bug</code>的源代码具体的位置，比如说某个<code>vue</code>文件报错了，我们希望能定位到具体的<code>vue</code>文件，因此我们也需要<code>module</code>配置。 </li>
+<li>我们需要生成<code>map</code>文件的形式，因此我们需要增加<code>source-map</code>属性。 </li>
+<li>我们介绍了<code>eval</code>打包代码的时候，知道<code>eval</code>打包后的速度非常快，因为它不生成<code>map</code>文件，但是可以对<code>eval</code>组合使用 <code>eval-source-map</code>使用会将<code>map</code>文件以<code>DataURL</code>的形式存在打包后的<code>js</code>文件中。在正式环境中不要使用 <code>eval-source-map</code>, 因为它会增加文件的大小，但是在开发环境中，可以试用下，因为他们打包的速度很快。</li>
+</ol>
+<h2 id="10、构建结果输出分析"><a href="#10、构建结果输出分析" class="headerlink" title="10、构建结果输出分析"></a>10、构建结果输出分析</h2><p>​       <code>Webpack</code>输出的代码可读性非常差而且文件非常大，让我们非常头疼。为了更简单、直观地分析输出结果，社区中出现了许多可视化分析工具。这些工具以图形的方式将结果更直观地展示出来，让我们快速了解问题所在。接下来讲解vue项目中用到的分析工具：<code>webpack-bundle-analyzer</code> 。</p>
+<p><strong>项目中在<code>webpack.prod.conf.js</code>进行配置：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if (config.build.bundleAnalyzerReport) &#123;</span><br><span class="line">  var BundleAnalyzerPlugin =   require(&apos;webpack-bundle-analyzer&apos;).BundleAnalyzerPlugin;</span><br><span class="line">  webpackConfig.plugins.push(new BundleAnalyzerPlugin());</span><br><span class="line">&#125;</span><br><span class="line">执行 $ npm run build --report 后生成分析报告如下：</span><br></pre></td></tr></table></figure>
+
+<p> <img src="/img/loading.gif" data-original="https://user-gold-cdn.xitu.io/2018/12/23/167dba6f9640342d?imageslim" alt="img"> </p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-02-18T02:48:44.000Z" itemprop="dateUpdated">2024-02-18 10:48:44</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/articles/webpack-you-hua-shi-jian.html" target="_blank" rel="external">https://qw66.gitee.io/articles/webpack-you-hua-shi-jian.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Webpack/">Webpack</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/articles/webpack-you-hua-shi-jian.html&title=《Webpack优化实践》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/articles/webpack-you-hua-shi-jian.html&title=《Webpack优化实践》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/articles/webpack-you-hua-shi-jian.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Webpack优化实践》 — 秦伟博客&url=https://qw66.gitee.io/articles/webpack-you-hua-shi-jian.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/articles/webpack-you-hua-shi-jian.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/articles/hou-tai-guan-li-xi-tong.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">后台管理系统</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/articles/vue-he-xin-zhi-xu-ni-dom.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Vue核心之虚拟DOM</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/articles/webpack-you-hua-shi-jian.html&title=《Webpack优化实践》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/articles/webpack-you-hua-shi-jian.html&title=《Webpack优化实践》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/articles/webpack-you-hua-shi-jian.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Webpack优化实践》 — 秦伟博客&url=https://qw66.gitee.io/articles/webpack-you-hua-shi-jian.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/articles/webpack-you-hua-shi-jian.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACHElEQVR42u3ay25DIQxF0fz/T99KHUWqQvaxuW1jNqMIpYTVgeUHjwde1/d6/vy8fu6n5/ATWkuGDBkfy7iWi1ydf2cNIGe+pMqQIeMAxq4guwas4yQ/QYYMGTLIcWSHBFwZMmTIuINBEjWyn4ZvGTJkyNgbBPmF/qAWlyFDxgcyaoOB3/l8+3xDhgwZ/55xhYu34fYmnW9uJUOGjNGMdPTYacnteg8SZLgyZMgYxKglavxaaauOhHLUO5QhQ8YIRtqIJy2z/gnxUwwZMmSMZtR+vlPEkrFlbVwhQ4aMqQw+IEz3eRGbjktRo02GDBmDGHwmmM4Na48w0uHEG4wMGTIGMfoDyP43O4WxDBkyTmB0MDyY8p1OcJchQ8ZsRq1NXxte8vBKEk0ZMmTMZqSNNl6C1grj2oMMGTJknMDg7fg0fqfpI2/YyZAh4xzGfU8rOsVw+rsyZMiYzeANd5IyptRaSH05vJQhQ8ZQBr9i5wVHnNiVUkYZMmRMZdTCZW08wENw2uCTIUPGOQxydV769uvpgCdDhozRDH6hINPEIwFS3MqQIUPGFa50hFmDxQ87ZMiQMZrBF2mZ8bDbP5P/+2TIkDGDkbb+SUDclVYGQVaGDBkHMHiQrdXHfGBZHDPIkCFDxqYr7n20IUOGDBnrP0tTQ3IOTy5lyJBxJiMtYlNMJ8iicYUMGTJGM2qDAT5oTIeOtZGqDBkyhjK+APc61izDVAU4AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

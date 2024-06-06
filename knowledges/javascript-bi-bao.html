@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>JavaScript闭包 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JavaScript,闭包">
+    <meta name="description" content="说说你对闭包的理解（什么是闭包（closure），为什么要用它？）使用闭包主要是为了设计私有的方法和变量。闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量，利用闭包可以突破作用链域。在js中，函数即闭包，只有函数才会产生作用域的概念。 闭包有三个特性：  函数内再嵌套函数 函数内部可以引用外部的参数和变量 参数">
+<meta name="keywords" content="JavaScript,闭包">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript闭包">
+<meta property="og:url" content="https://qw66.gitee.io/knowledges/javascript-bi-bao.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="说说你对闭包的理解（什么是闭包（closure），为什么要用它？）使用闭包主要是为了设计私有的方法和变量。闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量，利用闭包可以突破作用链域。在js中，函数即闭包，只有函数才会产生作用域的概念。 闭包有三个特性：  函数内再嵌套函数 函数内部可以引用外部的参数和变量 参数">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2023-04-14T17:01:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript闭包">
+<meta name="twitter:description" content="说说你对闭包的理解（什么是闭包（closure），为什么要用它？）使用闭包主要是为了设计私有的方法和变量。闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量，利用闭包可以突破作用链域。在js中，函数即闭包，只有函数才会产生作用域的概念。 闭包有三个特性：  函数内再嵌套函数 函数内部可以引用外部的参数和变量 参数">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">JavaScript闭包</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">JavaScript闭包</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-06-09T12:50:00.000Z" itemprop="datePublished" class="page-time">
+  2020-06-09
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#说说你对闭包的理解（什么是闭包（closure），为什么要用它？）"><span class="post-toc-number">1.</span> <span class="post-toc-text">说说你对闭包的理解（什么是闭包（closure），为什么要用它？）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#闭包的优缺点"><span class="post-toc-number">2.</span> <span class="post-toc-text">闭包的优缺点</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#优点："><span class="post-toc-number">2.1.</span> <span class="post-toc-text">优点：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#缺点："><span class="post-toc-number">2.2.</span> <span class="post-toc-text">缺点：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#闭包（参考链接）"><span class="post-toc-number">3.</span> <span class="post-toc-text">闭包（参考链接）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#闭包由来"><span class="post-toc-number">4.</span> <span class="post-toc-text">闭包由来</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#JavaScript-变量"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">JavaScript 变量</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#计数器困境"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">计数器困境</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#设想下如果你想统计一些数值，且该计数器在所有函数中都是可用的。"><span class="post-toc-number">4.2.1.</span> <span class="post-toc-text">设想下如果你想统计一些数值，且该计数器在所有函数中都是可用的。</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#如果我在函数内声明计数器，如果没有调用函数将无法修改计数器的值："><span class="post-toc-number">4.2.2.</span> <span class="post-toc-text">如果我在函数内声明计数器，如果没有调用函数将无法修改计数器的值：</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript-内嵌函数"><span class="post-toc-number">5.</span> <span class="post-toc-text">JavaScript 内嵌函数</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#内嵌函数-plus-可以访问父函数的-counter-变量："><span class="post-toc-number">5.1.</span> <span class="post-toc-text">内嵌函数 plus() 可以访问父函数的 counter 变量：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript-闭包"><span class="post-toc-number">6.</span> <span class="post-toc-text">JavaScript 闭包</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-knowledges/JavaScript闭包"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">JavaScript闭包</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-06-09 20:50:00" datetime="2020-06-09T12:50:00.000Z"  itemprop="datePublished">2020-06-09</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="说说你对闭包的理解（什么是闭包（closure），为什么要用它？）"><a href="#说说你对闭包的理解（什么是闭包（closure），为什么要用它？）" class="headerlink" title="说说你对闭包的理解（什么是闭包（closure），为什么要用它？）"></a>说说你对闭包的理解（什么是闭包（closure），为什么要用它？）</h3><p>使用闭包主要是为了设计私有的方法和变量。闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量，利用闭包可以突破作用链域。在js中，函数即闭包，只有函数才会产生作用域的概念。</p>
+<p>闭包有三个特性：</p>
+<ul>
+<li>函数内再嵌套函数</li>
+<li>函数内部可以引用外部的参数和变量</li>
+<li>参数和变量不会被垃圾回收机制回收</li>
+</ul>
+<p>优点：</p>
+<ul>
+<li>希望一个变量长期存储在内存中。</li>
+<li>避免全局变量的污染。</li>
+<li>私有成员的存在。</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>常驻内存，会增大内存使用量。</li>
+<li>使用不当会很容易造成内存泄露。</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">outer</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> name = <span class="string">"jack"</span>;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">inner</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(name);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> inner;</span><br><span class="line">&#125;</span><br><span class="line">outer()(); <span class="comment">// jack</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sayHi</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">`Hi! <span class="subst">$&#123;name&#125;</span>`</span>);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> test = sayHi(<span class="string">"xiaoming"</span>);</span><br><span class="line">test(); <span class="comment">// Hi! xiaoming</span></span><br></pre></td></tr></table></figure>
+
+<p>虽然 sayHi 函数已经执行完毕，但是其活动对象也不会被销毁，因为 test 函数仍然引用着 sayHi 函数中的变量 name，这就是闭包。<br>但也因为闭包引用着另一个函数的变量，导致另一个函数已经不使用了也无法销毁，所以闭包使用过多，会占用较多的内存，这也是一个副作用。</p>
+<p>解析：</p>
+<p>由于在 ECMA2015 中，只有函数才能分割作用域，函数内部可以访问当前作用域的变量，但是外部无法访问函数内部的变量，所以闭包可以理解成“定义在一个函数内部的函数，外部可以通过内部返回的函数访问内部函数的变量“。在本质上，闭包是将函数内部和函数外部连接起来的桥梁。</p>
+<h3 id="闭包的优缺点"><a href="#闭包的优缺点" class="headerlink" title="闭包的优缺点"></a>闭包的优缺点</h3><p>定义：函数A返回了一个函数B，函数B中使用了函数A的变量，且函数B在外部环境中执行，就产生了一个闭包。简单理解闭包其实就是等于一个函数+局部变量，实际使用过程中主要用来封装变量。</p>
+<h4 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h4><p>1.可以访问到函数内部的局部变量，</p>
+<p>2.可以避免全局变量的污染，</p>
+<p>3.这些变量的值始终保持在内存中，不会在外层函数调用后被自动清除。</p>
+<h4 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h4><p>1.会增大内存使用量</p>
+<p>2.滥用闭包会影响性能，导致内存泄漏等问题。</p>
+<p>解决方法：在退出函数之前，将不使用的局部变量全部删除</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function fn()&#123;</span><br><span class="line">    let a=1;</span><br><span class="line">    return function()&#123;</span><br><span class="line">        console.log(a)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var fn2=fn();</span><br><span class="line">fn2();</span><br><span class="line">fn2();</span><br></pre></td></tr></table></figure>
+
+<p>内存泄漏：某些变量、函数等不再需要占用内存的时候，由于某些原因，内存没有被回收。</p>
+<p>变量始终存在的原因：虽然函数A已经弹出了调用栈，JS引擎会通过逃逸分析将函数A中的变量存储在堆上，函数B访问的是堆上的变量值。</p>
+<h3 id="闭包（参考链接）"><a href="#闭包（参考链接）" class="headerlink" title="闭包（参考链接）"></a>闭包（<a href="http://www.cnblogs.com/TomXu/archive/2012/01/31/2330252.html#3929475" target="_blank" rel="noopener">参考链接</a>）</h3><p>闭包是代码块和创建该代码块的上下文中数据的结合。</p>
+<p>闭包是指有权访问另一个函数作用域中的变量的函数。创建闭包的常见方式，就是在一个函数内部创建另一个函数。（红宝书P178）。</p>
+<p>例子1：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[1, 2, 3].sort(function(a, b) &#123;    // 排序条件</span><br><span class="line"></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">[1, 2, 3].map(function (element) &#123;</span><br><span class="line">    return element * 2;</span><br><span class="line">&#125;); // [2, 4, 6]</span><br></pre></td></tr></table></figure>
+
+<p>例子2-延迟调用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var a = 10;</span><br><span class="line"></span><br><span class="line">setTimeout(function () &#123;</span><br><span class="line"></span><br><span class="line">    alert(a); // 10, after one second</span><br><span class="line"></span><br><span class="line">&#125;, 1000);</span><br></pre></td></tr></table></figure>
+
+<p>例子3-回调函数：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var x = 10;</span><br><span class="line"></span><br><span class="line">xmlHttpRequestObject.onreadystatechange =function() &#123;</span><br><span class="line"></span><br><span class="line">// 当数据就绪的时候，才会调用;</span><br><span class="line"></span><br><span class="line">// 这里，不论是在哪个上下文中创建</span><br><span class="line"></span><br><span class="line">// 此时变量“x”的值已经存在了</span><br><span class="line"></span><br><span class="line">    alert(x);// 10</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>例子4-隐藏辅助对象：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">varfoo = &#123;&#125;;</span><br><span class="line"></span><br><span class="line">// 初始化</span><br><span class="line"></span><br><span class="line">(function(object) &#123;</span><br><span class="line"></span><br><span class="line">    var x = 10;</span><br><span class="line"></span><br><span class="line">    object.getX =function_getX() &#123;</span><br><span class="line"></span><br><span class="line">        return x;</span><br><span class="line"></span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">&#125;)(foo);</span><br><span class="line"></span><br><span class="line">alert(foo.getX());// 获得闭包 &quot;x&quot; – 10</span><br></pre></td></tr></table></figure>
+
+<h3 id="闭包由来"><a href="#闭包由来" class="headerlink" title="闭包由来"></a>闭包由来</h3><h4 id="JavaScript-变量"><a href="#JavaScript-变量" class="headerlink" title="JavaScript 变量"></a>JavaScript 变量</h4><p>JavaScript 变量可以是局部变量或全局变量。</p>
+<p>全局变量：作用域是全局性的，可应用于页面上的所有脚本，在web页面中全局变量属于 window 对象。</p>
+<p>局部变量：在函数内部声明的变量，只在函数内部起作用，作用域是局部性的；函数的参数也是局部性的，只在函数内部起作用。</p>
+<p>全局和局部变量即便名称相同，它们也是两个不同的变量。修改其中一个，不会影响另一个的值。私有变量可以用到闭包。</p>
+<h4 id="计数器困境"><a href="#计数器困境" class="headerlink" title="计数器困境"></a>计数器困境</h4><h5 id="设想下如果你想统计一些数值，且该计数器在所有函数中都是可用的。"><a href="#设想下如果你想统计一些数值，且该计数器在所有函数中都是可用的。" class="headerlink" title="设想下如果你想统计一些数值，且该计数器在所有函数中都是可用的。"></a>设想下如果你想统计一些数值，且该计数器在所有函数中都是可用的。</h5><p>你可以使用全局变量，函数设置计数器递增：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var counter = 0;</span><br><span class="line"> </span><br><span class="line">function add() &#123;</span><br><span class="line">   return counter += 1;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line"> </span><br><span class="line">// 计数器现在为 3</span><br></pre></td></tr></table></figure>
+
+<p>计数器数值在执行 add() 函数时发生变化。</p>
+<p>但问题来了，页面上的任何脚本都能改变计数器，即便没有调用 add() 函数。</p>
+<h5 id="如果我在函数内声明计数器，如果没有调用函数将无法修改计数器的值："><a href="#如果我在函数内声明计数器，如果没有调用函数将无法修改计数器的值：" class="headerlink" title="如果我在函数内声明计数器，如果没有调用函数将无法修改计数器的值："></a>如果我在函数内声明计数器，如果没有调用函数将无法修改计数器的值：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function add() &#123;</span><br><span class="line">    var counter = 0;</span><br><span class="line">    return counter += 1;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line"> </span><br><span class="line">// 本意是想输出 3, 但事与愿违，输出的都是 1</span><br></pre></td></tr></table></figure>
+
+<p>以上代码将无法正确输出，每次我调用 add() 函数，计数器都会设置为 1。</p>
+<p>JavaScript 内嵌函数可以解决该问题。</p>
+<h3 id="JavaScript-内嵌函数"><a href="#JavaScript-内嵌函数" class="headerlink" title="JavaScript 内嵌函数"></a>JavaScript 内嵌函数</h3><p>所有函数都能访问全局变量。  </p>
+<p>实际上，在 JavaScript 中，所有函数都能访问它们上一层的作用域。</p>
+<p>JavaScript 支持嵌套函数。嵌套函数可以访问上一层的函数变量。</p>
+<h4 id="内嵌函数-plus-可以访问父函数的-counter-变量："><a href="#内嵌函数-plus-可以访问父函数的-counter-变量：" class="headerlink" title="内嵌函数 plus() 可以访问父函数的 counter 变量："></a>内嵌函数 plus() 可以访问父函数的 counter 变量：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function add() &#123;</span><br><span class="line">    var counter = 0;</span><br><span class="line">    function plus() &#123;counter += 1;&#125;</span><br><span class="line">    plus();    </span><br><span class="line">    return counter; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果我们能在外部访问 plus() 函数，这样就能解决计数器的困境。</p>
+<p>我们同样需要确保 counter = 0只执行一次。</p>
+<p>我们需要闭包。</p>
+<h3 id="JavaScript-闭包"><a href="#JavaScript-闭包" class="headerlink" title="JavaScript 闭包"></a>JavaScript 闭包</h3><p>还记得函数自我调用吗？该函数会做什么？</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var add = (function () &#123;</span><br><span class="line">    var counter = 0;</span><br><span class="line">    return function () &#123;return counter += 1;&#125;</span><br><span class="line">&#125;)();</span><br><span class="line"> </span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line">add();</span><br><span class="line"> </span><br><span class="line">// 计数器为 3</span><br></pre></td></tr></table></figure>
+
+<p>变量 <strong>add</strong> 指定了函数自我调用的返回字值。</p>
+<p>自我调用函数只执行一次。设置计数器为 0。并返回函数表达式。</p>
+<p>add变量可以作为一个函数使用。非常棒的部分是它可以访问函数上一层作用域的计数器。</p>
+<p>这个叫作 JavaScript <strong>闭包。</strong>它使得函数拥有私有变量变成可能。</p>
+<p>计数器受<strong>匿名函数</strong>的作用域保护，只能通过 add 方法修改。</p>
+<p><strong>闭包是一种保护私有变量的机制，在函数执行时形成私有的作用域，保护里面的私有变量不受外界干扰。直观的说就是形成一个不销毁的栈环境。</strong></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2023-04-14T17:01:50.000Z" itemprop="dateUpdated">2023-04-15 01:01:50</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/knowledges/javascript-bi-bao.html" target="_blank" rel="external">https://qw66.gitee.io/knowledges/javascript-bi-bao.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/闭包/">闭包</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/javascript-bi-bao.html&title=《JavaScript闭包》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/javascript-bi-bao.html&title=《JavaScript闭包》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/javascript-bi-bao.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript闭包》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/javascript-bi-bao.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/javascript-bi-bao.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/interview/javascript-mian-shi-ti.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">JavaScript面试题</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/interview/javascript-nan-ti.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">JavaScript难题</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/javascript-bi-bao.html&title=《JavaScript闭包》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/javascript-bi-bao.html&title=《JavaScript闭包》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/javascript-bi-bao.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript闭包》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/javascript-bi-bao.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/javascript-bi-bao.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIklEQVR42u3aQXKDMAwF0Nz/0nTdyQS+JNIO9mPVaYzhsdDIkl6v+DrernzN+/pPv57vf8OFgYHxWMZxep2vSQC9u/J3w8DA2IfxKYKdr0kCZXLvp30Ke2JgYGDEa85D5zeei4GBgTHaOj57/kPAxcDAeCAjOXDmD/v2MRgDA2M3Ri8s/s3fX+lvYGBgPIpxFK9qeE1Cbe9Nfu2DgYGxNCMPcDmpCusdhjEwMPZkTEYf8nZmsrL3HwwMjFUZyQvlRbRqsM4LcxcYDAyMbRhJeO0ldnlZPx/IaOahGBgYj2XkDYDq4FcyVJGH+8K0CAYGxqKM5LaEXYVV00oMDIw9GdVyf5U6OQZHnwkDA2MDRnXOat74rAbfiyIdBgbG0ozqI3vJXx468+Gzj8/FwMBYmlHdLg/NeT2/V/nHwMDYh5GHzmrQrLYBJmswMDD2YeSlt0kzstcqKMRmDAyMJRjzBmSeLE6C9cVRFgMDY2lGfkztJXD3luEuPjEGBsYGjB4mbzD0hioKrU0MDIwNGPPGwCTFzD/ibUdZDAyMBzImIbWazPWGzC54GBgYizKO4hWVvQaluvLBNelRYGBgPJxR7RJOym29HfIkFQMDY21GEmTnL5eE1ySUY2Bg7MyYJ3CTAbLbzuIYGBgYQbvxe4MXBR8GBgZG63xcfq1iyMbAwNiBUW1M5mMWvSSy/FEwMDCWZkzyrmoK2Cul3dbUxMDAeB7jB9tv5POVsp7cAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>JavaScript不常考 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JavaScript,BOM,DOM">
+    <meta name="description" content="如何测试前端代码? 知道 BDD, TDD, Unit Test 么? 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qUnit..)了解 BDD 行为驱动开发与 TDD 测试驱动开发已经单元测试相关概念 检测浏览器版本版本有哪些方式？ 根据 navigator.userAgent   //  UA.toLowerCase().indexOf(‘chrome’) 根据 w">
+<meta name="keywords" content="JavaScript,BOM,DOM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript不常考">
+<meta property="og:url" content="https://qw66.gitee.io/interview/javascript-bu-chang-kao.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="如何测试前端代码? 知道 BDD, TDD, Unit Test 么? 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qUnit..)了解 BDD 行为驱动开发与 TDD 测试驱动开发已经单元测试相关概念 检测浏览器版本版本有哪些方式？ 根据 navigator.userAgent   //  UA.toLowerCase().indexOf(‘chrome’) 根据 w">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:updated_time" content="2023-12-19T02:01:34.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript不常考">
+<meta name="twitter:description" content="如何测试前端代码? 知道 BDD, TDD, Unit Test 么? 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qUnit..)了解 BDD 行为驱动开发与 TDD 测试驱动开发已经单元测试相关概念 检测浏览器版本版本有哪些方式？ 根据 navigator.userAgent   //  UA.toLowerCase().indexOf(‘chrome’) 根据 w">
+<meta name="twitter:image" content="https://qw66.gitee.io/img/loading.gif">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">JavaScript不常考</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">JavaScript不常考</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-05-18T12:41:19.000Z" itemprop="datePublished" class="page-time">
+  2020-05-18
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端面试题/">前端面试题</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何测试前端代码-知道-BDD-TDD-Unit-Test-么-知道怎么测试你的前端工程么-mocha-sinon-jasmin-qUnit"><span class="post-toc-number">1.</span> <span class="post-toc-text">如何测试前端代码? 知道 BDD, TDD, Unit Test 么? 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qUnit..)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#检测浏览器版本版本有哪些方式？"><span class="post-toc-number">2.</span> <span class="post-toc-text">检测浏览器版本版本有哪些方式？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#作用域-编译期执行期以及全局局部作用域问题"><span class="post-toc-number">3.</span> <span class="post-toc-text">作用域-编译期执行期以及全局局部作用域问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#target-和-currentTarget-区别"><span class="post-toc-number">4.</span> <span class="post-toc-text">target 和 currentTarget 区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自动分号"><span class="post-toc-number">5.</span> <span class="post-toc-text">自动分号</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#浮点数精度"><span class="post-toc-number">6.</span> <span class="post-toc-text">浮点数精度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自执行函数-用于什么场景？好处"><span class="post-toc-number">7.</span> <span class="post-toc-text">自执行函数?用于什么场景？好处?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#css-动画和-js-动画的差异"><span class="post-toc-number">8.</span> <span class="post-toc-text">css 动画和 js 动画的差异</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何实现文件断点续传"><span class="post-toc-number">9.</span> <span class="post-toc-text">如何实现文件断点续传</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript-以下哪条语句会产生运行错误"><span class="post-toc-number">10.</span> <span class="post-toc-text">JavaScript 以下哪条语句会产生运行错误</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#以下哪些是-javascript-的全局函数："><span class="post-toc-number">11.</span> <span class="post-toc-text">以下哪些是 javascript 的全局函数：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于-IE-的-window-对象表述正确的有："><span class="post-toc-number">12.</span> <span class="post-toc-text">关于 IE 的 window 对象表述正确的有：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#描述错误的是"><span class="post-toc-number">13.</span> <span class="post-toc-text">描述错误的是</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#下面正确的是"><span class="post-toc-number">14.</span> <span class="post-toc-text">下面正确的是</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#谈一下-JS-中的递归函数，并且用递归简单实现阶乘"><span class="post-toc-number">15.</span> <span class="post-toc-text">谈一下 JS 中的递归函数，并且用递归简单实现阶乘</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript-alert-0-4-0-2-结果是多少？和你预期的一样吗？如果不一样该如何处理？"><span class="post-toc-number">16.</span> <span class="post-toc-text">JavaScript alert(0.4*0.2);结果是多少？和你预期的一样吗？如果不一样该如何处理？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#请写一个正则表达式：要求最短-6-位数，最长-20-位，阿拉伯数和英文字母（不区分大小写）组成"><span class="post-toc-number">17.</span> <span class="post-toc-text">请写一个正则表达式：要求最短 6 位数，最长 20 位，阿拉伯数和英文字母（不区分大小写）组成</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何将字符串转化为数字，例如’12-3b’"><span class="post-toc-number">18.</span> <span class="post-toc-text">如何将字符串转化为数字，例如’12.3b’?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何将浮点数点左边的数每三位添加一个逗号，如12000000-11转化为『12-000-000-11』"><span class="post-toc-number">19.</span> <span class="post-toc-text">如何将浮点数点左边的数每三位添加一个逗号，如12000000.11转化为『12,000,000.11』?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#“1”-“2”-“3”-map-parseInt-答案是多少？"><span class="post-toc-number">20.</span> <span class="post-toc-text">[“1”, “2”, “3”].map(parseInt) 答案是多少？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解释一下这段代码的意思吗？"><span class="post-toc-number">21.</span> <span class="post-toc-text">解释一下这段代码的意思吗？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#知道什么是webkit么-知道怎么用浏览器的各种工具来调试和debug代码么"><span class="post-toc-number">22.</span> <span class="post-toc-text">知道什么是webkit么? 知道怎么用浏览器的各种工具来调试和debug代码么?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#遍历所有文档树所有节点-考察递归-的方法"><span class="post-toc-number">23.</span> <span class="post-toc-text">遍历所有文档树所有节点(考察递归)的方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#sort排序相关-注意ASCII这个坑-（参考链接）"><span class="post-toc-number">24.</span> <span class="post-toc-text">sort排序相关(注意ASCII这个坑)（参考链接）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#移动端开发相关"><span class="post-toc-number">25.</span> <span class="post-toc-text">移动端开发相关</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#for-in-和-for-of"><span class="post-toc-number">26.</span> <span class="post-toc-text">for in 和 for of</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#for-in、Object-keys-和-Object-getOwnPropertyNames-对属性遍历有什么区别？"><span class="post-toc-number">27.</span> <span class="post-toc-text">for in、Object.keys 和 Object.getOwnPropertyNames 对属性遍历有什么区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#for-in"><span class="post-toc-number">28.</span> <span class="post-toc-text">for in</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Object-keys"><span class="post-toc-number">29.</span> <span class="post-toc-text">Object.keys</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Object-getOwnPropertyNames"><span class="post-toc-number">30.</span> <span class="post-toc-text">Object.getOwnPropertyNames</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#iframe-跨域通信和不跨域通信"><span class="post-toc-number">31.</span> <span class="post-toc-text">iframe 跨域通信和不跨域通信</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#H5-与-Native-如何交互"><span class="post-toc-number">32.</span> <span class="post-toc-text">H5 与 Native 如何交互</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#lt-script-gt-标签的-defer-和-asnyc-属性的作用以及二者的区别？"><span class="post-toc-number">33.</span> <span class="post-toc-text">&lt;script&gt; 标签的 defer 和 asnyc 属性的作用以及二者的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Object-prototype-toString-call-和-instanceOf-和-Array-isArray-区别好坏"><span class="post-toc-number">34.</span> <span class="post-toc-text">Object.prototype.toString.call() 和 instanceOf 和 Array.isArray() 区别好坏</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#你对松散类型的理解"><span class="post-toc-number">35.</span> <span class="post-toc-text">你对松散类型的理解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JS-严格模式和正常模式"><span class="post-toc-number">36.</span> <span class="post-toc-text">JS 严格模式和正常模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#移动端-click-事件、touch-事件、tap-事件的区别"><span class="post-toc-number">37.</span> <span class="post-toc-text">移动端 click 事件、touch 事件、tap 事件的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#正则表达式构造函数-var-reg-new-RegExp-‘xxx’-与正则表达字面量-var-reg-有什么不同？"><span class="post-toc-number">38.</span> <span class="post-toc-text">正则表达式构造函数 var reg = new RegExp(‘xxx’)与正则表达字面量 var reg = // 有什么不同？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#js-中-callee-与-caller-的作用"><span class="post-toc-number">39.</span> <span class="post-toc-text">js 中 callee 与 caller 的作用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#异步加载-js-的方法"><span class="post-toc-number">40.</span> <span class="post-toc-text">异步加载 js 的方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JS-中-文档碎片的理解和使用"><span class="post-toc-number">41.</span> <span class="post-toc-text">JS 中 文档碎片的理解和使用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#点透问题"><span class="post-toc-number">42.</span> <span class="post-toc-text">点透问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JS-单线程还是多线程，如何显示异步操作"><span class="post-toc-number">43.</span> <span class="post-toc-text">JS 单线程还是多线程，如何显示异步操作</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-interview/JavaScript不常考"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">JavaScript不常考</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-05-18 20:41:19" datetime="2020-05-18T12:41:19.000Z"  itemprop="datePublished">2020-05-18</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端面试题/">前端面试题</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="如何测试前端代码-知道-BDD-TDD-Unit-Test-么-知道怎么测试你的前端工程么-mocha-sinon-jasmin-qUnit"><a href="#如何测试前端代码-知道-BDD-TDD-Unit-Test-么-知道怎么测试你的前端工程么-mocha-sinon-jasmin-qUnit" class="headerlink" title="如何测试前端代码? 知道 BDD, TDD, Unit Test 么? 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qUnit..)"></a>如何测试前端代码? 知道 BDD, TDD, Unit Test 么? 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qUnit..)</h3><p>了解 BDD 行为驱动开发与 TDD 测试驱动开发已经单元测试相关概念</p>
+<h3 id="检测浏览器版本版本有哪些方式？"><a href="#检测浏览器版本版本有哪些方式？" class="headerlink" title="检测浏览器版本版本有哪些方式？"></a>检测浏览器版本版本有哪些方式？</h3><ul>
+<li>根据 navigator.userAgent   //  UA.toLowerCase().indexOf(‘chrome’)</li>
+<li>根据 window 对象的成员       // ‘ActiveXObject’ in window</li>
+</ul>
+<h3 id="作用域-编译期执行期以及全局局部作用域问题"><a href="#作用域-编译期执行期以及全局局部作用域问题" class="headerlink" title="作用域-编译期执行期以及全局局部作用域问题"></a>作用域-编译期执行期以及全局局部作用域问题</h3><p>js 执行主要的两个阶段：预解析和执行期</p>
+<h3 id="target-和-currentTarget-区别"><a href="#target-和-currentTarget-区别" class="headerlink" title="target 和 currentTarget 区别"></a>target 和 currentTarget 区别</h3><ul>
+<li>event.target<br><br>返回触发事件的元素</li>
+<li>event.currentTarget<br><br>返回绑定事件的元素</li>
+</ul>
+<h3 id="自动分号"><a href="#自动分号" class="headerlink" title="自动分号"></a>自动分号</h3><p>有时 JavaScript 会自动为代码行补上缺失的分号，即自动分号插入（Automatic SemicolonInsertion，ASI）。<br>因为如果缺失了必要的 ; ，代码将无法运行，语言的容错性也会降低。ASI 能让我们忽略那些不必要的 ; 。<br>请注意，ASI 只在换行符处起作用，而不会在代码行的中间插入分号。<br>如果 JavaScript 解析器发现代码行可能因为缺失分号而导致错误，那么它就会自动补上分<br>号。并且，只有在代码行末尾与换行符之间除了空格和注释之外没有别的内容时，它才会<br>这样做。</p>
+<h3 id="浮点数精度"><a href="#浮点数精度" class="headerlink" title="浮点数精度"></a>浮点数精度</h3><p><a href="https://www.css88.com/archives/7340" target="_blank" rel="noopener">参考</a></p>
+<h3 id="自执行函数-用于什么场景？好处"><a href="#自执行函数-用于什么场景？好处" class="headerlink" title="自执行函数?用于什么场景？好处?"></a>自执行函数?用于什么场景？好处?</h3><p>自执行函数:1、声明一个匿名函数 2、马上调用这个匿名函数。<br>作用：创建一个独立的作用域。</p>
+<p>好处：防止变量弥散到全局，以免各种 js 库冲突。隔离作用域避免污染，或者截断作用域链，避免闭包造成引用变量无法释放。利用立即执行特性，返回需要的业务函数或对象，避免每次通过条件判断来处理</p>
+<p>场景：一般用于框架、插件等场景</p>
+<h3 id="css-动画和-js-动画的差异"><a href="#css-动画和-js-动画的差异" class="headerlink" title="css 动画和 js 动画的差异"></a>css 动画和 js 动画的差异</h3><ol>
+<li>代码复杂度，js 动画代码相对复杂一些</li>
+<li>动画运行时，对动画的控制程度上，js 能够让动画，暂停，取消，终止，css 动画不能添加事件</li>
+<li>动画性能看，js 动画多了一个 js 解析的过程，性能不如 css 动画好</li>
+</ol>
+<p>解析：<a href="https://zhuanlan.zhihu.com/p/41479807" target="_blank" rel="noopener">参考</a></p>
+<h3 id="如何实现文件断点续传"><a href="#如何实现文件断点续传" class="headerlink" title="如何实现文件断点续传"></a>如何实现文件断点续传</h3><p>断点续传最核心的内容就是把文件“切片”然后再一片一片的传给服务器，但是这看似简单的上传过程却有着无数的坑。</p>
+<p>首先是文件的识别，一个文件被分成了若干份之后如何告诉服务器你切了多少块，以及最终服务器应该如何把你上传上去的文件进行合并，这都是要考虑的。</p>
+<p>因此在文件开始上传之前，我们和服务器要有一个“握手”的过程，告诉服务器文件信息，然后和服务器约定切片的大小，当和服务器达成共识之后就可以开始后续的文件传输了。</p>
+<p>前台要把每一块的文件传给后台，成功之后前端和后端都要标识一下，以便后续的断点。</p>
+<p>当文件传输中断之后用户再次选择文件就可以通过标识来判断文件是否已经上传了一部分，如果是的话，那么我们可以接着上次的进度继续传文件，以达到续传的功能。<br>有了 HTML5 的 File api 之后切割文件比想想的要简单的多的多。</p>
+<p>只要用 slice 方法就可以了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var packet = file.slice(start, end);</span><br></pre></td></tr></table></figure>
+
+<p>参数 start 是开始切片的位置，end 是切片结束的位置 单位都是字节。通过控制 start 和 end 就可以是实现文件的分块</p>
+<p>如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">file.slice(0,1000);</span><br><span class="line">file.slice(1000,2000);</span><br><span class="line">file.slice(2000,3000);</span><br><span class="line">// ......</span><br></pre></td></tr></table></figure>
+
+<p>在把文件切成片之后，接下来要做的事情就是把这些碎片传到服务器上。<br>如果中间掉线了，下次再传的时候就得先从服务器获取上一次上传文件的位置，然后以这个位置开始上传接下来的文件内容。</p>
+<p>解析：<a href="https://www.cnblogs.com/zhwl/p/3580776.html" target="_blank" rel="noopener">参考</a></p>
+<h3 id="JavaScript-以下哪条语句会产生运行错误"><a href="#JavaScript-以下哪条语句会产生运行错误" class="headerlink" title="JavaScript 以下哪条语句会产生运行错误"></a>JavaScript 以下哪条语句会产生运行错误</h3><p>A. var obj = (); B. var obj = []; C. var obj = {}; D. var obj = //;</p>
+<p>答案：AD</p>
+<h3 id="以下哪些是-javascript-的全局函数："><a href="#以下哪些是-javascript-的全局函数：" class="headerlink" title="以下哪些是 javascript 的全局函数："></a>以下哪些是 javascript 的全局函数：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">A. escape	函数可对字符串进行编码，这样就可以在所有的计算机上读取该字符串。ECMAScript v3 反对使用该方法，应用使用 decodeURI() 和 decodeURIComponent() 替代它。</span><br><span class="line">B. parseFloat	parseFloat() 函数可解析一个字符串，并返回一个浮点数。</span><br><span class="line">该函数指定字符串中的首个字符是否是数字。如果是，则对字符串进行解析，直到到达数字的末端为止，然后以数字返回该数字，而不是作为字符串。</span><br><span class="line">C. eval	 函数可计算某个字符串，并执行其中的的 JavaScript 代码。</span><br><span class="line">D. setTimeout</span><br><span class="line">E. alert</span><br></pre></td></tr></table></figure>
+
+<p>答案：ABC</p>
+<h3 id="关于-IE-的-window-对象表述正确的有："><a href="#关于-IE-的-window-对象表述正确的有：" class="headerlink" title="关于 IE 的 window 对象表述正确的有："></a>关于 IE 的 window 对象表述正确的有：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A. window.opener属性本身就是指向window对象</span><br><span class="line">B. window.reload()方法可以用来刷新当前页面  应该是location.reload或者window.location.reload</span><br><span class="line">C. window.location=”a.html”和window.location.href=”a.html”的作用都是把当前页面替换成a.html页面</span><br><span class="line">D. 定义了全局变量g；可以用window.g的方式来存取该变量</span><br></pre></td></tr></table></figure>
+
+<p>答案：ACD</p>
+<h3 id="描述错误的是"><a href="#描述错误的是" class="headerlink" title="描述错误的是"></a>描述错误的是</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A：HTTP状态码302表示暂时性转移</span><br><span class="line">B:domContentLoaded事件早于onload事件</span><br><span class="line">C: IE678不支持事件捕获</span><br><span class="line">D:localStorage 存储的数据在电脑重启后丢失</span><br></pre></td></tr></table></figure>
+
+<p>答案：D</p>
+<p>解析：</p>
+<p>HTTP状态码302表示被请求的资源暂时转移(Moved temporatily)，然后会给出一个转移后的URL，而浏览器在处理服务器返回的302错误时，原则上会重新建立一个TCP连接，然后再取重定向后的URL的页面；但是如果页面存在于缓存中，则不重新获取；</p>
+<p>onload事件触发时，页面上所有的DOM，样式表，脚本，图片，flash都已经加载完成了，domContentLoaded事件触发时，仅当DOM加载完成，不包括样式表，图片，flash。</p>
+<p>C正确，故选D</p>
+<h3 id="下面正确的是"><a href="#下面正确的是" class="headerlink" title="下面正确的是"></a>下面正确的是</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A: 跨域问题能通过JsonP方案解决</span><br><span class="line">B：不同子域名间仅能通过修改window.name解决跨域   还可以通过script标签src  jsonp等h5 Java split等</span><br><span class="line">C：只有在IE中可通过iframe嵌套跨域</span><br><span class="line">D：MediaQuery属性是进行视频格式检测的属性是做响应式的</span><br></pre></td></tr></table></figure>
+
+<p>答案：A</p>
+<h3 id="谈一下-JS-中的递归函数，并且用递归简单实现阶乘"><a href="#谈一下-JS-中的递归函数，并且用递归简单实现阶乘" class="headerlink" title="谈一下 JS 中的递归函数，并且用递归简单实现阶乘"></a>谈一下 JS 中的递归函数，并且用递归简单实现阶乘</h3><p>递归即是程序在执行过程中<strong>不断调用自身</strong>的编程技巧，当然也必须要有一个明确的结束条件，不然就会陷入死循环。</p>
+<h3 id="JavaScript-alert-0-4-0-2-结果是多少？和你预期的一样吗？如果不一样该如何处理？"><a href="#JavaScript-alert-0-4-0-2-结果是多少？和你预期的一样吗？如果不一样该如何处理？" class="headerlink" title="JavaScript alert(0.4*0.2);结果是多少？和你预期的一样吗？如果不一样该如何处理？"></a>JavaScript alert(0.4*0.2);结果是多少？和你预期的一样吗？如果不一样该如何处理？</h3><p>有误差，应该比准确结果偏大。 一般我会将小数变为整数来处理。当前之前遇到这个问题时也上网查询发现有人用 try catch return 写了一个函数，<br>当然原理也是一致先转为整数再计算。看起来挺麻烦的，我没用过。</p>
+<h3 id="请写一个正则表达式：要求最短-6-位数，最长-20-位，阿拉伯数和英文字母（不区分大小写）组成"><a href="#请写一个正则表达式：要求最短-6-位数，最长-20-位，阿拉伯数和英文字母（不区分大小写）组成" class="headerlink" title="请写一个正则表达式：要求最短 6 位数，最长 20 位，阿拉伯数和英文字母（不区分大小写）组成"></a>请写一个正则表达式：要求最短 6 位数，最长 20 位，阿拉伯数和英文字母（不区分大小写）组成</h3><p>^(?=._\d)(?=._[a-z])(?=.\*[A-Z])[a-zA-Z\d]{6,20}$</p>
+<h3 id="如何将字符串转化为数字，例如’12-3b’"><a href="#如何将字符串转化为数字，例如’12-3b’" class="headerlink" title="如何将字符串转化为数字，例如’12.3b’?"></a>如何将字符串转化为数字，例如’12.3b’?</h3><ul>
+<li>parseFloat(‘12.3b’);</li>
+<li>正则表达式，’12.3b’.match(/(\d)+(.)?(\d)+/g)[0] * 1, 但是这个不太靠谱，提供一种思路而已</li>
+</ul>
+<h3 id="如何将浮点数点左边的数每三位添加一个逗号，如12000000-11转化为『12-000-000-11』"><a href="#如何将浮点数点左边的数每三位添加一个逗号，如12000000-11转化为『12-000-000-11』" class="headerlink" title="如何将浮点数点左边的数每三位添加一个逗号，如12000000.11转化为『12,000,000.11』?"></a>如何将浮点数点左边的数每三位添加一个逗号，如12000000.11转化为『12,000,000.11』?</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function commafy(num)&#123;</span><br><span class="line">	return num &amp;&amp; num</span><br><span class="line">		.toString()</span><br><span class="line">		.replace(/(\d)(?=(\d&#123;3&#125;)+\.)/g, function($1, $2)&#123;</span><br><span class="line">			return $2 + &apos;,&apos;;</span><br><span class="line">		&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="“1”-“2”-“3”-map-parseInt-答案是多少？"><a href="#“1”-“2”-“3”-map-parseInt-答案是多少？" class="headerlink" title="[“1”, “2”, “3”].map(parseInt) 答案是多少？"></a>[“1”, “2”, “3”].map(parseInt) 答案是多少？</h3><ul>
+<li>parseInt() 函数能解析一个字符串，并返回一个整数，需要两个参数 (val, radix)，其中 radix 表示要解析的数字的<strong>基数</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function parseInt(str, radix) &#123;</span><br><span class="line">    return str+&apos;-&apos;+radix;</span><br><span class="line">&#125;;</span><br><span class="line">var a=[&quot;1&quot;, &quot;2&quot;, &quot;3&quot;];</span><br><span class="line">a.map(parseInt);  // [&quot;1-0&quot;, &quot;2-1&quot;, &quot;3-2&quot;] 不能大于radix</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>因为二进制里面，没有数字3,导致出现超范围的radix赋值和不合法的进制解析，才会返回NaN</p>
+<p>所以[“1”, “2”, “3”].map(parseInt) 答案也就是：[1, NaN, NaN]</p>
+</li>
+</ul>
+<h3 id="解释一下这段代码的意思吗？"><a href="#解释一下这段代码的意思吗？" class="headerlink" title="解释一下这段代码的意思吗？"></a>解释一下这段代码的意思吗？</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[].forEach.call($$(<span class="string">"*"</span>), <span class="function"><span class="keyword">function</span>(<span class="params">el</span>)</span>&#123;</span><br><span class="line">    el.style.outline = <span class="string">"1px solid #"</span> + (~~(<span class="built_in">Math</span>.random()*(<span class="number">1</span>&lt;&lt;<span class="number">24</span>))).toString(<span class="number">16</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>解释：获取页面所有的元素，遍历这些元素，为它们添加1像素随机颜色的轮廓(outline)</p>
+<ol>
+<li><p><code>$$(sel)</code> // $$函数被许多现代浏览器命令行支持，等价于 document.querySelectorAll(sel)</p>
+</li>
+<li><p><code>[].forEach.call(NodeLists)</code> // 使用 call 函数将数组遍历函数 forEach 应到节点元素列表</p>
+</li>
+<li><p><code>el.style.outline = &quot;1px solid #333&quot;</code> // 样式 outline 位于盒模型之外，不影响元素布局位置</p>
+</li>
+<li><p><code>(1&lt;&lt;24)</code> // parseInt(“ffffff”, 16) == 16777215 == 2^24 - 1 // 1&lt;&lt;24 == 2^24 == 16777216</p>
+</li>
+<li><p><code>Math.random()*(1&lt;&lt;24)</code> // 表示一个位于 0 到 16777216 之间的随机浮点数</p>
+</li>
+<li><p><code>~~Math.random()*(1&lt;&lt;24)</code> // <code>~~</code> 作用相当于 parseInt 取整</p>
+</li>
+<li><p><code>(~~(Math.random()*(1&lt;&lt;24))).toString(16)</code> // 转换为一个十六进制- </p>
+</li>
+</ol>
+<h3 id="知道什么是webkit么-知道怎么用浏览器的各种工具来调试和debug代码么"><a href="#知道什么是webkit么-知道怎么用浏览器的各种工具来调试和debug代码么" class="headerlink" title="知道什么是webkit么? 知道怎么用浏览器的各种工具来调试和debug代码么?"></a>知道什么是webkit么? 知道怎么用浏览器的各种工具来调试和debug代码么?</h3><ul>
+<li>Chrome,Safari浏览器内核</li>
+</ul>
+<p><strong>检测浏览器版本版本有哪些方式？</strong></p>
+<ul>
+<li>功能检测、userAgent特征检测</li>
+<li>比如：navigator.userAgent</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//&quot;Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_2) AppleWebKit/537.36</span><br><span class="line">		  (KHTML, like Gecko) Chrome/41.0.2272.101 Safari/537.36&quot;</span><br></pre></td></tr></table></figure>
+
+<p><strong>What is a Polyfill?</strong></p>
+<ul>
+<li>polyfill 是“在旧版浏览器上复制标准 API 的 JavaScript 补充”,可以动态地加载 JavaScript 代码或库，在不支持这些标准 API 的浏览器中模拟它们</li>
+<li>例如，geolocation（地理位置）polyfill 可以在 navigator 对象上添加全局的 geolocation 对象，还能添加 getCurrentPosition 函数以及“坐标”回调对象</li>
+<li>所有这些都是 W3C 地理位置 API 定义的对象和函数。因为 polyfill 模拟标准 API，所以能够以一种面向所有浏览器未来的方式针对这些 API 进行开发</li>
+<li>一旦对这些 API 的支持变成绝对大多数，则可以方便地去掉 polyfill，无需做任何额外工作。</li>
+</ul>
+<p><strong>做的项目中，有没有用过或自己实现一些 polyfill 方案（兼容性处理方案）？</strong></p>
+<ul>
+<li>比如： html5shiv、Geolocation、Placeholder</li>
+</ul>
+<p><strong>使用JS实现获取文件扩展名？</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function getFileExtension(filename) &#123;</span><br><span class="line">  return filename.slice((filename.lastIndexOf(&quot;.&quot;) - 1 &gt;&gt;&gt; 0) + 2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>String.lastIndexOf() </p>
+<ul>
+<li>方法返回指定值（本例中的’.’）在调用该方法的字符串中最后出现的位置，如果没找到则返回 -1。对于’filename’和’.hiddenfile’，lastIndexOf的返回值分别为0和-1无符号右移操作符(»&gt;) </li>
+<li>将-1转换为4294967295，将-2转换为4294967294，这个方法可以保证边缘情况时文件名不变</li>
+</ul>
+</li>
+<li><p>String.prototype.slice() </p>
+<ul>
+<li>从上面计算的索引处提取文件的扩展名。如果索引比文件名的长度大，结果为””</li>
+</ul>
+</li>
+</ul>
+<h3 id="遍历所有文档树所有节点-考察递归-的方法"><a href="#遍历所有文档树所有节点-考察递归-的方法" class="headerlink" title="遍历所有文档树所有节点(考察递归)的方法"></a>遍历所有文档树所有节点(考察递归)的方法</h3><p>参考链接：</p>
+<p><a href="https://blog.csdn.net/jjaze3344/article/details/7280321" target="_blank" rel="noopener">https://blog.csdn.net/jjaze3344/article/details/7280321</a></p>
+<p><a href="https://blog.csdn.net/sinat_27346451/article/details/77073938" target="_blank" rel="noopener">https://blog.csdn.net/sinat_27346451/article/details/77073938</a></p>
+<h3 id="sort排序相关-注意ASCII这个坑-（参考链接）"><a href="#sort排序相关-注意ASCII这个坑-（参考链接）" class="headerlink" title="sort排序相关(注意ASCII这个坑)（参考链接）"></a>sort排序相关(注意ASCII这个坑)（<a href="https://blog.csdn.net/bingxi312/article/details/77160876" target="_blank" rel="noopener">参考链接</a>）</h3><p><strong>默认情况下，sort函数是按照ASCII字符排序。</strong>在ASCII字符排序中，是对应位相比较。18和5相比，实际上就是1和5相比，因为5只有一位数，所以只比较第一位。因为1&lt;5，所以就会出现错误的答案。</p>
+<p>错误如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var a = [5,41,7,18]</span><br><span class="line">a.sort();</span><br><span class="line">alert(a);     //18，41，5，7</span><br></pre></td></tr></table></figure>
+
+<p>解决方案：</p>
+<p>如果省略参数，将默认为ASCII字符排序，简而言之，就是有了参数，就不是默认为ASCII字符排序了。</p>
+<p>即：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a=[5,41,7,18];</span><br><span class="line">a.sort(function (m, n)&#123;</span><br><span class="line">    return m-n;</span><br><span class="line">&#125;);</span><br><span class="line">alert(a);     //5,7,18,41</span><br></pre></td></tr></table></figure>
+
+<h3 id="移动端开发相关"><a href="#移动端开发相关" class="headerlink" title="移动端开发相关"></a>移动端开发相关</h3><p>参考链接：</p>
+<p><a href="https://juejin.im/post/5a77d6086fb9a0634417bfd3" target="_blank" rel="noopener">https://juejin.im/post/5a77d6086fb9a0634417bfd3</a></p>
+<p><a href="http://www.restran.net/2015/05/14/mobile-web-front-end-collections/" target="_blank" rel="noopener">http://www.restran.net/2015/05/14/mobile-web-front-end-collections/</a></p>
+<h3 id="for-in-和-for-of"><a href="#for-in-和-for-of" class="headerlink" title="for in 和 for of"></a>for in 和 for of</h3><p><strong>for in</strong></p>
+<ul>
+<li>一般用于遍历对象的可枚举属性。以及对象从构造函数原型中继承的属性。对于每个不同的属性，语句都会被执行。</li>
+<li>不建议使用 for in 遍历数组，因为输出的顺序是不固定的。</li>
+<li>如果迭代的对象的变量值是 null 或者 undefined, for in 不执行循环体，建议在使用 for in 循环之前，先检查该对象的值是不是 null 或者 undefined</li>
+</ul>
+<p><strong>for of</strong></p>
+<p>for…of 语句在可迭代对象（包括 Array，Map，Set，String，TypedArray，arguments 对象等等）上创建一个迭代循环，调用自定义迭代钩子，并为每个不同属性的值执行语句</p>
+<p>解析：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = &#123;</span><br><span class="line">  a: <span class="number">1</span>,</span><br><span class="line">  b: <span class="number">2</span>,</span><br><span class="line">  c: <span class="number">3</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">var</span> s1 = <span class="built_in">Object</span>.create(s);</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> prop <span class="keyword">in</span> s1) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(prop); <span class="comment">//a b c</span></span><br><span class="line">  <span class="built_in">console</span>.log(s1[prop]); <span class="comment">//1 2 3</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> prop <span class="keyword">of</span> s1) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(prop); <span class="comment">//报错如下 Uncaught TypeError: s1 is not iterable</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> prop <span class="keyword">of</span> <span class="built_in">Object</span>.keys(s1)) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(prop); <span class="comment">// a b c</span></span><br><span class="line">  <span class="built_in">console</span>.log(s1[prop]); <span class="comment">//1 2 3</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="for-in、Object-keys-和-Object-getOwnPropertyNames-对属性遍历有什么区别？"><a href="#for-in、Object-keys-和-Object-getOwnPropertyNames-对属性遍历有什么区别？" class="headerlink" title="for in、Object.keys 和 Object.getOwnPropertyNames 对属性遍历有什么区别？"></a>for in、Object.keys 和 Object.getOwnPropertyNames 对属性遍历有什么区别？</h3><ul>
+<li>for in 会遍历自身及原型链上的可枚举属性</li>
+<li>Object.keys 会将对象自身的可枚举属性的 key 输出</li>
+<li>会将自身所有的属性的 key 输出</li>
+</ul>
+<p>解析：</p>
+<p>ECMAScript 将对象的属性分为两种：数据属性和访问器属性。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> parent = <span class="built_in">Object</span>.create(<span class="built_in">Object</span>.prototype, &#123;</span><br><span class="line">  a: &#123;</span><br><span class="line">    value: <span class="number">123</span>,</span><br><span class="line">    writable: <span class="literal">true</span>,</span><br><span class="line">    enumerable: <span class="literal">true</span>,</span><br><span class="line">    configurable: <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// parent继承自Object.prototype，有一个可枚举的属性a（enumerable:true）。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> child = <span class="built_in">Object</span>.create(parent, &#123;</span><br><span class="line">  b: &#123;</span><br><span class="line">    value: <span class="number">2</span>,</span><br><span class="line">    writable: <span class="literal">true</span>,</span><br><span class="line">    enumerable: <span class="literal">true</span>,</span><br><span class="line">    configurable: <span class="literal">true</span></span><br><span class="line">  &#125;,</span><br><span class="line">  c: &#123;</span><br><span class="line">    value: <span class="number">3</span>,</span><br><span class="line">    writable: <span class="literal">true</span>,</span><br><span class="line">    enumerable: <span class="literal">false</span>,</span><br><span class="line">    configurable: <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//child 继承自 parent ，b可枚举，c不可枚举</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="for-in"><a href="#for-in" class="headerlink" title="for in"></a>for in</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> child) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(key);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// b</span></span><br><span class="line"><span class="comment">// a</span></span><br><span class="line"><span class="comment">// for in 会遍历自身及原型链上的可枚举属性</span></span><br></pre></td></tr></table></figure>
+
+<p>如果只想输出自身的可枚举属性，可使用 hasOwnProperty 进行判断(数组与对象都可以，此处用数组做例子)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];</span><br><span class="line"><span class="built_in">Array</span>.prototype.xxx = <span class="number">1231235</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">in</span> arr) &#123;</span><br><span class="line">  <span class="keyword">if</span> (arr.hasOwnProperty(i)) &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(arr[i]);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 1</span></span><br><span class="line"><span class="comment">// 2</span></span><br><span class="line"><span class="comment">// 3</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Object-keys"><a href="#Object-keys" class="headerlink" title="Object.keys"></a>Object.keys</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(child));</span><br><span class="line"><span class="comment">// ["b"]</span></span><br><span class="line"><span class="comment">// Object.keys 会将对象自身的可枚举属性的key输出</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Object-getOwnPropertyNames"><a href="#Object-getOwnPropertyNames" class="headerlink" title="Object.getOwnPropertyNames"></a>Object.getOwnPropertyNames</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.getOwnPropertyNames(child));</span><br><span class="line"><span class="comment">// ["b","c"]</span></span><br><span class="line"><span class="comment">// 会将自身所有的属性的key输出</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="iframe-跨域通信和不跨域通信"><a href="#iframe-跨域通信和不跨域通信" class="headerlink" title="iframe 跨域通信和不跨域通信"></a>iframe 跨域通信和不跨域通信</h3><p><strong>不跨域通信</strong></p>
+<p>主页面</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">iframe</span></span></span><br><span class="line"><span class="tag">      <span class="attr">name</span>=<span class="string">"myIframe"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">id</span>=<span class="string">"iframe"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">class</span>=<span class="string">""</span></span></span><br><span class="line"><span class="tag">      <span class="attr">src</span>=<span class="string">"flexible.html"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">width</span>=<span class="string">"500px"</span></span></span><br><span class="line"><span class="tag">      <span class="attr">height</span>=<span class="string">"500px"</span></span></span><br><span class="line"><span class="tag">    &gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">fullscreen</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line">      alert(1111);</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>子页面 flexible.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span> /&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span><span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    我是子页面</span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line"><span class="actionscript">    <span class="comment">// window.parent.fullScreens()</span></span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">showalert</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line">      alert(222);</span><br><span class="line">    &#125;</span><br><span class="line">  <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>1、主页面要是想要调取子页面的 showalert 方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">myIframe.window.showalert();</span><br></pre></td></tr></table></figure>
+
+<p>2、子页面要掉主页面的 fullscreen 方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.parent.fullScreens();</span><br></pre></td></tr></table></figure>
+
+<p>3、js 在 iframe 子页面获取父页面元素:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.parent.document.getElementById(<span class="string">"元素id"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>4、js 在父页面获取 iframe 子页面元素代码如下:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.frames[<span class="string">"iframe_ID"</span>].document.getElementById(<span class="string">"元素id"</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>跨域通信</strong></p>
+<p>使用<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/postMessage" target="_blank" rel="noopener">postMessage(官方用法）</a></p>
+<p>子页面</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.parent.postMessage(<span class="string">"hello"</span>, <span class="string">"http://127.0.0.1:8089"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>父页面接收</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">"message"</span>, <span class="function"><span class="keyword">function</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">  alert(<span class="number">123</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>解析：<br><a href="https://blog.csdn.net/weixin_41229588/article/details/93719894" target="_blank" rel="noopener">参考</a></p>
+<h3 id="H5-与-Native-如何交互"><a href="#H5-与-Native-如何交互" class="headerlink" title="H5 与 Native 如何交互"></a>H5 与 Native 如何交互</h3><p>jsBridge</p>
+<p>解析：<br><a href="https://segmentfault.com/a/1190000010356403" target="_blank" rel="noopener">参考</a></p>
+<h3 id="lt-script-gt-标签的-defer-和-asnyc-属性的作用以及二者的区别？"><a href="#lt-script-gt-标签的-defer-和-asnyc-属性的作用以及二者的区别？" class="headerlink" title="&lt;script&gt; 标签的 defer 和 asnyc 属性的作用以及二者的区别？"></a><code>&lt;script&gt;</code> 标签的 defer 和 asnyc 属性的作用以及二者的区别？</h3><ul>
+<li>1、defer 和 async 的网络加载过程是一致的，都是异步执行。</li>
+<li>2、区别在于加载完成之后什么时候执行，可以看出 defer 是文档所有元素解析完成之后才执行的。</li>
+<li>3、如果存在多个 defer 脚本，那么它们是按照顺序执行脚本的，而 async，无论声明顺序如何，只要加载完成就立刻执行</li>
+</ul>
+<p>解析：</p>
+<p>无论<code>&lt;script&gt;</code>标签是嵌入代码还是引用外部文件，只要不包含 defer 属性和 async 属性（这两个属性只对外部文件有效），浏览器会按照<code>&lt;script&gt;</code>的出现顺序对他们依次进行解析，也就是说，只有在第一个<code>&lt;script&gt;</code>中的代码执行完成之后，浏览器才会执行第二个<code>&lt;script&gt;</code>中的代码，并且在解析时，页面的处理会暂时停止。</p>
+<p>嵌入代码的解析=执行<br>外部文件的解析=下载+执行</p>
+<p>script 标签存在两个属性，defer 和 async，这两个属性只对外部文件有效</p>
+<p><strong>只有一个脚本的情况</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"a.js"</span> /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>没有 defer 或 async 属性，浏览器会立即下载并执行相应的脚本，并且在下载和执行时页面的处理会停止。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script defer src=<span class="string">"a.js"</span> /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>有了 defer 属性，浏览器会立即下载相应的脚本，在下载的过程中页面的处理不会停止，等到文档解析完成脚本才会执行。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"a.js"</span> /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>有了 async 属性，浏览器会立即下载相应的脚本，在下载的过程中页面的处理不会停止，下载完成后立即执行，执行过程中页面处理会停止。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script defer <span class="keyword">async</span> src=<span class="string">"a.js"</span> /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>如果同时指定了两个属性,则会遵从 async 属性而忽略 defer 属性。</p>
+<p>下图可以直观的看出三者之间的区别:</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="../../images/js005.png" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>其中蓝色代表 js 脚本网络下载时间，红色代表 js 脚本执行，绿色代表 html 解析。</p>
+<p><strong>多个脚本的情况</strong></p>
+<p>这里只列举两个脚本的情况：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"a.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script src=<span class="string">"b.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>没有 defer 或 async 属性，浏览器会立即下载并执行脚本 a.js，在 a.js 脚本执行完成后才会下载并执行脚本 b.js，在脚本下载和执行时页面的处理会停止。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script defer src=<span class="string">"a.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script defer src=<span class="string">"b.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>有了 defer 属性，浏览器会立即下载相应的脚本 a.js 和 b.js，在下载的过程中页面的处理不会停止，等到文档解析完成才会执行这两个脚本。HTML5 规范要求脚本按照它们出现的先后顺序执行，因此第一个延迟脚本会先于第二个延迟脚本执行，而这两个脚本会先于 DOMContentLoaded 事件执行。<br>在现实当中，延迟脚本并不一定会按照顺序执行，也不一定会在 DOMContentLoaded 事件触发前执行，因此最好只包含一个延迟脚本。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"a.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script <span class="keyword">async</span> src=<span class="string">"b.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<p>有了 async 属性，浏览器会立即下载相应的脚本 a.js 和 b.js，在下载的过程中页面的处理不会停止，a.js 和 b.js 哪个先下载完成哪个就立即执行，执行过程中页面处理会停止，但是其他脚本的下载不会停止。标记为 async 的脚本并不保证按照制定它们的先后顺序执行。异步脚本一定会在页面的 load 事件前执行，但可能会在 DOMContentLoaded 事件触发之前或之后执行。</p>
+<p><a href="https://blog.csdn.net/weixin_42561383/article/details/86564715" target="_blank" rel="noopener">参考</a></p>
+<h3 id="Object-prototype-toString-call-和-instanceOf-和-Array-isArray-区别好坏"><a href="#Object-prototype-toString-call-和-instanceOf-和-Array-isArray-区别好坏" class="headerlink" title="Object.prototype.toString.call() 和 instanceOf 和 Array.isArray() 区别好坏"></a>Object.prototype.toString.call() 和 instanceOf 和 Array.isArray() 区别好坏</h3><ul>
+<li><p>Object.prototype.toString.call()</p>
+<ul>
+<li><p>优点：这种方法对于所有基本的数据类型都能进行判断，即使是 null 和 undefined 。</p>
+</li>
+<li><p>缺点：不能精准判断自定义对象，对于自定义对象只会返回[object Object]</p>
+</li>
+</ul>
+</li>
+<li><p>instanceOf</p>
+<ul>
+<li>优点：instanceof 可以弥补 Object.prototype.toString.call()不能判断自定义实例化对象的缺点。</li>
+<li>缺点： instanceof 只能用来判断对象类型，原始类型不可以。并且所有对象类型 instanceof Object 都是 true，且不同于其他两种方法的是它不能检测出 iframes。</li>
+</ul>
+</li>
+<li><p>Array.isArray()</p>
+<ul>
+<li>优点：当检测 Array 实例时，Array.isArray 优于 instanceof ，因为 Array.isArray 可以检测出 iframes</li>
+<li>缺点：只能判别数组<br>解析：</li>
+</ul>
+</li>
+</ul>
+<p><strong>Object.prototype.toString.call()</strong></p>
+<p>每一个继承 Object 的对象都有 toString 方法，如果 toString 方法没有重写的话，会返回 [Object type]，其中 type 为对象的类型。但当除了 Object 类型的对象外，其他类型直接使用 toString 方法时，会直接返回都是内容的字符串，所以我们需要使用 call 或者 apply 方法来改变 toString 方法的执行上下文。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> an = [<span class="string">"Hello"</span>, <span class="string">"An"</span>];</span><br><span class="line">an.toString(); <span class="comment">// "Hello,An"</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(an); <span class="comment">// "[object Array]"</span></span><br></pre></td></tr></table></figure>
+
+<p>这种方法对于所有基本的数据类型都能进行判断，即使是 null 和 undefined 。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="string">"An"</span>); <span class="comment">// "[object String]"</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="number">1</span>); <span class="comment">// "[object Number]"</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="built_in">Symbol</span>(<span class="number">1</span>)); <span class="comment">// "[object Symbol]"</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">null</span>); <span class="comment">// "[object Null]"</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="literal">undefined</span>); <span class="comment">// "[object Undefined]"</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;); <span class="comment">// "[object Function]"</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(&#123; <span class="attr">name</span>: <span class="string">"An"</span> &#125;); <span class="comment">// "[object Object]"</span></span><br></pre></td></tr></table></figure>
+
+<p>缺点：不能精准判断自定义对象，对于自定义对象只会返回[object Object]</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> f1 = <span class="keyword">new</span> f(<span class="string">"martin"</span>);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.toString.call(f1)); <span class="comment">//[object Object]</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(); <span class="comment">// 常用于判断浏览器内置对象。</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>Array.isArray()</strong></p>
+<ul>
+<li>功能：用来判断对象是否为数组</li>
+<li>instanceof 与 isArray</li>
+</ul>
+<p>当检测 Array 实例时，Array.isArray 优于 instanceof ，因为 Array.isArray 可以检测出 iframes</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> iframe = <span class="built_in">document</span>.createElement(<span class="string">"iframe"</span>);</span><br><span class="line"><span class="built_in">document</span>.body.appendChild(iframe);</span><br><span class="line">xArray = <span class="built_in">window</span>.frames[<span class="built_in">window</span>.frames.length - <span class="number">1</span>].Array;</span><br><span class="line"><span class="keyword">var</span> arr = <span class="keyword">new</span> xArray(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>); <span class="comment">// [1,2,3]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Correctly checking for Array</span></span><br><span class="line"><span class="built_in">Array</span>.isArray(arr); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">Object</span>.prototype.toString.call(arr); <span class="comment">// true</span></span><br><span class="line"><span class="comment">// Considered harmful, because doesn't work though iframes</span></span><br><span class="line">arr <span class="keyword">instanceof</span> <span class="built_in">Array</span>; <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<p>缺点：只能判别数组</p>
+<ul>
+<li>Array.isArray() 与 Object.prototype.toString.call()</li>
+</ul>
+<p>Array.isArray()是 ES5 新增的方法，当不存在 Array.isArray() ，可以用 Object.prototype.toString.call() 实现。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!<span class="built_in">Array</span>.isArray) &#123;</span><br><span class="line">  <span class="built_in">Array</span>.isArray = <span class="function"><span class="keyword">function</span>(<span class="params">arg</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Object</span>.prototype.toString.call(arg) === <span class="string">"[object Array]"</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><a href="https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/23" target="_blank" rel="noopener">参考</a></p>
+<h3 id="你对松散类型的理解"><a href="#你对松散类型的理解" class="headerlink" title="你对松散类型的理解"></a>你对松散类型的理解</h3><p>JavaScript 中的变量为松散类型，所谓松散类型就是指当一个变量被申明出来就可以保存任意类型的值，就是不像 SQL 一样申明某个键值为 int 就只能保存整型数值，申明 varchar 只能保存字符串。一个变量所保存值的类型也可以改变，这在 JavaScript 中是完全有效的，只是不推荐。相比较于将变量理解为“盒子“，《JavaScript 编程精解》中提到应该将变量理解为“触手”，它不保存值，而是抓取值。这一点在当变量保存引用类型值时更加明显。</p>
+<p>JavaScript 中变量可能包含两种不同的数据类型的值：基本类型和引用类型。基本类型是指简单的数据段，而引用类型指那些可能包含多个值的对象。</p>
+<h3 id="JS-严格模式和正常模式"><a href="#JS-严格模式和正常模式" class="headerlink" title="JS 严格模式和正常模式"></a>JS 严格模式和正常模式</h3><p>严格模式使用”use strict”;</p>
+<p>作用：</p>
+<ul>
+<li>消除 Javascript 语法的一些不合理、不严谨之处，减少一些怪异行为;</li>
+<li>消除代码运行的一些不安全之处，保证代码运行的安全；</li>
+<li>提高编译器效率，增加运行速度；</li>
+<li>为未来新版本的 Javascript 做好铺垫。</li>
+</ul>
+<p>表现：</p>
+<ul>
+<li>严格模式下, delete 运算符后跟随非法标识符(即 delete 不存在的标识符)，会抛出语法错误； 非严格模式下，会静默失败并返回 false</li>
+<li>严格模式中，对象直接量中定义同名属性会抛出语法错误； 非严格模式不会报错</li>
+<li>严格模式中，函数形参存在同名的，抛出错误； 非严格模式不会</li>
+<li>严格模式不允许八进制整数直接量（如：023）</li>
+<li>严格模式中，arguments 对象是传入函数内实参列表的静态副本；非严格模式下，arguments 对象里的元素和对应的实参是指向同一个值的引用</li>
+<li>严格模式中 eval 和 arguments 当做关键字，它们不能被赋值和用作变量声明</li>
+<li>严格模式会限制对调用栈的检测能力，访问 arguments.callee.caller 会抛出异常</li>
+<li>严格模式 变量必须先声明，直接给变量赋值，不会隐式创建全局变量，不能用 with,</li>
+<li>严格模式中 call apply 传入 null undefined 保持原样不被转换为 window</li>
+</ul>
+<p>解析：</p>
+<p>一、概述</p>
+<p>除了正常运行模式，ECMAscript 5 添加了第二种运行模式：”严格模式”（strict mode）。顾名思义，这种模式使得 Javascript 在更严格的条件下运行。</p>
+<p>设立”严格模式”的目的，主要有以下几个：</p>
+<ul>
+<li>消除 Javascript 语法的一些不合理、不严谨之处，减少一些怪异行为;</li>
+<li>消除代码运行的一些不安全之处，保证代码运行的安全；</li>
+<li>提高编译器效率，增加运行速度；</li>
+<li>为未来新版本的 Javascript 做好铺垫。</li>
+</ul>
+<p>“严格模式”体现了 Javascript 更合理、更安全、更严谨的发展方向，包括 IE 10 在内的主流浏览器，都已经支持它，许多大项目已经开始全面拥抱它。</p>
+<p>另一方面，同样的代码，在”严格模式”中，可能会有不一样的运行结果；一些在”正常模式”下可以运行的语句，在”严格模式”下将不能运行。掌握这些内容，有助于更细致深入地理解 Javascript，让你变成一个更好的程序员。</p>
+<p>本文将对”严格模式”做详细介绍。</p>
+<p>二、进入标志</p>
+<p>进入”严格模式”的标志，是下面这行语句：</p>
+<p>“use strict”;</p>
+<p>老版本的浏览器会把它当作一行普通字符串，加以忽略。</p>
+<p>三、如何调用</p>
+<p>“严格模式”有两种调用方法，适用于不同的场合。</p>
+<p>3.1 针对整个脚本文件</p>
+<p>将”use strict”放在脚本文件的第一行，则整个脚本都将以”严格模式”运行。如果这行语句不在第一行，则无效，整个脚本以”正常模式”运行。如果不同模式的代码文件合并成一个文件，这一点需要特别注意。</p>
+<p>(严格地说，只要前面不是产生实际运行结果的语句，”use strict”可以不在第一行，比如直接跟在一个空的分号后面。)</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">　　&lt;script&gt;</span><br><span class="line"><span class="meta">　　　　"use strict"</span>;</span><br><span class="line">　　　　<span class="built_in">console</span>.log(<span class="string">"这是严格模式。"</span>);</span><br><span class="line">　　&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">　　&lt;script&gt;</span></span><br><span class="line"><span class="regexp">　　　　console.log("这是正常模式。");kly, it's almost 2 years ago now. I can admit it now - I run it on my school's network that has about 50 computers.</span></span><br><span class="line"><span class="regexp">　　&lt;/</span>script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>上面的代码表示，一个网页中依次有两段 Javascript 代码。前一个 script 标签是严格模式，后一个不是。</p>
+<p>3.2 针对单个函数</p>
+<p>将”use strict”放在函数体的第一行，则整个函数以”严格模式”运行。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">strict</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">  "use strict"</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">"这是严格模式。"</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">notStrict</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">"这是正常模式。"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.3 脚本文件的变通写法</p>
+<p>因为第一种调用方法不利于文件合并，所以更好的做法是，借用第二种方法，将整个脚本文件放在一个立即执行的匿名函数之中。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">  "use strict"</span>; <span class="comment">// some code here</span></span><br><span class="line"></span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<p>四、语法和行为改变</p>
+<p>严格模式对 Javascript 的语法和行为，都做了一些改变。</p>
+<p>4.1 全局变量显式声明</p>
+<p>在正常模式中，如果一个变量没有声明就赋值，默认是全局变量。严格模式禁止这种用法，全局变量必须显式声明。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">"use strict"</span>;</span><br><span class="line"></span><br><span class="line">v = <span class="number">1</span>; <span class="comment">// 报错，v未声明</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++) &#123;</span><br><span class="line">  <span class="comment">// 报错，i未声明</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>因此，严格模式下，变量都必须先用 var 命令声明，然后再使用。</p>
+<p>4.2 静态绑定</p>
+<p>Javascript 语言的一个特点，就是允许”动态绑定”，即某些属性和方法到底属于哪一个对象，不是在编译时确定的，而是在运行时（runtime）确定的。</p>
+<p>严格模式对动态绑定做了一些限制。某些情况下，只允许静态绑定。也就是说，属性和方法到底归属哪个对象，在编译阶段就确定。这样做有利于编译效率的提高，也使得代码更容易阅读，更少出现意外。</p>
+<p>具体来说，涉及以下几个方面。</p>
+<p>（1）禁止使用 with 语句</p>
+<p>因为 with 语句无法在编译时就确定，属性到底归属哪个对象。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">　　"use strict"</span>;</span><br><span class="line"></span><br><span class="line">　　<span class="keyword">var</span> v = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">　　<span class="keyword">with</span> (o)&#123; <span class="comment">// 语法错误</span></span><br><span class="line">　　　　v = <span class="number">2</span>;</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+<p>（2）创设 eval 作用域</p>
+<p>正常模式下，Javascript 语言有两种变量作用域（scope）：全局作用域和函数作用域。严格模式创设了第三种作用域：eval 作用域。</p>
+<p>正常模式下，eval 语句的作用域，取决于它处于全局作用域，还是处于函数作用域。严格模式下，eval 语句本身就是一个作用域，不再能够生成全局变量了，它所生成的变量只能用于 eval 内部。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">"use strict"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> x = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.info(<span class="built_in">eval</span>(<span class="string">"var x = 5; x"</span>)); <span class="comment">// 5</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.info(x); <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+
+<p>4.3 增强的安全措施</p>
+<p>（1）禁止 this 关键字指向全局对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> !<span class="keyword">this</span>;</span><br><span class="line">&#125; <span class="comment">// 返回false，因为"this"指向全局对象，"!this"就是false</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">  "use strict"</span>;</span><br><span class="line">  <span class="keyword">return</span> !<span class="keyword">this</span>;</span><br><span class="line">&#125; <span class="comment">// 返回true，因为严格模式下，this的值为undefined，所以"!this"为true。</span></span><br></pre></td></tr></table></figure>
+
+<p>因此，使用构造函数时，如果忘了加 new，this 不再指向全局对象，而是报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">  "use strict"</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">this</span>.a = <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f(); <span class="comment">// 报错，this未定义</span></span><br></pre></td></tr></table></figure>
+
+<p>（2）禁止在函数内部遍历调用栈</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="meta">  "use strict"</span>;</span><br><span class="line"></span><br><span class="line">  f1.caller; <span class="comment">// 报错</span></span><br><span class="line"></span><br><span class="line">  f1.arguments; <span class="comment">// 报错</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f1();</span><br></pre></td></tr></table></figure>
+
+<p>4.4 禁止删除变量</p>
+<p>严格模式下无法删除变量。只有 configurable 设置为 true 的对象属性，才能被删除。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">　　"use strict"</span>;</span><br><span class="line"></span><br><span class="line">　　<span class="keyword">var</span> x;</span><br><span class="line"></span><br><span class="line">　　<span class="keyword">delete</span> x; <span class="comment">// 语法错误</span></span><br><span class="line"></span><br><span class="line">　　<span class="keyword">var</span> o = <span class="built_in">Object</span>.create(<span class="literal">null</span>, &#123;<span class="string">'x'</span>: &#123;</span><br><span class="line">　　　　　　value: <span class="number">1</span>,</span><br><span class="line">　　　　　　configurable: <span class="literal">true</span></span><br><span class="line">　　&#125;&#125;);</span><br><span class="line"></span><br><span class="line">　　<span class="keyword">delete</span> o.x; <span class="comment">// 删除成功</span></span><br></pre></td></tr></table></figure>
+
+<p>4.5 显式报错</p>
+<p>正常模式下，对一个对象的只读属性进行赋值，不会报错，只会默默地失败。严格模式下，将报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">"use strict"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> o = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.defineProperty(o, <span class="string">"v"</span>, &#123; <span class="attr">value</span>: <span class="number">1</span>, <span class="attr">writable</span>: <span class="literal">false</span> &#125;);</span><br><span class="line"></span><br><span class="line">o.v = <span class="number">2</span>; <span class="comment">// 报错</span></span><br></pre></td></tr></table></figure>
+
+<p>严格模式下，对一个使用 getter 方法读取的属性进行赋值，会报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">"use strict"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> o = &#123;</span><br><span class="line">  <span class="keyword">get</span> v() &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">o.v = <span class="number">2</span>; <span class="comment">// 报错</span></span><br></pre></td></tr></table></figure>
+
+<p>严格模式下，对禁止扩展的对象添加新属性，会报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">"use strict"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> o = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"><span class="built_in">Object</span>.preventExtensions(o);</span><br><span class="line"></span><br><span class="line">o.v = <span class="number">1</span>; <span class="comment">// 报错</span></span><br></pre></td></tr></table></figure>
+
+<p>严格模式下，删除一个不可删除的属性，会报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">"use strict"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> <span class="built_in">Object</span>.prototype; <span class="comment">// 报错</span></span><br></pre></td></tr></table></figure>
+
+<p>4.6 重名错误</p>
+<p>严格模式新增了一些语法错误。</p>
+<p>（1）对象不能有重名的属性</p>
+<p>正常模式下，如果对象有多个重名属性，最后赋值的那个属性会覆盖前面的值。严格模式下，这属于语法错误。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">"use strict"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> o = &#123;</span><br><span class="line">  p: <span class="number">1</span>,</span><br><span class="line">  p: <span class="number">2</span></span><br><span class="line">&#125;; <span class="comment">// 语法错误</span></span><br></pre></td></tr></table></figure>
+
+<p>（2）函数不能有重名的参数</p>
+<p>正常模式下，如果函数有多个重名的参数，可以用 arguments[i]读取。严格模式下，这属于语法错误。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">　　"use strict"</span>;</span><br><span class="line"></span><br><span class="line">　　<span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">a, a, b</span>) </span>&#123; <span class="comment">// 语法错误</span></span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">return</span> ;</span><br><span class="line"></span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+<p>4.7 禁止八进制表示法</p>
+<p>正常模式下，整数的第一位如果是 0，表示这是八进制数，比如 0100 等于十进制的 64。严格模式禁止这种表示法，整数第一位为 0，将报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">　　"use strict"</span>;</span><br><span class="line"></span><br><span class="line">　　<span class="keyword">var</span> n = <span class="number">0100</span>; <span class="comment">// 语法错误</span></span><br></pre></td></tr></table></figure>
+
+<p>4.8 arguments 对象的限制</p>
+<p>arguments 是函数的参数对象，严格模式对它的使用做了限制。</p>
+<p>（1）不允许对 arguments 赋值</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">　　"use strict"</span>;</span><br><span class="line"></span><br><span class="line">　　<span class="built_in">arguments</span>++; <span class="comment">// 语法错误</span></span><br><span class="line"></span><br><span class="line">　　<span class="keyword">var</span> obj = &#123; <span class="keyword">set</span> p(arguments) &#123; &#125; &#125;; <span class="comment">// 语法错误</span></span><br><span class="line"></span><br><span class="line">　　<span class="keyword">try</span> &#123; &#125; <span class="keyword">catch</span> (<span class="built_in">arguments</span>) &#123; &#125; <span class="comment">// 语法错误</span></span><br><span class="line"></span><br><span class="line">　　<span class="function"><span class="keyword">function</span> <span class="title">arguments</span>(<span class="params"></span>) </span>&#123; &#125; <span class="comment">// 语法错误</span></span><br><span class="line"></span><br><span class="line">　　<span class="keyword">var</span> f = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">"arguments"</span>, <span class="string">"'use strict'; return 17;"</span>); <span class="comment">// 语法错误</span></span><br></pre></td></tr></table></figure>
+
+<p>（2）arguments 不再追踪参数的变化</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line">  a = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> [a, <span class="built_in">arguments</span>[<span class="number">0</span>]];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f(<span class="number">1</span>); <span class="comment">// 正常模式为[2,2]</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params">a</span>) </span>&#123;</span><br><span class="line"><span class="meta">  "use strict"</span>;</span><br><span class="line"></span><br><span class="line">  a = <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> [a, <span class="built_in">arguments</span>[<span class="number">0</span>]];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f(<span class="number">1</span>); <span class="comment">// 严格模式为[2,1]</span></span><br></pre></td></tr></table></figure>
+
+<p>（3）禁止使用 arguments.callee</p>
+<p>这意味着，你无法在匿名函数内部调用自身了。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">"use strict"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> f = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">arguments</span>.callee;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">f(); <span class="comment">// 报错</span></span><br></pre></td></tr></table></figure>
+
+<p>4.9 函数必须声明在顶层</p>
+<p>将来 Javascript 的新版本会引入”块级作用域”。为了与新版本接轨，严格模式只允许在全局作用域或函数作用域的顶层声明函数。也就是说，不允许在非函数的代码块内声明函数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">"use strict"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>&#123;&#125; <span class="comment">// 语法错误</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">f2</span>(<span class="params"></span>) </span>&#123;&#125; <span class="comment">// 语法错误</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>4.10 保留字</p>
+<p>为了向将来 Javascript 的新版本过渡，严格模式新增了一些保留字：implements, interface, let, package, private, protected, public, static, yield。</p>
+<p>使用这些词作为变量名将会报错。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="function"><span class="keyword">function</span> <span class="title">package</span>(<span class="params">protected</span>) </span>&#123; <span class="comment">// 语法错误</span></span><br><span class="line"></span><br><span class="line"><span class="meta">　　　　"use strict"</span>;</span><br><span class="line"></span><br><span class="line">　　　　<span class="keyword">var</span> implements; <span class="comment">// 语法错误</span></span><br><span class="line"></span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure>
+
+<p>此外，ECMAscript 第五版本身还规定了另一些保留字（class, enum, export, extends, import, super），以及各大浏览器自行增加的 const 保留字，也是不能作为变量名的。</p>
+<p><a href="https://www.ruanyifeng.com/blog/2013/01/javascript_strict_mode.html" target="_blank" rel="noopener">参考</a></p>
+<h3 id="移动端-click-事件、touch-事件、tap-事件的区别"><a href="#移动端-click-事件、touch-事件、tap-事件的区别" class="headerlink" title="移动端 click 事件、touch 事件、tap 事件的区别"></a>移动端 click 事件、touch 事件、tap 事件的区别</h3><ol>
+<li>click 事件在移动端会有 200-300ms ms 的延迟，主要原因是苹果手机在设计时，考虑到用户在浏览网页时需要放大，所以，在用户点击的 200-300ms 之后，才触发 click，如果 200-300ms 之内还有 click，就会进行放大缩小。</li>
+<li>touch 事件是针对触屏手机上的触摸事件。现今大多数触屏手机 webkit 内核提供了 touch 事件的监听，让开发者可以获取用户触摸屏幕时的一些信息。其中包括：touchstart,touchmove,touchend,touchcancel 这四个事件，touchstart touchmove touchend 事件可以类比于 mousedown mouseover mouseup 的触发</li>
+<li>tap 事件在移动端，代替 click 作为点击事件，tap 事件被很多框架（如 zepto）封装，来减少这延迟问题， tap 事件不是原生的，所以是封装的，那么具体是如何实现的呢？</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">tap</span>(<span class="params">ele, callback</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 记录开始时间</span></span><br><span class="line">    <span class="keyword">var</span> startTime = <span class="number">0</span>,</span><br><span class="line">    <span class="comment">// 控制允许延迟的时间</span></span><br><span class="line">        delayTime = <span class="number">200</span>,</span><br><span class="line">    <span class="comment">// 记录是否移动，如果移动，则不触发tap事件</span></span><br><span class="line">        isMove = <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 在touchstart时记录开始的时间</span></span><br><span class="line">    ele.addEventListener(<span class="string">'touchstart'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">      startTime = <span class="built_in">Date</span>.now();</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果touchmove事件被触发，则isMove为true</span></span><br><span class="line">    ele.addEventListener(<span class="string">'touchmove'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">      isMove = <span class="literal">true</span>;</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 如果touchmove事件触发或者中间时间超过了延迟时间，则返回，否则，调用回调函数。</span></span><br><span class="line">    ele.addEventListener(<span class="string">'touchend'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (isMove || (<span class="built_in">Date</span>.now() - startTime &gt; delayTime)) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        callback(e);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">var</span> btn = <span class="built_in">document</span>.getElementById(<span class="string">'btn'</span>);</span><br><span class="line">  tap(btn, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">'taped'</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>拓展：</p>
+<h3 id="正则表达式构造函数-var-reg-new-RegExp-‘xxx’-与正则表达字面量-var-reg-有什么不同？"><a href="#正则表达式构造函数-var-reg-new-RegExp-‘xxx’-与正则表达字面量-var-reg-有什么不同？" class="headerlink" title="正则表达式构造函数 var reg = new RegExp(‘xxx’)与正则表达字面量 var reg = // 有什么不同？"></a>正则表达式构造函数 var reg = new RegExp(‘xxx’)与正则表达字面量 var reg = // 有什么不同？</h3><p>使用正则表达字面量的效率更高</p>
+<p>解析：下面的示例代码演示了两种可用于创建正则表达式以匹配反斜杠的方法：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//正则表达字面量</span></span><br><span class="line"><span class="keyword">var</span> re = <span class="regexp">/\\/gm</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//正则构造函数</span></span><br><span class="line"><span class="keyword">var</span> reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"\\\\"</span>, <span class="string">"gm"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> foo = <span class="string">"abc\\123"</span>; <span class="comment">// foo的值为"abc\123"</span></span><br><span class="line"><span class="built_in">console</span>.log(re.test(foo)); <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(reg.test(foo)); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+<p>如上面的代码中可以看到，使用正则表达式字面量表示法时式子显得更加简短，而且不用按照类似类（class-like）的构造函数方式思考。</p>
+<p>其次，在当使用构造函数的时候，在这里要使用四个反斜杠才能匹配单个反斜杠。这使得正则表达式模式显得更长，更加难以阅读和修改。正确来说，当使用 RegExp()构造函数的时候，不仅需要转义引号（即&quot;表示”），并且通常还需要双反斜杠（即\表示一个\）。</p>
+<p>使用 new RegExp()的原因之一在于，某些场景中无法事先确定模式，而只能在运行时以字符串方式创建。</p>
+<p><a href="https://www.cnblogs.com/coco1s/p/4008955.html" target="_blank" rel="noopener">参考</a></p>
+<h3 id="js-中-callee-与-caller-的作用"><a href="#js-中-callee-与-caller-的作用" class="headerlink" title="js 中 callee 与 caller 的作用"></a>js 中 callee 与 caller 的作用</h3><ol>
+<li>caller 返回一个调用当前函数的引用 如果是由顶层调用的话 则返回 null</li>
+</ol>
+<p>（举个栗子哈 caller 给你打电话的人 谁给你打电话了 谁调用了你 很显然是下面 a 函数的执行 只有在打电话的时候你才能知道打电话的人是谁 所以对于函数来说 只有 caller 在函数执行的时候才存在）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> callerTest = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(callerTest.caller);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  callerTest();</span><br><span class="line">&#125;</span><br><span class="line">a(); <span class="comment">//输出function a() &#123;callerTest();&#125;</span></span><br><span class="line">callerTest(); <span class="comment">//输出null</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>callee 返回一个正在被执行函数的引用 （这里常用来递归匿名函数本身 但是在严格模式下不可行）</p>
+<p>callee 是 arguments 对象的一个成员 表示对函数对象本身的引用 它有个 length 属性（代表形参的长度）</p>
+</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> c = <span class="function"><span class="keyword">function</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="built_in">arguments</span>.length, <span class="built_in">arguments</span>.callee.length, <span class="built_in">arguments</span>.callee);</span><br><span class="line">&#125;;</span><br><span class="line">c(<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>); <span class="comment">//输出3 2 function(x,y) &#123;console.log(arguments.length,arguments.callee.length,arguments.callee)&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="异步加载-js-的方法"><a href="#异步加载-js-的方法" class="headerlink" title="异步加载 js 的方法"></a>异步加载 js 的方法</h3><p>方案一：<code>&lt;script&gt;</code>标签的 async=”async”属性（详细参见：script 标签的 async 属性）</p>
+<p>点评：HTML5 中新增的属性，Chrome、FF、IE9&amp;IE9+均支持（IE6~8 不支持）。此外，这种方法不能保证脚本按顺序执行。</p>
+<p>方案二：<code>&lt;script&gt;</code>标签的 defer=”defer”属性</p>
+<p>点评：兼容所有浏览器。此外，这种方法可以确保所有设置 defer 属性的脚本按顺序执行。</p>
+<p>方案三：动态创建<code>&lt;script&gt;</code>标签</p>
+<p>示例：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span></span><br><span class="line"><span class="actionscript">      (<span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> s = <span class="built_in">document</span>.createElement_x(<span class="string">"script"</span>);</span></span><br><span class="line"><span class="actionscript">        s.type = <span class="string">"text/javascript"</span>;</span></span><br><span class="line"><span class="actionscript">        s.src = <span class="string">"http://code.jquery.com/jquery-1.7.2.min.js"</span>;</span></span><br><span class="line"><span class="javascript">        <span class="keyword">var</span> tmp = <span class="built_in">document</span>.getElementsByTagName_r(<span class="string">"script"</span>)[<span class="number">0</span>];</span></span><br><span class="line">        tmp.parentNode.insertBefore(s, tmp);</span><br><span class="line">      &#125;)();</span><br><span class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://xybtv.com/uploads/allimg/100601/48-100601162913.jpg"</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>点评：兼容所有浏览器。</p>
+<p>方案四：AJAX eval（使用 AJAX 得到脚本内容，然后通过 eval_r(xmlhttp.responseText)来运行脚本）</p>
+<p>点评：兼容所有浏览器。</p>
+<p>方案五：iframe 方式（这里可以参照：iframe 异步加载技术及性能 中关于 Meboo 的部分）</p>
+<p>点评：兼容所有浏览器。</p>
+<h3 id="JS-中-文档碎片的理解和使用"><a href="#JS-中-文档碎片的理解和使用" class="headerlink" title="JS 中 文档碎片的理解和使用"></a>JS 中 文档碎片的理解和使用</h3><p> 1、什么是文档碎片？</p>
+<p>document.createDocumentFragment(); // 一个容器，用于暂时存放创建的dom元素</p>
+<p>2、文档碎片有什么用？</p>
+<p>// 将需要添加的大量元素,先添加到文档碎片中，再将文档碎片添加到需要插入的位置，大大 减少dom操作，提高性能（IE和火狐比较明显）</p>
+<p>解析：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 普通方式：（操作了100次dom）</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">100</span>; i &gt; <span class="number">0</span>; i--) &#123;</span><br><span class="line">  <span class="keyword">var</span> elem = <span class="built_in">document</span>.createElement(<span class="string">"div"</span>);</span><br><span class="line">  <span class="built_in">document</span>.body.appendChild(elem); <span class="comment">//放到body中</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//  文档碎片：(操作1次dom)</span></span><br><span class="line"><span class="keyword">var</span> df = <span class="built_in">document</span>.createDocumentFragment();</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">100</span>; i &gt; <span class="number">0</span>; i--) &#123;</span><br><span class="line">  <span class="keyword">var</span> elem = <span class="built_in">document</span>.createElement(<span class="string">"div"</span>);</span><br><span class="line">  df.appendChild(elem);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//最后放入到页面上</span></span><br><span class="line"><span class="built_in">document</span>.body.appendChild(df);</span><br></pre></td></tr></table></figure>
+
+<h3 id="点透问题"><a href="#点透问题" class="headerlink" title="点透问题"></a>点透问题</h3><p>如果我们在移动端所有的 click 都替换为了 tap 事件，还是会触发点透问题的，因为实质是： 在同一个 z 轴上，z-index 不同的两个元素，上面的元素是一个绑定了 tap 事件的，下面是一个 a 标签，一旦 tap 触发，这个元素就会 display: none，而从上面的 tap 可以看出，有 touchstart、touchend，所以会 300ms 之后触发 click 事件，而 z-index 已经消失了，所以，触发了下面的 a 的 click 事件，注意： 我们认为 a 标签默认是绑定了 click 事件的。而这种现象不是我们所期待的。</p>
+<p>解决方案： （1）使用 fastclick。 （2）添加一个延迟。</p>
+<p>（1）直接引入 fastclick 库。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(</span><br><span class="line">  <span class="string">"load"</span>,</span><br><span class="line">  <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    FastClick.attach(<span class="built_in">document</span>.body);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="literal">false</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>这样，就可以成功解决问题了。</p>
+<p>（2）对于上一个 tap 做延迟。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tap(ele, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    ele.style.display = <span class="string">"none"</span>;</span><br><span class="line">  &#125;, <span class="number">300</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>这样，过了 300ms，那么 click 事件就不会触发在下面的 a 标签上了。</p>
+<h3 id="JS-单线程还是多线程，如何显示异步操作"><a href="#JS-单线程还是多线程，如何显示异步操作" class="headerlink" title="JS 单线程还是多线程，如何显示异步操作"></a>JS 单线程还是多线程，如何显示异步操作</h3><p>JS 本身是单线程的，他是依靠浏览器完成的异步操作。</p>
+<p>解析：</p>
+<p>具体步骤，</p>
+<p>1、主线程 执行 js 中所有的代码。</p>
+<p>2、主线程 在执行过程中发现了需要异步的任务任务后扔给浏览器（浏览器创建多个线程执行），并在  callback queque  中创建对应的回调函数（回调函数是一个对象，包含该函数是否执行完毕等）。</p>
+<p>3、主线程 已经执行完毕所有同步代码。开始监听  callback queque 一旦 浏览器 中某个线程任务完成将会改变回调函数的状态。主线程查看到某个函数的状态为已完成，就会执行该函数。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="../../images/js006.png" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2023-12-19T02:01:34.000Z" itemprop="dateUpdated">2023-12-19 10:01:34</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/interview/javascript-bu-chang-kao.html" target="_blank" rel="external">https://qw66.gitee.io/interview/javascript-bu-chang-kao.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/BOM/">BOM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DOM/">DOM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/interview/javascript-bu-chang-kao.html&title=《JavaScript不常考》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/interview/javascript-bu-chang-kao.html&title=《JavaScript不常考》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/interview/javascript-bu-chang-kao.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript不常考》 — 秦伟博客&url=https://qw66.gitee.io/interview/javascript-bu-chang-kao.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/interview/javascript-bu-chang-kao.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/interview/javascript-bian-cheng-ti.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">JavaScript编程题</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/knowledges/mian-xiang-dui-xiang.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">面向对象</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/interview/javascript-bu-chang-kao.html&title=《JavaScript不常考》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/interview/javascript-bu-chang-kao.html&title=《JavaScript不常考》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/interview/javascript-bu-chang-kao.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript不常考》 — 秦伟博客&url=https://qw66.gitee.io/interview/javascript-bu-chang-kao.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/interview/javascript-bu-chang-kao.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJUlEQVR42u3ay47CMAwFUP7/pztbJKZwbRekJicrNFTTnCyMH3k84nU8rfmTz9++fk7e0lwYGBi3ZRxv19kzk+PowT7sAQMDYwPGVWFxgj87vug4MDAwMOJNJBtKwjoGBgbGNwJuvokeHgMDAyMpYpMe1yQE/6gWx8DAuCGj2ib75eevzDcwMDBuxTiKqze2nDTdol1hYGAszaiWmnnTP2+3TVp7GBgY+zB6Y8j5tpLSN/8LBgbG2ozeKLF6maw6hMj3gIGBsTYjef0E8P75PAH9MMLEwMBYmtG7YJG3wHqpZPVKBwYGxg6MeWmaB8o80JeHChgYGEszJmPIasWcJJp5Chg13TAwMG7OeL+h6osnOWlyiKfPY2BgbMCYN9qqxWdyZIXBJwYGxtKMZPXmouXXxJc/mv8fAwPj5oy8oVZN7KqjherY8p9fDwwMjOUYeXOt2qzPL1hcELIxMDA2YCQts0kDLn9vfsQYGBj7MPJyNL94UQ2X86QTAwNjZ0avoK0eR/XgTneCgYGxASMvVr9xtasX0DEwMHZmVIvPaumbl7tJmoiBgbE24yiuahidpImFEIyBgbE0I1+9EUKvcZZf/hjdccPAwLgVY3JVqzokyFt75fPGwMDYgFHd3CQr6xWxUZ6LgYGBERer82BdpmJgYGC02l75yKGa9Z0WsRgYGEszktTtqlFlMiKtDlMxMDDWZkxKx+oAcnKl44LSGgMD436MP8uifkwEjOSuAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

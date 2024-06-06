@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>网页设计模式 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="网页设计,设计模式">
+    <meta name="description" content="全屏网页设计(Full Screen Design)网站设计制作所谓设计不分家，近年来平面设计里“纯净”“留白”等概念也被互联网设计吸取，为了更简单明了的突出主体，提供更舒适的感官感受，很多网站开始采用全屏网页设计，利用精心挑选设计的漂亮背景，加上合理的页面布局，视觉冲击力大可很好的吸引观者注意。通常页面内的文字内容不会特别多(所出现的少量文字加上精美的排版将会变得更加吸引人)，主要以图片展示为主">
+<meta name="keywords" content="网页设计,设计模式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网页设计模式">
+<meta property="og:url" content="https://qw66.gitee.io/knowledges/wang-ye-she-ji-mo-shi.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="全屏网页设计(Full Screen Design)网站设计制作所谓设计不分家，近年来平面设计里“纯净”“留白”等概念也被互联网设计吸取，为了更简单明了的突出主体，提供更舒适的感官感受，很多网站开始采用全屏网页设计，利用精心挑选设计的漂亮背景，加上合理的页面布局，视觉冲击力大可很好的吸引观者注意。通常页面内的文字内容不会特别多(所出现的少量文字加上精美的排版将会变得更加吸引人)，主要以图片展示为主">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2023-04-14T17:01:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网页设计模式">
+<meta name="twitter:description" content="全屏网页设计(Full Screen Design)网站设计制作所谓设计不分家，近年来平面设计里“纯净”“留白”等概念也被互联网设计吸取，为了更简单明了的突出主体，提供更舒适的感官感受，很多网站开始采用全屏网页设计，利用精心挑选设计的漂亮背景，加上合理的页面布局，视觉冲击力大可很好的吸引观者注意。通常页面内的文字内容不会特别多(所出现的少量文字加上精美的排版将会变得更加吸引人)，主要以图片展示为主">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">网页设计模式</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">网页设计模式</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-10-28T07:55:55.000Z" itemprop="datePublished" class="page-time">
+  2020-10-28
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#全屏网页设计-Full-Screen-Design"><span class="post-toc-number">1.</span> <span class="post-toc-text">全屏网页设计(Full Screen Design)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#响应式网页设计-Responsive-Web-Design"><span class="post-toc-number">2.</span> <span class="post-toc-text">响应式网页设计(Responsive Web Design)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#扁平化设计-Flat-Design"><span class="post-toc-number">3.</span> <span class="post-toc-text">扁平化设计(Flat Design)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#视差滚动设计-Parallax-Design"><span class="post-toc-number">4.</span> <span class="post-toc-text">视差滚动设计(Parallax Design)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#无限滚动模式-瀑布流"><span class="post-toc-number">5.</span> <span class="post-toc-text">无限滚动模式(瀑布流)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#滚动侦测网页设计-Scrollspy"><span class="post-toc-number">6.</span> <span class="post-toc-text">滚动侦测网页设计(Scrollspy)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#网页的风格化设计-The-style-design-of-Webpage"><span class="post-toc-number">7.</span> <span class="post-toc-text">网页的风格化设计(The style design of Webpage)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#简约风设计"><span class="post-toc-number">8.</span> <span class="post-toc-text">简约风设计</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#单页以及全屏视频背景设计"><span class="post-toc-number">9.</span> <span class="post-toc-text">单页以及全屏视频背景设计</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#粒子动效"><span class="post-toc-number">10.</span> <span class="post-toc-text">粒子动效</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#波纹颗粒特效"><span class="post-toc-number">11.</span> <span class="post-toc-text">波纹颗粒特效</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-knowledges/网页设计模式"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">网页设计模式</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-10-28 15:55:55" datetime="2020-10-28T07:55:55.000Z"  itemprop="datePublished">2020-10-28</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="全屏网页设计-Full-Screen-Design"><a href="#全屏网页设计-Full-Screen-Design" class="headerlink" title="全屏网页设计(Full Screen Design)"></a>全屏网页设计(Full Screen Design)</h3><p>网站设计制作所谓设计不分家，近年来平面设计里“纯净”“留白”等概念也被互联网设计吸取，为了更简单明了的突出主体，提供更舒适的感官感受，很多网站开始采用全屏网页设计，利用精心挑选设计的漂亮背景，加上合理的页面布局，视觉冲击力大可很好的吸引观者注意。通常页面内的文字内容不会特别多(所出现的少量文字加上精美的排版将会变得更加吸引人)，主要以图片展示为主。这个样子的网站多用于摄影团队或个人作品集展示会比较常见。虽然简单养眼，但是承载信息有限，公司部门的主页很少见这样的设计。</p>
+<h3 id="响应式网页设计-Responsive-Web-Design"><a href="#响应式网页设计-Responsive-Web-Design" class="headerlink" title="响应式网页设计(Responsive Web Design)"></a>响应式网页设计(Responsive Web Design)</h3><p>现在越来越多用户都拥有多种终端：台式机，笔记本，平板电脑，手机，能够适应不同尺寸显示屏的网页是现在的潮流，甚至是未来很长一段时间的设计趋势。那么响应式网页设计就是来解决这个问题的。这种特别的开发方式能保证网页适应不同的分辨率，让网页要素重组，使其无论在垂直的平板电脑还是智能手机上，都能达到最好的视觉效果。</p>
+<p>网站设计制作除了多终端的多样化，我们还可以看到我们的电脑屏幕，手机屏幕都在不断变大，而在对未来生活的预测、概念设计里，“屏幕”这个产物更是被运用到多种新平台上。例如微软发布的“未来生活概念视频”里，厨房、室内墙壁、办公室玻璃墙面都成为了交互平台。所以我们可以发现，响应式网页设计所具备的良好的适应性和可塑性，在未来的网页设计里将占有举足轻重的位置。</p>
+<h3 id="扁平化设计-Flat-Design"><a href="#扁平化设计-Flat-Design" class="headerlink" title="扁平化设计(Flat Design)"></a>扁平化设计(Flat Design)</h3><p>网站设计制作扁平化设计可以说是去繁从简的设计美学。去掉所有装饰性的设计，可以说是对之前所推崇的拟物化设计的颠覆。我们不能妄加评论说这是好还是不好，只能说它提供了一种新的设计思维。扁平化设计是否会成为将来的趋势我们也无法回答，尽管褒贬不一，备受争议，但是就现在来说它是当下的一种潮流。</p>
+<h3 id="视差滚动设计-Parallax-Design"><a href="#视差滚动设计-Parallax-Design" class="headerlink" title="视差滚动设计(Parallax Design)"></a>视差滚动设计(Parallax Design)</h3><p>鼠标悬停视差效果、视差特效也一直是热门的设计趋势。在深色背景上，搭配粒子特效的视差特效几乎能够立马创造出3D的视觉效果。视差特效伟大的地方在于，你无需特别精准地选取特定的图片，就能营造出良好的视差效果。网站设计制作视差设计可以说是近年来网页设计中的一大突破，也备受推崇。视差滚动是让多层背景以不同速度滚动，以形成一种3D立体的运动效果，给观者带来一种独特的视觉感受。</p>
+<p>除此以外，鼠标滚轮的流畅体验，让用户在观看此类网站时有一种控制感，简单来说这是有响应的交互体验。就好像童年看到走马灯，转动它你就能看到人物动起来，还能欣赏故事。视差滚动设计的趣味也在于此。所以无论是网站还是电商商品宣传页都经常采用视差设计，吸引眼球也很受用户喜爱。</p>
+<p>当你需要让你的标题、LOGO和场景拥有真实的质感的时候，一个视差特效能够快速的给你以提升。当然，视差特效同样适用于各种抽象的动画。当触发鼠标悬停事件的时候，对应元素会增加一个维度，用就可以移动鼠标与之进行互动。</p>
+<p><a href="http://www.alexandrerochet.com/" target="_blank" rel="noopener">Alexandre Rochet</a> 的个人作品页就将视差效果玩的出神入化。视差特效让页面中的元素显得非常的醒目。</p>
+<p>小贴士：用来生成视差特效的代码库和代码片段有很多，最受欢迎的应该是Matthew Wagerfield 所创造的一款插件，名为 <a href="http://matthew.wagerfield.com/parallax/" target="_blank" rel="noopener">Parallax.js</a> 。如果你在实际运用中更注重排版，那么不妨试试 <a href="http://codepen.io/frontnerd/pen/JGwvYq" target="_blank" rel="noopener">Frontnerd</a>，它的特色在于生成鼠标可控的3D视差效果。</p>
+<h3 id="无限滚动模式-瀑布流"><a href="#无限滚动模式-瀑布流" class="headerlink" title="无限滚动模式(瀑布流)"></a>无限滚动模式(瀑布流)</h3><p>有一些网站内容很多，但他们并没有简单分页，而是采用的是一种垂直瀑布流的方式布局。将那些内容垂直排布，当用户纵向滚动时，内容会不断更新好像永无止境。这样的瀑布流很早之前就开始流行，最早采用该布局的是pinterest。这样的滚动页面就大大减少了分页的数量，个人认为对于这类信息量大，每日更新数据快的网站是比较不错的方案。</p>
+<h3 id="滚动侦测网页设计-Scrollspy"><a href="#滚动侦测网页设计-Scrollspy" class="headerlink" title="滚动侦测网页设计(Scrollspy)"></a>滚动侦测网页设计(Scrollspy)</h3><p>网站设计制作利用CSS的实现将导航栏固定在网页顶部(大多数是顶部，当然也有侧面或底部)，并将版面内容按照导航顺序垂直或横向排布，使得用户点击相应导航tab时页面自动滑到相应页面，而若点击内容，导航也将随之改变。这样的网页设计页面基本不会跳转，每一个tab所指向的页面内容也基本一屏显示完整，所以在页面呈现的内容上会有所局限。为不影响布局一般也会伴随自适应。</p>
+<p>滚动侦测式的网页会给设计师带来了很大挑战——要在有限空间内保证内容呈现的完整性，故设计师会在版面上下足功夫。而这类网站结构和视差设计有异曲同工之处，所以我们发现很多网站会结合两者，给观者带来不一样的视觉感受和用户体验。</p>
+<h3 id="网页的风格化设计-The-style-design-of-Webpage"><a href="#网页的风格化设计-The-style-design-of-Webpage" class="headerlink" title="网页的风格化设计(The style design of Webpage)"></a>网页的风格化设计(The style design of Webpage)</h3><p>网站设计制作现在的网页早已不再像过去受诸多条件和技术限制了。其呈现方式颇为丰富。风格从清新到复古，插画手绘到拟真设计，无奇不有。无论是版面版式，还是设计元素，用标新立异这个词形容绝不为过。根据自己撇到的冰山一角，提一下对我感触最深的变化：</p>
+<p>(1)注重字体设计(Pay attention to the font design)</p>
+<p>近年来很多设计师将字体设计也融入了网页设计中，并作为设计的一个重要元素提升整个网页品味。通过使用CSS3设计师可以拥有许多自定义的字体，这给网页的视觉设计也增加了一个重要的设计思路。</p>
+<p>(2)丰富灵活的动画(The flexible animation)</p>
+<p>Html5和flash的广泛应用，让网站设计制作的交互动画变得更加生动有趣。</p>
+<p>通过观察这些趋势如何影响现代网站设计，或许可以为网页设计师带去指引，发散出新想法。</p>
+<p>(3)平面设计感的加强(Strengthen the sense of graphic design)</p>
+<p>网站设计制作随着设备和技术的革新，早已突破了过去单一框架的限制，变得更加灵活。所以就页面风格更多地开始向平面设计靠近，许多页面设计得极赋海报和杂志的版式感。时尚而富有冲击力。</p>
+<h3 id="简约风设计"><a href="#简约风设计" class="headerlink" title="简约风设计"></a>简约风设计</h3><p>极简主义设计风格，也称简约设计风格，顾名思义，就是使用尽可能少的组件或部件，实现网站以及软件应用的人机交互。</p>
+<p>当然，这并不代表设计师可以毫无节制的简化网页或软件界面，以致丢失掉其本有魅力和生命力，造成界面难以理解，甚至使用更加复杂的局面。反而应该在去除多余组件或模块的基础上，使用最少的元素，达到最佳的用户体验和销售效果。界面中每一个小细节都应该被重视，且饱含设计师创意和用心。</p>
+<p>界面简单整洁，便于用户理解和操作，还因其在提升网站和软件应用的加载速度，页面屏幕兼容度，以及用户体验愉悦度等方面，作用巨大。</p>
+<p>1.简约网页设计更加简洁易用，用户体验愉悦度极高</p>
+<p>2.极简主义设计简单且兼容性强，更易于软件或网页响应式设计</p>
+<p>3.简单干净的界面设计更符合现今快节奏的用户需求</p>
+<p>4.简约整洁的网页设计，加载速度更快，能有效地降低网页跳出率</p>
+<p>5.简洁低噪音的界面设计，更易于用户专注于界面内容和产品功能，提升产品销量</p>
+<p><a href="http://www.sj33.cn/digital/wysj/201905/50614.html" target="_blank" rel="noopener">50个简约风黑白网页设计</a></p>
+<p><a href="https://www.mockplus.cn/blog/post/946" target="_blank" rel="noopener">极简网页设计技巧，打造简约之美</a></p>
+<h3 id="单页以及全屏视频背景设计"><a href="#单页以及全屏视频背景设计" class="headerlink" title="单页以及全屏视频背景设计"></a>单页以及全屏视频背景设计</h3><p> 传统意义上的背景主要是使用图片，近几年开始流行视频背景了。而这些主要还是集中在网站的页头、Banner等位置，大多用来欢迎用户，推荐内容。许多网站都采取了相似的策略，让用户有所期待。 在网页上全屏幕显示视频，在以前应该只有 Flash 可以做到，不过现在使用 HTML5 和 JavaScript 可以很好地让视频根据浏览器窗口的尺寸伸缩，下面的网站很好的展示了全屏幕视频的使用技巧。 </p>
+<p><a href="http://melanie-f.com/en/" target="_blank" rel="noopener">我非常喜欢的一个网站，感受特别好</a></p>
+<p><a href="http://www.sj33.cn/digital/wysj/201408/39871.html" target="_blank" rel="noopener">30个运用全屏视频背景的网页设计欣赏</a></p>
+<h3 id="粒子动效"><a href="#粒子动效" class="headerlink" title="粒子动效"></a>粒子动效</h3><p>粒子动效是目前最流行的选择之一，很大程度上是因为这种方案对于目前的网站和浏览器而言，负载并不大，并且足够优雅。它可以很好地同纯色背景、插画、矢量素材甚至照片结合起来使用。</p>
+<p>除此之外，颗粒的动效变化也有很多变化。可以是在整个页面中随机散布移动的点，也可以模仿雨滴和流星的运动轨迹，还能参考星座、星空和宇宙中行星的运动来设计。粒子动效还能和鼠标运动以及触发事件结合起来：可以让粒子避开光标，也能让粒子围绕这光标运动，甚至让运动轨迹紧跟光标运动，等等。</p>
+<p><a href="http://thehuub.co/" target="_blank" rel="noopener">Huub </a>这个网站就是一个典型的案例，不同的点构成群组，点和点之间有细线连接，在黑色的背景上移动着形成自转的效果。当鼠标移动到附近的时候，光标所在处会形成新的点，与最近的光点连接。</p>
+<p>小贴士：如果你想实现类似 Huub 这样的动态背景效果，不妨看看 Dominic Kolbe 所创建的名为<a href="http://codepen.io/dominickolbe/pen/oXPRzR" target="_blank" rel="noopener">Mouse Parallax Demo</a> 的项目，它能给你带来近似的效果。如果你立刻马上想要一个高度可用的粒子特效背景的话，那么你应该看看 Vincent Garreau 所创建的 <a href="http://vincentgarreau.com/particles.js/" target="_blank" rel="noopener">Particles.js</a> 这个JS库。</p>
+<h3 id="波纹颗粒特效"><a href="#波纹颗粒特效" class="headerlink" title="波纹颗粒特效"></a>波纹颗粒特效</h3><p>波纹粒子特效这个效果则是借由Three.js 来实现的。它让粒子构成平滑的波纹，然后上下波动产生呼吸的画布一样的效果。你还可以借助鼠标光标让它向着不同的方向旋转，你可以探索各种不同的玩法。</p>
+<p><a href="https://stuur.men/" target="_blank" rel="noopener">StuurMen</a> 这个网站就借助波纹粒子特效来制作欢迎页面。它看起来精致而极简，内容以一种毫无侵略性的方式进入用户的视野，而波动粒子特效则让整个项目的氛围显得平滑而稳定。</p>
+<p>小贴士：你可以在这里看到<a href="http://threejs.org/examples/canvas_particles_waves.html" target="_blank" rel="noopener">ThreeJS的原始脚本</a>，Deathfang 成功地改写了这个脚本，并且将它制作成一个名为<a href="http://codepen.io/deathfang/pen/WxNVoq" target="_blank" rel="noopener"> three.js canvas – particles – waves</a> 的demo。</p>
+<p><strong>设计师和开发者都需要和市场接轨并跟上潮流的脚步，但是所谓的潮流是当下的，未来确是未知的。网站设计制作的确需要保证自己不被行业趋势甩到队尾，但更重要的是在浪潮中适应和学习。</strong></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2023-04-14T17:01:50.000Z" itemprop="dateUpdated">2023-04-15 01:01:50</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/knowledges/wang-ye-she-ji-mo-shi.html" target="_blank" rel="external">https://qw66.gitee.io/knowledges/wang-ye-she-ji-mo-shi.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网页设计/">网页设计</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/设计模式/">设计模式</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/wang-ye-she-ji-mo-shi.html&title=《网页设计模式》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/wang-ye-she-ji-mo-shi.html&title=《网页设计模式》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/wang-ye-she-ji-mo-shi.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《网页设计模式》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/wang-ye-she-ji-mo-shi.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/wang-ye-she-ji-mo-shi.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/knowledges/qian-duan-zhi-shi-dian.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">前端知识点</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/link/wo-de-shu-qian-lian-jie.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">我的书签链接</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/wang-ye-she-ji-mo-shi.html&title=《网页设计模式》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/wang-ye-she-ji-mo-shi.html&title=《网页设计模式》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/wang-ye-she-ji-mo-shi.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《网页设计模式》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/wang-ye-she-ji-mo-shi.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/wang-ye-she-ji-mo-shi.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACIUlEQVR42u3aQXLCMAwFUO5/6fQANPRLCp2x/bxiICF+WWhkSa9XvK639fnX92uSf0vuHS0MDIxlGdfHlW802dbdFu+uSfaGgYFxDqP310mgzANoj42BgYFRDYKf76qyMTAwMHqManBMgiwGBgZGwpiEzjzJy4P4F8/iGBgYCzKqYfE/P3+lv4GBgbEU4yquXkqXJJHXYGFgYOzNyANcD5k3QasBFwMD4xxGcgStFtryQ2YvlEcVOwwMjO0YvcBXHaGoltjy5gQGBsbejGpAnDzs2YGMZjEOAwNjQUZy1EyStvz6yTBHNGaBgYFxDKO6lUlymbQQRodYDAyMjRi9Ea78+FoNrIXXhIGBcRijGvKSodL8ml7rAgMDY29GtYjWO9zmIbtativ0HzAwMJZl5A+bfP9sE/SXbzAwMLZmVI+a+eGz91LyPURzuBgYGBsx8sGIvJ0wD6yjaREMDIztGMnWe6E2TzofKPBhYGAcw0jSuLw0Vg2soxCPgYFxGKM3YDEJ00kz9Y8nYmBgHMBItt5L6Xr4apsBAwPjNEaSiuWDEfkLqtbTMDAwTmBcxTVpeebvNX8uBgbGCYxef7CawPUC67yoh4GBsROjGmQnoxg5dVQ1xMDA2JQxL8Pld03Svtu7MDAwMAYB9KmXFZ3IMTAwMOLUsDeukZfnbtsDGBgYWzN6gxRPleR6YRoDA+McRvXoOOkeVl/Kw01NDAyM9Rg/yIp+TGJkZg0AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

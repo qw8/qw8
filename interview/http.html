@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>HTTP | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="HTTP,前端通信">
+    <meta name="description" content="超文本传输协议（HTTP）介绍超文本传输协议（HyperText Transfer Protocol，HTTP）是从服务器传输数据到客户端的传输协议。 HTTP 的主要特点 支持客户/服务器模式。 简单快速：客户向服务器请求服务时，只需传送请求方法和路径。由于HTTP协议简单，使得HTTP服务器的程序规模小，因而通信速度很快。 灵活：HTTP允许传输任意类型的数据对象。传输的类型由 Content">
+<meta name="keywords" content="HTTP,前端通信">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP">
+<meta property="og:url" content="https://qw66.gitee.io/interview/http.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="超文本传输协议（HTTP）介绍超文本传输协议（HyperText Transfer Protocol，HTTP）是从服务器传输数据到客户端的传输协议。 HTTP 的主要特点 支持客户/服务器模式。 简单快速：客户向服务器请求服务时，只需传送请求方法和路径。由于HTTP协议简单，使得HTTP服务器的程序规模小，因而通信速度很快。 灵活：HTTP允许传输任意类型的数据对象。传输的类型由 Content">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:updated_time" content="2024-04-26T09:59:38.820Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTTP">
+<meta name="twitter:description" content="超文本传输协议（HTTP）介绍超文本传输协议（HyperText Transfer Protocol，HTTP）是从服务器传输数据到客户端的传输协议。 HTTP 的主要特点 支持客户/服务器模式。 简单快速：客户向服务器请求服务时，只需传送请求方法和路径。由于HTTP协议简单，使得HTTP服务器的程序规模小，因而通信速度很快。 灵活：HTTP允许传输任意类型的数据对象。传输的类型由 Content">
+<meta name="twitter:image" content="https://qw66.gitee.io/img/loading.gif">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">HTTP</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">HTTP</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-07-06T09:52:49.000Z" itemprop="datePublished" class="page-time">
+  2020-07-06
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端面试题/">前端面试题</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#超文本传输协议（HTTP）介绍"><span class="post-toc-number">1.</span> <span class="post-toc-text">超文本传输协议（HTTP）介绍</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#HTTP-的主要特点"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">HTTP 的主要特点</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#客户端和服务器端交互的过程"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">客户端和服务器端交互的过程</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#请求消息结构"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">请求消息结构</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#请求行"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">请求行</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#请求方法"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">请求方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#资源标示符"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">资源标示符</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#请求头字段"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">请求头字段</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#空行"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">空行</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#消息主体"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">消息主体</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#响应消息结构"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">响应消息结构</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#状态行"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">状态行</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#状态码"><span class="post-toc-number">1.12.</span> <span class="post-toc-text">状态码</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#响应头字段"><span class="post-toc-number">1.13.</span> <span class="post-toc-text">响应头字段</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#消息主体-1"><span class="post-toc-number">1.14.</span> <span class="post-toc-text">消息主体</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#推荐个命令行-HTTP-客户端"><span class="post-toc-number">1.15.</span> <span class="post-toc-text">推荐个命令行 HTTP 客户端</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#参考链接"><span class="post-toc-number">1.16.</span> <span class="post-toc-text">参考链接</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前言"><span class="post-toc-number">2.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP协议的主要特点"><span class="post-toc-number">3.</span> <span class="post-toc-text">HTTP协议的主要特点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP报文的组成部分"><span class="post-toc-number">4.</span> <span class="post-toc-text">HTTP报文的组成部分</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP方法"><span class="post-toc-number">5.</span> <span class="post-toc-text">HTTP方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#get-和-post的区别"><span class="post-toc-number">6.</span> <span class="post-toc-text">get 和 post的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http状态码"><span class="post-toc-number">7.</span> <span class="post-toc-text">http状态码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP-状态码"><span class="post-toc-number">8.</span> <span class="post-toc-text">HTTP 状态码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#持久链接-http长连接"><span class="post-toc-number">9.</span> <span class="post-toc-text">持久链接/http长连接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#长连接中的管线化"><span class="post-toc-number">10.</span> <span class="post-toc-text">长连接中的管线化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http状态码有那些？分别代表是什么意思？"><span class="post-toc-number">11.</span> <span class="post-toc-text">http状态码有那些？分别代表是什么意思？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#说说TCP传输的三次握手四次挥手策略"><span class="post-toc-number">12.</span> <span class="post-toc-text">说说TCP传输的三次握手四次挥手策略</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#断开一个TCP连接则需要“四次握手”："><span class="post-toc-number">13.</span> <span class="post-toc-text">断开一个TCP连接则需要“四次握手”：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TCP和UDP的区别"><span class="post-toc-number">14.</span> <span class="post-toc-text">TCP和UDP的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP和HTTPS"><span class="post-toc-number">15.</span> <span class="post-toc-text">HTTP和HTTPS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么HTTPS安全"><span class="post-toc-number">16.</span> <span class="post-toc-text">为什么HTTPS安全</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于Http-2-0-你知道多少？"><span class="post-toc-number">17.</span> <span class="post-toc-text">关于Http 2.0 你知道多少？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#GET和POST的区别，何时使用POST？"><span class="post-toc-number">18.</span> <span class="post-toc-text">GET和POST的区别，何时使用POST？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#说说网络分层里七层模型是哪七层"><span class="post-toc-number">19.</span> <span class="post-toc-text">说说网络分层里七层模型是哪七层</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#讲讲304缓存的原理"><span class="post-toc-number">20.</span> <span class="post-toc-text">讲讲304缓存的原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTTP-2-与-HTTP-1-x-的关键区别"><span class="post-toc-number">21.</span> <span class="post-toc-text">HTTP/2 与 HTTP/1.x 的关键区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一个页面从输入-URL-到页面加载显示完成，这个过程中都发生了什么？"><span class="post-toc-number">22.</span> <span class="post-toc-text">一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http-无状态无连接"><span class="post-toc-number">23.</span> <span class="post-toc-text">http 无状态无连接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http协议无状态中的-状态-到底指的是什么？"><span class="post-toc-number">24.</span> <span class="post-toc-text">http协议无状态中的 状态 到底指的是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http-cache：就是-http-缓存"><span class="post-toc-number">25.</span> <span class="post-toc-text">http-cache：就是 http 缓存</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Http2-是什么"><span class="post-toc-number">26.</span> <span class="post-toc-text">Http2 是什么</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Http-请求的整个过程"><span class="post-toc-number">27.</span> <span class="post-toc-text">Http 请求的整个过程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http-缓存配置怎么设置"><span class="post-toc-number">28.</span> <span class="post-toc-text">http 缓存配置怎么设置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Accept-和-Content-Type"><span class="post-toc-number">29.</span> <span class="post-toc-text">Accept 和 Content-Type</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#http-协议缓存机制"><span class="post-toc-number">30.</span> <span class="post-toc-text">http 协议缓存机制</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何处理不让别人盗用你的图片，访问你的服务器资源"><span class="post-toc-number">31.</span> <span class="post-toc-text">如何处理不让别人盗用你的图片，访问你的服务器资源</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Http-与-Https-的区别"><span class="post-toc-number">32.</span> <span class="post-toc-text">Http 与 Https 的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是-Http-协议无状态协议-怎么解决-Http-协议无状态协议"><span class="post-toc-number">33.</span> <span class="post-toc-text">什么是 Http 协议无状态协议?怎么解决 Http 协议无状态协议?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#常用的-HTTP-方法有哪些"><span class="post-toc-number">34.</span> <span class="post-toc-text">常用的 HTTP 方法有哪些</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一次完整的-HTTP-请求所经历的-7-个步骤"><span class="post-toc-number">35.</span> <span class="post-toc-text">一次完整的 HTTP 请求所经历的 7 个步骤</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三次握手"><span class="post-toc-number">36.</span> <span class="post-toc-text">三次握手</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#四次挥手"><span class="post-toc-number">37.</span> <span class="post-toc-text">四次挥手</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#线程与进程的区别"><span class="post-toc-number">38.</span> <span class="post-toc-text">线程与进程的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#WEB-应用从服务器主动推送-Data-到客户端有那些方式？"><span class="post-toc-number">39.</span> <span class="post-toc-text">WEB 应用从服务器主动推送 Data 到客户端有那些方式？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#请简述如何在-HTML-中开启和关闭-DNS-预读取"><span class="post-toc-number">40.</span> <span class="post-toc-text">请简述如何在 HTML 中开启和关闭 DNS 预读取?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#TCP-和-UDP-的区别"><span class="post-toc-number">41.</span> <span class="post-toc-text">TCP 和 UDP 的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Web-Worker-和-webSocket"><span class="post-toc-number">42.</span> <span class="post-toc-text">Web Worker 和 webSocket</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-interview/HTTP"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">HTTP</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-07-06 17:52:49" datetime="2020-07-06T09:52:49.000Z"  itemprop="datePublished">2020-07-06</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端面试题/">前端面试题</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="超文本传输协议（HTTP）介绍"><a href="#超文本传输协议（HTTP）介绍" class="headerlink" title="超文本传输协议（HTTP）介绍"></a>超文本传输协议（HTTP）介绍</h3><p>超文本传输协议（HyperText Transfer Protocol，HTTP）是从服务器传输数据到客户端的传输协议。</p>
+<h4 id="HTTP-的主要特点"><a href="#HTTP-的主要特点" class="headerlink" title="HTTP 的主要特点"></a>HTTP 的主要特点</h4><ol>
+<li>支持客户/服务器模式。</li>
+<li>简单快速：客户向服务器请求服务时，只需传送请求方法和路径。由于HTTP协议简单，使得HTTP服务器的程序规模小，因而通信速度很快。</li>
+<li>灵活：HTTP允许传输任意类型的数据对象。传输的类型由 Content-Type 加以标记。</li>
+<li>无连接：无连接的含义是限制每次连接只处理一个请求。服务器处理完客户的请求，并收到客户的应答后，即断开连接。采用这种方式可以节省传输时间。</li>
+<li>无状态：HTTP协议是无状态协议。无状态是指协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息，则它必须重传，这样可能导致每次连接传送的数据量增大。另一方面，在服务器不需要先前信息时它的应答就较快。</li>
+</ol>
+<h4 id="客户端和服务器端交互的过程"><a href="#客户端和服务器端交互的过程" class="headerlink" title="客户端和服务器端交互的过程"></a>客户端和服务器端交互的过程</h4><ol>
+<li>客户发起连接</li>
+<li>客户发送请求</li>
+<li>服务器响应请求</li>
+<li>服务器关闭连接</li>
+</ol>
+<h4 id="请求消息结构"><a href="#请求消息结构" class="headerlink" title="请求消息结构"></a>请求消息结构</h4><p>一个请求消息是由请求行、请求头字段、一个空行和消息主体构成。如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">GET /hello.htm HTTP/1.1</span><br><span class="line">User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)</span><br><span class="line">Host: example.com</span><br><span class="line">Accept-Language: en-us</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br></pre></td></tr></table></figure>
+
+<h4 id="请求行"><a href="#请求行" class="headerlink" title="请求行"></a>请求行</h4><p>请求消息的第一行就是请求行。它指明使用的请求方法、资源标示符、和 HTTP 版本。如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GET /hello.htm HTTP/1.1</span><br></pre></td></tr></table></figure>
+
+<h4 id="请求方法"><a href="#请求方法" class="headerlink" title="请求方法"></a>请求方法</h4><p>请求方法用来定义操作资源的方式，HTTP/1.1 协议中定义了八种请求方法：</p>
+<ul>
+<li>GET：读取资源数据</li>
+<li>POST：新建资源数据</li>
+<li>PUT：更新资源数据</li>
+<li>DELETE：删除资源数据</li>
+<li>HEAD：读取资源的元数据</li>
+<li>OPTIONS：读取该资源所支持的所有请求方法</li>
+<li>TRACE：回显服务器收到的请求，主要用于测试或诊断</li>
+<li>CONNECT：HTTP/1.1 协议中预留给能够将连接改为管道方式的代理服务器。通常用于SSL加密服务器的链接（经<br>由非加密的HTTP代理服务器）</li>
+</ul>
+<p>此外，除了上述方法，特定的HTTP服务器还能够扩展自定义的方法。</p>
+<h4 id="资源标示符"><a href="#资源标示符" class="headerlink" title="资源标示符"></a>资源标示符</h4><p>URI、URL和URN是用来识别、定位和命名互联网上的资源。</p>
+<p>因为要通过多样的方式识别资源（人的名字可能相同，然而计算机文件只能通过唯一的路径名称组合访问），所以需要标准的识别WWW资源的途径。为了满足这种需要，Tim Berners-Lee 引入了标准的识别、定位和命名的途径：URI、URL和URN。</p>
+<ul>
+<li>URI：Uniform Resource Identifier，统一资源标识符</li>
+<li>URL：Uniform Resource Locator，统一资源定位符</li>
+<li>URN：Uniform Resource Name，统一资源名称</li>
+</ul>
+<p>URL 和 URN 都属于 URI。</p>
+<p>URI 和 URL 的区别是：URL 更具体。URI 和 URL 都定义了什么是资源。但 URL 还定义了如何获得资源。</p>
+<p>关于 URL 的具体描述见<a href="https://ccbikai.gitbooks.io/http-book/content/3_what_is_url.html" target="_blank" rel="noopener">这里</a>。</p>
+<h4 id="请求头字段"><a href="#请求头字段" class="headerlink" title="请求头字段"></a>请求头字段</h4><p>用来传递客户端的更多信息，以及传递解析消息主体的必要信息。如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">User-Agent: Mozilla/4.0 (compatible; MSIE5.01; Windows NT)</span><br><span class="line">Host: example.com</span><br><span class="line">Accept-Language: en-us</span><br><span class="line">Accept-Encoding: gzip, deflate</span><br></pre></td></tr></table></figure>
+
+<p>常见请求头字段有</p>
+<ul>
+<li>Accept: 客户端接受哪些 Mine 类型。如 <code>Accept: text/html</code></li>
+<li>Accept-Encoding: 支持的编码类型。如 <code>gzip, deflate, sdch</code></li>
+<li>Accept-Language: 可接受的语言。如 <code>en-US,en;q=0.8</code></li>
+<li>User-Agent:一个标识客户端的字符串。如 <code>User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML，like Gecko) Chrome/38.0.2125.101 Safari/537.36</code></li>
+<li>Cookie: Cookie。如 <code>sessionid=c8422b97-98e2-4bc6-aa31-9b667d6ca4a5; theme=4;</code></li>
+<li>Referer: 从那个页面到的该页面。</li>
+</ul>
+<h4 id="空行"><a href="#空行" class="headerlink" title="空行"></a>空行</h4><p>指示头字段区完成，消息主体开始（如果有消息主体的话）。</p>
+<h4 id="消息主体"><a href="#消息主体" class="headerlink" title="消息主体"></a>消息主体</h4><p>消息主体是请求消息的承载数据。比如在提交POST表单，并且表单方法不是GET时，表单数据就是打包在消息主体内的。消息主体是可选的。</p>
+<h4 id="响应消息结构"><a href="#响应消息结构" class="headerlink" title="响应消息结构"></a>响应消息结构</h4><p>响应消息由一个状态行、响应头字段、一个空行、消息主体构成。如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Date: Mon, 27 Jul 2009 12:28:53 GMT</span><br><span class="line">Server: Apache/2.2.14 (Win32)</span><br><span class="line">Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT</span><br><span class="line">Content-Length: 88</span><br><span class="line">Content-Type: text/html</span><br><span class="line">Connection: Closed</span><br><span class="line"></span><br><span class="line">&lt;html&gt;</span><br><span class="line">   &lt;body&gt;</span><br><span class="line"></span><br><span class="line">   &lt;h1&gt;Hello, World!&lt;/h1&gt;</span><br><span class="line"></span><br><span class="line">   &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="状态行"><a href="#状态行" class="headerlink" title="状态行"></a>状态行</h4><p>由http版本、状态码、状态描述文字构成。如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 200 OK</span><br></pre></td></tr></table></figure>
+
+<h4 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h4><p>HTTP 状态码（HTTP Status Code）是用以表示网页服务器 HTTP 响应状态的3位数字代码。</p>
+<p>所有的状态码的第一个数字代表了响应的五种状态之一:</p>
+<ul>
+<li>1xx：代表请求已被接受，需要继续处理。这类响应是临时响应，只包含状态行和某些可选的响应头信息，并以空行 结束。</li>
+<li>2xx：代表请求接收、理解并且接受。</li>
+<li>3xx：代表需要客户端采取进一步的操作才能完成请求。通常，这些状态码用来重定向，后续的请求地址（重定向目 标）在本次响应的Location域中指明。当且仅当后续的请求所使用的方法是GET或者HEAD时，用户浏览器才可以 在没有用户介入的情况下自动提交所需要的后续请求。</li>
+<li>4xx：代表了客户端看起来可能发生了错误，妨碍了服务器的处理。除非响应的是一个HEAD请求，否则服务器就应 该返回一个解释当前错误状况的实体，以及这是临时的还是永久性的状况。</li>
+<li>5xx：代表了服务器在处理请求的过程中有错误或者异常状态发生，，也有可能是服务器意识到以当前的软硬件资源 无法完成对请求的处理。</li>
+</ul>
+<p>常见状态码有：</p>
+<ul>
+<li>200: 请求已经成功，请求所希望的响应头或者数据体将随着此响应返回</li>
+<li>202: 服务器已接受请求，但尚未处理。正如它可能被拒绝一样，最终该请求可能会也可能不会被执行。在异步操作的场合下，没有比发送这个状态码更方便的做法了</li>
+<li>204: 服务器成功处理了请求，但不需要返回任何实体内容，并且希望返回更新了的元信息</li>
+<li>304: 被请求的资源内容没有发生更改</li>
+<li>400: 包含语法错误，无法被服务器解析</li>
+<li>403: 服务器已经接收请求，但是拒绝执行</li>
+<li>404: 请求失败，请求所希望得到的资源未在服务器上发现</li>
+<li>408: 请求超时。客户端可以再次提交这一请求而无需任何修改</li>
+<li>500: 服务器内部错误，无法处理请求</li>
+<li>502: 作为网关或者代理工作的服务器尝试执行请求时，从上游服务器接收到无效响应</li>
+<li>504: 作为网关或者代理工作的服务器尝试执行请求时，未能及时从上游服务器（URI标识出的服务器，例如HTTP、FTP、LDAP）或者辅助服务器（例如DNS）收到响应</li>
+</ul>
+<h4 id="响应头字段"><a href="#响应头字段" class="headerlink" title="响应头字段"></a>响应头字段</h4><p>和请求消息类似，首部字段会包括服务器本身的一些信息指示、以及响应消息本身的元数据。如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Date: Mon, 27 Jul 2009 12:28:53 GMT</span><br><span class="line">Server: Apache/2.2.14 (Win32)</span><br><span class="line">Last-Modified: Wed, 22 Jul 2009 19:15:56 GMT</span><br><span class="line">Content-Length: 88</span><br><span class="line">Content-Type: text/html</span><br><span class="line">Connection: Closed</span><br></pre></td></tr></table></figure>
+
+<p>常见响应头有：</p>
+<ul>
+<li>Content-Encoding: 数据的编码类型。如 <code>Content-Encoding: gzip</code></li>
+<li>Server: 服务器的名称。如 <code>Server:thin 1.5.0 codename Knife</code></li>
+<li>Location:  通知客户端新的资源位置。如 <code>Location: http://www.github.com/login</code></li>
+<li>Content-Type: 响应数据的类型。如 <code>Content-Type:text/html; charset=UTF-8</code></li>
+<li>Content-Encoding: 响应数据的编码格式。如 <code>gzip</code>。客户端会根据该值对响应内容解码。</li>
+</ul>
+<h4 id="消息主体-1"><a href="#消息主体-1" class="headerlink" title="消息主体"></a>消息主体</h4><p>消息主体是响应消息的承载数据。</p>
+<h4 id="推荐个命令行-HTTP-客户端"><a href="#推荐个命令行-HTTP-客户端" class="headerlink" title="推荐个命令行 HTTP 客户端"></a>推荐个命令行 HTTP 客户端</h4><p><a href="https://github.com/jkbrzt/httpie" target="_blank" rel="noopener">HTTPie</a> 类似 cURL，但其 api 相比 cURL 更友好。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://raw.githubusercontent.com/jkbrzt/httpie/master/httpie.png" alt="HTTPie 示例" title>
+                </div>
+                <div class="image-caption">HTTPie 示例</div>
+            </figure>
+
+
+<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><ul>
+<li><a href="http://www.ituring.com.cn/article/209130" target="_blank" rel="noopener">HTTP 引入</a></li>
+<li><a href="http://yuez.me/http-xie-yi-jie-xi/" target="_blank" rel="noopener">HTTP 协议解析</a></li>
+<li><a href="http://www.biaodianfu.com/uri-url-urn-relationship.html" target="_blank" rel="noopener">URI和URL及URN的区别</a></li>
+<li><a href="http://blog.csdn.net/gueter/article/details/1524447" target="_blank" rel="noopener">HTTP协议详解</a></li>
+</ul>
+<p>一面中，如果有笔试，考HTTP协议的可能性较大。</p>
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>一面要讲的内容：</p>
+<ul>
+<li><code>HTTP</code>协议的主要特点</li>
+<li><code>HTTP</code>报文的组成部分</li>
+<li><code>HTTP</code>方法</li>
+<li><code>get</code> 和 <code>post</code>的区别</li>
+<li><code>HTTP</code>状态码</li>
+<li>什么是持久连接</li>
+<li>什么是管线化</li>
+</ul>
+<p>二面要讲的内容；</p>
+<ul>
+<li>缓存</li>
+<li><code>CSRF</code>攻击</li>
+</ul>
+<h3 id="HTTP协议的主要特点"><a href="#HTTP协议的主要特点" class="headerlink" title="HTTP协议的主要特点"></a>HTTP协议的主要特点</h3><ul>
+<li>简单快速</li>
+<li>灵活</li>
+<li><strong>无连接</strong></li>
+<li><strong>无状态</strong></li>
+</ul>
+<blockquote>
+<p>通常我们要答出以上四个内容。如果实在记不住，一定要记得后面的两个：<strong>无连接、无状态</strong>。</p>
+</blockquote>
+<p>我们分别来解释一下。</p>
+<p>1 <strong>简单快速</strong></p>
+<blockquote>
+<p><strong>简单</strong>：每个资源（比如图片、页面）都通过 url 来定位。这都是固定的，在<code>http</code>协议中，处理起来也比较简单，想访问什么资源，直接输入url即可。</p>
+</blockquote>
+<p>2 <strong>灵活</strong></p>
+<blockquote>
+<p><code>http</code>协议的头部有一个<code>数据类型</code>，通过<code>http</code>协议，就可以完成不同数据类型的传输。</p>
+</blockquote>
+<p>3 <strong>无连接</strong></p>
+<blockquote>
+<p>连接一次，就会断开，不会继续保持连接。</p>
+</blockquote>
+<p>4 <strong>无状态</strong></p>
+<blockquote>
+<p>客户端和服务器端是两种身份。第一次请求结束后，就断开了，第二次请求时，<strong>服务器端并没有记住之前的状态</strong>，也就是说，服务器端无法区分客户端是否为同一个人、同一个身份。</p>
+</blockquote>
+<blockquote>
+<p>有的时候，我们访问网站时，网站能记住我们的账号，这个是通过其他的手段（比如 <code>session</code>）做到的，并不是<code>http</code>协议能做到的。</p>
+</blockquote>
+<h3 id="HTTP报文的组成部分"><a href="#HTTP报文的组成部分" class="headerlink" title="HTTP报文的组成部分"></a>HTTP报文的组成部分</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="http://img.smyhvae.com/20180306_1400.png" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<blockquote>
+<p>在回答此问题时，我们要按照顺序回答：</p>
+</blockquote>
+<ul>
+<li>先回答的是，<code>http</code>报文包括：<strong>请求报文</strong>和<strong>响应报文</strong>。</li>
+<li>再回答的是，每个报文包含什么部分。</li>
+<li>最后回答，每个部分的内容是什么</li>
+</ul>
+<p><strong>1请求报文包括：</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="http://img.smyhvae.com/20180228_1505.jpg" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<ul>
+<li>请求行：包括请求方法、请求的<code>url</code>、<code>http</code>协议及版本。</li>
+<li>请求头：一大堆的键值对。</li>
+<li><strong>空行</strong>指的是：当服务器在解析请求头的时候，如果遇到了空行，则表明，后面的内容是请求体</li>
+<li>请求体：数据部分。</li>
+</ul>
+<p><strong>2 响应报文包括：</strong></p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="http://img.smyhvae.com/20180228_1510.jpg" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+
+<ul>
+<li>状态行：<code>http</code>协议及版本、状态码及状态描述。</li>
+<li>响应头</li>
+<li>空行</li>
+<li>响应体</li>
+</ul>
+<h3 id="HTTP方法"><a href="#HTTP方法" class="headerlink" title="HTTP方法"></a>HTTP方法</h3><p>包括：</p>
+<ul>
+<li><code>GET</code>：获取资源</li>
+<li><code>POST</code>：传输资源</li>
+<li><code>put</code>：更新资源</li>
+<li><code>DELETE</code>：删除资源</li>
+<li><code>HEAD</code>：获得报文首部</li>
+</ul>
+<blockquote>
+<p><code>HTTP</code>方法有很多，但是上面这五个方法，要求在面试时全部说出来，不要漏掉。</p>
+</blockquote>
+<ul>
+<li><code>get</code> <code>和</code>post` 比较常见。</li>
+<li><code>put</code> 和 <code>delete</code> 在实际应用中用的很少。况且，业务中，一般不删除服务器端的资源。</li>
+<li><code>head</code> 可能偶尔用的到。</li>
+</ul>
+<h3 id="get-和-post的区别"><a href="#get-和-post的区别" class="headerlink" title="get 和 post的区别"></a>get 和 post的区别</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="http://img.smyhvae.com/20180306_1415.png" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<ul>
+<li>区别有很多，如果记不住，面试时，至少要任意答出其中的三四条。</li>
+<li>有一点要强调，<strong>get是相对不隐私的，而post是相对隐私的</strong>。</li>
+</ul>
+<blockquote>
+<p>我们大概要记住以下几点：</p>
+</blockquote>
+<ol>
+<li>浏览器在回退时，<code>get</code> <strong>不会重新请求</strong>，但是<code>post</code>会重新请求。【重要】</li>
+<li><code>get</code>请求会被浏览器<strong>主动缓存</strong>，而<code>post</code>不会。【重要】</li>
+<li><code>get</code>请求的参数，会报<strong>保留</strong>在浏览器的<strong>历史记录</strong>里，而<code>post</code>不会。做业务时要注意。为了防止<code>CSRF</code>攻击，很多公司把<code>get</code>统一改成了<code>post</code>。</li>
+<li><code>get</code>请求在<code>url</code>中<code>传递的参数有大小限制，基本是</code>2kb`，不同的浏览器略有不同。而post没有注意。</li>
+<li><code>get</code>的参数是直接暴露在<code>url</code>上的，相对不安全。而<code>post</code>是放在请求体中的。</li>
+</ol>
+<h3 id="http状态码"><a href="#http状态码" class="headerlink" title="http状态码"></a>http状态码</h3><p><strong>http状态码有那些？分别代表是什么意思？</strong></p>
+<ul>
+<li>100  Continue    继续，一般在发送post请求时，已发送了http header之后服务端将返回此信息，表示确认，之后发送具体参数信息</li>
+<li>200  OK         正常返回信息</li>
+<li>201  Created      请求成功并且服务器创建了新的资源</li>
+<li>202  Accepted     服务器已接受请求，但尚未处理</li>
+<li>301  Moved Permanently  请求的网页已永久移动到新位置。</li>
+<li>302 Found          临时性重定向。</li>
+<li>303 See Other      临时性重定向，且总是使用 GET 请求新的 URI。</li>
+<li>304  Not Modified 自从上次请求后，请求的网页未修改过。</li>
+<li>400 Bad Request  服务器无法理解请求的格式，客户端不应当尝试再次使用相同的内容发起请求。</li>
+<li>401 Unauthorized 请求未授权。</li>
+<li>403 Forbidden      禁止访问。</li>
+<li>404 Not Found      找不到如何与 URI 相匹配的资源。</li>
+<li>500 Internal Server Error  最常见的服务器端错误。</li>
+<li>503 Service Unavailable 服务器端暂时无法处理请求（可能是过载或维护）</li>
+</ul>
+<blockquote>
+<p><code>http</code>状态码分类：</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="http://img.smyhvae.com/20180306_1430.png" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<blockquote>
+<p>常见的<code>http</code>状态码：</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="http://img.smyhvae.com/20180306_1431.png" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+
+<p><strong>部分解释</strong>：</p>
+<ul>
+<li><code>206</code>的应用：<code>range</code>指的是请求的范围，客户端只请求某个大文件里的一部分内容。比如说，如果播放视频地址或音频地址的前面一部分，可以用到<code>206</code>。</li>
+<li><code>301</code>：重定向（永久）。</li>
+<li><code>302</code>：重定向（临时）。</li>
+<li><code>304</code>：我这个服务器告诉客户端，你已经有缓存了，不需要从我这里取了。</li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="http://img.smyhvae.com/20180306_1440.png" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<ul>
+<li><code>400</code>和<code>401</code>用的不多,未授权。<code>403</code>指的是请求被拒绝。<code>404</code>指的是资源不存在。</li>
+</ul>
+<h3 id="HTTP-状态码"><a href="#HTTP-状态码" class="headerlink" title="HTTP 状态码"></a>HTTP 状态码</h3><p>100 ?Continue ?继续，一般在发送 post 请求时，已发送了 http header 之后服务端将返回此信息，表示确认，之后发送具体参数信息</p>
+<p>200 ?OK ? 正常返回信息</p>
+<p>201 ?Created ?请求成功并且服务器创建了新的资源</p>
+<p>202 ?Accepted ?服务器已接受请求，但尚未处理</p>
+<p>301 ?Moved Permanently ?请求的网页已永久移动到新位置。</p>
+<p>302 Found ?临时性重定向。</p>
+<p>303 See Other ?临时性重定向，且总是使用 GET 请求新的 URI。</p>
+<p>304 ?Not Modified ?自从上次请求后，请求的网页未修改过。</p>
+<p>400 Bad Request ?服务器无法理解请求的格式，客户端不应当尝试再次使用相同的内容发起请求。</p>
+<p>401 Unauthorized ?请求未授权。</p>
+<p>403 Forbidden ?禁止访问。</p>
+<p>404 Not Found ?找不到如何与 URI 相匹配的资源。</p>
+<p>500 Internal Server Error ?最常见的服务器端错误。</p>
+<p>503 Service Unavailable 服务器端暂时无法处理请求（可能是过载或维护）。</p>
+<h3 id="持久链接-http长连接"><a href="#持久链接-http长连接" class="headerlink" title="持久链接/http长连接"></a>持久链接/http长连接</h3><blockquote>
+<p>如果你能答出持久链接，这是面试官很想知道的一个点。</p>
+</blockquote>
+<ul>
+<li><strong>轮询</strong>：<code>http1.0</code>中，客户端每隔很短的时间，都会对服务器发出请求，查看是否有新的消息，只要轮询速度足够快，例如<code>1</code>秒，就能给人造成交互是实时进行的印象。这种做法是无奈之举，实际上对服务器、客户端双方都造成了大量的性能浪费。</li>
+<li><strong>长连接</strong>：<code>HTTP1.1</code>中，通过使用<code>Connection:keep-alive</code>进行长连接，。客户端只请求一次，但是服务器会将继续保持连接，当再次请求时，避免了重新建立连接。</li>
+</ul>
+<blockquote>
+<p>注意，<code>HTTP 1.1</code>默认进行持久连接。在一次 <code>TCP</code> 连接中可以完成多个 <code>HTTP</code> 请求，但是对<strong>每个请求仍然要单独发 header</strong>，<code>Keep-Alive</code>不会永久保持连接，它有一个保持时间，可以在不同的服务器软件（如<code>Apache</code>）中设定这个时间。</p>
+</blockquote>
+<h3 id="长连接中的管线化"><a href="#长连接中的管线化" class="headerlink" title="长连接中的管线化"></a>长连接中的管线化</h3><blockquote>
+<p>如果能答出<strong>管线化</strong>，则属于加分项。</p>
+</blockquote>
+<p>1 <strong>管线化的原理</strong></p>
+<blockquote>
+<p>长连接时，<strong>默认</strong>的请求这样的：</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">请求1 --&gt; 响应1 --&gt;请求2 --&gt; 响应2 --&gt; 请求3 --&gt; 响应3</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>管线化就是，我把现在的请求打包，一次性发过去，你也给我一次响应回来。</p>
+</blockquote>
+<p>2 <strong>管线化的注意事项</strong></p>
+<blockquote>
+<p>面试时，不会深究管线化。如果真要问你，就回答：“我没怎么研究过，准备回去看看~”</p>
+</blockquote>
+<h3 id="http状态码有那些？分别代表是什么意思？"><a href="#http状态码有那些？分别代表是什么意思？" class="headerlink" title="http状态码有那些？分别代表是什么意思？"></a>http状态码有那些？分别代表是什么意思？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">简单版</span><br><span class="line">   [</span><br><span class="line">       100  Continue   继续，一般在发送post请求时，已发送了http header之后服务端将返回此信息，表示确认，之后发送具体参数信息</span><br><span class="line">       200  OK         正常返回信息</span><br><span class="line">       201  Created    请求成功并且服务器创建了新的资源</span><br><span class="line">       202  Accepted   服务器已接受请求，但尚未处理</span><br><span class="line">       301  Moved Permanently  请求的网页已永久移动到新位置。</span><br><span class="line">       302 Found       临时性重定向。</span><br><span class="line">       303 See Other   临时性重定向，且总是使用 GET 请求新的 URI。</span><br><span class="line">       304  Not Modified 自从上次请求后，请求的网页未修改过。</span><br><span class="line"></span><br><span class="line">       400 Bad Request  服务器无法理解请求的格式，客户端不应当尝试再次使用相同的内容发起请求。</span><br><span class="line">       401 Unauthorized 请求未授权。</span><br><span class="line">       403 Forbidden   禁止访问。</span><br><span class="line">       404 Not Found   找不到如何与 URI 相匹配的资源。</span><br><span class="line"></span><br><span class="line">       500 Internal Server Error  最常见的服务器端错误。</span><br><span class="line">       503 Service Unavailable 服务器端暂时无法处理请求（可能是过载或维护）。</span><br><span class="line">   ]</span><br></pre></td></tr></table></figure>
+
+<h3 id="说说TCP传输的三次握手四次挥手策略"><a href="#说说TCP传输的三次握手四次挥手策略" class="headerlink" title="说说TCP传输的三次握手四次挥手策略"></a>说说TCP传输的三次握手四次挥手策略</h3><ul>
+<li>为了准确无误地把数据送达目标处，TCP协议采用了三次握手策略。用TCP协议把数据包送出去后，TCP不会对传送 后的情况置之不理，它一定会向对方确认是否成功送达。握手过程中使用了TCP的标志：SYN和ACK</li>
+<li>发送端首先发送一个带SYN标志的数据包给对方。接收端收到后，回传一个带有SYN/ACK标志的数据包以示传达确认信息。 最后，发送端再回传一个带ACK标志的数据包，代表“握手”结束。 若在握手过程中某个阶段莫名中断，TCP协议会再次以相同的顺序发送相同的数据包</li>
+</ul>
+<h3 id="断开一个TCP连接则需要“四次握手”："><a href="#断开一个TCP连接则需要“四次握手”：" class="headerlink" title="断开一个TCP连接则需要“四次握手”："></a>断开一个TCP连接则需要“四次握手”：</h3><ul>
+<li>第一次挥手：主动关闭方发送一个FIN，用来关闭主动方到被动关闭方的数据传送，也就是主动关闭方告诉被动关闭方：我已经不 会再给你发数据了(当然，在fin包之前发送出去的数据，如果没有收到对应的ack确认报文，主动关闭方依然会重发这些数据)，但是，此时主动关闭方还可 以接受数据</li>
+<li>第二次挥手：被动关闭方收到FIN包后，发送一个ACK给对方，确认序号为收到序号+1（与SYN相同，一个FIN占用一个序号）</li>
+<li>第三次挥手：被动关闭方发送一个FIN，用来关闭被动关闭方到主动关闭方的数据传送，也就是告诉主动关闭方，我的数据也发送完了，不会再给你发数据了</li>
+<li>第四次挥手：主动关闭方收到FIN后，发送一个ACK给被动关闭方，确认序号为收到序号+1，至此，完成四次挥手</li>
+</ul>
+<h3 id="TCP和UDP的区别"><a href="#TCP和UDP的区别" class="headerlink" title="TCP和UDP的区别"></a>TCP和UDP的区别</h3><ul>
+<li>TCP（Transmission Control Protocol，传输控制协议）是基于连接的协议，也就是说，在正式收发数据前，必须和对方建立可靠的连接。一个TCP连接必须要经过三次“对话”才能建立起来</li>
+<li>UDP（User Data Protocol，用户数据报协议）是与TCP相对应的协议。它是面向非连接的协议，它不与对方建立连接，而是直接就把数据包发送过去！ UDP适用于一次只传送少量数据、对可靠性要求不高的应用环境</li>
+</ul>
+<h3 id="HTTP和HTTPS"><a href="#HTTP和HTTPS" class="headerlink" title="HTTP和HTTPS"></a>HTTP和HTTPS</h3><ul>
+<li>HTTP协议通常承载于TCP协议之上，在HTTP和TCP之间添加一个安全协议层（SSL或TSL），这个时候，就成了我们常说的HTTPS</li>
+<li>默认HTTP的端口号为80，HTTPS的端口号为443</li>
+</ul>
+<h3 id="为什么HTTPS安全"><a href="#为什么HTTPS安全" class="headerlink" title="为什么HTTPS安全"></a>为什么HTTPS安全</h3><p>因为网络请求需要中间有很多的服务器路由器的转发。中间的节点都可能篡改信息，而如果使用HTTPS，密钥在你和终点站才有。https之所以比http安全，是因为他利用ssl/tls协议传输。它包含证书，卸载，流量转发，负载均衡，页面适配，浏览器适配，refer传递等。保障了传输过程的安全性</p>
+<h3 id="关于Http-2-0-你知道多少？"><a href="#关于Http-2-0-你知道多少？" class="headerlink" title="关于Http 2.0 你知道多少？"></a>关于Http 2.0 你知道多少？</h3><ul>
+<li>HTTP/2引入了“服务端推（server push）”的概念，它允许服务端在客户端需要数据之前就主动地将数据发送到客户端缓存中，从而提高性能。</li>
+<li>HTTP/2提供更多的加密支持</li>
+<li>HTTP/2使用多路技术，允许多个消息在一个连接上同时交差。</li>
+<li>它增加了头压缩（header compression），因此即使非常小的请求，其请求和响应的header都只会占用很小比例的带宽</li>
+</ul>
+<h3 id="GET和POST的区别，何时使用POST？"><a href="#GET和POST的区别，何时使用POST？" class="headerlink" title="GET和POST的区别，何时使用POST？"></a>GET和POST的区别，何时使用POST？</h3><ul>
+<li>GET：一般用于信息获取，使用URL传递参数，对所发送信息的数量也有限制，一般在2000个字符</li>
+<li>POST：一般用于修改服务器上的资源，对所发送的信息没有限制。</li>
+<li>GET方式需要使用Request.QueryString来取得变量的值，而POST方式通过Request.Form来获取变量的值，也就是说Get是通过地址栏来传值，而Post是通过提交表单来传值。</li>
+<li>然而，在以下情况中，请使用 POST 请求：<ul>
+<li>无法使用缓存文件（更新服务器上的文件或数据库）</li>
+<li>向服务器发送大量数据（POST 没有数据量限制）</li>
+<li>发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠</li>
+</ul>
+</li>
+</ul>
+<h3 id="说说网络分层里七层模型是哪七层"><a href="#说说网络分层里七层模型是哪七层" class="headerlink" title="说说网络分层里七层模型是哪七层"></a>说说网络分层里七层模型是哪七层</h3><ul>
+<li>应用层：应用层、表示层、会话层（从上往下）（HTTP、FTP、SMTP、DNS）</li>
+<li>传输层（TCP和UDP）</li>
+<li>网络层（IP）</li>
+<li>物理和数据链路层（以太网）</li>
+<li>每一层的作用如下：<ul>
+<li>物理层：通过媒介传输比特,确定机械及电气规范（比特Bit）<br>数据链路层：将比特组装成帧和点到点的传递（帧Frame）</li>
+<li>网络层：负责数据包从源到宿的传递和网际互连（包PackeT）</li>
+<li>传输层：提供端到端的可靠报文传递和错误恢复（段Segment）</li>
+<li>会话层：建立、管理和终止会话（会话协议数据单元SPDU）</li>
+<li>表示层：对数据进行翻译、加密和压缩（表示协议数据单元PPDU）</li>
+<li>应用层：允许访问OSI环境的手段（应用协议数据单元APDU）</li>
+</ul>
+</li>
+</ul>
+<h3 id="讲讲304缓存的原理"><a href="#讲讲304缓存的原理" class="headerlink" title="讲讲304缓存的原理"></a>讲讲304缓存的原理</h3><ul>
+<li>服务器首先产生ETag，服务器可在稍后使用它来判断页面是否已经被修改。本质上，客户端通过将该记号传回服务器要求服务器验证其（客户端）缓存</li>
+<li>304是HTTP状态码，服务器用来标识这个文件没修改，不返回内容，浏览器在接收到个状态码后，会使用浏览器已缓存的文件</li>
+<li>客户端请求一个页面（A）。 服务器返回页面A，并在给A加上一个ETag。 客户端展现该页面，并将页面连同ETag一起缓存。 客户再次请求页面A，并将上次请求时服务器返回的ETag一起传递给服务器。 服务器检查该ETag，并判断出该页面自上次客户端请求之后还未被修改，直接返回响应304（未修改——Not Modified）和一个空的响应体</li>
+</ul>
+<h3 id="HTTP-2-与-HTTP-1-x-的关键区别"><a href="#HTTP-2-与-HTTP-1-x-的关键区别" class="headerlink" title="HTTP/2 与 HTTP/1.x 的关键区别"></a>HTTP/2 与 HTTP/1.x 的关键区别</h3><ul>
+<li><p>二进制协议代替文本协议，更加简洁高效</p>
+</li>
+<li><p>针对每个域只使用一个多路复用的连接</p>
+</li>
+<li><p>压缩头部信息减小开销</p>
+</li>
+<li><p>允许服务器主动推送应答到客户端的缓存中</p>
+</li>
+</ul>
+<h3 id="一个页面从输入-URL-到页面加载显示完成，这个过程中都发生了什么？"><a href="#一个页面从输入-URL-到页面加载显示完成，这个过程中都发生了什么？" class="headerlink" title="一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？"></a>一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？</h3><ul>
+<li>01.浏览器查找域名对应的IP地址(DNS 查询：浏览器缓存-&gt;系统缓存-&gt;路由器缓存-&gt;ISP DNS 缓存-&gt;根域名服务器)</li>
+<li>02.浏览器向 Web 服务器发送一个 HTTP 请求（TCP三次握手）</li>
+<li>03.服务器 301 重定向（从 <a href="http://example.com" target="_blank" rel="noopener">http://example.com</a> 重定向到 <a href="http://www.example.com）" target="_blank" rel="noopener">http://www.example.com）</a></li>
+<li>04.浏览器跟踪重定向地址，请求另一个带 www 的网址</li>
+<li>05.服务器处理请求（通过路由读取资源）</li>
+<li>06.服务器返回一个 HTTP 响应（报头中把 Content-type 设置为 ‘text/html’）</li>
+<li>07.浏览器进 DOM 树构建</li>
+<li>08.浏览器发送请求获取嵌在 HTML 中的资源（如图片、音频、视频、CSS、JS等）</li>
+<li>09.浏览器显示完成页面</li>
+<li>10.浏览器发送异步请求</li>
+</ul>
+<h3 id="http-无状态无连接"><a href="#http-无状态无连接" class="headerlink" title="http 无状态无连接"></a>http 无状态无连接</h3><ul>
+<li><code>http</code> 协议对于事务处理没有记忆能力</li>
+<li>对同一个<code>url</code>请求没有上下文关系</li>
+<li>每次的请求都是独立的，它的执行情况和结果与前面的请求和之后的请求是无直接关系的，它不会受前面的请求应答情况直接影响，也不会直接影响后面的请求应答情况</li>
+<li>服务器中没有保存客户端的状态，客户端必须每次带上自己的状态去请求服务器</li>
+<li>人生若只如初见，请求过的资源下一次会继续进行请求</li>
+</ul>
+<h3 id="http协议无状态中的-状态-到底指的是什么？"><a href="#http协议无状态中的-状态-到底指的是什么？" class="headerlink" title="http协议无状态中的 状态 到底指的是什么？"></a>http协议无状态中的 状态 到底指的是什么？</h3><ul>
+<li>【状态】的含义就是：客户端和服务器在某次会话中产生的数据</li>
+<li>那么对应的【无状态】就意味着：这些数据不会被保留</li>
+<li>通过增加<code>cookie</code>和<code>session</code>机制，现在的网络请求其实是有状态的</li>
+<li>在没有状态的<code>http</code>协议下，服务器也一定会保留你每次网络请求对数据的修改，但这跟保留每次访问的数据是不一样的，保留的只是会话产生的结果，而没有保留会话</li>
+</ul>
+<h3 id="http-cache：就是-http-缓存"><a href="#http-cache：就是-http-缓存" class="headerlink" title="http-cache：就是 http 缓存"></a>http-cache：就是 http 缓存</h3><p><strong>1. 首先得明确 http 缓存的好处</strong></p>
+<ul>
+<li>减少了冗余的数据传输，减少网费</li>
+<li>减少服务器端的压力</li>
+<li><code>Web</code> 缓存能够减少延迟与网络阻塞，进而减少显示某个资源所用的时间</li>
+<li>加快客户端加载网页的速度</li>
+</ul>
+<p><strong>2. 常见 http 缓存的类型</strong></p>
+<ul>
+<li>私有缓存（一般为本地浏览器缓存）</li>
+<li>代理缓存</li>
+</ul>
+<p><strong>3. 然后谈谈本地缓存</strong></p>
+<blockquote>
+<p>本地缓存是指浏览器请求资源时命中了浏览器本地的缓存资源，浏览器并不会发送真正的请求给服务器了。它的执行过程是</p>
+</blockquote>
+<ul>
+<li>第一次浏览器发送请求给服务器时，此时浏览器还没有本地缓存副本，服务器返回资源给浏览器，响应码是<code>200 OK</code>，浏览器收到资源后，把资源和对应的响应头一起缓存下来</li>
+<li>第二次浏览器准备发送请求给服务器时候，浏览器会先检查上一次服务端返回的响应头信息中的<code>Cache-Control</code>，它的值是一个相对值，单位为秒，表示资源在客户端缓存的最大有效期，过期时间为第一次请求的时间减去<code>Cache-Control</code>的值，过期时间跟当前的请求时间比较，如果本地缓存资源没过期，那么命中缓存，不再请求服务器</li>
+<li>如果没有命中，浏览器就会把请求发送给服务器，进入缓存协商阶段。</li>
+</ul>
+<blockquote>
+<p>与本地缓存相关的头有：<code>Cache-Control</code>、<code>Expires</code>，<code>Cache-Control</code>有多个可选值代表不同的意义，而<code>Expires</code>就是一个日期格式的绝对值。</p>
+</blockquote>
+<p><strong>3.1 Cache-Control</strong></p>
+<blockquote>
+<p><code>Cache-Control</code>是<code>HTPP</code>缓存策略中最重要的头，它是<code>HTTP/1.1</code>中出现的，它由如下几个值</p>
+</blockquote>
+<ul>
+<li><code>no-cache</code>：不使用本地缓存。需要使用缓存协商，先与服务器确认返回的响应是否被更改，如果之前的响应中存在<code>ETag</code>，那么请求的时候会与服务端验证，如果资源未被更改，则可以避免重新下载</li>
+<li><code>no-store</code>：直接禁止游览器缓存数据，每次用户请求该资源，都会向服务器发送一个请求，每次都会下载完整的资源</li>
+<li><code>public</code>：可以被所有的用户缓存，包括终端用户和<code>CDN</code>等中间代理服务器。</li>
+<li><code>private</code>：只能被终端用户的浏览器缓存，不允许<code>CDN</code>等中继缓存服务器对其缓存。</li>
+<li><code>max-age</code>：从当前请求开始，允许获取的响应被重用的最长时间（秒）。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 例如：</span></span><br><span class="line"></span><br><span class="line">Cache-Control: public, max-age=1000 </span><br><span class="line"><span class="comment"># 表示资源可以被所有用户以及代理服务器缓存，最长时间为1000秒。</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>3.2 Expires</strong></p>
+<blockquote>
+<p><code>Expires</code>是<code>HTTP/1.0</code>出现的头信息，同样是用于决定本地缓存策略的头，它是一个绝对时间，时间格式是如<code>Mon, 10 Jun 2015 21:31:12 GMT</code>，只要发送请求时间是在<code>Expires</code>之前，那么本地缓存始终有效，否则就会去服务器发送请求获取新的资源。如果同时出现<code>Cache-Control：max-age</code>和<code>Expires</code>，那么<code>max-age</code>优先级更高。他们可以这样组合使用</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Cache-Control: public</span><br><span class="line">Expires: Wed, Jan 10 2018 00:27:04 GMT</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.3 所谓的缓存协商</strong></p>
+<blockquote>
+<p>当第一次请求时服务器返回的响应头中存在以下情况时</p>
+</blockquote>
+<ul>
+<li>没有 <code>Cache-Control</code> 和 <code>Expires</code></li>
+<li><code>Cache-Control</code> 和 <code>Expires</code> 过期了</li>
+<li><code>Cache-Control</code> 的属性设置为 <code>no-cache</code> 时</li>
+</ul>
+<blockquote>
+<p>那么浏览器第二次请求时就会与服务器进行协商，询问浏览器中的缓存资源是不是旧版本，需不需要更新，此时，服务器就会做出判断，如果缓存和服务端资源的最新版本是一致的，那么就无需再次下载该资源，服务端直接返回<code>304 Not Modified</code> 状态码，如果服务器发现浏览器中的缓存已经是旧版本了，那么服务器就会把最新资源的完整内容返回给浏览器，状态码就是<code>200 Ok</code>，那么服务端是根据什么来判断浏览器的缓存是不是最新的呢？其实是根据<code>HTTP</code>的另外两组头信息，分别是：<code>Last-Modified/If-Modified-Since</code> 与 <code>ETag/If-None-Match</code>。</p>
+</blockquote>
+<p><strong>Last-Modified 与 If-Modified-Since</strong></p>
+<ul>
+<li>浏览器第一次请求资源时，服务器会把资源的最新修改时间<code>Last-Modified:Thu, 29 Dec 2011 18:23:55 GMT</code>放在响应头中返回给浏览器</li>
+<li>第二次请求时，浏览器就会把上一次服务器返回的修改时间放在请求头<code>If-Modified-Since:Thu, 29 Dec 2011 18:23:55</code>发送给服务器，服务器就会拿这个时间跟服务器上的资源的最新修改时间进行对比</li>
+</ul>
+<blockquote>
+<p>如果两者相等或者大于服务器上的最新修改时间，那么表示浏览器的缓存是有效的，此时缓存会命中，服务器就不再返回内容给浏览器了，同时<code>Last-Modified</code>头也不会返回，因为资源没被修改，返回了也没什么意义。如果没命中缓存则最新修改的资源连同<code>Last-Modified</code>头一起返回</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 第一次请求返回的响应头</span></span><br><span class="line">Cache-Control:max-age=3600</span><br><span class="line">Expires: Fri, Jan 12 2018 00:27:04 GMT</span><br><span class="line">Last-Modified: Wed, Jan 10 2018 00:27:04 GMT</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 第二次请求的请求头信息</span></span><br><span class="line">If-Modified-Since: Wed, Jan 10 2018 00:27:04 GMT</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这组头信息是基于资源的修改时间来判断资源有没有更新，另一种方式就是根据资源的内容来判断，就是接下来要讨论的 <code>ETag</code> 与 <code>If-None-Match</code></p>
+</blockquote>
+<p><strong>ETag与If-None-Match</strong></p>
+<blockquote>
+<p><code>ETag/If-None-Match</code>与<code>Last-Modified/If-Modified-Since</code>的流程其实是类似的，唯一的区别是它基于资源的内容的摘要信息（比如<code>MD5 hash</code>）来判断</p>
+</blockquote>
+<blockquote>
+<p>浏览器发送第二次请求时，会把第一次的响应头信息<code>ETag</code>的值放在<code>If-None-Match</code>的请求头中发送到服务器，与最新的资源的摘要信息对比，如果相等，取浏览器缓存，否则内容有更新，最新的资源连同最新的摘要信息返回。用<code>ETag</code>的好处是如果因为某种原因到时资源的修改时间没改变，那么用<code>ETag</code>就能区分资源是不是有被更新。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 第一次请求返回的响应头：</span></span><br><span class="line"></span><br><span class="line">Cache-Control: public, max-age=31536000</span><br><span class="line">ETag: <span class="string">"15f0fff99ed5aae4edffdd6496d7131f"</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 第二次请求的请求头信息：</span></span><br><span class="line"></span><br><span class="line">If-None-Match: <span class="string">"15f0fff99ed5aae4edffdd6496d7131f"</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Http2-是什么"><a href="#Http2-是什么" class="headerlink" title="Http2 是什么"></a>Http2 是什么</h3><p>HTTP/2（超文本传输协议第 2 版，最初命名为 HTTP 2.0），是 HTTP 协议的的第二个主要版本，使用于万维网。HTTP/2 是 HTTP 协议自 1999 年 HTTP 1.1 发布后的首个更新，主要基于 SPDY 协议（是 Google 开发的基于 TCP 的应用层协议，用以最小化网络延迟，提升网络速度，优化用户的网络使用体验）。</p>
+<p>与 HTTP 1.1 相比，主要区别包括<br>HTTP/2 采用二进制格式而非文本格式<br>HTTP/2 是完全多路复用的，而非有序并阻塞的——只需一个连接即可实现并行<br>使用报头压缩，HTTP/2 降低了开销<br>HTTP/2 让服务器可以将响应主动“推送”到客户端缓存中</p>
+<p>解析：</p>
+<table>
+<thead>
+<tr>
+<th>状态码</th>
+<th>类别</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1xx</td>
+<td>Informational（信息状态码）</td>
+<td>接受请求正在处理</td>
+</tr>
+<tr>
+<td>2xx</td>
+<td>Success（成功状态码）</td>
+<td>请求正常处理完毕</td>
+</tr>
+<tr>
+<td>3xx</td>
+<td>Redirection（重定向状态码）</td>
+<td>需要附加操作已完成请求</td>
+</tr>
+<tr>
+<td>4xx</td>
+<td>Client Error（客户端错误状态码）</td>
+<td>服务器无法处理请求</td>
+</tr>
+<tr>
+<td>5xx</td>
+<td>Server Error（服务器错误状态码）</td>
+<td>服务器处理请求出错</td>
+</tr>
+</tbody></table>
+<h3 id="Http-请求的整个过程"><a href="#Http-请求的整个过程" class="headerlink" title="Http 请求的整个过程"></a>Http 请求的整个过程</h3><p>简洁版： 1.域名解析 –&gt; 2.发起 TCP 的 3 次握手 –&gt; 3.建立 TCP 连接后发起 http 请求 –&gt; 4.服务器响应 http 请求，浏览器得到 html 代码 –&gt; 5.浏览器解析 html 代码，并请求 html 代码中的资源（如 js、css、图片等） –&gt; 6.浏览器对页面进行渲染呈现给用户</p>
+<h3 id="http-缓存配置怎么设置"><a href="#http-缓存配置怎么设置" class="headerlink" title="http 缓存配置怎么设置"></a>http 缓存配置怎么设置</h3><p>前端设置 http 缓存,前端设置 html 页面缓存方法：静态的 html 页面想要设置使用缓存需要通过 HTTP 的 META 设置 expires 和 cache-control</p>
+<p>设置如下网页元信息:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Cache-Control"</span> <span class="attr">content</span>=<span class="string">"max-age=7200"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Expires"</span> <span class="attr">content</span>=<span class="string">"Mon, 20 Jul 2013 23:00:00 GMT"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>解答:<br>cache-control：||no-cache||no-store||max-age</p>
+<p>1.no-cache：</p>
+<p>表面意为“数据内容不被缓存”，而实际数据是被缓存到本地的，只是每次请求时候直接绕过缓存这一环节直接向服务器请求最新资源，由于浏览器解释不一样，</p>
+<p>例如 ie 中我们设置了 no-cache 之后，请求虽然不会直接使用缓存，但是还会用缓存数据与服务器数据进行一致性检测(也就是说还是有几率会用到缓存的),</p>
+<p>firefox 中则完全无视 no-cache 存在，详细解释见 no-store;</p>
+<p>2.no-store：</p>
+<p>指示缓存不存储此次请求的响应部分。与 no-cache 比较来说，一个是不用缓存，一个是不存储缓存;按理来说这个设置更加粗暴直接禁用缓存，</p>
+<p>但是具体实现起来 浏览器之间差异却特别大，一般不会直接用该字段进行设置，不过 no-store 是为了防止缓存被恶意修改存储路径导致信息被泄露而设置的，</p>
+<p>毕竟有它的用处，在 firefox 中实现缓存是通过文件另存为将缓存副本保存到本地，直接利用 no-cache 对其是无效的，如果加上 no-store 设置的话 则可以起到与 no-cache 一样的效果;</p>
+<p>即：cache-control:no-cache,no-store;可以确保在支持 http1.1 版本中各大浏览器回车后退刷新无缓存；</p>
+<p>再加上 Pragma: no-cache 设置兼容版本 1.0 即可(不过为了防止一致性检测时候的万一我们还是最好加上一致性检测的内容，如下所示几种方式)；</p>
+<p>3.max-age：</p>
+<p>例如 Cache-control: max-age=3；表示此次请求成功后 3 秒之内发送同样请求不会去服务器重新请求，而是使用本地缓存；同样我们如果设置 max-age=0 表示立即抛弃缓存直接发送请求到服务器</p>
+<p>以下内容来自:<a href="http://www.runoob.com/tags/att-meta-http-equiv.html" target="_blank" rel="noopener">http://www.runoob.com/tags/att-meta-http-equiv.html</a></p>
+<p>HTML <meta> http-equiv 属性<br>HTML meta 标签参考手册 HTML <meta> 标签</p>
+<p>实例<br>每隔 30 秒刷新一次文档：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"refresh"</span> <span class="attr">content</span>=<span class="string">"30"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>扩展：</p>
+<p>与缓存有关的 header<br>我们来看看每个 header 的具体含义。</p>
+<p>Request</p>
+<p>Cache-Control: max-age=0 以秒为单位<br>If-Modified-Since: Mon, 19 Nov 2012 08:38:01 GMT 缓存文件的最后修改时间。<br>If-None-Match: “0693f67a67cc1:0” 缓存文件的 Etag 值<br>Cache-Control: no-cache 不使用缓存<br>Pragma: no-cache 不使用缓存</p>
+<p>Response</p>
+<p>Cache-Control: public 响应被缓存，并且在多用户间共享，  （公有缓存和私有缓存的区别，请看另一节）<br>Cache-Control: private 响应只能作为私有缓存，不能在用户之间共享<br>Cache-Control:no-cache 提醒浏览器要从服务器提取文档进行验证<br>Cache-Control:no-store 绝对禁止缓存（用于机密，敏感文件）<br>Cache-Control: max-age=60 60 秒之后缓存过期（相对时间）<br>Date: Mon, 19 Nov 2012 08:39:00 GMT 当前 response 发送的时间<br>Expires: Mon, 19 Nov 2012 08:40:01 GMT 缓存过期的时间（绝对时间）<br>Last-Modified: Mon, 19 Nov 2012 08:38:01 GMT 服务器端文件的最后修改时间<br>ETag: “20b1add7ec1cd1:0” 服务器端文件的 Etag 值</p>
+<h3 id="Accept-和-Content-Type"><a href="#Accept-和-Content-Type" class="headerlink" title="Accept 和 Content-Type"></a>Accept 和 Content-Type</h3><p>Accept 请求头用来告知客户端可以处理的内容类型，这种内容类型用 MIME 类型来表示。<br>服务器使用 Content-Type 应答头通知客户端它的选择。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Accept: text/html</span><br><span class="line">Accept: image/*</span><br><span class="line">Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8</span><br></pre></td></tr></table></figure>
+
+<p>1.Accept 属于请求头， Content-Type 属于实体头。 <br><br>Http 报头分为通用报头，请求报头，响应报头和实体报头。 <br><br>请求方的 http 报头结构：通用报头|请求报头|实体报头 <br><br>响应方的 http 报头结构：通用报头|响应报头|实体报头<br></p>
+<p>2.Accept 代表发送端（客户端）希望接受的数据类型。 <br><br>比如：Accept：text/xml; <br><br>代表客户端希望接受的数据类型是 xml 类型<br></p>
+<p>Content-Type 代表发送端（客户端|服务器）发送的实体数据的数据类型。 <br><br>比如：Content-Type：text/html; <br><br>代表发送端发送的数据格式是 html。<br></p>
+<p>二者合起来， <br><br>Accept:text/xml； <br><br>Content-Type:text/html <br><br>即代表希望接受的数据类型是 xml 格式，本次请求发送的数据的数据格式是 html。<br></p>
+<h3 id="http-协议缓存机制"><a href="#http-协议缓存机制" class="headerlink" title="http 协议缓存机制"></a>http 协议缓存机制</h3><p>答案：<a href="https://segmentfault.com/a/1190000010690320" target="_blank" rel="noopener">参考</a></p>
+<h3 id="如何处理不让别人盗用你的图片，访问你的服务器资源"><a href="#如何处理不让别人盗用你的图片，访问你的服务器资源" class="headerlink" title="如何处理不让别人盗用你的图片，访问你的服务器资源"></a>如何处理不让别人盗用你的图片，访问你的服务器资源</h3><ul>
+<li>http header, 对 refer 做判断看来源是不是自己的网站，如果不是就拒绝</li>
+<li>通过 session 校验，如果不通过特定服务生成 cookie 和 session 就不能请求得到资源</li>
+</ul>
+<h3 id="Http-与-Https-的区别"><a href="#Http-与-Https-的区别" class="headerlink" title="Http 与 Https 的区别"></a>Http 与 Https 的区别</h3><ul>
+<li>HTTP 的 URL 以 http:// 开头，而 HTTPS 的 URL 以 https:// 开头</li>
+<li>HTTP 是不安全的，而 HTTPS 是安全的</li>
+<li>HTTP 标准端口是 80 ，而 HTTPS 的标准端口是 443</li>
+<li>在 OSI 网络模型中，HTTP 工作于应用层，而 HTTPS 的安全传输机制工作在传输层</li>
+<li>HTTP 无法加密，而 HTTPS 对传输的数据进行加密</li>
+<li>HTTP 无需证书，而 HTTPS 需要 CA 机构 wosign 的颁发的 SSL 证书</li>
+</ul>
+<p>解析：<a href="https://zhuanlan.zhihu.com/p/33778904" target="_blank" rel="noopener">参考</a></p>
+<h3 id="什么是-Http-协议无状态协议-怎么解决-Http-协议无状态协议"><a href="#什么是-Http-协议无状态协议-怎么解决-Http-协议无状态协议" class="headerlink" title="什么是 Http 协议无状态协议?怎么解决 Http 协议无状态协议?"></a>什么是 Http 协议无状态协议?怎么解决 Http 协议无状态协议?</h3><p>无状态协议对于事务处理没有记忆能力。缺少状态意味着如果后续处理需要前面的信息也就是说，<br><br>当客户端一次 HTTP 请求完成以后，客户端再发送一次 HTTP 请求，HTTP 并不知道当前客户端是一个”老用户“。<br></p>
+<p>可以使用 Cookie 来解决无状态的问题，Cookie 就相当于一个通行证，第一次访问的时候给客户端发送一个 Cookie，<br><br>当客户端再次来的时候，拿着 Cookie(通行证)，那么服务器就知道这个是”老用户“。<br></p>
+<p>解析：<a href="https://zhuanlan.zhihu.com/p/33778904" target="_blank" rel="noopener">参考</a></p>
+<h3 id="常用的-HTTP-方法有哪些"><a href="#常用的-HTTP-方法有哪些" class="headerlink" title="常用的 HTTP 方法有哪些"></a>常用的 HTTP 方法有哪些</h3><ul>
+<li>GET：用于请求访问已经被 URL（统一资源标识符）识别的资源，可以通过 URL 传参给服务器。</li>
+<li>POST：用于传输信息给服务器，主要功能与 Get 方法类似，但一般推荐 POST 方式。</li>
+<li>PUT：传输文件，报文主体包含文件内容，保存到对应 URL 位置。</li>
+<li>HEAD：获取报文首部，与 GET 方法类似，只是不返回报文主体，一般用于验证 URL 是否有效。</li>
+<li>DELET：删除文件，与 PUT 方法相反，删除对应 URL 位置的文件。OPTIONS：查询相应 URL 支持的 HTTP 方法。</li>
+</ul>
+<h3 id="一次完整的-HTTP-请求所经历的-7-个步骤"><a href="#一次完整的-HTTP-请求所经历的-7-个步骤" class="headerlink" title="一次完整的 HTTP 请求所经历的 7 个步骤"></a>一次完整的 HTTP 请求所经历的 7 个步骤</h3><p>HTTP 通信机制是在一次完整的 HTTP 通信过程中，Web 浏览器与 Web 服务器之间将完成下列 7 个步骤：</p>
+<ul>
+<li>建立 TCP 连接</li>
+</ul>
+<p>在 HTTP 工作开始之前，Web 浏览器首先要通过网络与 Web 服务器建立连接，该连接是通过 TCP 来完成的，该协议与 IP 协议共同构建 Internet，即著名的 TCP/IP 协议族，因此 Internet 又被称作是 TCP/IP 网络。HTTP 是比 TCP 更高层次的应用层协议，根据规则， 只有低层协议建立之后才能，才能进行更层协议的连接，因此，首先要建立 TCP 连接，一般 TCP 连接的端口号是 80。</p>
+<ul>
+<li>Web 浏览器向 Web 服务器发送请求行</li>
+</ul>
+<p>一旦建立了 TCP 连接，Web 浏览器就会向 Web 服务器发送请求命令。例如：GET /sample/hello.jsp HTTP/1.1。</p>
+<ul>
+<li>Web 浏览器发送请求头</li>
+</ul>
+<p>浏览器发送其请求命令之后，还要以头信息的形式向 Web 服务器发送一些别的信息，之后浏览器发送了一空白行来通知服务器，它已经结束了该头信息的发送。</p>
+<ul>
+<li>Web 服务器应答</li>
+</ul>
+<p>客户机向服务器发出请求后，服务器会客户机回送应答， HTTP/1.1 200 OK ，应答的第一部分是协议的版本号和应答状态码。</p>
+<ul>
+<li>Web 服务器发送应答头</li>
+</ul>
+<p>正如客户端会随同请求发送关于自身的信息一样，服务器也会随同应答向用户发送关于它自己的数据及被请求的文档。</p>
+<ul>
+<li>Web 服务器向浏览器发送数据</li>
+</ul>
+<p>Web 服务器向浏览器发送头信息后，它会发送一个空白行来表示头信息的发送到此为结束，接着，它就以 Content-Type 应答头信息所描述的格式发送用户所请求的实际数据。</p>
+<ul>
+<li>Web 服务器关闭 TCP 连接</li>
+</ul>
+<p>一般情况下，一旦 Web 服务器向浏览器发送了请求数据，它就要关闭 TCP 连接，然后如果浏览器或者服务器在其头信息加入了这行代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Connection:keep-alive</span><br></pre></td></tr></table></figure>
+
+<p>TCP 连接在发送后将仍然保持打开状态，于是，浏览器可以继续通过相同的连接发送请求。保持连接节省了为每个请求建立新连接所需的时间，还节约了网络带宽。</p>
+<p>建立 TCP 连接-&gt;发送请求行-&gt;发送请求头-&gt;（到达服务器）发送状态行-&gt;发送响应头-&gt;发送响应数据-&gt;断 TCP 连接</p>
+<h3 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h3><p>TCP 协议是面向连接的通信协议，即在传输数据前先在发送端和接收端建立逻辑连接，然后再传输数据，它提供了两台计算机之间可靠无差错的数据传输。</p>
+<p>在 TCP 连接中必须要明确客户端与服务器端，由客户端向服务端发出连接请求，每次连接的创建都需要经过“三次握手”</p>
+<p>第一次握手，客户端向服务器端发送一个带 SYN 标志的数据包，等待服务器确认</p>
+<p>第二次握手，服务器端向客户端回传一个带有 SYN/ACK 标志的数据包，通知客户端收到了连接请求</p>
+<p>第三次握手，客户端再次向服务器端回传一个带 ACK 标志的数据包，确认连接，“握手”结束。</p>
+<h3 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h3><p>1、客户端向服务器发送一个断开连接的请求（不早了，我该走了）；</p>
+<p>2、服务器接到请求后发送确认收到请求的信号（知道了）；</p>
+<p>3、服务器向客户端发送断开通知（我也该走了）；</p>
+<p>4、客户端接到断开通知后断开连接并反馈一个确认信号（嗯，好的），服务器收到确认信号后断开连接；</p>
+<p>解析：</p>
+<p>第一次挥手：主动关闭方发送一个 FIN，用来关闭主动方到被动关闭方的数据传送，也就是主动关闭方告诉被动关闭方：我已经不会再给你发数据了(当然，在 fin 包之前发送出去的数据，如果没有收到对应的 ack 确认报文，主动关闭方依然会重发这些数据)，但是，此时主动关闭方还可 以接受数据。</p>
+<p>第二次挥手：被动关闭方收到 FIN 包后，发送一个 ACK 给对方，确认序号为收到序号+1（与 SYN 相同，一个 FIN 占用一个序号）。</p>
+<p>第三次挥手：被动关闭方发送一个 FIN，用来关闭被动关闭方到主动关闭方的数据传送，也就是告诉主动关闭方，我的数据也发送完了，不会再给你发数据了。</p>
+<p>第四次挥手：主动关闭方收到 FIN 后，发送一个 ACK 给被动关闭方，确认序号为收到序号+1，至此，完成四次挥手。</p>
+<h3 id="线程与进程的区别"><a href="#线程与进程的区别" class="headerlink" title="线程与进程的区别"></a>线程与进程的区别</h3><p>a. 一个程序至少有一个进程，一个进程至少有一个线程</p>
+<p>b. 线程的划分尺度小于进程，使得多线程程序的并发性高</p>
+<p>c. 进程在执行过程中拥有独立的内存单元，而多个线程共享内存，从而极大地提高了程序的运行效率</p>
+<p>d. 每个独立的线程有一个程序运行的入口、顺序执行序列和程序的出口。但是线程不能够独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制</p>
+<p>e. 多线程的意义在于一个应用程序中，有多个执行部分可以同时执行。但操作系统并没有将多个线程看做多个独立的应用，来实现进程的调度和管理以及资源分配</p>
+<h3 id="WEB-应用从服务器主动推送-Data-到客户端有那些方式？"><a href="#WEB-应用从服务器主动推送-Data-到客户端有那些方式？" class="headerlink" title="WEB 应用从服务器主动推送 Data 到客户端有那些方式？"></a>WEB 应用从服务器主动推送 Data 到客户端有那些方式？</h3><p>a. html5 websoket</p>
+<p>b. WebSocket 通过 Flash</p>
+<p>c. XHR 长时间连接</p>
+<p>d. XHR Multipart Streaming</p>
+<p>e. 不可见的 Iframe</p>
+<p>f. 标签的长时间连接(可跨域)</p>
+<h3 id="请简述如何在-HTML-中开启和关闭-DNS-预读取"><a href="#请简述如何在-HTML-中开启和关闭-DNS-预读取" class="headerlink" title="请简述如何在 HTML 中开启和关闭 DNS 预读取?"></a>请简述如何在 HTML 中开启和关闭 DNS 预读取?</h3><p>答案：</p>
+<p>DNS 预读取</p>
+<p>概念：</p>
+<p>浏览器主动去执行域名解析功能。</p>
+<p>当浏览网页时，浏览器会对网页中的域名进行解析缓存，这样当单击当前网页中的连接时就无需进行 DNS 解析，减少用户等待时间，提高用户体验。</p>
+<p>范围：</p>
+<p>图片、CSS、JS 或 html 上的 link 等 URL。</p>
+<p>开关和使用：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"x-dns-prefetch-control"</span> <span class="attr">content</span>=<span class="string">"off"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"dns-prefetch"</span> <span class="attr">href</span>=<span class="string">"//www.spreadfirefox.com"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>前端优化：</p>
+<p>减少 DNS 请求次数；</p>
+<p>进行 DNS 预获取；</p>
+<h3 id="TCP-和-UDP-的区别"><a href="#TCP-和-UDP-的区别" class="headerlink" title="TCP 和 UDP 的区别"></a>TCP 和 UDP 的区别</h3><p>TCP（Transmission Control Protocol，传输控制协议）是基于连接的协议，也就是说，在正式收发数据前，必须和对方建立可靠的连接。一个 TCP 连接必须要经过三次“对话”才能建立起来</p>
+<p>UDP（User Data Protocol，用户数据报协议）是与 TCP 相对应的协议。它是面向非连接的协议，它不与对方建立连接，而是直接就把数据包发送过去！<br>UDP 适用于一次只传送少量数据、对可靠性要求不高的应用环境。</p>
+<h3 id="Web-Worker-和-webSocket"><a href="#Web-Worker-和-webSocket" class="headerlink" title="Web Worker 和 webSocket"></a>Web Worker 和 webSocket</h3><p>worker 主线程:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1.通过 worker = new Worker( url ) 加载一个JS文件来创建一个worker，同时返回一个worker实例。</span><br><span class="line"></span><br><span class="line">2.通过worker.postMessage( data ) 方法来向worker发送数据。</span><br><span class="line"></span><br><span class="line">3.绑定worker.onmessage方法来接收worker发送过来的数据。</span><br><span class="line"></span><br><span class="line">4.可以使用 worker.terminate() 来终止一个worker的执行。</span><br></pre></td></tr></table></figure>
+
+<p>WebSocket 是 Web 应用程序的传输协议，它提供了双向的，按序到达的数据流。他是一个 Html5 协议，WebSocket 的连接是持久的，他通过在客户端和服务器之间保持双工连接，服务器的更新可以被及时推送给客户端，而不需要客户端以一定时间间隔去轮询。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-04-26T09:59:38.820Z" itemprop="dateUpdated">2024-04-26 17:59:38</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/interview/http.html" target="_blank" rel="external">https://qw66.gitee.io/interview/http.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTTP/">HTTP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端通信/">前端通信</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/interview/http.html&title=《HTTP》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/interview/http.html&title=《HTTP》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/interview/http.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《HTTP》 — 秦伟博客&url=https://qw66.gitee.io/interview/http.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/interview/http.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/knowledges/html.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">HTML</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/interview/javascript-bi-shi-ti.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">JavaScript笔试题</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/interview/http.html&title=《HTTP》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/interview/http.html&title=《HTTP》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/interview/http.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《HTTP》 — 秦伟博客&url=https://qw66.gitee.io/interview/http.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/interview/http.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABzklEQVR42u3aSW5jMQwFQN//0u5tGsFXP5KS4g5KK8N/cMkLgoNer3i9v6zv3z/d+f3q+tltCxcXd8x9L9cakYCe7l+//3HDuLi4F7nrQJMEnXyT+ftxcXH/F26exKzfhouL+1u5ydVq6oOLi/s53KT46aU41avbajVcXNwBt5eg7P18pL+Li4vb4r6Lqxr+kvSl8Ou4uLhXuL30pVrq9AqkxztxcXEPc6tlT37Yotco+UdDFhcX9yJ3QxMz3kyvLfJXIMPFxT3MTQJNPmjJj1n0UiJcXNxP4PZAkyRmHQpxcXHvcJNmR76Zaqq0oVbDxcU9wO0NQSdNk8nABhcX9z53UuTkg9jq8HVUq+Hi4ra4+eAkCjHxP7Sh+MHFxT3GzcNQXthMnorSLFxc3Ivc13hV2x95+Hus1XBxcQ9z56VL9WhXNYDi4uLe5/aap0ljdHLwonAuAxcXdxN3MuRIkpJ8A1GahYuLe4VbLWyqhyqSlKg6VsHFxb3DzYPO+v7qxprHwnBxcS9yq0VRNbQdqdVwcXE/hlsefhRDWHNig4uL+6PcXutkUoFtTnFwcXFj7ry5WR3W5pvExcW9z62GkuQoRnV8e6S/i4uL2+H+AWtUw0IDI8VBAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

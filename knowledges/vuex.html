@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>vuex | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="vue,vuex">
+    <meta name="description" content="Vuex数据页面刷新丢失问题解决方案用Vue做项目开发很久了，对于vuex能用、会用，但是因为状态脱离页面和刷新丢失两个原因，一直都有种抵触，特别是一些简单的数据都是通过query或者本地存储就解决了，然而对于一些复杂内容，不可避免的还是要使用Vuex去处理(真香)，但是刷新丢失的问题，的确叫人头大。最近闲下来，我们来研究下怎么干掉这个问题～  不大了解Vuex的同学，可以先去官网溜溜  由于Vu">
+<meta name="keywords" content="vue,vuex">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vuex">
+<meta property="og:url" content="https://qw66.gitee.io/knowledges/vuex.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="Vuex数据页面刷新丢失问题解决方案用Vue做项目开发很久了，对于vuex能用、会用，但是因为状态脱离页面和刷新丢失两个原因，一直都有种抵触，特别是一些简单的数据都是通过query或者本地存储就解决了，然而对于一些复杂内容，不可避免的还是要使用Vuex去处理(真香)，但是刷新丢失的问题，的确叫人头大。最近闲下来，我们来研究下怎么干掉这个问题～  不大了解Vuex的同学，可以先去官网溜溜  由于Vu">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2024-02-28T03:11:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vuex">
+<meta name="twitter:description" content="Vuex数据页面刷新丢失问题解决方案用Vue做项目开发很久了，对于vuex能用、会用，但是因为状态脱离页面和刷新丢失两个原因，一直都有种抵触，特别是一些简单的数据都是通过query或者本地存储就解决了，然而对于一些复杂内容，不可避免的还是要使用Vuex去处理(真香)，但是刷新丢失的问题，的确叫人头大。最近闲下来，我们来研究下怎么干掉这个问题～  不大了解Vuex的同学，可以先去官网溜溜  由于Vu">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">vuex</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">vuex</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2022-07-28T13:02:08.000Z" itemprop="datePublished" class="page-time">
+  2022-07-28
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vuex数据页面刷新丢失问题解决方案"><span class="post-toc-number">1.</span> <span class="post-toc-text">Vuex数据页面刷新丢失问题解决方案</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#封装vuex，使其结合缓存持久化，并且在组件中方便使用"><span class="post-toc-number">2.</span> <span class="post-toc-text">封装vuex，使其结合缓存持久化，并且在组件中方便使用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#步骤-1-安装必要的库"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">步骤 1: 安装必要的库</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#步骤-2-创建-Vuex-Store"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">步骤 2: 创建 Vuex Store</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#步骤-3-在-Vue-实例中使用-Vuex-Store"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">步骤 3: 在 Vue 实例中使用 Vuex Store</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#步骤-4-在组件中使用-Vuex"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">步骤 4: 在组件中使用 Vuex</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#步骤-5-测试缓存持久化"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">步骤 5: 测试缓存持久化</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-knowledges/vuex"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">vuex</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2022-07-28 21:02:08" datetime="2022-07-28T13:02:08.000Z"  itemprop="datePublished">2022-07-28</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="Vuex数据页面刷新丢失问题解决方案"><a href="#Vuex数据页面刷新丢失问题解决方案" class="headerlink" title="Vuex数据页面刷新丢失问题解决方案"></a><a href="https://www.cnblogs.com/heioray/p/10284268.html" target="_blank" rel="noopener">Vuex数据页面刷新丢失问题解决方案</a></h3><p>用Vue做项目开发很久了，对于vuex能用、会用，但是因为状态脱离页面和刷新丢失两个原因，一直都有种抵触，特别是一些简单的数据都是通过query或者本地存储就解决了，然而对于一些复杂内容，不可避免的还是要使用Vuex去处理(真香)，但是刷新丢失的问题，的确叫人头大。最近闲下来，我们来研究下怎么干掉这个问题～</p>
+<hr>
+<p>不大了解Vuex的同学，可以<a href="https://vuex.vuejs.org/zh/" target="_blank" rel="noopener">先去官网溜溜</a></p>
+<hr>
+<p>由于Vuex的数据是存储在内存中的，相当于memory cache，当页面刷新的时候内存被清空重载新内容，原来的数据就丢了，为了解决这个我们可以借助浏览器的本地存储来解决，此时我们有两个选择</p>
+<ul>
+<li>localStorage 真·持久存储</li>
+<li>sessionStorage 会话期存储</li>
+</ul>
+<p>相比之下localStorage太持久了，不主动清除都会一直在，而sessionStorage更符合Vuex会话期状态管理的设计初衷。因此下文中统一使用sessionStorage来做补充，解决问题。</p>
+<p>有了补充对象之后，我们要做的只有两点<br>1、每次在mutation中set state的时候，同步的塞到sessionStorage一份<br>2、状态初始化的时候，从sessionStorage中读取相应内容并作为默认值(存在的话)</p>
+<p>看起来很简单，于是第一版方案有了，</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">    state: &#123;</span><br><span class="line">        userLevel: sessionStorage.getItem(<span class="string">'userLevel'</span>) || <span class="string">''</span></span><br><span class="line">    &#125;,</span><br><span class="line">    mutations: &#123;</span><br><span class="line">        SET_USERLEVEL(state, userLevel) &#123;</span><br><span class="line">            sessionStorage.setItem(<span class="string">'userLevel'</span>, userLevel)</span><br><span class="line">            state.userLevel = userLevel</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    modules: &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>这个是解决问题了，但是每个mutation都要sessionStorage.setItem一下实在有点麻烦，而且初始化还要都getItem一遍，我很懒不想写。。。于是我们改进了第二版</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> storeMaker = <span class="function">(<span class="params">state</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 初始化</span></span><br><span class="line">    <span class="built_in">Object</span>.keys(state).map(<span class="function">(<span class="params">key</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">// 判断类型获取本地存储数据</span></span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">typeof</span> state[key] === <span class="string">'object'</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (sessionStorage.getItem(key) &amp;&amp; <span class="built_in">JSON</span>.parse(sessionStorage.getItem(key))) &#123;</span><br><span class="line">                state[key] = <span class="built_in">JSON</span>.parse(sessionStorage.getItem(key))</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="keyword">typeof</span> state[key] === <span class="string">'number'</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (sessionStorage.getItem(key) &amp;&amp; <span class="built_in">parseInt</span>(sessionStorage.getItem(key))) &#123;</span><br><span class="line">                state[key] = <span class="built_in">parseInt</span>(sessionStorage.getItem(key))</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (sessionStorage.getItem(key)) &#123;</span><br><span class="line">                state[key] = sessionStorage.getItem(key)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 重写set处理</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Proxy</span>(state, &#123;</span><br><span class="line">        <span class="keyword">set</span>: function(target, key, value) &#123;</span><br><span class="line">            <span class="keyword">let</span> temp = value</span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">typeof</span> temp === <span class="string">'object'</span>) &#123;</span><br><span class="line">                temp = <span class="built_in">JSON</span>.stringify(temp)</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            sessionStorage.setItem(key, temp)</span><br><span class="line">            <span class="keyword">return</span> <span class="built_in">Reflect</span>.set(target, key, value)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">    state: storeMaker(&#123;</span><br><span class="line">        userLevel: <span class="string">''</span></span><br><span class="line">    &#125;),</span><br><span class="line">    mutations: &#123;</span><br><span class="line">        SET_USERLEVEL(state, userLevel) &#123;</span><br><span class="line">            state.userLevel = userLevel</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    modules: &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>内容不多，主要定义了一个storeMaker的函数实现了两个功能<br>1、对传入的state初始值判断类型，并尝试从sessionStorage中读取数据替换默认值<br>2、通过Proxy重置state的set逻辑，添加同步保存到sessionStorage的逻辑</p>
+<p>其实本来可以通过Proxy重置get逻辑处理取值的问题，但是由于vuex本身通过defineProperty函数重置了get逻辑，在这里使用proxy覆盖会有冲突，因此在初始化的时候直接读取sessionStorage。</p>
+<p>同时也存在一些问题：<br>1、目前只处理了一级属性，二级以下属性没处理，对于初始化会有偏差。对于这点处理层级也不宜过深，因为过深的结构设计本来就并不合理，两层基本也足够了。基本处理就是对于state的每个key再去遍历一遍，如果是object(非null非数组非空对象)就重新proxy一下<br>2、可以尝试打包成npm包，或者写成Vuex的插件形式，方便使用<br>3、等等</p>
+<p>～状态不好，先写到这，大家有兴趣一起来讨论，清清脑子再来补充～</p>
+<p>联想到的一些点：<br>1、memory cache和disk cache？内存怎么清理？js垃圾回收机制？<br>2、SessionStorage怎么做到会话期缓存？<br>3、session机制怎么回事？<br>4、http的无状态？状态保持？客户端保持？服务端保持？<br>5、等等等等<br>发散开看看，一个地方真的能学到很多东西。。。</p>
+<h3 id="封装vuex，使其结合缓存持久化，并且在组件中方便使用"><a href="#封装vuex，使其结合缓存持久化，并且在组件中方便使用" class="headerlink" title="封装vuex，使其结合缓存持久化，并且在组件中方便使用"></a>封装vuex，使其结合缓存持久化，并且在组件中方便使用</h3><p>chatGPT</p>
+<pre><code>在使用Vuex时结合缓存持久化，可以通过以下几个步骤来封装：</code></pre><ol>
+<li>安装依赖：安装vuex和localforage（或其他合适的缓存库）。</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install vuex localforage</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>创建一个新的store.js文件，用于封装Vuex。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</span><br><span class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span>;</span><br><span class="line"><span class="keyword">import</span> localforage <span class="keyword">from</span> <span class="string">'localforage'</span>;</span><br><span class="line"></span><br><span class="line">Vue.use(Vuex);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 初始化缓存库</span></span><br><span class="line">localforage.config(&#123;</span><br><span class="line">  driver: localforage.LOCALSTORAGE, <span class="comment">// 在本地存储中使用localStorage作为驱动程序</span></span><br><span class="line">  name: <span class="string">'myApp'</span> <span class="comment">// 设置缓存库名称，可以根据你的应用名称进行设置</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建并导出store实例</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">new</span> Vuex.Store(&#123;</span><br><span class="line">  state: &#123;</span><br><span class="line">    <span class="comment">// 初始化state</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;,</span><br><span class="line">  mutations: &#123;</span><br><span class="line">    <span class="comment">// 定义mutations</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;,</span><br><span class="line">  actions: &#123;</span><br><span class="line">    <span class="comment">// 定义actions</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">  &#125;,</span><br><span class="line">  plugins: [</span><br><span class="line">    store =&gt; &#123;</span><br><span class="line">      <span class="comment">// 在刷新时从缓存中恢复state</span></span><br><span class="line">      localforage.getItem(<span class="string">'vuex'</span>).then(<span class="function"><span class="params">value</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (value) &#123;</span><br><span class="line">          store.replaceState(value);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 在每次mutation后将state缓存起来</span></span><br><span class="line">      store.subscribe(<span class="function">(<span class="params">mutation, state</span>) =&gt;</span> &#123;</span><br><span class="line">        localforage.setItem(<span class="string">'vuex'</span>, state);</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>在上面的代码中，我们使用了localforage作为缓存库，并且在每次mutation后将state缓存起来，在刷新时从缓存中恢复state。</p>
+<ol start="3">
+<li>在主应用文件（如main.js）中引入store.js并挂载到Vue实例上。</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;</span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App.vue'</span>;</span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./store'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  store,</span><br><span class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App)</span><br><span class="line">&#125;).$mount(<span class="string">'#app'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>现在，我们已经将Vuex结合缓存持久化封装好了。</p>
+<p>在组件中，你可以像正常使用Vuex一样使用它：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用mapState和mapActions辅助函数获取state和actions</span></span><br><span class="line"><span class="keyword">import</span> &#123; mapState, mapActions &#125; <span class="keyword">from</span> <span class="string">'vuex'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  computed: &#123;</span><br><span class="line">    ...mapState([<span class="string">'count'</span>])</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    ...mapActions([<span class="string">'increment'</span>])</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>这样，你就可以在组件中通过this.count访问state，并且通过this.increment()来调用increment action。所有的状态更新都会被自动地缓存到本地存储中，以确保在刷新页面后能够重新加载。</p>
+<p>需要注意的是，由于缓存是异步的，所以在应用初始化加载时，可能会出现短暂的闪屏情况。如果需要避免这种情况，可以在应用启动之前显示一个加载提示，然后在缓存加载完成后隐藏加载提示。</p>
+<p>文心一言</p>
+<p>封装 Vuex 以结合缓存持久化并在组件中方便使用，你可以遵循以下步骤来实现：</p>
+<h4 id="步骤-1-安装必要的库"><a href="#步骤-1-安装必要的库" class="headerlink" title="步骤 1: 安装必要的库"></a>步骤 1: 安装必要的库</h4><p>首先，你需要安装 <code>vuex</code> 和一个用于缓存持久化的库，比如 <code>vuex-persistedstate</code>。你可以使用 npm 或 yarn 进行安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install vuex vuex-persistedstate --save  </span><br><span class="line"><span class="comment"># 或者  </span></span><br><span class="line">yarn add vuex vuex-persistedstate</span><br></pre></td></tr></table></figure>
+
+<h4 id="步骤-2-创建-Vuex-Store"><a href="#步骤-2-创建-Vuex-Store" class="headerlink" title="步骤 2: 创建 Vuex Store"></a>步骤 2: 创建 Vuex Store</h4><p>在 Vue 项目中，创建一个新的文件（例如 <code>store.js</code>）来定义你的 Vuex store。在这个文件中，导入 Vuex 和 <code>vuex-persistedstate</code> 插件，并定义你的 store：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;  </span><br><span class="line"><span class="keyword">import</span> Vuex <span class="keyword">from</span> <span class="string">'vuex'</span>;  </span><br><span class="line"><span class="keyword">import</span> createPersistedState <span class="keyword">from</span> <span class="string">'vuex-persistedstate'</span>;  </span><br><span class="line">  </span><br><span class="line">Vue.use(Vuex);  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> Vuex.Store(&#123;  </span><br><span class="line">  state: &#123;  </span><br><span class="line">    <span class="comment">// 定义你的状态  </span></span><br><span class="line">  &#125;,  </span><br><span class="line">  mutations: &#123;  </span><br><span class="line">    <span class="comment">// 定义你的 mutations  </span></span><br><span class="line">  &#125;,  </span><br><span class="line">  actions: &#123;  </span><br><span class="line">    <span class="comment">// 定义你的 actions  </span></span><br><span class="line">  &#125;,  </span><br><span class="line">  modules: &#123;  </span><br><span class="line">    <span class="comment">// 定义你的模块（如果有的话）  </span></span><br><span class="line">  &#125;,  </span><br><span class="line">  plugins: [  </span><br><span class="line">    createPersistedState(&#123;  </span><br><span class="line">      <span class="comment">// 配置选项，例如存储位置（localStorage 或 sessionStorage）  </span></span><br><span class="line">    &#125;)  </span><br><span class="line">  ]  </span><br><span class="line">&#125;);  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> store;</span><br></pre></td></tr></table></figure>
+
+<h4 id="步骤-3-在-Vue-实例中使用-Vuex-Store"><a href="#步骤-3-在-Vue-实例中使用-Vuex-Store" class="headerlink" title="步骤 3: 在 Vue 实例中使用 Vuex Store"></a>步骤 3: 在 Vue 实例中使用 Vuex Store</h4><p>在你的 Vue 实例中，导入并使用刚才创建的 Vuex store：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span>;  </span><br><span class="line"><span class="keyword">import</span> App <span class="keyword">from</span> <span class="string">'./App.vue'</span>;  </span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./store'</span>;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">new</span> Vue(&#123;  </span><br><span class="line">  store,  </span><br><span class="line">  render: <span class="function"><span class="params">h</span> =&gt;</span> h(App)  </span><br><span class="line">&#125;).$mount(<span class="string">'#app'</span>);</span><br></pre></td></tr></table></figure>
+
+<h4 id="步骤-4-在组件中使用-Vuex"><a href="#步骤-4-在组件中使用-Vuex" class="headerlink" title="步骤 4: 在组件中使用 Vuex"></a>步骤 4: 在组件中使用 Vuex</h4><p>现在，你可以在你的 Vue 组件中通过 <code>this.$store</code> 访问 Vuex store。为了更方便地使用 Vuex，你可以使用 <code>mapState</code>、<code>mapMutations</code> 和 <code>mapActions</code> 辅助函数来映射 state、mutations 和 actions 到组件的计算属性和方法上。</p>
+<p>例如，在你的组件中：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;  </span><br><span class="line">  &lt;div&gt;  </span><br><span class="line">    &lt;p&gt;&#123;&#123; count &#125;&#125;&lt;<span class="regexp">/p&gt;  </span></span><br><span class="line"><span class="regexp">    &lt;button @click="incrementCount"&gt;Increment&lt;/</span>button&gt;  </span><br><span class="line">  &lt;<span class="regexp">/div&gt;  </span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;  </span><br><span class="line">  </span><br><span class="line">&lt;script&gt;  </span><br><span class="line"><span class="keyword">import</span> &#123; mapState, mapMutations &#125; <span class="keyword">from</span> <span class="string">'vuex'</span>;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;  </span><br><span class="line">  computed: &#123;  </span><br><span class="line">    ...mapState([<span class="string">'count'</span>]) <span class="comment">// 映射 state 中的 count 到组件的计算属性上  </span></span><br><span class="line">  &#125;,  </span><br><span class="line">  methods: &#123;  </span><br><span class="line">    ...mapMutations([<span class="string">'incrementCount'</span>]) <span class="comment">// 映射 mutations 中的 incrementCount 到组件的方法上  </span></span><br><span class="line">  &#125;  </span><br><span class="line">&#125;;  </span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="步骤-5-测试缓存持久化"><a href="#步骤-5-测试缓存持久化" class="headerlink" title="步骤 5: 测试缓存持久化"></a>步骤 5: 测试缓存持久化</h4><p>现在，当你更改 Vuex store 中的状态时，这些更改应该会被持久化到浏览器的 localStorage 或 sessionStorage 中（取决于你在 <code>vuex-persistedstate</code> 插件中的配置）。你可以尝试刷新页面，看看状态是否仍然保持不变。</p>
+<p>这样，你就成功地封装了 Vuex 以结合缓存持久化，并在组件中方便地使用 Vuex 了。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-02-28T03:11:10.000Z" itemprop="dateUpdated">2024-02-28 11:11:10</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/knowledges/vuex.html" target="_blank" rel="external">https://qw66.gitee.io/knowledges/vuex.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vuex/">vuex</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/vuex.html&title=《vuex》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/vuex.html&title=《vuex》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/vuex.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vuex》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/vuex.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/vuex.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/knowledges/uniapp.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">uniapp</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/interview/vuex.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">vuex</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/vuex.html&title=《vuex》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/vuex.html&title=《vuex》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/vuex.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vuex》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/vuex.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/vuex.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABy0lEQVR42u3aQWrEMAwF0Ln/pafQVUuJ+yU5bijPq5AZnKcshCXl9YrX+3P9vPN1rf+f7Llt4eLijrnv5Vpzr+78vE72X/8HFxf3PHedaJIA1g9OQoqSHS4u7sO4ydEkx+Hi4v4P7iSA/EiEi4v7HG5enCTNkcvSJXgd22o1XFzcAbfaML3j+sb+Li4ubpH7Lq5esVRNW5dPx8XFPcLNxyR5k3TXkegyzeHi4t7MTbarbt0rWtZpDhcX9zx38oD8c4peu+TbHVxc3CPcvFDpbT056BQ+zMLFxd3KrY5Oq0VR9RCzDgwXF/cMt1rMJCVQTo9weQ8GFxd3K7eatvKUlye+8vAVFxf3Zu7k86lqi2QymMHFxT3DrZY9SYO11x6NUhsuLu4fcZN0U+7IBuPb6BXg4uIe4fbSzeSzrWpSixqmuLi4W7mTVmle9mwrnHBxcQ9y562NyVilMHTBxcU9yK2WJb1jSp7aXvk5CxcX9wZuNaH0Bi2TMW1hSoyLi7uVO0levWImCe/yV1xc3IPcSZKq4npJExcX95ncyYkpT4W/hIeLi/tI7ny40tsZFxf3PLc3SukF09sTFxf3JLfXMJ20PHqB4eLiHuF+AH3ddp11bhEYAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

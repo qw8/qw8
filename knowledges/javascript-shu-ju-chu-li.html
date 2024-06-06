@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>JavaScript数据处理 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JavaScript,字符串,数组,对象">
+    <meta name="description" content="字符串转换成对象12var obj = JSON.parse(data);console.log(JSON.stringify(data.data));  说明：①php中json_encode()转换返回给前端页面时，用“.”读取不到，是因为返回的是字符串格式，就是最外层带了引号的json数据格式，可以用var obj = JSON.parse(data);转换成对象，也可以用tp框架中的$th">
+<meta name="keywords" content="JavaScript,字符串,数组,对象">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript数据处理">
+<meta property="og:url" content="https://qw66.gitee.io/knowledges/javascript-shu-ju-chu-li.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="字符串转换成对象12var obj = JSON.parse(data);console.log(JSON.stringify(data.data));  说明：①php中json_encode()转换返回给前端页面时，用“.”读取不到，是因为返回的是字符串格式，就是最外层带了引号的json数据格式，可以用var obj = JSON.parse(data);转换成对象，也可以用tp框架中的$th">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2023-04-14T17:01:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JavaScript数据处理">
+<meta name="twitter:description" content="字符串转换成对象12var obj = JSON.parse(data);console.log(JSON.stringify(data.data));  说明：①php中json_encode()转换返回给前端页面时，用“.”读取不到，是因为返回的是字符串格式，就是最外层带了引号的json数据格式，可以用var obj = JSON.parse(data);转换成对象，也可以用tp框架中的$th">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">JavaScript数据处理</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">JavaScript数据处理</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-02-14T10:24:00.000Z" itemprop="datePublished" class="page-time">
+  2020-02-14
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#字符串转换成对象"><span class="post-toc-number">1.</span> <span class="post-toc-text">字符串转换成对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#判断一个单词是否是回文"><span class="post-toc-number">2.</span> <span class="post-toc-text">判断一个单词是否是回文</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#统计一个字符串出现最多的字母"><span class="post-toc-number">3.</span> <span class="post-toc-text">统计一个字符串出现最多的字母</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#转义与反转义兼容写法"><span class="post-toc-number">4.</span> <span class="post-toc-text">转义与反转义兼容写法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数组中添加元素"><span class="post-toc-number">5.</span> <span class="post-toc-text">数组中添加元素</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#读取对象或这数组中的元素"><span class="post-toc-number">6.</span> <span class="post-toc-text">读取对象或这数组中的元素</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#当两个数组要根据各自某一个字段进行排序"><span class="post-toc-number">7.</span> <span class="post-toc-text">当两个数组要根据各自某一个字段进行排序</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#剔除数组中的某些元素"><span class="post-toc-number">8.</span> <span class="post-toc-text">剔除数组中的某些元素</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#将数组中字符串转换成整型"><span class="post-toc-number">9.</span> <span class="post-toc-text">将数组中字符串转换成整型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#js判断数组中对象里的某一个值是否存在"><span class="post-toc-number">10.</span> <span class="post-toc-text">js判断数组中对象里的某一个值是否存在</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#根据属性来更新一个数组中的对象"><span class="post-toc-number">11.</span> <span class="post-toc-text">根据属性来更新一个数组中的对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数组去重"><span class="post-toc-number">12.</span> <span class="post-toc-text">数组去重</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#根据属性删除数组中的一个对象"><span class="post-toc-number">13.</span> <span class="post-toc-text">根据属性删除数组中的一个对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数组中是否存在某个值"><span class="post-toc-number">14.</span> <span class="post-toc-text">数组中是否存在某个值</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#找出两个数组中的交集"><span class="post-toc-number">15.</span> <span class="post-toc-text">找出两个数组中的交集</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#两个数组的并集"><span class="post-toc-number">16.</span> <span class="post-toc-text">两个数组的并集</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数组去重-1"><span class="post-toc-number">17.</span> <span class="post-toc-text">数组去重</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数组排序"><span class="post-toc-number">18.</span> <span class="post-toc-text">数组排序</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数组方法"><span class="post-toc-number">19.</span> <span class="post-toc-text">数组方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#js-判断一个-object-对象是否为空"><span class="post-toc-number">20.</span> <span class="post-toc-text">js 判断一个 object 对象是否为空</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#判断对象或数组中元素是否存在"><span class="post-toc-number">21.</span> <span class="post-toc-text">判断对象或数组中元素是否存在</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#删除一个对象上的属性（key）"><span class="post-toc-number">22.</span> <span class="post-toc-text">删除一个对象上的属性（key）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#两个Set对象相减"><span class="post-toc-number">23.</span> <span class="post-toc-text">两个Set对象相减</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#将时间戳转换为时间格式"><span class="post-toc-number">24.</span> <span class="post-toc-text">将时间戳转换为时间格式</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-knowledges/JavaScript数据处理"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">JavaScript数据处理</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-02-14 18:24:00" datetime="2020-02-14T10:24:00.000Z"  itemprop="datePublished">2020-02-14</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="字符串转换成对象"><a href="#字符串转换成对象" class="headerlink" title="字符串转换成对象"></a>字符串转换成对象</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var obj = JSON.parse(data);</span><br><span class="line">console.log(JSON.stringify(data.data));</span><br></pre></td></tr></table></figure>
+
+<p>说明：<br>①php中json_encode()转换返回给前端页面时，用“.”读取不到，是因为返回的是字符串格式，就是最外层带了引号的json数据格式，可以用<code>var obj = JSON.parse(data);</code>转换成对象，也可以用tp框架中的<code>$this-&gt;ajaxReturn()</code>;<br>②另外在vue中，有时候打印对象或者数组时，可能会出现看不懂其数据结构，可以用<code>console.log(JSON.stringify(data.data));</code>打印出来，再复制出来，格式化结构。</p>
+<h3 id="判断一个单词是否是回文"><a href="#判断一个单词是否是回文" class="headerlink" title="判断一个单词是否是回文"></a>判断一个单词是否是回文</h3><p>回文是指把相同的词汇或句子，在下文中调换位置或颠倒过来，产生首尾回环的情趣，叫做回文。例如 12345654321 abcdedbcba 等。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//利用reverse 进行字符串反转，然后和原字符串对比是否相等</span><br><span class="line">function isPalindrom(str) &#123;  </span><br><span class="line">    return str == str.split(&apos;&apos;).reverse().join(&apos;&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="统计一个字符串出现最多的字母"><a href="#统计一个字符串出现最多的字母" class="headerlink" title="统计一个字符串出现最多的字母"></a>统计一个字符串出现最多的字母</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">//统计每个字母出现的次数，然后存起来，然后进行比较function maxTimesChar(str) &#123;  </span><br><span class="line">  if(str.length == 1) &#123;</span><br><span class="line">    return str;</span><br><span class="line">  &#125;</span><br><span class="line">  let charObj = &#123;&#125;;</span><br><span class="line">  for(let i=0;i&lt;str.length;i++) &#123;</span><br><span class="line">    if(!charObj[str.charAt(i)]) &#123;</span><br><span class="line">      charObj[str.charAt(i)] = 1;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">      charObj[str.charAt(i)] += 1;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  let maxChar = &apos;&apos;,</span><br><span class="line">      maxValue = 1;</span><br><span class="line">  for(var k in charObj) &#123;</span><br><span class="line">    if(charObj[k] &gt;= maxValue) &#123;</span><br><span class="line">      maxChar = k;</span><br><span class="line">      maxValue = charObj[k];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return maxChar;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="转义与反转义兼容写法"><a href="#转义与反转义兼容写法" class="headerlink" title="转义与反转义兼容写法"></a>转义与反转义兼容写法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//反转义</span><br><span class="line">function HTMLDecode(text) &#123;</span><br><span class="line">    var temp = document.createElement(&quot;div&quot;);</span><br><span class="line">    temp.innerHTML = text;</span><br><span class="line">    var output = temp.innerText || temp.textContent;</span><br><span class="line">    temp = null;</span><br><span class="line">    return output;</span><br><span class="line">&#125;</span><br><span class="line">//转义</span><br><span class="line">function HTMLEncode(html) &#123;    </span><br><span class="line">    var temp = document.createElement (&quot;div&quot;);  </span><br><span class="line">    (temp.textContent != null) ? (temp.textContent = html) : (temp.innerText = html);  </span><br><span class="line">    var output = temp.innerHTML;  </span><br><span class="line">    temp = null;  </span><br><span class="line">    return output;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>说明：前端相关朋友说这么写是兼容性写法，我这里就不深究了，亲测可用。</p>
+<h3 id="数组中添加元素"><a href="#数组中添加元素" class="headerlink" title="数组中添加元素"></a>数组中添加元素</h3><p>代码：arr.push();<br>说明：<br>可以用arr.push()，在添加元素之前先确认变量arr是一个数组。可以自己定义var arr = []，并可以在数组中添加对象，例如arr.push({“aa”:”bb”})。</p>
+<h3 id="读取对象或这数组中的元素"><a href="#读取对象或这数组中的元素" class="headerlink" title="读取对象或这数组中的元素"></a>读取对象或这数组中的元素</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var test = [&#123;&quot;a&quot;:&quot;a&quot;&#125;,&#123;&quot;b&quot;,&quot;b&quot;&#125;];</span><br><span class="line">console.log(test[1].b);</span><br><span class="line">console.log(test[1].[&apos;b&apos;]);  //不能用test.1.b</span><br></pre></td></tr></table></figure>
+
+<p>当键名是数字时，不能用“.”点拼接，只能用[]</p>
+<h3 id="当两个数组要根据各自某一个字段进行排序"><a href="#当两个数组要根据各自某一个字段进行排序" class="headerlink" title="当两个数组要根据各自某一个字段进行排序"></a>当两个数组要根据各自某一个字段进行排序</h3><p>举个例子，表格的表头和表中的值，分为了两个数组(如下)，表头和表中值要一一对应。另外，在Element的表格组件中，不用排序，其组件已做了排序的工作。</p>
+<p>表头1    表头2    表头3<br>1    2    3<br>…    …    …<br>数组示例：数组1和数组2要根据key字段一一对应，可以根据这个字段先对两个数组进行排序，然后一一匹配，如冒泡排序等。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;tabelHeader&quot;:&quot;表头1&quot;,</span><br><span class="line">        &quot;key&quot;:&quot;1&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;tabelHeader&quot;:&quot;表头2&quot;,</span><br><span class="line">        &quot;key&quot;:&quot;2&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;tabelHeader&quot;:&quot;表头3&quot;,</span><br><span class="line">        &quot;key&quot;:&quot;3&quot;</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;value&quot;:&quot;2&quot;,</span><br><span class="line">        &quot;key&quot;:&quot;2&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;value&quot;:&quot;1&quot;,</span><br><span class="line">        &quot;key&quot;:&quot;1&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        &quot;value&quot;:&quot;3&quot;,</span><br><span class="line">        &quot;key&quot;:&quot;3&quot;</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line">//根据数组中某个键的值冒泡排序，还有其他更优排序方式，这里不一一示例，可以搜索相关算法排序方式。</span><br><span class="line">function bubbleSort(arr,sortKey) &#123;</span><br><span class="line">    //console.time(&apos;2.快速排序耗时&apos;);</span><br><span class="line">    var len = arr.length;</span><br><span class="line">    for (var i = 0; i &lt; len; i++) &#123;</span><br><span class="line">        for (var j = 0; j &lt; len - 1 - i; j++) &#123;</span><br><span class="line">            if (arr[j][sortKey] &gt; arr[j+1][sortKey] ) &#123; //相邻元素两两对比</span><br><span class="line">                var temp = arr[j+1]; //元素交换</span><br><span class="line">                arr[j+1] = arr[j];</span><br><span class="line">                arr[j] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    //console.timeEnd(&apos;222222.快速排序耗时&apos;);</span><br><span class="line">    return arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="剔除数组中的某些元素"><a href="#剔除数组中的某些元素" class="headerlink" title="剔除数组中的某些元素"></a>剔除数组中的某些元素</h3><p>目前只找到循环剔除，把需要的元素用push添加到新的数组中。使用splice在循环中有问题，个人猜测是键名原因，未做深究，但我个人觉得肯定有更好方式，因为参照其他语言，都有更为简单的方式，知道的朋友请告知下，谢谢。<br>–更新–今天看到前端人员剔除数组中一些元素时，用到了filter函数，挺好用的。</p>
+<h3 id="将数组中字符串转换成整型"><a href="#将数组中字符串转换成整型" class="headerlink" title="将数组中字符串转换成整型"></a>将数组中字符串转换成整型</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [&quot;1&quot;,&quot;2&quot;,&quot;3&quot;];</span><br><span class="line">arr = arr.map(function (data) &#123;</span><br><span class="line">    return +data;</span><br><span class="line">&#125;);//此时arr变成[1,2,3]</span><br><span class="line">map是个好方法，我个人对map理解不深，对其使用有些别扭。</span><br></pre></td></tr></table></figure>
+
+<h3 id="js判断数组中对象里的某一个值是否存在"><a href="#js判断数组中对象里的某一个值是否存在" class="headerlink" title="js判断数组中对象里的某一个值是否存在"></a>js判断数组中对象里的某一个值是否存在</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">function isInArray(arr,value)&#123;</span><br><span class="line">    for(var i = 0; i &lt; arr.length; i++)&#123;</span><br><span class="line">        if(value === arr[i][&apos;id&apos;])&#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return false;</span><br><span class="line">&#125;</span><br><span class="line">var arr = [&#123;id: &quot;ccjl1&quot;&#125;,&#123;id: &quot;ccjl2&quot;&#125;,&#123;id: &quot;ccjl3&quot;&#125;];</span><br><span class="line">var test = isInArray(arr,&apos;ccjl1&apos;);</span><br><span class="line">console.log(test);</span><br></pre></td></tr></table></figure>
+
+<h3 id="根据属性来更新一个数组中的对象"><a href="#根据属性来更新一个数组中的对象" class="headerlink" title="根据属性来更新一个数组中的对象"></a>根据属性来更新一个数组中的对象</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const arr = [ &#123;id: 1, score: 1&#125;, &#123;id: 2, score: 2&#125;, &#123;id: 3, score: 4&#125;];//更新的值const newValue = &#123;id: 3, score: 3&#125;</span><br></pre></td></tr></table></figure>
+
+<p>　　更新数组中id为3的score值。</p>
+<p>　　Es6 装逼写法如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const result = initial.map(x =&gt; x.id === newValue.id ? newValue : x); //是不是很装B？？</span><br><span class="line">console.log(updated) // =&gt; [ &#123; id: 1, score: 1 &#125;, &#123; id: 2, score: 2 &#125;, &#123; id: 3, score: 3 &#125; ]</span><br></pre></td></tr></table></figure>
+
+<p>　　首先数组是利用数组map方法去遍历arr的每一个值，然后进行于newValue的id进行对比，不同返回原来的项，相同返回newValue.</p>
+<p>　　不装逼清晰点写法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const updated = arr.map(function(item)&#123;</span><br><span class="line">    return item.id == newValue.id ? newValue : item ;</span><br><span class="line">&#125;);</span><br><span class="line">console.log(updated) // =&gt; [ &#123; id: 1, score: 1 &#125;, &#123; id: 2, score: 2 &#125;, &#123; id: 3, score: 3 &#125; ]</span><br></pre></td></tr></table></figure>
+
+<h3 id="数组去重"><a href="#数组去重" class="headerlink" title="数组去重"></a>数组去重</h3><p>方案 A</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 遍历数组，建立新数组，利用indexOf判断是否存在于新数组中，不存在则push到新数组，最后返回新数组 </span><br><span class="line">function unique(ar) &#123;</span><br><span class="line">    var ret = [];</span><br><span class="line"></span><br><span class="line">    for (var i = 0, j = ar.length; i &lt; j; i++) &#123;</span><br><span class="line">        if (ret.indexOf(ar[i]) === -1) &#123;</span><br><span class="line">            ret.push(ar[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>方案B</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//遍历数组，利用object对象保存数组值，判断数组值是否已经保存在object中，未保存则push到新数组并用object[arrayItem]=1的方式记录保存,这个效率比A高</span><br><span class="line">function unique(ar) &#123;</span><br><span class="line">    var tmp = &#123;&#125;,</span><br><span class="line">        ret = [];</span><br><span class="line"></span><br><span class="line">    for (var i = 0, j = ar.length; i &lt; j; i++) &#123;</span><br><span class="line">        if (!tmp[ar[i]]) &#123;</span><br><span class="line">            tmp[ar[i]] = 1;</span><br><span class="line">            ret.push(ar[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>方案C</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//ES6</span><br><span class="line">const numbers = [1, 2, 1, 1, 2, 1, 3, 4, 1 ];</span><br><span class="line">const uniq = [...new Set(numbers)] // =&gt; [ 1, 2, 3, 4 ];</span><br><span class="line">const uniq2 = Array.from(new Set(numbers)) // =&gt; [ 1, 2, 3, 4 ];</span><br></pre></td></tr></table></figure>
+
+<p>方案D</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//filter function unique (arr) &#123;</span><br><span class="line">     var res = arr.filter(function (item, index, array) &#123;</span><br><span class="line">            return array.indexOf(item) === index; //array.indexOf(item) === index 说明这个元素第一次出现，后面这个item再出现他的item肯定不是index了</span><br><span class="line">&#125;) return res; &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="根据属性删除数组中的一个对象"><a href="#根据属性删除数组中的一个对象" class="headerlink" title="根据属性删除数组中的一个对象"></a>根据属性删除数组中的一个对象</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 根据属性删除数组中的对象,利用filter进行过滤数组中id相同的项</span><br><span class="line">const initial = [ &#123;id: 1, score: 1&#125;, &#123;id: 2, score: 2&#125;, &#123;id: 3, score: 4&#125;];</span><br><span class="line">const removeId = 3;</span><br><span class="line">const without3 = initial.filter(x =&gt; x.id !== removeId);</span><br><span class="line">console.log(without3) // =&gt; [ &#123; id: 1, score: 1 &#125;, &#123; id: 2, score: 2 &#125; ]</span><br></pre></td></tr></table></figure>
+
+<h3 id="数组中是否存在某个值"><a href="#数组中是否存在某个值" class="headerlink" title="数组中是否存在某个值"></a>数组中是否存在某个值</h3><p><strong>数组自带方法</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1, 2, 4, 3, 5, 6]</span><br><span class="line">console.log(arr.includes(4))</span><br><span class="line">console.log(arr.some(item =&gt; item === 4))</span><br><span class="line">console.log(arr.find(item =&gt; item === 4))</span><br><span class="line">console.log(arr.findIndex(item =&gt; item === 4))</span><br><span class="line">console.log(arr.indexOf(4) !== -1)</span><br><span class="line">console.log(arr.filter(item =&gt; item === 4))</span><br><span class="line">// for 循环，略</span><br></pre></td></tr></table></figure>
+
+<p><strong>其他各种”神奇”的算法</strong></p>
+<ul>
+<li>先排序，然后二分法查找</li>
+<li>set 解法，利用 set 的唯一性，将目标值添加进 set，如果 set 长度没变的话，这个值就是存在的</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var arr = [1,2,3,4,5,6]</span><br><span class="line">var arrSet = new Set(arr)</span><br><span class="line">let prevSetLen = arrSet.size</span><br><span class="line">arrSet.add(5)</span><br><span class="line">console.log(prevSetLen===arrSet.length)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>利用数组的 join 方法，把所有数字用逗号拼起来，然后正则匹配，或是调 includes 方法</li>
+</ul>
+<h3 id="找出两个数组中的交集"><a href="#找出两个数组中的交集" class="headerlink" title="找出两个数组中的交集"></a>找出两个数组中的交集</h3><p><strong>常规蠢办法</strong></p>
+<ul>
+<li>for 循环</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = [1, 2, 3]</span><br><span class="line">var arr2 = [3, 4, 5, 6]</span><br><span class="line"></span><br><span class="line">var commonArr = []</span><br><span class="line">for (var i = 0; i &lt; arr1.length; i++) &#123;</span><br><span class="line">  var _item = arr1[i]</span><br><span class="line">  for (var j = 0; j &lt; arr2.length; j++) &#123;</span><br><span class="line">    if (_item === arr2[j]) &#123;</span><br><span class="line">      commonArr.push(_item)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>ES6 的 filter 结合 includes 方法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = [1, 2, 3]</span><br><span class="line">var arr2 = [3, 4, 5, 6]</span><br><span class="line"></span><br><span class="line">arr1.filter(item=&gt;arr2.includes(item))</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>一个数组转对象，一个数组遍历看对象是否存在对应值</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = [1, 2, 3]</span><br><span class="line">var arr2 = [3, 4, 5, 6]</span><br><span class="line">var _obj = &#123;&#125;</span><br><span class="line">let _tempArr = arr1.length &gt; arr2.length ? arr2 : arr1</span><br><span class="line">_tempArr.forEach(item =&gt; &#123;</span><br><span class="line">  _obj[item] = item</span><br><span class="line">&#125;)</span><br><span class="line">let commonArr = arr2.filter(item =&gt; _obj[item])</span><br><span class="line">console.log(commonArr)</span><br><span class="line">_obj = null</span><br><span class="line">_tempArr = null</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这里先判断数组长度，选一个短的数组，使得新创建的临时对象尽可能小。</p>
+</blockquote>
+<ul>
+<li>如果不考虑单个数组里有重复项的话，可以先合并数组，然后再遍历合并后的数组，进行计次，大于2则是重叠的。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = [1, 2, 3]</span><br><span class="line">var arr2 = [3, 4, 5, 6]</span><br><span class="line"></span><br><span class="line">var _tempArr = arr1.concat(arr2).sort()</span><br><span class="line">var result = []</span><br><span class="line">_tempArr.reduce((prev, now) =&gt; &#123;</span><br><span class="line">  if (prev === now) &#123;</span><br><span class="line">    result.push(now)</span><br><span class="line">  &#125;</span><br><span class="line">  return now</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>set 的使用，主要利用不可重复设置，判断长度是否有变化，而得出是否是重复了；或者直接用 has 方法</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = [1, 2, 3]</span><br><span class="line">var arr2 = [3, 4, 5, 6]</span><br><span class="line"></span><br><span class="line">var set = new Set(arr1)</span><br><span class="line">var result = []</span><br><span class="line">result = arr2.filter(item =&gt; arr1.has(item))</span><br><span class="line">console.log(result)</span><br></pre></td></tr></table></figure>
+
+<p><strong>“神奇”的算法</strong></p>
+<ul>
+<li>排序后，两个数组下标移动，两两比较</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = [1, 2, 8, 3 ]</span><br><span class="line">var arr2 = [5, 6, 2, 3, 4]</span><br><span class="line"></span><br><span class="line">arr1.sort() // [1,2,3]</span><br><span class="line">arr2.sort() // [2,3,4,5,6]</span><br><span class="line"></span><br><span class="line">var result = []</span><br><span class="line">let arr1Index = 0</span><br><span class="line">let arr2Index = 0</span><br><span class="line">let runTimes = 0</span><br><span class="line">while (arr1Index &lt; arr1.length &amp;&amp; arr2Index &lt; arr2.length) &#123;</span><br><span class="line">  runTimes++</span><br><span class="line">  let arr1Item = arr1[arr1Index]</span><br><span class="line">  let arr2Item = arr2[arr2Index]</span><br><span class="line">  if (arr1Item &gt; arr2Item) &#123;</span><br><span class="line">    arr2Index++</span><br><span class="line">  &#125; else if (arr1Item &lt; arr2Item) &#123;</span><br><span class="line">    arr1Index++</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    result.push(arr1Item)</span><br><span class="line">    arr1Index++</span><br><span class="line">    arr2Index++</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">console.log(result)</span><br><span class="line">console.log(runTimes)</span><br></pre></td></tr></table></figure>
+
+<h3 id="两个数组的并集"><a href="#两个数组的并集" class="headerlink" title="两个数组的并集"></a>两个数组的并集</h3><ul>
+<li>set</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = [1, 2, 3]</span><br><span class="line">var arr2 = [4, 5, 3, 6]</span><br><span class="line">var result = [...new Set(arr1.concat(arr2))]</span><br><span class="line">// var result = [...new Set([...arr1, ...arr2])]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>reduce</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = [1, 2, 3]</span><br><span class="line">var arr2 = [4, 5, 3, 6]</span><br><span class="line">var tempArr = [...arr1, ...arr2].sort()</span><br><span class="line">var result = []</span><br><span class="line">tempArr.reduce((prev, now) =&gt; &#123;</span><br><span class="line">  if (prev !== now) &#123;</span><br><span class="line">    result.push(now)</span><br><span class="line">  &#125;</span><br><span class="line">  return now</span><br><span class="line">&#125;, null)</span><br><span class="line">console.log(result)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>转 json 对象</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = [1, 2, 3]</span><br><span class="line">var arr2 = [4, 5, 3, 6]    </span><br><span class="line">var obj = &#123;&#125;</span><br><span class="line">arr1.forEach(item =&gt; (obj[item] = item))</span><br><span class="line">arr2.forEach(item =&gt; (obj[item] = item))</span><br><span class="line">var result = Object.values(obj)</span><br><span class="line">console.log(result)</span><br></pre></td></tr></table></figure>
+
+<h3 id="数组去重-1"><a href="#数组去重-1" class="headerlink" title="数组去重"></a>数组去重</h3><p>效率上讲，转 obj 的方式 &gt; set &gt; reduce &gt; includes/indexOf &gt; 双重for循环</p>
+<ul>
+<li>双重for循环</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = [1, 2, 3, 3, 4, 5, 6, 8]</span><br><span class="line">var result = []</span><br><span class="line">for (var i = 0; i &lt; arr1.length; i++) &#123;</span><br><span class="line">  let _hasItem = false</span><br><span class="line">  for (var j = 0; j &lt; result.length; j++) &#123;</span><br><span class="line">    if (arr1[i] === result[j]) &#123;</span><br><span class="line">      _hasItem = true</span><br><span class="line">      break</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  if (!_hasItem) &#123;</span><br><span class="line">    result.push(arr1[i])</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">console.log(result)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>includes/indexOf</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = [1, 2, 3, 3, 4, 5, 6, 8]</span><br><span class="line">var result = []</span><br><span class="line">arr1.forEach(item =&gt; &#123;</span><br><span class="line">  if (!result.includes(item)) &#123;</span><br><span class="line">    result.push(item)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>reduce</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = [1, 2, 4, 5, 3, 3, 3, 6, 8]</span><br><span class="line">arr1.sort()</span><br><span class="line">var result = []</span><br><span class="line">arr1.reduce((prev, now) =&gt; &#123;</span><br><span class="line">  if (now !== prev) &#123;</span><br><span class="line">    result.push(now)</span><br><span class="line">  &#125;</span><br><span class="line">  return now</span><br><span class="line">&#125;, null)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>set</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = [1, 2, 4, 5, 3, 3, 3, 6, 8]</span><br><span class="line">var result = [...new Set(arr1)]</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>转对象方式</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr1 = [1, 2, 4, 5, 3, 3, 3, 6, 8]</span><br><span class="line">var obj = &#123;&#125;</span><br><span class="line">arr1.forEach(item =&gt; (obj[item] = item))</span><br><span class="line">var result = Object.values(obj)</span><br></pre></td></tr></table></figure>
+
+<h3 id="数组排序"><a href="#数组排序" class="headerlink" title="数组排序"></a>数组排序</h3><p><strong>自带 sort</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var arr = [2,3,1,4,6]</span><br><span class="line">arr.sort(); // [1,2,3,4,6]</span><br><span class="line">arr.sort((a,b)=&gt;a-b); // [1,2,3,4,6]</span><br><span class="line">arr.sort((a,b)=&gt;b-a); // [6,4,3,2,1]</span><br></pre></td></tr></table></figure>
+
+<p><strong>选择排序</strong></p>
+<p>每一次选择遍历选择一个最小值，确定一个位置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">var times = 0</span><br><span class="line">function selectSort(arr) &#123;</span><br><span class="line">  // 没遍历一轮,将确定一个位置</span><br><span class="line">  for (var i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">    // 假定当前项是剩余未排中最小的</span><br><span class="line">    let minIndex = i</span><br><span class="line">    // 从已经确定的位置之后一位开始遍历</span><br><span class="line">    for (var j = i + 1; j &lt; arr.length; j++) &#123;</span><br><span class="line">      // 假如找到比 min 还小的,更新最小值</span><br><span class="line">      if (arr[j] &lt; arr[minIndex]) &#123;</span><br><span class="line">        minIndex = j</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    // 得到最小值,第i位确定</span><br><span class="line">    let temp = arr[i]</span><br><span class="line">    arr[i] = arr[minIndex]</span><br><span class="line">    arr[minIndex] = temp</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>冒泡排序</strong></p>
+<p>核心为两两按大小规则交换</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function bubbSort(arr) &#123;</span><br><span class="line">  for (var i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">    // 74</span><br><span class="line">    for (var j = i + 1; j &lt; arr.length; j++) &#123;</span><br><span class="line">      // 如果后面一个大于前面一个,那么换位置</span><br><span class="line">      if (arr[j] &lt; arr[i]) &#123;</span><br><span class="line">        var temp = arr[j]</span><br><span class="line">        arr[j] = arr[i]</span><br><span class="line">        arr[i] = temp</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>快速排序</strong></p>
+<ol>
+<li>先随机选一个数(可选中间值)</li>
+<li>以这个数分组，小的放左边，大的放右边</li>
+<li>同理，在左边和右边的分组执行相同的操作，直到分组只剩一个元素</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">var arr = [74, 28, 60, 41, 29, 90, 52, 40]</span><br><span class="line"></span><br><span class="line">function quickSort(arr)&#123;</span><br><span class="line">  // 递归出口</span><br><span class="line">  if(arr.length&lt;=1)&#123;</span><br><span class="line">    return arr</span><br><span class="line">  &#125;</span><br><span class="line">  // 1. 选中值</span><br><span class="line">  var basicNum = arr[Math.floor((arr.length - 1) / 2)]</span><br><span class="line">  // 2. 左右分组</span><br><span class="line">  var left = []</span><br><span class="line">  var right = []</span><br><span class="line">  arr.forEach(item=&gt;&#123;</span><br><span class="line">    if(item&gt;basicNum)&#123;</span><br><span class="line">      right.push(item)</span><br><span class="line">        &#125;</span><br><span class="line">    else&#123;</span><br><span class="line">      left.push(item)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">  // 3.递归执行左边和右边数组,并且合并结果</span><br><span class="line">  return quickSort(left).concat(basicNum, quickSort(right))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="数组方法"><a href="#数组方法" class="headerlink" title="数组方法"></a>数组方法</h3><p><strong>charAt()方法可返回指定位置的字符   JavaScript String 对象</strong></p>
+<p>例:stringObject.charAt(index)<br>index:表示字符串中某个位置的数字,即字符在字符串中的下标.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">   var str = &quot;Hello worle!&quot;</span><br><span class="line">   document.write(str.charAt(1))   // e</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>toUpperCase()方法用于把字符串转换成大写  JavaScript String 对象</strong><br>例:stringObjice.toUpperCase()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">  var str=&quot;Hello World!&quot;</span><br><span class="line">  document.write(str.toUpperCase())</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>slice()方法可从已有的数组中返回选定的元素  JavaScript Array 对象</strong><br>arrayObject.slice(start,end)<br>start 必需，规定从何处开始选取。自己算<br>end   可选, 规定从何处结束选取。 结束不算</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    var arr = [&quot;George&quot;,&quot;John&quot;,&quot;Thomas&quot;]</span><br><span class="line">    document.write(arr.slice(1,))  // John,Thomas  </span><br><span class="line">    document.write(arr.slice(1,2)) // John</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>toString()方法可把一个逻辑值转换为字符串,并返回结果。</strong><br>booleanObject.toString()</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">     var boo = new Boolean(true)</span><br><span class="line">     console.log(boo.toString())    // true</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>delete 操作符用于删除对象的某个属性；返回值是 true,false</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">delete object.property     object 对象的名称 或计算结果为对象的表达式</span><br><span class="line"> delete object[&apos;property&apos;]        property 要删除的属性</span><br><span class="line">    var Employee = &#123;</span><br><span class="line">        age:28,</span><br><span class="line">        name:&apos;abc&apos;,</span><br><span class="line">        designation:&apos;developer&apos;</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(delete Employee.age)</span><br><span class="line">    console.log(Employee)</span><br></pre></td></tr></table></figure>
+
+<h3 id="js-判断一个-object-对象是否为空"><a href="#js-判断一个-object-对象是否为空" class="headerlink" title="js 判断一个 object 对象是否为空"></a>js 判断一个 object 对象是否为空</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if (JSON.stringify(data) === &apos;&#123;&#125;&apos;) &#123;</span><br><span class="line">    return false // 如果为空,返回false，数组可以用同样的判断方式</span><br><span class="line">&#125;</span><br><span class="line">if (Object.keys(object).length === 0) &#123;</span><br><span class="line">    return false // 如果为空,返回false，Object.keys(object)会返回一个空数组[]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="判断对象或数组中元素是否存在"><a href="#判断对象或数组中元素是否存在" class="headerlink" title="判断对象或数组中元素是否存在"></a>判断对象或数组中元素是否存在</h3><p>typeof data.archiveRecordPage !== undefined<br>一搬如果typeof后边是表达式，就要用括号括起来，否则不用括起来。另外一般要判断该层级之前的层级也要存在<br>—-更新： hasOwnProperty也可以对象某对象是否存在</p>
+<h3 id="删除一个对象上的属性（key）"><a href="#删除一个对象上的属性（key）" class="headerlink" title="删除一个对象上的属性（key）"></a>删除一个对象上的属性（key）</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//利用es6的 ...运算符将其他属性和ａ属性分开来，这波操作很亮眼 ！const obj = &#123;a: 1, b: 2, c: 3&#125;;</span><br><span class="line">const &#123;a, ...newObj&#125; = obj;</span><br><span class="line">console.log(newObj) // =&gt; &#123;b: 2, c: 3&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="两个Set对象相减"><a href="#两个Set对象相减" class="headerlink" title="两个Set对象相减"></a>两个Set对象相减</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//利用filter对s1进行过滤 ，去掉s2中存在的数字const s1 = [ 1, 2, 3, 4, 5 ];</span><br><span class="line"> const s2 = [ 2, 4 ];</span><br><span class="line"> const subtracted = s1.filter(x =&gt; s2.indexOf(x) &lt; 0);</span><br><span class="line"> console.log(subtracted);//[1,3,5]</span><br></pre></td></tr></table></figure>
+
+<p> 同理这样是可以去出一个数组中指定的元素</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//去掉s3中的2和4</span><br><span class="line"> const s3 = [ 1, 2, 3, 4, 5, 4, 5, 6, 2, 2, 4 ];</span><br><span class="line"> const s2 = [ 2, 4 ];</span><br><span class="line"> const subtracted1 = s3.filter(x =&gt; s2.indexOf(x) &lt; 0);</span><br><span class="line"> console.log(subtracted1); // [1, 3, 5, 5, 6]</span><br></pre></td></tr></table></figure>
+
+<h3 id="将时间戳转换为时间格式"><a href="#将时间戳转换为时间格式" class="headerlink" title="将时间戳转换为时间格式"></a>将时间戳转换为时间格式</h3><p>在网上找的一个示例，如果是php写的接口，一般是需要在返回的时间戳字段上乘以1000的，java写的接口一般不需要，这个与精确度有关。一个是精确到秒，一个是精确到毫秒。当然，在框架VUE中另有其他写法，这里暂时不做深究。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">formatDate(timestamp) &#123;</span><br><span class="line">    var date = new Date(timestamp);//时间戳为10位需*1000，时间戳为13位的话不需乘1000</span><br><span class="line">    var Y = date.getFullYear() + &apos;-&apos;;</span><br><span class="line">    var M = (date.getMonth()+1 &lt; 10 ? &apos;0&apos;+(date.getMonth()+1) : date.getMonth()+1) + &apos;-&apos;;</span><br><span class="line">    var D = (date.getDate() &lt; 10 ? &apos;0&apos;+(date.getDate()) : date.getDate()) + &apos; &apos;;</span><br><span class="line">    var h = (date.getHours() &lt; 10 ? &apos;0&apos;+(date.getHours()) : date.getHours()) + &apos;:&apos;;</span><br><span class="line">    var m = (date.getMinutes() &lt; 10 ? &apos;0&apos;+(date.getMinutes()) : date.getMinutes()) + &apos;:&apos;;</span><br><span class="line">    var s = (date.getSeconds() &lt; 10 ? &apos;0&apos;+(date.getSeconds()) : date.getSeconds());</span><br><span class="line">    return Y+M+D+h+m+s;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2023-04-14T17:01:50.000Z" itemprop="dateUpdated">2023-04-15 01:01:50</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/knowledges/javascript-shu-ju-chu-li.html" target="_blank" rel="external">https://qw66.gitee.io/knowledges/javascript-shu-ju-chu-li.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/字符串/">字符串</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/对象/">对象</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数组/">数组</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/javascript-shu-ju-chu-li.html&title=《JavaScript数据处理》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/javascript-shu-ju-chu-li.html&title=《JavaScript数据处理》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/javascript-shu-ju-chu-li.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript数据处理》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/javascript-shu-ju-chu-li.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/javascript-shu-ju-chu-li.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/knowledges/javascript-shi-jian.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">JavaScript事件</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/knowledges/javascript-shu-zu.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">JavaScript数组</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/javascript-shu-ju-chu-li.html&title=《JavaScript数据处理》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/javascript-shu-ju-chu-li.html&title=《JavaScript数据处理》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/javascript-shu-ju-chu-li.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript数据处理》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/javascript-shu-ju-chu-li.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/javascript-shu-ju-chu-li.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3aS46DMBBF0ex/02QB3Zj7qkwkissoisD28cCqjz8f/Bx/nrN31u+vv12Pv+GRIUPGYxnH8jlbIvlNGGSu9dpkyJDxHgY5QPlSyPjrM5OvTYYMGTLS4c5IaUApQ4YMGbsmIOGgDBkyZOxikCSWTMDZpNx2Sy4uQ4aMBzJ4evn737f0N2TIkPEoxhE+HV4aVgarkiFDxmhGp4VJQjSy0LRVcJrKypAhYyhjXRoj5bM0lU0TYJL0ypAhYzaDNCNJgb5WSksbDGg7ZMiQMZRBAkH+Zi1B3VAvlCFDxmhGPyDj75OmJg9VUT9WhgwZIxg8pOMFsjsaqBdrkCFDxlBGem2rE1aSw5S3Fv5pDMiQIWM0g4Ri6RI7FylaPVgZMmQMZXSaAf3rGuTgvggQZciQMZrBW4zpBQuemqZNi4serAwZMoYyyDRpmJimwTeW8GTIkDGC0Sm0pYFjWnqLD1YZMmQMZZAPauWwWgGuVgqUIUPGexidodOQMV0i2kQZMmQMZdQm5hdeO5cqio1MGTJkDGWQ46+WdvIAsXb4ypAh4w2MtIjGD02+TWlZ8OJbGTJkDGLUrpYWdwiA11t2sfcyZMgYykg7g7WhdyFbl8NkyJDxcMauhiIJCtO5indGZMiQMZRRK+t3mo61sO/0KxkyZMgIL4HxhmgfJkOGDBmd4n5asEuvZciQIeNtjDSJ5SloJyXmh7UMGTJmM1qpY+kfsgi+ZTJkyBjN+AJ9qsEX6d3eOwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

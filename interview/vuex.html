@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>vuex | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="vue,vuex">
+    <meta name="description" content="vuex是什么？怎么使用？哪种功能场景使用它？Vuex 是一个专为 Vue.js 应用程序开发的状态管理插件。（公共数据库） 在main.js引入store，注入。新建了一个目录store，….. export 当项目遇到以下两种场景时  多个组件依赖于同一状态时。 来自不同组件的行为需要变更同一状态。  解决的问题：多个视图依赖同一个状态，来自不同视图的行为需要变更同一状态，适用于中大型的单页面">
+<meta name="keywords" content="vue,vuex">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vuex">
+<meta property="og:url" content="https://qw66.gitee.io/interview/vuex.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="vuex是什么？怎么使用？哪种功能场景使用它？Vuex 是一个专为 Vue.js 应用程序开发的状态管理插件。（公共数据库） 在main.js引入store，注入。新建了一个目录store，….. export 当项目遇到以下两种场景时  多个组件依赖于同一状态时。 来自不同组件的行为需要变更同一状态。  解决的问题：多个视图依赖同一个状态，来自不同视图的行为需要变更同一状态，适用于中大型的单页面">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2023-04-14T17:01:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vuex">
+<meta name="twitter:description" content="vuex是什么？怎么使用？哪种功能场景使用它？Vuex 是一个专为 Vue.js 应用程序开发的状态管理插件。（公共数据库） 在main.js引入store，注入。新建了一个目录store，….. export 当项目遇到以下两种场景时  多个组件依赖于同一状态时。 来自不同组件的行为需要变更同一状态。  解决的问题：多个视图依赖同一个状态，来自不同视图的行为需要变更同一状态，适用于中大型的单页面">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">vuex</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">vuex</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2022-07-27T13:02:08.000Z" itemprop="datePublished" class="page-time">
+  2022-07-27
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端面试题/">前端面试题</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vuex是什么？怎么使用？哪种功能场景使用它？"><span class="post-toc-number">1.</span> <span class="post-toc-text">vuex是什么？怎么使用？哪种功能场景使用它？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vuex有哪几种属性？"><span class="post-toc-number">2.</span> <span class="post-toc-text">vuex有哪几种属性？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vue-js中ajax请求代码应该写在组件的methods中还是vuex的actions中？"><span class="post-toc-number">3.</span> <span class="post-toc-text">Vue.js中ajax请求代码应该写在组件的methods中还是vuex的actions中？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#页面刷新后vuex的state数据丢失怎么解决？"><span class="post-toc-number">4.</span> <span class="post-toc-text">页面刷新后vuex的state数据丢失怎么解决？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用vuex的优势是什么？"><span class="post-toc-number">5.</span> <span class="post-toc-text">使用vuex的优势是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vuex中状态储存在哪里，怎么改变它？"><span class="post-toc-number">6.</span> <span class="post-toc-text">Vuex中状态储存在哪里，怎么改变它？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vuex中状态是对象时，使用时要注意什么？"><span class="post-toc-number">7.</span> <span class="post-toc-text">Vuex中状态是对象时，使用时要注意什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#怎么在组件中批量使用Vuex的state状态？"><span class="post-toc-number">8.</span> <span class="post-toc-text">怎么在组件中批量使用Vuex的state状态？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vuex中要从state派发一些状态出来，且多个组件使用它，该怎么做？"><span class="post-toc-number">9.</span> <span class="post-toc-text">Vuex中要从state派发一些状态出来，且多个组件使用它，该怎么做？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vuex中-划分模块的好处"><span class="post-toc-number">10.</span> <span class="post-toc-text">vuex中 划分模块的好处</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vuex的store特性"><span class="post-toc-number">11.</span> <span class="post-toc-text">vuex的store特性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vuex怎么知道state是通过mutation修改还是外部直接修改的？"><span class="post-toc-number">12.</span> <span class="post-toc-text">vuex怎么知道state是通过mutation修改还是外部直接修改的？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vuex中action和mutation有什么相同点？"><span class="post-toc-number">13.</span> <span class="post-toc-text">Vuex中action和mutation有什么相同点？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vuex中action通常是异步的，那么如何知道action什么时候结束呢？"><span class="post-toc-number">14.</span> <span class="post-toc-text">Vuex中action通常是异步的，那么如何知道action什么时候结束呢？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vuex中有两个action，分别是actionA和actionB，其内都是异步操作，在actionB要提交actionA，需在actionA处理结束再处理其它操作，怎么实现？"><span class="post-toc-number">15.</span> <span class="post-toc-text">Vuex中有两个action，分别是actionA和actionB，其内都是异步操作，在actionB要提交actionA，需在actionA处理结束再处理其它操作，怎么实现？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在模块中，getter和mutation接收的第一个参数state，是全局的还是模块的？"><span class="post-toc-number">16.</span> <span class="post-toc-text">在模块中，getter和mutation接收的第一个参数state，是全局的还是模块的？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在v-model上怎么用Vuex中state的值？"><span class="post-toc-number">17.</span> <span class="post-toc-text">在v-model上怎么用Vuex中state的值？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vuex的严格模式是什么-有什么作用-怎么开启？"><span class="post-toc-number">18.</span> <span class="post-toc-text">Vuex的严格模式是什么,有什么作用,怎么开启？</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-interview/vuex"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">vuex</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2022-07-27 21:02:08" datetime="2022-07-27T13:02:08.000Z"  itemprop="datePublished">2022-07-27</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端面试题/">前端面试题</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="vuex是什么？怎么使用？哪种功能场景使用它？"><a href="#vuex是什么？怎么使用？哪种功能场景使用它？" class="headerlink" title="vuex是什么？怎么使用？哪种功能场景使用它？"></a>vuex是什么？怎么使用？哪种功能场景使用它？</h3><p>Vuex 是一个专为 Vue.js 应用程序开发的<strong>状态管理插件</strong>。（公共数据库）</p>
+<p>在main.js引入store，注入。新建了一个目录<code>store</code>，….. <code>export</code></p>
+<p>当项目遇到以下两种场景时</p>
+<ol>
+<li>多个组件依赖于同一状态时。</li>
+<li>来自不同组件的行为需要变更同一状态。</li>
+</ol>
+<p>解决的问题：多个视图依赖同一个状态，来自不同视图的行为需要变更同一状态，适用于中大型的单页面应用。</p>
+<blockquote>
+<p>场景有：单页应用中，组件之间的状态。音乐播放、登录状态、加入购物车</p>
+</blockquote>
+<h3 id="vuex有哪几种属性？"><a href="#vuex有哪几种属性？" class="headerlink" title="vuex有哪几种属性？"></a>vuex有哪几种属性？</h3><p>有五种，分别是 State、 Getter、Mutation 、Action、 Module</p>
+<p>state：存放公共数据的地方；</p>
+<p>getter：获取根据业务场景处理返回的数据；</p>
+<p>mutations：唯一修改state的方法，修改过程是同步的；</p>
+<p>action：异步处理，通过分发操作触发mutation；</p>
+<p>module：将store模块分割，减少代码臃肿；</p>
+<h3 id="Vue-js中ajax请求代码应该写在组件的methods中还是vuex的actions中？"><a href="#Vue-js中ajax请求代码应该写在组件的methods中还是vuex的actions中？" class="headerlink" title="Vue.js中ajax请求代码应该写在组件的methods中还是vuex的actions中？"></a>Vue.js中ajax请求代码应该写在组件的methods中还是vuex的actions中？</h3><p>如果请求来的数据是不是要被其他组件公用，仅仅在请求的组件内使用，就不需要放入vuex 的state里。</p>
+<p>如果被其他地方复用，这个很大几率上是需要的，如果需要，请将请求放入action里，方便复用。</p>
+<h3 id="页面刷新后vuex的state数据丢失怎么解决？"><a href="#页面刷新后vuex的state数据丢失怎么解决？" class="headerlink" title="页面刷新后vuex的state数据丢失怎么解决？"></a>页面刷新后vuex的state数据丢失怎么解决？</h3><p>就是放在localStorage 或者就是sessionStorage ，或者借用辅助插vuex-persistedstate。</p>
+<h3 id="使用vuex的优势是什么？"><a href="#使用vuex的优势是什么？" class="headerlink" title="使用vuex的优势是什么？"></a>使用vuex的优势是什么？</h3><p>其实vuex中的所有功能都能够通过其他的方式进行实现，只不过vuex对这些方法进行了整合处理，使用起来更加便捷，同时也便于维护。</p>
+<h3 id="Vuex中状态储存在哪里，怎么改变它？"><a href="#Vuex中状态储存在哪里，怎么改变它？" class="headerlink" title="Vuex中状态储存在哪里，怎么改变它？"></a>Vuex中状态储存在哪里，怎么改变它？</h3><p>存储在state中，改变Vuex中的状态的唯一途径就是显式地提交 (commit) mutation。</p>
+<h3 id="Vuex中状态是对象时，使用时要注意什么？"><a href="#Vuex中状态是对象时，使用时要注意什么？" class="headerlink" title="Vuex中状态是对象时，使用时要注意什么？"></a>Vuex中状态是对象时，使用时要注意什么？</h3><p>因为对象是引用类型，复制后改变属性还是会影响原始数据，这样会改变state里面的状态，是不允许的，所以先用深度克隆复制对象，再修改。</p>
+<h3 id="怎么在组件中批量使用Vuex的state状态？"><a href="#怎么在组件中批量使用Vuex的state状态？" class="headerlink" title="怎么在组件中批量使用Vuex的state状态？"></a>怎么在组件中批量使用Vuex的state状态？</h3><p>使用mapState辅助函数, 利用对象展开运算符将state混入computed对象中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">import &#123;mapState&#125; from &apos;vuex&apos;</span><br><span class="line">export default&#123;</span><br><span class="line">    computed:&#123;</span><br><span class="line">        ...mapState([&apos;price&apos;,&apos;number&apos;])</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Vuex中要从state派发一些状态出来，且多个组件使用它，该怎么做？"><a href="#Vuex中要从state派发一些状态出来，且多个组件使用它，该怎么做？" class="headerlink" title="Vuex中要从state派发一些状态出来，且多个组件使用它，该怎么做？"></a>Vuex中要从state派发一些状态出来，且多个组件使用它，该怎么做？</h3><p>使用getter属性，相当Vue中的计算属性computed，只有原状态改变派生状态才会改变。</p>
+<p>getter接收两个参数，第一个是state，第二个是getters(可以用来访问其他getter)。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">const store = new Vuex.Store(&#123;</span><br><span class="line">    state: &#123;</span><br><span class="line">        price: 10,</span><br><span class="line">        number: 10,</span><br><span class="line">        discount: 0.7,</span><br><span class="line">    &#125;,</span><br><span class="line">    getters: &#123;</span><br><span class="line">        total: state =&gt; &#123;</span><br><span class="line">            return state.price * state.number</span><br><span class="line">        &#125;,</span><br><span class="line">        discountTotal: (state, getters) =&gt; &#123;</span><br><span class="line">            return state.discount * getters.total</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>然后在组件中可以用计算属性computed通过this.$store.getters.total这样来访问这些派发状态。</p>
+<p>然后在组件中可以用计算属性computed通过this.$store.getters.total这样来访问这些派发状态。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">    total() &#123;</span><br><span class="line">        return this.$store.getters.total</span><br><span class="line">    &#125;,</span><br><span class="line">    discountTotal() &#123;</span><br><span class="line">        return this.$store.getters.discountTotal</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="vuex中-划分模块的好处"><a href="#vuex中-划分模块的好处" class="headerlink" title="vuex中 划分模块的好处"></a>vuex中 划分模块的好处</h3><p>state 更为 容易管理 保证了store完整的状态数 又避免了相互之间的state冲突</p>
+<h3 id="vuex的store特性"><a href="#vuex的store特性" class="headerlink" title="vuex的store特性"></a>vuex的store特性</h3><p>vuex 就是一个仓库 仓库里放了很多对象 其中state就是数据源存放地</p>
+<p>state里面存放的数据是 响应式的 vue组件从store读取数据 若是 store中的数据发生改变 依赖这项数据的组件 也会发生更新</p>
+<p>通过 mapState 把全局的state 和 getters 映射到当前组件的 computed中</p>
+<h3 id="vuex怎么知道state是通过mutation修改还是外部直接修改的？"><a href="#vuex怎么知道state是通过mutation修改还是外部直接修改的？" class="headerlink" title="vuex怎么知道state是通过mutation修改还是外部直接修改的？"></a>vuex怎么知道state是通过mutation修改还是外部直接修改的？</h3><p>通过$watch监听mutation的commit函数中_committing是否为true</p>
+<h3 id="Vuex中action和mutation有什么相同点？"><a href="#Vuex中action和mutation有什么相同点？" class="headerlink" title="Vuex中action和mutation有什么相同点？"></a>Vuex中action和mutation有什么相同点？</h3><p>第二参数都可以接收外部提交时传来的参数。<br>this.$store.dispatch(‘ACTION_NAME’,data)和this.$store.commit(‘SET_NUMBER’,10)</p>
+<h3 id="Vuex中action通常是异步的，那么如何知道action什么时候结束呢？"><a href="#Vuex中action通常是异步的，那么如何知道action什么时候结束呢？" class="headerlink" title="Vuex中action通常是异步的，那么如何知道action什么时候结束呢？"></a>Vuex中action通常是异步的，那么如何知道action什么时候结束呢？</h3><p>在action函数中返回Promise，然后再提交时候用then处理</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">actions:&#123;</span><br><span class="line">    SET_NUMBER_A(&#123;commit&#125;,data)&#123;</span><br><span class="line">        return new Promise((resolve,reject) =&gt;&#123;</span><br><span class="line">            setTimeout(() =&gt;&#123;</span><br><span class="line">                commit(&apos;SET_NUMBER&apos;,10);</span><br><span class="line">                resolve();</span><br><span class="line">            &#125;,2000)</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">this.$store.dispatch(&apos;SET_NUMBER_A&apos;).then(() =&gt; &#123;</span><br><span class="line">  // ...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Vuex中有两个action，分别是actionA和actionB，其内都是异步操作，在actionB要提交actionA，需在actionA处理结束再处理其它操作，怎么实现？"><a href="#Vuex中有两个action，分别是actionA和actionB，其内都是异步操作，在actionB要提交actionA，需在actionA处理结束再处理其它操作，怎么实现？" class="headerlink" title="Vuex中有两个action，分别是actionA和actionB，其内都是异步操作，在actionB要提交actionA，需在actionA处理结束再处理其它操作，怎么实现？"></a>Vuex中有两个action，分别是actionA和actionB，其内都是异步操作，在actionB要提交actionA，需在actionA处理结束再处理其它操作，怎么实现？</h3><p>利用ES6的async和await来实现。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">actions:&#123;</span><br><span class="line">    async actionA(&#123;commit&#125;)&#123;</span><br><span class="line">        //...</span><br><span class="line">    &#125;,</span><br><span class="line">    async actionB(&#123;dispatch&#125;)&#123;</span><br><span class="line">        await dispatch (&apos;actionA&apos;)//等待actionA完成</span><br><span class="line">        // ... </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="在模块中，getter和mutation接收的第一个参数state，是全局的还是模块的？"><a href="#在模块中，getter和mutation接收的第一个参数state，是全局的还是模块的？" class="headerlink" title="在模块中，getter和mutation接收的第一个参数state，是全局的还是模块的？"></a>在模块中，getter和mutation接收的第一个参数state，是全局的还是模块的？</h3><p>第一个参数state是模块的state，也就是局部的state。</p>
+<h3 id="在v-model上怎么用Vuex中state的值？"><a href="#在v-model上怎么用Vuex中state的值？" class="headerlink" title="在v-model上怎么用Vuex中state的值？"></a>在v-model上怎么用Vuex中state的值？</h3><p>需要通过computed计算属性来转换。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;input v-model=&quot;message&quot;&gt;</span><br><span class="line">// ...</span><br><span class="line">computed: &#123;</span><br><span class="line">    message: &#123;</span><br><span class="line">        get () &#123;</span><br><span class="line">            return this.$store.state.message</span><br><span class="line">        &#125;,</span><br><span class="line">        set (value) &#123;</span><br><span class="line">            this.$store.commit(&apos;updateMessage&apos;, value)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Vuex的严格模式是什么-有什么作用-怎么开启？"><a href="#Vuex的严格模式是什么-有什么作用-怎么开启？" class="headerlink" title="Vuex的严格模式是什么,有什么作用,怎么开启？"></a>Vuex的严格模式是什么,有什么作用,怎么开启？</h3><p>在严格模式下，无论何时发生了状态变更且不是由 mutation函数引起的，将会抛出错误。这能保证所有的状态变更都能被调试工具跟踪到。</p>
+<p>在Vuex.Store 构造器选项中开启,如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const store = new Vuex.Store(&#123;</span><br><span class="line">    strict:true,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2023-04-14T17:01:50.000Z" itemprop="dateUpdated">2023-04-15 01:01:50</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/interview/vuex.html" target="_blank" rel="external">https://qw66.gitee.io/interview/vuex.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vuex/">vuex</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/interview/vuex.html&title=《vuex》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/interview/vuex.html&title=《vuex》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/interview/vuex.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vuex》 — 秦伟博客&url=https://qw66.gitee.io/interview/vuex.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/interview/vuex.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/knowledges/vuex.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">vuex</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/questions/vue-xiang-mu-si-lu.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">vue项目思路</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/interview/vuex.html&title=《vuex》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/interview/vuex.html&title=《vuex》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/interview/vuex.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vuex》 — 秦伟博客&url=https://qw66.gitee.io/interview/vuex.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/interview/vuex.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABxklEQVR42u3ayw6DMAxE0f7/T1Opq0ot6czYMVS6WSFAyWFj4cfjIa/jtdZP399ZX3++37zgwoVb5h7LtT5S2eGT5e4AFy7cq7jr4KVcr+/owe6HDS5cuDfjKj8r2YfBhQv3f7luOlTZHy5cuHfgKsmPm/BkCVVbrgYXLtwC1y2Y7rjeWN+FCxeuyT2alvt54Slw4cId4Z79vtSDmhKFlAat1NGFCxduK9dNP5Sip15UtU+BCxfuOFcftMrGrepjGXDhwp3kKolKJaVxi7OnP15w4cId4VYGp9wwtLHzAxcu3FZub+tUL57alRu4cOEOcrNhqWzPSgEFLly489ys0Om2SbKfJ7hw4V7F1cOWO2zhfqRRhIULF+4IVwlMWbHDbb0od+DChTvJzdoq+kCGWygJczW4cOG2ct2GqLJpmN64aLhw4W7gZi1V/YBK+RUuXLiT3KyB6h6cFT6+PIULF+4Itz7nkA1suWVWuHDhznPrwUv/GDfAlXIyuHDhlrm9iHrsPD0RLly4N+ZmbQ+3rWLMicCFC/cirlscUUoh4WwIXLhwR7juAKXyVNk57PnAhQt3MzdLRZTQphCVZm1DfRcuXLgq9wnidGzDErfDdQAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

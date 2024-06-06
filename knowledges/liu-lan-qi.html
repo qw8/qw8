@@ -1,0 +1,1357 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>浏览器 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="存储技术,事件机制,跨域,Service Worker,渲染机制,浏览器内核">
+    <meta name="description" content="浏览器端的存储技术有哪些？cookiecookie又叫会话跟踪技术（会员卡的意思）由web服务器保存在用户浏览器上的小文本文件，包含用户的相关信息。cookie 其实最开始是服务器端用于记录用户状态的一种方式，由服务器设置，在客户端存储，然后每次发起同源请求时，发送给服务器端。cookie 最多能存储 4 k 数据，它的生存时间由 expires 属性指定，并且 cookie 只能被同源的页面访问">
+<meta name="keywords" content="存储技术,事件机制,跨域,Service Worker,渲染机制,浏览器内核">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浏览器">
+<meta property="og:url" content="https://qw66.gitee.io/knowledges/liu-lan-qi.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="浏览器端的存储技术有哪些？cookiecookie又叫会话跟踪技术（会员卡的意思）由web服务器保存在用户浏览器上的小文本文件，包含用户的相关信息。cookie 其实最开始是服务器端用于记录用户状态的一种方式，由服务器设置，在客户端存储，然后每次发起同源请求时，发送给服务器端。cookie 最多能存储 4 k 数据，它的生存时间由 expires 属性指定，并且 cookie 只能被同源的页面访问">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:updated_time" content="2024-03-31T12:11:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="浏览器">
+<meta name="twitter:description" content="浏览器端的存储技术有哪些？cookiecookie又叫会话跟踪技术（会员卡的意思）由web服务器保存在用户浏览器上的小文本文件，包含用户的相关信息。cookie 其实最开始是服务器端用于记录用户状态的一种方式，由服务器设置，在客户端存储，然后每次发起同源请求时，发送给服务器端。cookie 最多能存储 4 k 数据，它的生存时间由 expires 属性指定，并且 cookie 只能被同源的页面访问">
+<meta name="twitter:image" content="https://qw66.gitee.io/img/loading.gif">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">浏览器</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">浏览器</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2021-03-12T02:10:10.000Z" itemprop="datePublished" class="page-time">
+  2021-03-12
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#浏览器端的存储技术有哪些？"><span class="post-toc-number">1.</span> <span class="post-toc-text">浏览器端的存储技术有哪些？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cookie"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">cookie</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#特点："><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">特点：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Cookie-的弊端"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Cookie 的弊端</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#改进办法"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">改进办法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#cookie的作用"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">cookie的作用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#存储位置"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">存储位置</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#操作方式"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">操作方式</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是Cookie-隔离？（或者说：请求资源的时候不要带cookie怎么做）"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">什么是Cookie 隔离？（或者说：请求资源的时候不要带cookie怎么做）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Cookie如何防范XSS攻击"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Cookie如何防范XSS攻击</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在-HTTP-响应-Header-中，set-cookie-选项有哪些，分别代表什么含义？"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">在 HTTP 响应 Header 中，set-cookie 选项有哪些，分别代表什么含义？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#localStorage"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">localStorage</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#sessionStorage"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">sessionStorage</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#描述-cookies、sessionStorage-和-localStorage-的区别？"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">描述 cookies、sessionStorage 和 localStorage 的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cookie-和session-的区别："><span class="post-toc-number">1.9.</span> <span class="post-toc-text">cookie 和session 的区别：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#web-storage（包含sessionStorage和localStorage）和cookie的区别"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">web storage（包含sessionStorage和localStorage）和cookie的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何实现浏览器内多个标签页之间的通信"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">如何实现浏览器内多个标签页之间的通信?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安全性"><span class="post-toc-number">1.12.</span> <span class="post-toc-text">安全性</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#事件机制"><span class="post-toc-number">2.</span> <span class="post-toc-text">事件机制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#请解释什么是事件代理"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">请解释什么是事件代理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件触发三阶段"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">事件触发三阶段</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#注册事件"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">注册事件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件代理"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">事件代理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍DOM0，DOM2，DOM3事件处理方式区别"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">介绍DOM0，DOM2，DOM3事件处理方式区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件的三个阶段"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">事件的三个阶段</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍事件“捕获”和“冒泡”执行顺序和事件的执行次数？"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">介绍事件“捕获”和“冒泡”执行顺序和事件的执行次数？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在一个DOM上同时绑定两个点击事件：一个用捕获，一个用冒泡。事件会执行几次，先执行冒泡还是捕获？"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">在一个DOM上同时绑定两个点击事件：一个用捕获，一个用冒泡。事件会执行几次，先执行冒泡还是捕获？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件的代理-委托"><span class="post-toc-number">2.9.</span> <span class="post-toc-text">事件的代理/委托</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DOM事件的总结"><span class="post-toc-number">2.10.</span> <span class="post-toc-text">DOM事件的总结</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#DOM事件模型"><span class="post-toc-number">2.11.</span> <span class="post-toc-text">DOM事件模型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#冒泡的流程"><span class="post-toc-number">2.12.</span> <span class="post-toc-text">冒泡的流程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#IE与火狐的事件机制有什么区别？-如何阻止冒泡？"><span class="post-toc-number">2.13.</span> <span class="post-toc-text">IE与火狐的事件机制有什么区别？ 如何阻止冒泡？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何添加-html-元素的事件，有几种方法？请列举"><span class="post-toc-number">2.14.</span> <span class="post-toc-text">如何添加 html 元素的事件，有几种方法？请列举</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#事件模型"><span class="post-toc-number">2.15.</span> <span class="post-toc-text">事件模型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何自定义事件"><span class="post-toc-number">2.16.</span> <span class="post-toc-text">如何自定义事件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#IE的事件处理和W3C的事件处理有哪些区别？"><span class="post-toc-number">2.17.</span> <span class="post-toc-text">IE的事件处理和W3C的事件处理有哪些区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#W3C事件的-target-与-currentTarget-的区别？"><span class="post-toc-number">2.18.</span> <span class="post-toc-text">W3C事件的 target 与 currentTarget 的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何派发事件-dispatchEvent-？（如何进行事件广播？）"><span class="post-toc-number">2.19.</span> <span class="post-toc-text">如何派发事件(dispatchEvent)？（如何进行事件广播？）</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#跨域"><span class="post-toc-number">3.</span> <span class="post-toc-text">跨域</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JSONP"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">JSONP</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-knowledges/浏览器"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">浏览器</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2021-03-12 10:10:10" datetime="2021-03-12T02:10:10.000Z"  itemprop="datePublished">2021-03-12</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="浏览器端的存储技术有哪些？"><a href="#浏览器端的存储技术有哪些？" class="headerlink" title="浏览器端的存储技术有哪些？"></a>浏览器端的存储技术有哪些？</h2><h3 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h3><p>cookie又叫会话跟踪技术（会员卡的意思）由web服务器保存在用户浏览器上的小文本文件，包含用户的相关信息。cookie 其实最开始是服务器端用于记录用户状态的一种方式，由服务器设置，在客户端存储，然后每次发起同源请求时，发送给服务器端。cookie 最多能存储 4 k 数据，它的生存时间由 expires 属性指定，并且 cookie 只能被同源的页面访问共享。</p>
+<p>我的理解是 cookie 是服务器提供的一种用于维护会话状态信息的数据，通过服务器发送到浏览器，浏览器保存在本地，当下一次有同源的请求时，将保存的 cookie 值添加到请求头部，发送给服务端。这可以用来实现记录用户登录状态等功能。cookie 一般可以存储 4k 大小的数据，并且只能够被同源的网页所共享访问。</p>
+<p>服务器端可以使用 Set-Cookie 的响应头部来配置 cookie 信息。一条cookie 包括了9个属性值 name、value、expires、domain、path、secure、HttpOnly、SameSite、Priority。其中 name 和 value 分别是 cookie 的名字和值。expires 指定了 cookie 失效的时间，domain 是域名、path是路径，domain 和 path 一起限制了 cookie 能够被哪些 url 访问。secure 规定了 cookie 只能在确保安全的情况下传输，HttpOnly 规定了这个 cookie 只能被服务器访问，不能使用 js 脚本访问。SameSite 属性用来限制第三方 cookie，可以有效防止 CSRF 攻击，从而减少安全风险。Priority 是 chrome 的提案，定义了三种优先级，当 cookie 数量超出时低优先级的 cookie 会被优先清除。</p>
+<p>在发生 xhr 的跨域请求的时候，即使是同源下的 cookie，也不会被自动添加到请求头部，除非显示地规定。</p>
+<p>cookie是存放在浏览器中的，在每一个浏览器安装目录下，都存在一个文件夹，存放着不同域下对应的cookie。<strong>当浏览器通过http请求某一个域时，此时浏览器就会将该域下面的cookie自动放入request header中</strong>。我们需要注意，浏览器自动帮我们携带，此时如果很多无关紧要的数据都存放在cookie中，都会随着请求发送给后台，这样就无形当中增加了网络开销。此时我们再想想什么数据在每一次都需要?其实我们的身份认证信息在每一次都需要携带，所以存放在cookie的数据最合适的是身份认证信息，其他信息都不合适。</p>
+<p>详细资料可以参考：<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Cookies" target="_blank" rel="noopener">《HTTP cookies》 </a><br><a href="https://segmentfault.com/a/1190000004556040" target="_blank" rel="noopener">《聊一聊 cookie》 </a></p>
+<h4 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h4><ul>
+<li><p>禁用cookie后，用户无法正常注册登录</p>
+</li>
+<li><p>cookie与浏览器相关，不同浏览器之间保存的cookie是不能互相访问的；<code>cookie</code>还需要指定作用域，不可以跨域调用。</p>
+</li>
+<li><p>cookie的安全性不高，易受xss攻击</p>
+</li>
+<li><p>cookie值的类型先定位string类型，cookie大小一般只有4kb，可以进行单独配置</p>
+</li>
+<li><p>持久保存客户端数据提供了方便，分担了服务器存储的负担，极高的扩展性和可用性</p>
+</li>
+</ul>
+<h4 id="Cookie-的弊端"><a href="#Cookie-的弊端" class="headerlink" title="Cookie 的弊端"></a>Cookie 的弊端</h4><ul>
+<li><code>Cookie</code>数量和长度的限制。每个 domain 特定的域名下最多只能有 20 条 cookie，每个 cookie 长度不能超过 4KB，否则会被截掉。</li>
+<li>安全性问题。如果 cookie 被人拦截了，那人就可以取得所有的 session 信息。即使加密也与事无补，因为拦截者并不需要知道 cookie 的意义，他只要原样转发 cookie 就可以达到目的了。</li>
+<li>有些状态不可能保存在客户端。例如，为了防止重复提交表单，我们需要在服务器端保存一个计数器。如果我们把这个计数器保存在客户端，那么它起不到任何作用。</li>
+<li>在请求头上带着数据，导致流量增加。</li>
+</ul>
+<h3 id="改进办法"><a href="#改进办法" class="headerlink" title="改进办法"></a>改进办法</h3><ul>
+<li>通过良好的编程，控制保存在cookie中的session对象的大小。</li>
+<li>通过加密和安全传输技术（SSL），减少cookie被破解的可能性。</li>
+<li>只在cookie中存放不敏感数据，即使被盗也不会有重大损失。</li>
+<li>控制cookie的生命期，使之不会永远有效。偷盗者很可能拿到一个过期的cookie。</li>
+</ul>
+<h4 id="cookie的作用"><a href="#cookie的作用" class="headerlink" title="cookie的作用"></a>cookie的作用</h4><ul>
+<li>保存用户登录状态。例如将用户id存储于一个cookie内，这样当用户下次访问该页面时就不需要重新登录了，现在很多论坛和社区都提供这样的功能。cookie还可以设置过期时间，当超过时间期限后，cookie就会自动消失。因此，系统往往可以提示用户保持登录状态的时间：常见选项有一个月、三个 月、一年等。</li>
+<li>跟踪用户行为。例如一个天气预报网站，能够根据用户选择的地区显示当地的天气情况。如果每次都需要选择所在地是烦琐的，当利用了 cookie后就会显得很人性化了，系统能够记住上一次访问的地区，当下次再打开该页面时，它就会自动显示上次用户所在地区的天气情况。因为一切都是在后台完成，所以这样的页面就像为某个用户所定制的一样，使用起来非常方便。</li>
+<li>定制页面。如果网站提供了换肤或更换布局的功能，那么可以使用cookie来记录用户的选项，例如：背景色、分辨率等。当用户下次访问时，仍然可以保存上一次访问的界面风格。</li>
+</ul>
+<h4 id="存储位置"><a href="#存储位置" class="headerlink" title="存储位置"></a>存储位置</h4><p>浏览器控制面板(f12) - Application选项里面 - 左侧cookie</p>
+<p>通过控制面板删除选中的或者全部的cookie</p>
+<h4 id="操作方式"><a href="#操作方式" class="headerlink" title="操作方式"></a>操作方式</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 设置 cookie</span><br><span class="line">document.cookie = "username=John Doe; expires=Thu, 18 Dec 2013 12:00:00 GMT;path=/" </span><br><span class="line">// 删除 cookie</span><br><span class="line">document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 GMT"</span><br></pre></td></tr></table></figure>
+
+<p>设置 cookie 的方法比较简单，其中除了键和值，还有几个参数可以添加</p>
+<p><strong>expires</strong><br>过期时间，当过了到期日期时，浏览器会自动删除该 cookie，如果想删除一个 cookie，只需要把它过期时间设置成过去的时间即可<br>比如希望设置过期时间一年：new Date().getTime() + 365 _ 24 _ 60 _ 60 _ 1000</p>
+<p>如果不设置过期时间，则表示这个 cookie 生命周期为浏览器会话期间，只要关闭浏览器窗口，cookie 就消失了。</p>
+<p><strong>path</strong><br>路径，值可以是一个目录，或者是一个路径。</p>
+<p>如果 cc.com/test/index.html 建立了一个 cookie，那么在 cc.com/test/目录里的所有页面，以及该目录下面任何子目录里的页面都可以访问这个 cookie。因此在 cc.com/test/test2/test3 里的任何页面都可以访问 cc.com/test/index.html 建立的 cookie。若 cc.com/test/ 若想访问 cc.com/test/index.html 设置的 cookes，需要把 cookies 的 path 属性设置成“/”。<br>在指定路径的时候，凡是来自同一服务器，URL 里有相同路径的所有 WEB 页面都可以共享 cookies。</p>
+<p><strong>domain</strong><br>主机名，是指同一个域下的不同主机，例如：<a href="http://www.baidu.com" target="_blank" rel="noopener">www.baidu.com</a> 和 map.baidu.com 就是两个不同的主机名。默认情况下，一个主机中创建的 cookie 在另一个主机下是不能被访问的，但可以通过 domain 参数来实现对其的控制：document.cookie = “name=value;domain=.baidu.com”，这样，所有*.baidu.com 的主机都可以访问该 cookie。</p>
+<h3 id="什么是Cookie-隔离？（或者说：请求资源的时候不要带cookie怎么做）"><a href="#什么是Cookie-隔离？（或者说：请求资源的时候不要带cookie怎么做）" class="headerlink" title="什么是Cookie 隔离？（或者说：请求资源的时候不要带cookie怎么做）"></a>什么是Cookie 隔离？（或者说：请求资源的时候不要带cookie怎么做）</h3><ul>
+<li>通过使用多个非主要域名来请求静态文件，如果静态文件都放在主域名下，那静态文件请求的时候都带有的cookie的数据提交给server的，非常浪费流量，所以不如隔离开，静态资源放CDN。</li>
+<li>因为cookie有域的限制，因此不能跨域提交请求，故使用非主要域名的时候，请求头中就不会带有cookie数据，这样可以降低请求头的大小，降低请求时间，从而达到降低整体请求延时的目的。</li>
+<li>同时这种方式不会将cookie传入Web Server，也减少了Web Server对cookie的处理分析环节，提高了webserver的http请求的解析速度。</li>
+</ul>
+<h3 id="Cookie如何防范XSS攻击"><a href="#Cookie如何防范XSS攻击" class="headerlink" title="Cookie如何防范XSS攻击"></a>Cookie如何防范XSS攻击</h3><p>XSS（跨站脚本攻击）是指攻击者在返回的HTML中嵌入javascript脚本，为了减轻这些攻击，需要在HTTP头部配上，set-cookie：</p>
+<ul>
+<li>httponly-这个属性可以防止XSS,它会禁止javascript脚本来访问cookie。</li>
+<li>secure - 这个属性告诉浏览器仅在请求为https的时候发送cookie。</li>
+</ul>
+<p>结果应该是这样的：Set-Cookie=…..</p>
+<h3 id="在-HTTP-响应-Header-中，set-cookie-选项有哪些，分别代表什么含义？"><a href="#在-HTTP-响应-Header-中，set-cookie-选项有哪些，分别代表什么含义？" class="headerlink" title="在 HTTP 响应 Header 中，set-cookie 选项有哪些，分别代表什么含义？"></a>在 HTTP 响应 Header 中，set-cookie 选项有哪些，分别代表什么含义？</h3><p>Set-Cookie: <cookie-name>=<cookie-value></cookie-value></cookie-name></p>
+<ul>
+<li>Expires=<code>&lt;date&gt;</code></li>
+<li>Max-Age=<code>&lt;non-zero-digit&gt;</code></li>
+<li>Domain=<code>&lt;domain-value&gt;</code></li>
+<li>Path=<code>&lt;path-value&gt;</code></li>
+<li>Secure</li>
+<li>HttpOnly</li>
+<li>SameSite=Strict</li>
+<li>SameSite=Lax</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">name = name; <span class="comment">// 需要设置cookie的值(name不能使用";"和","号),有多个name值时用";"分隔例如：name1=name1;name2=name2;name3=name3</span></span><br><span class="line"></span><br><span class="line">expires; <span class="comment">//cookie的有效期限,格式为:expires="Wdy,DD-Mon-YYYY HH:MM:SS"</span></span><br><span class="line"></span><br><span class="line">path; <span class="comment">//设置cookie支持的路径,如果path是一个路径，则cookie对这个目录下的所有文件及子目录生效，例如：path="/cgi-bin/"，如果path是一个文件，则cookie指对这个文件生效，例如：path="/cgi-bin/cookie.cgi"</span></span><br><span class="line"></span><br><span class="line">domain; <span class="comment">//对cookie生效的域名，例如：domain="gzdzw.51.net"</span></span><br><span class="line"></span><br><span class="line">secure; <span class="comment">//如果给出此标志，表示cookie只能通过SSL协议的https服务器来传递,cookie的接收是通过设置环境变量HTTP_COOKIE来实现的，CGI程序可以通过检索该变量获取cookie信息</span></span><br></pre></td></tr></table></figure>
+
+<p>解析：Cookie 相关的 Http 头</p>
+<p>有两个 Http 头部和 Cookie 有关：Set-Cookie 和 Cookie</p>
+<ul>
+<li>Set-Cookie 由服务器发送，它包含在响应请求的头部中。它<strong>用于在客户端创建一个 Cookie</strong></li>
+<li>Cookie 头由客户端发送，包含在 HTTP 请求的头部中。注意，只有 cookie 的 domain 和 path 与请求的 URL 匹配才会发送这个 cookie。</li>
+</ul>
+<h3 id="localStorage"><a href="#localStorage" class="headerlink" title="localStorage"></a>localStorage</h3><p><code>localStorage</code>是以键值对(Key-Value)的方式持久化的本地存储，永久存储，永不失效，除非手动删除。IE8+支持，每个域名限制 5M</p>
+<p>打开同域的新页面也能访问得到</p>
+<p>操作方式：</p>
+<p>window.localStorage.username = ‘hehe’ // 设置<br>window.localStorage.setItem(‘username’, ‘hehe’) // 设置<br>window.localStorage.getItem(‘username’) // 读取<br>window.localStorage.removeItem(‘username’) // 删除<br>window.localStorage.key(1) // 读取索引为 1 的值<br>window.localStorage.clear() // 清除所有<br>可以存储数组、数字、对象等可以被序列化为字符串的内容</p>
+<h3 id="sessionStorage"><a href="#sessionStorage" class="headerlink" title="sessionStorage"></a>sessionStorage</h3><p><code>sessionStorage</code>用于本地存储一个会话（session）中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此<code>sessionStorage</code>不是一种持久化的本地存储，仅仅是会话级别的存储。</p>
+<p>sessionStorage 是 html5 提供的一种浏览器本地存储的方法，它借鉴了服务器端 session 的概念，代表的是一次会话中所保存的数据。它一般能够存储 5M 或者更大的数据，它在当前窗口关闭后就失效了，并且sessionStorage 只能被<strong>同一个窗口的同源页面</strong>所访问共享。</p>
+<p>sessionStorage 操作的方法与 localStroage 是一样的，区别在于 sessionStorage 在关闭页面后即被清空，而 localStorage 则会一直保存。很多时候数据只需要在用户浏览一组页面期间使用，关闭窗口后数据就可以丢弃了，这种情况使用 sessionStorage 就比较方便。</p>
+<p>注意，刷新页面 sessionStorage 不会清除，但是打开同域新页面访问不到</p>
+<h3 id="描述-cookies、sessionStorage-和-localStorage-的区别？"><a href="#描述-cookies、sessionStorage-和-localStorage-的区别？" class="headerlink" title="描述 cookies、sessionStorage 和 localStorage 的区别？"></a>描述 cookies、sessionStorage 和 localStorage 的区别？</h3><p>他们都是保存在浏览器端的存储方式。</p>
+<p><strong>与服务器交互：</strong></p>
+<ul>
+<li><p>cookie 是网站为了标示用户身份而储存在用户本地终端上的数据（通常经过加密），服务器和客户端都可以访问。</p>
+</li>
+<li><p>cookie 始终会<strong>在同源 http 请求头中携带</strong>（即使不需要），在浏览器和服务器间来回传递。</p>
+<p>因为每次 http 请求都会携带 cookie，所以 cookie 只适合保存很小的数据，如会话标识。</p>
+</li>
+<li><p>sessionStorage 和 localStorage 不会自动把数据发给服务器，仅<strong>在客户端（即浏览器）中保存</strong></p>
+</li>
+</ul>
+<p><strong>有效时间：</strong></p>
+<ul>
+<li><p>localStorage    保存在本浏览器数据缓存区，用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。</p>
+</li>
+<li><p>sessionStorage    用于本地存储一个session中的数据，这些数据保存在当前会话窗口，数据在当前浏览器窗口关闭（页面会话结束）后自动删除。</p>
+<p>重新加载或恢复页面仍会保持原来的页面会话，<strong>在新标签或窗口</strong>打开一个页面时会在顶级浏览上下文中初始化一个新的会话。</p>
+<p><strong>Storage共同点：都是保存在浏览器端、仅同源可用的存储方式</strong></p>
+</li>
+<li><p>cookie    设置的cookie过期时间之前一直有效，与浏览器是否关闭无关</p>
+</li>
+</ul>
+<p><strong>存储大小：</strong></p>
+<ul>
+<li>cookie 数据根据不同浏览器限制，大小一般不能超过 4k</li>
+<li>sessionStorage 和 localStorage 虽然也有存储大小的限制，但比cookie大得多，可以达到5M或更大</li>
+</ul>
+<p><strong>存储格式：</strong></p>
+<p>cookie只能以字符串格式保存；</p>
+<p>webStorage以key-value格式保存，更便于存取（sessionStorage.setItem(“key”,”value”)，sessionStorage.getItem(“key”)）；</p>
+<p><strong>作用域不同：</strong></p>
+<ul>
+<li><p>sessionStorage 只在同源的同窗口（或标签页）中共享数据，也就是只在当前会话中共享。</p>
+<p>不在不同的浏览器页面中共享，即使是同一个页面（比如同一页面打开为两个标签页）</p>
+</li>
+<li><p>localStorage 在所有同源窗口中都是共享的；</p>
+</li>
+<li><p>cookie 也是在所有同源窗口中都是共享的。</p>
+</li>
+<li><p>在浏览器多个 tab 页中，cookie、localStorage 可以共享数据，sessionStorage 仅保存在当前 tab 页中不能共享。</p>
+</li>
+</ul>
+<p><strong>操作方法：</strong></p>
+<p><code>Web Storage</code>拥有<code>setItem,getItem,removeItem,clear</code>等方法，不像<code>cookie</code>需要前端开发者自己封装<code>setCookie，getCookie</code>。</p>
+<p>上面几种方式都是存储少量数据的时候的存储方式，当我们需要在本地存储大量数据的时候，我们可以使用浏览器的 indexDB 这是浏览器提供的一种本地的数据库存储机制。它不是关系型数据库，它内部采用对象仓库的形式存储数据，它更接近 NoSQL 数据库。<br>   <a href="http://www.ruanyifeng.com/blog/2018/07/indexeddb.html" target="_blank" rel="noopener">《浏览器数据库 IndexedDB 入门教程》</a></p>
+<h3 id="cookie-和session-的区别："><a href="#cookie-和session-的区别：" class="headerlink" title="cookie 和session 的区别："></a>cookie 和session 的区别：</h3><ul>
+<li><code>session</code>： 是一个抽象概念，开发者为了实现中断和继续等操作，将 <code>user agent</code>和 <code>server</code> 之间一对一的交互，抽象为“会话”，进而衍生出“会话状态”，也就是 <code>session</code> 的概念</li>
+<li><code>cookie</code>：它是一个世纪存在的东西，<code>http</code> 协议中定义在 <code>header</code> 中的字段，可以认为是 <code>session</code> 的一种后端无状态实现</li>
+</ul>
+<blockquote>
+<p>现在我们常说的 <code>session</code>，是为了绕开 <code>cookie</code> 的各种限制，通常借助 <code>cookie</code>本身和后端存储实现的，一种更高级的会话状态实现</p>
+</blockquote>
+<p><code>session</code> 的常见实现要借助<code>cookie</code>来发送 <code>sessionID</code></p>
+<ol>
+<li>cookie数据存放在客户的浏览器上，session数据放在服务器上。</li>
+<li>cookie不是很安全，别人可以分析存放在本地的COOKIE并进行COOKIE欺骗<br>考虑到安全应当使用session。</li>
+<li>session会在一定时间内保存在服务器上。当访问增多，会比较占用你服务器的性能<br>考虑到减轻服务器性能方面，应当使用COOKIE。</li>
+<li>单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。</li>
+<li>所以个人建议：<br>将登陆信息等重要信息存放为SESSION<br>其他信息如果需要保留，可以放在COOKIE中</li>
+</ol>
+<h3 id="web-storage（包含sessionStorage和localStorage）和cookie的区别"><a href="#web-storage（包含sessionStorage和localStorage）和cookie的区别" class="headerlink" title="web storage（包含sessionStorage和localStorage）和cookie的区别"></a>web storage（包含sessionStorage和localStorage）和cookie的区别</h3><p>Cookie的作用<strong>是与服务器进行交互</strong>，作为HTTP规范的一部分而存在</p>
+<p>而Web Storage仅仅是为了<strong>在本地“存储”数据</strong>而生。</p>
+<p>cookie 数据还有路径（path）的概念，可以限制 cookie 只属于某个路径下。</p>
+<p>Web Storage 支持事件通知机制，可以将数据更新的通知发送给监听者。</p>
+<p>Web Storage 的 api 接口使用更方便，cookie 的原生接口不友好，需要自己封装。</p>
+<ul>
+<li><p>Web Storage的概念和cookie相似，区别是它是为了更大容量存储设计的。Cookie的大小是受限的，并且每次你请求一个新的页面的时候Cookie都会被发送过去，这样无形中浪费了带宽，另外cookie还需要指定作用域，不可以跨域调用</p>
+</li>
+<li><p>除此之外，WebStorage拥有setItem,getItem,removeItem,clear等方法，不像cookie需要前端开发者自己封装setCookie，getCookie</p>
+</li>
+<li><p>但是cookie也是不可以或缺的：cookie的作用是与服务器进行交互，作为HTTP规范的一部分而存在 ，而Web Storage仅仅是为了在本地“存储”数据而生</p>
+</li>
+<li><p>浏览器的支持除了IE７及以下不支持外，其他标准浏览器都完全支持(ie及FF需在web服务器里运行)，值得一提的是IE总是办好事，例如IE7、IE6中的userData其实就是javascript本地存储的解决方案。通过简单的代码封装可以统一到所有的浏览器都支持web storage</p>
+</li>
+<li><p>localStorage和sessionStorage都具有相同的操作方法，例如setItem、getItem和removeItem等</p>
+</li>
+</ul>
+<h3 id="如何实现浏览器内多个标签页之间的通信"><a href="#如何实现浏览器内多个标签页之间的通信" class="headerlink" title="如何实现浏览器内多个标签页之间的通信?"></a>如何实现浏览器内多个标签页之间的通信?</h3><p>调用 localstorge、cookies 等本地存储方式，注意sessionstorge不可以哦</p>
+<h3 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h3><p>需要注意的是，不是什么数据都适合放在 Cookie、localStorage 和 sessionStorage 中的，因为它们保存在本地容易被篡改，使用它们的时候，需要时刻注意是否有代码存在 XSS 注入的风险。所以千万不要用它们存储你系统中的敏感数据。</p>
+<h2 id="事件机制"><a href="#事件机制" class="headerlink" title="事件机制"></a>事件机制</h2><p>我们在网页中的某个操作（有的操作对应多个事件）。例如：当我们点击一个按钮就会产生一个<strong>事件</strong>。是可以被 JavaScript 侦测到的行为。</p>
+<h3 id="请解释什么是事件代理"><a href="#请解释什么是事件代理" class="headerlink" title="请解释什么是事件代理"></a>请解释什么是事件代理</h3><p>事件代理（Event Delegation），又称之为事件委托。是 JavaScript 中常用绑定事件的常用技巧。</p>
+<p>顾名思义，“事件代理”即是<strong>把原本需要绑定的事件委托给父元素，让父元素担当事件监听的职务。</strong></p>
+<p><strong>原理</strong>是DOM元素的事件冒泡。</p>
+<p>使用事件代理的好处是<strong>可以提高性能</strong></p>
+<p><strong>怎么实现：</strong>在元素的父节点注册事件，通过事件冒泡，在父节点捕获事件</p>
+<h3 id="事件触发三阶段"><a href="#事件触发三阶段" class="headerlink" title="事件触发三阶段"></a>事件触发三阶段</h3><ul>
+<li>document 往事件触发处传播，遇到注册的捕获事件会触发</li>
+<li>传播到事件触发处时触发注册的事件</li>
+<li>从事件触发处往 document 传播，遇到注册的冒泡事件会触发</li>
+</ul>
+<blockquote>
+<p>事件触发一般来说会按照上面的顺序进行，但是也有特例，如果给一个目标节点同时注册冒泡和捕获事件，事件触发会按照注册的顺序执行</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 以下会先打印冒泡然后是捕获</span><br><span class="line">node.addEventListener(&apos;click&apos;,(event) =&gt;&#123;</span><br><span class="line">	console.log(&apos;冒泡&apos;)</span><br><span class="line">&#125;,false);</span><br><span class="line">node.addEventListener(&apos;click&apos;,(event) =&gt;&#123;</span><br><span class="line">	console.log(&apos;捕获 &apos;)</span><br><span class="line">&#125;,true)</span><br></pre></td></tr></table></figure>
+
+<h3 id="注册事件"><a href="#注册事件" class="headerlink" title="注册事件"></a>注册事件</h3><ul>
+<li>通常我们使用 <code>addEventListener</code> 注册事件，该函数的第三个参数可以是布尔值，也可以是对象。对于布尔值 <code>useCapture</code> 参数来说，该参数默认值为 <code>false</code> 。<code>useCapture</code> 决定了注册的事件是捕获事件还是冒泡事件</li>
+<li>一般来说，我们只希望事件只触发在目标上，这时候可以使用 <code>stopPropagation</code> 来阻止事件的进一步传播。通常我们认为 <code>stopPropagation</code> 是用来阻止事件冒泡的，其实该函数也可以阻止捕获事件。<code>stopImmediatePropagation</code> 同样也能实现阻止事件，但是还能阻止该事件目标执行别的注册事件</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">node.addEventListener(<span class="string">'click'</span>,(event) =&gt;&#123;</span><br><span class="line">	event.stopImmediatePropagation()</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'冒泡'</span>)</span><br><span class="line">&#125;,<span class="literal">false</span>);</span><br><span class="line"><span class="comment">// 点击 node 只会执行上面的函数，该函数不会执行</span></span><br><span class="line">node.addEventListener(<span class="string">'click'</span>,(event) =&gt; &#123;</span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'捕获 '</span>)</span><br><span class="line">&#125;,<span class="literal">true</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="事件代理"><a href="#事件代理" class="headerlink" title="事件代理"></a>事件代理</h3><blockquote>
+<p>如果一个节点中的子节点是动态生成的，那么子节点需要注册事件的话应该注册在父节点上</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">id</span>=<span class="string">"ul"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span>1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span>3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span>4<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">li</span>&gt;</span>5<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="keyword">let</span> ul = <span class="built_in">document</span>.querySelector(<span class="string">'##ul'</span>)</span></span><br><span class="line"><span class="actionscript">	ul.addEventListener(<span class="string">'click'</span>, (event) =&gt; &#123;</span></span><br><span class="line"><span class="javascript">		<span class="built_in">console</span>.log(event.target);</span></span><br><span class="line">	&#125;)</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>事件代理的方式相对于直接给目标注册事件来说，有以下优点</p>
+</blockquote>
+<ul>
+<li>节省内存</li>
+<li>不需要给子节点注销事件</li>
+</ul>
+<h3 id="介绍DOM0，DOM2，DOM3事件处理方式区别"><a href="#介绍DOM0，DOM2，DOM3事件处理方式区别" class="headerlink" title="介绍DOM0，DOM2，DOM3事件处理方式区别"></a>介绍DOM0，DOM2，DOM3事件处理方式区别</h3><ul>
+<li>DOM0级事件处理方式：<ul>
+<li><code>btn.onclick = func;</code></li>
+<li><code>btn.onclick = null;</code></li>
+</ul>
+</li>
+<li>DOM2级事件处理方式：<ul>
+<li><code>btn.addEventListener(&#39;click&#39;, func, false);</code></li>
+<li><code>btn.removeEventListener(&#39;click&#39;, func, false);</code></li>
+<li><code>btn.attachEvent(&quot;onclick&quot;, func);</code></li>
+<li><code>btn.detachEvent(&quot;onclick&quot;, func);</code></li>
+</ul>
+</li>
+<li>DOM3级事件处理方式：<ul>
+<li><code>eventUtil.addListener(input, &quot;textInput&quot;, func);</code></li>
+<li><code>eventUtil</code> 是自定义对象，<code>textInput</code> 是DOM3级事件</li>
+</ul>
+</li>
+</ul>
+<h3 id="事件的三个阶段"><a href="#事件的三个阶段" class="headerlink" title="事件的三个阶段"></a>事件的三个阶段</h3><p>捕获、目标、冒泡</p>
+<h3 id="介绍事件“捕获”和“冒泡”执行顺序和事件的执行次数？"><a href="#介绍事件“捕获”和“冒泡”执行顺序和事件的执行次数？" class="headerlink" title="介绍事件“捕获”和“冒泡”执行顺序和事件的执行次数？"></a>介绍事件“捕获”和“冒泡”执行顺序和事件的执行次数？</h3><p>按照W3C标准的事件：首是进入捕获阶段，直到达到目标元素，再进入冒泡阶段</p>
+<p>事件执行次数（DOM2-addEventListener）：元素上绑定事件的个数</p>
+<ul>
+<li>注意1：前提是事件被确实触发</li>
+<li>注意2：事件绑定几次就算几个事件，即使类型和功能完全一样也不会“覆盖”</li>
+</ul>
+<p>事件执行顺序：判断的关键是否目标元素</p>
+<ul>
+<li>非目标元素：根据W3C的标准执行：捕获-&gt;目标元素-&gt;冒泡（不依据事件绑定顺序）</li>
+<li>目标元素：依据事件绑定顺序：先绑定的事件先执行（不依据捕获冒泡标准）</li>
+<li>最终顺序：父元素捕获-&gt;目标元素事件1-&gt;目标元素事件2-&gt;子元素捕获-&gt;子元素冒泡-&gt;父元素冒泡</li>
+<li>注意：子元素事件执行前提    事件确实“落”到子元素布局区域上，而不是简单的具有嵌套关系</li>
+</ul>
+<h3 id="在一个DOM上同时绑定两个点击事件：一个用捕获，一个用冒泡。事件会执行几次，先执行冒泡还是捕获？"><a href="#在一个DOM上同时绑定两个点击事件：一个用捕获，一个用冒泡。事件会执行几次，先执行冒泡还是捕获？" class="headerlink" title="在一个DOM上同时绑定两个点击事件：一个用捕获，一个用冒泡。事件会执行几次，先执行冒泡还是捕获？"></a>在一个DOM上同时绑定两个点击事件：一个用捕获，一个用冒泡。事件会执行几次，先执行冒泡还是捕获？</h3><ul>
+<li>该DOM上的事件如果被触发，会执行两次（执行次数等于绑定次数）</li>
+<li>如果该DOM是目标元素，则按事件绑定顺序执行，不区分冒泡/捕获</li>
+<li>如果该DOM是处于事件流中的非目标元素，则先执行捕获，后执行冒泡</li>
+</ul>
+<h3 id="事件的代理-委托"><a href="#事件的代理-委托" class="headerlink" title="事件的代理/委托"></a>事件的代理/委托</h3><p>事件委托是指将事件绑定目标元素的到父元素上，利用冒泡机制触发该事件</p>
+<p>优点：</p>
+<ul>
+<li>可以减少事件注册，节省大量内存占用</li>
+<li>可以将事件应用于动态添加的子元素上</li>
+</ul>
+<p>缺点：<br>使用不当会造成事件在不应该触发时触发</p>
+<p>示例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ulEl.addEventListener(&apos;click&apos;, function(e)&#123;</span><br><span class="line">    var target = event.target || event.srcElement;</span><br><span class="line">    if(!!target &amp;&amp; target.nodeName.toUpperCase() === &quot;LI&quot;)&#123;</span><br><span class="line">        console.log(target.innerHTML);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;, false);</span><br></pre></td></tr></table></figure>
+
+<h3 id="DOM事件的总结"><a href="#DOM事件的总结" class="headerlink" title="DOM事件的总结"></a>DOM事件的总结</h3><p><strong>知识点主要包括以下几个方面：</strong></p>
+<ul>
+<li>基本概念：<code>DOM</code>事件的级别</li>
+</ul>
+<blockquote>
+<p>面试不会直接问你，DOM有几个级别。但会在题目中体现：“请用<code>DOM2</code> ….”。</p>
+</blockquote>
+<ul>
+<li><code>DOM</code>事件模型、<code>DOM</code>事件流</li>
+</ul>
+<blockquote>
+<p>面试官如果问你“<strong>DOM事件模型</strong>”，你不一定知道怎么回事。其实说的就是<strong>捕获和冒泡</strong>。</p>
+</blockquote>
+<p><strong>DOM事件流</strong>，指的是事件传递的<strong>三个阶段</strong>。</p>
+<ul>
+<li>描述<code>DOM</code>事件捕获的具体流程</li>
+</ul>
+<blockquote>
+<p>讲的是事件的传递顺序。参数为<code>false</code>（默认）、参数为<code>true</code>，各自代表事件在什么阶段触发。</p>
+</blockquote>
+<p>能回答出来的人，寥寥无几。也许有些人可以说出一大半，但是一字不落的人，极少。</p>
+<ul>
+<li><code>Event</code>对象的常见应用（<code>Event</code>的常用<code>api</code>方法）</li>
+</ul>
+<blockquote>
+<p><code>DOM</code>事件的知识点，一方面包括事件的流程；另一方面就是：怎么去注册事件，也就是监听用户的交互行为。第三点：在响应时，<code>Event</code>对象是非常重要的。</p>
+</blockquote>
+<p><strong>自定义事件（非常重要）</strong></p>
+<blockquote>
+<p>一般人可以讲出事件和注册事件，但是如果让你讲<strong>自定义事件</strong>，能知道的人，就更少了。</p>
+</blockquote>
+<p><strong>DOM事件的级别</strong></p>
+<blockquote>
+<p><code>DOM</code>事件的级别，准确来说，是<strong>DOM标准</strong>定义的级别。包括：</p>
+</blockquote>
+<p><strong>DOM0的写法：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">element.onclick = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>上面的代码是在 <code>js</code> 中的写法；如果要在<code>html</code>中写，写法是：在<code>onclick</code>属性中，加 <code>js</code> 语句。</p>
+</blockquote>
+<p><strong>DOM2的写法：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">element.addEventListener(<span class="string">'click'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>【重要】上面的第三参数中，<strong>true</strong>表示事件在<strong>捕获阶段</strong>触发，<strong>false</strong>表示事件在<strong>冒泡阶段</strong>触发（默认）。如果不写，则默认为false。</p>
+</blockquote>
+<p><strong>DOM3的写法：</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">element.addEventListener(<span class="string">'keyup'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;, <span class="literal">false</span>);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>DOM3</code>中，增加了很多事件类型，比如鼠标事件、键盘事件等。</p>
+</blockquote>
+<blockquote>
+<p>PS：为何事件没有<code>DOM1</code>的写法呢？因为，<code>DOM1</code>标准制定的时候，没有涉及与事件相关的内容。</p>
+</blockquote>
+<p><strong>总结</strong>：关于“DOM事件的级别”，能回答出以上内容即可，不会出题目让你做。</p>
+<h3 id="DOM事件模型"><a href="#DOM事件模型" class="headerlink" title="DOM事件模型"></a>DOM事件模型</h3><blockquote>
+<p><code>DOM</code>事件模型讲的就是<strong>捕获和冒泡</strong>，一般人都能回答出来。</p>
+</blockquote>
+<ul>
+<li>捕获：从上往下。</li>
+<li>冒泡：从下（目标元素）往上。</li>
+</ul>
+<p><strong>DOM事件流</strong></p>
+<blockquote>
+<p><code>DOM</code>事件流讲的就是：浏览器在于当前页面做交互时，这个事件是怎么传递到页面上的。</p>
+</blockquote>
+<p><strong>完整的事件流，分三个阶段：</strong></p>
+<ol>
+<li>捕获：从 <code>window</code> 对象传到 目标元素。</li>
+<li>目标阶段：事件通过捕获，到达目标元素，这个阶段就是目标阶段。</li>
+<li>冒泡：从<strong>目标元素</strong>传到 <code>Window</code> 对象。</li>
+</ol>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="http://img.smyhvae.com/20180306_1058.png" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="http://img.smyhvae.com/20180204_1218.jpg" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+
+<p><strong>描述DOM事件捕获的具体流程</strong></p>
+<blockquote>
+<p>很少有人能说完整。</p>
+</blockquote>
+<p><strong>捕获的流程</strong></p>
+<p><img src="/img/loading.gif" data-original="http://img.smyhvae.com/20180306_1103.png" alt></p>
+<p><strong>说明</strong>：捕获阶段，事件依次传递的顺序是：<code>window</code> –&gt; <code>document</code> –&gt; <code>html</code>–&gt; <code>body</code> –&gt; 父元素、子元素、目标元素。</p>
+<ul>
+<li>PS1：第一个接收到事件的对象是 <strong>window</strong>（有人会说<code>body</code>，有人会说<code>html</code>，这都是错误的）。</li>
+<li>PS2：<code>JS</code>中涉及到<code>DOM</code>对象时，有两个对象最常用：<code>window</code>、<code>doucument</code>。它们俩也是最先获取到事件的。</li>
+</ul>
+<p>代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">"捕获 window"</span>);</span><br><span class="line">&#125;, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">"捕获 document"</span>);</span><br><span class="line">&#125;, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.documentElement.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">"捕获 html"</span>);</span><br><span class="line">&#125;, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">document</span>.body.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">"捕获 body"</span>);</span><br><span class="line">&#125;, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">fatherBox.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">"捕获 father"</span>);</span><br><span class="line">&#125;, <span class="literal">true</span>);</span><br><span class="line"></span><br><span class="line">childBox.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    alert(<span class="string">"捕获 child"</span>);</span><br><span class="line">&#125;, <span class="literal">true</span>);</span><br></pre></td></tr></table></figure>
+
+<p><strong>补充一个知识点：</strong></p>
+<blockquote>
+<p>在 <code>js</code>中：</p>
+</blockquote>
+<ul>
+<li>如果想获取 <code>body</code> 节点，方法是：<code>document.body</code>；</li>
+<li>但是，如果想获取 <code>html</code>节点，方法是<code>document.documentElement</code>。</li>
+</ul>
+<h3 id="冒泡的流程"><a href="#冒泡的流程" class="headerlink" title="冒泡的流程"></a>冒泡的流程</h3><blockquote>
+<p>与捕获的流程相反</p>
+</blockquote>
+<p><strong>Event对象的常见 api 方法</strong></p>
+<blockquote>
+<p>用户做的是什么操作（比如，是敲键盘了，还是点击鼠标了），这些事件基本都是通过<code>Event</code>对象拿到的。这些都比较简单，我们就不讲了。我们来看看下面这几个方法：</p>
+</blockquote>
+<p><strong>方法一</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">event.preventDefault();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>解释：阻止默认事件。</li>
+<li>比如，已知<code>&lt;a&gt;</code>标签绑定了click事件，此时，如果给<code>&lt;a&gt;</code>设置了这个方法，就阻止了链接的默认跳转。</li>
+</ul>
+<p><strong>方法二：阻止冒泡</strong></p>
+<blockquote>
+<p>这个在业务中很常见。</p>
+</blockquote>
+<blockquote>
+<p>有的时候，业务中不需要事件进行冒泡。比如说，业务这样要求：单击子元素做事件<code>A</code>，单击父元素做事件B，如果不阻止冒泡的话，出现的问题是：单击子元素时，子元素和父元素都会做事件<code>A</code>。这个时候，就要用到阻止冒泡了。</p>
+</blockquote>
+<blockquote>
+<p><code>w3c</code>的方法：（火狐、谷歌、<code>IE11</code>）</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">event.stopPropagation();</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>IE10</code>以下则是：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">event.cancelBubble = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>兼容代码如下：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">box3.onclick = <span class="function"><span class="keyword">function</span> (<span class="params">event</span>) </span>&#123;</span><br><span class="line"></span><br><span class="line">     alert(<span class="string">"child"</span>);</span><br><span class="line"></span><br><span class="line">     <span class="comment">//阻止冒泡</span></span><br><span class="line">     event = event || <span class="built_in">window</span>.event;</span><br><span class="line"></span><br><span class="line">     <span class="keyword">if</span> (event &amp;&amp; event.stopPropagation) &#123;</span><br><span class="line">         event.stopPropagation();</span><br><span class="line">     &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">         event.cancelBubble = <span class="literal">true</span>;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>上方代码中，我们对<code>box3</code>进行了阻止冒泡，产生的效果是：事件不会继续传递到 <code>father</code>、<code>grandfather</code>、<code>body</code>了。</p>
+</blockquote>
+<p><strong>方法三：设置事件优先级</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">event.stopImmediatePropagation();</span><br></pre></td></tr></table></figure>
+
+<p>这个方法比较长，一般人没听说过。解释如下：</p>
+<blockquote>
+<p>比如说，我用<code>addEventListener</code>给某按钮同时注册了事件<code>A</code>、事件<code>B</code>。此时，如果我单击按钮，就会依次执行事件A和事件<code>B</code>。现在要求：单击按钮时，只执行事件A，不执行事件<code>B</code>。该怎么做呢？这是时候，就可以用到<code>stopImmediatePropagation</code>方法了。做法是：在事件A的响应函数中加入这句话。</p>
+</blockquote>
+<blockquote>
+<p>大家要记住 <code>event</code> 有这个方法。</p>
+</blockquote>
+<p><strong>属性4、属性5（事件委托中用到）</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">event.currentTarget   <span class="comment">//当前所绑定的事件对象。在事件委托中，指的是【父元素】。</span></span><br><span class="line"></span><br><span class="line">event.target  <span class="comment">//当前被点击的元素。在事件委托中，指的是【子元素】。</span></span><br></pre></td></tr></table></figure>
+
+<p>上面这两个属性，在事件委托中经常用到。</p>
+<blockquote>
+<p><strong>总结</strong>：上面这几项，非常重要，但是容易弄混淆。</p>
+</blockquote>
+<p><strong>自定义事件</strong></p>
+<blockquote>
+<p>自定义事件的代码如下：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">   <span class="keyword">var</span> myEvent = <span class="keyword">new</span> Event(<span class="string">'clickTest'</span>);</span><br><span class="line">   element.addEventListener(<span class="string">'clickTest'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">       <span class="built_in">console</span>.log(<span class="string">'smyhvae'</span>);</span><br><span class="line">   &#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//元素注册事件</span></span><br><span class="line">   element.dispatchEvent(myEvent); <span class="comment">//注意，参数是写事件对象 myEvent，不是写 事件名 clickTest</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>上面这个事件是定义完了之后，就直接自动触发了。在正常的业务中，这个事件一般是和别的事件结合用的。比如延时器设置按钮的动作：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myEvent = <span class="keyword">new</span> Event(<span class="string">'clickTest'</span>);</span><br><span class="line"></span><br><span class="line">element.addEventListener(<span class="string">'clickTest'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'smyhvae'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    element.dispatchEvent(myEvent); <span class="comment">//注意，参数是写事件对象 myEvent，不是写 事件名 clickTest</span></span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="IE与火狐的事件机制有什么区别？-如何阻止冒泡？"><a href="#IE与火狐的事件机制有什么区别？-如何阻止冒泡？" class="headerlink" title="IE与火狐的事件机制有什么区别？ 如何阻止冒泡？"></a>IE与火狐的事件机制有什么区别？ 如何阻止冒泡？</h3><p>IE只事件冒泡，不支持事件捕获；火狐同时支持件冒泡和事件捕获（Firefox同时支持两种事件模型，也就是：捕获型事件和冒泡型事件）</p>
+<p>ev.stoPropagation();（旧ie的方法 ev.cancelBubble = true;）</p>
+<h3 id="如何添加-html-元素的事件，有几种方法？请列举"><a href="#如何添加-html-元素的事件，有几种方法？请列举" class="headerlink" title="如何添加 html 元素的事件，有几种方法？请列举"></a>如何添加 html 元素的事件，有几种方法？请列举</h3><p>直接在标签里添加；在元素上添加、使用事件注册函数添加</p>
+<h3 id="事件模型"><a href="#事件模型" class="headerlink" title="事件模型"></a>事件模型</h3><ul>
+<li>DOM0<br><br>直接绑定</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;input onclick=&quot;sayHi()&quot;/&gt;</span><br><span class="line"></span><br><span class="line">btn.onclick = function() &#123;&#125;</span><br><span class="line">btn.onclick = null</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>DOM2<br><br>DOM2 级事件可以冒泡和捕获<br>通过 addEventListener 绑定<br>通过 removeEventListener 解绑</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 绑定</span><br><span class="line">btn.addEventListener(&apos;click&apos;, sayHi)</span><br><span class="line">// 解绑</span><br><span class="line">btn.removeEventListener(&apos;click&apos;, sayHi)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>DOM3<br><br>DOM3 具有更多事件类型<br>DOM3 级事件在 DOM2 级事件的基础上添加了更多的事件类型，全部类型如下：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">UI事件，当用户与页面上的元素交互时触发，如：load、scroll</span><br><span class="line">焦点事件，当元素获得或失去焦点时触发，如：blur、focus</span><br><span class="line">鼠标事件，当用户通过鼠标在页面执行操作时触发如：dbclick、mouseup</span><br><span class="line">滚轮事件，当使用鼠标滚轮或类似设备时触发，如：mousewheel</span><br><span class="line">文本事件，当在文档中输入文本时触发，如：textInput</span><br><span class="line">键盘事件，当用户通过键盘在页面上执行操作时触发，如：keydown、keypress</span><br><span class="line">合成事件，当为IME（输入法编辑器）输入字符时触发，如：compositionstart</span><br><span class="line">变动事件，当底层DOM结构发生变化时触发，如：DOMsubtreeModified</span><br></pre></td></tr></table></figure>
+
+<p>解析：<a href="https://www.jianshu.com/p/3acdf5f71d5b" target="_blank" rel="noopener">参考</a></p>
+<h3 id="如何自定义事件"><a href="#如何自定义事件" class="headerlink" title="如何自定义事件"></a>如何自定义事件</h3><ol>
+<li>原生提供了 3 个方法实现自定义事件</li>
+<li>createEvent，设置事件类型，是 html 事件还是 鼠标事件</li>
+<li>initEvent 初始化事件，事件名称，是否允许冒泡，是否阻止自定义事件</li>
+<li>dispatchEvent 触发事件</li>
+</ol>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/Guide/Events/Creating_and_triggering_events" target="_blank" rel="noopener">MDN</a></p>
+<h3 id="IE的事件处理和W3C的事件处理有哪些区别？"><a href="#IE的事件处理和W3C的事件处理有哪些区别？" class="headerlink" title="IE的事件处理和W3C的事件处理有哪些区别？"></a>IE的事件处理和W3C的事件处理有哪些区别？</h3><ul>
+<li><p>绑定事件</p>
+<ul>
+<li>W3C: targetEl.addEventListener(‘click’, handler, false);</li>
+<li>IE: targetEl.attachEvent(‘onclick’, handler);</li>
+</ul>
+</li>
+<li><p>删除事件</p>
+<ul>
+<li>W3C: targetEl.removeEventListener(‘click’, handler, false);</li>
+<li>IE: targetEl.detachEvent(event, handler);</li>
+</ul>
+</li>
+<li><p>事件对象</p>
+<ul>
+<li>W3C: var e = arguments.callee.caller.arguments[0]</li>
+<li>IE: window.event</li>
+</ul>
+</li>
+<li><p>事件目标</p>
+<ul>
+<li>W3C: e.target</li>
+<li>IE: window.event.srcElement</li>
+</ul>
+</li>
+<li><p>阻止事件默认行为</p>
+<ul>
+<li>W3C: e.preventDefault()</li>
+<li>IE: window.event.returnValue = false</li>
+</ul>
+</li>
+<li><p>阻止事件传播</p>
+<ul>
+<li>W3C: e.stopPropagation()</li>
+<li>IE: window.event.cancelBubble = true</li>
+</ul>
+</li>
+</ul>
+<h3 id="W3C事件的-target-与-currentTarget-的区别？"><a href="#W3C事件的-target-与-currentTarget-的区别？" class="headerlink" title="W3C事件的 target 与 currentTarget 的区别？"></a>W3C事件的 target 与 currentTarget 的区别？</h3><ul>
+<li>target 只会出现在事件流的目标阶段</li>
+<li>currentTarget 可能出现在事件流的任何阶段</li>
+<li>当事件流处在目标阶段时，二者的指向相同</li>
+<li>当事件流处于捕获或冒泡阶段时：currentTarget 指向当前事件活动的对象(一般为父级)</li>
+</ul>
+<h3 id="如何派发事件-dispatchEvent-？（如何进行事件广播？）"><a href="#如何派发事件-dispatchEvent-？（如何进行事件广播？）" class="headerlink" title="如何派发事件(dispatchEvent)？（如何进行事件广播？）"></a>如何派发事件(dispatchEvent)？（如何进行事件广播？）</h3><ul>
+<li>W3C: 使用 dispatchEvent 方法</li>
+<li>IE: 使用 fireEvent 方法</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fireEvent = <span class="function"><span class="keyword">function</span>(<span class="params">element, event</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">document</span>.createEventObject)&#123;</span><br><span class="line">        <span class="keyword">var</span> mockEvent = <span class="built_in">document</span>.createEventObject();</span><br><span class="line">        <span class="keyword">return</span> element.fireEvent(<span class="string">'on'</span> + event, mockEvent)</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">var</span> mockEvent = <span class="built_in">document</span>.createEvent(<span class="string">'HTMLEvents'</span>);</span><br><span class="line">        mockEvent.initEvent(event, <span class="literal">true</span>, <span class="literal">true</span>);</span><br><span class="line">        <span class="keyword">return</span> !element.dispatchEvent(mockEvent);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="跨域"><a href="#跨域" class="headerlink" title="跨域"></a>跨域</h2><blockquote>
+<p>因为浏览器出于安全考虑，有同源策略。也就是说，如果协议、域名或者端口有一个不同就是跨域，Ajax 请求会失败</p>
+</blockquote>
+<h3 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h3><blockquote>
+<p>JSONP 的原理很简单，就是利用 <script> 标签没有跨域限制的漏洞。通过 <script> 标签指向一个需要访问的地址并提供一个回调函数来接收数据当需要通讯时</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"http://domain/api?param1=a&amp;param2=b&amp;callback=jsonp"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="actionscript">    <span class="function"><span class="keyword">function</span> <span class="title">jsonp</span><span class="params">(data)</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">    	<span class="built_in">console</span>.log(data)</span></span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>JSONP 使用简单且兼容性不错，但是只限于 get 请求</li>
+</ul>
+<h3 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h3><ul>
+<li><code>CORS</code>需要浏览器和后端同时支持</li>
+<li>浏览器会自动进行 <code>CORS</code> 通信，实现CORS通信的关键是后端。只要后端实现了 <code>CORS</code>，就实现了跨域。</li>
+<li>服务端设置 <code>Access-Control-Allow-Origin</code> 就可以开启 <code>CORS</code>。 该属性表示哪些域名可以访问资源，如果设置通配符则表示所有网站都可以访问资源</li>
+</ul>
+<h3 id="document-domain"><a href="#document-domain" class="headerlink" title="document.domain"></a>document.domain</h3><ul>
+<li>该方式只能用于二级域名相同的情况下，比如 <code>a.test.com</code> 和 <code>b.test.com</code> 适用于该方式。</li>
+<li>只需要给页面添加 <code>document.domain = &#39;test.com&#39;</code> 表示二级域名都相同就可以实现跨域</li>
+</ul>
+<h3 id="postMessage"><a href="#postMessage" class="headerlink" title="postMessage"></a>postMessage</h3><blockquote>
+<p>这种方式通常用于获取嵌入页面中的第三方页面数据。一个页面发送消息，另一个页面判断来源并接收消息</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 发送消息端</span></span><br><span class="line"><span class="built_in">window</span>.parent.postMessage(<span class="string">'message'</span>, <span class="string">'http://test.com'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 接收消息端</span></span><br><span class="line"><span class="keyword">var</span> mc = <span class="keyword">new</span> MessageChannel();</span><br><span class="line">mc.addEventListener(<span class="string">'message'</span>, (event) =&gt; &#123;</span><br><span class="line">    <span class="keyword">var</span> origin = event.origin || event.originalEvent.origin; </span><br><span class="line">    <span class="keyword">if</span> (origin === <span class="string">'http://test.com'</span>) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'验证通过'</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Event-loop"><a href="#Event-loop" class="headerlink" title="Event loop"></a>Event loop</h2><h3 id="JS中的event-loop"><a href="#JS中的event-loop" class="headerlink" title="JS中的event loop"></a>JS中的event loop</h3><blockquote>
+<p>众所周知 JS 是门非阻塞单线程语言，因为在最初 JS 就是为了和浏览器交互而诞生的。如果 JS 是门多线程的语言话，我们在多个线程中处理 DOM 就可能会发生问题（一个线程中新加节点，另一个线程中删除节点）</p>
+</blockquote>
+<p>JS 在执行的过程中会产生执行环境，这些执行环境会被顺序的加入到执行栈中。如果遇到异步的代码，会被挂起并加入到 Task（有多种 task） 队列中。</p>
+<p>一旦执行栈为空，Event Loop 就会从 Task 队列中拿出需要执行的代码并放入执行栈中执行，所以本质上来说 JS 中的异步还是同步行为。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'script start'</span>);</span><br><span class="line"></span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'setTimeout'</span>);</span><br><span class="line">&#125;, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'script end'</span>);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>不同的任务源会被分配到不同的 <code>Task</code> 队列中，任务源可以分为 微任务（<code>microtask</code>） 和 宏任务（<code>macrotask</code>）。在 <code>ES6</code> 规范中，<code>microtask</code> 称为 jobs，macrotask 称为 task</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="string">'script start'</span>);</span><br><span class="line"></span><br><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'setTimeout'</span>);</span><br><span class="line">&#125;, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Promise'</span>)</span><br><span class="line">    resolve()</span><br><span class="line">&#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'promise1'</span>);</span><br><span class="line">&#125;).then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'promise2'</span>);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">'script end'</span>);</span><br><span class="line"><span class="comment">// script start =&gt; Promise =&gt; script end =&gt; promise1 =&gt; promise2 =&gt; setTimeout</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>以上代码虽然 <code>setTimeout</code> 写在 <code>Promise</code> 之前，但是因为 <code>Promise</code> 属于微任务而 <code>setTimeout</code> 属于宏任务</p>
+</blockquote>
+<p><strong>微任务</strong></p>
+<ul>
+<li><code>process.nextTick</code></li>
+<li><code>promise</code></li>
+<li><code>Object.observe</code></li>
+<li><code>MutationObserver</code></li>
+</ul>
+<p><strong>宏任务</strong></p>
+<ul>
+<li><code>script</code></li>
+<li><code>setTimeout</code></li>
+<li><code>setInterval</code></li>
+<li><code>setImmediate</code></li>
+<li><code>I/O</code></li>
+<li><code>UI rendering</code></li>
+</ul>
+<blockquote>
+<p>宏任务中包括了 script ，浏览器会先执行一个宏任务，接下来有异步代码的话就先执行微任务</p>
+</blockquote>
+<p><strong>所以正确的一次 Event loop 顺序是这样的</strong></p>
+<ul>
+<li>执行同步代码，这属于宏任务</li>
+<li>执行栈为空，查询是否有微任务需要执行</li>
+<li>执行所有微任务</li>
+<li>必要的话渲染 UI</li>
+<li>然后开始下一轮 <code>Event loop</code>，执行宏任务中的异步代码</li>
+</ul>
+<blockquote>
+<p>通过上述的 <code>Event loop</code> 顺序可知，如果宏任务中的异步代码有大量的计算并且需要操作 <code>DOM</code> 的话，为了更快的响应界面响应，我们可以把操作 <code>DOM</code> 放入微任务中</p>
+</blockquote>
+<h3 id="Node-中的-Event-loop"><a href="#Node-中的-Event-loop" class="headerlink" title="Node 中的 Event loop"></a>Node 中的 Event loop</h3><ul>
+<li><code>Node</code> 中的 <code>Event loop</code> 和浏览器中的不相同。</li>
+<li><code>Node</code> 的 <code>Event loop</code> 分为<code>6</code>个阶段，它们会按照顺序反复运行</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">┌───────────────────────┐</span><br><span class="line">┌─&gt;│        timers         │</span><br><span class="line">│  └──────────┬────────────┘</span><br><span class="line">│  ┌──────────┴────────────┐</span><br><span class="line">│  │     I/O callbacks     │</span><br><span class="line">│  └──────────┬────────────┘</span><br><span class="line">│  ┌──────────┴────────────┐</span><br><span class="line">│  │     idle, prepare     │</span><br><span class="line">│  └──────────┬────────────┘      ┌───────────────┐</span><br><span class="line">│  ┌──────────┴────────────┐      │   incoming:   │</span><br><span class="line">│  │         poll          │&lt;──connections───     │</span><br><span class="line">│  └──────────┬────────────┘      │   data, etc.  │</span><br><span class="line">│  ┌──────────┴────────────┐      └───────────────┘</span><br><span class="line">│  │        check          │</span><br><span class="line">│  └──────────┬────────────┘</span><br><span class="line">│  ┌──────────┴────────────┐</span><br><span class="line">└──┤    close callbacks    │</span><br><span class="line">   └───────────────────────┘</span><br></pre></td></tr></table></figure>
+
+<p><strong>timer</strong></p>
+<ul>
+<li><code>timers</code> 阶段会执行 <code>setTimeout</code> 和 <code>setInterval</code></li>
+<li>一个 timer 指定的时间并不是准确时间，而是在达到这个时间后尽快执行回调，可能会因为系统正在执行别的事务而延迟</li>
+</ul>
+<p><strong>I/O</strong></p>
+<ul>
+<li><code>I/O</code> 阶段会执行除了 <code>close</code> 事件，定时器和 <code>setImmediate</code> 的回调</li>
+</ul>
+<p>idle, prepare<br>idle, prepare 阶段内部实现</p>
+<p><strong>poll</strong></p>
+<ul>
+<li><p><code>poll</code> 阶段很重要，这一阶段中，系统会做两件事情</p>
+<ul>
+<li>执行到点的定时器</li>
+<li>执行 <code>poll</code> 队列中的事件</li>
+</ul>
+</li>
+<li><p>并且当 poll 中没有定时器的情况下，会发现以下两件事情</p>
+<ul>
+<li>如果 poll 队列不为空，会遍历回调队列并同步执行，直到队列为空或者系统限制</li>
+<li>如果 poll 队列为空，会有两件事发生</li>
+<li>如果有 <code>setImmediate</code> 需要执行，<code>poll</code> 阶段会停止并且进入到 <code>check</code> 阶段执行 <code>setImmediate</code></li>
+<li>如果没有 <code>setImmediate</code> 需要执行，会等待回调被加入到队列中并立即执行回调</li>
+<li>如果有别的定时器需要被执行，会回到 <code>timer</code> 阶段执行回调。</li>
+</ul>
+</li>
+</ul>
+<p><strong>check</strong></p>
+<ul>
+<li><code>check</code> 阶段执行 <code>setImmediate</code></li>
+</ul>
+<p><strong>close callbacks</strong></p>
+<ul>
+<li><code>close callbacks</code> 阶段执行 <code>close</code> 事件</li>
+<li>并且在 <code>Node</code> 中，有些情况下的定时器执行顺序是随机的</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'setTimeout'</span>);</span><br><span class="line">&#125;, <span class="number">0</span>);</span><br><span class="line">setImmediate(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'setImmediate'</span>);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 这里可能会输出 setTimeout，setImmediate</span></span><br><span class="line"><span class="comment">// 可能也会相反的输出，这取决于性能</span></span><br><span class="line"><span class="comment">// 因为可能进入 event loop 用了不到 1 毫秒，这时候会执行 setImmediate</span></span><br><span class="line"><span class="comment">// 否则会执行 setTimeout</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>上面介绍的都是 macrotask 的执行情况，microtask 会在以上每个阶段完成后立即执行</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'timer1'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">Promise</span>.resolve().then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'promise1'</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line">setTimeout(<span class="function"><span class="params">()</span>=&gt;</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'timer2'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="built_in">Promise</span>.resolve().then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="string">'promise2'</span>)</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;, <span class="number">0</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 以上代码在浏览器和 node 中打印情况是不同的</span></span><br><span class="line"><span class="comment">// 浏览器中一定打印 timer1, promise1, timer2, promise2</span></span><br><span class="line"><span class="comment">// node 中可能打印 timer1, timer2, promise1, promise2</span></span><br><span class="line"><span class="comment">// 也可能打印 timer1, promise1, timer2, promise2</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>Node</code> 中的 <code>process.nextTick</code> 会先于其他 <code>microtask</code> 执行</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">"timer1"</span>);</span><br><span class="line"></span><br><span class="line"> <span class="built_in">Promise</span>.resolve().then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">"promise1"</span>);</span><br><span class="line"> &#125;);</span><br><span class="line">&#125;, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">process.nextTick(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line"> <span class="built_in">console</span>.log(<span class="string">"nextTick"</span>);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// nextTick, timer1, promise1</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Service-Worker代理服务器"><a href="#Service-Worker代理服务器" class="headerlink" title="Service Worker代理服务器"></a>Service Worker代理服务器</h2><blockquote>
+<p>Service workers 本质上充当Web应用程序与浏览器之间的代理服务器，也可以在网络可用时作为浏览器和网络间的代理。</p>
+<p>它们旨在（除其他之外）使得能够创建有效的离线体验，拦截网络请求并基于网络是否可用以及更新的资源是否驻留在服务器上来采取适当的动作。</p>
+<p>他们还允许访问推送通知和后台同步API。</p>
+</blockquote>
+<p><strong>目前该技术通常用来做缓存文件，提高首屏速度</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// index.js</span></span><br><span class="line"><span class="keyword">if</span> (navigator.serviceWorker) &#123;</span><br><span class="line">  navigator.serviceWorker</span><br><span class="line">    .register(<span class="string">"sw.js"</span>)</span><br><span class="line">    .then(<span class="function"><span class="keyword">function</span>(<span class="params">registration</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"service worker 注册成功"</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">    .catch(<span class="function"><span class="keyword">function</span>(<span class="params">err</span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"servcie worker 注册失败"</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// sw.js</span></span><br><span class="line"><span class="comment">// 监听 `install` 事件，回调中缓存所需文件</span></span><br><span class="line">self.addEventListener(<span class="string">"install"</span>, e =&gt; &#123;</span><br><span class="line">  e.waitUntil(</span><br><span class="line">    caches.open(<span class="string">"my-cache"</span>).then(<span class="function"><span class="keyword">function</span>(<span class="params">cache</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">return</span> cache.addAll([<span class="string">"./index.html"</span>, <span class="string">"./index.js"</span>]);</span><br><span class="line">    &#125;)</span><br><span class="line">  );</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 拦截所有请求事件</span></span><br><span class="line"><span class="comment">// 如果缓存中已经有请求的数据就直接用缓存，否则去请求数据</span></span><br><span class="line">self.addEventListener(<span class="string">"fetch"</span>, e =&gt; &#123;</span><br><span class="line">  e.respondWith(</span><br><span class="line">    caches.match(e.request).then(<span class="function"><span class="keyword">function</span>(<span class="params">response</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span> (response) &#123;</span><br><span class="line">        <span class="keyword">return</span> response;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"fetch source"</span>);</span><br><span class="line">    &#125;)</span><br><span class="line">  );</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>打开页面，可以在开发者工具中的 Application 看到 Service Worker 已经启动了</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://user-gold-cdn.xitu.io/2018/3/28/1626b1e8eba68e1c?w=1770&h=722&f=png&s=192277" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+
+<blockquote>
+<p>在 Cache 中也可以发现我们所需的文件已被缓存</p>
+</blockquote>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://user-gold-cdn.xitu.io/2018/3/28/1626b20dfc4fcd26?w=1118&h=728&f=png&s=85610" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>当我们重新刷新页面可以发现我们缓存的数据是从 Service Worker 中读取的</p>
+<h2 id="渲染机制"><a href="#渲染机制" class="headerlink" title="渲染机制"></a>渲染机制</h2><p><strong>浏览器的渲染机制一般分为以下几个步骤</strong></p>
+<ul>
+<li>处理 <code>HTML</code> 并构建 <code>DOM</code> 树。</li>
+<li>处理 <code>CSS</code> 构建 <code>CSSOM</code> 树。</li>
+<li>将 <code>DOM</code> 与 <code>CSSOM</code> 合并成一个渲染树。</li>
+<li>根据渲染树来布局，计算每个节点的位置。</li>
+<li>调用 <code>GPU</code> 绘制，合成图层，显示在屏幕上</li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://user-gold-cdn.xitu.io/2018/4/11/162b2ab2ec70ac5b?w=900&h=352&f=png&s=49983" alt="" title="">
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<ul>
+<li>在构建 CSSOM 树时，会阻塞渲染，直至 CSSOM 树构建完成。并且构建 CSSOM 树是一个十分消耗性能的过程，所以应该尽量保证层级扁平，减少过度层叠，越是具体的 CSS 选择器，执行速度越慢</li>
+<li>当 HTML 解析到 script 标签时，会暂停构建 DOM，完成后才会从暂停的地方重新开始。也就是说，如果你想首屏渲染的越快，就越不应该在首屏就加载 JS 文件。并且 CSS 也会影响 JS 的执行，只有当解析完样式表才会执行 JS，所以也可以认为这种情况下，CSS 也会暂停构建 DOM</li>
+</ul>
+<h3 id="浏览器的渲染过程"><a href="#浏览器的渲染过程" class="headerlink" title="浏览器的渲染过程"></a>浏览器的渲染过程</h3><ul>
+<li>解析HTML构建 DOM(DOM树)，并行请求 css/image/js</li>
+<li>CSS 文件下载完成，开始构建 CSSOM(CSS树)（解析CSS生成CSSOM规则树）</li>
+<li>CSSOM 规则树构建结束后，和 DOM 一起生成 Render Tree(渲染树)</li>
+<li>遍历渲染树开始布局(Layout)：计算出每个节点在屏幕中的位置、大小信息。</li>
+<li>显示(Painting)：将渲染树每个节点绘制到屏幕（通过显卡把页面画到屏幕上）</li>
+</ul>
+<p>解析：</p>
+<ul>
+<li>使用 HTML 创建文档对象模型（DOM）</li>
+<li>使用 CSS 创建 CSS 对象模型（CSSOM）</li>
+<li>基于 DOM 和 CSSOM 执行脚本（Scripts）</li>
+<li>合并 DOM 和 CSSOM 形成渲染树（Render Tree）</li>
+<li>使用渲染树布局（Layout）所有元素</li>
+<li>渲染（Paint）所有元素</li>
+</ul>
+<p><a href="https://jinlong.github.io/2017/05/08/optimising-the-front-end-for-the-browser/">参考</a></p>
+<h3 id="DOM树-和-渲染树-的区别："><a href="#DOM树-和-渲染树-的区别：" class="headerlink" title="DOM树 和 渲染树 的区别："></a>DOM树 和 渲染树 的区别：</h3><p>DOM树与HTML标签一一对应，包括head和隐藏元素</p>
+<p>渲染树不包括head和隐藏元素，大段文本的每一个行都是独立节点，每一个节点都有对应的css属性</p>
+<h3 id="图层"><a href="#图层" class="headerlink" title="图层"></a>图层</h3><blockquote>
+<p>一般来说，可以把普通文档流看成一个图层。特定的属性可以生成一个新的图层。</p>
+<p>不同的图层渲染互不影响，所以对于某些频繁需要渲染的建议单独生成一个新图层，提高性能。</p>
+<p>但也不能生成过多的图层，会引起反作用</p>
+</blockquote>
+<p><strong>通过以下几个常用属性可以生成新图层</strong></p>
+<ul>
+<li>3D 变换：<code>translate3d</code>、<code>translateZ</code></li>
+<li><code>will-change</code></li>
+<li><code>video</code>、<code>iframe</code> 标签</li>
+<li>通过动画实现的 <code>opacity</code> 动画转换</li>
+<li><code>position: fixed</code></li>
+</ul>
+<h2 id="浏览器内核"><a href="#浏览器内核" class="headerlink" title="浏览器内核"></a>浏览器内核</h2><h3 id="常见的浏览器内核有哪些？"><a href="#常见的浏览器内核有哪些？" class="headerlink" title="常见的浏览器内核有哪些？"></a>常见的浏览器内核有哪些？</h3><p>Trident 内核：IE,MaxThon,TT,The World,360,搜狗浏览器等。[又称 MSHTML]</p>
+<p>Gecko 内核：Netscape6 及以上版本，FF,MozillaSuite/SeaMonkey 等</p>
+<p>Presto 内核：Opera7 及以上。 [Opera 内核原为：Presto，现为：Blink;]</p>
+<p>Webkit 内核：Safari,Chrome 等。 [ Chrome 的：Blink（WebKit 的分支）]</p>
+<h3 id="对浏览器内核的理解？"><a href="#对浏览器内核的理解？" class="headerlink" title="对浏览器内核的理解？"></a>对浏览器内核的理解？</h3><p>主要分成两部分：渲染引擎(layout engineer或Rendering Engine)和JS引擎。</p>
+<p>渲染引擎：负责取得网页的内容（HTML、XML、图像等等）、整理讯息（例如加入CSS等），以及计算网页的显示方式，然后会输出至显示器或打印机。浏览器的内核的不同对于网页的语法解释会有不同，所以渲染的效果也不相同。所有网页浏览器、电子邮件客户端以及其它需要编辑、显示网络内容的应用程序都需要内核。</p>
+<p>JS引擎则：解析和执行javascript来实现网页的动态效果。</p>
+<p>最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲染引擎。</p>
+</script></p></blockquote>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-03-31T12:11:10.000Z" itemprop="dateUpdated">2024-03-31 20:11:10</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/knowledges/liu-lan-qi.html" target="_blank" rel="external">https://qw66.gitee.io/knowledges/liu-lan-qi.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Service-Worker/">Service Worker</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/事件机制/">事件机制</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/存储技术/">存储技术</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/浏览器内核/">浏览器内核</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/渲染机制/">渲染机制</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/跨域/">跨域</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/liu-lan-qi.html&title=《浏览器》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/liu-lan-qi.html&title=《浏览器》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/liu-lan-qi.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《浏览器》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/liu-lan-qi.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/liu-lan-qi.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/knowledges/jian-rong-xing-wen-ti.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">兼容性问题</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/interview/mian-shi-ji-qiao.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">面试技巧</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/liu-lan-qi.html&title=《浏览器》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/liu-lan-qi.html&title=《浏览器》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/liu-lan-qi.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《浏览器》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/liu-lan-qi.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/liu-lan-qi.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACL0lEQVR42u3aQW7DMAwEwP7/0y7QU4DA1pJMClgenYwklTQ+sBLJn594HH/j+pPXz8++ff/N6y+Tvx0NDAyM2zKOy/G+6eoWzzaaMJK9YWBgPIdxHWQXUwy2mKyb/APAwMDAODsaVnnzdTEwMDDmAXd+3MTAwMCYXGKT62s1cda79GJgYDyNUS0M/OfzF+sbGBgYN2EcxVG90F5fXK+fC7vCwMDYmtFrpEgS/dVDZFLCXMyMgYGxKSMJiHnSLQ/Q1Ze4+AQDA2NrRi+J3wu4+cGxysbAwHgmo1e2TOZMtpu8oCjgYmBgbMrolSSrhc88oDcDLgYGxkaM6pW1B56vslgXAwPjMYxPNWTkQbnXhHFaicXAwNiUMUn3T2qI1ctw9MowMDC2ZszbIMqpMQwMDIyYkV9Kk2RZL+xWm8BGJQEMDIzbMqrX1N6SecKuvDoGBsbWjCSkThom8gCdHzpPXxwGBsbDGMndt3eJzdN55TQfBgbGYxhHPKph93utGBgYGHsz8gaIzzZPTPCLrCEGBsamjDwgfjYxl7d8LZ4xMDC2ZiQFy2rrWPXQWX1ZiwMiBgbGdoyjOPKGjEmfWnldDAyMrRm9o14y6aQIOpkTAwNjV0ZeAOglxaqY/H1jYGA8jTFPmeWbS2bIgz4GBgZGflxLjn2Ta+1iZgwMDIzWUS8qPbZC7aK+gYGBsSkjucROCgDVlo48HGNgYDyBUQ15SYDOA+WkOWxU38DAwLgH4xcf8voITrOR6gAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

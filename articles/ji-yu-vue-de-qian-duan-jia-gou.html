@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>基于Vue的前端架构 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="前端架构">
+    <meta name="description" content="1.分解需求技术栈 考虑到后续招人和现有人员的技术栈，选择 Vue 作为框架。 公司主要业务是 GIS 和 BIM，通常开发一些中大型的系统，所以 vue-router 和 vuex 都是必不可少的。 放弃了 Element UI 选择了 Ant Design Vue（最近 Element 好像复活了，麻蛋）。 工具库选择 lodash。  建立脚手架 搭建 NPM 私服。 使用 Node 环境开">
+<meta name="keywords" content="前端架构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于Vue的前端架构">
+<meta property="og:url" content="https://qw66.gitee.io/articles/ji-yu-vue-de-qian-duan-jia-gou.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="1.分解需求技术栈 考虑到后续招人和现有人员的技术栈，选择 Vue 作为框架。 公司主要业务是 GIS 和 BIM，通常开发一些中大型的系统，所以 vue-router 和 vuex 都是必不可少的。 放弃了 Element UI 选择了 Ant Design Vue（最近 Element 好像复活了，麻蛋）。 工具库选择 lodash。  建立脚手架 搭建 NPM 私服。 使用 Node 环境开">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:updated_time" content="2024-05-09T03:19:43.270Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="基于Vue的前端架构">
+<meta name="twitter:description" content="1.分解需求技术栈 考虑到后续招人和现有人员的技术栈，选择 Vue 作为框架。 公司主要业务是 GIS 和 BIM，通常开发一些中大型的系统，所以 vue-router 和 vuex 都是必不可少的。 放弃了 Element UI 选择了 Ant Design Vue（最近 Element 好像复活了，麻蛋）。 工具库选择 lodash。  建立脚手架 搭建 NPM 私服。 使用 Node 环境开">
+<meta name="twitter:image" content="https://qw66.gitee.io/img/loading.gif">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">基于Vue的前端架构</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">基于Vue的前端架构</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2023-12-16T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2023-12-17
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端文章/">前端文章</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-分解需求"><span class="post-toc-number">1.</span> <span class="post-toc-text">1.分解需求</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#技术栈"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">技术栈</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#建立脚手架"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">建立脚手架</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#开发规范"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">开发规范</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-样式"><span class="post-toc-number">2.</span> <span class="post-toc-text">2.样式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CSS-预处理器的选择"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">CSS 预处理器的选择</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#局部样式与全局样式"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">局部样式与全局样式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#局部样式"><span class="post-toc-number">2.2.1.</span> <span class="post-toc-text">局部样式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#全局样式"><span class="post-toc-number">2.2.2.</span> <span class="post-toc-text">全局样式</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#体验优化"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">体验优化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#页面载入进度条"><span class="post-toc-number">2.3.1.</span> <span class="post-toc-text">页面载入进度条</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#美化滚动条"><span class="post-toc-number">2.3.2.</span> <span class="post-toc-text">美化滚动条</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#静态资源加载页面"><span class="post-toc-number">2.3.3.</span> <span class="post-toc-text">静态资源加载页面</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#移动端-100vh-问题"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">移动端 100vh 问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#解决方案"><span class="post-toc-number">2.4.1.</span> <span class="post-toc-text">解决方案</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-组件库"><span class="post-toc-number">3.</span> <span class="post-toc-text">3.组件库</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#覆盖-Ant-Design-Vue-样式"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">覆盖 Ant  Design Vue 样式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-使用-less-文件"><span class="post-toc-number">3.1.1.</span> <span class="post-toc-text">1.使用 .less 文件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-使用-JavaScript-对象"><span class="post-toc-number">3.1.2.</span> <span class="post-toc-text">2.使用 JavaScript 对象</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#干掉无用的图标"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">干掉无用的图标</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解决-Moment-多国语"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">解决 Moment 多国语</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#部分组件需要在页面内引用"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">部分组件需要在页面内引用</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#4-静态资源与图标"><span class="post-toc-number">4.</span> <span class="post-toc-text">4.静态资源与图标</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#静态资源"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">静态资源</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自动注册-Svg-图标"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">自动注册 Svg 图标</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#5-异步请求"><span class="post-toc-number">5.</span> <span class="post-toc-text">5.异步请求</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#封装-Axios"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">封装 Axios</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#跨域问题"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">跨域问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Mock-数据"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">Mock 数据</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#规则"><span class="post-toc-number">5.3.1.</span> <span class="post-toc-text">规则</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#入口文件"><span class="post-toc-number">5.3.2.</span> <span class="post-toc-text">入口文件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#示例模板"><span class="post-toc-number">5.3.3.</span> <span class="post-toc-text">示例模板</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#6-路由"><span class="post-toc-number">6.</span> <span class="post-toc-text">6.路由</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Layout"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">Layout</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#权限验证"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">权限验证</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#auth"><span class="post-toc-number">6.2.1.</span> <span class="post-toc-text">auth</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#permissions"><span class="post-toc-number">6.2.2.</span> <span class="post-toc-text">permissions</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#页面开发"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">页面开发</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#7、构建优化"><span class="post-toc-number">7.</span> <span class="post-toc-text">7、构建优化</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#包分析工具"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">包分析工具</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#开启-Gzip"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">开启 Gzip</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#路由懒加载"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">路由懒加载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Preload-amp-Prefetch"><span class="post-toc-number">7.4.</span> <span class="post-toc-text">Preload &amp; Prefetch</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#8-测试框架"><span class="post-toc-number">8.</span> <span class="post-toc-text">8.测试框架</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#9-组件库"><span class="post-toc-number">9.</span> <span class="post-toc-text">9.组件库</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#10-Vuex"><span class="post-toc-number">10.</span> <span class="post-toc-text">10.Vuex</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#11-过滤器"><span class="post-toc-number">11.</span> <span class="post-toc-text">11.过滤器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#12-指令"><span class="post-toc-number">12.</span> <span class="post-toc-text">12.指令</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#13-开发规范"><span class="post-toc-number">13.</span> <span class="post-toc-text">13.开发规范</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ESLint"><span class="post-toc-number">13.1.</span> <span class="post-toc-text">ESLint</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CSS-规范"><span class="post-toc-number">13.2.</span> <span class="post-toc-text">CSS 规范</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#降低选择器复杂性"><span class="post-toc-number">13.2.1.</span> <span class="post-toc-text">降低选择器复杂性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#选择器优先级"><span class="post-toc-number">13.2.2.</span> <span class="post-toc-text">选择器优先级</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#使用-flexbox"><span class="post-toc-number">13.2.3.</span> <span class="post-toc-text">使用 flexbox</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#动画性能优化"><span class="post-toc-number">13.2.4.</span> <span class="post-toc-text">动画性能优化</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#属性值"><span class="post-toc-number">13.2.5.</span> <span class="post-toc-text">属性值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#字体排版"><span class="post-toc-number">13.2.6.</span> <span class="post-toc-text">字体排版</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vue-代码规范"><span class="post-toc-number">13.3.</span> <span class="post-toc-text">Vue 代码规范</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#常规"><span class="post-toc-number">13.3.1.</span> <span class="post-toc-text">常规</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#vuex"><span class="post-toc-number">13.3.2.</span> <span class="post-toc-text">vuex</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#14-完成详细的使用文档"><span class="post-toc-number">14.</span> <span class="post-toc-text">14.完成详细的使用文档</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#15-Git-多人协作流程"><span class="post-toc-number">15.</span> <span class="post-toc-text">15.Git 多人协作流程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Root-仓库"><span class="post-toc-number">15.1.</span> <span class="post-toc-text">Root 仓库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#开发者仓库"><span class="post-toc-number">15.2.</span> <span class="post-toc-text">开发者仓库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Git-流程"><span class="post-toc-number">15.3.</span> <span class="post-toc-text">Git 流程</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-articles/基于Vue的前端架构"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">基于Vue的前端架构</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2023-12-17 00:00:00" datetime="2023-12-16T16:00:00.000Z"  itemprop="datePublished">2023-12-17</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端文章/">前端文章</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="1-分解需求"><a href="#1-分解需求" class="headerlink" title="1.分解需求"></a>1.分解需求</h2><h3 id="技术栈"><a href="#技术栈" class="headerlink" title="技术栈"></a>技术栈</h3><ul>
+<li>考虑到后续招人和现有人员的技术栈，选择 Vue 作为框架。</li>
+<li>公司主要业务是 GIS 和 BIM，通常开发一些中大型的系统，所以 vue-router 和 vuex 都是必不可少的。</li>
+<li>放弃了 Element UI 选择了 Ant Design Vue（最近 Element 好像复活了，麻蛋）。</li>
+<li>工具库选择 lodash。</li>
+</ul>
+<h3 id="建立脚手架"><a href="#建立脚手架" class="headerlink" title="建立脚手架"></a>建立脚手架</h3><ul>
+<li>搭建 NPM 私服。</li>
+<li>使用 Node 环境开发 CLI 工具，参考我自己写过的一篇 -【 <a href="https://juejin.cn/post/6844903607855235079" target="_blank" rel="noopener">搭建自己的脚手架—“优雅”生成前端工程</a>】。</li>
+<li>基于 @vue/cli 搭建基础的模板（大家都比较了解，节省开发时间，远胜于从零开始搭建）。</li>
+<li>根据业务需求定义各种开发中可能用到的功能（组件库、状态管理、过滤器、指令、CSS内置变量、CSS Mixins、表单验证、工具函数等）。</li>
+<li>性能优化，例如对 Ant Design Vue 组件库的优化。</li>
+</ul>
+<h3 id="开发规范"><a href="#开发规范" class="headerlink" title="开发规范"></a>开发规范</h3><ul>
+<li>对代码风格、命名规则、目录结构进行统一规范。</li>
+<li>静态资源的使用规范。</li>
+<li>单元测试、提交线上测试规范。</li>
+<li>Git 提交记录和多人协作规范。</li>
+</ul>
+<h2 id="2-样式"><a href="#2-样式" class="headerlink" title="2.样式"></a>2.样式</h2><h3 id="CSS-预处理器的选择"><a href="#CSS-预处理器的选择" class="headerlink" title="CSS 预处理器的选择"></a>CSS 预处理器的选择</h3><ul>
+<li>Sass/Scss ✅</li>
+<li>Less ✅</li>
+<li>Stylus ⭕</li>
+</ul>
+<p>为什么选择了两个？因为公司团队跟倾向于使用 scss 开发，less 是为了覆盖 ant design vue 的样式，stylus 只有我自己喜欢这种风格。</p>
+<h3 id="局部样式与全局样式"><a href="#局部样式与全局样式" class="headerlink" title="局部样式与全局样式"></a>局部样式与全局样式</h3><h4 id="局部样式"><a href="#局部样式" class="headerlink" title="局部样式"></a>局部样式</h4><p>一般都是使用 scoped 方案：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;style lang=&quot;scss&quot; scoped&gt;</span><br><span class="line">  ...</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="全局样式"><a href="#全局样式" class="headerlink" title="全局样式"></a>全局样式</h4><p>全局样式 目录：@/styles</p>
+<p>variable.scss: 全局变量管理 mixins.scss: 全局 Mixins 管理 global.scss: 全局样式</p>
+<p>其中 variable.scss 和 mixins.scss 会优先于 global.css 加载，并且可以不通过 import 的方式在项目中任何位置使用这些变量和 mixins。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vue.config.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  css: &#123;</span><br><span class="line">    loaderOptions: &#123;</span><br><span class="line">      sass: &#123;</span><br><span class="line">        prependData: <span class="string">`</span></span><br><span class="line"><span class="string">        @import '@/styles/variable.scss';</span></span><br><span class="line"><span class="string">        @import '@/styles/mixins.scss';</span></span><br><span class="line"><span class="string">        `</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="体验优化"><a href="#体验优化" class="headerlink" title="体验优化"></a>体验优化</h3><h4 id="页面载入进度条"><a href="#页面载入进度条" class="headerlink" title="页面载入进度条"></a>页面载入进度条</h4><p>使用 <a href="https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Frstacruz%2Fnprogress" target="_blank" rel="noopener">nprogress</a> 对路由跳转时做一个伪进度条，这样做在网络不好的情况下可以让用户知道页面已经在加载了：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> NProgress <span class="keyword">from</span> <span class="string">'nprogress'</span>;</span><br><span class="line"></span><br><span class="line">router.beforeEach(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  NProgress.start();</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">router.afterEach(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  NProgress.done();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="美化滚动条"><a href="#美化滚动条" class="headerlink" title="美化滚动条"></a>美化滚动条</h4><p>一直用 Mac 做前端，突然发现同事的 Windows 上出现了十分丑陋的滚动条，为了保持一致：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">::-webkit-scrollbar</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">6px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">6px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-pseudo">::-webkit-scrollbar-track</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">6px</span>;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">rgba</span>(#101F1C, 0.1);</span><br><span class="line">  <span class="attribute">-webkit-border-radius</span>: <span class="number">2em</span>;</span><br><span class="line">  <span class="attribute">-moz-border-radius</span>: <span class="number">2em</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-pseudo">::-webkit-scrollbar-thumb</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(#101F1C, 0.5);</span><br><span class="line">  <span class="attribute">background-clip</span>: padding-box;</span><br><span class="line">  <span class="attribute">min-height</span>: <span class="number">28px</span>;</span><br><span class="line">  <span class="attribute">-webkit-border-radius</span>: <span class="number">2em</span>;</span><br><span class="line">  <span class="attribute">-moz-border-radius</span>: <span class="number">2em</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">2em</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-pseudo">::-webkit-scrollbar-thumb</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(#101F1C, 1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="静态资源加载页面"><a href="#静态资源加载页面" class="headerlink" title="静态资源加载页面"></a>静态资源加载页面</h4><p>首次加载页面时，会产生大量的白屏时间，这时做一个 loading 效果看起来会很友好，其实很简单，直接在 public/index.html 里写一些静态的样式即可。</p>
+<h3 id="移动端-100vh-问题"><a href="#移动端-100vh-问题" class="headerlink" title="移动端 100vh 问题"></a>移动端 100vh 问题</h3><p>在移动端使用 100vh 时，发现在 Chrome、Safari 浏览器中，因为浏览器栏和一些导航栏、链接栏导致不一样的呈现：</p>
+<p>你以为的 100vh === 视口高度</p>
+<p>实际上 100vh === 视口高度 + 浏览器工具栏（地址栏等等）的高度</p>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>安装 vh-check <code>npm install vh-check --save</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> vhCheck <span class="keyword">from</span> <span class="string">'vh-check'</span>;</span><br><span class="line">vhCheck(<span class="string">'browser-address-bar'</span>);</span><br></pre></td></tr></table></figure>
+
+<p>定义一个 CSS Mixin</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">s@<span class="keyword">mixin</span> vh(<span class="variable">$height</span>: 100vh) &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="variable">$height</span>;</span><br><span class="line">  <span class="attribute">height</span>: calc(#&#123;<span class="variable">$height</span>&#125; - var(--browser-address-bar, <span class="number">0px</span>));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>之后就是哪里不会点哪里。</p>
+<h2 id="3-组件库"><a href="#3-组件库" class="headerlink" title="3.组件库"></a>3.组件库</h2><p>因为 Element UI 长期没更新，并且之前使用过 React 的 Ant Design（重点），所以组件库选择了Ant Design Vue。</p>
+<h3 id="覆盖-Ant-Design-Vue-样式"><a href="#覆盖-Ant-Design-Vue-样式" class="headerlink" title="覆盖 Ant  Design Vue 样式"></a>覆盖 Ant  Design Vue 样式</h3><p>设计师眼中的 Ant Design === ‘丑’（心酸）。</p>
+<h4 id="1-使用-less-文件"><a href="#1-使用-less-文件" class="headerlink" title="1.使用 .less 文件"></a>1.使用 .less 文件</h4><p>Ant  Design Vue 的样式使用了 Less 作为开发语言，并定义了一系列全局/组件的样式变量，所以需要安装了 less、less-loader，在 <code>@/styles/antd-theme.less</code> 可以覆盖默认样式。</p>
+<p><strong>优点是：</strong></p>
+<p>方便快捷，可以修改 class，覆盖默认变量。</p>
+<p><strong>缺点是：</strong></p>
+<p>必须引入 <code>@import &#39;~ant-design-vue/dist/antd.less&#39;;</code> ，引入后会将所有的组件样式全部引入，导致打包后的 css 体积达到 500kb 左右。</p>
+<h4 id="2-使用-JavaScript-对象"><a href="#2-使用-JavaScript-对象" class="headerlink" title="2.使用 JavaScript 对象"></a>2.使用 JavaScript 对象</h4><p>通过 JavaScript 对象的方式可以修改内置变量，需要对 Less 进行配置：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vue.config.js</span></span><br><span class="line"><span class="keyword">const</span> modifyVars = <span class="built_in">require</span>(<span class="string">'./src/styles/antdTheme.js'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  css: &#123;</span><br><span class="line">    loaderOptions: &#123;</span><br><span class="line">      less: &#123;</span><br><span class="line">        lessOptions: &#123;</span><br><span class="line">          javascriptEnabled: <span class="literal">true</span>,</span><br><span class="line">          modifyVars,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这一步还可以继续优化，通过 babel-plugin-import 使 Ant Design Vue 的组件样式可以按需加载：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// babel.config.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  presets: [</span><br><span class="line">    <span class="string">'@vue/cli-plugin-babel/preset'</span>,</span><br><span class="line">  ],</span><br><span class="line">  plugins: [</span><br><span class="line">    [</span><br><span class="line">      <span class="string">'import'</span>,</span><br><span class="line">      &#123; <span class="attr">libraryName</span>: <span class="string">'ant-design-vue'</span>, <span class="attr">libraryDirectory</span>: <span class="string">'es'</span>, <span class="attr">style</span>: <span class="literal">true</span> &#125;,</span><br><span class="line">    ],</span><br><span class="line">  ],</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>优点是：</strong></p>
+<p>可以按需引入，打包后的 CSS 体积取决于你引用了多少个组件。</p>
+<p><strong>缺点是：</strong></p>
+<p>不能使用 class 进行样式覆盖。</p>
+<h3 id="干掉无用的图标"><a href="#干掉无用的图标" class="headerlink" title="干掉无用的图标"></a>干掉无用的图标</h3><p>Ant Design Vue 把所有的 Icon 一次性引入（不管你因用了多少个组件），这使得体积打包后图标所占的体积竟然有几百 kb 之多。这些图标大多数不会被设计师所采纳，所以部分图标都应该被干掉：</p>
+<p>创建一个 icons.js 来管理 Ant  Design Vue 图标，这里以一个 Loading 图标为例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// @/src/assets/icons.js</span></span><br><span class="line"><span class="keyword">export</span> &#123; <span class="keyword">default</span> <span class="keyword">as</span> LoadingOutline &#125; <span class="keyword">from</span> <span class="string">'@ant-design/icons/lib/outline/LoadingOutline'</span>;</span><br></pre></td></tr></table></figure>
+
+<p><strong>如何知道你要加载的图标在什么路径下？</strong></p>
+<p>在 @ant-design/icons/lib 目录下有三种风格的图标，分别是 fill、outline、twotone，这里面内部的文件并不是 svg 格式，而是 js 和 ts 格式，这就是为什么我们可以这么引入图标的关键所在了。</p>
+<p>下一步是通过配置 vue.config.js 将这个文件引入进来：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vue.config.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  configureWebpack: &#123;</span><br><span class="line">    resolve: &#123;</span><br><span class="line">      alias: &#123;</span><br><span class="line">        <span class="string">'@ant-design/icons/lib/dist$'</span>: path.resolve(__dirname, <span class="string">'./src/assets/icons.js'</span>),</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="解决-Moment-多国语"><a href="#解决-Moment-多国语" class="headerlink" title="解决 Moment 多国语"></a>解决 Moment 多国语</h3><p>解决到这之后，Ant Design Vue 居然还很大，这是因为 moment 是 Ant Design Vue 中有强依赖该插件，所以使用 webpack 插件减小打包体积，这里我们只保留 zh-cn 语言包：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vue.config.js</span></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  chainWebpack: <span class="function">(<span class="params">config</span>) =&gt;</span> &#123;</span><br><span class="line">    config</span><br><span class="line">      .plugin(<span class="string">'ContextReplacementPlugin'</span>)</span><br><span class="line">      .use(webpack.ContextReplacementPlugin, [<span class="regexp">/moment[/\\]locale$/</span>, /zh-cn/]);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="部分组件需要在页面内引用"><a href="#部分组件需要在页面内引用" class="headerlink" title="部分组件需要在页面内引用"></a>部分组件需要在页面内引用</h3><p>Ant Design Vue 中部分体积较大的组件，例如 <code>DatePicker</code>，根据业务需求，应考虑在页面中进行加载，尽量保证首屏加载的速度：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">import &#123; DatePicker &#125; from &apos;ant-design-vue&apos;;</span><br><span class="line">export default &#123;</span><br><span class="line">  components: &#123;</span><br><span class="line">    ADatePicker: DatePicker,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-静态资源与图标"><a href="#4-静态资源与图标" class="headerlink" title="4.静态资源与图标"></a>4.静态资源与图标</h2><h3 id="静态资源"><a href="#静态资源" class="headerlink" title="静态资源"></a>静态资源</h3><p>所有的静态资源文件都会上传到 阿里云 OSS 上，所以在环境变量上加以区分。</p>
+<p><code>.env.development</code> 与 <code>.env.production</code> 的 <code>VUE_APP_STATIC_URL</code> 属性分别配置了本地的静态资源服务器地址和线上 OSS 的地址。</p>
+<p>本地的静态资源服务器是通过 pm2 + http-server 创建的，设计师切完直接扔进来就好了。</p>
+<h3 id="自动注册-Svg-图标"><a href="#自动注册-Svg-图标" class="headerlink" title="自动注册 Svg 图标"></a>自动注册 Svg 图标</h3><p>在日常的开发中，总是会有着大量的图标需要使用，这里我们直接选择使用 SVG 图标。但是如果每次使用图标还需要通过路径找到这张图标岂不是很麻烦？</p>
+<p>下面这种才是我想要的方案（直接 name 等于 文件名即可）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;svg name=&quot;logo&quot; /&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<p>而且最后打包后需要合并成一张雪碧图。</p>
+<p>首先需要对  <code>@/assets/icons</code> 文件夹下的 svg 图标进行自动注册，需要对 webpack 和 svg-sprite-loader 进行了相关设置，文件全部打包成 svg-sprite。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  chainWebpack: <span class="function">(<span class="params">config</span>) =&gt;</span> &#123;</span><br><span class="line">    config.module</span><br><span class="line">      .rule(<span class="string">'svg'</span>)</span><br><span class="line">      .exclude.add(resolve(<span class="string">'src/assets/icons'</span>))</span><br><span class="line">      .end();</span><br><span class="line"></span><br><span class="line">    config.module</span><br><span class="line">      .rule(<span class="string">'icons'</span>)</span><br><span class="line">      .test(<span class="regexp">/\.svg$/</span>)</span><br><span class="line">      .include.add(resolve(<span class="string">'src/assets/icons'</span>))</span><br><span class="line">      .end()</span><br><span class="line">      .use(<span class="string">'svg-sprite-loader'</span>)</span><br><span class="line">      .loader(<span class="string">'svg-sprite-loader'</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>写一个全局用的 Vue 组件 ``:</p>
+<p>// @/components/m-svg/index.js</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> requireAll = <span class="function">(<span class="params">requireContext</span>) =&gt;</span> requireContext.keys().map(requireContext);</span><br><span class="line"><span class="keyword">const</span> req = <span class="built_in">require</span>.context(<span class="string">'@/assets/icons'</span>, <span class="literal">false</span>, /\.svg$/);</span><br><span class="line">requireAll(req);</span><br></pre></td></tr></table></figure>
+
+<p>@/components/m-svg/index.vue</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;svg class=&quot;mw-svg&quot; aria-hidden=&quot;true&quot;&gt;</span><br><span class="line">    &lt;use :xlink:href=&quot;iconName&quot;&gt;&lt;/use&gt;</span><br><span class="line">  &lt;/svg&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &apos;m-svg&apos;,</span><br><span class="line">  props: &#123;</span><br><span class="line">    name: &#123; type: String, default: &apos;&apos; &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    iconName() &#123;</span><br><span class="line">      return `#$&#123;this.name&#125;`;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style lang=&quot;scss&quot; scoped&gt;</span><br><span class="line">.mw-svg &#123;</span><br><span class="line">  width: 1.4em;</span><br><span class="line">  height: 1.4em;</span><br><span class="line">  fill: currentColor;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">  line-height: 1em;</span><br><span class="line">  display: inline-block;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>参数 name</p>
+<ul>
+<li>类型：String</li>
+<li>默认值：null</li>
+<li>说明：放置在 <code>@/assets/icons</code> 文件夹下的文件名</li>
+</ul>
+<p>样式</p>
+<ul>
+<li>图标的大小可以通过 width + height 属性改变。</li>
+<li>通过改变 font-size 属性改变，宽高 = font-zise * 1.4</li>
+</ul>
+<h2 id="5-异步请求"><a href="#5-异步请求" class="headerlink" title="5.异步请求"></a>5.异步请求</h2><h3 id="封装-Axios"><a href="#封装-Axios" class="headerlink" title="封装 Axios"></a>封装 Axios</h3><p>在 <code>@/libs/request.js</code> 路径下对 Axios 进行封装，封装了请求参数，请求头，以及错误提示信息、 request 拦截器、response 拦截器、统一的错误处理、baseURL 设置等。</p>
+<p>废话不说直接贴代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios <span class="keyword">from</span> <span class="string">'axios'</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="keyword">get</span> from 'lodash/<span class="keyword">get</span>';</span><br><span class="line">import storage from 'store';</span><br><span class="line">// 创建 axios 实例</span><br><span class="line">const request = axios.create(&#123;</span><br><span class="line"> <span class="comment">// API 请求的默认前缀</span></span><br><span class="line"> baseURL: process.env.VUE_APP_BASE_URL,</span><br><span class="line"> timeout: <span class="number">10000</span>, <span class="comment">// 请求超时时间</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 异常拦截处理器</span></span><br><span class="line"><span class="keyword">const</span> errorHandler = <span class="function">(<span class="params">error</span>) =&gt;</span> &#123;</span><br><span class="line"> <span class="keyword">const</span> status = <span class="keyword">get</span>(error, 'response.status');</span><br><span class="line"> switch (status) &#123;</span><br><span class="line">   <span class="comment">/* eslint-disable no-param-reassign */</span></span><br><span class="line">   <span class="keyword">case</span> <span class="number">400</span>: error.message = <span class="string">'请求错误'</span>; <span class="keyword">break</span>;</span><br><span class="line">   <span class="keyword">case</span> <span class="number">401</span>: error.message = <span class="string">'未授权，请登录'</span>; <span class="keyword">break</span>;</span><br><span class="line">   <span class="keyword">case</span> <span class="number">403</span>: error.message = <span class="string">'拒绝访问'</span>; <span class="keyword">break</span>;</span><br><span class="line">   <span class="keyword">case</span> <span class="number">404</span>: error.message = <span class="string">`请求地址出错: <span class="subst">$&#123;error.response.config.url&#125;</span>`</span>; <span class="keyword">break</span>;</span><br><span class="line">   <span class="keyword">case</span> <span class="number">408</span>: error.message = <span class="string">'请求超时'</span>; <span class="keyword">break</span>;</span><br><span class="line">   <span class="keyword">case</span> <span class="number">500</span>: error.message = <span class="string">'服务器内部错误'</span>; <span class="keyword">break</span>;</span><br><span class="line">   <span class="keyword">case</span> <span class="number">501</span>: error.message = <span class="string">'服务未实现'</span>; <span class="keyword">break</span>;</span><br><span class="line">   <span class="keyword">case</span> <span class="number">502</span>: error.message = <span class="string">'网关错误'</span>; <span class="keyword">break</span>;</span><br><span class="line">   <span class="keyword">case</span> <span class="number">503</span>: error.message = <span class="string">'服务不可用'</span>; <span class="keyword">break</span>;</span><br><span class="line">   <span class="keyword">case</span> <span class="number">504</span>: error.message = <span class="string">'网关超时'</span>; <span class="keyword">break</span>;</span><br><span class="line">   <span class="keyword">case</span> <span class="number">505</span>: error.message = <span class="string">'HTTP版本不受支持'</span>; <span class="keyword">break</span>;</span><br><span class="line">   <span class="keyword">default</span>: <span class="keyword">break</span>;</span><br><span class="line">   <span class="comment">/* eslint-disabled */</span></span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">return</span> <span class="built_in">Promise</span>.reject(error);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// request interceptor</span></span><br><span class="line">request.interceptors.request.use(<span class="function">(<span class="params">config</span>) =&gt;</span> &#123;</span><br><span class="line"> <span class="comment">// 如果 token 存在</span></span><br><span class="line"> <span class="comment">// 让每个请求携带自定义 token 请根据实际情况自行修改</span></span><br><span class="line"> <span class="comment">// eslint-disable-next-line no-param-reassign</span></span><br><span class="line"> config.headers.Authorization = <span class="string">`bearer <span class="subst">$&#123;storage.get(<span class="string">'ACCESS_TOKEN'</span>)&#125;</span>`</span>;</span><br><span class="line"> <span class="keyword">return</span> config;</span><br><span class="line">&#125;, errorHandler);</span><br><span class="line"></span><br><span class="line"><span class="comment">// response interceptor</span></span><br><span class="line">request.interceptors.response.use(<span class="function">(<span class="params">response</span>) =&gt;</span> &#123;</span><br><span class="line"> <span class="keyword">const</span> dataAxios = response.data;</span><br><span class="line"> <span class="comment">// 这个状态码是和后端约定的</span></span><br><span class="line"> <span class="keyword">const</span> &#123; code &#125; = dataAxios;</span><br><span class="line"> <span class="comment">// 根据 code 进行判断</span></span><br><span class="line"> <span class="keyword">if</span> (code === <span class="literal">undefined</span>) &#123;</span><br><span class="line">   <span class="comment">// 如果没有 code 代表这不是项目后端开发的接口</span></span><br><span class="line">   <span class="keyword">return</span> dataAxios;</span><br><span class="line"> <span class="comment">// eslint-disable-next-line no-else-return</span></span><br><span class="line"> &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">   <span class="comment">// 有 code 代表这是一个后端接口 可以进行进一步的判断</span></span><br><span class="line">   <span class="keyword">switch</span> (code) &#123;</span><br><span class="line">     <span class="keyword">case</span> <span class="number">200</span>:</span><br><span class="line">       <span class="comment">// [ 示例 ] code === 200 代表没有错误</span></span><br><span class="line">       <span class="keyword">return</span> dataAxios.data;</span><br><span class="line">     <span class="keyword">case</span> <span class="string">'xxx'</span>:</span><br><span class="line">       <span class="comment">// [ 示例 ] 其它和后台约定的 code</span></span><br><span class="line">       <span class="keyword">return</span> <span class="string">'xxx'</span>;</span><br><span class="line">     <span class="keyword">default</span>:</span><br><span class="line">       <span class="comment">// 不是正确的 code</span></span><br><span class="line">       <span class="keyword">return</span> <span class="string">'不是正确的code'</span>;</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br><span class="line">&#125;, errorHandler);</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> request;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>通过 VUE_APP_BASE_URL 区分线上与开发环境的 API 地址。</li>
+<li>code 起到一个比较关键的作用，例如 token 过期时的验证。</li>
+<li>使用了一个叫 sotre 的包作为本地储存的工具用来存储 token。</li>
+</ul>
+<h3 id="跨域问题"><a href="#跨域问题" class="headerlink" title="跨域问题"></a>跨域问题</h3><p>跨域问题一般情况直接找后端解决了，你要是不好意思打扰他们的话，可以用 devServer 提供的 proxy 代理：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vue.config.js</span></span><br><span class="line">devServer: &#123;</span><br><span class="line">  proxy: &#123;</span><br><span class="line">    <span class="string">'/api'</span>: &#123;</span><br><span class="line">      target: <span class="string">'http://47.100.186.132/your-path/api'</span>,</span><br><span class="line">      ws: <span class="literal">true</span>,</span><br><span class="line">      changeOrigin: <span class="literal">true</span>,</span><br><span class="line">      pathRewrite: &#123;</span><br><span class="line">        <span class="string">'^/api'</span>: <span class="string">''</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Mock-数据"><a href="#Mock-数据" class="headerlink" title="Mock 数据"></a>Mock 数据</h3><p>一个很常见的情况，后端接口没出来，前端在这干瞪眼。</p>
+<p>Mock 数据功能是基于 <a href="https://link.juejin.cn?target=http%3A%2F%2Fmockjs.com%2F" target="_blank" rel="noopener">mock.js (opens new window)</a>开发，通过 webpack 进行自动加载 mock 配置文件。</p>
+<h4 id="规则"><a href="#规则" class="headerlink" title="规则"></a>规则</h4><ul>
+<li>所有的 mock 配置文件均应放置在 <code>@/mock/services</code> 路径内。</li>
+<li>在 <code>@/mock/services</code> 内部可以建立业务相关的文件夹分类存放配置文件。</li>
+<li>所有的配置文件应按照 <code>***.mock.js</code> 的命名规范创建。</li>
+<li>配置文件使用 ES6 Module 导出 <code>export default</code> 或 <code>export</code> 一个数组。</li>
+</ul>
+<h4 id="入口文件"><a href="#入口文件" class="headerlink" title="入口文件"></a>入口文件</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Mock <span class="keyword">from</span> <span class="string">'mockjs'</span>;</span><br><span class="line"></span><br><span class="line">Mock.setup(&#123;</span><br><span class="line">  timeout: <span class="string">'500-800'</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> context = <span class="built_in">require</span>.context(<span class="string">'./services'</span>, <span class="literal">true</span>, /\.mock.js$/);</span><br><span class="line"></span><br><span class="line">context.keys().forEach(<span class="function">(<span class="params">key</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">Object</span>.keys(context(key)).forEach(<span class="function">(<span class="params">paramKey</span>) =&gt;</span> &#123;</span><br><span class="line">    Mock.mock(...context(key)[paramKey]);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="示例模板"><a href="#示例模板" class="headerlink" title="示例模板"></a>示例模板</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Mock <span class="keyword">from</span> <span class="string">'mockjs'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> &#123; Random &#125; = Mock;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> [</span><br><span class="line">  <span class="built_in">RegExp</span>(<span class="string">'/example.*'</span>),</span><br><span class="line">  <span class="string">'get'</span>,</span><br><span class="line">  &#123;</span><br><span class="line">    <span class="string">'range|50-100'</span>: <span class="number">50</span>,</span><br><span class="line">    <span class="string">'data|10'</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="comment">// 唯一 ID</span></span><br><span class="line">        id: <span class="string">'@guid()'</span>,</span><br><span class="line">        <span class="comment">// 生成一个中文名字</span></span><br><span class="line">        cname: <span class="string">'@cname()'</span>,</span><br><span class="line">        <span class="comment">// 生成一个 url</span></span><br><span class="line">        url: <span class="string">'@url()'</span>,</span><br><span class="line">        <span class="comment">// 生成一个地址</span></span><br><span class="line">        county: Mock.mock(<span class="string">'@county(true)'</span>),</span><br><span class="line">        <span class="comment">// 从数组中随机选择一个值</span></span><br><span class="line">        <span class="string">'array|1'</span>: [<span class="string">'A'</span>, <span class="string">'B'</span>, <span class="string">'C'</span>, <span class="string">'D'</span>, <span class="string">'E'</span>],</span><br><span class="line">        <span class="comment">// 随机生成一个时间</span></span><br><span class="line">        time: <span class="string">'@datetime()'</span>,</span><br><span class="line">        <span class="comment">// 生成一张图片</span></span><br><span class="line">        image: Random.dataImage(<span class="string">'200x100'</span>, <span class="string">'Mock Image'</span>),</span><br><span class="line">      &#125;,</span><br><span class="line">    ],</span><br><span class="line">  &#125;,</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-路由"><a href="#6-路由" class="headerlink" title="6.路由"></a>6.路由</h2><h3 id="Layout"><a href="#Layout" class="headerlink" title="Layout"></a>Layout</h3><p>布局暂时分为三大类：</p>
+<ul>
+<li>frameIn：基于 <code>BasicLayout</code>，通常需要登录或权限认证的路由。</li>
+<li>frameOut：不需要动态判断权限的路由，如登录页或通用页面。</li>
+<li>errorPage：例如404。</li>
+</ul>
+<h3 id="权限验证"><a href="#权限验证" class="headerlink" title="权限验证"></a>权限验证</h3><p>通过获取当前用户的权限去比对路由表，生成当前用户具的权限可访问的路由表，通过 router.addRoutes 动态挂载到 router 上。</p>
+<ul>
+<li>判断页面是否需要登陆状态，需要则跳转到 /user/login</li>
+<li>本地存储中不存在 token 则跳转到 /user/login</li>
+<li>如果存在 token，用户信息不存在，自动调用 vuex ‘/system/user/getInfo’</li>
+</ul>
+<p>在路由中，集成了权限验证的功能，需要为页面增加权限时，在 meta 下添加相应的 key：</p>
+<h4 id="auth"><a href="#auth" class="headerlink" title="auth"></a>auth</h4><ul>
+<li>类型：Boolean</li>
+<li>说明：当 auth 为 true 时，此页面需要进行登陆权限验证，只针对 frameIn 路由有效。</li>
+</ul>
+<h4 id="permissions"><a href="#permissions" class="headerlink" title="permissions"></a>permissions</h4><ul>
+<li>类型：Object</li>
+<li>说明：permissions 每一个 key 对应权限功能的验证，当 key 的值为 true 时，代表具有权限，若 key 为 false，配合 <code>v-permission</code> 指令，可以隐藏相应的 DOM。</li>
+</ul>
+<p>在这里贴一下路由跳转时权限验证的代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> router <span class="keyword">from</span> <span class="string">'@/router'</span>;</span><br><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'@/store'</span>;</span><br><span class="line"><span class="keyword">import</span> storage <span class="keyword">from</span> <span class="string">'store'</span>;</span><br><span class="line"><span class="keyword">import</span> util <span class="keyword">from</span> <span class="string">'@/libs/utils'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 进度条</span></span><br><span class="line"><span class="keyword">import</span> NProgress <span class="keyword">from</span> <span class="string">'nprogress'</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">'nprogress/nprogress.css'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> loginRoutePath = <span class="string">'/user/login'</span>;</span><br><span class="line"><span class="keyword">const</span> defaultRoutePath = <span class="string">'/home'</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 路由拦截</span></span><br><span class="line"><span class="comment"> * 权限验证</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">router.beforeEach(<span class="keyword">async</span> (to, <span class="keyword">from</span>, next) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 进度条</span></span><br><span class="line">  NProgress.start();</span><br><span class="line">  <span class="comment">// 验证当前路由所有的匹配中是否需要有登录验证的</span></span><br><span class="line">  <span class="keyword">if</span> (to.matched.some(<span class="function">(<span class="params">r</span>) =&gt;</span> r.meta.auth)) &#123;</span><br><span class="line">    <span class="comment">// 是否存有token作为验证是否登录的条件</span></span><br><span class="line">    <span class="keyword">const</span> token = storage.get(<span class="string">'ACCESS_TOKEN'</span>);</span><br><span class="line">    <span class="keyword">if</span> (token &amp;&amp; token !== <span class="string">'undefined'</span>) &#123;</span><br><span class="line">      <span class="comment">// 是否处于登录页面</span></span><br><span class="line">      <span class="keyword">if</span> (to.path === loginRoutePath) &#123;</span><br><span class="line">        next(&#123; <span class="attr">path</span>: defaultRoutePath &#125;);</span><br><span class="line">        <span class="comment">// 查询是否储存用户信息</span></span><br><span class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">Object</span>.keys(store.state.system.user.info).length === <span class="number">0</span>) &#123;</span><br><span class="line">        store.dispatch(<span class="string">'system/user/getInfo'</span>).then(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">          next();</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        next();</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">// 没有登录的时候跳转到登录界面</span></span><br><span class="line">      <span class="comment">// 携带上登陆成功之后需要跳转的页面完整路径</span></span><br><span class="line">      next(&#123;</span><br><span class="line">        name: <span class="string">'Login'</span>,</span><br><span class="line">        query: &#123;</span><br><span class="line">          redirect: to.fullPath,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;);</span><br><span class="line">      NProgress.done();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// 不需要身份校验 直接通过</span></span><br><span class="line">    next();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">router.afterEach(<span class="function">(<span class="params">to</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 进度条</span></span><br><span class="line">  NProgress.done();</span><br><span class="line">  util.title(to.meta.title);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="页面开发"><a href="#页面开发" class="headerlink" title="页面开发"></a>页面开发</h3><ul>
+<li>根据业务需要划分，按照路由层级在 views 中创建相对应的页面组件，以文件夹的形式创建，并在文件夹内创建 index.vue 文件作为页面的入口文件。</li>
+<li>页面内的组件：在页面文件夹下创建 components 文件夹，在其内部对应创建相应的组件文件，如果是复杂组件，应以文件夹的形式创建组件。</li>
+<li>工具模块：能够高度抽象的工具模块，应创建在 @/src/libs 内创建 js 文件。</li>
+</ul>
+<h2 id="7、构建优化"><a href="#7、构建优化" class="headerlink" title="7、构建优化"></a>7、构建优化</h2><h3 id="包分析工具"><a href="#包分析工具" class="headerlink" title="包分析工具"></a>包分析工具</h3><p>构建代码之后，到底是什么占用了这么多空间？靠直觉猜测或者使用 webpack-bundle-analyzer。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> WebpackBundleAnalyzer = <span class="built_in">require</span>(<span class="string">'webpack-bundle-analyzer'</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  chainWebpack: <span class="function">(<span class="params">config</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (process.env.use_analyzer) &#123;</span><br><span class="line">      config</span><br><span class="line">        .plugin(<span class="string">'webpack-bundle-analyzer'</span>)</span><br><span class="line">        .use(WebpackBundleAnalyzer.BundleAnalyzerPlugin);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="开启-Gzip"><a href="#开启-Gzip" class="headerlink" title="开启 Gzip"></a>开启 Gzip</h3><p>对，这这么一句话，后端就得支持你的 .gz 文件了，而你只需要坐着等老板夸：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">chainWebpack: <span class="function">(<span class="params">config</span>) =&gt;</span> &#123;</span><br><span class="line">  config</span><br><span class="line">    .plugin(<span class="string">'CompressionPlugin'</span>)</span><br><span class="line">    .use(CompressionPlugin, []);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h3 id="路由懒加载"><a href="#路由懒加载" class="headerlink" title="路由懒加载"></a>路由懒加载</h3><p>这块 @vue/cli 已经帮忙处理好了，但也需要了解一下他的原理和如何配置。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  path: <span class="string">'home'</span>,</span><br><span class="line">  name: <span class="string">'Home'</span>,</span><br><span class="line">  component: <span class="function"><span class="params">()</span> =&gt;</span> <span class="keyword">import</span>(</span><br><span class="line">    <span class="comment">/* webpackChunkName: "home" */</span> <span class="string">'@/views/home/index.vue'</span></span><br><span class="line">  ),</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>webpackChunkName 这条注释还是很有必要加的，至少你打包后知道又是哪个页面变得又臭又大。</p>
+<h3 id="Preload-amp-Prefetch"><a href="#Preload-amp-Prefetch" class="headerlink" title="Preload &amp; Prefetch"></a>Preload &amp; Prefetch</h3><p>不清楚这两个功能的去 @vue/cli 补课，这两个功能非常有助于你处理加载的性能。</p>
+<h2 id="8-测试框架"><a href="#8-测试框架" class="headerlink" title="8.测试框架"></a>8.测试框架</h2><p>直接使用了官方提供的 Vue Test Utils，这东西可以对组件进行测试，很不错。</p>
+<p>写单元测试在团队里其实很难推进，不知道大家怎么看。</p>
+<h2 id="9-组件库"><a href="#9-组件库" class="headerlink" title="9.组件库"></a>9.组件库</h2><p>对于很多第三方的工具，我坚持认为二次封装成 vue 插件并没有多少开发成本，反而让你在后续的开发中变得很灵活。</p>
+<p>我对以下库进行了 vue 插件的封装，并提交到 npm 私服：</p>
+<ul>
+<li>数字动画</li>
+<li>代码高亮</li>
+<li>大文件上传（切片、断点续传、秒传）需要与后端配合</li>
+<li>图片预览</li>
+<li>Excel 导入导出</li>
+<li>富文本编辑器</li>
+<li>Markdown 编辑器</li>
+<li>代码编辑器</li>
+</ul>
+<blockquote>
+<p>大文件上传有兴趣的可以留言，我后续单独拎出来详细的写一下这块。</p>
+</blockquote>
+<h2 id="10-Vuex"><a href="#10-Vuex" class="headerlink" title="10.Vuex"></a>10.Vuex</h2><p>内置一些功能，主要是对以下这些功能做了一些封装：</p>
+<ul>
+<li>用户信息管理（储存信息、对 token 进行操作等）</li>
+<li>登陆（调接口）</li>
+<li>菜单管理（储存路由信息，生成菜单，模糊查询等功能）</li>
+<li>UA信息</li>
+<li>全屏操作</li>
+<li>Loading</li>
+<li>日志管理（消息提醒、日志留存、日志上报）</li>
+</ul>
+<h2 id="11-过滤器"><a href="#11-过滤器" class="headerlink" title="11.过滤器"></a>11.过滤器</h2><p>过滤器是 Vue 提供的一个很好用的功能，听说 vue3 没了？</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; message | capitalize &#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我写了几个常用的过滤器：</p>
+<ul>
+<li>日期时间</li>
+<li>剩余时间</li>
+<li>区分环境的链接（主要针对本地静态资源服务器和 OSS ）</li>
+<li>文件大小</li>
+<li>数字金额</li>
+<li>浮点型精度</li>
+</ul>
+<h2 id="12-指令"><a href="#12-指令" class="headerlink" title="12.指令"></a>12.指令</h2><p>自定义指令可以提供很好的帮助：</p>
+<ul>
+<li>组件权限验证</li>
+<li>文本复制</li>
+<li>快捷键绑定</li>
+<li>滚动至指定位置</li>
+<li>图片懒加载</li>
+<li>焦点</li>
+</ul>
+<h2 id="13-开发规范"><a href="#13-开发规范" class="headerlink" title="13.开发规范"></a>13.开发规范</h2><h3 id="ESLint"><a href="#ESLint" class="headerlink" title="ESLint"></a>ESLint</h3><p>不管是多人合作还是个人项目，代码规范都是很重要的。这样做不仅可以很大程度地避免基本语法错误，也保证了代码的可读性。</p>
+<p>这里我们采用了 <a href="https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fairbnb%2Fjavascript" target="_blank" rel="noopener">Airbnb JavaScript Style Guide</a>。</p>
+<p>这套规范给我的感觉就是 <strong>很严谨</strong>！</p>
+<h3 id="CSS-规范"><a href="#CSS-规范" class="headerlink" title="CSS 规范"></a>CSS 规范</h3><h4 id="降低选择器复杂性"><a href="#降低选择器复杂性" class="headerlink" title="降低选择器复杂性"></a>降低选择器复杂性</h4><p>浏览器读取选择器，遵循的原则是从选择器的右边到左边读取。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#block</span> <span class="selector-class">.text</span> <span class="selector-tag">p</span> &#123;</span><br><span class="line">	<span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>查找所有 P 元素。</li>
+<li>查找结果 1 中的元素是否有类名为 text 的父元素</li>
+<li>查找结果 2 中的元素是否有 id 为 block 的父元素</li>
+</ul>
+<h4 id="选择器优先级"><a href="#选择器优先级" class="headerlink" title="选择器优先级"></a>选择器优先级</h4><blockquote>
+<p>内联 &gt; ID选择器 &gt; 类选择器 &gt; 标签选择器</p>
+</blockquote>
+<ul>
+<li>选择器越短越好。</li>
+<li>尽量使用高优先级的选择器，例如 ID 和类选择器。</li>
+<li>避免使用通配符 *。</li>
+</ul>
+<h4 id="使用-flexbox"><a href="#使用-flexbox" class="headerlink" title="使用 flexbox"></a>使用 flexbox</h4><p>在早期的 CSS 布局方式中我们能对元素实行绝对定位、相对定位或浮动定位。而现在，我们有了新的布局方式 flexbox，它比起早期的布局方式来说有个优势，那就是性能比较好。不过 flexbox 兼容性还是有点问题，不是所有浏览器都支持它，所以要谨慎使用。 各浏览器兼容性：</p>
+<ul>
+<li>Chrome 29+</li>
+<li>Firefox 28+</li>
+<li>Internet Explorer 11</li>
+<li>Opera 17+</li>
+<li>Safari 6.1+ (prefixed with -webkit-)</li>
+<li>Android 4.4+</li>
+<li>iOS 7.1+ (prefixed with -webkit-)</li>
+</ul>
+<h4 id="动画性能优化"><a href="#动画性能优化" class="headerlink" title="动画性能优化"></a>动画性能优化</h4><p>在 CSS 中，transforms 和 opacity 这两个属性更改不会触发重排与重绘，它们是可以由合成器（composite）单独处理的属性。</p>
+<h4 id="属性值"><a href="#属性值" class="headerlink" title="属性值"></a>属性值</h4><ul>
+<li>当数值为 0 - 1 之间的小数时，建议省略整数部分的 0。</li>
+<li>当长度为 0 时建议省略单位。</li>
+<li>建议不使用命名色值。</li>
+<li>建议当元素需要撑起高度以包含内部的浮动元素时，通过对伪类设置 clear 或触发 BFC 的方式进行 clearfix。尽量不使用增加空标签的方式。</li>
+<li>除公共样式之外，在业务代码中尽量不能使用 !important。</li>
+<li>建议将 z-index 进行分层，对文档流外绝对定位元素的视觉层级关系进行管理。</li>
+</ul>
+<h4 id="字体排版"><a href="#字体排版" class="headerlink" title="字体排版"></a>字体排版</h4><ul>
+<li>字号应不小于 12px（PC端）。</li>
+<li>font-weight 属性建议使用数值方式描述。</li>
+<li>line-height 在定义文本段落时，应使用数值。</li>
+</ul>
+<h3 id="Vue-代码规范"><a href="#Vue-代码规范" class="headerlink" title="Vue 代码规范"></a>Vue 代码规范</h3><h4 id="常规"><a href="#常规" class="headerlink" title="常规"></a>常规</h4><ul>
+<li>当在组件中使用 data 属性的时候 (除了 new Vue 外的任何地方)，它的值必须是返回一个对象的函数 <code>data() { return {...} }</code>。</li>
+<li>prop 的定义应该尽量详细，至少需要指定其类型。</li>
+<li>布尔类型的 attribute， 为 true 时直接写属性值。</li>
+<li>不要在computed中对vue变量进行操作。</li>
+<li>应该优先通过 prop 和事件进行父子组件之间的通信，而不是 this.$parent 或改变 prop。</li>
+<li>在组件上总是必须用 key 配合 v-for，以便维护内部组件及其子树的状态。</li>
+<li>v-if 和 v-for 不能同时使用</li>
+<li>公共方法尽量不要挂到原型上, 可以写在 utils 文件，也可以使用 mixin 文件。不要将业务公共组件注册到全局。</li>
+<li>不要将任何第三方插件挂载到 vue 原型上。</li>
+<li>具有高度通用性的方法，要封装到 libs、全局组件或指令集里。</li>
+<li>为组件样式设置作用域。</li>
+<li>尽量使用指令缩写。</li>
+</ul>
+<h4 id="vuex"><a href="#vuex" class="headerlink" title="vuex"></a>vuex</h4><p><a href="https://link.juejin.cn?target=https%3A%2F%2Fvuex.vuejs.org%2Fzh%2Fguide%2Fstate.html" target="_blank" rel="noopener">State (opens new window)</a>为单一状态树，在 state 中需要定义我们所需要管理的数组、对象、字符串等等，只有在这里定义了，在 vue 的组件中才能获取你定义的这个对象的状态。</p>
+<ul>
+<li>修改 <code>state</code> 中数据必须通过 <code>mutations</code>。</li>
+<li>每一个可能发生改变的 <code>state</code> 必须同步创建一条或多条用来改变它的 <code>mutations</code>。</li>
+<li>服务端获取的数据存放在 <code>state</code> 中，作为原始数据保留，不可变动。</li>
+</ul>
+<p><a href="https://link.juejin.cn?target=https%3A%2F%2Fvuex.vuejs.org%2Fzh%2Fguide%2Fgetters.html" target="_blank" rel="noopener">Getters (opens new window)</a>有点类似 vue.js 的计算属性，当我们需要从 store 的 state 中派生出一些状态，那么我们就需要使用 getters，getters 会接收 state 作为第一个参数，而且 getters 的返回值会根据它的依赖被缓存起来，只有 getters 中的依赖值（state 中的某个需要派生状态的值）发生改变的时候才会被重新计算。</p>
+<ul>
+<li>通过 <code>getters</code> 处理你需要得到的数据格式，而不是通过修改 <code>state</code> 原始数据。</li>
+<li>组件内不强制使用 <code>mapGetters</code>，因为你可能需要使用 <code>getter</code> 和 <code>setter</code>。</li>
+<li>改变 <code>state</code> 的唯一方法就是提交 <a href="https://link.juejin.cn?target=https%3A%2F%2Fvuex.vuejs.org%2Fzh%2Fguide%2Fmutations.html" target="_blank" rel="noopener">mutations (opens new window)</a>。</li>
+<li>组件内使用 <code>mapMutations</code> 辅助函数将组件中的 <code>methods</code> 映射为 <code>store.commit</code> 调用。</li>
+<li>命名采用 <code>大写字母</code> + <code>下划线</code> 的规则。</li>
+<li>定义 <code>CLEAR</code>，以确保路由切换时可以初始化数据。</li>
+</ul>
+<p>Actions</p>
+<ul>
+<li>页面重的数据接口尽量在 <a href="https://link.juejin.cn?target=https%3A%2F%2Fvuex.vuejs.org%2Fzh%2Fguide%2Factions.html" target="_blank" rel="noopener">actions (opens new window)</a>中调用。</li>
+<li>服务端返回的数据尽量不作处理，保留原始数据。</li>
+<li>获取到的数据必须通过调用 <code>mutations</code> 改变 <code>state</code>。</li>
+</ul>
+<p>Modules</p>
+<ul>
+<li>通常情况下按照页面划分 <a href="https://link.juejin.cn?target=https%3A%2F%2Fvuex.vuejs.org%2Fzh%2Fguide%2Fmodules.html" target="_blank" rel="noopener">modules (opens new window)</a>。</li>
+<li>默认内置了 <code>system</code> 保证了脚手架的基础功能。</li>
+<li>每个页面模块或页面的子模块添加属性 <code>namespaced: true</code>。</li>
+</ul>
+<h2 id="14-完成详细的使用文档"><a href="#14-完成详细的使用文档" class="headerlink" title="14.完成详细的使用文档"></a>14.完成详细的使用文档</h2><p>不论是功能还是组件库等等的工具，都需要完善的文档提供查阅，即使是轮子的构建者，也抵不住时间长了会忘记许多细节。</p>
+<p>这里我使用 vuepress 构建文档，方便快捷。</p>
+<p>参考【<a href="https://juejin.cn/post/6844903869558816781" target="_blank" rel="noopener">拯救懒癌文档君 - VuePress + Travis CI + Github Pages 自动线上生成文档</a>】</p>
+<h2 id="15-Git-多人协作流程"><a href="#15-Git-多人协作流程" class="headerlink" title="15.Git 多人协作流程"></a>15.Git 多人协作流程</h2><p>公司使用内部搭建的 GitLab 托管代码</p>
+<h3 id="Root-仓库"><a href="#Root-仓库" class="headerlink" title="Root 仓库"></a>Root 仓库</h3><p>项目启动时，由项目管理者搭建起最原始的仓库，称为 Root 仓库（源仓库）。</p>
+<p>源仓库的有个作用 :</p>
+<ul>
+<li>汇总参与该项目的各个开发者的代码。</li>
+<li>存放趋于稳定和可发布的代码。</li>
+<li>向 Master 分支提交 Merge Requests 可以触发测试环境构建（CI/CD）。</li>
+<li>源仓库是受保护的，开发者不可直接对其进行开发工作。</li>
+</ul>
+<h3 id="开发者仓库"><a href="#开发者仓库" class="headerlink" title="开发者仓库"></a>开发者仓库</h3><p>任何开发者都没有权限对 Root 仓库进行直接的操作，源仓库建立以后，每个开发者需要做的事情就是把源仓库的 Fork 一份，作为自己日常开发的仓库。</p>
+<ul>
+<li>每个开发者所Fork的仓库是完全独立的，互不干扰。</li>
+<li>每个开发者提交到代码到自己的仓库中，开发工作完成以后，开发者可以向源仓库发送 Pull Request ，本地仓库先合并源仓库，解决冲突。</li>
+<li>发起 Merge Request 请求管理员把自己的代码合并到源仓库中的 master 或 其他分支。</li>
+</ul>
+<h3 id="Git-流程"><a href="#Git-流程" class="headerlink" title="Git 流程"></a>Git 流程</h3><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/d69d8098ee5d48da903d5dfe8248896d~tplv-k3u1fbpfcp-zoom-in-crop-mark:1512:0:0:0.awebp" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<ul>
+<li>前端项目会在 <code>Root</code> 仓库下创建 <code>dev</code> 分支，用于代码的拉取和合并，如果有多个不同的测试环境，按照测试环境创建分支。</li>
+<li>在本地的仓库中创建你的 <code>dev</code> 分支和其他功能性的分支。</li>
+<li>开发过程中不允许直接在 <code>master</code> 分支上开发，创建一个新的分支进行开发，<code>git checkout –b {branch_name}</code>。</li>
+<li>规范且详细的书写 <code>commit</code> ，推荐使用 <code>git-cz</code> 工具进行提交。</li>
+<li>完成开发后将相应的分支合并到自己仓库的 <code>master</code> 分支。</li>
+<li>将 <code>master</code> 分支 <code>push</code> 到自己的远程仓库（Fork仓库）。</li>
+<li>向 <code>Root</code> 仓库 <code>dev</code> 分支提交 <code>Merge Requests</code>。</li>
+<li>提醒前端负责人审查代码、解决冲突或测试环境上线。</li>
+<li>解决冲突后 <code>git pull upstream dev</code> 拉取解决后的最新代码。</li>
+</ul>
+<p>原文链接：<a href="https://juejin.cn/post/6901466994478940168" target="_blank" rel="noopener">https://juejin.cn/post/6901466994478940168</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-05-09T03:19:43.270Z" itemprop="dateUpdated">2024-05-09 11:19:43</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/articles/ji-yu-vue-de-qian-duan-jia-gou.html" target="_blank" rel="external">https://qw66.gitee.io/articles/ji-yu-vue-de-qian-duan-jia-gou.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端架构/">前端架构</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/articles/ji-yu-vue-de-qian-duan-jia-gou.html&title=《基于Vue的前端架构》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/articles/ji-yu-vue-de-qian-duan-jia-gou.html&title=《基于Vue的前端架构》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/articles/ji-yu-vue-de-qian-duan-jia-gou.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《基于Vue的前端架构》 — 秦伟博客&url=https://qw66.gitee.io/articles/ji-yu-vue-de-qian-duan-jia-gou.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/articles/ji-yu-vue-de-qian-duan-jia-gou.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/interview/javascript.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">JavaScript</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/articles/qian-duan-quan-xian-kai-fa.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">前端权限开发</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/articles/ji-yu-vue-de-qian-duan-jia-gou.html&title=《基于Vue的前端架构》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/articles/ji-yu-vue-de-qian-duan-jia-gou.html&title=《基于Vue的前端架构》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/articles/ji-yu-vue-de-qian-duan-jia-gou.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《基于Vue的前端架构》 — 秦伟博客&url=https://qw66.gitee.io/articles/ji-yu-vue-de-qian-duan-jia-gou.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/articles/ji-yu-vue-de-qian-duan-jia-gou.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACuElEQVR42u3aS1LDMBAFQO5/adhCBTtvPgIv2qtUbJRpLyTxRh8f8fX57br6/vWZ189Xz9xfr6MtX3h4eHiD0pMirka4KuJqzPt6kl+5rxkPDw/vNC8vOsdXp/v7QpNFAg8PD+/JvK2p/H6cvAY8PDy8J/PmpecLAx4eHt6TeZONbx4x3G+785DiSNaCh4eHF/PyLtJzPh/p7+Hh4eGNu+p5Myxv8yfTdzUOvqwWDw8P7wAvn3DzuKGKTw4ljDbueHh4eAd4SXG9WGE3zM2DXTw8PLzTvF5Tv7ohTgLZanMrWjbw8PDwVnn303Hv+96GuPdyCzEEHh4e3mFe9dBVdYQeY6Frh4eHhzfmVbvt+SSeYyavIA9Q8PDw8LZ41ei22r7qbdzzmOPNXTw8PLwDvLx5vxU0JCFCtILF9ePh4eHt8iaBab5dzkvcuvtjS42Hh4d3gFdtTVUPFlSXgd5dPDw8vP/ibVF7cXB1IYkOXeHh4eGt8qqkPLzIo4e8qZaEwlEkgYeHhzfgVY9VJT+2FVLkG/HLl4uHh4d3jJc3wPJyewHuZAn55Xs8PDy8w7zq4afJUYNJTFwYHw8PD+8Arxq8TkKK5Ko2wKLfxcPDw1vlld9EMbbIi54fOCgUioeHhzfgnTsikLyI5G7vSNYbMB4eHt6Y1/tXP99SV9m9gCNa/fDw8PAO85JQtdyUakUhvSUKDw8P7y95eSMqjwnyzXG+YETP4+Hh4a3yJtPxHFM9glA+jIWHh4d3gDdp6k/C2d72fa0BhoeHhzfmVVtZ+ba7ujBMpv43R6/w8PDwDvB6033SuMon8d4KFi0MeHh4eP/Ky6OK5Pl8o9zcXuPh4eE9jJcfhKrGGZPjCHh4eHh/w+sNmn/Ti2vzQHkha8HDw8PrpAfR4lEttxdMVMdf6O/h4eHhvf/bL2EWK/BBaOOwAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

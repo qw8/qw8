@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>前端工程化 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="MVVM,模块化,前端异常监控">
+    <meta name="description" content="前端工程化是指将软件工程的方法和理念应用到前端开发中，以提高开发效率、保证项目质量、加快交付速度，并确保项目的可维护性和可扩展性。随着互联网技术的发展和用户需求的日益增长，前端工程化已经成为现代前端开发不可或缺的一部分。 前端工程化的关键组成部分： 模块化：将复杂的前端应用分解为独立的模块，每个模块负责一部分功能。这样可以提高代码的可读性和可维护性，便于团队协作开发。  组件化：与模块化类似，组件">
+<meta name="keywords" content="MVVM,模块化,前端异常监控">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端工程化">
+<meta property="og:url" content="https://qw66.gitee.io/interview/qian-duan-gong-cheng-hua.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="前端工程化是指将软件工程的方法和理念应用到前端开发中，以提高开发效率、保证项目质量、加快交付速度，并确保项目的可维护性和可扩展性。随着互联网技术的发展和用户需求的日益增长，前端工程化已经成为现代前端开发不可或缺的一部分。 前端工程化的关键组成部分： 模块化：将复杂的前端应用分解为独立的模块，每个模块负责一部分功能。这样可以提高代码的可读性和可维护性，便于团队协作开发。  组件化：与模块化类似，组件">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:updated_time" content="2024-03-29T16:16:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端工程化">
+<meta name="twitter:description" content="前端工程化是指将软件工程的方法和理念应用到前端开发中，以提高开发效率、保证项目质量、加快交付速度，并确保项目的可维护性和可扩展性。随着互联网技术的发展和用户需求的日益增长，前端工程化已经成为现代前端开发不可或缺的一部分。 前端工程化的关键组成部分： 模块化：将复杂的前端应用分解为独立的模块，每个模块负责一部分功能。这样可以提高代码的可读性和可维护性，便于团队协作开发。  组件化：与模块化类似，组件">
+<meta name="twitter:image" content="https://qw66.gitee.io/img/loading.gif">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">前端工程化</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">前端工程化</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2021-01-02T02:47:54.000Z" itemprop="datePublished" class="page-time">
+  2021-01-02
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端面试题/">前端面试题</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端工程化"><span class="post-toc-number">1.</span> <span class="post-toc-text">前端工程化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端工程化的关键组成部分："><span class="post-toc-number">2.</span> <span class="post-toc-text">前端工程化的关键组成部分：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端工程化的工具和框架："><span class="post-toc-number">3.</span> <span class="post-toc-text">前端工程化的工具和框架：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#实践前端工程化的步骤："><span class="post-toc-number">4.</span> <span class="post-toc-text">实践前端工程化的步骤：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前后端分离"><span class="post-toc-number">5.</span> <span class="post-toc-text">前后端分离</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据双向绑定原理：常见数据绑定的方案"><span class="post-toc-number">6.</span> <span class="post-toc-text">数据双向绑定原理：常见数据绑定的方案</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#MVC、MVP-与-MVVM-模式"><span class="post-toc-number">7.</span> <span class="post-toc-text">MVC、MVP 与 MVVM 模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#MVVM"><span class="post-toc-number">8.</span> <span class="post-toc-text">MVVM</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#mvvm-的优点"><span class="post-toc-number">9.</span> <span class="post-toc-text">mvvm 的优点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#mvvm-和-mvc-区别？它和其它框架（jquery）的区别是什么？哪些场景适合？"><span class="post-toc-number">10.</span> <span class="post-toc-text">mvvm 和 mvc 区别？它和其它框架（jquery）的区别是什么？哪些场景适合？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是-MVC-MVP-MVVM-Flux？"><span class="post-toc-number">11.</span> <span class="post-toc-text">什么是 MVC/MVP/MVVM/Flux？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#MVVM-1"><span class="post-toc-number">12.</span> <span class="post-toc-text">MVVM</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Proxy-与-Obeject-defineProperty-对比"><span class="post-toc-number">13.</span> <span class="post-toc-text">Proxy 与 Obeject.defineProperty 对比</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解释下-Object-defineProperty-方法"><span class="post-toc-number">14.</span> <span class="post-toc-text">解释下 Object.defineProperty()方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是单页面应用-SPA-？"><span class="post-toc-number">15.</span> <span class="post-toc-text">什么是单页面应用(SPA)？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多页面（MPA）开发-VS-单页面（SPA）开发"><span class="post-toc-number">16.</span> <span class="post-toc-text">多页面（MPA）开发 VS 单页面（SPA）开发</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是“前端路由”-什么时候适合使用“前端路由”-“前端路由”有哪些优点和缺点"><span class="post-toc-number">17.</span> <span class="post-toc-text">什么是“前端路由”?什么时候适合使用“前端路由”? “前端路由”有哪些优点和缺点?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是“前端路由”-什么时候适用“前端路由”-有哪些优点和缺点"><span class="post-toc-number">18.</span> <span class="post-toc-text">什么是“前端路由”? 什么时候适用“前端路由”? 有哪些优点和缺点?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#虚拟节点（VDOM）：三个-part"><span class="post-toc-number">19.</span> <span class="post-toc-text">虚拟节点（VDOM）：三个 part</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vue-和-react-区别"><span class="post-toc-number">20.</span> <span class="post-toc-text">vue 和 react 区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#模块化开发怎么做？"><span class="post-toc-number">21.</span> <span class="post-toc-text">模块化开发怎么做？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#模块化开发怎么做？-1"><span class="post-toc-number">22.</span> <span class="post-toc-text">模块化开发怎么做？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#模块化开发怎么做？-2"><span class="post-toc-number">23.</span> <span class="post-toc-text">模块化开发怎么做？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#通行的-Javascript-模块的规范有哪些？"><span class="post-toc-number">24.</span> <span class="post-toc-text">通行的 Javascript 模块的规范有哪些？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#说说你对AMD和Commonjs的理解"><span class="post-toc-number">25.</span> <span class="post-toc-text">说说你对AMD和Commonjs的理解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AMD-与-CMD-规范的区别？"><span class="post-toc-number">26.</span> <span class="post-toc-text">AMD 与 CMD 规范的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AMD（Modules-Asynchronous-Definition）、CMD（Common-Module-Definition）规范区别？"><span class="post-toc-number">27.</span> <span class="post-toc-text">AMD（Modules/Asynchronous-Definition）、CMD（Common Module Definition）规范区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍类库和框架的区别？"><span class="post-toc-number">28.</span> <span class="post-toc-text">介绍类库和框架的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#请你详细介绍一些-package-json-里面的配置"><span class="post-toc-number">29.</span> <span class="post-toc-text">请你详细介绍一些 package.json 里面的配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#WEB-应用从服务器主动推送-Data-到客户端有那些方式？"><span class="post-toc-number">30.</span> <span class="post-toc-text">WEB 应用从服务器主动推送 Data 到客户端有那些方式？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是响应式设计？"><span class="post-toc-number">31.</span> <span class="post-toc-text">什么是响应式设计？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#模块化的工具"><span class="post-toc-number">32.</span> <span class="post-toc-text">模块化的工具</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack打包优化"><span class="post-toc-number">33.</span> <span class="post-toc-text">webpack打包优化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#设计一个自己的打包工具需要设计哪些主要功能"><span class="post-toc-number">34.</span> <span class="post-toc-text">设计一个自己的打包工具需要设计哪些主要功能</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍webpack是什么？-有什么优势？"><span class="post-toc-number">35.</span> <span class="post-toc-text">介绍webpack是什么？ 有什么优势？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#webpack-的两大特色"><span class="post-toc-number">36.</span> <span class="post-toc-text">webpack 的两大特色</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#平时如何管理你的项目？"><span class="post-toc-number">37.</span> <span class="post-toc-text">平时如何管理你的项目？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#项目开发经历了哪几个阶段"><span class="post-toc-number">38.</span> <span class="post-toc-text">项目开发经历了哪几个阶段</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#怎么提高首屏加载速度"><span class="post-toc-number">39.</span> <span class="post-toc-text">怎么提高首屏加载速度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#首屏、白屏时间如何计算？"><span class="post-toc-number">40.</span> <span class="post-toc-text">首屏、白屏时间如何计算？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#requireJS的核心原理是什么？"><span class="post-toc-number">41.</span> <span class="post-toc-text">requireJS的核心原理是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是-npm-？"><span class="post-toc-number">42.</span> <span class="post-toc-text">什么是 npm ？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是-WebKit-？"><span class="post-toc-number">43.</span> <span class="post-toc-text">什么是 WebKit ？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何测试前端代码-知道-Unit-Test，BDD-TDD-么-怎么测试你的前端工程-mocha-jasmin"><span class="post-toc-number">44.</span> <span class="post-toc-text">如何测试前端代码? 知道 Unit Test，BDD, TDD 么? 怎么测试你的前端工程(mocha, jasmin..)?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍你知道的前端模板引擎？"><span class="post-toc-number">45.</span> <span class="post-toc-text">介绍你知道的前端模板引擎？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是-Modernizr？-Modernizr-工作原理？"><span class="post-toc-number">46.</span> <span class="post-toc-text">什么是 Modernizr？ Modernizr 工作原理？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#移动端最小触控区域是多大？"><span class="post-toc-number">47.</span> <span class="post-toc-text">移动端最小触控区域是多大？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#移动端的点击事件的延迟时间是多长，为什么会有延迟？-如何解决这个延时？"><span class="post-toc-number">48.</span> <span class="post-toc-text">移动端的点击事件的延迟时间是多长，为什么会有延迟？ 如何解决这个延时？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是函数式编程？"><span class="post-toc-number">49.</span> <span class="post-toc-text">什么是函数式编程？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是函数柯里化Currying-？"><span class="post-toc-number">50.</span> <span class="post-toc-text">什么是函数柯里化Currying)？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是依赖注入？"><span class="post-toc-number">51.</span> <span class="post-toc-text">什么是依赖注入？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#设计模式：什么是-singleton-factory-strategy-decorator？"><span class="post-toc-number">52.</span> <span class="post-toc-text">设计模式：什么是 singleton, factory, strategy, decorator？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是前端工程化？"><span class="post-toc-number">53.</span> <span class="post-toc-text">什么是前端工程化？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍-Yeoman-是什么？"><span class="post-toc-number">54.</span> <span class="post-toc-text">介绍 Yeoman 是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Backbone-是什么？"><span class="post-toc-number">55.</span> <span class="post-toc-text">Backbone 是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AngularJS-是什么？"><span class="post-toc-number">56.</span> <span class="post-toc-text">AngularJS 是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何评价AngularJS和BackboneJS"><span class="post-toc-number">57.</span> <span class="post-toc-text">如何评价AngularJS和BackboneJS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Meteor-是什么"><span class="post-toc-number">58.</span> <span class="post-toc-text">Meteor 是什么</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端异常监控"><span class="post-toc-number">59.</span> <span class="post-toc-text">前端异常监控</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Ascii、GBK、UTF、Unicode"><span class="post-toc-number">60.</span> <span class="post-toc-text">Ascii、GBK、UTF、Unicode</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-interview/前端工程化"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">前端工程化</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2021-01-02 10:47:54" datetime="2021-01-02T02:47:54.000Z"  itemprop="datePublished">2021-01-02</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端面试题/">前端面试题</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="前端工程化"><a href="#前端工程化" class="headerlink" title="前端工程化"></a>前端工程化</h3><p>是指将软件工程的方法和理念应用到前端开发中，以提高开发效率、保证项目质量、加快交付速度，并确保项目的可维护性和可扩展性。随着互联网技术的发展和用户需求的日益增长，前端工程化已经成为现代前端开发不可或缺的一部分。</p>
+<h3 id="前端工程化的关键组成部分："><a href="#前端工程化的关键组成部分：" class="headerlink" title="前端工程化的关键组成部分："></a>前端工程化的关键组成部分：</h3><ol>
+<li><p><strong>模块化</strong>：将复杂的前端应用分解为独立的模块，每个模块负责一部分功能。这样可以提高代码的可读性和可维护性，便于团队协作开发。</p>
+</li>
+<li><p><strong>组件化</strong>：与模块化类似，组件化是将界面拆分为独立的、可复用的组件。组件可以包含逻辑、样式和模板，使得开发更加高效。</p>
+</li>
+<li><p><strong>自动化</strong>：通过自动化构建工具（如Webpack、Gulp等）来自动化执行代码编译、压缩、合并等任务，减少手动操作的错误和提高工作效率。</p>
+</li>
+<li><p><strong>规范化</strong>：制定统一的编码规范和开发流程，确保团队成员按照相同的标准进行开发，提高代码质量和一致性。</p>
+</li>
+<li><p><strong>版本控制</strong>：使用版本控制系统（如Git）来管理代码变更，便于追踪问题、协作开发和代码回退。</p>
+</li>
+<li><p><strong>测试</strong>：编写单元测试、集成测试和端到端测试来确保代码质量，减少bug，提高软件的稳定性和可靠性。</p>
+</li>
+<li><p><strong>持续集成/持续部署（CI/CD）</strong>：通过自动化流程实现代码的持续集成和持续部署，加快产品的迭代速度和交付效率。</p>
+</li>
+</ol>
+<h3 id="前端工程化的工具和框架："><a href="#前端工程化的工具和框架：" class="headerlink" title="前端工程化的工具和框架："></a>前端工程化的工具和框架：</h3><ol>
+<li><p><strong>构建工具</strong>：Webpack、Rollup、Parcel等，用于打包、编译和优化前端资源。</p>
+</li>
+<li><p><strong>任务运行器</strong>：Gulp、Grunt、NPM Scripts等，用于自动化执行重复性任务。</p>
+</li>
+<li><p><strong>代码质量管理</strong>：ESLint、Prettier等，用于检查代码规范和自动格式化代码。</p>
+</li>
+<li><p><strong>测试框架</strong>：Jest、Mocha、Cypress等，用于编写和执行测试用例。</p>
+</li>
+<li><p><strong>版本控制工具</strong>：Git、SVN等，用于代码版本管理和团队协作。</p>
+</li>
+<li><p><strong>IDE和编辑器</strong>：Visual Studio Code、WebStorm、Sublime Text等，提供代码高亮、智能提示和调试功能。</p>
+</li>
+<li><p><strong>持续集成服务</strong>：Jenkins、Travis CI、GitHub Actions等，用于自动化测试和部署。</p>
+</li>
+</ol>
+<h3 id="实践前端工程化的步骤："><a href="#实践前端工程化的步骤：" class="headerlink" title="实践前端工程化的步骤："></a>实践前端工程化的步骤：</h3><ol>
+<li><p><strong>需求分析</strong>：明确项目需求，制定合理的开发计划和里程碑。</p>
+</li>
+<li><p><strong>技术选型</strong>：根据项目需求选择合适的技术栈和工具。</p>
+</li>
+<li><p><strong>搭建开发环境</strong>：配置开发环境，包括IDE、版本控制、代码规范等。</p>
+</li>
+<li><p><strong>编写代码</strong>：按照模块化和组件化的原则编写代码，并进行代码审查。</p>
+</li>
+<li><p><strong>测试</strong>：编写测试用例，并执行自动化测试。</p>
+</li>
+<li><p><strong>构建和部署</strong>：使用构建工具打包应用，并部署到生产环境。</p>
+</li>
+<li><p><strong>监控和维护</strong>：监控应用性能，及时修复bug，持续优化代码。</p>
+</li>
+</ol>
+<p>通过前端工程化，开发者可以更加专注于创造有价值的功能和提升用户体验，而不是被繁琐的重复性工作所困扰。随着前端技术的不断进步，前端工程化也在不断地演进和完善，为开发者提供更多的便利和可能性。</p>
+<h3 id="前后端分离"><a href="#前后端分离" class="headerlink" title="前后端分离"></a>前后端分离</h3><p>前后端分离是一种开发模式，前端负责将数据按照产品设计渲染以及调用后端接口实现产品功能，而后端则提供数据接口，功能接口。<br>两个团队分别开发，预先设计好借口的规范和模拟数据，前端可以用mock去模拟请求到的数据，后端可以用postman模拟前端去调用接口。<br>前后端分离的开发模式是为了让专业的人做专业的事，且现在前端和后端可以通过接口文档实现并行开发，提高开发效率。可以分服务器部署，也可以和后端接口打包在一起部署。</p>
+<h3 id="数据双向绑定原理：常见数据绑定的方案"><a href="#数据双向绑定原理：常见数据绑定的方案" class="headerlink" title="数据双向绑定原理：常见数据绑定的方案"></a>数据双向绑定原理：常见数据绑定的方案</h3><ul>
+<li><code>Object.defineProperty（vue）</code>：劫持数据的 <code>getter</code> 和 <code>setter</code></li>
+<li>脏值检测（<code>angularjs</code>）：通过特定事件进行轮循<br>发布/订阅模式：通过消息发布并将消息进行订阅</li>
+</ul>
+<h3 id="MVC、MVP-与-MVVM-模式"><a href="#MVC、MVP-与-MVVM-模式" class="headerlink" title="MVC、MVP 与 MVVM 模式"></a>MVC、MVP 与 MVVM 模式</h3><p><strong>MVC</strong></p>
+<p>通信方式如下</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="../../images/ms002.png" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<ol>
+<li>视图（View）：用户界面。 传送指令到 Controller</li>
+<li>控制器（Controller）：业务逻辑。完成业务逻辑后，要求 Model 改变状态</li>
+<li>模型（Model）：数据保存。将新的数据发送到 View，用户得到反馈</li>
+</ol>
+<p>所有通信都是单向的</p>
+<p><strong>MVP</strong></p>
+<p>通信方式如下</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="../../images/ms003.png" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<ol>
+<li>各部分之间的通信，都是双向的。</li>
+<li>View 与 Model 不发生联系，都通过 Presenter 传递。</li>
+<li>View 非常薄，不部署任何业务逻辑，称为”被动视图”（Passive View），即没有任何主动性，而 Presenter 非常厚，所有逻辑都部署在那里。</li>
+</ol>
+<p>首先阐述下你对 mvc 和 mvvm 的理解:</p>
+<p>首先为什么我们会需要 MVC？因为随着代码规模越来越大，切分职责是大势所趋，还有为了后期维护方便，修改一块功能不影响其他功能。还有为了复用，因为很多逻辑是一样的。而 MVC 只是手段，终极目标是模块化和复用。</p>
+<h3 id="MVVM"><a href="#MVVM" class="headerlink" title="MVVM"></a>MVVM</h3><p>MVVM 是 Model-View-ViewModel 的缩写，是一种设计思想，由 Model、View、ViewModel 三部分构成。</p>
+<ul>
+<li>Model代表数据模型，也可以在Model中定义数据修改和操作的业务逻辑。</li>
+<li>View 代表UI 组件，它负责将数据模型转化成UI 展现出来。</li>
+<li>ViewModel 监听模型数据的改变和控制视图行为、处理用户交互，简单理解就是一个同步View 和 Model的对象，连接Model和View。</li>
+</ul>
+<p>在MVVM架构下，View 和 Model ，而是通过ViewModel进行交互，Model 和 ViewModel 之间的交互是双向的， 因此View 数据的变化会同步到Model中，而Model 数据的变化也会立即反应到View 上。</p>
+<p>ViewModel 通过双向数据绑定把 View 层和 Model 层连接了起来，而View 和 Model 之间的同步工作完全是自动的，无需人为干涉，因此开发者只需关注业务逻辑，不需要手动操作DOM, 不需要关注数据状态的同步问题，复杂的数据状态维护完全由 MVVM 来统一管理。</p>
+<blockquote>
+<ul>
+<li>在 JQuery 时期，如果需要刷新 UI 时，需要先取到对应的 DOM 再更新 UI，这样数据和业务的逻辑就和页面有强耦合</li>
+<li>在 MVVM 中，UI 是通过数据驱动的，数据一旦改变就会相应的刷新对应的 UI，UI 如果改变，也会改变对应的数据。这种方式就可以在业务处理中只关心数据的流转，而无需直接和页面打交道。ViewModel 只关心数据和业务的处理，不关心 View 如何处理数据，在这种情况下，View 和 Model 都可以独立出来，任何一方改变了也不一定需要改变另一方，并且可以将一些可复用的逻辑放在一个 ViewModel 中，让多个 View 复用这个 ViewModel</li>
+</ul>
+</blockquote>
+<p>MVVM 模式将 Presenter 改名为 ViewModel，基本上与 MVP 模式完全一致。通信方式如下</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="../../images/ms004.png" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>唯一的区别是，它采用双向绑定（data-binding）：View 的变动，自动反映在 ViewModel，反之亦然。</p>
+<h3 id="mvvm-的优点"><a href="#mvvm-的优点" class="headerlink" title="mvvm 的优点"></a>mvvm 的优点</h3><p>低耦合：View 可以独立于 Model 变化和修改，同一个 ViewModel 可以被多个 View 复用；并且可以做到 View 和 Model 的变化互不影响；</p>
+<p>可重用性：可以把一些视图的逻辑放在 ViewModel，让多个 View 复用；</p>
+<p>独立开发：开发人员可以专注与业务逻辑和数据的开发（ViewModemvvmdi 计人员可以专注于 UI(View)的设计；</p>
+<p>可测试性：清晰的 View 分层，使得针对表现层业务逻辑的测试更容易，更简单。</p>
+<p>参考链接：</p>
+<p><a href="https://blog.csdn.net/jia12216/article/details/55520426" target="_blank" rel="noopener">MVVM的优点和缺点</a></p>
+<p><a href="https://blog.csdn.net/pangzi111/article/details/52294175" target="_blank" rel="noopener">MVVM架构的优缺点</a></p>
+<h3 id="mvvm-和-mvc-区别？它和其它框架（jquery）的区别是什么？哪些场景适合？"><a href="#mvvm-和-mvc-区别？它和其它框架（jquery）的区别是什么？哪些场景适合？" class="headerlink" title="mvvm 和 mvc 区别？它和其它框架（jquery）的区别是什么？哪些场景适合？"></a>mvvm 和 mvc 区别？它和其它框架（jquery）的区别是什么？哪些场景适合？</h3><ul>
+<li><p>mvc 和 mvvm 其实区别并不大。都是一种设计思想。主要就是 mvc 中 Controller 演变成 mvvm 中的 viewModel。mvvm 主要解决了 mvc 中大量的 DOM 操作使页面渲染性能降低，加载速度变慢，影响用户体验。</p>
+</li>
+<li><p>区别：vue 数据驱动，通过数据来显示视图层而不是节点操作。</p>
+</li>
+<li><p>场景：数据操作比较多的场景，更加便捷。</p>
+</li>
+</ul>
+<h3 id="什么是-MVC-MVP-MVVM-Flux？"><a href="#什么是-MVC-MVP-MVVM-Flux？" class="headerlink" title="什么是 MVC/MVP/MVVM/Flux？"></a>什么是 MVC/MVP/MVVM/Flux？</h3><p><strong>MVC(Model-View-Controller)</strong> </p>
+<ul>
+<li>V-&gt;C, C-&gt;M, M-&gt;V</li>
+<li>通信都是单向的；C只起路由作用，业务逻辑都部署在V</li>
+<li>Backbone</li>
+</ul>
+<p><strong>MVP(Model-View-Presenter)</strong></p>
+<ul>
+<li>V&lt;-&gt;P, P&lt;-&gt;M</li>
+<li>通信都是双向的；V和M不发生联系(通过P传)；V非常薄，逻辑都部署在P</li>
+<li>Riot.js</li>
+</ul>
+<p><strong>MVVM(Model-View-ViewModel)</strong></p>
+<ul>
+<li>V-&gt;VM, VM&lt;-&gt;M</li>
+<li>采用双向数据绑定：View 和 ViewModel 的变动都会相互映射到对象上面</li>
+<li>Angular</li>
+</ul>
+<p><strong>Flux(Dispatcher-Store-View)</strong></p>
+<ul>
+<li>Action-&gt;Dispatcher-&gt;Store-&gt;View, View-&gt;Action</li>
+<li>Facebook 为了解决在 MVC 应用中碰到的工程性问题提出一个架构思想</li>
+<li>基于一个简单的原则：数据在应用中单向流动（单向数据流）</li>
+<li>React(Flux 中 View，只关注表现层)</li>
+</ul>
+<h3 id="MVVM-1"><a href="#MVVM-1" class="headerlink" title="MVVM"></a>MVVM</h3><p>在 MVVM 中，最核心的也就是数据双向绑定，例如 Angluar 的脏数据检测，Vue 中的数据劫持。</p>
+<p><strong>脏数据检测</strong></p>
+<ul>
+<li>当触发了指定事件后会进入脏数据检测，这时会调用 $digest 循环遍历所有的数据观察者，判断当前值是否和先前的值有区别，如果检测到变化的话，会调用 $watch 函数，然后再次调用 $digest 循环直到发现没有变化。循环至少为二次 ，至多为十次</li>
+<li>脏数据检测虽然存在低效的问题，但是不关心数据是通过什么方式改变的，都可以完成任务，但是这在 Vue 中的双向绑定是存在问题的。并且脏数据检测可以实现批量检测出更新的值，再去统一更新 UI，大大减少了操作 DOM 的次数</li>
+</ul>
+<p><strong>数据劫持</strong></p>
+<p><code>Vue</code> 内部使用了 <code>Obeject.defineProperty()</code> 来实现双向绑定，通过这个函数可以监听到 <code>set</code> 和 <code>get</code>的事件</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> data = &#123; <span class="attr">name</span>: <span class="string">'yck'</span> &#125;</span><br><span class="line">observe(data)</span><br><span class="line"><span class="keyword">let</span> name = data.name <span class="comment">// -&gt; get value</span></span><br><span class="line">data.name = <span class="string">'yyy'</span> <span class="comment">// -&gt; change value</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">observe</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 判断类型</span></span><br><span class="line">  <span class="keyword">if</span> (!obj || <span class="keyword">typeof</span> obj !== <span class="string">'object'</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">Object</span>.keys(data).forEach(<span class="function"><span class="params">key</span> =&gt;</span> &#123;</span><br><span class="line">    defineReactive(data, key, data[key])</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">defineReactive</span>(<span class="params">obj, key, val</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 递归子属性</span></span><br><span class="line">  observe(val)</span><br><span class="line">  <span class="built_in">Object</span>.defineProperty(obj, key, &#123;</span><br><span class="line">    enumerable: <span class="literal">true</span>,</span><br><span class="line">    configurable: <span class="literal">true</span>,</span><br><span class="line">    <span class="keyword">get</span>: function reactiveGetter() &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'get value'</span>)</span><br><span class="line">      <span class="keyword">return</span> val</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="keyword">set</span>: function reactiveSetter(newVal) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'change value'</span>)</span><br><span class="line">      val = newVal</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>以上代码简单的实现了如何监听数据的 set 和 get 的事件，但是仅仅如此是不够的，还需要在适当的时候给属性添加发布订阅</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    &#123;&#123;name&#125;&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在解析如上模板代码时，遇到 <code></code> 就会给属性 <code>name</code> 添加发布订阅</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过 Dep 解耦</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dep</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>() &#123;</span><br><span class="line">    <span class="keyword">this</span>.subs = []</span><br><span class="line">  &#125;</span><br><span class="line">  addSub(sub) &#123;</span><br><span class="line">    <span class="comment">// sub 是 Watcher 实例</span></span><br><span class="line">    <span class="keyword">this</span>.subs.push(sub)</span><br><span class="line">  &#125;</span><br><span class="line">  notify() &#123;</span><br><span class="line">    <span class="keyword">this</span>.subs.forEach(<span class="function"><span class="params">sub</span> =&gt;</span> &#123;</span><br><span class="line">      sub.update()</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 全局属性，通过该属性配置 Watcher</span></span><br><span class="line">Dep.target = <span class="literal">null</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">update</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">document</span>.querySelector(<span class="string">'div'</span>).innerText = value</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Watcher</span> </span>&#123;</span><br><span class="line">  <span class="keyword">constructor</span>(obj, key, cb) &#123;</span><br><span class="line">    <span class="comment">// 将 Dep.target 指向自己</span></span><br><span class="line">    <span class="comment">// 然后触发属性的 getter 添加监听</span></span><br><span class="line">    <span class="comment">// 最后将 Dep.target 置空</span></span><br><span class="line">    Dep.target = <span class="keyword">this</span></span><br><span class="line">    <span class="keyword">this</span>.cb = cb</span><br><span class="line">    <span class="keyword">this</span>.obj = obj</span><br><span class="line">    <span class="keyword">this</span>.key = key</span><br><span class="line">    <span class="keyword">this</span>.value = obj[key]</span><br><span class="line">    Dep.target = <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line">  update() &#123;</span><br><span class="line">    <span class="comment">// 获得新值</span></span><br><span class="line">    <span class="keyword">this</span>.value = <span class="keyword">this</span>.obj[<span class="keyword">this</span>.key]</span><br><span class="line">    <span class="comment">// 调用 update 方法更新 Dom</span></span><br><span class="line">    <span class="keyword">this</span>.cb(<span class="keyword">this</span>.value)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> data = &#123; <span class="attr">name</span>: <span class="string">'yck'</span> &#125;</span><br><span class="line">observe(data)</span><br><span class="line"><span class="comment">// 模拟解析到 `&#123;&#123;name&#125;&#125;` 触发的操作</span></span><br><span class="line"><span class="keyword">new</span> Watcher(data, <span class="string">'name'</span>, update)</span><br><span class="line"><span class="comment">// update Dom innerText</span></span><br><span class="line">data.name = <span class="string">'yyy'</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>接下来,对 defineReactive 函数进行改造</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">defineReactive</span>(<span class="params">obj, key, val</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 递归子属性</span></span><br><span class="line">  observe(val)</span><br><span class="line">  <span class="keyword">let</span> dp = <span class="keyword">new</span> Dep()</span><br><span class="line">  <span class="built_in">Object</span>.defineProperty(obj, key, &#123;</span><br><span class="line">    enumerable: <span class="literal">true</span>,</span><br><span class="line">    configurable: <span class="literal">true</span>,</span><br><span class="line">    <span class="keyword">get</span>: function reactiveGetter() &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'get value'</span>)</span><br><span class="line">      <span class="comment">// 将 Watcher 添加到订阅</span></span><br><span class="line">      <span class="keyword">if</span> (Dep.target) &#123;</span><br><span class="line">        dp.addSub(Dep.target)</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> val</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="keyword">set</span>: function reactiveSetter(newVal) &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">'change value'</span>)</span><br><span class="line">      val = newVal</span><br><span class="line">      <span class="comment">// 执行 watcher 的 update 方法</span></span><br><span class="line">      dp.notify()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>以上实现了一个简易的双向绑定，核心思路就是手动触发一次属性的 getter 来实现发布订阅的添加</p>
+</blockquote>
+<h3 id="Proxy-与-Obeject-defineProperty-对比"><a href="#Proxy-与-Obeject-defineProperty-对比" class="headerlink" title="Proxy 与 Obeject.defineProperty 对比"></a>Proxy 与 Obeject.defineProperty 对比</h3><ul>
+<li><code>Obeject.defineProperty</code> 虽然已经能够实现双向绑定了，但是他还是有缺陷的。<ul>
+<li>只能对属性进行数据劫持，所以需要深度遍历整个对象</li>
+<li>对于数组不能监听到数据的变化</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>虽然 <code>Vue</code> 中确实能检测到数组数据的变化，但是其实是使用了 <code>hack</code> 的办法，并且也是有缺陷的</p>
+</blockquote>
+<h3 id="解释下-Object-defineProperty-方法"><a href="#解释下-Object-defineProperty-方法" class="headerlink" title="解释下 Object.defineProperty()方法"></a>解释下 Object.defineProperty()方法</h3><p>答案：这是 js 中一个非常重要的方法，ES6 中某些方法的实现依赖于它，VUE 通过它实现双向绑定，此方法会直接在一个对象上定义一个新属性，或者修改一个已经存在的属性， 并返回这个对象</p>
+<p><strong>语法</strong></p>
+<p>Object.defineProperty(object, attribute, descriptor)</p>
+<ul>
+<li>这三个参数都是必输项</li>
+<li>第一个参数为 目标对象</li>
+<li>第二个参数为 需要定义的属性或者方法</li>
+<li>第三个参数为 目标属性所拥有的特性</li>
+</ul>
+<p><strong>descriptor</strong></p>
+<p>前两个参数都很明确，重点是第三个参数 descriptor， 它有以下取值</p>
+<ul>
+<li>value: 属性的值</li>
+<li>writable: 属性的值是否可被重写（默认为 false）</li>
+<li>configurable: 总开关，是否可配置，若为 false, 则其他都为 false（默认为 false）</li>
+<li>enumerable: 属性是否可被枚举（默认为 false）</li>
+<li>get: 获取该属性的值时调用</li>
+<li>set: 重写该属性的值时调用</li>
+</ul>
+<p>一个例子</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;&#125;;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(a, <span class="string">"b"</span>, &#123;</span><br><span class="line">  value: <span class="number">123</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(a.b); <span class="comment">//123</span></span><br><span class="line">a.b = <span class="number">456</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a.b); <span class="comment">//123</span></span><br><span class="line">a.c = <span class="number">110</span>;</span><br><span class="line"><span class="keyword">for</span> (item <span class="keyword">in</span> a) &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(item, a[item]); <span class="comment">//c 110</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>因为 writable 和 enumerable 默认值为 false, 所以对 a.b 赋值无效，也无法遍历它</p>
+<p><strong>configurable</strong></p>
+<p>总开关，是否可配置，设置为 false 后，就不能再设置了，否则报错， 例子</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;&#125;;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(a, <span class="string">"b"</span>, &#123;</span><br><span class="line">  configurable: <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(a, <span class="string">"b"</span>, &#123;</span><br><span class="line">  configurable: <span class="literal">true</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//error: Uncaught TypeError: Cannot redefine property: b</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>writabl</strong></p>
+<p>是否可重写</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;&#125;;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(a, <span class="string">"b"</span>, &#123;</span><br><span class="line">  value: <span class="number">123</span>,</span><br><span class="line">  writable: <span class="literal">false</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(a.b); <span class="comment">// 打印 123</span></span><br><span class="line">a.b = <span class="number">25</span>; <span class="comment">// 没有错误抛出（在严格模式下会抛出，即使之前已经有相同的值）</span></span><br><span class="line"><span class="built_in">console</span>.log(a.b); <span class="comment">// 打印 123， 赋值不起作用。</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>enumerable</strong></p>
+<p>属性特性 enumerable 定义了对象的属性是否可以在 for…in 循环和 Object.keys() 中被枚举</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;&#125;;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(a, <span class="string">"b"</span>, &#123;</span><br><span class="line">  value: <span class="number">3445</span>,</span><br><span class="line">  enumerable: <span class="literal">true</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(a)); <span class="comment">// 打印["b"]</span></span><br></pre></td></tr></table></figure>
+
+<p>enumerable 改为 false</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;&#125;;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(a, <span class="string">"b"</span>, &#123;</span><br><span class="line">  value: <span class="number">3445</span>,</span><br><span class="line">  enumerable: <span class="literal">false</span> <span class="comment">//注意咯这里改了</span></span><br><span class="line">&#125;);</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(a)); <span class="comment">// 打印[]</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>set 和 get</strong></p>
+<p>如果设置了 set 或 get, 就不能设置 writable 和 value 中的任何一个，否则报错</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;&#125;;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(a, <span class="string">"abc"</span>, &#123;</span><br><span class="line">  value: <span class="number">123</span>,</span><br><span class="line">  <span class="keyword">get</span>: function() &#123;</span><br><span class="line">    <span class="keyword">return</span> value;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">//Uncaught TypeError: Invalid property descriptor. Cannot both specify accessors and a value or writable attribute, #&lt;Object&gt; at Function.defineProperty</span></span><br></pre></td></tr></table></figure>
+
+<p>对目标对象的目标属性 赋值和取值 时， 分别触发 set 和 get 方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = &#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> b = <span class="number">1</span>;</span><br><span class="line"><span class="built_in">Object</span>.defineProperty(a, <span class="string">"b"</span>, &#123;</span><br><span class="line">  <span class="keyword">set</span>: function(newValue) &#123;</span><br><span class="line">    b = <span class="number">99</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"你要赋值给我,我的新值是"</span> + newValue);</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="keyword">get</span>: function() &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"你取我的值"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span>; <span class="comment">//注意这里，我硬编码返回2</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line">a.b = <span class="number">1</span>; <span class="comment">//打印 你要赋值给我,我的新值是1</span></span><br><span class="line"><span class="built_in">console</span>.log(b); <span class="comment">//打印 99</span></span><br><span class="line"><span class="built_in">console</span>.log(a.b); <span class="comment">//打印 你取我的值</span></span><br><span class="line"><span class="comment">//打印 2    注意这里，和我的硬编码相同的</span></span><br></pre></td></tr></table></figure>
+
+<p>上面的代码中，给 a.b 赋值，b 的值也跟着改变了。原因是给 a.b 赋值，自动调用了 set 方法，在 set 方法中改变了 b 的值。vue 双向绑定的原理就是这个。</p>
+<p>扩展：<a href="https://www.cnblogs.com/zhaowj/p/9576450.html" target="_blank" rel="noopener">参考</a></p>
+<h3 id="什么是单页面应用-SPA-？"><a href="#什么是单页面应用-SPA-？" class="headerlink" title="什么是单页面应用(SPA)？"></a>什么是单页面应用(SPA)？</h3><ul>
+<li>单页面应用(SPA)是指用户在浏览器加载单一的HTML页面，后续请求都无需再离开此页</li>
+<li>目标：旨在用为用户提供了更接近本地移动APP或桌面应用程序的体验。</li>
+<li>流程：第一次请求时，将导航页传输到客户端，其余请求通过 REST API 获取 JSON 数据</li>
+<li>实现：数据的传输通过 Web Socket API 或 RPC(远程过程调用)。</li>
+<li>优点：用户体验流畅，服务器压力小，前后端职责分离</li>
+<li>缺点：关键词布局难度加大，不利于 SEO</li>
+</ul>
+<h3 id="多页面（MPA）开发-VS-单页面（SPA）开发"><a href="#多页面（MPA）开发-VS-单页面（SPA）开发" class="headerlink" title="多页面（MPA）开发 VS 单页面（SPA）开发"></a>多页面（MPA）开发 VS 单页面（SPA）开发</h3><p><strong>jQuery + Bootstrap 多页面应用：</strong></p>
+<ul>
+<li>优点：<ol>
+<li>数据可以直接渲染，对于搜索引擎（SEO）友好</li>
+<li>BootStrap 对移动端和PC端界面展示都很友好</li>
+<li>后期维护方便，成本低，易上手</li>
+</ol>
+</li>
+<li>缺点：<ol>
+<li>页面之间传递数据比较局限，可以URL/Cookie/Storage等方式吧</li>
+<li>资源请求较多，不过就现在这个网速情况，大部分没有问题</li>
+</ol>
+</li>
+</ul>
+<p><strong>Vue + ElementUI（BootStrap）单页面应用：（后台管理系统）</strong></p>
+<ul>
+<li>优点：<ol>
+<li>可以组件化，数据绑定。方便定义页面的各种逻辑和改变页面数据</li>
+<li>路由之间跳转可以定制动画，使用懒加载，减少白屏时间；相比对多页面，减少了请求服务器加载静态资源的次数</li>
+<li>页面之间可以通信</li>
+</ol>
+</li>
+<li>缺点<ol>
+<li>初始加载较大且多的静态资源(因为需要进行代码编译)，业务增长，项目加载时间越大</li>
+<li>因为前后端分离，数据通过Ajax获取，网页爬虫抓取不到页面数据，不利于搜索引擎搜索，SEO不友好</li>
+<li>ElementUI 基本不支持移动端设备的展示,BootStrap虽然支持移动端，但是综合考虑用多页面比较好</li>
+<li>后期维护方便，但是成本高</li>
+</ol>
+</li>
+</ul>
+<h3 id="什么是“前端路由”-什么时候适合使用“前端路由”-“前端路由”有哪些优点和缺点"><a href="#什么是“前端路由”-什么时候适合使用“前端路由”-“前端路由”有哪些优点和缺点" class="headerlink" title="什么是“前端路由”?什么时候适合使用“前端路由”? “前端路由”有哪些优点和缺点?"></a>什么是“前端路由”?什么时候适合使用“前端路由”? “前端路由”有哪些优点和缺点?</h3><ol>
+<li><p>什么是前端路由？</p>
+<p>路由是根据不同的 url 地址展示不同的内容或页面</p>
+<p>前端路由就是把不同路由对应不同的内容或页面的任务交给前端来做，之前是通过服务端根据 url 的不同返回不同的页面实现的。</p>
+</li>
+<li><p>什么时候使用前端路由？</p>
+<p>在单页面应用，大部分页面结构不变，只改变部分内容的使用</p>
+</li>
+<li><p>前端路由有什么优点和缺点？</p>
+<p><strong>优点</strong></p>
+<p>用户体验好，不需要每次都从服务器全部获取，快速展现给用户</p>
+<p><strong>缺点</strong></p>
+<p>使用浏览器的前进，后退键的时候会重新发送请求，没有合理地利用缓存</p>
+<p>单页面无法记住之前滚动的位置，无法在前进，后退的时候记住滚动的位置</p>
+</li>
+</ol>
+<h3 id="什么是“前端路由”-什么时候适用“前端路由”-有哪些优点和缺点"><a href="#什么是“前端路由”-什么时候适用“前端路由”-有哪些优点和缺点" class="headerlink" title="什么是“前端路由”? 什么时候适用“前端路由”? 有哪些优点和缺点?"></a>什么是“前端路由”? 什么时候适用“前端路由”? 有哪些优点和缺点?</h3><ul>
+<li>前端路由通过 URL 和 History 来实现页面切换</li>
+<li>应用：前端路由主要适用于“前后端分离”的单页面应用(SPA)项目</li>
+<li>优点：用户体验好，交互流畅</li>
+<li>缺点：浏览器“前进”、“后退”会重新请求，无法合理利用缓存</li>
+</ul>
+<h3 id="虚拟节点（VDOM）：三个-part"><a href="#虚拟节点（VDOM）：三个-part" class="headerlink" title="虚拟节点（VDOM）：三个 part"></a>虚拟节点（VDOM）：三个 part</h3><ul>
+<li>虚拟节点类，将真实 <code>DOM</code>节点用 <code>js</code> 对象的形式进行展示，并提供 <code>render</code> 方法，将虚拟节点渲染成真实 <code>DOM</code></li>
+<li>节点 <code>diff</code> 比较：对虚拟节点进行 <code>js</code> 层面的计算，并将不同的操作都记录到 <code>patch</code> 对象</li>
+<li><code>re-render</code>：解析 <code>patch</code> 对象，进行 <code>re-render</code></li>
+</ul>
+<p><strong>补充1：VDOM 的必要性？</strong></p>
+<ul>
+<li><strong>创建真实DOM的代价高</strong>：真实的 <code>DOM</code> 节点 <code>node</code> 实现的属性很多，而 <code>vnode</code> 仅仅实现一些必要的属性，相比起来，创建一个 <code>vnode</code> 的成本比较低。</li>
+<li><strong>触发多次浏览器重绘及回流</strong>：使用 <code>vnode</code> ，相当于加了一个缓冲，让一次数据变动所带来的所有 <code>node</code> 变化，先在 <code>vnode</code> 中进行修改，然后 <code>diff</code> 之后对所有产生差异的节点集中一次对 <code>DOM tree</code> 进行修改，以减少浏览器的重绘及回流。</li>
+</ul>
+<p><strong>补充2：vue 为什么采用 vdom？</strong></p>
+<blockquote>
+<p>引入 <code>Virtual DOM</code> 在性能方面的考量仅仅是一方面。</p>
+</blockquote>
+<ul>
+<li>性能受场景的影响是非常大的，不同的场景可能造成不同实现方案之间成倍的性能差距，所以依赖细粒度绑定及 <code>Virtual DOM</code> 哪个的性能更好还真不是一个容易下定论的问题。</li>
+<li><code>Vue</code> 之所以引入了 <code>Virtual DOM</code>，更重要的原因是为了解耦 <code>HTML</code>依赖，这带来两个非常重要的好处是：</li>
+</ul>
+<blockquote>
+<ul>
+<li>不再依赖 <code>HTML</code> 解析器进行模版解析，可以进行更多的 <code>AOT</code> 工作提高运行时效率：通过模版 <code>AOT</code> 编译，<code>Vue</code> 的运行时体积可以进一步压缩，运行时效率可以进一步提升；</li>
+<li>可以渲染到 <code>DOM</code> 以外的平台，实现 <code>SSR</code>、同构渲染这些高级特性，<code>Weex</code>等框架应用的就是这一特性。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>综上，<code>Virtual DOM</code> 在性能上的收益并不是最主要的，更重要的是它使得 <code>Vue</code> 具备了现代框架应有的高级特性。</p>
+</blockquote>
+<h3 id="vue-和-react-区别"><a href="#vue-和-react-区别" class="headerlink" title="vue 和 react 区别"></a>vue 和 react 区别</h3><ul>
+<li>相同点：都支持 <code>ssr</code>，都有 <code>vdom</code>，组件化开发，实现 <code>webComponents</code> 规范，数据驱动等</li>
+<li>不同点：<code>vue</code> 是双向数据流（当然为了实现单数据流方便管理组件状态，<code>vuex</code> 便出现了），<code>react</code> 是单向数据流。<code>vue</code>的 <code>vdom</code> 是追踪每个组件的依赖关系，不会渲染整个组件树，<code>react</code> 每当应该状态被改变时，全部子组件都会 <code>re-render</code></li>
+</ul>
+<h3 id="模块化开发怎么做？"><a href="#模块化开发怎么做？" class="headerlink" title="模块化开发怎么做？"></a>模块化开发怎么做？</h3><ul>
+<li>封装对象作为命名空间 – 内部状态可以被外部改写</li>
+<li>立即执行函数(IIFE) – 需要依赖多个JS文件，并且严格按顺序加载</li>
+<li>使用模块加载器 – require.js, sea.js, EC6 模块</li>
+</ul>
+<h3 id="模块化开发怎么做？-1"><a href="#模块化开发怎么做？-1" class="headerlink" title="模块化开发怎么做？"></a>模块化开发怎么做？</h3><ul>
+<li>AMD 是 RequireJS 在推广过程中对模块定义的规范化产出。</li>
+<li>CMD 是 SeaJS 在推广过程中对模块定义的规范化产出。</li>
+<li>AMD 是提前执行，CMD 是延迟执行。</li>
+<li>AMD 推荐的风格通过返回一个对象做为模块对象，CommonJS 的风格通过对 module.exports 或 exports 的属性赋值来达到暴露模块对象的目的。</li>
+</ul>
+<p>CMD 模块方式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params">require, exports, module</span>) </span>&#123;</span><br><span class="line">  <span class="comment">// 模块代码</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="模块化开发怎么做？-2"><a href="#模块化开发怎么做？-2" class="headerlink" title="模块化开发怎么做？"></a>模块化开发怎么做？</h3><p>立即执行函数,不暴露有成员</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var module1 = (function()&#123;</span><br><span class="line">　　　　var _count = 0;</span><br><span class="line">　　　　var m1 = function()&#123;</span><br><span class="line">　　　　　　//...</span><br><span class="line">　　　　&#125;;</span><br><span class="line">　　　　var m2 = function()&#123;</span><br><span class="line">　　　　　　//...</span><br><span class="line">　　　　&#125;;</span><br><span class="line">　　　　return &#123;</span><br><span class="line">　　　　　　m1 : m1,</span><br><span class="line">　　　　　　m2 : m2</span><br><span class="line">　　　　&#125;;</span><br><span class="line">　　&#125;)();</span><br></pre></td></tr></table></figure>
+
+<h3 id="通行的-Javascript-模块的规范有哪些？"><a href="#通行的-Javascript-模块的规范有哪些？" class="headerlink" title="通行的 Javascript 模块的规范有哪些？"></a>通行的 Javascript 模块的规范有哪些？</h3><ul>
+<li>CommonJS – 主要用在服务器端 node.js</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> math = <span class="built_in">require</span>(<span class="string">'./math'</span>);</span><br><span class="line">math.add(<span class="number">2</span>,<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>AMD(异步模块定义) – require.js</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>([<span class="string">'./math'</span>], <span class="function"><span class="keyword">function</span> (<span class="params">math</span>) </span>&#123;</span><br><span class="line">    math.add(<span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>CMD(通用模块定义) – sea.js </li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> math = <span class="built_in">require</span>(<span class="string">'./math'</span>);</span><br><span class="line">math.add(<span class="number">2</span>,<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>ES6 模块</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123;math&#125; <span class="keyword">from</span> <span class="string">'./math'</span>;</span><br><span class="line">math.add(<span class="number">2</span>, <span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="说说你对AMD和Commonjs的理解"><a href="#说说你对AMD和Commonjs的理解" class="headerlink" title="说说你对AMD和Commonjs的理解"></a>说说你对AMD和Commonjs的理解</h3><ul>
+<li>CommonJS是服务器端模块的规范，Node.js采用了这个规范。CommonJS规范加载模块是同步的，也就是说，只有加载完成，才能执行后面的操作。AMD规范则是非同步加载模块，允许指定回调函数</li>
+<li>AMD推荐的风格通过返回一个对象做为模块对象，CommonJS的风格通过对module.exports或exports的属性赋值来达到暴露模块对象的目的</li>
+</ul>
+<h3 id="AMD-与-CMD-规范的区别？"><a href="#AMD-与-CMD-规范的区别？" class="headerlink" title="AMD 与 CMD 规范的区别？"></a>AMD 与 CMD 规范的区别？</h3><p>规范化产出：</p>
+<ul>
+<li>AMD 由 RequireJS 推广产出</li>
+<li>CMD 由 SeaJS 推广产出</li>
+</ul>
+<p><strong>模块的依赖:</strong></p>
+<ul>
+<li><strong>AMD 提前执行，推崇依赖前置</strong></li>
+<li><strong>CMD 延迟执行，推崇依赖就近</strong></li>
+</ul>
+<p>API 功能:</p>
+<ul>
+<li>AMD 的 API 默认多功能（分全局 require 和局部 require）</li>
+<li>CMD 的 API 推崇职责单一纯粹（没有全局 require）</li>
+</ul>
+<p>模块定义规则：</p>
+<ul>
+<li>AMD 默认一开始就载入全部依赖模块</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">define([<span class="string">'./a'</span>, <span class="string">'./b'</span>], <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    a.doSomething();</span><br><span class="line">    b.doSomething();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>CMD 依赖模块在用到时才就近载入</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">define(<span class="function"><span class="keyword">function</span>(<span class="params">require, exports, module</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> a = <span class="built_in">require</span>(<span class="string">'./a'</span>);</span><br><span class="line">    a.doSomething();</span><br><span class="line">    <span class="keyword">var</span> b = <span class="built_in">require</span>(<span class="string">'./b'</span>);</span><br><span class="line">    b.doSomething();</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="AMD（Modules-Asynchronous-Definition）、CMD（Common-Module-Definition）规范区别？"><a href="#AMD（Modules-Asynchronous-Definition）、CMD（Common-Module-Definition）规范区别？" class="headerlink" title="AMD（Modules/Asynchronous-Definition）、CMD（Common Module Definition）规范区别？"></a>AMD（Modules/Asynchronous-Definition）、CMD（Common Module Definition）规范区别？</h3><p>Asynchronous Module Definition，异步模块定义，所有的模块将被异步加载，模块加载不影响后面语句运行。所有依赖某些模块的语句均放置在回调函数中</p>
+<p>区别：</p>
+<ul>
+<li>对于依赖的模块，AMD 是提前执行，CMD 是延迟执行。不过 RequireJS 从 2.0 开始，也改成可以延迟执行（根据写法不同，处理方式不同）。CMD 推崇 as lazy as possible</li>
+<li>CMD 推崇依赖就近，AMD 推崇依赖前置。看代码：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">// CMD</span><br><span class="line">define(function(require, exports, module) &#123;</span><br><span class="line">    var a = require(&apos;./a&apos;)</span><br><span class="line">    a.doSomething()</span><br><span class="line">    // 此处略去 100 行</span><br><span class="line">    var b = require(&apos;./b&apos;) // 依赖可以就近书写</span><br><span class="line">    b.doSomething()</span><br><span class="line">    // ...</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// AMD 默认推荐</span><br><span class="line">define([&apos;./a&apos;, &apos;./b&apos;], function(a, b) &#123; // 依赖必须一开始就写好</span><br><span class="line">    a.doSomething()</span><br><span class="line">    // 此处略去 100 行</span><br><span class="line">    b.doSomething()</span><br><span class="line">    // ...</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="介绍类库和框架的区别？"><a href="#介绍类库和框架的区别？" class="headerlink" title="介绍类库和框架的区别？"></a>介绍类库和框架的区别？</h3><p>类库是一些函数的集合，帮助开发者写WEB应用，起主导作用的是开发者的代码</p>
+<p>框架是已实现的特殊WEB应用，开发者只需对它填充具体的业务逻辑，起主导作用是框架</p>
+<h3 id="请你详细介绍一些-package-json-里面的配置"><a href="#请你详细介绍一些-package-json-里面的配置" class="headerlink" title="请你详细介绍一些 package.json 里面的配置"></a>请你详细介绍一些 package.json 里面的配置</h3><p>scripts：npm run xxx 命令调用node执行的 .js 文件</p>
+<p>dependencies：生产环境依赖包的名称和版本号，即这些 依赖包 都会打包进 生产环境的JS文件里</p>
+<p>devDependencies：开发环境依赖包的名称和版本号，即这些 依赖包 只用于 代码开发 的时候，不会打包进 生产环境js文件 里面。</p>
+<h3 id="WEB-应用从服务器主动推送-Data-到客户端有那些方式？"><a href="#WEB-应用从服务器主动推送-Data-到客户端有那些方式？" class="headerlink" title="WEB 应用从服务器主动推送 Data 到客户端有那些方式？"></a>WEB 应用从服务器主动推送 Data 到客户端有那些方式？</h3><ul>
+<li>html5 websoket</li>
+<li>WebSocket 通过 Flash</li>
+<li>XHR 长时间连接</li>
+<li>XHR Multipart Streaming</li>
+<li>不可见的 Iframe</li>
+<li><code>&lt;script&gt;</code>标签的长时间连接(可跨域)</li>
+</ul>
+<h3 id="什么是响应式设计？"><a href="#什么是响应式设计？" class="headerlink" title="什么是响应式设计？"></a>什么是响应式设计？</h3><p>它是关于网页制作的过程中让不同的设备有不同的尺寸和不同的功能。响应式设计是让所有的人能在这些设备上让网站运行正常</p>
+<h3 id="模块化的工具"><a href="#模块化的工具" class="headerlink" title="模块化的工具"></a>模块化的工具</h3><p>参考链接：<a href="https://www.cnblogs.com/bergwhite/p/6618686.html" target="_blank" rel="noopener">常用模块化方案</a></p>
+<h3 id="webpack打包优化"><a href="#webpack打包优化" class="headerlink" title="webpack打包优化"></a>webpack打包优化</h3><p>参考链接：<a href="https://www.cnblogs.com/Sunshine-boy/p/7412064.html" target="_blank" rel="noopener">webpack打包体积优化</a></p>
+<h3 id="设计一个自己的打包工具需要设计哪些主要功能"><a href="#设计一个自己的打包工具需要设计哪些主要功能" class="headerlink" title="设计一个自己的打包工具需要设计哪些主要功能"></a>设计一个自己的打包工具需要设计哪些主要功能</h3><p>参考链接：<a href="https://blog.csdn.net/beauty5188/article/details/81510618" target="_blank" rel="noopener">前端打包工具</a></p>
+<h3 id="介绍webpack是什么？-有什么优势？"><a href="#介绍webpack是什么？-有什么优势？" class="headerlink" title="介绍webpack是什么？ 有什么优势？"></a>介绍webpack是什么？ 有什么优势？</h3><p>WebPack 是一款[模块加载器]兼[打包工具]，用于把各种静态资源（js/css/image等）作为模块来使用。</p>
+<p>WebPack 是一个模块打包工具，你可以使用 WebPack 管理你的模块依赖，并编绎输出模块们所需的静态文件。它能够很好地管理、打包 Web 开发中所用到的 HTML、JavaScript、CSS 以及各种静态文件（图片、字体等），让开发过程更加高效。对于不同类型的资源，webpack 有对应的模块加载器。webpack 模块打包器会分析模块间的依赖关系，最后 生成了优化且合并后的静态资源。</p>
+<p>WebPack 的优势：</p>
+<ul>
+<li>WebPack 同时支持 commonJS 和 AMD/CMD，方便代码迁移</li>
+<li>不仅仅能被模块化 JS ，还包括 CSS、Image 等</li>
+<li>能替代部分 grunt/gulp 的工作，如打包、压缩混淆、图片base64</li>
+<li>扩展性强，插件机制完善，特别是支持 React 热插拔的功能</li>
+</ul>
+<h3 id="webpack-的两大特色"><a href="#webpack-的两大特色" class="headerlink" title="webpack 的两大特色"></a>webpack 的两大特色</h3><ol>
+<li>code splitting（可以自动完成）</li>
+<li>loader 可以处理各种类型的静态文件，并且支持串联操作</li>
+</ol>
+<p>webpack 是以 commonJS 的形式来书写脚本滴，但对 AMD/CMD 的支持也很全面，方便旧项目进行代码迁移。</p>
+<p>webpack 具有 requireJs 和 browserify 的功能，但仍有很多自己的新特性：</p>
+<ol>
+<li>对 CommonJS 、 AMD 、ES6 的语法做了兼容</li>
+<li>对 js、css、图片等资源文件都支持打包</li>
+<li>串联式模块加载器以及插件机制，让其具有更好的灵活性和扩展性，例如提供对 CoffeeScript、ES6 的支持</li>
+<li>有独立的配置文件 webpack.config.js</li>
+<li>可以将代码切割成不同的 chunk，实现按需加载，降低了初始化时间</li>
+<li>支持 SourceUrls 和 SourceMaps，易于调试</li>
+<li>具有强大的 Plugin 接口，大多是内部插件，使用起来比较灵活</li>
+<li>webpack 使用异步 IO 并具有多级缓存。这使得 webpack 很快且在增量编译上更加快</li>
+</ol>
+<h3 id="平时如何管理你的项目？"><a href="#平时如何管理你的项目？" class="headerlink" title="平时如何管理你的项目？"></a>平时如何管理你的项目？</h3><ul>
+<li><p>先期团队必须确定好全局样式（globe.css），编码模式(utf-8) 等；</p>
+</li>
+<li><p>编写习惯必须一致（例如都是采用继承式的写法，单样式都写成一行）；</p>
+</li>
+<li><p>标注样式编写人，各模块都及时标注（标注关键样式调用的地方）；</p>
+</li>
+<li><p>页面进行标注（例如 页面 模块 开始和结束）；</p>
+</li>
+<li><p>CSS 跟 HTML 分文件夹并行存放，命名都得统一（例如 style.css）；</p>
+</li>
+<li><p>JS 分文件夹存放 命名以该 JS 功能为准的英文翻译。</p>
+</li>
+<li><p>图片采用整合的 images.png png8 格式文件使用 尽量整合在一起使用方便将来的管理</p>
+</li>
+</ul>
+<h3 id="项目开发经历了哪几个阶段"><a href="#项目开发经历了哪几个阶段" class="headerlink" title="项目开发经历了哪几个阶段"></a>项目开发经历了哪几个阶段</h3><ul>
+<li>需求分析及变更管理</li>
+<li>项目模型及业务流程分析</li>
+<li>系统分析及建模设计</li>
+<li>界面设计及代码开发</li>
+<li>系统测试，部署和文档编写</li>
+<li>维护</li>
+</ul>
+<h3 id="怎么提高首屏加载速度"><a href="#怎么提高首屏加载速度" class="headerlink" title="怎么提高首屏加载速度"></a>怎么提高首屏加载速度</h3><p>服务端渲染等</p>
+<h3 id="首屏、白屏时间如何计算？"><a href="#首屏、白屏时间如何计算？" class="headerlink" title="首屏、白屏时间如何计算？"></a>首屏、白屏时间如何计算？</h3><p>Performance 接口可以获取到当前页面中与性能相关的信息。<br><br>该类型的对象可以通过调用只读属性 Window.performance 来获得。<br><br>白屏时间：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">performance.timing.responseStart - performance.timing.navigationStart</span><br></pre></td></tr></table></figure>
+
+<p>首屏时间</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">window.onload = () =&gt; &#123;</span><br><span class="line">    new Date() - performance.timing.responseStart</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>解析：<a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Performance" target="_blank" rel="noopener">参考</a></p>
+<h3 id="requireJS的核心原理是什么？"><a href="#requireJS的核心原理是什么？" class="headerlink" title="requireJS的核心原理是什么？"></a>requireJS的核心原理是什么？</h3><p>每个模块所依赖模块都会比本模块预先加载</p>
+<h3 id="什么是-npm-？"><a href="#什么是-npm-？" class="headerlink" title="什么是 npm ？"></a>什么是 npm ？</h3><p>npm 是 Node.js 的模块管理和发布工具</p>
+<h3 id="什么是-WebKit-？"><a href="#什么是-WebKit-？" class="headerlink" title="什么是 WebKit ？"></a>什么是 WebKit ？</h3><ul>
+<li>WebKit 是一个开源的浏览器内核，由渲染引擎(WebCore)和JS解释引擎(JSCore)组成</li>
+<li>通常所说的 WebKit 指的是 WebKit(WebCore)，主要工作是进行 HTML/CSS 渲染</li>
+<li>WebKit 一直是 Safari 和 Chrome(之前) 使用的浏览器内核，后来 Chrome 改用Blink 内核</li>
+</ul>
+<h3 id="如何测试前端代码-知道-Unit-Test，BDD-TDD-么-怎么测试你的前端工程-mocha-jasmin"><a href="#如何测试前端代码-知道-Unit-Test，BDD-TDD-么-怎么测试你的前端工程-mocha-jasmin" class="headerlink" title="如何测试前端代码? 知道 Unit Test，BDD, TDD 么? 怎么测试你的前端工程(mocha, jasmin..)?"></a>如何测试前端代码? 知道 Unit Test，BDD, TDD 么? 怎么测试你的前端工程(mocha, jasmin..)?</h3><ul>
+<li>通过为前端代码编写单元测试(Unit Test)来测试前端代码</li>
+<li>Unit Test：一段用于测试一个模块或接口是否能达到预期结果的代码</li>
+<li>BDD：行为驱动开发 – 业务需求描述产出产品代码的开发方法</li>
+<li>TDD：测试驱动开发 – 单元测试用例代码产出产品代码的开发方法</li>
+<li>单元测试框架：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// mocha 示例</span></span><br><span class="line">describe(<span class="string">'Test add'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  it(<span class="string">'1 + 2 = 3'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      expect(add(<span class="number">1</span>, <span class="number">2</span>)).to.be.equal(<span class="number">3</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// jasmin 示例</span></span><br><span class="line">describe(<span class="string">'Test add'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    it(<span class="string">'1 + 2 = 3'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        expect(add(<span class="number">1</span>, <span class="number">2</span>)).toEqual(<span class="number">3</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="介绍你知道的前端模板引擎？"><a href="#介绍你知道的前端模板引擎？" class="headerlink" title="介绍你知道的前端模板引擎？"></a>介绍你知道的前端模板引擎？</h3><p>artTemplate, underscore, handlebars</p>
+<h3 id="什么是-Modernizr？-Modernizr-工作原理？"><a href="#什么是-Modernizr？-Modernizr-工作原理？" class="headerlink" title="什么是 Modernizr？ Modernizr 工作原理？"></a>什么是 Modernizr？ Modernizr 工作原理？</h3><p>Modernizr 是一个开源的 JavaScript 库，用于检测用户浏览器对 HTML5 与 CSS3 的支持情况</p>
+<h3 id="移动端最小触控区域是多大？"><a href="#移动端最小触控区域是多大？" class="headerlink" title="移动端最小触控区域是多大？"></a>移动端最小触控区域是多大？</h3><p>44 * 44 px</p>
+<h3 id="移动端的点击事件的延迟时间是多长，为什么会有延迟？-如何解决这个延时？"><a href="#移动端的点击事件的延迟时间是多长，为什么会有延迟？-如何解决这个延时？" class="headerlink" title="移动端的点击事件的延迟时间是多长，为什么会有延迟？ 如何解决这个延时？"></a>移动端的点击事件的延迟时间是多长，为什么会有延迟？ 如何解决这个延时？</h3><p>移动端 click 有 300ms 延迟，浏览器为了区分“双击”（放大页面）还是“单击”而设计</p>
+<p>解决方案：</p>
+<ul>
+<li>禁用缩放(对safari无效)</li>
+<li>使用指针事件(IE私有特性，且仅IE10+)</li>
+<li>使用 Zepto 的 tap 事件(有点透BUG)</li>
+<li>使用 FastClick 插件(体积大[压缩后8k])</li>
+</ul>
+<h3 id="什么是函数式编程？"><a href="#什么是函数式编程？" class="headerlink" title="什么是函数式编程？"></a>什么是函数式编程？</h3><p>函数式编程是一种”编程范式”，主要思想是<strong>把运算过程尽量写成一系列嵌套的函数调用</strong></p>
+<ul>
+<li>例如：var result = subtract(multiply(add(1,2), 3), 4);</li>
+</ul>
+<p>函数式编程的特点：</p>
+<ul>
+<li>函数核心化：函数可以作为变量的赋值、另一函数的参数、另一函数的返回值</li>
+<li>只用“表达式”，不用“语句”：要求每一步都是单纯的运算，都必须有返回值</li>
+<li>没有”副作用”：所有功能只为返回一个新的值，不修改外部变量</li>
+<li>引用透明：运行不依赖于外部变量，只依赖于输入的参数</li>
+</ul>
+<p>函数式编程的优点：</p>
+<ul>
+<li>代码简洁，接近自然语言，易于理解</li>
+<li>便于维护，利于测试、除错、组合</li>
+<li>易于“并发编程“，不用担心一个线程的数据，被另一个线程修改</li>
+<li>可“热升级”代码，在运行状态下直接升级代码，不需要重启，也不需要停机</li>
+</ul>
+<h3 id="什么是函数柯里化Currying-？"><a href="#什么是函数柯里化Currying-？" class="headerlink" title="什么是函数柯里化Currying)？"></a>什么是函数柯里化Currying)？</h3><p>通常也称部分求值，含义是给函数分步传递参数，每次递参部分应用参数，并返回一个更具体的函数，继续接受剩余参数。期间会连续返回具体函数，直至返回最后结果。因此，函数柯里化是逐步传参，逐步缩小函数的适用范围，逐步求解的过程。</p>
+<p>柯里化的<strong>作用</strong>：延迟计算；参数复用；动态创建函数；</p>
+<p>柯里化的<strong>缺点</strong>：函数柯里化会产生开销（函数嵌套，比普通函数占更多内存），但性能瓶颈首先来自其它原因（DOM 操作等）</p>
+<h3 id="什么是依赖注入？"><a href="#什么是依赖注入？" class="headerlink" title="什么是依赖注入？"></a>什么是依赖注入？</h3><ul>
+<li>当一个类的实例依赖另一个类的实例时，自己不创建该实例，由IOC容器创建并注入给自己，因此称为依赖注入。</li>
+<li>依赖注入解决的就是如何有效组织代码依赖模块的问题</li>
+</ul>
+<h3 id="设计模式：什么是-singleton-factory-strategy-decorator？"><a href="#设计模式：什么是-singleton-factory-strategy-decorator？" class="headerlink" title="设计模式：什么是 singleton, factory, strategy, decorator？"></a>设计模式：什么是 singleton, factory, strategy, decorator？</h3><ul>
+<li>Singleton(单例)   一个类只有唯一实例，这个实例在整个程序中有一个全局的访问点</li>
+<li>Factory (工厂)    解决实列化对象产生重复的问题</li>
+<li>Strategy(策略)    将每一个算法封装起来，使它们还可以相互替换，让算法独立于使用</li>
+<li>Observer(观察者)  多个观察者同时监听一个主体，当主体对象发生改变时，所有观察者都将得到通知</li>
+<li>Prototype(原型)   一个完全初始化的实例，用于拷贝或者克隆</li>
+<li>Adapter(适配器)   将不同类的接口进行匹配调整，尽管内部接口不兼容，不同的类还是可以协同工作</li>
+<li>Proxy(代理模式)   一个充当过滤转发的对象用来代表一个真实的对象</li>
+<li>Iterator(迭代器)  在不需要直到集合内部工作原理的情况下，顺序访问一个集合里面的元素</li>
+<li>Chain of Responsibility(职责连)  处理请求组成的对象一条链，请求链中传递，直到有对象可以处理</li>
+</ul>
+<h3 id="什么是前端工程化？"><a href="#什么是前端工程化？" class="headerlink" title="什么是前端工程化？"></a>什么是前端工程化？</h3><p>前端工程化就是把一整套前端工作流程使用工具自动化完成</p>
+<p>前端开发基本流程：</p>
+<ul>
+<li>项目初始化：yeoman, FIS</li>
+<li>引入依赖包：bower, npm</li>
+<li>模块化管理：npm, browserify, Webpack</li>
+<li>代码编译：babel, sass, less</li>
+<li>代码优化(压缩/合并)：Gulp, Grunt</li>
+<li>代码检查：JSHint, ESLint</li>
+<li>代码测试：Mocha</li>
+</ul>
+<p>目前最知名的构建工具：Gulp, Grunt, npm + Webpack</p>
+<h3 id="介绍-Yeoman-是什么？"><a href="#介绍-Yeoman-是什么？" class="headerlink" title="介绍 Yeoman 是什么？"></a>介绍 Yeoman 是什么？</h3><p>Yeoman –前端开发脚手架工具，自动将最佳实践和工具整合起来构建项目骨架</p>
+<p>Yeoman 其实是三类工具的合体，三类工具各自独立：</p>
+<ul>
+<li>yo — 脚手架，自动生成工具（相当于一个粘合剂，把 Yeoman 工具粘合在一起）</li>
+<li>Grunt、gulp — 自动化构建工具 （最初只有grunt，之后加入了gulp）</li>
+<li>Bower、npm — 包管理工具 （原来是bower，之后加入了npm）</li>
+</ul>
+<h3 id="Backbone-是什么？"><a href="#Backbone-是什么？" class="headerlink" title="Backbone 是什么？"></a>Backbone 是什么？</h3><p>Backbone 是一个基于 jquery 和 underscore 的前端(MVC)框架</p>
+<h3 id="AngularJS-是什么？"><a href="#AngularJS-是什么？" class="headerlink" title="AngularJS 是什么？"></a>AngularJS 是什么？</h3><p>AngularJS 是一个完善的前端 MVVM 框架，包含模板、数据双向绑定、路由、模块化、服务、依赖注入等</p>
+<p>AngularJS 由 Google 维护，用来协助大型单一页面应用开发。</p>
+<h3 id="如何评价AngularJS和BackboneJS"><a href="#如何评价AngularJS和BackboneJS" class="headerlink" title="如何评价AngularJS和BackboneJS"></a>如何评价AngularJS和BackboneJS</h3><ul>
+<li>backbone具有依赖性，依赖underscore.js。Backbone + Underscore + jQuery(or Zepto)就比一个AngularJS 多出了2 次HTTP请求.</li>
+<li>Backbone的Model没有与UI视图数据绑定，而是需要在View中自行操作DOM来更新或读取UI数据。AngularJS与此相反，Model直接与UI视图绑定，Model与UI视图的关系，通过directive封装，AngularJS内置的通用directive，就能实现大部分操作了，也就是说，基本不必关心Model与UI视图的关系，直接操作Model就行了，UI视图自动更新</li>
+<li>AngularJS的directive，你输入特定数据，他就能输出相应UI视图。是一个比较完善的前端MVW框架，包含模板，数据双向绑定，路由，模块化，服务，依赖注入等所有功能，模板功能强大丰富，并且是声明式的，自带了丰富的 Angular 指令</li>
+</ul>
+<h3 id="Meteor-是什么"><a href="#Meteor-是什么" class="headerlink" title="Meteor 是什么"></a>Meteor 是什么</h3><ul>
+<li>Meteor 是一个全栈开发框架，基础构架是 Node.JS + MongoDB，并把延伸到了浏览器端。</li>
+<li>Meteor 统一了服务器端和客户端的数据访问，使开发者可以轻松完成全栈式开发工作。</li>
+</ul>
+<h3 id="前端异常监控"><a href="#前端异常监控" class="headerlink" title="前端异常监控"></a>前端异常监控</h3><p><strong>一：前端异常监控系统的构建目标</strong></p>
+<p>在对被监控页面无侵入的前提下，提供7*24小时全天候的监控任务，第一时间发现“裸奔”、“半裸奔”页面或是有JavaScript异常抛出的页面，并给网站前端负责人提供短信、邮件等方式的报警服务。</p>
+<p>可以说，前端异常监控系统主要是解决两大异常情况：a. 页面上有javascript异常  b. 各种因素造成的页面的样式丢失。我先分别介绍下两种这两种异常的解决思路：</p>
+<p><strong>二：JavaScript的异常监控</strong></p>
+<p>由于客户端浏览器环境的不同，在开发环境中能够工作的代码，并非就能够在用户的电脑上正常运行，各种畸形浏览器造成的问题弄得我们很头大，如果能像后端开发那样可以随时地查看服务器端错误日志就好了！可为什么不呢？</p>
+<p>JavaScript语言自身就提供了try catch的异常处理语法，我们假以利用的话，就能够在增强前端应用鲁棒性的同时，又可以把捕获到的异常抛送给前端异常监控系统，以错误日志的形式记录到数据库中。</p>
+<p>给应用添加异常处理功能，我们是可以充分发挥javascript语言是动态语言这一优势的。我可不想为了添加异常处理而在代码中写N多的try-catch语句。 我的思路是：通过JavaScript类模块在应用中注册的时候，遍历类模块中的每个函数，然后统一的加上try-catch处理，这样前端里面的所有函数就都在异常处理的范围之内了。怎么样，是不是要比Java等静态语言cool很多？ 代码示例如下：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="http://images.51cto.com/files/uploadimg/20121105/1405330.jpg" alt="构建web前端异常监控系统–FdSafe" title>
+                </div>
+                <div class="image-caption">构建web前端异常监控系统–FdSafe</div>
+            </figure>
+
+<p>有了以上的全局异常处理函数之后，解决线上的JavaScript异常就是小菜一碟，只需要定义好错误message的格式，并在catch语句中向异常监控系统的固定接口发送请求即可。我们可以在错误消息中发送关于错误的浏览器信息，JS模块信息，函数信息，或具体的错误消息等，要传送哪些信息全看你自己的需要。在FdSafe异常监控系统中，我们传输了如下错误信息：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="http://images.51cto.com/files/uploadimg/20121105/1405331.jpg" alt="构建web前端异常监控系统–FdSafe" title>
+                </div>
+                <div class="image-caption">构建web前端异常监控系统–FdSafe</div>
+            </figure>
+
+<p><strong>三：样式丢失的异常监控</strong></p>
+<p>如果你的页面在不该裸奔的时候突然裸奔了，那就是严重的可用性问题，需要前端同学在第一时间定位问题并迅速修复。引发“裸奔”的可能性很多，也许是CSS文件404了，也许是CSS文件@import url的问题，但是最终的表象只有一个，那就是页面样式突然发生极大改变。</p>
+<p>在fdsafe系统中，我们使用了图片对比的方法来探测线上页面发生“裸奔”的现象，原理上很简单：对于被监控页面的URL，我们让监控系统保留其前一天页面被浏览器渲染后的截图，然后让监控系统周期性的定时抓取线上页面的截图，两张图片做相似度对比，如果相似度差值超过一定的阈值，则会触发报警条件。</p>
+<p>页面的截图我们是使用QT的webkit内核渲染并截取的，当然也推荐使用selenium的浏览器截图功能。而图片相似度的算法很多，我们最终采用的是OpenCV中的cvCompareHist算法。</p>
+<p><strong>四：其它的异常监控</strong></p>
+<p>除了样式丢失及javascript异常之外，前端还是有很多其它异常可以通过系统来监控的，比如说JS、CSS文件的404错误，HTML源码的闭合异常，或JS、CSS文件的压缩异常等。fdSafe系统能够通过添加插件的方式来提供对不同异常的监控，然后统一汇总到异常日志中。</p>
+<p><strong>五：系统总体框架图</strong></p>
+<p>搭建前端的异常监控系统，自然也要体现我们前端的特色，后台的系统我们是基于NodeJS来实现的，它主要完成两个功能：</p>
+<p>1）定时抓取被监控页面的HTML源码，并分析是否存在页面样式丢失异常或是其它异常。</p>
+<p>2）接受来自用户浏览器发送的JavaScript异常。</p>
+<p>一旦异常发生，且超出设定的允许阈值，则触发报警条件，给负责人发送报警短信，系统原理图如下：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="http://images.51cto.com/files/uploadimg/20121105/1405332.jpg" alt="构建web前端异常监控系统–FdSafe" title>
+                </div>
+                <div class="image-caption">构建web前端异常监控系统–FdSafe</div>
+            </figure>
+
+
+
+<h3 id="Ascii、GBK、UTF、Unicode"><a href="#Ascii、GBK、UTF、Unicode" class="headerlink" title="Ascii、GBK、UTF、Unicode"></a>Ascii、GBK、UTF、Unicode</h3><p>Ascii（1 个字节 1 个字符）</p>
+<p>GBK 是国内的编码标准（汉字 2 个字节）</p>
+<p>Unicode 是国际编码标准（统一 2 个字节表示一个字符）</p>
+<p>UTF 是 Unicode 实现的另一个标准</p>
+<blockquote>
+<p>unicode 同样也不完美，这里就有两个的问题，一个是，如何才能区别 unicode 和 ascii？<br><br>由于”半角”英文符号只需要用到低 8 位，所以其高 8 位永远是 0，因此这种大气的方案在保存英文文本时会多浪费一倍的空间<br><br>unicode 在很长一段时间内无法推广，直到互联网的出现，为解决 unicode 如何在网络上传输的问题，于是面向传输的众多 UTF（UCS Transfer Format）标准出现了，顾名思义，UTF-8 就是每次 8 个位传输数据，而 UTF-16 就是每次 16 个位。UTF-8 就是在互联网上使用最广的一种 unicode 的实现方式，这是为传输而设计的编码，并使编码无国界，这样就可以显示全世界上所有文化的字符了。UTF-8 最大的一个特点，就是它是一种变长的编码方式。它可以使用 1~4 个字节表示一个符号，根据不同的符号而变化字节长度，当字符在 ASCII 码的范围时，就用一个字节表示，保留了 ASCII 字符一个字节的编码做为它的一部分，注意的是 unicode 一个中文字符占 2 个字节，而 UTF-8 一个中文字符占 3 个字节）。从 unicode 到 utf-8 并不是直接的对应，而是要过一些算法和规则来转换。</p>
+</blockquote>
+<p>解析：<a href="https://www.zhihu.com/question/23374078/answer/69732605" target="_blank" rel="noopener">参考</a></p>
+<p>请谈谈你对Node.js技术及其生态的理解，并举例说明你如何在实际项目中利用webpack、Vite等构建打包工具提高开发效率的。</p>
+<p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行时环境，它具有高效的异步 I/O 和事件驱动模型，适用于构建服务器端应用程序。其生态丰富，有许多常用的库和框架。</p>
+<p>在实际项目中，可以利用 webpack 或 Vite 等构建打包工具，将多个模块和资源打包成一个或多个文件，提高开发效率。例如，使用 webpack 的模块化和代码分割功能，按需加载模块，减少初始加载时间。Vite 则通过即时编译提供了更快速的开发体验。</p>
+<p>分享一次你独立开发前端项目的经验，特别是在技术架构设计、组件封装和维护方面的工作。你是如何确保项目的稳定交付的？</p>
+<p>在独立开发前端项目时，我注重技术架构的设计，选择合适的前端框架和工具。通过组件封装，提高代码复用性和可维护性。在维护方面，进行代码审查、测试和持续集成，确保项目稳定交付。例如，使用版本控制系统管理代码变更，及时修复 Bug，并定期更新文档，以便团队成员更好地理解和维护项目。</p>
+<p>请详细描述一次你使用ES6/ES7或TypeScript进行项目开发的经历，包括你是如何应用这些技术来解决具体问题的。</p>
+<p>在项目开发中，使用 ES6/ES7 的特性，如箭头函数、模板字符串和模块化，提高代码的可读性和简洁性。TypeScript 的静态类型检查和面向对象编程特性帮助我在开发过程中更早地发现错误，并构建更健壮的代码结构。例如，通过定义接口和类型注解，明确函数和变量的类型，从而提高代码的可维护性和可扩展性。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-03-29T16:16:26.000Z" itemprop="dateUpdated">2024-03-30 00:16:26</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/interview/qian-duan-gong-cheng-hua.html" target="_blank" rel="external">https://qw66.gitee.io/interview/qian-duan-gong-cheng-hua.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MVVM/">MVVM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端异常监控/">前端异常监控</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模块化/">模块化</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/interview/qian-duan-gong-cheng-hua.html&title=《前端工程化》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/interview/qian-duan-gong-cheng-hua.html&title=《前端工程化》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/interview/qian-duan-gong-cheng-hua.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端工程化》 — 秦伟博客&url=https://qw66.gitee.io/interview/qian-duan-gong-cheng-hua.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/interview/qian-duan-gong-cheng-hua.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/interview/qian-duan-bu-ju-dai-ma.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">前端布局代码</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/interview/qian-duan-jian-li.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">前端简历</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/interview/qian-duan-gong-cheng-hua.html&title=《前端工程化》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/interview/qian-duan-gong-cheng-hua.html&title=《前端工程化》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/interview/qian-duan-gong-cheng-hua.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端工程化》 — 秦伟博客&url=https://qw66.gitee.io/interview/qian-duan-gong-cheng-hua.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/interview/qian-duan-gong-cheng-hua.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACM0lEQVR42u3aS3KEMAxFUfa/aTLJLMF9nwRdhXwZUTQBHwaKPj4OfJzL4+pO/jT+t61DhgwZr2WQJV5d+fucdNHknHw+GTJk7MC4ev36fB1qP7x4uWi+NhkyZMhY30MCN1lu+l4ZMmTISBkodcOhXIYMGTI6RSxJAQmVFKsP1uIyZMh4IYN33b9//sh8Q4YMGa9inOHBg2k61Kyt5/eZMmTIGM3otNLWJSVP8lCBSj6NDBkyhjLSLQ58QTy94x/l8ooMGTK2YZBkLg2Rta1gfEjwT8CVIUPGOAZvyvMNE/dus+CjUBkyZExl9CcJPCDWksv1dRkyZOzASNvxnTFA2pJLm3QyZMiYyiAbs1Jwf6FpkSxDhozZDBIK+a9pkseHBOi6DBkyRjPSLQ7pkJK00vgYAOW5MmTIGMQgt3Y2YdQGn/GdMmTIGM1Ig2k6nkzL3VrDToYMGbMZtRdwKspJ+6mnDBkyNmDUEjUUxcMiNh4GyJAhYwMGwaQBt1OgtgpjGTJkbMZI077aEnlCGW+2kCFDxlAGD3NpUK4NJtPPJEOGjB0YR+ngiWOtAUeKZxkyZMxmnOFRGzCQwScPwR/+Y8iQIWMcoxbseGqYJo48iNdCtgwZMt7LIEE2LU35J1g//4adIzJkyBjEqO1euLe51imbZciQISNN12rbMtLEsRVwZciQMZqRNsXuHQlcPkeGDBkbMGrN/VqwJonmg+02GTJkvJBx16aKdGx571BThgwZQxk/WjR0csou+oYAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

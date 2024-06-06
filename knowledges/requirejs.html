@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>RequireJS | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="RequireJS,模块化,AMD规范">
+    <meta name="description" content="RequireJS是一个JavaScript文件和模块加载器，可视为模块管理工具。 为什么使用RequireJS呢？ 有效防止命名冲突 声明不同JS文件之间的依赖 JS代码以模块化的方式组织  RequireJS为帮助解决前端代码库的组织难题，提供了两种解决思路：  模块化组织JS文件 异步加载JS文件  你用过 require.js 吗？它有什么特性？（1）实现 js 文件的异步加载，避免网页失">
+<meta name="keywords" content="RequireJS,模块化,AMD规范">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RequireJS">
+<meta property="og:url" content="https://qw66.gitee.io/knowledges/requirejs.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="RequireJS是一个JavaScript文件和模块加载器，可视为模块管理工具。 为什么使用RequireJS呢？ 有效防止命名冲突 声明不同JS文件之间的依赖 JS代码以模块化的方式组织  RequireJS为帮助解决前端代码库的组织难题，提供了两种解决思路：  模块化组织JS文件 异步加载JS文件  你用过 require.js 吗？它有什么特性？（1）实现 js 文件的异步加载，避免网页失">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2023-04-14T17:01:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="RequireJS">
+<meta name="twitter:description" content="RequireJS是一个JavaScript文件和模块加载器，可视为模块管理工具。 为什么使用RequireJS呢？ 有效防止命名冲突 声明不同JS文件之间的依赖 JS代码以模块化的方式组织  RequireJS为帮助解决前端代码库的组织难题，提供了两种解决思路：  模块化组织JS文件 异步加载JS文件  你用过 require.js 吗？它有什么特性？（1）实现 js 文件的异步加载，避免网页失">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">RequireJS</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">RequireJS</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-10-28T11:45:42.000Z" itemprop="datePublished" class="page-time">
+  2019-10-28
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么使用RequireJS呢？"><span class="post-toc-number">1.</span> <span class="post-toc-text">为什么使用RequireJS呢？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#你用过-require-js-吗？它有什么特性？"><span class="post-toc-number">2.</span> <span class="post-toc-text">你用过 require.js 吗？它有什么特性？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#requireJS-的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何-缓存的？）"><span class="post-toc-number">3.</span> <span class="post-toc-text">requireJS 的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何 缓存的？）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#让你自己设计实现一个-requireJS，你会怎么做？"><span class="post-toc-number">4.</span> <span class="post-toc-text">让你自己设计实现一个 requireJS，你会怎么做？</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JavaScript模块化编程"><span class="post-toc-number"></span> <span class="post-toc-text">JavaScript模块化编程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#模块的原始写法"><span class="post-toc-number">1.</span> <span class="post-toc-text">模块的原始写法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#模块的对象写法"><span class="post-toc-number">2.</span> <span class="post-toc-text">模块的对象写法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#立即执行函数写法"><span class="post-toc-number">3.</span> <span class="post-toc-text">立即执行函数写法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#放大模式"><span class="post-toc-number">4.</span> <span class="post-toc-text">放大模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#宽放大模式"><span class="post-toc-number">5.</span> <span class="post-toc-text">宽放大模式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#输入全局变量"><span class="post-toc-number">6.</span> <span class="post-toc-text">输入全局变量</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#AMD规范"><span class="post-toc-number"></span> <span class="post-toc-text">AMD规范</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CommonJS"><span class="post-toc-number">1.</span> <span class="post-toc-text">CommonJS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AMD"><span class="post-toc-number">2.</span> <span class="post-toc-text">AMD</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#RequireJS"><span class="post-toc-number"></span> <span class="post-toc-text">RequireJS</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#加载资源文件"><span class="post-toc-number">1.</span> <span class="post-toc-text">加载资源文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#主模块"><span class="post-toc-number">2.</span> <span class="post-toc-text">主模块</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#RequireJS常用方法"><span class="post-toc-number">3.</span> <span class="post-toc-text">RequireJS常用方法</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#RequireJS源码解析"><span class="post-toc-number"></span> <span class="post-toc-text">RequireJS源码解析</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#RequireJS工作流程"><span class="post-toc-number">1.</span> <span class="post-toc-text">RequireJS工作流程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#RequireJS可分为三部分"><span class="post-toc-number">2.</span> <span class="post-toc-text">RequireJS可分为三部分</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-knowledges/RequireJS"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">RequireJS</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-10-28 19:45:42" datetime="2019-10-28T11:45:42.000Z"  itemprop="datePublished">2019-10-28</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>RequireJS是一个JavaScript文件和模块加载器，可视为模块管理工具。</p>
+<h3 id="为什么使用RequireJS呢？"><a href="#为什么使用RequireJS呢？" class="headerlink" title="为什么使用RequireJS呢？"></a>为什么使用RequireJS呢？</h3><ul>
+<li>有效防止命名冲突</li>
+<li>声明不同JS文件之间的依赖</li>
+<li>JS代码以模块化的方式组织</li>
+</ul>
+<p>RequireJS为帮助解决前端代码库的组织难题，提供了两种解决思路：</p>
+<ul>
+<li>模块化组织JS文件</li>
+<li>异步加载JS文件</li>
+</ul>
+<h3 id="你用过-require-js-吗？它有什么特性？"><a href="#你用过-require-js-吗？它有什么特性？" class="headerlink" title="你用过 require.js 吗？它有什么特性？"></a>你用过 require.js 吗？它有什么特性？</h3><p>（1）实现 js 文件的异步加载，避免网页失去响应；<br>（2）管理模块之间的依赖性，便于代码的编写和维护。</p>
+<h3 id="requireJS-的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何-缓存的？）"><a href="#requireJS-的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何-缓存的？）" class="headerlink" title="requireJS 的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何 缓存的？）"></a>requireJS 的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何 缓存的？）</h3><p>核心是 js 的加载模块，<strong>通过正则匹配模块以及模块的依赖关系</strong>，保证文件加载的先后顺序，根据文件的路径对加载过的文件做了缓存</p>
+<h3 id="让你自己设计实现一个-requireJS，你会怎么做？"><a href="#让你自己设计实现一个-requireJS，你会怎么做？" class="headerlink" title="让你自己设计实现一个 requireJS，你会怎么做？"></a>让你自己设计实现一个 requireJS，你会怎么做？</h3><p>核心是实现 js 的加载模块，维护 js 的依赖关系，控制好文件加载的先后顺序</p>
+<h2 id="JavaScript模块化编程"><a href="#JavaScript模块化编程" class="headerlink" title="JavaScript模块化编程"></a>JavaScript模块化编程</h2><p>JavaScript模块化编程目的是为了让开发者仅需实现核心的业务逻辑，其他都加载他人已写好的模块。但是JavaScript并不是一种模块化的编程语言，虽然ECMAScript6中间正式支持类和模块。但对于之前的版本实际上是不支持类（class），也就更不用说模块（module）。</p>
+<p>什么是模块呢？模块是实现特定功能的一组方法。</p>
+<h3 id="模块的原始写法"><a href="#模块的原始写法" class="headerlink" title="模块的原始写法"></a>模块的原始写法</h3><p>将不同函数以及记录状态的变量放在一起，算是一个模块。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn1</span>(<span class="params"></span>)</span>&#123;...&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">fn2</span>(<span class="params"></span>)</span>&#123;...&#125;</span><br></pre></td></tr></table></figure>
+
+<p>缺点：污染全局变量，无法保证与其他模块发生变量命名冲突，而且模块成员之间看不出直接关系。</p>
+<h3 id="模块的对象写法"><a href="#模块的对象写法" class="headerlink" title="模块的对象写法"></a>模块的对象写法</h3><p>将模块定义为一个对象，所有模块成员都放在对象里面。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//将属性和操作都封装在对象中</span></span><br><span class="line"><span class="keyword">var</span> <span class="built_in">module</span> = <span class="keyword">new</span> <span class="built_in">Object</span>(&#123;</span><br><span class="line">  _prop:<span class="number">0</span>,</span><br><span class="line">  fn1:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;...&#125;,</span><br><span class="line">  fn2:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;...&#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 使用时直接调用对象的属性</span></span><br><span class="line"><span class="built_in">module</span>.fn1();</span><br></pre></td></tr></table></figure>
+
+<p>缺点：暴露了模块成员，内部状态可被外部改写。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span>._prop = <span class="number">100</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="立即执行函数写法"><a href="#立即执行函数写法" class="headerlink" title="立即执行函数写法"></a>立即执行函数写法</h3><p>立即执行函数（IIFE, Immediately-Invoked Function Expression）可达到不暴露私有成员的目的。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">module</span> = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> _prop = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">var</span> fn1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;...&#125;;</span><br><span class="line">  <span class="keyword">var</span> fn2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;...&#125;;</span><br><span class="line">  <span class="keyword">return</span> &#123;<span class="attr">fn1</span>:fn1, <span class="attr">fn2</span>:fn2&#125;;</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
+
+<h3 id="放大模式"><a href="#放大模式" class="headerlink" title="放大模式"></a>放大模式</h3><p>如果一个模块很大，必须分成几个部分，或者是一个模块需要继承另一个模块，此时就有必要采用放大模式（augmentation）。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">module</span> = (<span class="function"><span class="keyword">function</span>(<span class="params">mod</span>)</span>&#123;</span><br><span class="line">  mod.fn = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;...&#125;;</span><br><span class="line">  <span class="keyword">return</span> mod;</span><br><span class="line">&#125;)(<span class="built_in">module</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="宽放大模式"><a href="#宽放大模式" class="headerlink" title="宽放大模式"></a>宽放大模式</h3><p>浏览器环境中模块各部分通常是从网上获取的，有时不知道那个部分会首先加载。采用放大模式，第一个执行的部分可能加载一个不存在的空对象，此时需采用“宽放大模式（Loose Augmentation）”。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">module</span> = (<span class="function"><span class="keyword">function</span>(<span class="params">mod</span>)</span>&#123;</span><br><span class="line">  mod.fn = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;...&#125;;</span><br><span class="line">  <span class="keyword">return</span> mod;</span><br><span class="line">&#125;)(<span class="built_in">window</span>.module || &#123;&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="输入全局变量"><a href="#输入全局变量" class="headerlink" title="输入全局变量"></a>输入全局变量</h3><p>独立性是模块的重要特点，模块内部最好不要与程序其他部分直接交互。为了在模块内调用全局变量，必须显式地将其他变量输入模块。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="built_in">module</span> = (<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;</span><br><span class="line">  </span><br><span class="line">&#125;)(jQuery);</span><br></pre></td></tr></table></figure>
+
+<h2 id="AMD规范"><a href="#AMD规范" class="headerlink" title="AMD规范"></a>AMD规范</h2><p>为什么模块很重要呢？如何规范地使用模块呢？</p>
+<p>因为有了模块就可很方便地使用别人的代码，想要什么样的功能就可加载什么模块。不过前提是大家必须以同样的方式编写模块。而JS模块目前还没有官方规范，通行的JS模块规范有2种方式：CommonJS和AMD。</p>
+<h3 id="CommonJS"><a href="#CommonJS" class="headerlink" title="CommonJS"></a>CommonJS</h3><p>老实说在浏览器环境下，没有模块并不是特别大的问题，毕竟网页程序的复杂性有限。但对于服务端，一定要有模块，与操作系统和其他应用程序交互，否则根本无法编程。</p>
+<p>2009年，美国程序员Ryan Dahl创建了NodeJS项目，将JS用于服务端编程。由此标志着JS模块化编程的正式诞生。</p>
+<p>NodeJS的模块系统是参照CommonJS规范实现的，在CommonJS中有一个全局方法<code>require()</code>，用于加载模块。</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> math = require(<span class="string">"math"</span>);</span><br><span class="line">math.<span class="keyword">add</span>(<span class="number">1</span>, <span class="number">2</span>);</span><br></pre></td></tr></table></figure>
+
+<p>自从有了JS服务端模块以后，对于客户端模块，如何做到兼容，使得一个模块不用修改就可以在服务端和客户端浏览器上都能运行呢？由于一个重大的局限，使得CommonJS规范不适用于浏览器环境。问题是对于服务器而言模块都放在本地，可同步加载等待时间只是硬盘读取时间。但是当浏览器中使用服务端的模块时，等待时间取决于网速快慢，长时间的等待会造成浏览器处于“假死”状态。</p>
+<p>因此浏览器端的模块不能采用“同步加载（synchronous）”，只能采用“异步加载（asynchronous）”方式，这就是AMD规范诞生的背景。</p>
+<h3 id="AMD"><a href="#AMD" class="headerlink" title="AMD"></a>AMD</h3><p>AMD(Asynchronous Module Definition)异步模块加载，模块加载不影响后续语句的执行。所有依赖于模块的语句都定义在一个回调函数中，等到加载完成后，回调函数才会执行。</p>
+<p>AMD也采用了<code>require()</code>语句加载模块，不同于CommonJS的是，它要求两个参数。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// module参数为一个数组，里面的成员是要加载的模块</span></span><br><span class="line"><span class="comment">// callback参数是模块加载成功后执行的回调函数</span></span><br><span class="line"><span class="built_in">require</span>([<span class="built_in">module</span>], callback)</span><br><span class="line"></span><br><span class="line"><span class="comment">// math模块与math.add()加载不是同步的，浏览器不会发生假死，因此AMD比较适合浏览器环境。</span></span><br><span class="line"><span class="built_in">require</span>([<span class="string">"math"</span>], <span class="function"><span class="keyword">function</span>(<span class="params">math</span>)</span>&#123;</span><br><span class="line">  math.add(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="RequireJS"><a href="#RequireJS" class="headerlink" title="RequireJS"></a>RequireJS</h2><p>早期JS代码都会写在一个文件中，仅需加载一个文件即可。后来代码越来越多，必须分割成多个文件，依次加载。问题是这种加载的方式，浏览器会停止页面渲染，加载文件越多，网页失去响应的时间越长。另外JS文件之间存在依赖关系，必须严格保证加载顺序。当依赖关系非常复杂的时候，代码的编写和维护变得异常困难。</p>
+<p>RequireJS的诞生是为了解决这两个问题：</p>
+<ul>
+<li>实现JS文件的异步加载避免页面失去响应</li>
+<li>管理模块之间的依赖关系，便于代码编写和维护。</li>
+</ul>
+<h3 id="加载资源文件"><a href="#加载资源文件" class="headerlink" title="加载资源文件"></a>加载资源文件</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.bootcss.com/require.js/2.3.5/require.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在引入<code>require.js</code>文件之后，整个<code>windows</code>对象就有<code>require()</code>方法。可通过<code>require()</code>方法来加载其他JS文件。RequireJS的入口是引入时指定的<code>data-main</code>属性，在RequireJS引入后，会自动执行指向<code>data-main</code>属性所指定的入口文件。<code>data-main=&quot;js/main&quot;</code>表示让RequireJS去<code>js</code>目录下寻找<code>main.js</code>文件，默认<code>main.js</code>是项目全局配置文件。</p>
+<p>由于引入RequireJS文件本身可能会造成页面失去响应，解决的方式可将其放在网页底部加载，或使用延迟加载。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./assets/scripts/require-2.3.5.js"</span> <span class="attr">data-main</span>=<span class="string">"js/main"</span> <span class="attr">async</span>=<span class="string">"true"</span> <span class="attr">defer</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>async=&quot;true&quot;</code>的作用和jQuery中AJAX的<code>async=true</code>的目的一样，表示一边加载RequireJS一边执行它。如果设置为<code>false</code>则表示等待RequireJS完全加载完成后才执行，这种方式的缺陷是在网络延迟较大时页面会出现空白。如果<code>script</code>标签不再<code>head</code>中而在页面尾部，则不会出现空白现象。另外，IE并不支持<code>async</code>属性，仅支持<code>defer</code>属性。</p>
+<h3 id="主模块"><a href="#主模块" class="headerlink" title="主模块"></a>主模块</h3><p><code>data-main</code>加载的是主模块，意思是页面的入口，类似C语言的<code>main()</code>函数，所有代码从此处开始运行。</p>
+<p>RequireJS以一个相对于<code>baseUrl</code>的地址来加载所有代码，页面顶层``标签内含有一个特殊的属性<code>data-main</code>，RequireJS使用它来启动脚本加载过程，<code>baseUrl</code>一般设置到该属性相一致的目录。RequireJS目的是鼓励代码模块化，鼓励在使用脚本时以<code>module ID</code>替代 URL 地址。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ vim index.html</span><br><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>app<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"./js/require-2.3.5.js"</span> <span class="attr">data-main</span>=<span class="string">"js/main"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>baseUrl</code>可通过<code>requirejs.config</code>手动设置，若没有显式指定<code>config</code>及<code>data-main</code>，则默认的<code>baseUrl</code>为包含RequireJS的那个HTML页面的所属目录。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ vim js/main.js</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * RequireJS全局配置文件</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">requirejs.config(&#123;</span><br><span class="line">    <span class="comment">//设置项目路径，项目会以baseUrl作为相对路径去查找模块文件</span></span><br><span class="line">    baseUrl:<span class="string">"./js"</span>,</span><br><span class="line">    <span class="comment">//预加载JS文件的配置项，默认可不用添加.js后缀</span></span><br><span class="line">    paths:&#123;</span><br><span class="line">        <span class="comment">//RequireJS默认假定所有的依赖资源都是JS脚本，因此无需再module ID上再加上js后缀。</span></span><br><span class="line">        jquery:<span class="string">"../scripts/jquery-3.3.1"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>正常情况下，主模块是依赖于其他模块的，此时就要使用AMD规范定义的<code>require()</code>函数。</p>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">require</span>([<span class="built_in">module</span>], <span class="function"><span class="keyword">function</span>(<span class="params">module</span>)</span>&#123;...&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * RequireJS全局配置文件</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">requirejs.config(&#123;</span><br><span class="line">    <span class="comment">//设置项目路径，项目会以baseUrl作为相对路径去查找模块文件</span></span><br><span class="line">    baseUrl:<span class="string">"./js"</span>,</span><br><span class="line">    <span class="comment">//预加载JS文件的配置项，默认可不用添加.js后缀</span></span><br><span class="line">    paths:&#123;</span><br><span class="line">        <span class="comment">//RequireJS默认假定所有的依赖资源都是JS脚本，因此无需再module ID上再加上js后缀。</span></span><br><span class="line">        jquery:<span class="string">"https://cdn.bootcss.com/jquery/3.3.1/jquery"</span>,</span><br><span class="line">        bootstrap:<span class="string">"https://cdn.bootcss.com/bootstrap/4.1.1/js/bootstrap"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">requirejs([<span class="string">'jquery'</span>, <span class="string">'bootstrap'</span>],<span class="function"><span class="keyword">function</span>(<span class="params">$, undefined</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>RequireJS要求每个模块是一个的单独的JS文件，如果加载多个模块会发出多次HTTP请求，会影响页面的加载速度。</p>
+<p>RequireJS加载的模块采用AMD规范，也就是说模块必须按照AMD的规定来书写。具体说来模块必须采用特定的<code>define()</code>函数来定义，如果一个模块不依赖其他模块，可直接定义在<code>define()</code>函数之中。</p>
+<p>但是实际上，虽然部分流行的函数库符合AMD规范，但更多的库并不符合。RequireJS如何加载非规范的模块呢？在使用<code>require()</code>之前，需在<code>require.config()</code>函数中定义非规范模块的特征。</p>
+<p><code>require.config()</code>接收一个配置对象，此对象除了<code>paths</code>属性之外，还有一个<code>shim</code>属性，专门用来配置不兼容的模块。每个模块需要定义<code>exports</code>值即输出的变量名，表明这个模块外部调用名称。其次<code>deps</code>数组属性表明该模块的依赖性。</p>
+<h3 id="RequireJS常用方法"><a href="#RequireJS常用方法" class="headerlink" title="RequireJS常用方法"></a>RequireJS常用方法</h3><ul>
+<li><code>requirejs.config()</code></li>
+<li><code>require()</code></li>
+<li><code>define()</code></li>
+</ul>
+<h2 id="RequireJS源码解析"><a href="#RequireJS源码解析" class="headerlink" title="RequireJS源码解析"></a>RequireJS源码解析</h2><h3 id="RequireJS工作流程"><a href="#RequireJS工作流程" class="headerlink" title="RequireJS工作流程"></a>RequireJS工作流程</h3><ol>
+<li>载入模块</li>
+<li>通过模块名解析出模块信息并计算出URL</li>
+<li>通过创建<code>script</code>的形式将模块加载到页面</li>
+<li>判断被加载脚本若存在依赖则加载，若不存在则直接执行<code>factory()</code>。</li>
+<li>等待所有脚本都加载完毕后执行回调函数</li>
+</ol>
+<figure class="highlight jsx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义全局变量</span></span><br><span class="line"><span class="keyword">var</span> requirejs,<span class="built_in">require</span>,define;</span><br><span class="line"><span class="comment">// 自执行函数</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">global, setTimeout</span>)</span>&#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">&#125;)(<span class="keyword">this</span>, (<span class="keyword">typeof</span> setTimeout===<span class="string">'undefined'</span>?<span class="literal">undefined</span>:setTimeout));</span><br></pre></td></tr></table></figure>
+
+<h3 id="RequireJS可分为三部分"><a href="#RequireJS可分为三部分" class="headerlink" title="RequireJS可分为三部分"></a>RequireJS可分为三部分</h3><ol>
+<li>定义全局变量和帮助函数</li>
+<li>模块加载核心部分</li>
+<li>定义<code>require</code>和<code>define</code>方法以及项目入口</li>
+</ol>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2023-04-14T17:01:50.000Z" itemprop="dateUpdated">2023-04-15 01:01:50</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/knowledges/requirejs.html" target="_blank" rel="external">https://qw66.gitee.io/knowledges/requirejs.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AMD规范/">AMD规范</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RequireJS/">RequireJS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/模块化/">模块化</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/requirejs.html&title=《RequireJS》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/requirejs.html&title=《RequireJS》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/requirejs.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《RequireJS》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/requirejs.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/requirejs.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/knowledges/react.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">React</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/knowledges/typescript.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">TypeScript</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/requirejs.html&title=《RequireJS》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/requirejs.html&title=《RequireJS》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/requirejs.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《RequireJS》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/requirejs.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/requirejs.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJ0lEQVR42u3aQXLDIAwF0Nz/0u5Mt6ndL8leGB6rjJNiHgsVIX0+8Th+x/zb78/XT24eGBgYr2UclyN5wffzs3muAdfU6zkxMDB2YCSBMg+dSSDOg3IU4jEwMDCKwTHflDz4YmBgYOSMPJfMGUlYx8DAwKgGwV5q2gvuN+fiGBgYL2TclWQ+8fnB+gYGBsZLGEdxJDNUi5F5eD1dFQYGxtKMZClJmjo5UE56Kgo7ioGBsQTjum2iCssXUQ3lp2/EwMDYhpGH1OrBMd+mZoETAwNjUUYSzq7DaH4c7JUty5UNDAyMpRm99oheits7gJ6uBAMDYwNG7yqt2ngxL46ePsHAwFiacTbdpAGifLCL15D8HgMDYz1G8mdJ8nnXwbHX94WBgbE2o1dczAuf1ZBdbdfAwMDYh1Ft86oGzbvC6z9HSQwMjEUZ88v6PO2s9oDkRU0MDIwdGPnxrvq8d0lXLqBiYGBswLjr4n7e8pVvLgYGxj6MybXavPGrmvpGuTgGBsZyjN4hb14SyGeIwjcGBsY2jGpg7RUVJk0YhSQWAwNjIUbvin9+fKxmoMnWY2BgrMo4imMSUvPNyv8NYGBg7MDIR/KyXjI8KQxgYGDsw+gF2WTpyZzVBjIMDIydGb0iYp7KFhYUJ7FRHoyBgbEZY5KC9ooBhQQYAwMDI2726jVeVNl//B4DA2MDxqQYMDnYVa/kMDAw9mRM2ime6M66d+MwMDBezvgBUhPWLDZnQmgAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

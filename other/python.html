@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>python | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="python">
+    <meta name="description" content="安装Python你可以从Python官方网站（https://www.python.org/downloads/）下载并安装Python。确保下载适合你操作系统的版本。如 Windows installer (64-bit)  特别要注意勾上 Add Python 3.5 to PATH，然后“lnstall Now”即可完成安装，默认会安装到 C：\Python35 目录下。 安装完成后， 打开">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python">
+<meta property="og:url" content="https://qw66.gitee.io/other/python.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="安装Python你可以从Python官方网站（https://www.python.org/downloads/）下载并安装Python。确保下载适合你操作系统的版本。如 Windows installer (64-bit)  特别要注意勾上 Add Python 3.5 to PATH，然后“lnstall Now”即可完成安装，默认会安装到 C：\Python35 目录下。 安装完成后， 打开">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2024-02-26T03:37:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="python">
+<meta name="twitter:description" content="安装Python你可以从Python官方网站（https://www.python.org/downloads/）下载并安装Python。确保下载适合你操作系统的版本。如 Windows installer (64-bit)  特别要注意勾上 Add Python 3.5 to PATH，然后“lnstall Now”即可完成安装，默认会安装到 C：\Python35 目录下。 安装完成后， 打开">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">python</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">python</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2024-02-26T01:44:06.000Z" itemprop="datePublished" class="page-time">
+  2024-02-26
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/其他/">其他</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装Python"><span class="post-toc-number">1.</span> <span class="post-toc-text">安装Python</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#文件批量按日期命名"><span class="post-toc-number">2.</span> <span class="post-toc-text">文件批量按日期命名</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#打开命令行或终端"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">打开命令行或终端</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#导航到脚本所在目录"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">导航到脚本所在目录</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#运行脚本"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">运行脚本</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#等待脚本执行完成"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">等待脚本执行完成</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#注意事项"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">注意事项</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-other/python"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">python</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2024-02-26 09:44:06" datetime="2024-02-26T01:44:06.000Z"  itemprop="datePublished">2024-02-26</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/其他/">其他</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="安装Python"><a href="#安装Python" class="headerlink" title="安装Python"></a>安装Python</h3><p>你可以从Python官方网站（<a href="https://www.python.org/downloads/）下载并安装Python。确保下载适合你操作系统的版本。如" target="_blank" rel="noopener">https://www.python.org/downloads/）下载并安装Python。确保下载适合你操作系统的版本。如</a> <a href="https://www.python.org/ftp/python/3.12.2/python-3.12.2-amd64.exe" target="_blank" rel="noopener">Windows installer (64-bit)</a> </p>
+<p>特别要注意勾上 Add Python 3.5 to PATH，然后“lnstall Now”即可完成安装，默认会安装到 C：\Python35 目录下。</p>
+<p>安装完成后， 打开命令提示符窗口（方法是点击“开始”-“运行”-输入：“cmd”），敲入 Python 后，会出现“Python 3.11.0”等内容。</p>
+<h3 id="文件批量按日期命名"><a href="#文件批量按日期命名" class="headerlink" title="文件批量按日期命名"></a>文件批量按日期命名</h3><p>文件批量按日期命名可以通过脚本或命令行工具来实现。下面是一个使用Python脚本的示例，该脚本将指定目录下的所有文件按照日期进行重命名。</p>
+<p>使用你选择的代码编辑器或IDE创建一个新文件<code>rename_files_by_date.py</code>，将下面Python代码复制粘贴进去。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os  </span><br><span class="line"><span class="keyword">import</span> datetime  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 设置要重命名文件的目录  </span></span><br><span class="line">directory = <span class="string">r"D:\test\images万贯"</span>  <span class="comment"># 使用原始字符串以避免反斜杠转义问题   </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 遍历目录下的所有文件  </span></span><br><span class="line"><span class="keyword">for</span> filename <span class="keyword">in</span> os.listdir(directory):  </span><br><span class="line">    <span class="comment"># 拼接完整的文件路径  </span></span><br><span class="line">    filepath = os.path.join(directory, filename)  </span><br><span class="line">      </span><br><span class="line">    <span class="comment"># 判断是否为文件（排除目录）  </span></span><br><span class="line">    <span class="keyword">if</span> os.path.isfile(filepath):  </span><br><span class="line">        <span class="comment"># 获取当前文件的修改时间  </span></span><br><span class="line">        mtime = os.path.getmtime(filepath)  </span><br><span class="line">        date = datetime.datetime.fromtimestamp(mtime)  </span><br><span class="line">          </span><br><span class="line">        <span class="comment"># 将文件名格式化为日期字符串，并添加文件扩展名</span></span><br><span class="line">        new_filename = date.strftime(<span class="string">"%Y%m%d_%H%M%S"</span>) + os.path.splitext(filename)[<span class="number">1</span>]  </span><br><span class="line">          </span><br><span class="line">        <span class="comment"># 拼接新的文件路径  </span></span><br><span class="line">        new_filepath = os.path.join(directory, new_filename)  </span><br><span class="line">          </span><br><span class="line">        <span class="comment"># 重命名文件  </span></span><br><span class="line">        os.rename(filepath, new_filepath)  </span><br><span class="line">        print(<span class="string">f"Renamed '<span class="subst">&#123;filename&#125;</span>' to '<span class="subst">&#123;new_filename&#125;</span>'"</span>)</span><br></pre></td></tr></table></figure>
+
+<p>请确保将<code>/path/to/directory</code>替换为你要重命名文件的实际目录路径。运行脚本后，它将遍历指定目录下的所有文件，并按照文件的修改时间（以<code>YYYYMMDD_HHMMSS</code>的格式）对文件进行重命名。</p>
+<p>注意：在运行脚本之前，请务必备份重要文件，以防意外情况发生。此外，脚本只会重命名文件，不会重命名子目录中的文件。如果你需要重命名子目录中的文件，请相应地修改脚本。</p>
+<p>在Python字符串中，反斜杠<code>\</code>是一个特殊字符，也被用作转义字符，因此你需要使用双反斜杠<code>\\</code>来表示一个单独的反斜杠。或者，你可以在字符串前加上<code>r</code>来表示原始字符串，这样反斜杠就不会被当作转义字符。</p>
+<p>以下是两种设置<code>directory</code>变量的方式：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用双反斜杠作为路径分隔符  </span></span><br><span class="line">directory = <span class="string">"D:\\test\\images万贯"</span>  </span><br><span class="line">  </span><br><span class="line"><span class="comment"># 或者使用原始字符串（在字符串前加r）  </span></span><br><span class="line">directory = <span class="string">r"D:\test\images万贯"</span></span><br></pre></td></tr></table></figure>
+
+<p>请确保在编写代码时使用其中一种方式正确设置<code>directory</code>变量，以便脚本能够正确地找到你的文件目录。</p>
+<p>此外，需要注意的是，在Windows系统中，文件夹名称中的空格通常不会导致问题，但在路径字符串中确保正确地处理了所有特殊字符和空格是很重要的。</p>
+<p>为了避免在重命名文件时出现名称冲突，我们可以在文件名后面添加序号来区分。我们可以修改脚本，使其检查新文件名是否已存在，如果存在，则在文件名后面添加括号和序号，直到找到一个唯一的文件名。</p>
+<p>我们首先从文件名中提取出扩展名。然后，我们检查由基础文件名和扩展名组成的文件名是否已存在于<code>existing_filenames</code>字典中。如果存在，我们就在基础文件名后面添加括号和序号，序号从1开始递增，直到找到一个唯一的文件名。每次构造出新文件名后，我们都在字典中记录它，以确保下次不会重复使用。</p>
+<p>这样，即使同一秒内只有一个文件被修改，我们的脚本也会确保文件名是唯一的，且序号出现在文件扩展名前面。 </p>
+<h4 id="打开命令行或终端"><a href="#打开命令行或终端" class="headerlink" title="打开命令行或终端"></a>打开命令行或终端</h4><p>在Windows上，你可以按<code>Win + R</code>，然后输入<code>cmd</code>并按回车。在macOS或Linux上，你可以打开终端应用程序。</p>
+<h4 id="导航到脚本所在目录"><a href="#导航到脚本所在目录" class="headerlink" title="导航到脚本所在目录"></a>导航到脚本所在目录</h4><p>在命令行或终端中，使用<code>cd</code>命令导航到保存了Python脚本的目录。例如，如果你的脚本在<code>C:\Users\YourName\Documents</code>目录下，你可以输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> C:\Users\YourName\Documents</span><br></pre></td></tr></table></figure>
+
+<h4 id="运行脚本"><a href="#运行脚本" class="headerlink" title="运行脚本"></a>运行脚本</h4><p>在命令行或终端中，输入以下命令来运行脚本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python rename_files_by_date.py</span><br></pre></td></tr></table></figure>
+
+<p>确保你的Python安装路径已经添加到了系统的环境变量中，这样你才能直接在命令行中运行<code>python</code>命令。</p>
+<h4 id="等待脚本执行完成"><a href="#等待脚本执行完成" class="headerlink" title="等待脚本执行完成"></a>等待脚本执行完成</h4><p>脚本将开始执行，并按照上述代码中定义的逻辑重命名指定目录下的文件。你将在命令行或终端中看到重命名的进度。</p>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li>确保你有足够的权限来重命名文件。</li>
+<li>在运行脚本之前，最好先备份你的文件，以防万一。</li>
+<li>脚本将按照文件的修改时间进行重命名，这意味着如果两个文件有相同的修改时间，它们将被重命名为相同的文件名，这可能会导致文件覆盖。请确保这种情况不会发生，或者在脚本中添加额外的逻辑来处理这种情况。</li>
+</ul>
+<p>经过一步一步修改，现在没啥问题了，可以使用这个脚本来对自己备份的图片目录来重命名，文件名就是创建日期时间，一目了然。</p>
+<p>Python牛逼(*≧∪≦) </p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-02-26T03:37:54.000Z" itemprop="dateUpdated">2024-02-26 11:37:54</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/other/python.html" target="_blank" rel="external">https://qw66.gitee.io/other/python.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/other/python.html&title=《python》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/other/python.html&title=《python》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/other/python.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python》 — 秦伟博客&url=https://qw66.gitee.io/other/python.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/other/python.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/knowledges/javascript-zhi-xing-ji-zhi.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">JavaScript执行机制</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/interview/javascript.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">JavaScript</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/other/python.html&title=《python》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/other/python.html&title=《python》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/other/python.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《python》 — 秦伟博客&url=https://qw66.gitee.io/other/python.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/other/python.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABx0lEQVR42u3aQW7DMAwEwPz/0y7QU4E0zpKUFQcYnYpGtsc+LEhJj0c8jt/x6v9/f30183n++czRwMXFHXOP05HMOZ/5/BrV++Pi4n6Kex5e59HTi6ck/nBxce/PzQug82vzwggXF/dbuIVypFj04OLi3o2btDSrXmZTr4aLizvgThqVVX9fuL6Li4tb5B7FkVybtzflp+Pi4m7h5s1JHnD59kmeWuVeChcXd8CtLkzksZWHV6HcwcXF3cidPyYJqepLvilucHFxL+NWcVV6NQSjaMPFxd3C7S1lTsqjXgmFi4u7h9tb6CyUI5Pv16uScHFxl3J7rOSq3hP/uQMuLu527qromXyCwgkyXFzci7m9w1h5QbO4+cHFxb2YWy1H8sMT1fIo2c7BxcXdw+1tbCTFTW9j5s2zcHFxb8BNSpD58YtCaOLi4m7h9rZR8xv1SqKkxcLFxb2OexRHvtw5b4pwcXE/xe3VD9Voqy6tLohCXFzcMTeJpAWLGoMgK6QvLi7uUu6q5ifZTJ20Xri4uHfj9ij5taPjWbi4uF/C7W3JNFdhcXFxL+BWm5/quku+yfomHHFxcbdwV2249o5fTD4NLi7uBdwfmizDQixKRXYAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

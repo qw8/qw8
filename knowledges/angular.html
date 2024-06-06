@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Angular | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Angular,数据绑定,MVVM">
+    <meta name="description" content="angular 的数据绑定采用什么机制？详述原理脏检查机制。 解析：双向数据绑定是 AngularJS 的核心机制之一。当 view 中有任何数据变化时，会更新到 model ，当 model 中数据有变化时，view 也会同步更新，显然，这需要一个监控。 原理就是，Angular 在 scope 模型上设置了一个监听队列，用来监听数据变化并更新 view 。每次绑定一个东西到 view 上时 A">
+<meta name="keywords" content="Angular,数据绑定,MVVM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Angular">
+<meta property="og:url" content="https://qw66.gitee.io/knowledges/angular.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="angular 的数据绑定采用什么机制？详述原理脏检查机制。 解析：双向数据绑定是 AngularJS 的核心机制之一。当 view 中有任何数据变化时，会更新到 model ，当 model 中数据有变化时，view 也会同步更新，显然，这需要一个监控。 原理就是，Angular 在 scope 模型上设置了一个监听队列，用来监听数据变化并更新 view 。每次绑定一个东西到 view 上时 A">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2024-03-31T16:08:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Angular">
+<meta name="twitter:description" content="angular 的数据绑定采用什么机制？详述原理脏检查机制。 解析：双向数据绑定是 AngularJS 的核心机制之一。当 view 中有任何数据变化时，会更新到 model ，当 model 中数据有变化时，view 也会同步更新，显然，这需要一个监控。 原理就是，Angular 在 scope 模型上设置了一个监听队列，用来监听数据变化并更新 view 。每次绑定一个东西到 view 上时 A">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Angular</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Angular</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-10-07T07:38:24.000Z" itemprop="datePublished" class="page-time">
+  2019-10-07
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#angular-的数据绑定采用什么机制？详述原理"><span class="post-toc-number">1.</span> <span class="post-toc-text">angular 的数据绑定采用什么机制？详述原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AngularJS-的数据双向绑定是怎么实现的？"><span class="post-toc-number">2.</span> <span class="post-toc-text">AngularJS 的数据双向绑定是怎么实现的？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#angular-和-jquery-的区别"><span class="post-toc-number">3.</span> <span class="post-toc-text">angular 和 jquery 的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#angularjs-是-mvc-还是-mvvm-框架"><span class="post-toc-number">4.</span> <span class="post-toc-text">angularjs 是 mvc 还是 mvvm 框架</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解释下什么是-rootScrope以及和-scope-的区别？"><span class="post-toc-number">5.</span> <span class="post-toc-text">解释下什么是$rootScrope以及和$scope 的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#列出至少三种实现不同模块之间通信方式？"><span class="post-toc-number">6.</span> <span class="post-toc-text">列出至少三种实现不同模块之间通信方式？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在使用-angularjs-项目开发中-你使用过那些第三方的插件"><span class="post-toc-number">7.</span> <span class="post-toc-text">在使用 angularjs 项目开发中 你使用过那些第三方的插件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ng-show-ng-hide-与-ng-if-的区别？"><span class="post-toc-number">8.</span> <span class="post-toc-text">ng-show/ng-hide 与 ng-if 的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#表达式yourModel是如何工作的？"><span class="post-toc-number">9.</span> <span class="post-toc-text">表达式yourModel是如何工作的？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#angular-中的-http"><span class="post-toc-number">10.</span> <span class="post-toc-text">angular 中的$http</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ng-repeat-迭代数组的时候，如果数组中有相同值，会有什么问题，如何解决？"><span class="post-toc-number">11.</span> <span class="post-toc-text">ng-repeat 迭代数组的时候，如果数组中有相同值，会有什么问题，如何解决？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#angularjs-中-scope，controller，directive，sevice-在-mvvm-中充当什么角色"><span class="post-toc-number">12.</span> <span class="post-toc-text">angularjs 中$scope，controller，directive，sevice 在 mvvm 中充当什么角色</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在写-controlloer-逻辑的时候-你需要注意什么？"><span class="post-toc-number">13.</span> <span class="post-toc-text">在写 controlloer 逻辑的时候 你需要注意什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#controller-之间怎么通讯"><span class="post-toc-number">14.</span> <span class="post-toc-text">controller 之间怎么通讯</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自定义指令的几个参数"><span class="post-toc-number">15.</span> <span class="post-toc-text">自定义指令的几个参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对-angular-中的-form-表单了解多少"><span class="post-toc-number">16.</span> <span class="post-toc-text">对 angular 中的 form 表单了解多少</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#fliter-是什么你了解的有多少？实现一个自定义-fliter"><span class="post-toc-number">17.</span> <span class="post-toc-text">fliter 是什么你了解的有多少？实现一个自定义 fliter</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-knowledges/Angular"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Angular</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-10-07 15:38:24" datetime="2019-10-07T07:38:24.000Z"  itemprop="datePublished">2019-10-07</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="angular-的数据绑定采用什么机制？详述原理"><a href="#angular-的数据绑定采用什么机制？详述原理" class="headerlink" title="angular 的数据绑定采用什么机制？详述原理"></a>angular 的数据绑定采用什么机制？详述原理</h3><p>脏检查机制。</p>
+<p>解析：<br>双向数据绑定是 AngularJS 的核心机制之一。当 view 中有任何数据变化时，会更新到 model ，当 model 中数据有变化时，view 也会同步更新，显然，这需要一个监控。</p>
+<p>原理就是，Angular 在 scope 模型上设置了一个监听队列，用来监听数据变化并更新 view 。每次绑定一个东西到 view 上时 AngularJS 就会往 <code>$watch</code> 队列里插入一条 <code>$watch</code> ，用来检测它监视的 model 里是否有变化的东西。当浏览器接收到可以被 angular context 处理的事件时， <code>$digest</code> 循环就会触发，遍历所有的 <code>$watch</code> ，最后更新 dom。</p>
+<h3 id="AngularJS-的数据双向绑定是怎么实现的？"><a href="#AngularJS-的数据双向绑定是怎么实现的？" class="headerlink" title="AngularJS 的数据双向绑定是怎么实现的？"></a>AngularJS 的数据双向绑定是怎么实现的？</h3><p>1、每个双向绑定的元素都有一个 watcher</p>
+<p>2、在某些事件发生的时候，调用 digest 脏数据检测。</p>
+<p>这些事件有：表单元素内容变化、Ajax 请求响应、点击按钮执行的函数等。</p>
+<p>3、脏数据检测会检测 rootscope 下所有被 watcher 的元素。</p>
+<p><code>$digest</code> 函数就是脏数据监测</p>
+<h3 id="angular-和-jquery-的区别"><a href="#angular-和-jquery-的区别" class="headerlink" title="angular 和 jquery 的区别"></a>angular 和 jquery 的区别</h3><p>angular 是基于数据驱动，所以 angular 适合做数据操作比较繁琐的项目（这里可以再提一下单页面应用，如果你不会福利又来了 <a href="http://www.zhihu.com/question/20792064）" target="_blank" rel="noopener">http://www.zhihu.com/question/20792064）</a></p>
+<p>jquery 是基于 dom 驱动，jquery 适合做 dom 操作多的项目</p>
+<h3 id="angularjs-是-mvc-还是-mvvm-框架"><a href="#angularjs-是-mvc-还是-mvvm-框架" class="headerlink" title="angularjs 是 mvc 还是 mvvm 框架"></a>angularjs 是 mvc 还是 mvvm 框架</h3><p>mvvm</p>
+<p><strong>在 angular 中 MVVM 模式主要分为四部分：</strong></p>
+<p>View：它专注于界面的显示和渲染，在 angular 中则是包含一堆声明式 Directive 的视图模板。</p>
+<p>ViewModel：它是 View 和 Model 的粘合体，负责 View 和 Model 的交互和协作，它负责给 View 提供显示的数据，以及提供了 View 中 Command 事件操作 Model 的途径；在 angular 中$scope 对象充当了这个 ViewModel 的角色；</p>
+<p>Model：它是与应用程序的业务逻辑相关的数据的封装载体，它是业务领域的对象，Model 并不关心会被如何显示或操作，所以模型也不会包含任何界面显示相关的逻辑。在 web 页面中，大部分 Model 都是来自 Ajax 的服务端返回数据或者是全局的配置对象；而 angular 中的 service 则是封装和处理这些与 Model 相关的业务逻辑的场所，这类的业务服务是可以被多个 Controller 或者其他 service 复用的领域服务。</p>
+<p>Controller：这并不是 MVVM 模式的核心元素，但它负责 ViewModel 对象的初始化，它将组合一个或者多个 service 来获取业务领域 Model 放在 ViewModel 对象上，使得应用界面在启动加载的时候达到一种可用的状态。</p>
+<blockquote>
+<p>mvc的界面和逻辑关联紧密，数据直接从数据库读取。</p>
+<p>mvvm 的界面与 viewmode 是松耦合，界面数据从 viewmodel 中获取。所以 angularjs 更倾向于 mvvm</p>
+</blockquote>
+<h3 id="解释下什么是-rootScrope以及和-scope-的区别？"><a href="#解释下什么是-rootScrope以及和-scope-的区别？" class="headerlink" title="解释下什么是$rootScrope以及和$scope 的区别？"></a>解释下什么是<code>$rootScrope</code>以及和<code>$scope</code> 的区别？</h3><p>通俗的说<code>$rootScrope</code> 页面所有<code>$scope</code> 的父亲。</p>
+<p>解析：</p>
+<p>我们来看下如何产生<code>$rootScope</code>和<code>$scope</code>吧。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">step1:Angular 解析 ng-app 然后在内存中创建`$rootScope`。</span><br><span class="line"></span><br><span class="line">step2:angular 回继续解析，找到&#123;&#123;&#125;&#125;表达式，并解析成变量。</span><br><span class="line"></span><br><span class="line">step3:接着会解析带有 ng-controller 的 div 然后指向到某个 controller 函数。 这个时候在这个 controller 函数变成一个`$scope `对象实例。</span><br></pre></td></tr></table></figure>
+
+<h3 id="列出至少三种实现不同模块之间通信方式？"><a href="#列出至少三种实现不同模块之间通信方式？" class="headerlink" title="列出至少三种实现不同模块之间通信方式？"></a>列出至少三种实现不同模块之间通信方式？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- Service</span><br><span class="line">- events,指定绑定的事件</span><br><span class="line">- 使用 $rootScope</span><br><span class="line">- controller 之间直接使用$parent, $childHead等</span><br><span class="line">- directive 指定属性进行数据绑定</span><br></pre></td></tr></table></figure>
+
+<h3 id="在使用-angularjs-项目开发中-你使用过那些第三方的插件"><a href="#在使用-angularjs-项目开发中-你使用过那些第三方的插件" class="headerlink" title="在使用 angularjs 项目开发中 你使用过那些第三方的插件"></a>在使用 angularjs 项目开发中 你使用过那些第三方的插件</h3><p>AngularUi ui-router oclazyload 等等 附上一篇文章仔细去看看 <a href="https://segmentfault.com/a/1190000003858219" target="_blank" rel="noopener">https://segmentfault.com/a/1190000003858219</a></p>
+<h3 id="ng-show-ng-hide-与-ng-if-的区别？"><a href="#ng-show-ng-hide-与-ng-if-的区别？" class="headerlink" title="ng-show/ng-hide 与 ng-if 的区别？"></a>ng-show/ng-hide 与 ng-if 的区别？</h3><p>我们都知道 ng-show/ng-hide 实际上是通过 display 来进行隐藏和显示的。而 ng-if 实际上控制 dom 节点的增删除来实现的。因此如果我们是根据不同的条件来进行 dom 节点的加载的话，那么 ng-if 的性能好过 ng-show。</p>
+<h3 id="表达式yourModel是如何工作的？"><a href="#表达式yourModel是如何工作的？" class="headerlink" title="表达式yourModel是如何工作的？"></a>表达式yourModel是如何工作的？</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">表达式 &#123;&#123;yourModel&#125;&#125; 是如何工作的？</span><br><span class="line"></span><br><span class="line">它依赖于 `$interpolation`服务，在初始化页面html后，它会找到这些表达式，并且进行标记，于是每遇见一个 &#123;&#123;&#125;&#125; ，则会设置一个 `$watch` 。而 `$interpolation` 会返回一个带有上下文参数的函数，最后该函数执行，则算是表达式 `$parse` 到那个作用域上。</span><br></pre></td></tr></table></figure>
+
+<h3 id="angular-中的-http"><a href="#angular-中的-http" class="headerlink" title="angular 中的$http"></a>angular 中的$http</h3><p><code>$http</code> 是 AngularJS 中的一个核心服务，用于读取远程服务器的数据。</p>
+<p>我们可以使用内置的$http服务直接同外部进行通信。<code>$http</code> 服务只是简单的封装了浏览器原生的 XMLHttpRequest 对象。</p>
+<h3 id="ng-repeat-迭代数组的时候，如果数组中有相同值，会有什么问题，如何解决？"><a href="#ng-repeat-迭代数组的时候，如果数组中有相同值，会有什么问题，如何解决？" class="headerlink" title="ng-repeat 迭代数组的时候，如果数组中有相同值，会有什么问题，如何解决？"></a>ng-repeat 迭代数组的时候，如果数组中有相同值，会有什么问题，如何解决？</h3><p>会提示 Duplicates in a repeater are not allowed. 加 track by $index 可解决。当然，也可以 trace by 任何一个普通的值，只要能唯一性标识数组中的每一项即可（建立 dom 和数据之间的关联）</p>
+<h3 id="angularjs-中-scope，controller，directive，sevice-在-mvvm-中充当什么角色"><a href="#angularjs-中-scope，controller，directive，sevice-在-mvvm-中充当什么角色" class="headerlink" title="angularjs 中$scope，controller，directive，sevice 在 mvvm 中充当什么角色"></a>angularjs 中<code>$scope</code>，controller，directive，sevice 在 mvvm 中充当什么角色</h3><p>如果你不知道，第一题的分析以及很明确，仔细再仔细的看一遍</p>
+<h3 id="在写-controlloer-逻辑的时候-你需要注意什么？"><a href="#在写-controlloer-逻辑的时候-你需要注意什么？" class="headerlink" title="在写 controlloer 逻辑的时候 你需要注意什么？"></a>在写 controlloer 逻辑的时候 你需要注意什么？</h3><p>1.简化代码（这个是所有开发人员都要具备的）</p>
+<p>2.坚决不能操作 dom 节点 这个时候可能会问 为什么不能啊</p>
+<p>你的回答是：DOM 操作只能出现在指令（directive）中。最不应该出现的位置就是服务（service）中。Angular 倡导以测试驱动开发，在 service 或者 controller 中出现了 DOM 操作，那么也就意味着的测试是无法通过的。当然，这只是一点，重要的是使用 Angular 的其中一个好处是啥，那就是双向数据绑定，这样就能专注于处理业务逻辑，无需关系一堆堆的 DOM 操作。如果在 Angular 的代码中还到处充斥着各种 DOM 操作，那为什么不直接使用 jquery 去开发呢。</p>
+<p>测试驱动开发是什么呢？普及一下：</p>
+<p>测试驱动开发，英文全称 Test-Driven Development，简称 TDD，是一种不同于传统软件开发流程的新型的开发方法。它要求在编写某个功能的代码之前先编写测试代码，然后只编写使测试通过的功能代码，通过测试来推动整个开发的进行。这有助于编写简洁可用和高质量的代码，并加速开发过程。</p>
+<h3 id="controller-之间怎么通讯"><a href="#controller-之间怎么通讯" class="headerlink" title="controller 之间怎么通讯"></a>controller 之间怎么通讯</h3><p><strong>1、event</strong></p>
+<p>这里可以有两种方式，一种是$scope.$emit，然后通过监听$rootScope的事件获取参数；另一种是$rootScope.$broadcast，通过监听$scope 的事件获取参数。</p>
+<p>这两种方法在最新版本的 Angular 中已经没有性能区别了，主要就是事件发送的方向不同，可以按实际情况选择。</p>
+<p><strong>2、service</strong></p>
+<p>可以创建一个专用的事件 Service，也可以按照业务逻辑切分，将数据存储在相应的 Service 中</p>
+<p><strong>3、<code>$rootScope</code></strong></p>
+<p>这个方法可能会比较 dirty 一点，胜在方便，也就是把数据存在$rootScope中，这样各个子$scope 都可以调用，不过需要注意一下生命周期</p>
+<p><strong>4、直接使用<code>$scope.$$nextSibling</code>及类似的属性</strong></p>
+<p>类似的还有<code>$scope.$parent</code>。这个方法的缺点就更多了，官方不推荐使用任何$$开头的属性，既增加了耦合，又需要处理异步的问题，而且 scope 的顺序也不是固定的。不推荐</p>
+<p>另外就是通过本地存储、全局变量或者现代浏览器的 postMessage 来传递参数了，除非特殊情况，请避免这类方式。</p>
+<h3 id="自定义指令的几个参数"><a href="#自定义指令的几个参数" class="headerlink" title="自定义指令的几个参数"></a>自定义指令的几个参数</h3><p>说几个常用的如：</p>
+<p>restrict:指令在 dom 中的声明形式 E（元素）A（属性）C（类名）M（注释）</p>
+<p>template：两种形式，一种 HTML 文本；一个可以接受两个参数的函数，tElemetn 和 tAttrs，并返回一个代表模板的字符串。模板字符串必须存在一个根 DOM 元素</p>
+<p>templateUrl:两种形式，一种代表外部 HTML 文件路径的字符串；一个可以接受两个参数的函数，参数为 tElement 和 tAttrs，并返回一个外部 HTML 文件路径的字符串</p>
+<p>compile (对象或函数)：compile 选项可以返回一个对象或函数。如果设置了 compile 函数,说明我们希望在指令和实时数据被放到 DOM 中之前进行 DOM 操作,在这个函数中进行诸如添加和删除节点等 DOM 操作是安全的。本质上,当我们设置了 link 选项,实际上是创建了一个 postLink() 链接函数,以便 compile() 函数可以定义链接函数。</p>
+<p>然后又是传送门：<a href="http://www.cnblogs.com/mliudong/p/4180680.html" target="_blank" rel="noopener">http://www.cnblogs.com/mliudong/p/4180680.html</a></p>
+<p>compile 和 link 的区别：</p>
+<p>编译的时候，compile 转换 dom，碰到绑定监听器的地方就先存着，有几个存几个，到最后汇总成一个 link 函数，一并执行，提升了性能。</p>
+<h3 id="对-angular-中的-form-表单了解多少"><a href="#对-angular-中的-form-表单了解多少" class="headerlink" title="对 angular 中的 form 表单了解多少"></a>对 angular 中的 form 表单了解多少</h3><p>Angular 对 input 元素的 type 进行了扩展，一共提供了以下 10 种类型：</p>
+<p>text、number、url、email、radio、checkboxhidden、button、submit、reset</p>
+<p>Angular 为表单内置了 4 中 CSS 样式。</p>
+<ul>
+<li><p>ng-valid 校验合法状态</p>
+</li>
+<li><p>ng-invalid 校验非法状态</p>
+</li>
+<li><p>ng-pristine 如果要使用原生的 form，需要设置这个值</p>
+</li>
+<li><p>ng-dirty      表单处于脏数据状态</p>
+</li>
+</ul>
+<p>Angular 在对表单进行自动校验的时候会校验 Model 上的属性，如果不设置 ng-model，则 Angular 无法知道 myForm.$invalid 这个值是否为真。</p>
+<p>校验的一下内容</p>
+<p>required 表示是否输入内容</p>
+<p>ng-maxlength 最大长度</p>
+<p>ng-minlength 最小长度</p>
+<p>例子：传送门<a href="https://github.com/18500047564/clutter" target="_blank" rel="noopener">https://github.com/18500047564/clutter</a></p>
+<h3 id="fliter-是什么你了解的有多少？实现一个自定义-fliter"><a href="#fliter-是什么你了解的有多少？实现一个自定义-fliter" class="headerlink" title="fliter 是什么你了解的有多少？实现一个自定义 fliter"></a>fliter 是什么你了解的有多少？实现一个自定义 fliter</h3><ul>
+<li><p>date（日期）</p>
+</li>
+<li><p>currency（货币）</p>
+</li>
+<li><p>limitTo（限制数组或字符串长度）</p>
+</li>
+<li><p>orderBy（排序）</p>
+</li>
+<li><p>lowercase（小写）</p>
+</li>
+<li><p>uppercase（大写）</p>
+</li>
+<li><p>number（格式化数字，加上千位分隔符，并接收参数限定小数点位数）</p>
+</li>
+<li><p>filter（处理一个数组，过滤出含有某个子串的元素）</p>
+</li>
+<li><p>json（格式化 json 对象）</p>
+</li>
+</ul>
+<p>filter 有两种使用方法，</p>
+<p>一种是直接在页面里：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>&#123;&#123;now | date : ‘yyyy-MM-dd’&#125;&#125;<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>另一种是在 js 里面用：</p>
+<p><code>$filter</code>(‘过滤器名称’)(需要过滤的对象, 参数 1, 参数 2,…)</p>
+<p><code>$filter(&#39;date&#39;)(now, &#39;yyyy-MM-dd hh:mm:ss’)</code>;</p>
+<p>自定义一个去重数组的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">app.filter(&apos;unique&apos;, function()&#123;</span><br><span class="line">return function(arr)&#123;</span><br><span class="line">var n = [];</span><br><span class="line">var obj = &#123;&#125;;</span><br><span class="line">    for(var i = 0;i&lt;arr.length;i++)&#123;</span><br><span class="line">       if(!obj[arr[i]])&#123;</span><br><span class="line">        n.push(arr[i])</span><br><span class="line">        obj[arr[i]] = 1;</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">   return n;</span><br><span class="line">&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-03-31T16:08:38.000Z" itemprop="dateUpdated">2024-04-01 00:08:38</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/knowledges/angular.html" target="_blank" rel="external">https://qw66.gitee.io/knowledges/angular.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MVVM/">MVVM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据绑定/">数据绑定</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/angular.html&title=《Angular》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/angular.html&title=《Angular》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/angular.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Angular》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/angular.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/angular.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/knowledges/bom.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">BOM</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/interview/zi-jie-tiao-dong-mian-jing-zong-jie.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">字节跳动面经总结</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/angular.html&title=《Angular》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/angular.html&title=《Angular》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/angular.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Angular》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/angular.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/angular.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJ0lEQVR42u3a3WrDMAwG0L7/S2e3gy7ZJyktxD6+KmlwfRho+vHrFa/j13p//v7O+/Oz3c52eH1iYWBgPJZxXK6zH8gB16Sz3fKzYWBg7MOobn39OQnW14fOz4aBgYGR/1ie6iWJIwYGBsaEkZSj8zIYAwMDo1fETtpz85B9Wy2OgYHxQEZ+rO9//sh8AwMD41GMo7gmvDxxLJ8KAwNjaUYe4PJkrpcaJkX1PyUxBgbG0ozkoHcNLKsNuPwJBgbGDoxk63tDZO+SWfNvgoGBsRBjMlbMv00OOhoAYGBgLMfIN+019PN2W/UKCAYGxg6MXkLWGw9UA27S1MPAwNiBMSkaexlotTwuBF8MDIxFGfmF0XxsmYTXHBOlmxgYGEszqknb/NJYsv8N2S4GBsbSjOrPV8va+aAi6h1iYGAsx6gGu+o78ydRCY2BgbE0o1qIVsPo/ErrbREaAwPjsYzeQauFbrW4TRptzfkGBgbGAxl5620ywsxHlb3EEQMDY21G78JEMoysXherDiH++L+BgYGxNKN6qSK/yFUNsnkKiIGBsRujNwaoJnmTttpoGICBgfFYxlFc1Ubb55JLDAyMfRi3xezWDknCNwn6GBgYKzHKja1iUyxvq1WHlBgYGLsxqi2zPIqXG2dB4MbAwMDoNfdzfPJ+mY2BgYExroknZXCUOGJgYGzA6A0D8qDZu8CRpJsYGBg7MOYhLy9TewVtHvoxMDCWY/wA8VrGBGaLCp8AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

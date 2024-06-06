@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>uniapp基础知识 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="uni-app,小程序">
+    <meta name="description" content="uni-app的基本使用 环境搭建 页面外观配置 数据绑定 uni-app的生命周期 组件的使用 uni-app中样式学习 在uni-app中使用字体图标和开启scss 条件注释跨端兼容 uni中的事件 导航跳转 组件创建和通讯，及组件的生命周期 uni-app中使用uni-ui库  uni-app介绍uni-app 是一个使用 Vue.js 开发所有前端应用的框架，开发者编写一套代码，可发布到i">
+<meta name="keywords" content="uni-app,小程序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="uniapp基础知识">
+<meta property="og:url" content="https://qw66.gitee.io/knowledges/uniapp-ji-chu-zhi-shi.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="uni-app的基本使用 环境搭建 页面外观配置 数据绑定 uni-app的生命周期 组件的使用 uni-app中样式学习 在uni-app中使用字体图标和开启scss 条件注释跨端兼容 uni中的事件 导航跳转 组件创建和通讯，及组件的生命周期 uni-app中使用uni-ui库  uni-app介绍uni-app 是一个使用 Vue.js 开发所有前端应用的框架，开发者编写一套代码，可发布到i">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:updated_time" content="2024-03-28T17:42:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="uniapp基础知识">
+<meta name="twitter:description" content="uni-app的基本使用 环境搭建 页面外观配置 数据绑定 uni-app的生命周期 组件的使用 uni-app中样式学习 在uni-app中使用字体图标和开启scss 条件注释跨端兼容 uni中的事件 导航跳转 组件创建和通讯，及组件的生命周期 uni-app中使用uni-ui库  uni-app介绍uni-app 是一个使用 Vue.js 开发所有前端应用的框架，开发者编写一套代码，可发布到i">
+<meta name="twitter:image" content="https://qw66.gitee.io/img/loading.gif">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">uniapp基础知识</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">uniapp基础知识</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2023-04-26T11:03:10.000Z" itemprop="datePublished" class="page-time">
+  2023-04-26
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#uni-app的基本使用"><span class="post-toc-number">1.</span> <span class="post-toc-text">uni-app的基本使用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#uni-app介绍"><span class="post-toc-number">2.</span> <span class="post-toc-text">uni-app介绍</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#环境搭建"><span class="post-toc-number">3.</span> <span class="post-toc-text">环境搭建</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#利用HbuilderX初始化项目"><span class="post-toc-number">4.</span> <span class="post-toc-text">利用HbuilderX初始化项目</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#运行项目"><span class="post-toc-number">5.</span> <span class="post-toc-text">运行项目</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍项目目录和文件作用"><span class="post-toc-number">6.</span> <span class="post-toc-text">介绍项目目录和文件作用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#通过pages来配置页面"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">通过pages来配置页面</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#配置tabbar"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">配置tabbar</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#condition启动模式配置"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">condition启动模式配置</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#组件的基本使用"><span class="post-toc-number">7.</span> <span class="post-toc-text">组件的基本使用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#text文本组件的用法"><span class="post-toc-number">8.</span> <span class="post-toc-text">text文本组件的用法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#text-组件的属性"><span class="post-toc-number">8.1.</span> <span class="post-toc-text">text 组件的属性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#代码案例"><span class="post-toc-number">8.2.</span> <span class="post-toc-text">代码案例</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#view视图容器组件的用法"><span class="post-toc-number">9.</span> <span class="post-toc-text">view视图容器组件的用法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#组件的属性"><span class="post-toc-number">9.0.0.1.</span> <span class="post-toc-text">组件的属性</span></a></li><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#代码案例-1"><span class="post-toc-number">9.0.0.2.</span> <span class="post-toc-text">代码案例</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#button按钮组件的用法"><span class="post-toc-number">10.</span> <span class="post-toc-text">button按钮组件的用法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#组件的属性-1"><span class="post-toc-number">10.1.</span> <span class="post-toc-text">组件的属性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#案例代码"><span class="post-toc-number">10.2.</span> <span class="post-toc-text">案例代码</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#image组件的使用"><span class="post-toc-number">10.3.</span> <span class="post-toc-text">image组件的使用</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#uni-app中的样式"><span class="post-toc-number">11.</span> <span class="post-toc-text">uni-app中的样式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#uni-app中的数据绑定"><span class="post-toc-number">12.</span> <span class="post-toc-text">uni-app中的数据绑定</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#插值表达式的使用"><span class="post-toc-number">13.</span> <span class="post-toc-text">插值表达式的使用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#v-bind动态绑定属性"><span class="post-toc-number">14.</span> <span class="post-toc-text">v-bind动态绑定属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#v-for的使用"><span class="post-toc-number">15.</span> <span class="post-toc-text">v-for的使用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#uni中的事件"><span class="post-toc-number">16.</span> <span class="post-toc-text">uni中的事件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#事件绑定"><span class="post-toc-number">16.1.</span> <span class="post-toc-text">事件绑定</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#事件传参"><span class="post-toc-number">16.2.</span> <span class="post-toc-text">事件传参</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#uni的生命周期"><span class="post-toc-number">17.</span> <span class="post-toc-text">uni的生命周期</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#应用的生命周期"><span class="post-toc-number">17.1.</span> <span class="post-toc-text">应用的生命周期</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#页面的生命周期"><span class="post-toc-number">17.2.</span> <span class="post-toc-text">页面的生命周期</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#下拉刷新"><span class="post-toc-number">18.</span> <span class="post-toc-text">下拉刷新</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#开启下拉刷新"><span class="post-toc-number">18.1.</span> <span class="post-toc-text">开启下拉刷新</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#通过配置文件开启"><span class="post-toc-number">18.2.</span> <span class="post-toc-text">通过配置文件开启</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#通过API开启"><span class="post-toc-number">18.3.</span> <span class="post-toc-text">通过API开启</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#监听下拉刷新"><span class="post-toc-number">18.4.</span> <span class="post-toc-text">监听下拉刷新</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#关闭下拉刷新"><span class="post-toc-number">18.5.</span> <span class="post-toc-text">关闭下拉刷新</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#上拉加载"><span class="post-toc-number">19.</span> <span class="post-toc-text">上拉加载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#网络请求"><span class="post-toc-number">20.</span> <span class="post-toc-text">网络请求</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#发送get请求"><span class="post-toc-number">20.1.</span> <span class="post-toc-text">发送get请求</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数据缓存"><span class="post-toc-number">21.</span> <span class="post-toc-text">数据缓存</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#uni-setStorage"><span class="post-toc-number">21.1.</span> <span class="post-toc-text">uni.setStorage</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#uni-setStorageSync"><span class="post-toc-number">21.2.</span> <span class="post-toc-text">uni.setStorageSync</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#uni-getStorage"><span class="post-toc-number">21.3.</span> <span class="post-toc-text">uni.getStorage</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#uni-getStorageSync"><span class="post-toc-number">21.4.</span> <span class="post-toc-text">uni.getStorageSync</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#uni-removeStorage"><span class="post-toc-number">21.5.</span> <span class="post-toc-text">uni.removeStorage</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#uni-removeStorageSync"><span class="post-toc-number">21.6.</span> <span class="post-toc-text">uni.removeStorageSync</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#上传图片、预览图片"><span class="post-toc-number">22.</span> <span class="post-toc-text">上传图片、预览图片</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#上传图片"><span class="post-toc-number">22.1.</span> <span class="post-toc-text">上传图片</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#预览图片"><span class="post-toc-number">22.2.</span> <span class="post-toc-text">预览图片</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#条件注释实现跨段兼容"><span class="post-toc-number">23.</span> <span class="post-toc-text">条件注释实现跨段兼容</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#组件的条件注释"><span class="post-toc-number">23.1.</span> <span class="post-toc-text">组件的条件注释</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#api的条件注释"><span class="post-toc-number">23.2.</span> <span class="post-toc-text">api的条件注释</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#uni中的导航跳转"><span class="post-toc-number">24.</span> <span class="post-toc-text">uni中的导航跳转</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#利用navigator进行跳转"><span class="post-toc-number">24.1.</span> <span class="post-toc-text">利用navigator进行跳转</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#利用编程式导航进行跳转"><span class="post-toc-number">24.2.</span> <span class="post-toc-text">利用编程式导航进行跳转</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#利用navigateTo进行导航跳转"><span class="post-toc-number">24.3.</span> <span class="post-toc-text">利用navigateTo进行导航跳转</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#通过switchTab跳转到tabbar页面"><span class="post-toc-number">24.4.</span> <span class="post-toc-text">通过switchTab跳转到tabbar页面</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#redirectTo进行跳转"><span class="post-toc-number">24.5.</span> <span class="post-toc-text">redirectTo进行跳转</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#导航跳转传递参数"><span class="post-toc-number">25.</span> <span class="post-toc-text">导航跳转传递参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#uni-app中组件的创建"><span class="post-toc-number">26.</span> <span class="post-toc-text">uni-app中组件的创建</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#组件的生命周期函数"><span class="post-toc-number">27.</span> <span class="post-toc-text">组件的生命周期函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#组件的通讯"><span class="post-toc-number">28.</span> <span class="post-toc-text">组件的通讯</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#父组件给子组件传值"><span class="post-toc-number">28.1.</span> <span class="post-toc-text">父组件给子组件传值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#子组件给父组件传值"><span class="post-toc-number">28.2.</span> <span class="post-toc-text">子组件给父组件传值</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#uni-app-全局变量的几种实现方式"><span class="post-toc-number">29.</span> <span class="post-toc-text">uni-app 全局变量的几种实现方式</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#公用模块"><span class="post-toc-number">29.1.</span> <span class="post-toc-text">公用模块</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#挂载-Vue-prototype"><span class="post-toc-number">29.2.</span> <span class="post-toc-text">挂载 Vue.prototype</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#globalData"><span class="post-toc-number">29.3.</span> <span class="post-toc-text">globalData</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Vuex"><span class="post-toc-number">29.4.</span> <span class="post-toc-text">Vuex</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#注意事项"><span class="post-toc-number">29.5.</span> <span class="post-toc-text">注意事项</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#更多"><span class="post-toc-number">29.6.</span> <span class="post-toc-text">更多</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-knowledges/uniapp基础知识"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">uniapp基础知识</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2023-04-26 19:03:10" datetime="2023-04-26T11:03:10.000Z"  itemprop="datePublished">2023-04-26</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="uni-app的基本使用"><a href="#uni-app的基本使用" class="headerlink" title="uni-app的基本使用"></a>uni-app的基本使用</h3><ul>
+<li>环境搭建</li>
+<li>页面外观配置</li>
+<li>数据绑定</li>
+<li>uni-app的生命周期</li>
+<li>组件的使用</li>
+<li>uni-app中样式学习</li>
+<li>在uni-app中使用字体图标和开启scss</li>
+<li>条件注释跨端兼容</li>
+<li>uni中的事件</li>
+<li>导航跳转</li>
+<li>组件创建和通讯，及组件的生命周期</li>
+<li>uni-app中使用uni-ui库</li>
+</ul>
+<h3 id="uni-app介绍"><a href="#uni-app介绍" class="headerlink" title="uni-app介绍"></a>uni-app介绍</h3><p><code>uni-app</code> 是一个使用 <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue.js</a> 开发所有前端应用的框架，开发者编写一套代码，可发布到iOS、Android、H5、以及各种小程序（微信/支付宝/百度/头条/QQ/钉钉）等多个平台。</p>
+<p>即使不跨端，<code>uni-app</code>同时也是更好的小程序开发框架。</p>
+<p>具有vue和微信小程序的开发经验，可快速上手uni-app</p>
+<p>为什么要去学习uni-app？</p>
+<p>相对开发者来说，减少了学习成本，因为只学会uni-app之后，即可开发出iOS、Android、H5、以及各种小程序的应用，不需要再去学习开发其他应用的框架，相对公司而言，也大大减少了开发成本。</p>
+<p><a href="https://uniapp.dcloud.net.cn/" target="_blank" rel="noopener">官方网页</a></p>
+<h3 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h3><p>安装编辑器HbuilderX  <a href="https://www.dcloud.io/hbuilderx.html" target="_blank" rel="noopener">下载地址</a></p>
+<p>HBuilderX是通用的前端开发工具，但为<code>uni-app</code>做了特别强化。</p>
+<p>下载App开发版，可开箱即用</p>
+<p>安装微信开发者工具 <a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html" target="_blank" rel="noopener">下载地址</a></p>
+<h3 id="利用HbuilderX初始化项目"><a href="#利用HbuilderX初始化项目" class="headerlink" title="利用HbuilderX初始化项目"></a>利用HbuilderX初始化项目</h3><ul>
+<li><p>点击HbuilderX菜单栏文件&gt;项目&gt;新建</p>
+</li>
+<li><p>选择uni-app,填写项目名称，项目创建的目录</p>
+<p><img src="/img/loading.gif" data-original="../../images/uniapp001.jpg" alt></p>
+</li>
+</ul>
+<h3 id="运行项目"><a href="#运行项目" class="headerlink" title="运行项目"></a>运行项目</h3><p>在菜单栏中点击运行，运行到浏览器，选择浏览器即可运行</p>
+<p>在微信开发者工具里运行：进入hello-uniapp项目，点击工具栏的运行 -&gt; 运行到小程序模拟器 -&gt; 微信开发者工具，即可在微信开发者工具里面体验uni-app</p>
+<p>在微信开发者工具里运行：进入hello-uniapp项目，点击工具栏的运行 -&gt; 运行到手机或模拟器 -&gt; 选择调式的手机</p>
+<p><strong>注意：</strong></p>
+<ul>
+<li>如果是第一次使用，需要先配置小程序ide的相关路径（比如微信开发者工具安装路径），才能运行成功</li>
+<li>微信开发者工具在设置中安全设置，服务端口开启</li>
+</ul>
+<h3 id="介绍项目目录和文件作用"><a href="#介绍项目目录和文件作用" class="headerlink" title="介绍项目目录和文件作用"></a>介绍项目目录和文件作用</h3><p><code>pages.json</code> 文件用来对 uni-app 进行全局配置，决定页面文件的路径、窗口样式、原生的导航栏、底部的原生tabbar 等</p>
+<p><code>manifest.json</code> 文件是应用的配置文件，用于指定应用的名称、图标、权限等。</p>
+<p><code>App.vue</code>是我们的根组件，所有页面都是在<code>App.vue</code>下进行切换的，是页面入口文件，可以调用应用的生命周期函数。</p>
+<p><code>main.js</code>是我们的项目入口文件，主要作用是初始化<code>vue</code>实例并使用需要的插件。</p>
+<p><code>uni.scss</code>文件的用途是为了方便整体控制应用的风格。比如按钮颜色、边框风格，<code>uni.scss</code>文件里预置了一批scss变量预置。</p>
+<figure class="highlight plain"><figcaption><span>就是打包目录，在这里有各个平台的打包文件</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">```pages``` 所有的页面存放目录</span><br><span class="line"></span><br><span class="line">```static``` 静态资源目录，例如图片等</span><br><span class="line"></span><br><span class="line">```components``` 组件存放目录</span><br><span class="line"></span><br><span class="line">为了实现多端兼容，综合考虑编译速度、运行性能等因素，`uni-app` 约定了如下开发规范：</span><br><span class="line"></span><br><span class="line">- 页面文件遵循 [Vue 单文件组件 (SFC) 规范](https://vue-loader.vuejs.org/zh/spec.html)</span><br><span class="line">- 组件标签靠近小程序规范，详见[uni-app 组件规范](https://uniapp.dcloud.io/component/README)</span><br><span class="line">- 接口能力（JS API）靠近微信小程序规范，但需将前缀 `wx` 替换为 `uni`，详见[uni-app接口规范](https://uniapp.dcloud.io/api/README)</span><br><span class="line">- 数据绑定及事件处理同 `Vue.js` 规范，同时补充了App及页面的生命周期</span><br><span class="line">- 为兼容多端运行，建议使用flex布局进行开发</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 全局配置和页面配置</span><br><span class="line"></span><br><span class="line">通过globalStyle进行全局配置</span><br><span class="line"></span><br><span class="line">用于设置应用的状态栏、导航条、标题、窗口背景色等。[详细文档](https://uniapp.dcloud.io/collocation/pages?id=globalstyle)</span><br><span class="line"></span><br><span class="line">| 属性                           | 类型       | 默认值     | 描述                                       |</span><br><span class="line">| ---------------------------- | -------- | ------- | ---------------------------------------- |</span><br><span class="line">| navigationBarBackgroundColor | HexColor | #F7F7F7 | 导航栏背景颜色（同状态栏背景色）                         |</span><br><span class="line">| navigationBarTextStyle       | String   | white   | 导航栏标题颜色及状态栏前景颜色，仅支持 black/white          |</span><br><span class="line">| navigationBarTitleText       | String   |         | 导航栏标题文字内容                                |</span><br><span class="line">| backgroundColor              | HexColor | #ffffff | 窗口的背景色                                   |</span><br><span class="line">| backgroundTextStyle          | String   | dark    | 下拉 loading 的样式，仅支持 dark / light          |</span><br><span class="line">| enablePullDownRefresh        | Boolean  | false   | 是否开启下拉刷新，详见[页面生命周期](https://uniapp.dcloud.io/use?id=%e9%a1%b5%e9%9d%a2%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f)。 |</span><br><span class="line">| onReachBottomDistance        | Number   | 50      | 页面上拉触底事件触发时距页面底部距离，单位只支持px，详见[页面生命周期](https://uniapp.dcloud.io/use?id=%e9%a1%b5%e9%9d%a2%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f) |</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 创建新的message页面</span><br><span class="line"></span><br><span class="line">右键pages新建message目录，在message目录下右键新建.vue文件,并选择基本模板</span><br><span class="line"></span><br><span class="line">```html</span><br><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view&gt;</span><br><span class="line">		这是信息页面</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="通过pages来配置页面"><a href="#通过pages来配置页面" class="headerlink" title="通过pages来配置页面"></a>通过pages来配置页面</h4><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>path</td>
+<td>String</td>
+<td></td>
+<td>配置页面路径</td>
+</tr>
+<tr>
+<td>style</td>
+<td>Object</td>
+<td></td>
+<td>配置页面窗口表现，配置项参考 <a href="https://uniapp.dcloud.io/collocation/pages?id=style" target="_blank" rel="noopener">pageStyle</a></td>
+</tr>
+</tbody></table>
+<p>pages数组数组中第一项表示应用启动页</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">"pages": [</span><br><span class="line">		&#123;</span><br><span class="line">			"path":"pages/message/message"</span><br><span class="line">		&#125;,</span><br><span class="line">		&#123;</span><br><span class="line">			"path": "pages/index/index",</span><br><span class="line">			"style": &#123;</span><br><span class="line">				"navigationBarTitleText": "uni-app"</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	]</span><br></pre></td></tr></table></figure>
+
+<p>通过style修改页面的标题和导航栏背景色，并且设置h5下拉刷新的特有样式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"pages"</span>: [ <span class="comment">//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="string">"path"</span>:<span class="string">"pages/message/message"</span>,</span><br><span class="line">			<span class="string">"style"</span>: &#123;</span><br><span class="line">				<span class="string">"navigationBarBackgroundColor"</span>: <span class="string">"#007AFF"</span>,</span><br><span class="line">				<span class="string">"navigationBarTextStyle"</span>: <span class="string">"white"</span>,</span><br><span class="line">				<span class="string">"enablePullDownRefresh"</span>: <span class="literal">true</span>,</span><br><span class="line">				<span class="string">"disableScroll"</span>: <span class="literal">true</span>,</span><br><span class="line">				<span class="string">"h5"</span>: &#123;</span><br><span class="line">					<span class="string">"pullToRefresh"</span>: &#123;</span><br><span class="line">						<span class="string">"color"</span>: <span class="string">"#007AFF"</span></span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	]</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置tabbar"><a href="#配置tabbar" class="headerlink" title="配置tabbar"></a>配置tabbar</h4><p>如果应用是一个多 tab 应用，可以通过 tabBar 配置项指定 tab 栏的表现，以及 tab 切换时显示的对应页。</p>
+<p><strong>Tips</strong></p>
+<ul>
+<li>当设置 position 为 top 时，将不会显示 icon</li>
+<li>tabBar 中的 list 是一个数组，只能配置最少2个、最多5个 tab，tab 按数组的顺序排序。</li>
+</ul>
+<p><strong>属性说明：</strong></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>必填</th>
+<th>默认值</th>
+<th>描述</th>
+<th>平台差异说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>color</td>
+<td>HexColor</td>
+<td>是</td>
+<td></td>
+<td>tab 上的文字默认颜色</td>
+<td></td>
+</tr>
+<tr>
+<td>selectedColor</td>
+<td>HexColor</td>
+<td>是</td>
+<td></td>
+<td>tab 上的文字选中时的颜色</td>
+<td></td>
+</tr>
+<tr>
+<td>backgroundColor</td>
+<td>HexColor</td>
+<td>是</td>
+<td></td>
+<td>tab 的背景色</td>
+<td></td>
+</tr>
+<tr>
+<td>borderStyle</td>
+<td>String</td>
+<td>否</td>
+<td>black</td>
+<td>tabbar 上边框的颜色，仅支持 black/white</td>
+<td>App 2.3.4+ 支持其他颜色值</td>
+</tr>
+<tr>
+<td>list</td>
+<td>Array</td>
+<td>是</td>
+<td></td>
+<td>tab 的列表，详见 list 属性说明，最少2个、最多5个 tab</td>
+<td></td>
+</tr>
+<tr>
+<td>position</td>
+<td>String</td>
+<td>否</td>
+<td>bottom</td>
+<td>可选值 bottom、top</td>
+<td>top 值仅微信小程序支持</td>
+</tr>
+</tbody></table>
+<p>其中 list 接收一个数组，数组中的每个项都是一个对象，其属性值如下：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>pagePath</td>
+<td>String</td>
+<td>是</td>
+<td>页面路径，必须在 pages 中先定义</td>
+</tr>
+<tr>
+<td>text</td>
+<td>String</td>
+<td>是</td>
+<td>tab 上按钮文字，在 5+APP 和 H5 平台为非必填。例如中间可放一个没有文字的+号图标</td>
+</tr>
+<tr>
+<td>iconPath</td>
+<td>String</td>
+<td>否</td>
+<td>图片路径，icon 大小限制为40kb，建议尺寸为 81px * 81px，当 postion 为 top 时，此参数无效，不支持网络图片，不支持字体图标</td>
+</tr>
+<tr>
+<td>selectedIconPath</td>
+<td>String</td>
+<td>否</td>
+<td>选中时的图片路径，icon 大小限制为40kb，建议尺寸为 81px * 81px ，当 postion 为 top 时，此参数无效</td>
+</tr>
+</tbody></table>
+<p>案例代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"tabBar"</span>: &#123;</span><br><span class="line">		<span class="string">"list"</span>: [</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="string">"text"</span>: <span class="string">"首页"</span>,</span><br><span class="line">				<span class="string">"pagePath"</span>:<span class="string">"pages/index/index"</span>,</span><br><span class="line">				<span class="string">"iconPath"</span>:<span class="string">"static/tabs/home.png"</span>,</span><br><span class="line">				<span class="string">"selectedIconPath"</span>:<span class="string">"static/tabs/home-active.png"</span></span><br><span class="line">			&#125;,</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="string">"text"</span>: <span class="string">"信息"</span>,</span><br><span class="line">				<span class="string">"pagePath"</span>:<span class="string">"pages/message/message"</span>,</span><br><span class="line">				<span class="string">"iconPath"</span>:<span class="string">"static/tabs/message.png"</span>,</span><br><span class="line">				<span class="string">"selectedIconPath"</span>:<span class="string">"static/tabs/message-active.png"</span></span><br><span class="line">			&#125;,</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="string">"text"</span>: <span class="string">"我们"</span>,</span><br><span class="line">				<span class="string">"pagePath"</span>:<span class="string">"pages/contact/contact"</span>,</span><br><span class="line">				<span class="string">"iconPath"</span>:<span class="string">"static/tabs/contact.png"</span>,</span><br><span class="line">				<span class="string">"selectedIconPath"</span>:<span class="string">"static/tabs/contact-active.png"</span></span><br><span class="line">			&#125;</span><br><span class="line">		]</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="condition启动模式配置"><a href="#condition启动模式配置" class="headerlink" title="condition启动模式配置"></a>condition启动模式配置</h4><p>启动模式配置，仅开发期间生效，用于模拟直达页面的场景，如：小程序转发后，用户点击所打开的页面。</p>
+<p><strong>属性说明：</strong></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>是否必填</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>current</td>
+<td>Number</td>
+<td>是</td>
+<td>当前激活的模式，list节点的索引值</td>
+</tr>
+<tr>
+<td>list</td>
+<td>Array</td>
+<td>是</td>
+<td>启动模式列表</td>
+</tr>
+</tbody></table>
+<p><strong>list说明：</strong></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>是否必填</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>name</td>
+<td>String</td>
+<td>是</td>
+<td>启动模式名称</td>
+</tr>
+<tr>
+<td>path</td>
+<td>String</td>
+<td>是</td>
+<td>启动页面路径</td>
+</tr>
+<tr>
+<td>query</td>
+<td>String</td>
+<td>否</td>
+<td>启动参数，可在页面的 <a href="https://uniapp.dcloud.io/use?id=%e9%a1%b5%e9%9d%a2%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f" target="_blank" rel="noopener">onLoad</a> 函数里获得</td>
+</tr>
+</tbody></table>
+<h3 id="组件的基本使用"><a href="#组件的基本使用" class="headerlink" title="组件的基本使用"></a>组件的基本使用</h3><p>uni-app提供了丰富的基础组件给开发者，开发者可以像搭积木一样，组合各种组件拼接称自己的应用</p>
+<p>uni-app中的组件，就像 <code>HTML</code> 中的 <code>div</code> 、<code>p</code>、<code>span</code> 等标签的作用一样，用于搭建页面的基础结构</p>
+<h3 id="text文本组件的用法"><a href="#text文本组件的用法" class="headerlink" title="text文本组件的用法"></a>text文本组件的用法</h3><h4 id="text-组件的属性"><a href="#text-组件的属性" class="headerlink" title="text 组件的属性"></a>text 组件的属性</h4><table>
+<thead>
+<tr>
+<th align="center">属性</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th align="center">必填</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">selectable</td>
+<td align="center">boolean</td>
+<td align="center">false</td>
+<td align="center">否</td>
+<td align="center">文本是否可选</td>
+</tr>
+<tr>
+<td align="center">space</td>
+<td align="center">string</td>
+<td align="center">.</td>
+<td align="center">否</td>
+<td align="center">显示连续空格，可选参数：<code>ensp</code>、<code>emsp</code>、<code>nbsp</code></td>
+</tr>
+<tr>
+<td align="center">decode</td>
+<td align="center">boolean</td>
+<td align="center">false</td>
+<td align="center">否</td>
+<td align="center">是否解码</td>
+</tr>
+</tbody></table>
+<ul>
+<li><code>text</code> 组件相当于行内标签、在同一行显示</li>
+<li>除了文本节点以外的其他节点都无法长按选中</li>
+</ul>
+<h4 id="代码案例"><a href="#代码案例" class="headerlink" title="代码案例"></a>代码案例</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 长按文本是否可选 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">text</span> <span class="attr">selectable</span>=<span class="string">'true'</span>&gt;</span>来了老弟<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 显示连续空格的方式 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">text</span> <span class="attr">space</span>=<span class="string">'ensp'</span>&gt;</span>来了  老弟<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">text</span> <span class="attr">space</span>=<span class="string">'emsp'</span>&gt;</span>来了  老弟<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">text</span> <span class="attr">space</span>=<span class="string">'nbsp'</span>&gt;</span>来了  老弟<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">text</span>&gt;</span>skyblue<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- 是否解码 --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">text</span> <span class="attr">decode</span>=<span class="string">'true'</span>&gt;</span>&amp;nbsp; &amp;lt; &amp;gt; &amp;amp; &amp;apos; &amp;ensp; &amp;emsp;<span class="tag">&lt;/<span class="name">text</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="view视图容器组件的用法"><a href="#view视图容器组件的用法" class="headerlink" title="view视图容器组件的用法"></a>view视图容器组件的用法</h3><blockquote>
+<p>View 视图容器， 类似于 HTML 中的 div</p>
+</blockquote>
+<h6 id="组件的属性"><a href="#组件的属性" class="headerlink" title="组件的属性"></a>组件的属性</h6><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="../../images/uniapp002.png" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<h6 id="代码案例-1"><a href="#代码案例-1" class="headerlink" title="代码案例"></a>代码案例</h6><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">"box2"</span> <span class="attr">hover-class</span>=<span class="string">"box2_active"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">'box1'</span> <span class="attr">hover-class</span>=<span class="string">'active'</span> <span class="attr">hover-stop-propagation</span> <span class="attr">:hover-start-time</span>=<span class="string">"2000"</span> <span class="attr">:hover-stay-time</span>=<span class="string">'2000'</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="button按钮组件的用法"><a href="#button按钮组件的用法" class="headerlink" title="button按钮组件的用法"></a>button按钮组件的用法</h3><h4 id="组件的属性-1"><a href="#组件的属性-1" class="headerlink" title="组件的属性"></a>组件的属性</h4><table>
+<thead>
+<tr>
+<th align="center">属性名</th>
+<th align="center">类型</th>
+<th align="center">默认值</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">size</td>
+<td align="center">String</td>
+<td align="center">default</td>
+<td align="center">按钮的大小</td>
+</tr>
+<tr>
+<td align="center">type</td>
+<td align="center">String</td>
+<td align="center">default</td>
+<td align="center">按钮的样式类型</td>
+</tr>
+<tr>
+<td align="center">plain</td>
+<td align="center">Boolean</td>
+<td align="center">false</td>
+<td align="center">按钮是否镂空，背景色透明</td>
+</tr>
+<tr>
+<td align="center">disabled</td>
+<td align="center">Boolean</td>
+<td align="center">false</td>
+<td align="center">是否按钮</td>
+</tr>
+<tr>
+<td align="center">loading</td>
+<td align="center">Boolean</td>
+<td align="center">false</td>
+<td align="center">名称是否带 loading t图标</td>
+</tr>
+</tbody></table>
+<p><code>button</code> 组件默认独占一行，设置 <code>size</code> 为 <code>mini</code> 时可以在一行显示多个</p>
+<h4 id="案例代码"><a href="#案例代码" class="headerlink" title="案例代码"></a>案例代码</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">size</span>=<span class="string">'mini'</span> <span class="attr">type</span>=<span class="string">'primary'</span>&gt;</span>前端<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">size</span>=<span class="string">'mini'</span> <span class="attr">type</span>=<span class="string">'default'</span> <span class="attr">disabled</span>=<span class="string">'true'</span>&gt;</span>前端<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">size</span>=<span class="string">'mini'</span> <span class="attr">type</span>=<span class="string">'warn'</span> <span class="attr">loading</span>=<span class="string">'true'</span>&gt;</span>前端<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="image组件的使用"><a href="#image组件的使用" class="headerlink" title="image组件的使用"></a>image组件的使用</h4><p><a href="https://uniapp.dcloud.io/component/image?id=image" target="_blank" rel="noopener">文档</a></p>
+<table>
+<thead>
+<tr>
+<th>属性名</th>
+<th>类型</th>
+<th>默认值</th>
+<th>说明</th>
+<th>平台差异说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>src</td>
+<td>String</td>
+<td></td>
+<td>图片资源地址</td>
+<td></td>
+</tr>
+<tr>
+<td>mode</td>
+<td>String</td>
+<td>‘scaleToFill’</td>
+<td>图片裁剪、缩放的模式</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>Tips</strong></p>
+<ul>
+<li><code>&lt;image&gt;</code> 组件默认宽度 300px、高度 225px；</li>
+<li><code>src</code> 仅支持相对路径、绝对路径，支持 base64 码；</li>
+<li>页面结构复杂，css样式太多的情况，使用 image 可能导致样式生效较慢，出现 “闪一下” 的情况，此时设置 <code>image{will-change: transform}</code> ,可优化此问题。</li>
+</ul>
+<h3 id="uni-app中的样式"><a href="#uni-app中的样式" class="headerlink" title="uni-app中的样式"></a>uni-app中的样式</h3><ul>
+<li><p>rpx 即响应式px，一种根据屏幕宽度自适应的动态单位。以750宽的屏幕为基准，750rpx恰好为屏幕宽度。屏幕变宽，rpx 实际显示效果会等比放大。</p>
+</li>
+<li><p>使用<code>@import</code>语句可以导入外联样式表，<code>@import</code>后跟需要导入的外联样式表的相对路径，用<code>;</code>表示语句结束</p>
+</li>
+<li><p>支持基本常用的选择器class、id、element等</p>
+</li>
+<li><p>在 <code>uni-app</code> 中不能使用 <code>*</code> 选择器。</p>
+</li>
+<li><p><code>page</code> 相当于 <code>body</code> 节点</p>
+</li>
+<li><p>定义在 App.vue 中的样式为全局样式，作用于每一个页面。在 pages 目录下 的 vue 文件中定义的样式为局部样式，只作用在对应的页面，并会覆盖 App.vue 中相同的选择器。</p>
+</li>
+<li><p><code>uni-app</code> 支持使用字体图标，使用方式与普通 <code>web</code> 项目相同，需要注意以下几点：</p>
+<ul>
+<li><p>字体文件小于 40kb，<code>uni-app</code> 会自动将其转化为 base64 格式；</p>
+</li>
+<li><p>字体文件大于等于 40kb， 需开发者自己转换，否则使用将不生效；</p>
+</li>
+<li><p>字体文件的引用路径推荐使用以 ~@ 开头的绝对路径。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@font-face &#123;</span><br><span class="line">    font-family: test1-icon;</span><br><span class="line">    src: url(&apos;~@/static/iconfont.ttf&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>如何使用scss或者less</p>
+</li>
+</ul>
+<h3 id="uni-app中的数据绑定"><a href="#uni-app中的数据绑定" class="headerlink" title="uni-app中的数据绑定"></a>uni-app中的数据绑定</h3><p>在页面中需要定义数据，和我们之前的vue一摸一样，直接在data中定义数据即可</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      msg: <span class="string">'hello-uni'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="插值表达式的使用"><a href="#插值表达式的使用" class="headerlink" title="插值表达式的使用"></a>插值表达式的使用</h3><p>利用插值表达式渲染基本数据</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span>&#123;&#123;msg&#125;&#125;<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在插值表达式中使用三元运算</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span>&#123;&#123; flag ? '我是真的':'我是假的' &#125;&#125;<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>基本运算</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span>&#123;&#123;1+1&#125;&#125;<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="v-bind动态绑定属性"><a href="#v-bind动态绑定属性" class="headerlink" title="v-bind动态绑定属性"></a>v-bind动态绑定属性</h3><p>在data中定义了一张图片，我们希望把这张图片渲染到页面上</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      img: <span class="string">'http://destiny001.gitee.io/image/monkey_02.jpg'</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>利用v-bind进行渲染</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">image</span> <span class="attr">v-bind:src</span>=<span class="string">"img"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>还可以缩写成:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">image</span> <span class="attr">:src</span>=<span class="string">"img"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="v-for的使用"><a href="#v-for的使用" class="headerlink" title="v-for的使用"></a>v-for的使用</h3><p>data中定以一个数组，最终将数组渲染到页面上</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">data () &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    arr: [</span><br><span class="line">      &#123; <span class="attr">name</span>: <span class="string">'刘能'</span>, <span class="attr">age</span>: <span class="number">29</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">name</span>: <span class="string">'赵四'</span>, <span class="attr">age</span>: <span class="number">39</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">name</span>: <span class="string">'宋小宝'</span>, <span class="attr">age</span>: <span class="number">49</span> &#125;,</span><br><span class="line">      &#123; <span class="attr">name</span>: <span class="string">'小沈阳'</span>, <span class="attr">age</span>: <span class="number">59</span> &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>利用v-for进行循环</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;view v-<span class="keyword">for</span>=<span class="string">"(item,i) in arr"</span> :key=<span class="string">"i"</span>&gt;名字：&#123;&#123;item.name&#125;&#125;---年龄：&#123;&#123;item.age&#125;&#125;&lt;<span class="regexp">/view&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="uni中的事件"><a href="#uni中的事件" class="headerlink" title="uni中的事件"></a>uni中的事件</h3><h4 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h4><p>在uni中事件绑定和vue中是一样的，通过v-on进行事件的绑定，也可以简写为@</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"tapHandle"</span>&gt;</span>点我啊<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>事件函数定义在methods中</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">methods: &#123;</span><br><span class="line">  tapHandle () &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'真的点我了'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="事件传参"><a href="#事件传参" class="headerlink" title="事件传参"></a>事件传参</h4><p>默认如果没有传递参数，事件函数第一个形参为事件对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// template</span><br><span class="line">&lt;button @click=&quot;tapHandle&quot;&gt;点我啊&lt;/button&gt;</span><br><span class="line">// script</span><br><span class="line">methods: &#123;</span><br><span class="line">  tapHandle (e) &#123;</span><br><span class="line">    console.log(e)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果给事件函数传递参数了，则对应的事件函数形参接收的则是传递过来的数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// template</span><br><span class="line">&lt;button @click=&quot;tapHandle(1)&quot;&gt;点我啊&lt;/button&gt;</span><br><span class="line">// script</span><br><span class="line">methods: &#123;</span><br><span class="line">  tapHandle (num) &#123;</span><br><span class="line">    console.log(num)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果获取事件对象也想传递参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// template</span><br><span class="line">&lt;button @click=&quot;tapHandle(1,$event)&quot;&gt;点我啊&lt;/button&gt;</span><br><span class="line">// script</span><br><span class="line">methods: &#123;</span><br><span class="line">  tapHandle (num,e) &#123;</span><br><span class="line">    console.log(num,e)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="uni的生命周期"><a href="#uni的生命周期" class="headerlink" title="uni的生命周期"></a>uni的生命周期</h3><h4 id="应用的生命周期"><a href="#应用的生命周期" class="headerlink" title="应用的生命周期"></a>应用的生命周期</h4><p>生命周期的概念：一个对象从创建、运行、销毁的整个过程被成为生命周期。</p>
+<p>生命周期函数：在生命周期中每个阶段会伴随着每一个函数的触发，这些函数被称为生命周期函数</p>
+<p><code>uni-app</code> 支持如下应用生命周期函数：</p>
+<table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>onLaunch</td>
+<td>当<code>uni-app</code> 初始化完成时触发（全局只触发一次）</td>
+</tr>
+<tr>
+<td>onShow</td>
+<td>当 <code>uni-app</code> 启动，或从后台进入前台显示</td>
+</tr>
+<tr>
+<td>onHide</td>
+<td>当 <code>uni-app</code> 从前台进入后台</td>
+</tr>
+<tr>
+<td>onError</td>
+<td>当 <code>uni-app</code> 报错时触发</td>
+</tr>
+</tbody></table>
+<h4 id="页面的生命周期"><a href="#页面的生命周期" class="headerlink" title="页面的生命周期"></a>页面的生命周期</h4><p><code>uni-app</code> 支持如下页面生命周期函数：</p>
+<table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>说明</th>
+<th>平台差异说明</th>
+<th>最低版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>onLoad</td>
+<td>监听页面加载，其参数为上个页面传递的数据，参数类型为Object（用于页面传参），参考<a href="https://uniapp.dcloud.io/api/router?id=navigateto" target="_blank" rel="noopener">示例</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>onShow</td>
+<td>监听页面显示。页面每次出现在屏幕上都触发，包括从下级页面点返回露出当前页面</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>onReady</td>
+<td>监听页面初次渲染完成。</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>onHide</td>
+<td>监听页面隐藏</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>onUnload</td>
+<td>监听页面卸载</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="下拉刷新"><a href="#下拉刷新" class="headerlink" title="下拉刷新"></a>下拉刷新</h3><h4 id="开启下拉刷新"><a href="#开启下拉刷新" class="headerlink" title="开启下拉刷新"></a>开启下拉刷新</h4><p>在uni-app中有两种方式开启下拉刷新</p>
+<ul>
+<li>需要在 <code>pages.json</code> 里，找到的当前页面的pages节点，并在 <code>style</code> 选项中开启 <code>enablePullDownRefresh</code></li>
+<li>通过调用uni.startPullDownRefresh方法来开启下拉刷新</li>
+</ul>
+<h4 id="通过配置文件开启"><a href="#通过配置文件开启" class="headerlink" title="通过配置文件开启"></a>通过配置文件开启</h4><p>创建list页面进行演示</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">		杭州学科</span><br><span class="line">		<span class="tag">&lt;<span class="name">view</span> <span class="attr">v-for</span>=<span class="string">"(item,index) in arr"</span> <span class="attr">:key</span>=<span class="string">"index"</span>&gt;</span></span><br><span class="line">			&#123;&#123;item&#125;&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">		data () &#123;</span><br><span class="line"><span class="actionscript">			<span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="actionscript">				arr: [<span class="string">'前端'</span>,<span class="string">'java'</span>,<span class="string">'ui'</span>,<span class="string">'大数据'</span>]</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>通过pages.json文件中找到当前页面的pages节点，并在 <code>style</code> 选项中开启 <code>enablePullDownRefresh</code></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"path"</span>:<span class="string">"pages/list/list"</span>,</span><br><span class="line">    <span class="string">"style"</span>:&#123;</span><br><span class="line">      <span class="string">"enablePullDownRefresh"</span>: <span class="literal">true</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="通过API开启"><a href="#通过API开启" class="headerlink" title="通过API开启"></a>通过API开启</h4><p><a href="https://uniapp.dcloud.io/api/ui/pulldown" target="_blank" rel="noopener">api文档</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">uni.startPullDownRefresh()</span><br></pre></td></tr></table></figure>
+
+<h4 id="监听下拉刷新"><a href="#监听下拉刷新" class="headerlink" title="监听下拉刷新"></a>监听下拉刷新</h4><p>通过onPullDownRefresh可以监听到下拉刷新的动作</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      arr: [<span class="string">'前端'</span>,<span class="string">'java'</span>,<span class="string">'ui'</span>,<span class="string">'大数据'</span>]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    startPull () &#123;</span><br><span class="line">      uni.startPullDownRefresh()</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  onPullDownRefresh () &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'触发下拉刷新了'</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="关闭下拉刷新"><a href="#关闭下拉刷新" class="headerlink" title="关闭下拉刷新"></a>关闭下拉刷新</h4><p>uni.stopPullDownRefresh()</p>
+<p>停止当前页面下拉刷新。</p>
+<p>案例演示</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"startPull"</span>&gt;</span>开启下拉刷新<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">		杭州学科</span><br><span class="line">		<span class="tag">&lt;<span class="name">view</span> <span class="attr">v-for</span>=<span class="string">"(item,index) in arr"</span> <span class="attr">:key</span>=<span class="string">"index"</span>&gt;</span></span><br><span class="line">			&#123;&#123;item&#125;&#125;</span><br><span class="line">		<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">		data () &#123;</span><br><span class="line"><span class="actionscript">			<span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="actionscript">				arr: [<span class="string">'前端'</span>,<span class="string">'java'</span>,<span class="string">'ui'</span>,<span class="string">'大数据'</span>]</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">		methods: &#123;</span><br><span class="line">			startPull () &#123;</span><br><span class="line">				uni.startPullDownRefresh()</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">		</span><br><span class="line">		onPullDownRefresh () &#123;</span><br><span class="line"><span class="actionscript">			<span class="keyword">this</span>.arr = []</span></span><br><span class="line"><span class="javascript">			setTimeout(<span class="function"><span class="params">()</span>=&gt;</span> &#123;</span></span><br><span class="line"><span class="actionscript">				<span class="keyword">this</span>.arr = [<span class="string">'前端'</span>,<span class="string">'java'</span>,<span class="string">'ui'</span>,<span class="string">'大数据'</span>]</span></span><br><span class="line">				uni.stopPullDownRefresh()</span><br><span class="line">			&#125;, 1000);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="上拉加载"><a href="#上拉加载" class="headerlink" title="上拉加载"></a>上拉加载</h3><p>通过在pages.json文件中找到当前页面的pages节点下style中配置onReachBottomDistance可以设置距离底部开启加载的距离，默认为50px</p>
+<p>通过onReachBottom监听到触底的行为</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view&gt;</span><br><span class="line">		&lt;button type=<span class="string">"primary"</span> @click=<span class="string">"startPull"</span>&gt;开启下拉刷新&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">		杭州学科</span></span><br><span class="line"><span class="regexp">		&lt;view v-for="(item,index) in arr" :key="index"&gt;</span></span><br><span class="line"><span class="regexp">			&#123;&#123;item&#125;&#125;</span></span><br><span class="line"><span class="regexp">		&lt;/</span>view&gt;</span><br><span class="line">	&lt;<span class="regexp">/view&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">	<span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">		data () &#123;</span><br><span class="line">			<span class="keyword">return</span> &#123;</span><br><span class="line">				arr: [<span class="string">'前端'</span>,<span class="string">'java'</span>,<span class="string">'ui'</span>,<span class="string">'大数据'</span>,<span class="string">'前端'</span>,<span class="string">'java'</span>,<span class="string">'ui'</span>,<span class="string">'大数据'</span>]</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">		onReachBottom () &#123;</span><br><span class="line">			<span class="built_in">console</span>.log(<span class="string">'触底了'</span>)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;style&gt;</span></span><br><span class="line"><span class="regexp">	view&#123;</span></span><br><span class="line"><span class="regexp">		height: 100px;</span></span><br><span class="line"><span class="regexp">		line-height: 100px;</span></span><br><span class="line"><span class="regexp">	&#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>style&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="网络请求"><a href="#网络请求" class="headerlink" title="网络请求"></a>网络请求</h3><p>在uni中可以调用uni.request方法进行请求网络请求</p>
+<p>需要注意的是：在小程序中网络相关的 API 在使用前需要配置域名白名单。</p>
+<h4 id="发送get请求"><a href="#发送get请求" class="headerlink" title="发送get请求"></a>发送get请求</h4><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view&gt;</span><br><span class="line">		&lt;button @click=<span class="string">"sendGet"</span>&gt;发送请求&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">	&lt;/</span>view&gt;</span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">	export default &#123;</span></span><br><span class="line"><span class="regexp">		methods: &#123;</span></span><br><span class="line"><span class="regexp">			sendGet () &#123;</span></span><br><span class="line"><span class="regexp">				uni.request(&#123;</span></span><br><span class="line"><span class="regexp">					url: 'http:/</span><span class="regexp">/localhost:8082/</span>api/getlunbo<span class="string">',</span></span><br><span class="line"><span class="string">					success(res) &#123;</span></span><br><span class="line"><span class="string">						console.log(res)</span></span><br><span class="line"><span class="string">					&#125;</span></span><br><span class="line"><span class="string">				&#125;)</span></span><br><span class="line"><span class="string">			&#125;</span></span><br><span class="line"><span class="string">		&#125;</span></span><br><span class="line"><span class="string">	&#125;</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="数据缓存"><a href="#数据缓存" class="headerlink" title="数据缓存"></a>数据缓存</h3><h4 id="uni-setStorage"><a href="#uni-setStorage" class="headerlink" title="uni.setStorage"></a>uni.setStorage</h4><p><a href="https://uniapp.dcloud.io/api/storage/storage?id=setstorage" target="_blank" rel="noopener">官方文档</a></p>
+<p>将数据存储在本地缓存中指定的 key 中，会覆盖掉原来该 key 对应的内容，这是一个异步接口。</p>
+<p>代码演示</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view&gt;</span><br><span class="line">		&lt;button type=<span class="string">"primary"</span> @click=<span class="string">"setStor"</span>&gt;存储数据&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">	&lt;/</span>view&gt;</span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">	export default &#123;</span></span><br><span class="line"><span class="regexp">		methods: &#123;</span></span><br><span class="line"><span class="regexp">			setStor () &#123;</span></span><br><span class="line"><span class="regexp">				uni.setStorage(&#123;</span></span><br><span class="line"><span class="regexp">				 	key: 'id',</span></span><br><span class="line"><span class="regexp">				 	data: 100,</span></span><br><span class="line"><span class="regexp">				 	success () &#123;</span></span><br><span class="line"><span class="regexp">				 		console.log('存储成功')</span></span><br><span class="line"><span class="regexp">				 	&#125;</span></span><br><span class="line"><span class="regexp">				 &#125;)</span></span><br><span class="line"><span class="regexp">			&#125;</span></span><br><span class="line"><span class="regexp">		&#125;</span></span><br><span class="line"><span class="regexp">	&#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">&lt;<span class="regexp">/style&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="uni-setStorageSync"><a href="#uni-setStorageSync" class="headerlink" title="uni.setStorageSync"></a>uni.setStorageSync</h4><p>将 data 存储在本地缓存中指定的 key 中，会覆盖掉原来该 key 对应的内容，这是一个同步接口。</p>
+<p>代码演示</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view&gt;</span><br><span class="line">		&lt;button type=<span class="string">"primary"</span> @click=<span class="string">"setStor"</span>&gt;存储数据&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">	&lt;/</span>view&gt;</span><br><span class="line">&lt;<span class="regexp">/template&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">&lt;script&gt;</span></span><br><span class="line"><span class="regexp">	export default &#123;</span></span><br><span class="line"><span class="regexp">		methods: &#123;</span></span><br><span class="line"><span class="regexp">			setStor () &#123;</span></span><br><span class="line"><span class="regexp">				uni.setStorageSync('id',100)</span></span><br><span class="line"><span class="regexp">			&#125;</span></span><br><span class="line"><span class="regexp">		&#125;</span></span><br><span class="line"><span class="regexp">	&#125;</span></span><br><span class="line"><span class="regexp">&lt;/</span>script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">&lt;<span class="regexp">/style&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="uni-getStorage"><a href="#uni-getStorage" class="headerlink" title="uni.getStorage"></a>uni.getStorage</h4><p>从本地缓存中异步获取指定 key 对应的内容。</p>
+<p>代码演示</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"getStorage"</span>&gt;</span>获取数据<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">		data () &#123;</span><br><span class="line"><span class="actionscript">			<span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="actionscript">				id: <span class="string">''</span></span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">		methods: &#123;</span><br><span class="line">			getStorage () &#123;</span><br><span class="line">				uni.getStorage(&#123;</span><br><span class="line"><span class="actionscript">					key: <span class="string">'id'</span>,</span></span><br><span class="line"><span class="javascript">					success:  <span class="function"><span class="params">res</span>=&gt;</span>&#123;</span></span><br><span class="line"><span class="actionscript">						<span class="keyword">this</span>.id = res.data</span></span><br><span class="line">					&#125;</span><br><span class="line">				&#125;)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="uni-getStorageSync"><a href="#uni-getStorageSync" class="headerlink" title="uni.getStorageSync"></a>uni.getStorageSync</h4><p>从本地缓存中同步获取指定 key 对应的内容。</p>
+<p>代码演示</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"getStorage"</span>&gt;</span>获取数据<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">		methods: &#123;</span><br><span class="line">			getStorage () &#123;</span><br><span class="line"><span class="actionscript">				<span class="keyword">const</span> id = uni.getStorageSync(<span class="string">'id'</span>)</span></span><br><span class="line"><span class="javascript">				<span class="built_in">console</span>.log(id)</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="uni-removeStorage"><a href="#uni-removeStorage" class="headerlink" title="uni.removeStorage"></a>uni.removeStorage</h4><p>从本地缓存中异步移除指定 key。</p>
+<p>代码演示</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"removeStorage"</span>&gt;</span>删除数据<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">		methods: &#123;</span><br><span class="line">			removeStorage () &#123;</span><br><span class="line">				uni.removeStorage(&#123;</span><br><span class="line"><span class="actionscript">					key: <span class="string">'id'</span>,</span></span><br><span class="line"><span class="actionscript">					success: <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span></span><br><span class="line"><span class="javascript">						<span class="built_in">console</span>.log(<span class="string">'删除成功'</span>)</span></span><br><span class="line">					&#125;</span><br><span class="line">				&#125;)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="uni-removeStorageSync"><a href="#uni-removeStorageSync" class="headerlink" title="uni.removeStorageSync"></a>uni.removeStorageSync</h4><p>从本地缓存中同步移除指定 key。</p>
+<p>代码演示</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"removeStorage"</span>&gt;</span>删除数据<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">		methods: &#123;</span><br><span class="line">			removeStorage () &#123;</span><br><span class="line"><span class="actionscript">				uni.removeStorageSync(<span class="string">'id'</span>)</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="上传图片、预览图片"><a href="#上传图片、预览图片" class="headerlink" title="上传图片、预览图片"></a>上传图片、预览图片</h3><h4 id="上传图片"><a href="#上传图片" class="headerlink" title="上传图片"></a>上传图片</h4><p>uni.chooseImage方法从本地相册选择图片或使用相机拍照。</p>
+<p>案例代码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"chooseImg"</span> <span class="attr">type</span>=<span class="string">"primary"</span>&gt;</span>上传图片<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">image</span> <span class="attr">v-for</span>=<span class="string">"item in imgArr"</span> <span class="attr">:src</span>=<span class="string">"item"</span> <span class="attr">:key</span>=<span class="string">"index"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">		data () &#123;</span><br><span class="line"><span class="actionscript">			<span class="keyword">return</span> &#123;</span></span><br><span class="line">				imgArr: []</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">		methods: &#123;</span><br><span class="line">			chooseImg () &#123;</span><br><span class="line">				uni.chooseImage(&#123;</span><br><span class="line">					count: 9,</span><br><span class="line"><span class="javascript">					success: <span class="function"><span class="params">res</span>=&gt;</span>&#123;</span></span><br><span class="line"><span class="actionscript">						<span class="keyword">this</span>.imgArr = res.tempFilePaths</span></span><br><span class="line">					&#125;</span><br><span class="line">				&#125;)</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="预览图片"><a href="#预览图片" class="headerlink" title="预览图片"></a>预览图片</h4><p>结构</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">image</span> <span class="attr">v-for</span>=<span class="string">"item in imgArr"</span> <span class="attr">:src</span>=<span class="string">"item"</span> @<span class="attr">click</span>=<span class="string">"previewImg(item)"</span> <span class="attr">:key</span>=<span class="string">"item"</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>预览图片的方法</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">previewImg (current) &#123;</span><br><span class="line">  uni.previewImage(&#123;</span><br><span class="line">    urls: <span class="keyword">this</span>.imgArr,</span><br><span class="line">    current</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="条件注释实现跨段兼容"><a href="#条件注释实现跨段兼容" class="headerlink" title="条件注释实现跨段兼容"></a>条件注释实现跨段兼容</h3><p>条件编译是用特殊的注释作为标记，在编译时根据这些特殊的注释，将注释里面的代码编译到不同平台。</p>
+<p><strong>写法：</strong>以 #ifdef 加平台标识 开头，以 #endif 结尾。</p>
+<p>平台标识</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>平台</th>
+<th>参考文档</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>APP-PLUS</td>
+<td>5+App</td>
+<td><a href="http://www.html5plus.org/doc/" target="_blank" rel="noopener">HTML5+ 规范</a></td>
+</tr>
+<tr>
+<td>H5</td>
+<td>H5</td>
+<td></td>
+</tr>
+<tr>
+<td>MP-WEIXIN</td>
+<td>微信小程序</td>
+<td><a href="https://developers.weixin.qq.com/miniprogram/dev/api/" target="_blank" rel="noopener">微信小程序</a></td>
+</tr>
+<tr>
+<td>MP-ALIPAY</td>
+<td>支付宝小程序</td>
+<td><a href="https://docs.alipay.com/mini/developer/getting-started" target="_blank" rel="noopener">支付宝小程序</a></td>
+</tr>
+<tr>
+<td>MP-BAIDU</td>
+<td>百度小程序</td>
+<td><a href="https://smartprogram.baidu.com/docs/develop/tutorial/codedir/" target="_blank" rel="noopener">百度小程序</a></td>
+</tr>
+<tr>
+<td>MP-TOUTIAO</td>
+<td>头条小程序</td>
+<td><a href="https://developer.toutiao.com/dev/cn/mini-app/develop/framework/basic-reference/introduction" target="_blank" rel="noopener">头条小程序</a></td>
+</tr>
+<tr>
+<td>MP-QQ</td>
+<td>QQ小程序</td>
+<td>（目前仅cli版支持）</td>
+</tr>
+<tr>
+<td>MP</td>
+<td>微信小程序/支付宝小程序/百度小程序/头条小程序/QQ小程序</td>
+<td></td>
+</tr>
+</tbody></table>
+<h4 id="组件的条件注释"><a href="#组件的条件注释" class="headerlink" title="组件的条件注释"></a>组件的条件注释</h4><p>代码演示</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- #ifdef H5 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">  h5页面会显示</span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- #endif --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- #ifdef MP-WEIXIN --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">  微信小程序会显示</span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- #endif --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- #ifdef APP-PLUS --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">  app会显示</span><br><span class="line"><span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- #endif --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="api的条件注释"><a href="#api的条件注释" class="headerlink" title="api的条件注释"></a>api的条件注释</h4><p>代码演示</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">onLoad () &#123;</span><br><span class="line">  <span class="comment">//#ifdef MP-WEIXIN</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'微信小程序'</span>)</span><br><span class="line">  <span class="comment">//#endif</span></span><br><span class="line">  <span class="comment">//#ifdef H5</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'h5页面'</span>)</span><br><span class="line">  <span class="comment">//#endif</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>样式的条件注释</p>
+<p>代码演示</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* #ifdef H5 */</span></span><br><span class="line"><span class="selector-tag">view</span>&#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">background</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* #endif */</span></span><br><span class="line"><span class="comment">/* #ifdef MP-WEIXIN */</span></span><br><span class="line"><span class="selector-tag">view</span>&#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">background</span>: green;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* #endif */</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="uni中的导航跳转"><a href="#uni中的导航跳转" class="headerlink" title="uni中的导航跳转"></a>uni中的导航跳转</h3><h4 id="利用navigator进行跳转"><a href="#利用navigator进行跳转" class="headerlink" title="利用navigator进行跳转"></a>利用navigator进行跳转</h4><p>navigator详细文档：<a href="https://uniapp.dcloud.io/component/navigator" target="_blank" rel="noopener">文档地址</a></p>
+<p>跳转到普通页面</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">navigator</span> <span class="attr">url</span>=<span class="string">"/pages/about/about"</span> <span class="attr">hover-class</span>=<span class="string">"navigator-hover"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"default"</span>&gt;</span>跳转到关于页面<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">navigator</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>跳转到tabbar页面</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">navigator</span> <span class="attr">url</span>=<span class="string">"/pages/message/message"</span> <span class="attr">open-type</span>=<span class="string">"switchTab"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"default"</span>&gt;</span>跳转到message页面<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">navigator</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="利用编程式导航进行跳转"><a href="#利用编程式导航进行跳转" class="headerlink" title="利用编程式导航进行跳转"></a>利用编程式导航进行跳转</h4><p><a href="[uni.navigateTo](https://uniapp.dcloud.io/api/router?id=navigateto)">导航跳转文档</a></p>
+<h4 id="利用navigateTo进行导航跳转"><a href="#利用navigateTo进行导航跳转" class="headerlink" title="利用navigateTo进行导航跳转"></a>利用navigateTo进行导航跳转</h4><p>保留当前页面，跳转到应用内的某个页面，使用<code>uni.navigateBack</code>可以返回到原页面。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"goAbout"</span>&gt;</span>跳转到关于页面<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>通过navigateTo方法进行跳转到普通页面</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">goAbout () &#123;</span><br><span class="line">  uni.navigateTo(&#123;</span><br><span class="line">    url: <span class="string">'/pages/about/about'</span>,</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="通过switchTab跳转到tabbar页面"><a href="#通过switchTab跳转到tabbar页面" class="headerlink" title="通过switchTab跳转到tabbar页面"></a>通过switchTab跳转到tabbar页面</h4><p>跳转到tabbar页面</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"goMessage"</span>&gt;</span>跳转到message页面<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>通过switchTab方法进行跳转</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">goMessage () &#123;</span><br><span class="line">  uni.switchTab(&#123;</span><br><span class="line">    url: <span class="string">'/pages/message/message'</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="redirectTo进行跳转"><a href="#redirectTo进行跳转" class="headerlink" title="redirectTo进行跳转"></a>redirectTo进行跳转</h4><p>关闭当前页面，跳转到应用内的某个页面。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- template --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"goMessage"</span>&gt;</span>跳转到message页面<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- js --&gt;</span></span><br><span class="line">goMessage () &#123;</span><br><span class="line">  uni.switchTab(&#123;</span><br><span class="line">    url: '/pages/message/message'</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过onUnload测试当前组件确实卸载</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">onUnload () &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'组件卸载了'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="导航跳转传递参数"><a href="#导航跳转传递参数" class="headerlink" title="导航跳转传递参数"></a>导航跳转传递参数</h3><p>在导航进行跳转到下一个页面的同时，可以给下一个页面传递相应的参数，接收参数的页面可以通过onLoad生命周期进行接收</p>
+<p>传递参数的页面</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">goAbout () &#123;</span><br><span class="line">  uni.navigateTo(&#123;</span><br><span class="line">    url: <span class="string">'/pages/about/about?id=80'</span>,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>接收参数的页面</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">	<span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">		onLoad (options) &#123;</span><br><span class="line">			<span class="built_in">console</span>.log(options)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="uni-app中组件的创建"><a href="#uni-app中组件的创建" class="headerlink" title="uni-app中组件的创建"></a>uni-app中组件的创建</h3><p>在uni-app中，可以通过创建一个后缀名为vue的文件，即创建一个组件成功，其他组件可以将该组件通过impot的方式导入，在通过components进行注册即可</p>
+<ul>
+<li><p>创建login组件，在component中创建login目录，然后新建login.vue文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view&gt;</span><br><span class="line">		这是一个自定义组件</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在其他组件中导入该组件并注册</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import login from &quot;@/components/test/test.vue&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>注册组件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">components: &#123;test&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用组件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;test&gt;&lt;/test&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h3 id="组件的生命周期函数"><a href="#组件的生命周期函数" class="headerlink" title="组件的生命周期函数"></a>组件的生命周期函数</h3><table>
+<thead>
+<tr>
+<th>beforeCreate</th>
+<th>在实例初始化之后被调用。<a href="https://cn.vuejs.org/v2/api/#beforeCreate" target="_blank" rel="noopener">详见</a></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>created</td>
+<td>在实例创建完成后被立即调用。<a href="https://cn.vuejs.org/v2/api/#created" target="_blank" rel="noopener">详见</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>beforeMount</td>
+<td>在挂载开始之前被调用。<a href="https://cn.vuejs.org/v2/api/#beforeMount" target="_blank" rel="noopener">详见</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>mounted</td>
+<td>挂载到实例上去之后调用。<a href="https://cn.vuejs.org/v2/api/#mounted" target="_blank" rel="noopener">详见</a> 注意：此处并不能确定子组件被全部挂载，如果需要子组件完全挂载之后在执行操作可以使用<code>$nextTick</code><a href="https://cn.vuejs.org/v2/api/#Vue-nextTick" target="_blank" rel="noopener">Vue官方文档</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>beforeUpdate</td>
+<td>数据更新时调用，发生在虚拟 DOM 打补丁之前。<a href="https://cn.vuejs.org/v2/api/#beforeUpdate" target="_blank" rel="noopener">详见</a></td>
+<td>仅H5平台支持</td>
+<td></td>
+</tr>
+<tr>
+<td>updated</td>
+<td>由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子。<a href="https://cn.vuejs.org/v2/api/#updated" target="_blank" rel="noopener">详见</a></td>
+<td>仅H5平台支持</td>
+<td></td>
+</tr>
+<tr>
+<td>beforeDestroy</td>
+<td>实例销毁之前调用。在这一步，实例仍然完全可用。<a href="https://cn.vuejs.org/v2/api/#beforeDestroy" target="_blank" rel="noopener">详见</a></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>destroyed</td>
+<td>Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。<a href="https://cn.vuejs.org/v2/api/#destroyed" target="_blank" rel="noopener">详见</a></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="组件的通讯"><a href="#组件的通讯" class="headerlink" title="组件的通讯"></a>组件的通讯</h3><h4 id="父组件给子组件传值"><a href="#父组件给子组件传值" class="headerlink" title="父组件给子组件传值"></a>父组件给子组件传值</h4><p>通过props来接受外界传递到组件内部的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view&gt;</span><br><span class="line">		这是一个自定义组件 &#123;&#123;msg&#125;&#125;</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">	export default &#123;</span><br><span class="line">		props: [&apos;msg&apos;]</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>其他组件在使用login组件的时候传递值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">	&lt;view&gt;</span><br><span class="line">		&lt;test :msg=&quot;msg&quot;&gt;&lt;/test&gt;</span><br><span class="line">	&lt;/view&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">	import test from &quot;@/components/test/test.vue&quot;</span><br><span class="line">	export default &#123;</span><br><span class="line">		data () &#123;</span><br><span class="line">			return &#123;</span><br><span class="line">				msg: &apos;hello&apos;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">		</span><br><span class="line">		components: &#123;test&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="子组件给父组件传值"><a href="#子组件给父组件传值" class="headerlink" title="子组件给父组件传值"></a>子组件给父组件传值</h4><p>通过$emit触发事件进行传递参数</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">		这是一个自定义组件 &#123;&#123;msg&#125;&#125;</span><br><span class="line">		<span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"primary"</span> @<span class="attr">click</span>=<span class="string">"sendMsg"</span>&gt;</span>给父组件传值<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">		data () &#123;</span><br><span class="line"><span class="actionscript">			<span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="actionscript">				status: <span class="string">'打篮球'</span></span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">		props: &#123;</span><br><span class="line">			msg: &#123;</span><br><span class="line"><span class="javascript">				type: <span class="built_in">String</span>,</span></span><br><span class="line"><span class="actionscript">				value: <span class="string">''</span></span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">		methods: &#123;</span><br><span class="line">			sendMsg () &#123;</span><br><span class="line"><span class="actionscript">				<span class="keyword">this</span>.$emit(<span class="string">'myEvent'</span>,<span class="keyword">this</span>.status)</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>父组件定义自定义事件并接收参数</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">view</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">test</span> <span class="attr">:msg</span>=<span class="string">"msg"</span> @<span class="attr">myEvent</span>=<span class="string">"getMsg"</span>&gt;</span><span class="tag">&lt;/<span class="name">test</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript">	<span class="keyword">import</span> test <span class="keyword">from</span> <span class="string">"@/components/test/test.vue"</span></span></span><br><span class="line"><span class="javascript">	<span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">		data () &#123;</span><br><span class="line"><span class="actionscript">			<span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="actionscript">				msg: <span class="string">'hello'</span></span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">		methods: &#123;</span><br><span class="line">			getMsg (res) &#123;</span><br><span class="line"><span class="javascript">				<span class="built_in">console</span>.log(res)</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br><span class="line">		</span><br><span class="line">		components: &#123;test&#125;</span><br><span class="line">	&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="uni-app-全局变量的几种实现方式"><a href="#uni-app-全局变量的几种实现方式" class="headerlink" title="uni-app 全局变量的几种实现方式"></a>uni-app 全局变量的几种实现方式</h3><h4 id="公用模块"><a href="#公用模块" class="headerlink" title="公用模块"></a>公用模块</h4><p>定义一个专用的模块，用来组织和管理这些全局的变量，在需要的页面引入。</p>
+<p><strong>注意这种方式只支持多个vue页面或多个nvue页面之间公用，vue和nvue之间不公用。</strong></p>
+<p>示例如下：<br>在 uni-app 项目根目录下创建 common 目录，然后在 common 目录下新建 helper.js 用于定义公用的方法。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> websiteUrl = <span class="string">'http://uniapp.dcloud.io'</span>;  </span><br><span class="line"><span class="keyword">const</span> now = <span class="built_in">Date</span>.now || <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();  </span><br><span class="line">&#125;;  </span><br><span class="line"><span class="keyword">const</span> isArray = <span class="built_in">Array</span>.isArray || <span class="function"><span class="keyword">function</span> (<span class="params">obj</span>) </span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> obj <span class="keyword">instanceof</span> <span class="built_in">Array</span>;  </span><br><span class="line">&#125;;  </span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;  </span><br><span class="line">    websiteUrl,  </span><br><span class="line">    now,  </span><br><span class="line">    isArray  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>接下来在 pages/index/index.vue 中引用该模块</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;  </span><br><span class="line">    <span class="keyword">import</span> helper <span class="keyword">from</span> <span class="string">'../../common/helper.js'</span>;  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;  </span><br><span class="line">        data() &#123;  </span><br><span class="line">            <span class="keyword">return</span> &#123;&#125;;  </span><br><span class="line">        &#125;,  </span><br><span class="line">        onLoad()&#123;  </span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'now:'</span> + helper.now());  </span><br><span class="line">        &#125;,  </span><br><span class="line">        methods: &#123;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这种方式维护起来比较方便，但是缺点就是每次都需要引入。</p>
+<h4 id="挂载-Vue-prototype"><a href="#挂载-Vue-prototype" class="headerlink" title="挂载 Vue.prototype"></a>挂载 Vue.prototype</h4><p>将一些使用频率较高的常量或者方法，直接扩展到 Vue.prototype 上，每个 Vue 对象都会“继承”下来。</p>
+<p><strong>注意这种方式只支持vue页面</strong></p>
+<p>示例如下：<br>在 main.js 中挂载属性/方法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Vue.prototype.websiteUrl = <span class="string">'http://uniapp.dcloud.io'</span>;  </span><br><span class="line">Vue.prototype.now = <span class="built_in">Date</span>.now || <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Date</span>().getTime();  </span><br><span class="line">&#125;;  </span><br><span class="line">Vue.prototype.isArray = <span class="built_in">Array</span>.isArray || <span class="function"><span class="keyword">function</span> (<span class="params">obj</span>) </span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> obj <span class="keyword">instanceof</span> <span class="built_in">Array</span>;  </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>然后在 pages/index/index.vue 中调用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;  </span><br><span class="line">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;  </span><br><span class="line">        data() &#123;  </span><br><span class="line">            <span class="keyword">return</span> &#123;&#125;;  </span><br><span class="line">        &#125;,  </span><br><span class="line">        onLoad()&#123;  </span><br><span class="line">            <span class="built_in">console</span>.log(<span class="string">'now:'</span> + <span class="keyword">this</span>.now());  </span><br><span class="line">        &#125;,  </span><br><span class="line">        methods: &#123;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>这种方式，只需要在 main.js 中定义好即可在每个页面中直接调用。</p>
+<p><strong>Tips</strong></p>
+<ul>
+<li>每个页面中不要在出现重复的属性或方法名。</li>
+<li>建议在 Vue.prototype 上挂载的属性或方法，可以加一个统一的前缀。比如 $url、global_url 这样，在阅读代码时也容易与当前页面的内容区分开。</li>
+</ul>
+<h4 id="globalData"><a href="#globalData" class="headerlink" title="globalData"></a>globalData</h4><p>小程序中有个globalData概念，可以在 App 上声明全局变量。 Vue 之前是没有这类概念的，但 uni-app 引入了globalData概念，并且在包括H5、App等平台都实现了。<br>在 App.vue 可以定义 globalData ，也可以使用 API 读写这个值。</p>
+<p>globalData支持vue和nvue共享数据。</p>
+<p>globalData是一种比较简单的全局变量使用方式。</p>
+<p>定义：App.vue</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span>  </span><br><span class="line"><span class="javascript">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;  </span></span><br><span class="line">        globalData: &#123;  </span><br><span class="line"><span class="actionscript">            text: <span class="string">'text'</span>  </span></span><br><span class="line">        &#125;,  </span><br><span class="line"><span class="actionscript">        onLaunch: <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;  </span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">'App Launch'</span>)  </span></span><br><span class="line">        &#125;,  </span><br><span class="line"><span class="actionscript">        onShow: <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;  </span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">'App Show'</span>)  </span></span><br><span class="line">        &#125;,  </span><br><span class="line"><span class="actionscript">        onHide: <span class="function"><span class="keyword">function</span><span class="params">()</span> </span>&#123;  </span></span><br><span class="line"><span class="javascript">            <span class="built_in">console</span>.log(<span class="string">'App Hide'</span>)  </span></span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span>  </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span>  </span><br><span class="line"><span class="css">    <span class="comment">/*每个页面公共css */</span>  </span></span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>js中操作globalData的方式如下：</p>
+<p>赋值：<code>getApp().globalData.text = &#39;test&#39;</code></p>
+<p>取值：<code>console.log(getApp().globalData.text) // &#39;test&#39;</code></p>
+<p>如果需要把globalData的数据绑定到页面上，可在页面的onshow声明周期里进行变量重赋值。HBuilderX 2.0.3起，nvue页面在<code>uni-app</code>编译模式下，也支持onshow。</p>
+<h4 id="Vuex"><a href="#Vuex" class="headerlink" title="Vuex"></a>Vuex</h4><p>Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。</p>
+<p><strong>HBuilderX 2.2.5+起，支持vue和nvue之间共享。<a href="https://uniapp.dcloud.io/use-weex?id=vue-和-nvue-共享的变量和数据" target="_blank" rel="noopener">参考</a></strong></p>
+<p>这里以登录后同步更新用户信息为例，简单说明下 Vuex 的用法，更多更详细的 Vuex 的内容，建议前往其官网 <a href="https://vuex.vuejs.org/zh/" target="_blank" rel="noopener">Vuex</a> 学习下。</p>
+<p>举例说明：</p>
+<p>在 uni-app 项目根目录下新建 store 目录，在 store 目录下创建 index.js 定义状态值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> store = <span class="keyword">new</span> Vuex.Store(&#123;  </span><br><span class="line">    state: &#123;  </span><br><span class="line">        login: <span class="literal">false</span>,  </span><br><span class="line">        token: <span class="string">''</span>,  </span><br><span class="line">        avatarUrl: <span class="string">''</span>,  </span><br><span class="line">        userName: <span class="string">''</span>  </span><br><span class="line">    &#125;,  </span><br><span class="line">    mutations: &#123;  </span><br><span class="line">        login(state, provider) &#123;  </span><br><span class="line">            <span class="built_in">console</span>.log(state)  </span><br><span class="line">            <span class="built_in">console</span>.log(provider)  </span><br><span class="line">            state.login = <span class="literal">true</span>;  </span><br><span class="line">            state.token = provider.token;  </span><br><span class="line">            state.userName = provider.userName;  </span><br><span class="line">            state.avatarUrl = provider.avatarUrl;  </span><br><span class="line">        &#125;,  </span><br><span class="line">        logout(state) &#123;  </span><br><span class="line">            state.login = <span class="literal">false</span>;  </span><br><span class="line">            state.token = <span class="string">''</span>;  </span><br><span class="line">            state.userName = <span class="string">''</span>;  </span><br><span class="line">            state.avatarUrl = <span class="string">''</span>;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>然后，需要在 main.js 挂载 Vuex</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> store <span class="keyword">from</span> <span class="string">'./store'</span>  </span><br><span class="line">Vue.prototype.$store = store</span><br></pre></td></tr></table></figure>
+
+<p>最后，在 pages/index/index.vue 使用</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;  </span><br><span class="line">    <span class="keyword">import</span> &#123;  </span><br><span class="line">        mapState,  </span><br><span class="line">        mapMutations  </span><br><span class="line">    &#125; <span class="keyword">from</span> <span class="string">'vuex'</span>;  </span><br><span class="line"></span><br><span class="line">    <span class="keyword">export</span> <span class="keyword">default</span> &#123;  </span><br><span class="line">        computed: &#123;  </span><br><span class="line">            ...mapState([<span class="string">'avatarUrl'</span>, <span class="string">'login'</span>, <span class="string">'userName'</span>])  </span><br><span class="line">        &#125;,  </span><br><span class="line">        methods: &#123;  </span><br><span class="line">            ...mapMutations([<span class="string">'logout'</span>])  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>详细示例，请下载附件，在 HBuilderX 中运行。</p>
+<p>示例操作步骤：<br>未登录时，提示去登录。跳转至登录页后，点击“登录”获取用户信息，同步更新状态后，返回到个人中心即可看到信息同步的结果。</p>
+<p>注意：对比前面的方式，该方式更加适合处理全局的并且值会发生变化的情况。</p>
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><p>.vue 和 .nvue 并不是一个规范，因此一些在 .vue 中适用的方案并不适用于 .nvue。 Vue 上挂载属性，不能在 .nvue 中使用。</p>
+<h4 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h4><p>关于登录状态的维护，还可以参考 uni-app 的登录模板示例。可以在 <a href="https://github.com/dcloudio/uni-app/tree/master/examples/login-template" target="_blank" rel="noopener">github</a> 获取源码，也可以在新建 uni-app 时“从模板创建”选择登录模板。</p>
+<p><a href="https://ask.dcloud.net.cn/article/35021" target="_blank" rel="noopener">链接</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-03-28T17:42:30.000Z" itemprop="dateUpdated">2024-03-29 01:42:30</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/knowledges/uniapp-ji-chu-zhi-shi.html" target="_blank" rel="external">https://qw66.gitee.io/knowledges/uniapp-ji-chu-zhi-shi.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/uni-app/">uni-app</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小程序/">小程序</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/uniapp-ji-chu-zhi-shi.html&title=《uniapp基础知识》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/uniapp-ji-chu-zhi-shi.html&title=《uniapp基础知识》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/uniapp-ji-chu-zhi-shi.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《uniapp基础知识》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/uniapp-ji-chu-zhi-shi.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/uniapp-ji-chu-zhi-shi.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/knowledges/uniapp-an-zhuo-ios.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">uniapp安卓IOS</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/knowledges/uniapp.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">uniapp</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/uniapp-ji-chu-zhi-shi.html&title=《uniapp基础知识》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/uniapp-ji-chu-zhi-shi.html&title=《uniapp基础知识》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/uniapp-ji-chu-zhi-shi.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《uniapp基础知识》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/uniapp-ji-chu-zhi-shi.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/uniapp-ji-chu-zhi-shi.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJElEQVR42u3aSW7DMAwF0N7/0ukBUquflBPA4vMqyGDrZUFw+vmJr9fbtf70/TvJ3ZLfbl0YGBiPZbyWV37Q5Fj5r/KzYWBgzGFcRbD145NAmQTfnH35PgYGBkb8nXXorLIxMDAwvhNwe3UoBgYGRq+IzQHVgrZaPGNgYExj5KHw+68/Mt/AwMB4FONVvKoN/WrC1zwVBgbG0Yw8wN2FrKaeebmLgYFxNiM5dG89opp05u80U0YMDIwjGJ+oiXdGoflwAgMD41RGsvSQjwHWD0va+s0BAAYGxgBG79PqQkaegCaJKQYGBkYSlPcbZ/lCRtRWw8DAOJpR/XGeuuWttOSJl+9jYGAMYzRDXvCwasGc4zEwMM5mrJO5vFl/15iz2raL6mkMDIwBjF47bCdA91JMDAyMUxn7N0qaZc12f7yQgYGBMY2RLGNVy9Ten1VYSsPAwBjAqC7H50VmXsTmKeYf98fAwDiakSR51UWK3mgzSgHX98fAwBjAyFtvvWSuusCRj1cxMDDmMKorqr1WWnUIWihoMTAwxjDysrY6yOytmpWXLTAwMI5j3JCQ5Tsdrb8gCrsYGBhHM3rBbqe5tpMU7gxHMTAwns6oBtnq2KA6qqympxgYGHMY1SWtHmw/7YvmGxgYGOMZyYHybLS6OvZPRY6BgYERr03kQbkaZC/PgIGBMYDRC6O9Rv/+MAADA2Maoxfy9ovP/J63DTUxMDCex/gFpgF+TPUOPTcAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

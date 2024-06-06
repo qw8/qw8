@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>前端代码评审 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="代码评审">
+    <meta name="description" content="前端代码评审checklist清单前言​       前端团队有评审代码的要求，但由于每个开发人员的水平不同，技术关注点不同，所以对代码评审的关注点不同，为了保证代码质量，团队代码风格统一，特此拟定一份《前端团队代码评审 CheckList 清单》，这样代码评审人员在评审代码时，可以参照这份清单，对代码进行评审。从而辅助整个团队提高代码质量、统一代码规范。如果你的团队还没有这么一份代码评审 Che">
+<meta name="keywords" content="代码评审">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端代码评审">
+<meta property="og:url" content="https://qw66.gitee.io/articles/qian-duan-dai-ma-ping-shen.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="前端代码评审checklist清单前言​       前端团队有评审代码的要求，但由于每个开发人员的水平不同，技术关注点不同，所以对代码评审的关注点不同，为了保证代码质量，团队代码风格统一，特此拟定一份《前端团队代码评审 CheckList 清单》，这样代码评审人员在评审代码时，可以参照这份清单，对代码进行评审。从而辅助整个团队提高代码质量、统一代码规范。如果你的团队还没有这么一份代码评审 Che">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:updated_time" content="2024-02-18T02:52:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端代码评审">
+<meta name="twitter:description" content="前端代码评审checklist清单前言​       前端团队有评审代码的要求，但由于每个开发人员的水平不同，技术关注点不同，所以对代码评审的关注点不同，为了保证代码质量，团队代码风格统一，特此拟定一份《前端团队代码评审 CheckList 清单》，这样代码评审人员在评审代码时，可以参照这份清单，对代码进行评审。从而辅助整个团队提高代码质量、统一代码规范。如果你的团队还没有这么一份代码评审 Che">
+<meta name="twitter:image" content="https://qw66.gitee.io/img/loading.gif">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">前端代码评审</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">前端代码评审</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2023-11-14T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2023-11-15
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端文章/">前端文章</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#前端代码评审checklist清单"><span class="post-toc-number">1.</span> <span class="post-toc-text">前端代码评审checklist清单</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前言"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">前言</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、代码静态检查工具"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">一、代码静态检查工具</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-1、使用-eslint-工具对-javascript-代码进行检查"><span class="post-toc-number">1.2.0.1.</span> <span class="post-toc-text">1.1、使用 eslint 工具对 javascript 代码进行检查</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-2、使用-stylelint-工具对-css-样式代码进行检查"><span class="post-toc-number">1.2.0.2.</span> <span class="post-toc-text">1.2、使用 stylelint 工具对 css 样式代码进行检查</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、命名"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">二、命名</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-1、JS-采用-Camel-Case-小驼峰式命名"><span class="post-toc-number">1.3.0.1.</span> <span class="post-toc-text">2.1、JS 采用 Camel Case 小驼峰式命名</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2、避免名称冗余"><span class="post-toc-number">1.3.0.2.</span> <span class="post-toc-text">2.2、避免名称冗余</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-3、CSS-类名采用-BEM-命名规范"><span class="post-toc-number">1.3.0.3.</span> <span class="post-toc-text">2.3、CSS 类名采用 BEM 命名规范</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-4、命名符合语义化"><span class="post-toc-number">1.3.0.4.</span> <span class="post-toc-text">2.4、命名符合语义化</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三、JS-推荐写法"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">三、JS 推荐写法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-1、每个常量都需命名"><span class="post-toc-number">1.4.0.1.</span> <span class="post-toc-text">3.1、每个常量都需命名</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-2、推荐使用字面量"><span class="post-toc-number">1.4.0.2.</span> <span class="post-toc-text">3.2、推荐使用字面量</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-3、对象设置默认属性的推荐写法"><span class="post-toc-number">1.4.0.3.</span> <span class="post-toc-text">3.3、对象设置默认属性的推荐写法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-4、将对象的属性值保存为局部变量"><span class="post-toc-number">1.4.0.4.</span> <span class="post-toc-text">3.4、将对象的属性值保存为局部变量</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-5、字符串转为整型"><span class="post-toc-number">1.4.0.5.</span> <span class="post-toc-text">3.5、字符串转为整型</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-6、函数参数"><span class="post-toc-number">1.4.0.6.</span> <span class="post-toc-text">3.6、函数参数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-7、使用参数默认值"><span class="post-toc-number">1.4.0.7.</span> <span class="post-toc-text">3.7、使用参数默认值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-8、最小函数准则"><span class="post-toc-number">1.4.0.8.</span> <span class="post-toc-text">3.8、最小函数准则</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-9、不要写全局方法"><span class="post-toc-number">1.4.0.9.</span> <span class="post-toc-text">3.9、不要写全局方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-10、推荐函数式编程"><span class="post-toc-number">1.4.0.10.</span> <span class="post-toc-text">3.10、推荐函数式编程</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-11、使用多态替换条件语句"><span class="post-toc-number">1.4.0.11.</span> <span class="post-toc-text">3.11、使用多态替换条件语句</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-12、定时器是否清除"><span class="post-toc-number">1.4.0.12.</span> <span class="post-toc-text">3.12、定时器是否清除</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#四、SCSS-推荐写法"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">四、SCSS 推荐写法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-1、变量-使用"><span class="post-toc-number">1.5.0.1.</span> <span class="post-toc-text">4.1、变量 $ 使用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-2、-import-导入样式文件"><span class="post-toc-number">1.5.0.2.</span> <span class="post-toc-text">4.2、@import 导入样式文件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-3、局部文件命名的使用"><span class="post-toc-number">1.5.0.3.</span> <span class="post-toc-text">4.3、局部文件命名的使用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-4、父选择器标识符-amp-实现BEM-命令规范"><span class="post-toc-number">1.5.0.4.</span> <span class="post-toc-text">4.4、父选择器标识符 &amp; 实现BEM 命令规范</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-5、-mixin-混合器的使用"><span class="post-toc-number">1.5.0.5.</span> <span class="post-toc-text">4.5、@mixin 混合器的使用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-6、-extend-指令的使用"><span class="post-toc-number">1.5.0.6.</span> <span class="post-toc-text">4.6、@extend 指令的使用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-7、-插值的使用"><span class="post-toc-number">1.5.0.7.</span> <span class="post-toc-text">4.7、#{} 插值的使用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-8、each遍历、map数据类型、-mixin-include混合器、-插值-结合使用"><span class="post-toc-number">1.5.0.8.</span> <span class="post-toc-text">4.8、each遍历、map数据类型、@mixin/@include混合器、#{}插值 结合使用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-9、scss-自带函数的应用"><span class="post-toc-number">1.5.0.9.</span> <span class="post-toc-text">4.9、scss 自带函数的应用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-10、gulp-sass的使用"><span class="post-toc-number">1.5.0.10.</span> <span class="post-toc-text">4.10、gulp-sass的使用</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#五、Vue-推荐写法"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">五、Vue 推荐写法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-1、组件名为多个单词"><span class="post-toc-number">1.6.0.1.</span> <span class="post-toc-text">5.1、组件名为多个单词</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-2、组件的-data-必须是一个函数"><span class="post-toc-number">1.6.0.2.</span> <span class="post-toc-text">5.2、组件的 data 必须是一个函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-3、Prop定义应该尽量详细"><span class="post-toc-number">1.6.0.3.</span> <span class="post-toc-text">5.3、Prop定义应该尽量详细</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-4、为-v-for-设置键值"><span class="post-toc-number">1.6.0.4.</span> <span class="post-toc-text">5.4、为 v-for 设置键值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-5、完整单词的组件名"><span class="post-toc-number">1.6.0.5.</span> <span class="post-toc-text">5.5、完整单词的组件名</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-6、多个特性元素的每个特性分行"><span class="post-toc-number">1.6.0.6.</span> <span class="post-toc-text">5.6、多个特性元素的每个特性分行</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-7、模板中简单的表达式"><span class="post-toc-number">1.6.0.7.</span> <span class="post-toc-text">5.7、模板中简单的表达式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-8、简单的计算属性"><span class="post-toc-number">1.6.0.8.</span> <span class="post-toc-text">5.8、简单的计算属性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-9、指令缩写"><span class="post-toc-number">1.6.0.9.</span> <span class="post-toc-text">5.9、指令缩写</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-10、标签顺序保持一致"><span class="post-toc-number">1.6.0.10.</span> <span class="post-toc-text">5.10、标签顺序保持一致</span></a></li></ol></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-articles/前端代码评审"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">前端代码评审</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2023-11-15 00:00:00" datetime="2023-11-14T16:00:00.000Z"  itemprop="datePublished">2023-11-15</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端文章/">前端文章</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="前端代码评审checklist清单"><a href="#前端代码评审checklist清单" class="headerlink" title="前端代码评审checklist清单"></a>前端代码评审checklist清单</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​       前端团队有评审代码的要求，但由于每个开发人员的水平不同，技术关注点不同，所以对代码评审的关注点不同，为了保证代码质量，团队代码风格统一，特此拟定一份《前端团队代码评审 CheckList 清单》，这样代码评审人员在评审代码时，可以参照这份清单，对代码进行评审。从而辅助整个团队提高代码质量、统一代码规范。如果你的团队还没有这么一份代码评审 CheckList 清单，也许这正是你需要的；如果你的团队已经有了代码评审参照标准，这份清单也许能起到锦上添花的效果。</p>
+<h2 id="一、代码静态检查工具"><a href="#一、代码静态检查工具" class="headerlink" title="一、代码静态检查工具"></a>一、<strong>代码静态检查工具</strong></h2><h4 id="1-1、使用-eslint-工具对-javascript-代码进行检查"><a href="#1-1、使用-eslint-工具对-javascript-代码进行检查" class="headerlink" title="1.1、使用 eslint 工具对 javascript 代码进行检查"></a>1.1、使用 eslint 工具对 javascript 代码进行检查</h4><p>​     eslint 检查的规范继承自 eslint-config-standard 检验规则，具体的规则介绍参照链接：<a href="https://cn.eslint.org/docs/rules/" target="_blank" rel="noopener">https://cn.eslint.org/docs/rules/</a> ，这里及以下部分不再重复介绍这些检验规则。</p>
+<h4 id="1-2、使用-stylelint-工具对-css-样式代码进行检查"><a href="#1-2、使用-stylelint-工具对-css-样式代码进行检查" class="headerlink" title="1.2、使用 stylelint 工具对 css 样式代码进行检查"></a>1.2、使用 stylelint 工具对 css 样式代码进行检查</h4><p>​      stylelint 检查的规范继承自 stylelint-config-standard 检验规则，具体的规则介绍参照链接：<a href="https://www.npmjs.com/package/stylelint-config-standard" target="_blank" rel="noopener">https://www.npmjs.com/package/stylelint-config-standard</a> ，这里及以下部分不再重复介绍这些检验规则。</p>
+<h2 id="二、命名"><a href="#二、命名" class="headerlink" title="二、命名"></a>二、命名</h2><h4 id="2-1、JS-采用-Camel-Case-小驼峰式命名"><a href="#2-1、JS-采用-Camel-Case-小驼峰式命名" class="headerlink" title="2.1、JS 采用 Camel Case 小驼峰式命名"></a>2.1、JS 采用 Camel Case 小驼峰式命名</h4><p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">   studentInfot</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-2、避免名称冗余"><a href="#2-2、避免名称冗余" class="headerlink" title="2.2、避免名称冗余"></a>2.2、避免名称冗余</h4><p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const Car = &#123;</span><br><span class="line">  make: &quot;Honda&quot;,</span><br><span class="line">  model: &quot;Accord&quot;,</span><br><span class="line">  color: &quot;Blue&quot;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const Car = &#123;</span><br><span class="line">  carMake: &quot;Honda&quot;,</span><br><span class="line">  carModel: &quot;Accord&quot;,</span><br><span class="line">  carColor: &quot;Blue&quot;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-3、CSS-类名采用-BEM-命名规范"><a href="#2-3、CSS-类名采用-BEM-命名规范" class="headerlink" title="2.3、CSS 类名采用 BEM 命名规范"></a>2.3、CSS 类名采用 BEM 命名规范</h4><p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">.block__element&#123;&#125; </span><br><span class="line">.block--modifier&#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-4、命名符合语义化"><a href="#2-4、命名符合语义化" class="headerlink" title="2.4、命名符合语义化"></a>2.4、命名符合语义化</h4><p>命名需要符合语义化，如果函数命名，可以采用加上动词前缀：</p>
+<table>
+<thead>
+<tr>
+<th>动词</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>can</td>
+<td>判断是否可执行某个动作</td>
+</tr>
+<tr>
+<td>has</td>
+<td>判断是否含有某个值</td>
+</tr>
+<tr>
+<td>is</td>
+<td>判断是否为某个值</td>
+</tr>
+<tr>
+<td>get</td>
+<td>获取某个值</td>
+</tr>
+<tr>
+<td>set</td>
+<td>设置某个值</td>
+</tr>
+</tbody></table>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//是否可阅读 </span><br><span class="line">function canRead()&#123; </span><br><span class="line">   return true; </span><br><span class="line">&#125; </span><br><span class="line">//获取姓名 </span><br><span class="line">function getName&#123;</span><br><span class="line">   return this.name </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="三、JS-推荐写法"><a href="#三、JS-推荐写法" class="headerlink" title="三、JS 推荐写法"></a>三、JS 推荐写法</h2><h4 id="3-1、每个常量都需命名"><a href="#3-1、每个常量都需命名" class="headerlink" title="3.1、每个常量都需命名"></a>3.1、每个常量都需命名</h4><p>每个常量应该命名，不然看代码的人不知道这个常量表示什么意思。</p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const COL_NUM = 10;</span><br><span class="line">let row = Math.ceil(num/COL_NUM);</span><br></pre></td></tr></table></figure>
+
+<p>不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let row = Math.ceil(num/10);</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-2、推荐使用字面量"><a href="#3-2、推荐使用字面量" class="headerlink" title="3.2、推荐使用字面量"></a>3.2、推荐使用字面量</h4><p>创建对象和数组推荐使用字面量，因为这不仅是性能最优也有助于节省代码量。 </p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">let obj = &#123;   </span><br><span class="line">     name:&apos;tom&apos;,     </span><br><span class="line">     age:15,     </span><br><span class="line">     sex:&apos;男&apos; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let obj = &#123;&#125;;</span><br><span class="line">obj.name = &apos;tom&apos;;</span><br><span class="line">obj.age = 15;</span><br><span class="line">obj.sex = &apos;男&apos;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-3、对象设置默认属性的推荐写法"><a href="#3-3、对象设置默认属性的推荐写法" class="headerlink" title="3.3、对象设置默认属性的推荐写法"></a>3.3、对象设置默认属性的推荐写法</h4><p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">const menuConfig = &#123;</span><br><span class="line">  title: &quot;Order&quot;,</span><br><span class="line">  // User did not include &apos;body&apos; key</span><br><span class="line">  buttonText: &quot;Send&quot;,</span><br><span class="line">  cancellable: true</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">function createMenu(config) &#123;</span><br><span class="line">  config = Object.assign(</span><br><span class="line">    &#123;</span><br><span class="line">      title: &quot;Foo&quot;,</span><br><span class="line">      body: &quot;Bar&quot;,</span><br><span class="line">      buttonText: &quot;Baz&quot;,</span><br><span class="line">      cancellable: true</span><br><span class="line">    &#125;,</span><br><span class="line">    config</span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  // config now equals: &#123;title: &quot;Order&quot;, body: &quot;Bar&quot;, buttonText: &quot;Send&quot;, cancellable: true&#125;</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">createMenu(menuConfig);</span><br></pre></td></tr></table></figure>
+
+<p>不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">const menuConfig = &#123;</span><br><span class="line">  title: null,</span><br><span class="line">  body: &quot;Bar&quot;,</span><br><span class="line">  buttonText: null,</span><br><span class="line">  cancellable: true</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">function createMenu(config) &#123;</span><br><span class="line">  config.title = config.title || &quot;Foo&quot;;</span><br><span class="line">  config.body = config.body || &quot;Bar&quot;;</span><br><span class="line">  config.buttonText = config.buttonText || &quot;Baz&quot;;</span><br><span class="line">  config.cancellable =</span><br><span class="line">    config.cancellable !== undefined ? config.cancellable : true;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">createMenu(menuConfig);</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-4、将对象的属性值保存为局部变量"><a href="#3-4、将对象的属性值保存为局部变量" class="headerlink" title="3.4、将对象的属性值保存为局部变量"></a>3.4、将对象的属性值保存为局部变量</h4><p>对象成员嵌套越深，读取速度也就越慢。所以好的经验法则是：如果在函数中需要多次读取一个对象属性，最佳做法是将该属性值保存在局部变量中，避免多次查找带来的性能开销。 </p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">let person = &#123;</span><br><span class="line">    info:&#123;</span><br><span class="line">        sex:&apos;男&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">function  getMaleSex()&#123;</span><br><span class="line">    let sex = person.info.sex;</span><br><span class="line">    if(sex === &apos;男&apos;)&#123;</span><br><span class="line">        console.log(sex)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">let person = &#123;</span><br><span class="line">    info:&#123;</span><br><span class="line">        sex:&apos;男&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">function  getMaleSex()&#123;</span><br><span class="line">    if(person.info.sex === &apos;男&apos;)&#123;</span><br><span class="line">        console.log(person.info.sex)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-5、字符串转为整型"><a href="#3-5、字符串转为整型" class="headerlink" title="3.5、字符串转为整型"></a>3.5、字符串转为整型</h4><p>当需要将浮点数转换成整型时，应该使用<code>Math.floor()</code>或者<code>Math.round()</code>，而不是使用<code>parseInt()</code>将字符串转换成数字。Math<code>是内部对象，所以</code>Math.floor()`其实并没有多少查询方法和调用时间，速度是最快的。 </p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let num = Math.floor(&apos;1.6&apos;);</span><br></pre></td></tr></table></figure>
+
+<p>不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let num = parseInt(&apos;1.6&apos;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-6、函数参数"><a href="#3-6、函数参数" class="headerlink" title="3.6、函数参数"></a>3.6、函数参数</h4><p>函数参数越少越好，如果参数超过两个，要使用 ES6的解构语法，不用考虑参数的顺序。</p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function createMenu(&#123; title, body, buttonText, cancellable &#125;) &#123;</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">createMenu(&#123;</span><br><span class="line">  title: &apos;Foo&apos;,</span><br><span class="line">  body: &apos;Bar&apos;,</span><br><span class="line">  buttonText: &apos;Baz&apos;,</span><br><span class="line">  cancellable: true</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function createMenu(title, body, buttonText, cancellable) &#123;</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-7、使用参数默认值"><a href="#3-7、使用参数默认值" class="headerlink" title="3.7、使用参数默认值"></a>3.7、使用参数默认值</h4><p>使用参数默认值 替代 使用条件语句进行赋值。</p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function createMicrobrewery(name = &quot;Hipster Brew Co.&quot;) &#123;</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function createMicrobrewery(name) &#123;</span><br><span class="line">  const breweryName = name || &quot;Hipster Brew Co.&quot;;</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-8、最小函数准则"><a href="#3-8、最小函数准则" class="headerlink" title="3.8、最小函数准则"></a>3.8、最小函数准则</h4><p>这是一条在软件工程领域流传久远的规则。严格遵守这条规则会让你的代码可读性更好，也更容易重构。如果违反这个规则，那么代码会很难被测试或者重用 。</p>
+<h4 id="3-9、不要写全局方法"><a href="#3-9、不要写全局方法" class="headerlink" title="3.9、不要写全局方法"></a>3.9、不要写全局方法</h4><p>在 JavaScript 中，永远不要污染全局，会在生产环境中产生难以预料的 bug。举个例子，比如你在 <code>Array.prototype</code> 上新增一个 <code>diff</code> 方法来判断两个数组的不同。而你同事也打算做类似的事情，不过他的 <code>diff</code> 方法是用来判断两个数组首位元素的不同。很明显你们方法会产生冲突，遇到这类问题我们可以用 ES2015/ES6 的语法来对 <code>Array</code> 进行扩展。</p>
+<p> 推荐:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">class SuperArray extends Array &#123;</span><br><span class="line">  diff(comparisonArray) &#123;</span><br><span class="line">    const hash = new Set(comparisonArray);</span><br><span class="line">    return this.filter(elem =&gt; !hash.has(elem));        </span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Array.prototype.diff = function diff(comparisonArray) &#123;</span><br><span class="line">  const hash = new Set(comparisonArray);</span><br><span class="line">  return this.filter(elem =&gt; !hash.has(elem));</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-10、推荐函数式编程"><a href="#3-10、推荐函数式编程" class="headerlink" title="3.10、推荐函数式编程"></a>3.10、推荐函数式编程</h4><p>函数式变编程可以让代码的逻辑更清晰更优雅，方便测试。 </p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">const programmerOutput = [</span><br><span class="line">  &#123;</span><br><span class="line">    name: &apos;Uncle Bobby&apos;,</span><br><span class="line">    linesOfCode: 500</span><br><span class="line">  &#125;, &#123;</span><br><span class="line">    name: &apos;Suzie Q&apos;,</span><br><span class="line">    linesOfCode: 1500</span><br><span class="line">  &#125;, &#123;</span><br><span class="line">    name: &apos;Jimmy Gosling&apos;,</span><br><span class="line">    linesOfCode: 150</span><br><span class="line">  &#125;, &#123;</span><br><span class="line">    name: &apos;Gracie Hopper&apos;,</span><br><span class="line">    linesOfCode: 1000</span><br><span class="line">  &#125;</span><br><span class="line">];</span><br><span class="line">let totalOutput = programmerOutput</span><br><span class="line">  .map(output =&gt; output.linesOfCode)</span><br><span class="line">  .reduce((totalLines, lines) =&gt; totalLines + lines, 0)</span><br></pre></td></tr></table></figure>
+
+<p> 不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"> const programmerOutput = [</span><br><span class="line">  &#123;</span><br><span class="line">    name: &apos;Uncle Bobby&apos;,</span><br><span class="line">    linesOfCode: 500</span><br><span class="line">  &#125;, &#123;</span><br><span class="line">    name: &apos;Suzie Q&apos;,</span><br><span class="line">    linesOfCode: 1500</span><br><span class="line">  &#125;, &#123;</span><br><span class="line">    name: &apos;Jimmy Gosling&apos;,</span><br><span class="line">    linesOfCode: 150</span><br><span class="line">  &#125;, &#123;</span><br><span class="line">    name: &apos;Gracie Hopper&apos;,</span><br><span class="line">    linesOfCode: 1000</span><br><span class="line">  &#125;</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line">let totalOutput = 0;</span><br><span class="line"></span><br><span class="line">for (let i = 0; i &lt; programmerOutput.length; i++) &#123;</span><br><span class="line">  totalOutput += programmerOutput[i].linesOfCode;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-11、使用多态替换条件语句"><a href="#3-11、使用多态替换条件语句" class="headerlink" title="3.11、使用多态替换条件语句"></a>3.11、使用多态替换条件语句</h4><p>为了让代码更简洁易读，如果你的函数中出现了条件判断，那么说明你的函数不止干了一件事情，违反了函数单一原则 ；并且绝大数场景可以使用多态替代</p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class Airplane &#123;</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br><span class="line">// 波音777</span><br><span class="line">class Boeing777 extends Airplane &#123;</span><br><span class="line">  // ...</span><br><span class="line">  getCruisingAltitude() &#123;</span><br><span class="line">    return this.getMaxAltitude() - this.getPassengerCount();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 空军一号</span><br><span class="line">class AirForceOne extends Airplane &#123;</span><br><span class="line">  // ...</span><br><span class="line">  getCruisingAltitude() &#123;</span><br><span class="line">    return this.getMaxAltitude();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 赛纳斯飞机</span><br><span class="line">class Cessna extends Airplane &#123;</span><br><span class="line">  // ...</span><br><span class="line">  getCruisingAltitude() &#123;</span><br><span class="line">    return this.getMaxAltitude() - this.getFuelExpenditure();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">class Airplane &#123;</span><br><span class="line">  // ...</span><br><span class="line"></span><br><span class="line">  // 获取巡航高度</span><br><span class="line">  getCruisingAltitude() &#123;</span><br><span class="line">    switch (this.type) &#123;</span><br><span class="line">      case &apos;777&apos;:</span><br><span class="line">        return this.getMaxAltitude() - this.getPassengerCount();</span><br><span class="line">      case &apos;Air Force One&apos;:</span><br><span class="line">        return this.getMaxAltitude();</span><br><span class="line">      case &apos;Cessna&apos;:</span><br><span class="line">        return this.getMaxAltitude() - this.getFuelExpenditure();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-12、定时器是否清除"><a href="#3-12、定时器是否清除" class="headerlink" title="3.12、定时器是否清除"></a>3.12、定时器是否清除</h4><p>代码中使用了定时器 setTimeout 和 setInterval，需要在不使用时进行清除。</p>
+<h2 id="四、SCSS-推荐写法"><a href="#四、SCSS-推荐写法" class="headerlink" title="四、SCSS 推荐写法"></a>四、SCSS 推荐写法</h2><h4 id="4-1、变量-使用"><a href="#4-1、变量-使用" class="headerlink" title="4.1、变量 $ 使用"></a>4.1、变量 $ 使用</h4><p>利用scss中的变量配置，可以进行项目的颜色、字体大小统一更改（换肤），有利于后期项目的维护。</p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$--color-success: #67C23A;</span><br><span class="line">$--color-warning: #E6A23C;</span><br><span class="line">$--color-danger: #F56C6C;</span><br><span class="line">$--color-info: #909399;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-2、-import-导入样式文件"><a href="#4-2、-import-导入样式文件" class="headerlink" title="4.2、@import 导入样式文件"></a>4.2、@import 导入样式文件</h4><p>scss中的@import规则在生成css文件时就把相关文件导入进来。这意味着所有相关的样式被归纳到了同一个css文件中，而无需发起额外的下载请求，在构建我们自己的组件库时推荐使用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">@import &quot;./base.scss&quot;;</span><br><span class="line">@import &quot;./pagination.scss&quot;;</span><br><span class="line">@import &quot;./dialog.scss&quot;;</span><br><span class="line">@import &quot;./autocomplete.scss&quot;;</span><br><span class="line">@import &quot;./dropdown.scss&quot;;</span><br><span class="line">@import &quot;./dropdown-menu.scss&quot;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-3、局部文件命名的使用"><a href="#4-3、局部文件命名的使用" class="headerlink" title="4.3、局部文件命名的使用"></a>4.3、局部文件命名的使用</h4><p>scss局部文件的文件名以下划线开头。这样，scss就不会在编译时单独编译这个文件输出css，而只把这个文件用作导入。</p>
+<p>推荐：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="../../images/checklist.png" alt="checklist.png" title>
+                </div>
+                <div class="image-caption">checklist.png</div>
+            </figure> 
+
+<h4 id="4-4、父选择器标识符-amp-实现BEM-命令规范"><a href="#4-4、父选择器标识符-amp-实现BEM-命令规范" class="headerlink" title="4.4、父选择器标识符 &amp; 实现BEM 命令规范"></a>4.4、父选择器标识符 &amp; 实现BEM 命令规范</h4><p>scss的嵌套和父选择器标识符&amp;能解决BEM命名的冗长，且使样式可读性更高。</p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.el-input &#123;</span><br><span class="line">  display: block;</span><br><span class="line">  &amp;__inner &#123;</span><br><span class="line">     text-align: center;</span><br><span class="line">  &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-5、-mixin-混合器的使用"><a href="#4-5、-mixin-混合器的使用" class="headerlink" title="4.5、@mixin 混合器的使用"></a>4.5、@mixin 混合器的使用</h4><p>mixin混合器用来实现大段样式的重用，减少代码的冗余，且支持传参。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $border-radius) &#123;</span><br><span class="line">  padding: $padding-vertical $padding-horizontal;</span><br><span class="line">  font-size: $font-size;</span><br><span class="line">  border-radius: $border-radius;</span><br><span class="line">  &amp;.is-round &#123;</span><br><span class="line">    padding: $padding-vertical $padding-horizontal;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">  @include m(medium) &#123;</span><br><span class="line">    @include button-size($--button-medium-padding-vertical, $--button-medium-padding-horizontal, $--button-medium-font-size, $--button-medium-border-radius);   </span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @include m(small) &#123;</span><br><span class="line">    @include button-size($--button-small-padding-vertical, $--button-small-padding-horizontal, $--button-small-font-size, $--button-small-border-radius);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-6、-extend-指令的使用"><a href="#4-6、-extend-指令的使用" class="headerlink" title="4.6、@extend 指令的使用"></a>4.6、@extend 指令的使用</h4><p>（1）使用@extend产生 <a href="http://vanseodesign.com/css/dry-principles/" target="_blank" rel="noopener">DRY CSS</a>风格的代码（Don’t repeat yourself）</p>
+<p>（2）@mixin主要的优势就是它能够接受参数。如果想传递参数，你会很自然地选择@mixin而不是@extend</p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">.common-mod &#123;</span><br><span class="line">  height: 250px;</span><br><span class="line">  width: 50%;</span><br><span class="line">  background-color: #fff;</span><br><span class="line">  text-align: center;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> .show-mod--right &#123;</span><br><span class="line">   @extend .common-mod;</span><br><span class="line">   float: right;</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line">.show-mod--left &#123;</span><br><span class="line">   @extend .common-mod;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-7、-插值的使用"><a href="#4-7、-插值的使用" class="headerlink" title="4.7、#{} 插值的使用"></a>4.7、<strong>#{} 插值的使用</strong></h4><p>插值能动态定义类名的名称，当有两个页面的样式类似时，我们会将类似的样式抽取成页面混合器，但两个不同的页面样式的命名名称根据BEM命名规范不能一样，这时我们可使用插值进行动态命名。</p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">@mixin home-content($class) &#123;</span><br><span class="line">  .#&#123;$class&#125; &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">    background-color: #fff;</span><br><span class="line">    overflow-x: hidden;</span><br><span class="line">    overflow-y: hidden;</span><br><span class="line"></span><br><span class="line">    &amp;--left &#123;</span><br><span class="line">      margin-left: 160px;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &amp;--noleft &#123;</span><br><span class="line">      margin-left: 0;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-8、each遍历、map数据类型、-mixin-include混合器、-插值-结合使用"><a href="#4-8、each遍历、map数据类型、-mixin-include混合器、-插值-结合使用" class="headerlink" title="4.8、each遍历、map数据类型、@mixin/@include混合器、#{}插值 结合使用"></a>4.8、each遍历、map数据类型、@mixin/@include混合器、#{}插值 结合使用</h4><p>可通过each遍历、map数据类型、@mixin/@include混合器、#{}插值 结合使用，从而减少冗余代码，使代码更精简。</p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$img-list: (</span><br><span class="line">   (xlsimg, $papers-excel),</span><br><span class="line">   (xlsximg, $papers-excel),</span><br><span class="line">   (gifimg, $papers-gif),</span><br><span class="line">   (jpgimg, $papers-jpg),</span><br><span class="line">   (mp3img, $papers-mp3),</span><br><span class="line">   (mp4img, $papers-mp3),</span><br><span class="line">   (docimg, $papers-word),</span><br><span class="line">   (docximg, $papers-word),</span><br><span class="line">   (rarimg, $papers-zip),</span><br><span class="line">   (zipimg, $papers-zip),</span><br><span class="line">   (unknownimg, $papers-unknown)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">@each $label, $value in $img-list &#123;</span><br><span class="line">  .com-hwicon__#&#123;$label&#125; &#123;</span><br><span class="line">    @include commonImg($value);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-9、scss-自带函数的应用"><a href="#4-9、scss-自带函数的应用" class="headerlink" title="4.9、scss 自带函数的应用"></a>4.9、scss 自带函数的应用</h4><p>scss自带函数的应用，从而进行相关的计算，例如 mix函数的使用如下。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> @include m(text) &#123;</span><br><span class="line">    &amp;:hover,</span><br><span class="line">    &amp;:focus &#123;</span><br><span class="line">      color: mix($--color-white, $--color-primary, $--button-hover-tint-percent);</span><br><span class="line">      border-color: transparent;</span><br><span class="line">      background-color: transparent;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &amp;:active &#123;</span><br><span class="line">      color: mix($--color-black, $--color-primary, $--button-active-shade-percent);</span><br><span class="line">      border-color: transparent;</span><br><span class="line">      background-color: transparent;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-10、gulp-sass的使用"><a href="#4-10、gulp-sass的使用" class="headerlink" title="4.10、gulp-sass的使用"></a>4.10、gulp-sass的使用</h4><p>gulp-sass插件能实时监测scss代码检查其语法错误并将其编译成css代码，帮助开发人员检查scss语法的准确性，且其是否符合我们的预期，相关配置如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">gulp.task(&apos;gulpsass&apos;, function() &#123;</span><br><span class="line">  return gulp.src(&apos;src/style/components/hwIcon.scss&apos;)</span><br><span class="line">    .pipe(gulpsass().on(&apos;error&apos;, gulpsass.logError))</span><br><span class="line">    .pipe(gulp.dest(&apos;src/style/dest&apos;));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">gulp.task(&apos;watch&apos;, function() &#123;</span><br><span class="line">  gulp.watch(&apos;src/style/components/hwIcon.scss&apos;, [&apos;gulpsass&apos;]);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="五、Vue-推荐写法"><a href="#五、Vue-推荐写法" class="headerlink" title="五、Vue 推荐写法"></a>五、Vue 推荐写法</h2><h4 id="5-1、组件名为多个单词"><a href="#5-1、组件名为多个单词" class="headerlink" title="5.1、组件名为多个单词"></a>5.1、组件名为多个单词</h4><p>我们开发过程中自定义的组件的名称需要为多个单词，这样做可以避免跟现有的以及未来的HTML元素相冲突，因为所有的 HTML 元素名称都是单个单词的。 </p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(&apos;todo-item&apos;, &#123;</span><br><span class="line">  // ...</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  name: &apos;TodoItem&apos;,</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(&apos;todo&apos;, &#123;</span><br><span class="line">  // ...</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  name: &apos;Todo&apos;,</span><br><span class="line">  // ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-2、组件的-data-必须是一个函数"><a href="#5-2、组件的-data-必须是一个函数" class="headerlink" title="5.2、组件的 data 必须是一个函数"></a>5.2、组件的 data 必须是一个函数</h4><p>当在组件中使用 <code>data</code> 属性的时候 (除了 <code>new Vue</code> 外的任何地方)，它的值必须是返回一个对象的函数。 因为如果直接是一个对象的话，子组件之间的属性值会互相影响。</p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">export default &#123;</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      foo: &apos;bar&apos;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export default &#123;</span><br><span class="line">  data: &#123;</span><br><span class="line">    foo: &apos;bar&apos;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-3、Prop定义应该尽量详细"><a href="#5-3、Prop定义应该尽量详细" class="headerlink" title="5.3、Prop定义应该尽量详细"></a>5.3、Prop定义应该尽量详细</h4><p>prop 的定义应该尽量详细，至少需要指定其类型。 </p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">props: &#123;</span><br><span class="line">  status: String</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 更好的做法！</span><br><span class="line">props: &#123;</span><br><span class="line">  status: &#123;</span><br><span class="line">    type: String,</span><br><span class="line">    required: true,</span><br><span class="line">    validator: function (value) &#123;</span><br><span class="line">      return [</span><br><span class="line">        &apos;syncing&apos;,</span><br><span class="line">        &apos;synced&apos;,</span><br><span class="line">        &apos;version-conflict&apos;,</span><br><span class="line">        &apos;error&apos;</span><br><span class="line">      ].indexOf(value) !== -1</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">props: [&apos;status&apos;]</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-4、为-v-for-设置键值"><a href="#5-4、为-v-for-设置键值" class="headerlink" title="5.4、为 v-for 设置键值"></a>5.4、为 v-for 设置键值</h4><p>v-for 中总是有设置 key 值。在组件上<em>总是</em>必须用 <code>key</code> 配合 <code>v-for</code>，以便维护内部组件及其子树的状态。 </p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li</span><br><span class="line">    v-for=&quot;todo in todos&quot;</span><br><span class="line">    :key=&quot;todo.id&quot;&gt;</span><br><span class="line">    &#123;&#123; todo.text &#125;&#125;</span><br><span class="line">  &lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+
+<p>不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li v-for=&quot;todo in todos&quot;&gt;</span><br><span class="line">    &#123;&#123; todo.text &#125;&#125;</span><br><span class="line">  &lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-5、完整单词的组件名"><a href="#5-5、完整单词的组件名" class="headerlink" title="5.5、完整单词的组件名"></a>5.5、完整单词的组件名</h4><p>组件名应该倾向于完整单词而不是缩写，编辑器中的自动补全已经让书写长命名的代价非常之低了，而其带来的明确性却是非常宝贵的。不常用的缩写尤其应该避免。 </p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">components/ </span><br><span class="line">|- StudentDashboardSettings.vue </span><br><span class="line">|- UserProfileOptions.vue</span><br></pre></td></tr></table></figure>
+
+<p>不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">components/ </span><br><span class="line">|- SdSettings.vue </span><br><span class="line">|- UProfOpts.vue</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-6、多个特性元素的每个特性分行"><a href="#5-6、多个特性元素的每个特性分行" class="headerlink" title="5.6、多个特性元素的每个特性分行"></a>5.6、多个特性元素的每个特性分行</h4><p>在 JavaScript 中，用多行分隔对象的多个属性是很常见的最佳实践，因为这样更易读。 </p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;MyComponent</span><br><span class="line">  foo=&quot;a&quot;</span><br><span class="line">  bar=&quot;b&quot;</span><br><span class="line">  baz=&quot;c&quot;</span><br><span class="line">/&gt;</span><br></pre></td></tr></table></figure>
+
+<p>不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;MyComponent foo=&quot;a&quot; bar=&quot;b&quot; baz=&quot;c&quot;/&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-7、模板中简单的表达式"><a href="#5-7、模板中简单的表达式" class="headerlink" title="5.7、模板中简单的表达式"></a>5.7、模板中简单的表达式</h4><p>组件模板应该只包含简单的表达式，复杂的表达式则应该重构为计算属性或方法。复杂表达式会让你的模板变得不那么声明式。我们应该尽量描述应该出现的<em>是什么</em>，而非<em>如何</em>计算那个值。而且计算属性和方法使得代码可以重用。 </p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 在模板中 --&gt;</span><br><span class="line">&#123;&#123; normalizedFullName &#125;&#125;</span><br><span class="line"></span><br><span class="line">// 复杂表达式已经移入一个计算属性</span><br><span class="line">computed: &#123;</span><br><span class="line">  normalizedFullName: function () &#123;</span><br><span class="line">    return this.fullName.split(&apos; &apos;).map(function (word) &#123;</span><br><span class="line">      return word[0].toUpperCase() + word.slice(1)</span><br><span class="line">    &#125;).join(&apos; &apos;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123;</span><br><span class="line">  fullName.split(&apos; &apos;).map(function (word) &#123;</span><br><span class="line">    return word[0].toUpperCase() + word.slice(1)</span><br><span class="line">  &#125;).join(&apos; &apos;)</span><br><span class="line">&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-8、简单的计算属性"><a href="#5-8、简单的计算属性" class="headerlink" title="5.8、简单的计算属性"></a>5.8、简单的计算属性</h4><p>应该把复杂计算属性分割为尽可能多的更简单的属性。</p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">  basePrice: function () &#123;</span><br><span class="line">    return this.manufactureCost / (1 - this.profitMargin)</span><br><span class="line">  &#125;,</span><br><span class="line">  discount: function () &#123;</span><br><span class="line">    return this.basePrice * (this.discountPercent || 0)</span><br><span class="line">  &#125;,</span><br><span class="line">  finalPrice: function () &#123;</span><br><span class="line">    return this.basePrice - this.discount</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">computed: &#123;</span><br><span class="line">  price: function () &#123;</span><br><span class="line">    var basePrice = this.manufactureCost / (1 - this.profitMargin)</span><br><span class="line">    return (</span><br><span class="line">      basePrice -</span><br><span class="line">      basePrice * (this.discountPercent || 0)</span><br><span class="line">    )</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-9、指令缩写"><a href="#5-9、指令缩写" class="headerlink" title="5.9、指令缩写"></a>5.9、指令缩写</h4><p>指令推荐都使用缩写形式，(用 : 表示 v-bind: 、用 @ 表示 v-on: 和用 # 表示 v-slot:)。</p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;input</span><br><span class="line">  @input=&quot;onInput&quot;</span><br><span class="line">  @focus=&quot;onFocus&quot;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+
+<p>不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;input</span><br><span class="line">  v-on:input=&quot;onInput&quot;</span><br><span class="line">  @focus=&quot;onFocus&quot;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-10、标签顺序保持一致"><a href="#5-10、标签顺序保持一致" class="headerlink" title="5.10、标签顺序保持一致"></a>5.10、标签顺序保持一致</h4><p>单文件组件应该总是让标签顺序保持为 <template> 、<script>、 <style>  。</p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- ComponentA.vue --&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;...&lt;/template&gt;</span><br><span class="line">&lt;script&gt;/* ... */&lt;/script&gt;</span><br><span class="line">&lt;style&gt;/* ... */&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>不推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- ComponentA.vue --&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;...&lt;/template&gt;</span><br><span class="line">&lt;style&gt;/* ... */&lt;/style&gt;</span><br><span class="line">&lt;script&gt;/* ... */&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-11、组件之间通信"><a href="#5-11、组件之间通信" class="headerlink" title="5.11、组件之间通信"></a>5.11、组件之间通信</h4><p>父子组件的通信推荐使用 prop和 emit ，而不是this.$parent或改变 prop；</p>
+<p>兄弟组件之间的通信推荐使用 EventBus（$emit　/ $on），而不是滥用 vuex；</p>
+<p>祖孙组件之间的通信推荐使用 $attrs / $listeners  或 provide / inject（依赖注入） ，而不是滥用 vuex；</p>
+<h4 id="5-12、页面跳转数据传递"><a href="#5-12、页面跳转数据传递" class="headerlink" title="5.12、页面跳转数据传递"></a>5.12、页面跳转数据传递</h4><p>页面跳转，例如 A 页面跳转到 B 页面，需要将 A 页面的数据传递到 B 页面，推荐使用 路由参数进行传参，而不是将需要传递的数据保存 vuex，然后在 B 页面取出 vuex的数据，因为如果在 B 页面刷新会导致 vuex 数据丢失，导致 B 页面无法正常显示数据。</p>
+<p>推荐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">let id = &apos; 123&apos;;</span><br><span class="line">this.$router.push(&#123;name: &apos;homeworkinfo&apos;, query: &#123;id:id&#125;&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-13、script-标签内部声明顺序"><a href="#5-13、script-标签内部声明顺序" class="headerlink" title="5.13、script 标签内部声明顺序"></a>5.13、script 标签内部声明顺序</h4><p>script 标签内部的声明顺序如下：</p>
+<p>data > prop > components > filter > computed >  watch > 钩子函数（钩子函数按其执行顺序） > methods </p>
+<h4 id="5-14、计算属性-VS-方法-VS-侦听器"><a href="#5-14、计算属性-VS-方法-VS-侦听器" class="headerlink" title="5.14、计算属性 VS 方法 VS 侦听器"></a>5.14、计算属性 VS 方法 VS 侦听器</h4><ul>
+<li>（1）推荐使用计算属性：计算属性基于响应式依赖进行缓存，只在相关响应式依赖发生改变时它们才会重新求值；相比之下，每次调用方法都会再次执行方法；</li>
+<li>（2）推荐使用计算属性：而不是根据 Watch 侦听属性，进行回调； 但是有计算属性做不到的：当需要在数据变化时执行异步或开销较大的操作时，侦听器是最有用的。</li>
+</ul>
+<h4 id="5-15、v-if-VS-v-show"><a href="#5-15、v-if-VS-v-show" class="headerlink" title="5.15、v-if  VS  v-show"></a>5.15、v-if  VS  v-show</h4><ul>
+<li>v-if 是“真正”的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建。 v-if 也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。</li>
+<li>相比之下，v-show 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 的属性 display 进行切换。</li>
+</ul>
+<p>推荐：</p>
+<p><strong>如果运行时，需要非常频繁地切换，推荐使用 v-show 比较好；如果在运行时，条件很少改变，则推荐使用 v-if 比较好。</strong></p>
+<h2 id="六、团队其它规范"><a href="#六、团队其它规范" class="headerlink" title="六、团队其它规范"></a>六、团队其它规范</h2><h4 id="6-1、尽量不手动操作-DOM"><a href="#6-1、尽量不手动操作-DOM" class="headerlink" title="6.1、尽量不手动操作 DOM"></a>6.1、尽量不手动操作 DOM</h4><p>因为团队现在使用 vue 框架，所以在项目开发中尽量使用 vue 的特性去满足我们的需求，尽量（不到万不得已）不要手动操作DOM，包括：增删改dom元素、以及更改样式、添加事件等。</p>
+<h4 id="6-2、删除弃用代码"><a href="#6-2、删除弃用代码" class="headerlink" title="6.2、删除弃用代码"></a>6.2、删除弃用代码</h4><p>很多时候有些代码已经没有用了，但是没有及时去删除，这样导致代码里面包括很多注释的代码块，好的习惯是提交代码前记得删除已经确认弃用的代码，例如：一些调试的console语句、无用的弃用代码。</p>
+<h4 id="6-3、保持必要的注释"><a href="#6-3、保持必要的注释" class="headerlink" title="6.3、保持必要的注释"></a>6.3、保持必要的注释</h4><p>代码注释不是越多越好，保持必要的业务逻辑注释，至于函数的用途、代码逻辑等，要通过语义化的命令、简单明了的代码逻辑，来让阅读代码的人快速看懂。</p>
+</script></template></p>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-02-18T02:52:52.000Z" itemprop="dateUpdated">2024-02-18 10:52:52</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/articles/qian-duan-dai-ma-ping-shen.html" target="_blank" rel="external">https://qw66.gitee.io/articles/qian-duan-dai-ma-ping-shen.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/代码评审/">代码评审</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/articles/qian-duan-dai-ma-ping-shen.html&title=《前端代码评审》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/articles/qian-duan-dai-ma-ping-shen.html&title=《前端代码评审》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/articles/qian-duan-dai-ma-ping-shen.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端代码评审》 — 秦伟博客&url=https://qw66.gitee.io/articles/qian-duan-dai-ma-ping-shen.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/articles/qian-duan-dai-ma-ping-shen.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/articles/qian-duan-ji-neng.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">前端技能</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/articles/bian-xie-gao-xing-neng-de-javascript.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">编写高性能的JavaScript</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/articles/qian-duan-dai-ma-ping-shen.html&title=《前端代码评审》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/articles/qian-duan-dai-ma-ping-shen.html&title=《前端代码评审》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/articles/qian-duan-dai-ma-ping-shen.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端代码评审》 — 秦伟博客&url=https://qw66.gitee.io/articles/qian-duan-dai-ma-ping-shen.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/articles/qian-duan-dai-ma-ping-shen.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACLUlEQVR42u3aQW7DMAwFUd//0u62QGp5PhkXMDVaBYkj62lBUCKPA4/zYvz+9fN5Ptvn98cTQ4YMGa9lnMtx9QKCWS/6in31lpt5ZMiQsQGDT72OeGsGj5l8bTJkyJCxTv5ICrgOo7XtkyFDhgyyCJLGpbPJkCFDxppRu1BLl5tuwSNncRkyZLyQwW/d///zI/UNGTJkvIpxhiNO1xrH3WBVMmTIGM1IL/3TNguyOL4dN1sjQ4aMoQwyHW/w6jRhrBk338iQIWNLBrlcq7Wx8iJEML8MGTK2YfBiZK1UUGtjRUdfGTJkbMDgaSIJvry0mQZrdAqXIUPGOEa/MatfSEg3CFVZZciQMY6RHkH7gZUvNC4hyJAhYyijPzU/vvI4yWeWIUPGDozaIbOW9vXLDDebIkOGjHEMcmXG27zSzgc+ULOFDBkytmE8cRGWzhxjZMiQsQGjX5Lk4ZgsNH1ehgwZsxl8OvKZP0kS0P4VngwZMuYx+B9qV2nfShyDW0MZMmQMYqQFAL43/NKtdmBGl24yZMgYxEiPsrWXpf9CABkyZGzD4M0TtUNmJ32Mc1sZMmQMYpzhIFdy/fJnEGRlyJCxASNtzOLhuFiRaBQhZMiQMZtBgiw5XhJAet0W7LcMGTI2YNSKAZ0WilraF9RgZciQsTGjg0mTwiCrlSFDhgzcYFErJ6RB9o95ZMiQsQHjW60VtS1Iw6sMGTJ2Y9SStjSxS8MuPzbLkCFjNOMHtXD6CBscZMgAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

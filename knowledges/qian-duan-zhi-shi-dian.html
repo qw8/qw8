@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>前端知识点 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="前端技能,PS,Git,SEO,重构,前端,移动端">
+    <meta name="description" content="前端开发知识点                                                                                             front-end dev skills               对于任何类型的前端开发人员, HTML, CSS, DOM, JavaScript, HTTP/URL 和浏览器利用是基本的技术要">
+<meta name="keywords" content="前端技能,PS,Git,SEO,重构,前端,移动端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端知识点">
+<meta property="og:url" content="https://qw66.gitee.io/knowledges/qian-duan-zhi-shi-dian.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="前端开发知识点                                                                                             front-end dev skills               对于任何类型的前端开发人员, HTML, CSS, DOM, JavaScript, HTTP/URL 和浏览器利用是基本的技术要">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:updated_time" content="2024-04-26T09:50:12.420Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端知识点">
+<meta name="twitter:description" content="前端开发知识点                                                                                             front-end dev skills               对于任何类型的前端开发人员, HTML, CSS, DOM, JavaScript, HTTP/URL 和浏览器利用是基本的技术要">
+<meta name="twitter:image" content="https://qw66.gitee.io/img/loading.gif">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">前端知识点</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">前端知识点</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-11-17T12:30:00.000Z" itemprop="datePublished" class="page-time">
+  2020-11-17
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前端开发知识点"><span class="post-toc-number">1.</span> <span class="post-toc-text">前端开发知识点</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTML"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">HTML</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CSS"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">CSS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">JavaScript</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#框架和类库"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">框架和类库</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#其他："><span class="post-toc-number">1.5.</span> <span class="post-toc-text">其他：</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前端必备技能"><span class="post-toc-number">2.</span> <span class="post-toc-text">前端必备技能</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#PS相关"><span class="post-toc-number">3.</span> <span class="post-toc-text">PS相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#PNG-GIF-JPG的区别及如何选"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">PNG,GIF,JPG的区别及如何选</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Git相关"><span class="post-toc-number">4.</span> <span class="post-toc-text">Git相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#git-fetch和git-pull的区别"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">git fetch和git pull的区别</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#SEO相关"><span class="post-toc-number">5.</span> <span class="post-toc-text">SEO相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端需要注意哪些SEO"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">前端需要注意哪些SEO</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何做SEO优化"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">如何做SEO优化?</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#重构相关"><span class="post-toc-number">6.</span> <span class="post-toc-text">重构相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#谈谈你对重构的理解"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">谈谈你对重构的理解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#页面重构怎么操作？"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">页面重构怎么操作？</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#前端相关"><span class="post-toc-number">7.</span> <span class="post-toc-text">前端相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端页面有哪三层构成，分别是什么？作用是什么？"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">前端页面有哪三层构成，分别是什么？作用是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Web-前端开发的注意事项？"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">Web 前端开发的注意事项？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#说说你对前端架构师的理解"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">说说你对前端架构师的理解</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一些开放性题目"><span class="post-toc-number">7.4.</span> <span class="post-toc-text">一些开放性题目</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#你觉得前端工程的价值体现在哪"><span class="post-toc-number">7.5.</span> <span class="post-toc-text">你觉得前端工程的价值体现在哪</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#你用的得心应手用的熟练地编辑器-amp-开发环境是什么样子？"><span class="post-toc-number">7.6.</span> <span class="post-toc-text">你用的得心应手用的熟练地编辑器&amp;开发环境是什么样子？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对前端工程师这个职位是怎么样理解的？它的前景会怎么样？"><span class="post-toc-number">7.7.</span> <span class="post-toc-text">对前端工程师这个职位是怎么样理解的？它的前景会怎么样？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#平时如何管理你的项目？"><span class="post-toc-number">7.8.</span> <span class="post-toc-text">平时如何管理你的项目？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#说说最近最流行的一些东西吧？常去哪些网站？"><span class="post-toc-number">7.9.</span> <span class="post-toc-text">说说最近最流行的一些东西吧？常去哪些网站？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么样的前端代码是好的"><span class="post-toc-number">7.10.</span> <span class="post-toc-text">什么样的前端代码是好的</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#移动端相关"><span class="post-toc-number">8.</span> <span class="post-toc-text">移动端相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#你怎么看待-Web-App-hybrid-App-Native-App？（移动端前端-和-Web-前端区别？）"><span class="post-toc-number">8.1.</span> <span class="post-toc-text">你怎么看待 Web App/hybrid App/Native App？（移动端前端 和 Web 前端区别？）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在设计-Web-APP-时，应当遵循以下几点"><span class="post-toc-number">8.2.</span> <span class="post-toc-text">在设计 Web APP 时，应当遵循以下几点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#移动端（Android、IOS）怎么做好用户体验"><span class="post-toc-number">8.3.</span> <span class="post-toc-text">移动端（Android、IOS）怎么做好用户体验?</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#其他"><span class="post-toc-number">9.</span> <span class="post-toc-text">其他</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何设计突发大规模并发架构？"><span class="post-toc-number">9.1.</span> <span class="post-toc-text">如何设计突发大规模并发架构？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#列举IE与其他浏览器不一样的特性？"><span class="post-toc-number">9.2.</span> <span class="post-toc-text">列举IE与其他浏览器不一样的特性？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#是否了解公钥加密和私钥加密？"><span class="post-toc-number">9.3.</span> <span class="post-toc-text">是否了解公钥加密和私钥加密？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#WEB应用从服务器主动推送Data到客户端有那些方式？"><span class="post-toc-number">9.4.</span> <span class="post-toc-text">WEB应用从服务器主动推送Data到客户端有那些方式？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#列举IE与其他浏览器不一样的特性？-1"><span class="post-toc-number">9.5.</span> <span class="post-toc-text">列举IE与其他浏览器不一样的特性？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么叫优雅降级和渐进增强？"><span class="post-toc-number">9.6.</span> <span class="post-toc-text">什么叫优雅降级和渐进增强？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#无障碍设计"><span class="post-toc-number">9.7.</span> <span class="post-toc-text">无障碍设计</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-knowledges/前端知识点"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">前端知识点</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-11-17 20:30:00" datetime="2020-11-17T12:30:00.000Z"  itemprop="datePublished">2020-11-17</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h2 id="前端开发知识点"><a href="#前端开发知识点" class="headerlink" title="前端开发知识点"></a>前端开发知识点</h2><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://raw.githubusercontent.com/dwqs/fedHandlebook/master/images/front-end-skills.png" alt="front-end dev skills" title>
+                </div>
+                <div class="image-caption">front-end dev skills</div>
+            </figure>
+
+<p>对于任何类型的前端开发人员, HTML, CSS, DOM, JavaScript, HTTP/URL 和浏览器利用是基本的技术要求.</p>
+<p>对于HTML, CSS, DOM, JavaScript, HTTP/URL 和浏览器开发之外的, 一个前端开发者还应该掌握下面技术列表中的一个或多个:</p>
+<ul>
+<li>Content Management System (内容管理系统, 又称 CMS)</li>
+<li>Node.js</li>
+<li>Cross-browser testing (跨浏览器测试)</li>
+<li>Cross-platform testing (跨平台测试)</li>
+<li>Unit Testing (单元测试)</li>
+<li>Cross-device testing (跨设备测试)</li>
+<li>Accessibility / WAI-ARIA (无障碍访问/无障碍富Internet应用程序)</li>
+<li>Search Engine Optimization (搜索引擎优化, 又称 SEO)</li>
+<li>Interaction or User Interface design (交互或用户设计)</li>
+<li>User Experience (用户体验)</li>
+<li>Usability (可用性/易用性)</li>
+<li>E-commerce Systems (电子商务系统)</li>
+<li>Portal Systems (门户系统)</li>
+<li>Wireframing (框架)</li>
+<li>CSS layout / Grids (CSS 布局/栅格系统)</li>
+<li>DOM manipulation (e.g. jQuery) (DOM 操作)</li>
+<li>Mobile Web Performance (移动Web性能)</li>
+<li>Load Testing (载荷测试)</li>
+<li>Performance Testing (性能测试)</li>
+<li>Progressive Enhancement / Graceful Degradation (渐进增强/优雅降级)</li>
+<li>Version Control (e.g. GIT) (版本控制)</li>
+<li>MVC / MVVM / MV* (MV* 框架)</li>
+<li>Functional Programming (函数式编程)</li>
+<li>Data Formats (e.g. JSON, XML) (数据格式)</li>
+<li>Data API’s (e.g Restful API) (数据API)</li>
+<li>Web Font Embedding (Web字体嵌入)</li>
+<li>Scalable Vector Graphics (可伸缩向量图形, 又称 SVG)</li>
+<li>Regular Expressions (正则表达式)</li>
+<li>Content Strategy (内容策略)</li>
+<li>Microdata / Microformats (微数据/微格式)</li>
+<li>Task Runners, Build Tools, Process Automation Tools (任务管道, 构建工具, 过程自动化工具)</li>
+<li>Responsive Web Design (响应式设计)</li>
+<li>Object Oriented Programming (面向对象编程)</li>
+<li>Application Architecture (应用架构)</li>
+<li>Modules (模块)</li>
+<li>Dependency Managers (依赖关系管理)</li>
+<li>Package Managers (包管理)</li>
+<li>JavaScript Animation (JavaScript 动画)</li>
+<li>CSS Animation (CSS 动画)</li>
+<li>Charts / Graphs (图表/图形)</li>
+<li>UI widgets (UI工具集)</li>
+<li>Code Quality Testing (代码质量测试)</li>
+<li>Code Coverage Testing (代码覆盖测试)</li>
+<li>Code Complexity Analysis (代码复杂度测试)</li>
+<li>Integration Testing (集成测试)</li>
+<li>Command Line / CLI (命令行/命令行界面)</li>
+<li>Templating Strategies (模板策略)</li>
+<li>Templating Engines (模板引擎)</li>
+<li>Single Page Applications (单页应用)</li>
+<li>XHR Requests (aka AJAX) (XHR 请求, 又称 AJAX)</li>
+<li>Web/Browser Security (Web/浏览器安全)</li>
+<li>HTML Semantics (HTML 语义化)</li>
+<li>Browser Developer Tools (浏览器开发者工具)</li>
+</ul>
+<p>译者补充:</p>
+<ul>
+<li><a href="https://github.com/JacksonTian/fks" target="_blank" rel="noopener">前端技能汇总</a></li>
+<li><a href="https://github.com/unruledboy/WebFrontEndStack" target="_blank" rel="noopener">WebFrontEndStack</a></li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://raw.githubusercontent.com/dwqs/fedHandlebook/master/images/front-end-skill1.jpg" alt="front-end-skills1" title>
+                </div>
+                <div class="image-caption">front-end-skills1</div>
+            </figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://raw.githubusercontent.com/dwqs/fedHandlebook/master/images/front-end-skill2.png" alt="front-end-skills2" title>
+                </div>
+                <div class="image-caption">front-end-skills2</div>
+            </figure>
+
+
+
+<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><p>HTML5、对Web标准的理解、布局、浏览器内核差异、兼容性</p>
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><p>CSS3、选择器优先级、Flexbox、渲染原理、依赖管理、层次关系，常用属性、选择器、权重、CSS盒模型、Hack、CSS预处理器等。</p>
+<h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><p>数据类型、运算、对象、Function、继承、闭包、作用域、原型链、事件、RegExp、JSON、Ajax、DOM、BOM、内存泄漏、跨域、异步装载、模板引擎、前端MVC、路由、模块化、Canvas、ECMAScript 、异步请求、Flux、Nodejs等。</p>
+<h3 id="框架和类库"><a href="#框架和类库" class="headerlink" title="框架和类库"></a>框架和类库</h3><p>ajax、jQuery、Bootstrap、axios、Vue、Vuex、React、element-ui、layui、webpack等。</p>
+<h3 id="其他："><a href="#其他：" class="headerlink" title="其他："></a>其他：</h3><ul>
+<li><p>移动端、响应式、自动化构建、HTTP、离线存储、WEB安全、优化、重构、团队协作、可维护、易用性、SEO、UED、架构、职业生涯、快速学习能力</p>
+</li>
+<li><p>DOM结构 —— 两个节点之间可能存在哪些关系以及如何在节点之间任意移动。</p>
+</li>
+<li><p>DOM操作 —— 如何添加、移除、移动、复制、创建和查找节点等。</p>
+</li>
+<li><p>事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。</p>
+</li>
+<li><p>XMLHttpRequest —— 这是什么、怎样完整地执行一次GET请求、怎样检测错误。</p>
+</li>
+<li><p>严格模式与混杂模式 —— 如何触发这两种模式，区分它们有何意义。</p>
+</li>
+<li><p>盒模型 —— 外边距、内边距和边框之间的关系，及IE8以下版本的浏览器中的盒模型</p>
+</li>
+<li><p>块级元素与行内元素 —— 怎么用CSS控制它们、以及如何合理的使用它们</p>
+</li>
+<li><p>浮动元素 —— 怎么使用它们、它们有什么问题以及怎么解决这些问题。</p>
+</li>
+<li><p>HTML与XHTML —— 二者有什么区别，你觉得应该使用哪一个并说出理由。</p>
+</li>
+<li><p>JSON —— 作用、用途、设计结构</p>
+</li>
+</ul>
+<h2 id="前端必备技能"><a href="#前端必备技能" class="headerlink" title="前端必备技能"></a>前端必备技能</h2><ul>
+<li><p>基础</p>
+<ul>
+<li>HTML / CSS</li>
+</ul>
+</li>
+<li><p>编程语言：Java / Python / PHP / Ruby等等</p>
+</li>
+<li><p>Web框架，如Spring MVC、Flask、Laravel等等</p>
+<ul>
+<li>HTTP<ul>
+<li>CGI基本原理</li>
+<li>XML和JSON处理。。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>中级篇</p>
+<ul>
+<li>数据结构与算法</li>
+<li>面向对象编程</li>
+<li>CMS</li>
+</ul>
+</li>
+<li><p>高级篇</p>
+<ul>
+<li>函数式编程</li>
+<li>领域驱动设计</li>
+<li>MVC / MVVM / MV*</li>
+<li>安全性（如跨域）</li>
+<li>操作系统原理</li>
+</ul>
+</li>
+<li><p>调试</p>
+<ul>
+<li>远程调试    </li>
+</ul>
+</li>
+<li><p>工程化</p>
+<ul>
+<li>版本管理</li>
+<li>单元测试</li>
+</ul>
+</li>
+<li><p>缓存篇</p>
+<ul>
+<li>应用层缓存 </li>
+<li>数据库端缓存</li>
+<li>分布式缓存</li>
+</ul>
+</li>
+<li><p>网络与架构</p>
+<ul>
+<li>均衡负载</li>
+<li>并发处理    </li>
+</ul>
+</li>
+<li><p>性能优化</p>
+<ul>
+<li>运行环境优化，如JVM</li>
+</ul>
+</li>
+<li><p>基础设施</p>
+<ul>
+<li>Docker</li>
+<li>自动化部署</li>
+<li>依赖管理</li>
+<li>包管理</li>
+<li>Linux下包创建、管理</li>
+<li>打包脚本编写</li>
+<li>Web容器，如Jboss</li>
+</ul>
+</li>
+<li><p>数据持久化</p>
+<ul>
+<li>SQL</li>
+<li>Database</li>
+<li>ORM</li>
+<li>DBMS</li>
+</ul>
+</li>
+<li><p>数据库</p>
+<ul>
+<li>查询性能优化</li>
+<li>结构优化</li>
+<li>主从复制、主主复制等等</li>
+<li>伸缩性与高可用性</li>
+<li>备份恢复与容灾</li>
+</ul>
+</li>
+<li><p>安全</p>
+<ul>
+<li>认证与会话管理</li>
+<li>加密解密</li>
+<li>XSS/CSRF/SQL注入</li>
+</ul>
+</li>
+<li><p>监控</p>
+<ul>
+<li>应用性能监控</li>
+<li>异常监控</li>
+<li>日志</li>
+</ul>
+</li>
+<li><p>服务</p>
+<ul>
+<li>REST</li>
+<li>SOA / RPC</li>
+</ul>
+</li>
+<li><p>消息</p>
+</li>
+<li><p>JMS</p>
+</li>
+<li><p>IPC</p>
+</li>
+<li><p>其他</p>
+<ul>
+<li>API设计</li>
+</ul>
+</li>
+</ul>
+<h2 id="PS相关"><a href="#PS相关" class="headerlink" title="PS相关"></a>PS相关</h2><h3 id="PNG-GIF-JPG的区别及如何选"><a href="#PNG-GIF-JPG的区别及如何选" class="headerlink" title="PNG,GIF,JPG的区别及如何选"></a>PNG,GIF,JPG的区别及如何选</h3><ul>
+<li>GIF：<ul>
+<li>8位像素，256色</li>
+<li>无损压缩</li>
+<li>支持简单动画</li>
+<li>支持boolean透明</li>
+<li>适合简单动画</li>
+</ul>
+</li>
+<li>JPEG：<ul>
+<li>颜色限于256</li>
+<li>有损压缩</li>
+<li>可控制压缩质量</li>
+<li>不支持透明</li>
+<li>适合照片</li>
+</ul>
+</li>
+<li>PNG：<ul>
+<li>有PNG8和truecolor PNG</li>
+<li>PNG8类似GIF颜色上限为256，文件小，支持alpha透明度，无动画</li>
+<li>适合图标、背景、按钮</li>
+</ul>
+</li>
+</ul>
+<h2 id="Git相关"><a href="#Git相关" class="headerlink" title="Git相关"></a>Git相关</h2><h3 id="git-fetch和git-pull的区别"><a href="#git-fetch和git-pull的区别" class="headerlink" title="git fetch和git pull的区别"></a><strong>git fetch和git pull的区别</strong></h3><ul>
+<li>git pull：相当于是从远程获取最新版本并merge到本地</li>
+<li>git fetch：相当于是从远程获取最新版本到本地，不会自动merge</li>
+</ul>
+<h2 id="SEO相关"><a href="#SEO相关" class="headerlink" title="SEO相关"></a>SEO相关</h2><h3 id="前端需要注意哪些SEO"><a href="#前端需要注意哪些SEO" class="headerlink" title="前端需要注意哪些SEO"></a>前端需要注意哪些SEO</h3><ul>
+<li>合理的title、description、keywords：搜索对着三项的权重逐个减小，title值强调重点即可，重要关键词出现不要超过2次，而且要靠前，不同页面title要有所不同；description把页面内容高度概括，长度合适，不可过分堆砌关键词，不同页面description有所不同；keywords列举出重要关键词即可</li>
+<li>语义化的HTML代码，符合W3C规范：语义化代码让搜索引擎容易理解网页</li>
+<li>重要内容HTML代码放在最前：搜索引擎抓取HTML顺序是从上到下，有的搜索引擎对抓取长度有限制，保证重要内容一定会被抓取</li>
+<li>重要内容不要用js输出：爬虫不会执行js获取内容</li>
+<li>少用iframe：搜索引擎不会抓取iframe中的内容</li>
+<li>非装饰性图片必须加alt</li>
+<li>提高网站速度：网站速度是搜索引擎排序的一个重要指标</li>
+</ul>
+<h3 id="如何做SEO优化"><a href="#如何做SEO优化" class="headerlink" title="如何做SEO优化?"></a>如何做SEO优化?</h3><ul>
+<li><p>标题与关键词</p>
+</li>
+<li><p>设置有吸引力切合实际的标题，标题中要包含所做的关键词</p>
+</li>
+<li><p>网站结构目录</p>
+</li>
+<li><p>最好不要超过三级，每级有“面包屑导航”，使网站成树状结构分布</p>
+</li>
+<li><p>页面元素</p>
+</li>
+<li><p>给图片标注”Alt”可以让搜索引擎更友好的收录</p>
+</li>
+<li><p>网站内容</p>
+</li>
+<li><p>每个月每天有规律的更新网站的内容，会使搜索引擎更加喜欢</p>
+</li>
+<li><p>友情链接</p>
+</li>
+<li><p>对方一定要是正规网站，每天有专业的团队或者个人维护更新</p>
+</li>
+<li><p>内链的布置</p>
+</li>
+<li><p>使网站形成类似蜘蛛网的结构，不会出现单独连接的页面或链接</p>
+</li>
+<li><p>流量分析</p>
+</li>
+<li><p>通过统计工具(百度统计，CNZZ)分析流量来源，指导下一步的SEO</p>
+</li>
+</ul>
+<h2 id="重构相关"><a href="#重构相关" class="headerlink" title="重构相关"></a>重构相关</h2><h3 id="谈谈你对重构的理解"><a href="#谈谈你对重构的理解" class="headerlink" title="谈谈你对重构的理解"></a>谈谈你对重构的理解</h3><ul>
+<li>网站重构：在不改变外部行为的前提下，简化结构、添加可读性，而在网站前端保持一致的行为。也就是说是在不改变UI的情况下，对网站进行优化， 在扩展的同时保持一致的UI</li>
+<li>对于传统的网站来说重构通常是：<ul>
+<li>表格(table)布局改为DIV+CSS</li>
+<li>使网站前端兼容于现代浏览器(针对于不合规范的CSS、如对IE6有效的)</li>
+<li>对于移动平台的优化</li>
+<li>针对于SEO进行优化</li>
+<li>深层次的网站重构应该考虑的方面</li>
+</ul>
+</li>
+</ul>
+<h3 id="页面重构怎么操作？"><a href="#页面重构怎么操作？" class="headerlink" title="页面重构怎么操作？"></a>页面重构怎么操作？</h3><p>网站重构：在不改变外部行为的前提下，简化结构、添加可读性，而在网站前端保持一致的行为。也就是说是在不改变UI的情况下，对网站进行优化，在扩展的同时保持一致的UI</p>
+<p>对于传统的网站来说重构通常可以考虑的方面是：</p>
+<ul>
+<li>升级第三方依赖</li>
+<li>使用HTML5、CSS3、ES6 新特性</li>
+<li>加入响应式布局</li>
+<li>统一代码风格规范</li>
+<li>减少代码间的耦合</li>
+<li>压缩/合并JS、CSS、image等静态资源(通常是由服务器来解决)</li>
+<li>程序的性能优化</li>
+<li>采用CDN来加速资源加载</li>
+<li>对于JS DOM的优化</li>
+<li>HTTP服务器的文件缓存</li>
+<li>表格(table)布局改为DIV+CSS</li>
+<li>使网站前端兼容于现代浏览器(针对于不合规范的CSS、如对IE6有效的)</li>
+<li>对于移动平台的优化</li>
+<li>针对于SEO进行优化</li>
+<li>深层次的网站重构应该考虑的方面</li>
+<li>让代码保持弹性</li>
+<li>严格按规范编写代码</li>
+<li>设计可扩展的API</li>
+<li>代替旧有的框架、语言(如VB)</li>
+<li>增强用户体验</li>
+<li>通常来说对于速度的优化也包含在重构中</li>
+</ul>
+<h2 id="前端相关"><a href="#前端相关" class="headerlink" title="前端相关"></a>前端相关</h2><h3 id="前端页面有哪三层构成，分别是什么？作用是什么？"><a href="#前端页面有哪三层构成，分别是什么？作用是什么？" class="headerlink" title="前端页面有哪三层构成，分别是什么？作用是什么？"></a>前端页面有哪三层构成，分别是什么？作用是什么？</h3><ul>
+<li>结构层：由 (X)HTML 标记语言负责，解决页面“内容是什么”的问题</li>
+<li>表示层：由 CSS 负责，解决页面“如何显示内容”的问题</li>
+<li>行为层：由 JS 脚本负责，解决页面上“内容应该如何对事件作出反应”的问题</li>
+</ul>
+<h3 id="Web-前端开发的注意事项？"><a href="#Web-前端开发的注意事项？" class="headerlink" title="Web 前端开发的注意事项？"></a>Web 前端开发的注意事项？</h3><ul>
+<li>特别设置 meta 标签 viewport</li>
+<li>百分比布局宽度，结合 box-sizing: border-box;</li>
+<li>使用 rem 作为计算单位。rem 只参照跟节点 html 的字体大小计算</li>
+<li>使用 css3 新特性。弹性盒模型、多列布局、媒体查询等</li>
+<li>多机型、多尺寸、多系统覆盖测试</li>
+</ul>
+<h3 id="说说你对前端架构师的理解"><a href="#说说你对前端架构师的理解" class="headerlink" title="说说你对前端架构师的理解"></a>说说你对前端架构师的理解</h3><p>负责前端团队的管理及与其他团队的协调工作，提升团队成员能力和整体效率；带领团队完成研发工具及平台前端部分的设计、研发和维护； 带领团队进行前端领域前沿技术研究及新技术调研，保证团队的技术领先负责前端开发规范制定、功能模块化设计、公共组件搭建等工作，并组织培训</p>
+<h3 id="一些开放性题目"><a href="#一些开放性题目" class="headerlink" title="一些开放性题目"></a>一些开放性题目</h3><ul>
+<li>自我介绍：除了基本个人信息以外，面试官更想听的是你与众不同的地方和你的优势</li>
+<li>项目介绍</li>
+<li>如何看待前端开发？</li>
+<li>平时是如何学习前端开发的？</li>
+<li>未来三到五年的规划是怎样的？</li>
+</ul>
+<h3 id="你觉得前端工程的价值体现在哪"><a href="#你觉得前端工程的价值体现在哪" class="headerlink" title="你觉得前端工程的价值体现在哪"></a>你觉得前端工程的价值体现在哪</h3><ul>
+<li>为简化用户使用提供技术支持（交互部分）</li>
+<li>为多个浏览器兼容性提供支持</li>
+<li>为提高用户浏览速度（浏览器性能）提供支持</li>
+<li>为跨平台或者其他基于<code>webkit</code>或其他渲染引擎的应用提供支持</li>
+<li>为展示数据提供支持（数据接口）</li>
+</ul>
+<h3 id="你用的得心应手用的熟练地编辑器-amp-开发环境是什么样子？"><a href="#你用的得心应手用的熟练地编辑器-amp-开发环境是什么样子？" class="headerlink" title="你用的得心应手用的熟练地编辑器&amp;开发环境是什么样子？"></a>你用的得心应手用的熟练地编辑器&amp;开发环境是什么样子？</h3><ul>
+<li>Sublime Text 3 + 相关插件编写前端代码</li>
+<li>Google chrome 、Mozilla Firefox浏览器 +firebug - 兼容测试和预览页面UI、动画效果和交互功能</li>
+<li>Node.js+Gulp</li>
+<li>git 用于版本控制和Code Review</li>
+</ul>
+<h3 id="对前端工程师这个职位是怎么样理解的？它的前景会怎么样？"><a href="#对前端工程师这个职位是怎么样理解的？它的前景会怎么样？" class="headerlink" title="对前端工程师这个职位是怎么样理解的？它的前景会怎么样？"></a>对前端工程师这个职位是怎么样理解的？它的前景会怎么样？</h3><ul>
+<li>前端是最贴近用户的程序员，比后端、数据库、产品经理、运营、安全都近<ul>
+<li>实现界面交互</li>
+<li>提升用户体验</li>
+<li>有了<code>Node.js</code>，前端可以实现服务端的一些事情</li>
+</ul>
+</li>
+<li>前端是最贴近用户的程序员，前端的能力就是能让产品从 <code>90</code>分进化到 <code>100</code> 分，甚至更好，</li>
+<li>参与项目，快速高质量完成实现效果图，精确到<code>1px</code></li>
+<li>与团队成员，<code>UI</code>设计，产品经理的沟通；</li>
+<li>做好的页面结构，页面重构和用户体验；</li>
+<li>处理<code>hack</code>，兼容、写出优美的代码格式；</li>
+<li>针对服务器的优化、拥抱最新前端技术。</li>
+</ul>
+<h3 id="平时如何管理你的项目？"><a href="#平时如何管理你的项目？" class="headerlink" title="平时如何管理你的项目？"></a>平时如何管理你的项目？</h3><ul>
+<li><p>先期团队必须确定好全局样式（<code>globe.css</code>）、编码模式(<code>utf-8</code>)、公共脚本 等；</p>
+</li>
+<li><p>编写习惯必须一致（例如都是采用继承式的写法，单样式都写成一行）；</p>
+</li>
+<li><p>标注样式编写人，各模块都及时标注（标注关键样式调用的地方）；</p>
+</li>
+<li><p>严格要求代码注释(html/js/css)，页面进行标注（例如 页面 模块 开始和结束）；</p>
+</li>
+<li><p><code>CSS</code>跟<code>HTML</code> 分文件夹并行存放，命名都得统一（例如<code>style.css</code>）；</p>
+</li>
+<li><p><code>JS</code> 分文件夹存放 命名以该JS功能为准的英文翻译</p>
+</li>
+<li><p>图片采用整合的 <code>images.png</code> <code>png8</code> 格式文件使用</p>
+</li>
+<li><p>尽量整合在一起使用方便将来的管理，尽量整合在一起使用方便将来的管理</p>
+</li>
+<li><p>Git 提交必须填写说明</p>
+</li>
+</ul>
+<h3 id="说说最近最流行的一些东西吧？常去哪些网站？"><a href="#说说最近最流行的一些东西吧？常去哪些网站？" class="headerlink" title="说说最近最流行的一些东西吧？常去哪些网站？"></a>说说最近最流行的一些东西吧？常去哪些网站？</h3><p>ES6、WebAssembly、Node、MVVM、Web Components、React、React Native、Webpack 组件化</p>
+<h3 id="什么样的前端代码是好的"><a href="#什么样的前端代码是好的" class="headerlink" title="什么样的前端代码是好的"></a>什么样的前端代码是好的</h3><p>高复用低耦合，这样文件小，好维护，而且好扩展。</p>
+<h2 id="移动端相关"><a href="#移动端相关" class="headerlink" title="移动端相关"></a>移动端相关</h2><h3 id="你怎么看待-Web-App-hybrid-App-Native-App？（移动端前端-和-Web-前端区别？）"><a href="#你怎么看待-Web-App-hybrid-App-Native-App？（移动端前端-和-Web-前端区别？）" class="headerlink" title="你怎么看待 Web App/hybrid App/Native App？（移动端前端 和 Web 前端区别？）"></a>你怎么看待 Web App/hybrid App/Native App？（移动端前端 和 Web 前端区别？）</h3><ul>
+<li>Web App(HTML5)：采用HTML5生存在浏览器中的应用，不需要下载安装<ul>
+<li>优点：开发成本低，迭代更新容易，不需用户升级，跨多个平台和终端</li>
+<li>缺点：消息推送不够及时，支持图形和动画效果较差，功能使用限制（相机、GPS等）</li>
+</ul>
+</li>
+<li>Hybrid App(混合开发)：UI WebView，需要下载安装<ul>
+<li>优点：接近 Native App 的体验，部分支持离线功能</li>
+<li>缺点：性能速度较慢，未知的部署时间，受限于技术尚不成熟</li>
+</ul>
+</li>
+<li>Native App(原生开发)：依托于操作系统，有很强的交互，需要用户下载安装使用<ul>
+<li>优点：用户体验完美，支持离线工作，可访问本地资源（通讯录，相册）</li>
+<li>缺点：开发成本高（多系统），开发成本高（版本更新），需要应用商店的审核</li>
+</ul>
+</li>
+</ul>
+<h3 id="在设计-Web-APP-时，应当遵循以下几点"><a href="#在设计-Web-APP-时，应当遵循以下几点" class="headerlink" title="在设计 Web APP 时，应当遵循以下几点"></a>在设计 Web APP 时，应当遵循以下几点</h3><ul>
+<li>简化不重要的动画/动效/图形文字样式</li>
+<li>少用手势，避免与浏览器手势冲突</li>
+<li>减少页面内容，页面跳转次数，尽量在当前页面显示</li>
+<li>增强 Loading 趣味性，增强页面主次关系</li>
+</ul>
+<h3 id="移动端（Android、IOS）怎么做好用户体验"><a href="#移动端（Android、IOS）怎么做好用户体验" class="headerlink" title="移动端（Android、IOS）怎么做好用户体验?"></a>移动端（Android、IOS）怎么做好用户体验?</h3><ul>
+<li>清晰的视觉纵线</li>
+<li>信息的分组、极致的减法</li>
+<li>利用选择代替输入</li>
+<li>标签及文字的排布方式</li>
+<li>依靠明文确认密码</li>
+<li>合理的键盘利用</li>
+</ul>
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><h3 id="如何设计突发大规模并发架构？"><a href="#如何设计突发大规模并发架构？" class="headerlink" title="如何设计突发大规模并发架构？"></a>如何设计突发大规模并发架构？</h3><ul>
+<li>及时响应(NoSQL缓存)</li>
+<li>数据安全(数据备份)</li>
+<li>负载均衡</li>
+</ul>
+<h3 id="列举IE与其他浏览器不一样的特性？"><a href="#列举IE与其他浏览器不一样的特性？" class="headerlink" title="列举IE与其他浏览器不一样的特性？"></a>列举IE与其他浏览器不一样的特性？</h3><ul>
+<li>IE 的渲染引擎是 Trident 与 W3C 标准差异较大：例如盒子模型的怪异模式</li>
+<li>JS 方面有很多独立的方法，例如事件处理不同：绑定/删除事件，阻止冒泡，阻止默认事件等</li>
+<li>CSS 方面也有自己独有的处理方式，例如设置透明，低版本IE中使用滤镜的方式</li>
+</ul>
+<h3 id="是否了解公钥加密和私钥加密？"><a href="#是否了解公钥加密和私钥加密？" class="headerlink" title="是否了解公钥加密和私钥加密？"></a>是否了解公钥加密和私钥加密？</h3><ul>
+<li>私钥用于对数据进行签名，公钥用于对签名进行验证</li>
+<li>网站在浏览器端用公钥加密敏感数据，然后在服务器端再用私钥解密</li>
+</ul>
+<h3 id="WEB应用从服务器主动推送Data到客户端有那些方式？"><a href="#WEB应用从服务器主动推送Data到客户端有那些方式？" class="headerlink" title="WEB应用从服务器主动推送Data到客户端有那些方式？"></a>WEB应用从服务器主动推送Data到客户端有那些方式？</h3><ul>
+<li>AJAX 轮询</li>
+<li>html5 服务器推送事件<br><code>(new EventSource(SERVER_URL)).addEventListener(&quot;message&quot;, func);</code></li>
+<li>html5 Websocket</li>
+<li><code>(new WebSocket(SERVER_URL)).addEventListener(&quot;message&quot;, func);</code></li>
+<li>不可见的iframe</li>
+<li>WebSocket通过Flash</li>
+<li>XHR长时间连接</li>
+<li>XHR Multipart Streaming</li>
+<li>script标签的长时间连接(可跨域)</li>
+</ul>
+<h3 id="列举IE与其他浏览器不一样的特性？-1"><a href="#列举IE与其他浏览器不一样的特性？-1" class="headerlink" title="列举IE与其他浏览器不一样的特性？"></a>列举IE与其他浏览器不一样的特性？</h3><p>事件不同之处：</p>
+<ul>
+<li>触发事件的元素被认为是目标（target）。而在 IE 中，目标包含在 event 对象的 srcElement 属性；</li>
+<li>获取字符代码、如果按键代表一个字符（shift、ctrl、alt除外），IE 的 keyCode 会返回字符代码（Unicode），DOM 中按键的代码和字符是分离的，要获取字符代码，需要使用 charCode 属性；</li>
+<li>阻止某个事件的默认行为，IE 中阻止某个事件的默认行为，必须将 returnValue 属性设置为 false，Mozilla 中，需要调用 preventDefault() 方法；</li>
+<li>停止事件冒泡，IE 中阻止事件进一步冒泡，需要设置 cancelBubble 为 true，Mozzilla 中，需要调用 stopPropagation()</li>
+</ul>
+<h3 id="什么叫优雅降级和渐进增强？"><a href="#什么叫优雅降级和渐进增强？" class="headerlink" title="什么叫优雅降级和渐进增强？"></a>什么叫优雅降级和渐进增强？</h3><ul>
+<li>优雅降级：Web站点在所有新式浏览器中都能正常工作，如果用户使用的是老式浏览器，则代码会针对旧版本的IE进行降级处理了,使之在旧式浏览器上以某种形式降级体验却不至于完全不能用</li>
+<li>渐进增强：从被所有浏览器支持的基本功能开始，逐步地添加那些只有新版本浏览器才支持的功能,向页面增加不影响基础浏览器的额外样式和功能的。当浏览器支持时，它们会自动地呈现出来并发挥作用。</li>
+<li>如：默认使用flash上传，但如果浏览器支持 HTML5 的文件上传功能，则使用HTML5实现更好的体验</li>
+</ul>
+<h3 id="无障碍设计"><a href="#无障碍设计" class="headerlink" title="无障碍设计"></a>无障碍设计</h3><p>Web Content Accessibility Guidelines (网页内容无障碍设计指南, 又称 WCAG) &amp; Accessible Rich Internet Applications (富Internet应用程序的无障碍设计, 又称 ARIA)</p>
+<blockquote>
+<p>无障碍设计是指产品, 设备, 服务, 或者环境是为残疾人设计的. 无障碍设计的概念意味着与一个人的辅助技术(例如, 电脑屏幕阅读器)相兼容, 确保直接访问(即独立)和”间接访问”.</p>
+</blockquote>
+<blockquote>
+<p>无障碍设计可以理解为 “能够访问”, 并对一个系统或实体是有利的, 其侧重于使身体残障, 或有特殊需要, 或要依赖辅助技术的人群能够访问 Web. 然后, 研究和开发无障碍设计对每个人都带来了好处.</p>
+</blockquote>
+<blockquote>
+<p>无障碍设计不应该和可用性混淆. 大多数情况下, 可用性是指产品(如: 设备, 服务, 或者环境)能在特定的环境下被特定的用户使用, 来高效地实现制定目标.</p>
+</blockquote>
+<blockquote>
+<p>无障碍设计和通用性设计是息息相关的. 通用型设计是指产品的创造过程中, 产品对人们是可用的, 并尽可能最大范围覆盖各能力范围内的人群和各种情形下的操作, 即对所有人是可访问的(无论他们访问 Web 是否有障碍). - wikipedia</p>
+</blockquote>
+<p><strong>综合学习:</strong></p>
+<ul>
+<li><a href="http://www.amazon.cn/Web%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1-Wensy-Cbisbolm/dp/B002IIDICE/ref=sr_1_2?ie=UTF8&qid=1446345863&sr=8-2" target="_blank" rel="noopener">Web应用程序通用设计</a> [read][RMB]</li>
+<li><a href="http://www.pluralsight.com/courses/web-accessibility-getting-started" target="_blank" rel="noopener">Web 无障碍设计入门</a> [watch][$]</li>
+<li><a href="https://www.w3.org/WAI/intro/accessibility.php" target="_blank" rel="noopener">Web 无障碍设计介绍</a> [read]</li>
+<li><a href="http://www.amazon.cn/UI-UE%E7%B3%BB%E5%88%97%E4%B8%9B%E4%B9%A6-%E5%85%BC%E6%B5%8E%E5%A4%A9%E4%B8%8B%C2%B7%E7%94%A8%E6%88%B7%E6%97%A0%E9%9A%9C%E7%A2%8D%E4%BD%93%E9%AA%8C%E7%9A%84%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%E8%AE%BE%E8%AE%A1-%E9%9C%8D%E5%B0%94%E9%A1%BF/dp/B00UT03YEU/ref=sr_1_1?ie=UTF8&qid=1446346063&sr=8-1" target="_blank" rel="noopener">兼济天下·用户无障碍体验的可访问性设计</a> [read][RMB]</li>
+<li><a href="http://www.lynda.com/Accessibility-tutorials/Foundations-UX-Accessibility/435008-2.html" target="_blank" rel="noopener">UX 基础: 无障碍设计</a> [watch][$]</li>
+<li><a href="https://webaccessibility.withgoogle.com/course" target="_blank" rel="noopener">Web 无障碍设计介绍</a> [watch]</li>
+</ul>
+<p><strong>标准/规范:</strong></p>
+<ul>
+<li><a href="http://www.w3.org/WAI/" target="_blank" rel="noopener">无障碍设计网络倡议 (WAI)</a></li>
+<li><a href="http://www.w3.org/standards/techs/wcag#w3c_all" target="_blank" rel="noopener">网页内容无障碍设计指南 (WCAG) 的目前状态</a></li>
+<li><a href="http://www.w3.org/standards/techs/aria#w3c_all" target="_blank" rel="noopener">富 Internet 应用程序的无障碍设计 (WAI-ARIA) 的目前状态</a></li>
+</ul>
+<p><strong>译者补充:</strong></p>
+<ul>
+<li><a href="https://github.com/lyfeyaj/awesome-resources#web-%E5%89%8D%E7%AB%AF" target="_blank" rel="noopener">Web 端开发常用资源</a></li>
+<li><a href="http://hao.jobbole.com/?catid=67" target="_blank" rel="noopener">Web 前端开发资源</a></li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-04-26T09:50:12.420Z" itemprop="dateUpdated">2024-04-26 17:50:12</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/knowledges/qian-duan-zhi-shi-dian.html" target="_blank" rel="external">https://qw66.gitee.io/knowledges/qian-duan-zhi-shi-dian.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PS/">PS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SEO/">SEO</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端技能/">前端技能</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/移动端/">移动端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/重构/">重构</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/qian-duan-zhi-shi-dian.html&title=《前端知识点》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/qian-duan-zhi-shi-dian.html&title=《前端知识点》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/qian-duan-zhi-shi-dian.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端知识点》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/qian-duan-zhi-shi-dian.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/qian-duan-zhi-shi-dian.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/knowledges/qian-duan-xin-ji-zhu.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">前端新技术</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/knowledges/wang-ye-she-ji-mo-shi.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">网页设计模式</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/qian-duan-zhi-shi-dian.html&title=《前端知识点》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/qian-duan-zhi-shi-dian.html&title=《前端知识点》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/qian-duan-zhi-shi-dian.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端知识点》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/qian-duan-zhi-shi-dian.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/qian-duan-zhi-shi-dian.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACI0lEQVR42u3aS27DMAxF0ex/0+60QGrhfZS2pq5HQS3LPB6wFKXXS76um+v73feR+mz6s9UFAwaMxzKu5XX3Ajfcd7AyRokNBgwY5zDuglj/1u/qb1nPdvt3GDBgwFgGdxdoVj7CgAEDxq6EqxeUytrzz/5vwIAB41EMt6GWfQh3/o+sxWHAgPFAht51//3fH9nfgAEDxqMYl3llSdBNlHZUMGDAGM1wl5pZ6Hp7LosHBgwY5zD0SbMELYViLpKl6WDAgDGCoTTls6MSzVEM/UgZDBgwzmQ0i1u9rGxGblsBw4AB498zlIaaW0Tu2pisjlnAgAFjECMr0dytzWy9mW0qwIABYypDSbh9Kz8L1HgvDBgwRjOaHvuuwxb6JoHCgwEDxiRGv1jN2vr9FoJ0zAIGDBhDGX2I7iK2KShhwIBxDsNNiHqLbf2BjEDXEcKAAWM0oz8koS9Q3cQanhaBAQPGOEbWk9sFy4rLH+aHAQPGaIaSWLOtzXW6dO9KmxAwYMA4jNHUY8ayMxop9Q5hwIAxmtGnYDfEbOYNG5kwYMB4IKNPl7tCXH+O26dgwIAxlHGZV9gIMzcA3PfCgAFjNiNLdn1DX2/V9YfPYMCAMYORJdlm0auXocYWAgwYMA5guAVcf0giK/tun4IBAwYMk9GHZVNhwIABI3pZVvCFHwsGDBgHMJTSzQ1LmdkdCQMGjDMZTcrLxjeHyapNTRgwYDyP8QUIFp07htL9tAAAAABJRU5ErkJggg==" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

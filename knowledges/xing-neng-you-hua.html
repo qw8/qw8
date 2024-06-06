@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>性能优化 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="性能优化,渲染优化,网络优化">
+    <meta name="description" content="如何进行网站性能优化减少HTTP请求  CSS精灵（CSS Sprites） inline Image 合并样式和脚本 初始首屏之外的图片资源按需加载，静态资源延迟加载  文件大小  JS、CSS 源码压缩 图片大小控制合适、压缩图片 CSS/JS minify，减少文件体积  content方面  减少DNS查询：DNS查询完成之前浏览器不能从这个主机下载任何任何文件。方法：DNS缓存、将资源分">
+<meta name="keywords" content="性能优化,渲染优化,网络优化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="性能优化">
+<meta property="og:url" content="https://qw66.gitee.io/knowledges/xing-neng-you-hua.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="如何进行网站性能优化减少HTTP请求  CSS精灵（CSS Sprites） inline Image 合并样式和脚本 初始首屏之外的图片资源按需加载，静态资源延迟加载  文件大小  JS、CSS 源码压缩 图片大小控制合适、压缩图片 CSS/JS minify，减少文件体积  content方面  减少DNS查询：DNS查询完成之前浏览器不能从这个主机下载任何任何文件。方法：DNS缓存、将资源分">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2023-04-14T17:01:50.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="性能优化">
+<meta name="twitter:description" content="如何进行网站性能优化减少HTTP请求  CSS精灵（CSS Sprites） inline Image 合并样式和脚本 初始首屏之外的图片资源按需加载，静态资源延迟加载  文件大小  JS、CSS 源码压缩 图片大小控制合适、压缩图片 CSS/JS minify，减少文件体积  content方面  减少DNS查询：DNS查询完成之前浏览器不能从这个主机下载任何任何文件。方法：DNS缓存、将资源分">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">性能优化</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">性能优化</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-09-05T09:46:24.000Z" itemprop="datePublished" class="page-time">
+  2020-09-05
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何进行网站性能优化"><span class="post-toc-number">1.</span> <span class="post-toc-text">如何进行网站性能优化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#性能优化方法"><span class="post-toc-number">2.</span> <span class="post-toc-text">性能优化方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#前端性能优化最佳实践？"><span class="post-toc-number">3.</span> <span class="post-toc-text">前端性能优化最佳实践？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#简述一下你对-web-性能优化的方案"><span class="post-toc-number">4.</span> <span class="post-toc-text">简述一下你对 web 性能优化的方案</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#移动端性能优化"><span class="post-toc-number">5.</span> <span class="post-toc-text">移动端性能优化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#页面大量图片，如何优化加载，优化用户体验"><span class="post-toc-number">6.</span> <span class="post-toc-text">页面大量图片，如何优化加载，优化用户体验</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#渲染优化"><span class="post-toc-number">7.</span> <span class="post-toc-text">渲染优化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#小程序首屏加载时间优化"><span class="post-toc-number">8.</span> <span class="post-toc-text">小程序首屏加载时间优化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在-css-js-代码上线之后开发人员经常会优化性能，从用户刷新网页开始，一次-js-请求一般情况下有哪些地方会有缓存处理？"><span class="post-toc-number">9.</span> <span class="post-toc-text">在 css/js 代码上线之后开发人员经常会优化性能，从用户刷新网页开始，一次 js 请求一般情况下有哪些地方会有缓存处理？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是渐进式渲染（progressive-rendering）？"><span class="post-toc-number">10.</span> <span class="post-toc-text">什么是渐进式渲染（progressive rendering）？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#网络相关："><span class="post-toc-number">11.</span> <span class="post-toc-text">网络相关：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#DNS-预解析"><span class="post-toc-number">11.1.</span> <span class="post-toc-text">DNS 预解析</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#缓存"><span class="post-toc-number">11.2.</span> <span class="post-toc-text">缓存</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#使用-HTTP-2-0"><span class="post-toc-number">11.3.</span> <span class="post-toc-text">使用 HTTP / 2.0</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#预加载"><span class="post-toc-number">11.4.</span> <span class="post-toc-text">预加载</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#预渲染"><span class="post-toc-number">11.5.</span> <span class="post-toc-text">预渲染</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是CDN公共库？"><span class="post-toc-number">12.</span> <span class="post-toc-text">什么是CDN公共库？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么要引用CDN公共库？"><span class="post-toc-number">13.</span> <span class="post-toc-text">为什么要引用CDN公共库？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#优化渲染过程"><span class="post-toc-number">14.</span> <span class="post-toc-text">优化渲染过程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#懒执行"><span class="post-toc-number">14.1.</span> <span class="post-toc-text">懒执行</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#懒加载"><span class="post-toc-number">14.2.</span> <span class="post-toc-text">懒加载</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-knowledges/性能优化"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">性能优化</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-09-05 17:46:24" datetime="2020-09-05T09:46:24.000Z"  itemprop="datePublished">2020-09-05</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="如何进行网站性能优化"><a href="#如何进行网站性能优化" class="headerlink" title="如何进行网站性能优化"></a>如何进行网站性能优化</h3><p><strong>减少HTTP请求</strong></p>
+<ul>
+<li>CSS精灵（CSS Sprites）</li>
+<li>inline Image</li>
+<li>合并样式和脚本</li>
+<li>初始首屏之外的图片资源按需加载，静态资源延迟加载</li>
+</ul>
+<p><strong>文件大小</strong></p>
+<ul>
+<li>JS、CSS 源码压缩</li>
+<li>图片大小控制合适、压缩图片</li>
+<li>CSS/JS minify，减少文件体积</li>
+</ul>
+<p><strong>content方面</strong></p>
+<ul>
+<li>减少DNS查询：DNS查询完成之前浏览器不能从这个主机下载任何任何文件。方法：DNS缓存、将资源分布到恰当数量的主机名，平衡并行下载和DNS查询</li>
+<li>避免重定向：多余的中间访问</li>
+<li>使Ajax可缓存</li>
+<li>非必须组件延迟加载</li>
+<li>未来所需组件预加载</li>
+<li>减少DOM元素数量</li>
+<li>将资源放到不同的域下：浏览器同时从一个域下载资源的数目有限，增加域可以提高并行下载量</li>
+<li>减少iframe数量</li>
+<li>不要404</li>
+</ul>
+<p><strong>Server方面</strong></p>
+<ul>
+<li>使用CDN</li>
+<li>添加Expires或者Cache-Control响应头</li>
+<li>对组件使用Gzip压缩</li>
+<li>配置ETag</li>
+<li>Flush Buffer Early</li>
+<li>Ajax使用GET进行请求</li>
+<li>避免空src的img标签</li>
+</ul>
+<p><strong>Cookie方面</strong></p>
+<ul>
+<li>减小cookie大小</li>
+<li>引入资源的域名不要包含cookie</li>
+</ul>
+<p><strong>CSS方面</strong></p>
+<ul>
+<li>将样式表放到页面顶部</li>
+<li>避免使用css表达式，避免使用高级选择器，通配选择器</li>
+<li>不使用IE的Filter</li>
+</ul>
+<p><strong>Javascript方面</strong></p>
+<ul>
+<li>将脚本放到页面底部</li>
+<li>将javascript和css从外部引入</li>
+<li>压缩javascript和css</li>
+<li>删除不需要的脚本</li>
+<li>减少DOM访问</li>
+<li>合理设计事件监听器</li>
+</ul>
+<p><strong>图片方面</strong></p>
+<ul>
+<li>优化图片：根据实际颜色需要选择色深、压缩</li>
+<li>使用css图片精灵</li>
+<li>不要在HTML中拉伸图片</li>
+<li>保证favicon.ico小并且可缓存</li>
+</ul>
+<p><strong>移动方面</strong></p>
+<ul>
+<li>保证组件小于25k</li>
+<li><code>Pack Components into a Multipart Document</code></li>
+</ul>
+<p><strong>代码层面的优化</strong></p>
+<ul>
+<li><p>用hash-table来优化查找</p>
+</li>
+<li><p>少用全局变量</p>
+</li>
+<li><p>用innerHTML代替DOM操作，减少DOM操作次数，优化javascript性能</p>
+</li>
+<li><p>用setTimeout来避免页面失去响应</p>
+</li>
+<li><p>缓存DOM节点查找的结果</p>
+</li>
+<li><p>避免使用CSS Expression</p>
+</li>
+<li><p>避免全局查询</p>
+</li>
+<li><p>避免使用with(with会创建自己的作用域，会增加作用域链长度)</p>
+</li>
+<li><p>多个变量声明合并</p>
+</li>
+<li><p>避免图片和iFrame等的空Src。空Src会重新加载当前页面，影响速度和效率</p>
+</li>
+<li><p>尽量避免写在HTML标签中写Style属性</p>
+</li>
+</ul>
+<h3 id="性能优化方法"><a href="#性能优化方法" class="headerlink" title="性能优化方法"></a>性能优化方法</h3><ul>
+<li>网页 Gzip（开启 Gzip 压缩），data 缓存 ，图片服务器。</li>
+<li>前端模板 JS+数据，减少由于 HTML 标签导致的带宽浪费，前端用变量保存 AJAX 请求结果，每次操作本地变量，不用请求，减少请求次数</li>
+<li>用 innerHTML 代替 DOM 操作，减少 DOM 操作次数，优化 javascript 性能。</li>
+<li>当需要设置的样式很多时设置 className 而不是直接操作 style。</li>
+<li>少用全局变量、缓存 DOM 节点查找的结果。减少 IO 读取操作。</li>
+<li>避免使用 CSS Expression（css 表达式)又称 Dynamic properties(动态属性)。</li>
+<li>图片预加载，将 CSS 放到顶部，JavaScript 放到尾部加上时间戳。</li>
+<li>避免在页面的主体布局中使用 table，table 要等其中的内容完全下载之后才会显示出来，显示比 div+css 布局慢。</li>
+<li>避免不必要的重绘与重排</li>
+<li>优化 CSS 选择器（从右向左匹配）</li>
+<li>使用 CDN 加速，适当进行文件缓存</li>
+<li>合理控制 cookie 大小（每次请求都会包含 cookie）</li>
+<li>缓存利用：缓存Ajax，使用CDN，使用外部js和css文件以便缓存，添加Expires头，服务端配置Etag，减少DNS查找等</li>
+<li>请求带宽：压缩文件，开启GZIP</li>
+</ul>
+<p>对普通的网站有一个统一的思路，就是尽量向前端优化、减少数据库操作、减少磁盘IO。</p>
+<ul>
+<li>向前端优化：指的是在不影响功能和体验的情况下，能在浏览器执行的不要在服务端执行，能在缓存服务器上直接返回的不要到应用服务器，程序能直接取得的结果不要到外部取得，本机内能取得的数据不要到远程取，内存能取到的不要到磁盘取，缓存中有的不要去数据库查询。</li>
+<li>减少数据库操作：指减少更新次数、缓存结果减少查询次数、将数据库执行的操作尽可能的让你的程序完成（例如join查询）。</li>
+<li>减少磁盘IO：指尽量不使用文件系统作为缓存、减少读写文件次数等。程序优化永远要优化慢的部分，换语言是无法“优化”的</li>
+</ul>
+<h3 id="前端性能优化最佳实践？"><a href="#前端性能优化最佳实践？" class="headerlink" title="前端性能优化最佳实践？"></a>前端性能优化最佳实践？</h3><ul>
+<li>性能评级工具（PageSpeed 或 YSlow）</li>
+<li>合理设置 HTTP 缓存：Expires 与 Cache-control</li>
+<li>静态资源打包，开启 Gzip 压缩（节省响应流量）</li>
+<li>CSS3 模拟图像，图标base64（降低请求数）</li>
+<li>模块延迟(defer)加载/异步(async)加载</li>
+<li>Cookie 隔离（节省请求流量）</li>
+<li>localStorage（本地存储）</li>
+<li>使用 CDN 加速（访问最近服务器）</li>
+<li>启用 HTTP/2（多路复用，并行加载）</li>
+<li>前端自动化（gulp/webpack）</li>
+</ul>
+<h3 id="简述一下你对-web-性能优化的方案"><a href="#简述一下你对-web-性能优化的方案" class="headerlink" title="简述一下你对 web 性能优化的方案"></a>简述一下你对 web 性能优化的方案</h3><p>1、尽量减少 HTTP 请求<br>2、使用浏览器缓存<br>3、使用压缩组件<br>4、图片、JS 的预载入<br>5、将脚本放在底部<br>6、将样式文件放在页面顶部<br>7、使用外部的 JS 和 CSS<br>8、精简代码</p>
+<h3 id="移动端性能优化"><a href="#移动端性能优化" class="headerlink" title="移动端性能优化"></a>移动端性能优化</h3><ul>
+<li>尽量使用 css3 动画，开启硬件加速。</li>
+<li>适当使用 touch 事件代替 click 事件。</li>
+<li>避免使用 css3 渐变阴影效果。 </li>
+<li>尽可能少的使用 box-shadow 与 gradients，box-shadow 与 gradients 往往都是页面的性能杀手</li>
+</ul>
+<h3 id="页面大量图片，如何优化加载，优化用户体验"><a href="#页面大量图片，如何优化加载，优化用户体验" class="headerlink" title="页面大量图片，如何优化加载，优化用户体验"></a>页面大量图片，如何优化加载，优化用户体验</h3><p>图片懒加载，在页面上的未可视区域可以添加一个滚动条事件，判断图片位置与浏览器顶端的距离与页面的距离，如果前者小于后者，优先加载。</p>
+<p>如果为幻灯片、相册等，可以使用图片预加载技术，将当前展示图片的前一张和后一张优先下载。</p>
+<p>如果图片为 css 图片，可以使用 CSSsprite，SVGsprite，Iconfont、Base64 等技术。</p>
+<p>如果图片过大，可以使用特殊编码的图片，加载时会先加载一张压缩的特别厉害的缩略图，以提高用户体验。</p>
+<p>如果图片展示区域小于图片的真实大小，则因在服务器端根据业务需要先行进行图片压缩，图片压缩后大小与展示一致。</p>
+<h3 id="渲染优化"><a href="#渲染优化" class="headerlink" title="渲染优化"></a>渲染优化</h3><p>1、禁止使用 iframe（阻塞父文档 onload 事件）</p>
+<ul>
+<li>iframe 会阻塞主页面的 Onload 事件；</li>
+<li>搜索引擎的检索程序无法解读这种页面，不利于 SEO;</li>
+<li>iframe 和主页面共享连接池，而浏览器对相同域的连接有限制，所以会影响页面的并行加载。</li>
+</ul>
+<p>使用 iframe 之前需要考虑这两个缺点。如果需要使用 iframe，最好是通过 javascript动态给 iframe 添加 src 属性值，这样可以绕开以上两个问题。</p>
+<p>2、禁止使用 gif 图片实现 loading 效果（降低 CPU 消耗，提升渲染性能）；<br>3、使用 CSS3 代码代替 JS 动画（尽可能避免重绘重排以及回流）css3 平面动画开启 translateZ(0)，打开浏览器 3d 加速，在一定程度可缓解卡顿。不宜多用；</p>
+<p>4、对于一些小图标，可以使用 base64 位编码，以减少网络请求。但不建议大图使用，比较耗费 CPU；<br>小图标优势在于： 1.减少 HTTP 请求； 2.避免文件跨域； 3.修改及时生效；</p>
+<p>5、页面头部的<code>&lt;style&gt;&lt;/style&gt;</code> 会阻塞页面；（因为 Renderer 进程中 JS 线程和渲染线程是互斥的）；<br>6、页面头部<code>&lt;script&lt;/script&gt;</code> 会阻塞页面；（因为 Renderer 进程中 JS 线程和渲染线程是互斥的）；<br>7、页面中空的 href 和 src 会阻塞页面其他资源的加载 (阻塞下载进程)；</p>
+<p>8、网页 Gzip，CDN 托管，data 缓存 ，图片服务器；<br>9、前端模板 JS+数据，减少由于 HTML 标签导致的带宽浪费，前端用变量保存 AJAX 请求结果，每次操作本地变量，不用请求，减少请求次数<br>10、用 innerHTML 代替 DOM 操作，减少 DOM 操作次数，优化 javascript 性能。<br>11、当需要设置的样式很多时设置 className 而不是直接操作 style。<br>12、少用全局变量、缓存 DOM 节点查找的结果。减少 IO 读取操作。<br>13、避免使用 CSS Expression（css 表达式)又称 Dynamic properties(动态属性)。<br>14、图片预加载，将样式表放在顶部，将脚本放在底部 加上时间戳。</p>
+<p>15、 避免在页面的主体布局中使用 table，table 要等其中的内容完全下载之后才会显示出来，显示比 div+css 布局慢。<br>16、通过改变 src 的情况下**.MP3（不同于 mp3）在移动端有可能不能播放。</p>
+<h3 id="小程序首屏加载时间优化"><a href="#小程序首屏加载时间优化" class="headerlink" title="小程序首屏加载时间优化"></a>小程序首屏加载时间优化</h3><p>图片资源<br>首先要选择合适的图片格式照片图片使用 webP。<br>复杂的图形使用 PNG 或 JPG，看哪个格式的文件小。<br>有透明度的图形使用 PNG 或 webP。<br>可能缩放的图形、图标等使用 SVG。<br>动态图尽量不使用 GIF，无法使用 CSS 的用视频替代。<br>JS 优化<br>首先排查在主线程上不要使用同步方法，减小主线程阻塞。<br>开启小程序中的代码按需注入，避免没有使用的代码注入到小程序运行环境中，影响注入耗时和内存占用。<br>生产环境去掉不必要的日志打印<br>CSS 优化<br>因为构建 CSSOM 树时会阻塞页面的解析，因此需要：删除没有使用的 CSS 代码<br>减小 CSS 文件大小，如 #FFFFFF -&gt; #FFF ， 0px -&gt; 0，不要使用 Base64 编码的图片。<br>资源优化</p>
+<ol>
+<li><p>按照页面访问的频次，将图片资源分成常用的和不常用的，将常用的放入小程序代码包通过本地加载，将不常用的转换成 webp 放到服务器。</p>
+</li>
+<li><p>减小代码包体积：压缩代码包中的图片资源，对 PNG 格式的透明图设置更少的颜色数；通过依赖分析，更换体积更小的 markdown 渲染依赖。<br>网络优化</p>
+</li>
+<li><p>为解决不同地域和运营商的访问速度，开启全站动态加速。</p>
+</li>
+<li><p>首次请求时需要进行域名的解析和建连，链路复用网络请求时间会变短。</p>
+</li>
+<li><p>对不经常变更且频繁访问的接口，在 DCDN 中设置静态缓存，并触发接口预热，将接口的响应缓存到 DCDN 的二级节点上。这样用户发起这些请求时，直接由 DCDN 做出应答而不回源到真实服务器处理。</p>
+</li>
+<li><p>在服务端和客户端开启 http/2 协议支持。</p>
+</li>
+<li><p>对超过 1kb 的响应体开启 gzip 压缩。</p>
+</li>
+<li><p>对服务端的图片等静态资源设置浏览器缓存。</p>
+</li>
+<li><p>利用网站测速提供的服务，发送 GET 测速，让各地运营商缓存 DNS 结果。</p>
+</li>
+<li><p>开启 OCSP Stapling，提高证书的校验性能。</p>
+<p>代码编写</p>
+</li>
+<li><p>代码中对图片标签开启懒加载。</p>
+</li>
+<li><p>减小冗余的 <view> 层次嵌套。</view></p>
+</li>
+<li><p>为 data 赋初始值，避免在网络请求结束后赋值引起页面元素的位置变动。</p>
+</li>
+<li><p>开启代码的按需注入</p>
+</li>
+<li><p>将网络请求从 onReady 提前到 onLoad 。<br>业务逻辑</p>
+</li>
+<li><p>所有新用户（首次访问）最初进入小程序时，页面和 data 中的数据都是一样的。将这些数据作为 data 的默认值，直接显示出来，网络请求到达后，由于 data 内容不变，不会发生页面的重新渲染。</p>
+</li>
+<li><p>用户使用程序后，将从网络请求中获取的用户数据存储到 storage 中。</p>
+</li>
+<li><p>在服务端，当小程序用户登入后，开启异步线程将主要的用户数据从 MySQL 刷入Redis 进行热备。</p>
+</li>
+<li><p>对于长列表改为数据分页加载。</p>
+</li>
+</ol>
+<h3 id="在-css-js-代码上线之后开发人员经常会优化性能，从用户刷新网页开始，一次-js-请求一般情况下有哪些地方会有缓存处理？"><a href="#在-css-js-代码上线之后开发人员经常会优化性能，从用户刷新网页开始，一次-js-请求一般情况下有哪些地方会有缓存处理？" class="headerlink" title="在 css/js 代码上线之后开发人员经常会优化性能，从用户刷新网页开始，一次 js 请求一般情况下有哪些地方会有缓存处理？"></a>在 css/js 代码上线之后开发人员经常会优化性能，从用户刷新网页开始，一次 js 请求一般情况下有哪些地方会有缓存处理？</h3><p>dns 缓存，cdn 缓存，浏览器缓存，服务器缓存。</p>
+<h3 id="什么是渐进式渲染（progressive-rendering）？"><a href="#什么是渐进式渲染（progressive-rendering）？" class="headerlink" title="什么是渐进式渲染（progressive rendering）？"></a>什么是渐进式渲染（progressive rendering）？</h3><p>渐进式渲染是用于提高网页性能（尤其是提高用户感知的加载速度），以尽快呈现页面的技术。</p>
+<p>在以前互联网带宽较小的时期，这种技术更为普遍。如今，移动终端的盛行，而移动网络往往不稳定，渐进式渲染在现代前端开发中仍然有用武之地。</p>
+<p>一些举例：</p>
+<ul>
+<li>图片懒加载——页面上的图片不会一次性全部加载。当用户滚动页面到图片部分时，JavaScript 将加载并显示图像。</li>
+<li>确定显示内容的优先级（分层次渲染）——为了尽快将页面呈现给用户，页面只包含基本的最少量的 CSS、脚本和内容，然后可以使用延迟加载脚本或监听<code>DOMContentLoaded</code>/<code>load</code>事件加载其他资源和内容。</li>
+<li>异步加载 HTML 片段——当页面通过后台渲染时，把 HTML 拆分，通过异步请求，分块发送给浏览器。</li>
+</ul>
+<p>解析：更多相关细节可以在<a href="http://www.ebaytechblog.com/2014/12/08/async-fragments-rediscovering-progressive-html-rendering-with-marko/" target="_blank" rel="noopener">这里</a>找到。</p>
+<h3 id="网络相关："><a href="#网络相关：" class="headerlink" title="网络相关："></a>网络相关：</h3><h4 id="DNS-预解析"><a href="#DNS-预解析" class="headerlink" title="DNS 预解析"></a>DNS 预解析</h4><p>DNS 解析也是需要时间的，可以通过预解析的方式来预先获得域名所对应的 IP</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"dns-prefetch"</span> <span class="attr">href</span>=<span class="string">"//yuchengkai.cn"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h4><ul>
+<li>缓存对于前端性能优化来说是个很重要的点，良好的缓存策略可以降低资源的重复加载提高网页的整体加载速度</li>
+<li>通常浏览器缓存策略分为两种：强缓存和协商缓存</li>
+</ul>
+<p><strong>强缓存</strong></p>
+<blockquote>
+<p>实现强缓存可以通过两种响应头实现：<code>Expires</code>和 <code>Cache-Control</code> 。强缓存表示在缓存期间不需要请求，<code>state code</code>为 <code>200</code></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Expires: Wed, 22 Oct 2018 08:41:00 GMT</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>Expires</code> 是 <code>HTTP / 1.0</code> 的产物，表示资源会在 <code>Wed, 22 Oct 2018 08:41:00 GMT</code> 后过期，需要再次请求。并且 <code>Expires</code> 受限于本地时间，如果修改了本地时间，可能会造成缓存失效</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Cache-control: max-age=30</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><code>Cache-Control</code> 出现于 <code>HTTP / 1.1</code>，优先级高于 <code>Expires</code> 。该属性表示资源会在 <code>30</code> 秒后过期，需要再次请求</p>
+</blockquote>
+<p><strong>协商缓存</strong></p>
+<ul>
+<li>如果缓存过期了，我们就可以使用协商缓存来解决问题。协商缓存需要请求，如果缓存有效会返回 304</li>
+<li>协商缓存需要客户端和服务端共同实现，和强缓存一样，也有两种实现方式</li>
+</ul>
+<p>Last-Modified 和 If-Modified-Since</p>
+<ul>
+<li><code>Last-Modified</code> 表示本地文件最后修改日期，<code>If-Modified-Since</code> 会将 <code>Last-Modified</code>的值发送给服务器，询问服务器在该日期后资源是否有更新，有更新的话就会将新的资源发送回来</li>
+<li>但是如果在本地打开缓存文件，就会造成 <code>Last-Modified</code> 被修改，所以在 <code>HTTP / 1.1</code> 出现了 <code>ETag</code></li>
+</ul>
+<p>ETag 和 If-None-Match</p>
+<ul>
+<li><code>ETag</code> 类似于文件指纹，<code>If-None-Match</code> 会将当前 <code>ETag</code> 发送给服务器，询问该资源 ETag 是否变动，有变动的话就将新的资源发送回来。并且 <code>ETag</code> 优先级比 <code>Last-Modified</code> 高</li>
+</ul>
+<p><strong>选择合适的缓存策略</strong></p>
+<blockquote>
+<p>对于大部分的场景都可以使用强缓存配合协商缓存解决，但是在一些特殊的地方可能需要选择特殊的缓存策略</p>
+</blockquote>
+<ul>
+<li>对于某些不需要缓存的资源，可以使用 <code>Cache-control: no-store</code> ，表示该资源不需要缓存</li>
+<li>对于频繁变动的资源，可以使用 <code>Cache-Control: no-cache</code> 并配合 <code>ETag</code> 使用，表示该资源已被缓存，但是每次都会发送请求询问资源是否更新。</li>
+<li>对于代码文件来说，通常使用 <code>Cache-Control: max-age=31536000</code> 并配合策略缓存使用，然后对文件进行指纹处理，一旦文件名变动就会立刻下载新的文件</li>
+</ul>
+<h4 id="使用-HTTP-2-0"><a href="#使用-HTTP-2-0" class="headerlink" title="使用 HTTP / 2.0"></a>使用 HTTP / 2.0</h4><ul>
+<li>因为浏览器会有并发请求限制，在 HTTP / 1.1 时代，每个请求都需要建立和断开，消耗了好几个 RTT 时间，并且由于 TCP 慢启动的原因，加载体积大的文件会需要更多的时间</li>
+<li>在 HTTP / 2.0 中引入了多路复用，能够让多个请求使用同一个 TCP 链接，极大的加快了网页的加载速度。并且还支持 Header 压缩，进一步的减少了请求的数据大小</li>
+</ul>
+<h4 id="预加载"><a href="#预加载" class="headerlink" title="预加载"></a>预加载</h4><ul>
+<li>在开发中，可能会遇到这样的情况。有些资源不需要马上用到，但是希望尽早获取，这时候就可以使用预加载</li>
+<li>预加载其实是声明式的 <code>fetch</code> ，强制浏览器请求资源，并且不会阻塞 <code>onload</code> 事件，可以使用以下代码开启预加载</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"preload"</span> <span class="attr">href</span>=<span class="string">"http://example.com"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>预加载可以一定程度上降低首屏的加载时间，因为可以将一些不影响首屏但重要的文件延后加载，唯一缺点就是兼容性不好</p>
+</blockquote>
+<h4 id="预渲染"><a href="#预渲染" class="headerlink" title="预渲染"></a>预渲染</h4><blockquote>
+<p>可以通过预渲染将下载的文件预先在后台渲染，可以使用以下代码开启预渲染</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"prerender"</span> <span class="attr">href</span>=<span class="string">"http://example.com"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>预渲染虽然可以提高页面的加载速度，但是要确保该页面百分百会被用户在之后打开，否则就白白浪费资源去渲染</li>
+</ul>
+<h3 id="什么是CDN公共库？"><a href="#什么是CDN公共库？" class="headerlink" title="什么是CDN公共库？"></a>什么是CDN公共库？</h3><p>CDN公共库是指将常用的JS库存放在CDN节点，以方便广大开发者直接调用。与将JS库存放在服务器单机上相比，CDN公共库更加稳定、高速。一般的CDN公共库都会包含全球所有最流行的开源JavaScript库。</p>
+<h3 id="为什么要引用CDN公共库？"><a href="#为什么要引用CDN公共库？" class="headerlink" title="为什么要引用CDN公共库？"></a>为什么要引用CDN公共库？</h3><p>1.减少等待时间</p>
+<p>CDN-Content Delivery Network（内容分发网络），通过各种各样的服务途径把你的一些静态内容分散开来，当用户的浏览器提交这些文件的链接请求，他们便会自动下载网络上最近的可用的文件。这样任何使用你的服务的用户从JS库下载都将获得比从你自己的服务器上下载更快的速度。</p>
+<p>2.增加网页的同时载入速度</p>
+<p>为了避免服务的过载，浏览器限制了同时连接的数目，依据不同的浏览器，这个限制可能是每个机房仅仅两个之少。<br>使用CDN公共库加载JS，使你本地服务器上更多服务可以同时进行。</p>
+<p>3.更好的缓存</p>
+<p>使用CDN公共库的最大好处是你的用户可能根本不需要下载jQuery.不论你的缓存多么强大，如果你用自己的服务器提供jQuery，那么你的用户至少要下载一次它，某个用户很有可能在他们浏览器的缓存区里下载了许多完全相同的jQuery.min.js的拷贝版本，但是当他们第一次访问你的网站的时候，这些拷贝版本会被忽略。</p>
+<p>而当浏览器检测到同样版本的指向CDN公共库的链接，它就会知道这是下载同一个文件，不仅是CDN公共库的服务器会返回一个304（不需要修改文件的指令，即服务器上的文件未改动过）来回复一个重复的请求，而且会命令浏览器的缓存该文件长达一年的时间。</p>
+<p>这意味着即使一些人访问了数百的使用CDN公共库的网站,他们只需要下载一次就够了。</p>
+<h3 id="优化渲染过程"><a href="#优化渲染过程" class="headerlink" title="优化渲染过程"></a>优化渲染过程</h3><h4 id="懒执行"><a href="#懒执行" class="headerlink" title="懒执行"></a>懒执行</h4><p>懒执行就是将某些逻辑延迟到使用时再计算。该技术可以用于首屏优化，对于某些耗时逻辑并不需要在首屏就使用的，就可以使用懒执行。懒执行需要唤醒，一般可以通过定时器或者事件的调用来唤醒</p>
+<h4 id="懒加载"><a href="#懒加载" class="headerlink" title="懒加载"></a>懒加载</h4><ul>
+<li>懒加载就是将不关键的资源延后加载</li>
+</ul>
+<blockquote>
+<p>懒加载的原理就是只加载自定义区域（通常是可视区域，但也可以是即将进入可视区域）内需要加载的东西。对于图片来说，先设置图片标签的 src 属性为一张占位图，将真实的图片资源放入一个自定义属性中，当进入自定义区域时，就将自定义属性替换为 src 属性，这样图片就会去下载资源，实现了图片懒加载</p>
+</blockquote>
+<ul>
+<li>懒加载不仅可以用于图片，也可以使用在别的资源上。比如进入可视区域才开始播放视频等</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2023-04-14T17:01:50.000Z" itemprop="dateUpdated">2023-04-15 01:01:50</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/knowledges/xing-neng-you-hua.html" target="_blank" rel="external">https://qw66.gitee.io/knowledges/xing-neng-you-hua.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/性能优化/">性能优化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/渲染优化/">渲染优化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网络优化/">网络优化</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/xing-neng-you-hua.html&title=《性能优化》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/xing-neng-you-hua.html&title=《性能优化》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/xing-neng-you-hua.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《性能优化》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/xing-neng-you-hua.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/xing-neng-you-hua.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/knowledges/xiang-ying-shi-bu-ju.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">响应式布局</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/knowledges/flex.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">flex</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/xing-neng-you-hua.html&title=《性能优化》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/xing-neng-you-hua.html&title=《性能优化》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/xing-neng-you-hua.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《性能优化》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/xing-neng-you-hua.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/xing-neng-you-hua.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKElEQVR42u3aQY7CMAwFUO5/aWaLNGrm2y4jNXldISgkrwtjx3694uv9cSX3fN75+1vrO9erjC4MDIzHMt7La71wvq01b/16/TsYGBjnMK4i2Pqnk0CZB9AkWF++j4GBgVEMjus7e+tiYGBg3MW4t1TGwMDAqBax+WK9gjb/FgYGxmmMPBT+/+uv9DcwMDAexXgXr3lxu24tNHeFgYGxNSMPcNW0rJpcVhsJGBgY5zDm4TUpX/Oks9pCGFXhGBgYj2UkW6xuOgnWvXbmZcDFwMDYlJEc6E8CaI4pH71hYGBszegFvt6S1cbkaBwWAwNjI0b+tV5ozlPG3ogGBgbGOYx5InjX1pO0slnEYmBgPJwxLzgn91QP+C5bmBgYGJsyqh/PC9d809Xgi4GBcRojP6WbJJf3DmRgYGDszeiFvyoyKkfjdy7ncDEwMDZlJGlcr9CdBNYbxiwwMDCOYcyP2HqDGs09YGBgbMroDbBWj/Krx2rlEI+BgXEYI/m5vHCtthyaSScGBsYBjGT53thEPuSaj4sVzvYwMDA2YkwO5ZPlk4eVP+4//jcwMDA2YryLV57G9dLH5EGUO6UYGBgPZ1Q7g72BjOrxXLWoxsDAOIFRDaB5IphXmr3yFQMD4zTGfMKq2oDspX2FWhwDA+NgRh4cqxloPuQRNQYwMDAwxqG5V0JfPjgMDIwDGHc1A3qDGtXwioGBcRqjmrRVP+2RvtLUxMDAeB7jB6Tcfkz8Nyk+AAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>vue3 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="vue3">
+    <meta name="description" content="vue3的新特性1、响应系统的变动由原来的Object.defineProperty 的getter和setter，改变成为了ES2015 Proxy 作为其观察机制。 Proxy的优势：消除了以前存在的警告，使速度加倍，并节省了一半的内存开销。 2、虚拟DOM重写（Virtual DOM Rewrite）虚拟 DOM 从头开始重写，我们可以期待更多的编译时提示来减少运行时开销。重写将包括更有效的">
+<meta name="keywords" content="vue3">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue3">
+<meta property="og:url" content="https://qw66.gitee.io/interview/vue3.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="vue3的新特性1、响应系统的变动由原来的Object.defineProperty 的getter和setter，改变成为了ES2015 Proxy 作为其观察机制。 Proxy的优势：消除了以前存在的警告，使速度加倍，并节省了一半的内存开销。 2、虚拟DOM重写（Virtual DOM Rewrite）虚拟 DOM 从头开始重写，我们可以期待更多的编译时提示来减少运行时开销。重写将包括更有效的">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:updated_time" content="2024-03-28T18:11:02.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue3">
+<meta name="twitter:description" content="vue3的新特性1、响应系统的变动由原来的Object.defineProperty 的getter和setter，改变成为了ES2015 Proxy 作为其观察机制。 Proxy的优势：消除了以前存在的警告，使速度加倍，并节省了一半的内存开销。 2、虚拟DOM重写（Virtual DOM Rewrite）虚拟 DOM 从头开始重写，我们可以期待更多的编译时提示来减少运行时开销。重写将包括更有效的">
+<meta name="twitter:image" content="https://qw66.gitee.io/img/loading.gif">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">vue3</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">vue3</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2024-03-10T13:02:08.000Z" itemprop="datePublished" class="page-time">
+  2024-03-10
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端面试题/">前端面试题</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vue3的新特性"><span class="post-toc-number">1.</span> <span class="post-toc-text">vue3的新特性</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1、响应系统的变动"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1、响应系统的变动</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2、虚拟DOM重写（Virtual-DOM-Rewrite）"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2、虚拟DOM重写（Virtual DOM Rewrite）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3、组件渲染的优化（优化插槽生成）"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">3、组件渲染的优化（优化插槽生成）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4、静态树提升（Static-Tree-Hoisting）"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">4、静态树提升（Static Tree Hoisting）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5、静态属性提升（Static-Props-Hoisting）"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">5、静态属性提升（Static Props Hoisting）</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vue3对比vue2有哪些不同？"><span class="post-toc-number">2.</span> <span class="post-toc-text">vue3对比vue2有哪些不同？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Proxy-相比于-defineProperty-的优势"><span class="post-toc-number">3.</span> <span class="post-toc-text">Proxy 相比于 defineProperty 的优势</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vue2为什么不使用proxy？"><span class="post-toc-number">4.</span> <span class="post-toc-text">vue2为什么不使用proxy？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vue3性能比vue2好的原因？"><span class="post-toc-number">5.</span> <span class="post-toc-text">vue3性能比vue2好的原因？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vue3-0-里为什么要用-Proxy-API-替代-defineProperty-API？"><span class="post-toc-number">6.</span> <span class="post-toc-text">Vue3.0 里为什么要用 Proxy API 替代 defineProperty API？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vue3-0-编译做了哪些优化？（底层，源码）"><span class="post-toc-number">7.</span> <span class="post-toc-text">Vue3.0 编译做了哪些优化？（底层，源码）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#生成-Block-tree"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">生成 Block tree</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#slot-编译优化"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">slot 编译优化</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Vue3-0新特性-——-Composition-API-与-React-js-中-Hooks的异同点（难点问题）"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">Vue3.0新特性 —— Composition API 与 React.js 中 Hooks的异同点（难点问题）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#React-js-中的-Hooks-基本使用"><span class="post-toc-number">7.4.</span> <span class="post-toc-text">React.js 中的 Hooks 基本使用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Vue-Composition-API-基本使用"><span class="post-toc-number">7.5.</span> <span class="post-toc-text">Vue Composition API 基本使用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#原理"><span class="post-toc-number">7.6.</span> <span class="post-toc-text">原理</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vue3-0是如何变得更快的？（底层，源码）"><span class="post-toc-number">8.</span> <span class="post-toc-text">Vue3.0是如何变得更快的？（底层，源码）</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#diff方法优化"><span class="post-toc-number">8.1.</span> <span class="post-toc-text">diff方法优化</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#hoistStatic-静态提升"><span class="post-toc-number">8.2.</span> <span class="post-toc-text">hoistStatic 静态提升</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#cacheHandlers-事件侦听器缓存"><span class="post-toc-number">8.3.</span> <span class="post-toc-text">cacheHandlers 事件侦听器缓存</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vue-3-0-性能提升主要是通过哪几方面体现的？"><span class="post-toc-number">9.</span> <span class="post-toc-text">Vue 3.0 性能提升主要是通过哪几方面体现的？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#响应式系统提升"><span class="post-toc-number">9.1.</span> <span class="post-toc-text">响应式系统提升</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#编译优化"><span class="post-toc-number">9.2.</span> <span class="post-toc-text">编译优化</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#源码体积的优化"><span class="post-toc-number">9.3.</span> <span class="post-toc-text">源码体积的优化</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Vue-3-0-所采用的-Composition-Api-与-Vue-2-x使用的Options-Api-有什么区别？"><span class="post-toc-number">9.4.</span> <span class="post-toc-text">Vue 3.0 所采用的 Composition Api 与 Vue 2.x使用的Options Api 有什么区别？</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Options-Api"><span class="post-toc-number">9.5.</span> <span class="post-toc-text">Options Api</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#composition-Api"><span class="post-toc-number">9.6.</span> <span class="post-toc-text">composition Api</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Proxy-相对于-Object-defineProperty-有哪些优点？"><span class="post-toc-number">10.</span> <span class="post-toc-text">Proxy 相对于 Object.defineProperty 有哪些优点？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vue-3-0-在编译方面有哪些优化？"><span class="post-toc-number">11.</span> <span class="post-toc-text">Vue 3.0 在编译方面有哪些优化？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vue-js-3-0-响应式系统的实现原理？"><span class="post-toc-number">12.</span> <span class="post-toc-text">Vue.js 3.0 响应式系统的实现原理？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#reactive"><span class="post-toc-number">12.1.</span> <span class="post-toc-text">reactive</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#effect"><span class="post-toc-number">12.2.</span> <span class="post-toc-text">effect</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#track"><span class="post-toc-number">12.3.</span> <span class="post-toc-text">track</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#trigger"><span class="post-toc-number">12.4.</span> <span class="post-toc-text">trigger</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#来，先介绍一下Vue的响应式系统"><span class="post-toc-number">13.</span> <span class="post-toc-text">来，先介绍一下Vue的响应式系统</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#computed与watch的区别"><span class="post-toc-number">14.</span> <span class="post-toc-text">computed与watch的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍一下Vue的生命周期"><span class="post-toc-number">15.</span> <span class="post-toc-text">介绍一下Vue的生命周期</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么组件的data必须是一个函数"><span class="post-toc-number">16.</span> <span class="post-toc-text">为什么组件的data必须是一个函数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#组件之间是怎么通信的"><span class="post-toc-number">17.</span> <span class="post-toc-text">组件之间是怎么通信的</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vue事件绑定原理说一下"><span class="post-toc-number">18.</span> <span class="post-toc-text">Vue事件绑定原理说一下</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#slot是什么？有什么作用？原理是什么？"><span class="post-toc-number">19.</span> <span class="post-toc-text">slot是什么？有什么作用？原理是什么？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#默认插槽"><span class="post-toc-number">19.1.</span> <span class="post-toc-text">默认插槽</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#具名插槽"><span class="post-toc-number">19.2.</span> <span class="post-toc-text">具名插槽</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#作用域插槽"><span class="post-toc-number">19.3.</span> <span class="post-toc-text">作用域插槽</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vue模板渲染的原理是什么？"><span class="post-toc-number">20.</span> <span class="post-toc-text">Vue模板渲染的原理是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#template预编译是什么？"><span class="post-toc-number">21.</span> <span class="post-toc-text">template预编译是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#那template和jsx的有什么分别？"><span class="post-toc-number">22.</span> <span class="post-toc-text">那template和jsx的有什么分别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#说一下什么是Virtual-DOM"><span class="post-toc-number">23.</span> <span class="post-toc-text">说一下什么是Virtual DOM</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#介绍一下Vue中的Diff算法"><span class="post-toc-number">24.</span> <span class="post-toc-text">介绍一下Vue中的Diff算法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#key属性的作用是什么"><span class="post-toc-number">25.</span> <span class="post-toc-text">key属性的作用是什么</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#说说Vue2-0和Vue3-0有什么区别"><span class="post-toc-number">26.</span> <span class="post-toc-text">说说Vue2.0和Vue3.0有什么区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么要新增Composition-API，它能解决什么问题"><span class="post-toc-number">27.</span> <span class="post-toc-text">为什么要新增Composition API，它能解决什么问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#都说Composition-API与React-Hook很像，说说区别"><span class="post-toc-number">28.</span> <span class="post-toc-text">都说Composition API与React Hook很像，说说区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#SSR有了解吗？原理是什么？"><span class="post-toc-number">29.</span> <span class="post-toc-text">SSR有了解吗？原理是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用SSR的好处："><span class="post-toc-number">30.</span> <span class="post-toc-text">使用SSR的好处：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#有利于seo"><span class="post-toc-number">30.1.</span> <span class="post-toc-text">有利于seo</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#白屏时间更短"><span class="post-toc-number">30.2.</span> <span class="post-toc-text">白屏时间更短</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一、Vue3-里-script-的三种写法"><span class="post-toc-number"></span> <span class="post-toc-text">一、Vue3 里 script 的三种写法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1、最基本的-Vue2-写法"><span class="post-toc-number">1.</span> <span class="post-toc-text">1、最基本的 Vue2 写法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2、setup-属性"><span class="post-toc-number">2.</span> <span class="post-toc-text">2、setup() 属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3、script-setup"><span class="post-toc-number">3.</span> <span class="post-toc-text">3、script setup</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#二、如何使用script-setup编写组件"><span class="post-toc-number"></span> <span class="post-toc-text">二、如何使用script setup编写组件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1、data——唯一需要注意的地方"><span class="post-toc-number">1.</span> <span class="post-toc-text">1、data——唯一需要注意的地方</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1）写法对比"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">1）写法对比</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2）注意事项——组合式-api-的心智负担"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">2）注意事项——组合式 api 的心智负担</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#a、ref-和-reactive"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">a、ref 和 reactive</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#b、什么时候用-ref-包裹，什么时候不用。"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">b、什么时候用 ref() 包裹，什么时候不用。</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#c、不要解构使用"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">c、不要解构使用</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2、methods"><span class="post-toc-number">2.</span> <span class="post-toc-text">2、methods</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3、props"><span class="post-toc-number">3.</span> <span class="post-toc-text">3、props</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1）写法对比-1"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">1）写法对比</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2）注意事项——组合式-api-的心智负担-1"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">2）注意事项——组合式 api 的心智负担</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4、emits-事件"><span class="post-toc-number">4.</span> <span class="post-toc-text">4、emits 事件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5、computed"><span class="post-toc-number">5.</span> <span class="post-toc-text">5、computed</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6、watch"><span class="post-toc-number">6.</span> <span class="post-toc-text">6、watch</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1）直接使用-watch"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">1）直接使用 watch</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2）使用-watchEffect"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">2）使用 watchEffect</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7、生命周期"><span class="post-toc-number">7.</span> <span class="post-toc-text">7、生命周期</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#三、结语"><span class="post-toc-number"></span> <span class="post-toc-text">三、结语</span></a>
+        </nav>
+    </aside>
+
+
+<article id="post-interview/vue3"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">vue3</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2024-03-10 21:02:08" datetime="2024-03-10T13:02:08.000Z"  itemprop="datePublished">2024-03-10</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端面试题/">前端面试题</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="vue3的新特性"><a href="#vue3的新特性" class="headerlink" title="vue3的新特性"></a>vue3的新特性</h3><h4 id="1、响应系统的变动"><a href="#1、响应系统的变动" class="headerlink" title="1、响应系统的变动"></a>1、响应系统的变动</h4><p>由原来的Object.defineProperty 的getter和setter，改变成为了ES2015 Proxy 作为其观察机制。</p>
+<p>Proxy的优势：消除了以前存在的警告，使速度加倍，并节省了一半的内存开销。</p>
+<h4 id="2、虚拟DOM重写（Virtual-DOM-Rewrite）"><a href="#2、虚拟DOM重写（Virtual-DOM-Rewrite）" class="headerlink" title="2、虚拟DOM重写（Virtual DOM Rewrite）"></a>2、虚拟DOM重写（Virtual DOM Rewrite）</h4><p>虚拟 DOM 从头开始重写，我们可以期待更多的编译时提示来减少运行时开销。重写将包括更有效的代码来创建虚拟节点。</p>
+<h4 id="3、组件渲染的优化（优化插槽生成）"><a href="#3、组件渲染的优化（优化插槽生成）" class="headerlink" title="3、组件渲染的优化（优化插槽生成）"></a>3、组件渲染的优化（优化插槽生成）</h4><p>Vue2当中在父组件渲染同时，子组件也会渲染。 Vue3就可以单独渲染父组件、子组件。</p>
+<h4 id="4、静态树提升（Static-Tree-Hoisting）"><a href="#4、静态树提升（Static-Tree-Hoisting）" class="headerlink" title="4、静态树提升（Static Tree Hoisting）"></a>4、静态树提升（Static Tree Hoisting）</h4><p>使用静态树提升，这意味着 Vue3 的编译器将能够检测到什么是静态组件，然后将其提升，从而降低了渲染成本。它将能够跳过未整个树结构打补丁的过程。</p>
+<h4 id="5、静态属性提升（Static-Props-Hoisting）"><a href="#5、静态属性提升（Static-Props-Hoisting）" class="headerlink" title="5、静态属性提升（Static Props Hoisting）"></a>5、静态属性提升（Static Props Hoisting）</h4><p>此外，我们可以期待静态属性提升，其中 Vue3将跳过不会改变节点的打补丁过程。</p>
+<p>总体来说：1. 更快 2. 更小 3. 更容易维护 4. 更加友好 5. 更容易使用</p>
+<h3 id="vue3对比vue2有哪些不同？"><a href="#vue3对比vue2有哪些不同？" class="headerlink" title="vue3对比vue2有哪些不同？"></a>vue3对比vue2有哪些不同？</h3><p>答： <a href="https://www.cnblogs.com/ygunoil/p/14463855.html" target="_blank" rel="noopener">https://www.cnblogs.com/ygunoil/p/14463855.html</a></p>
+<h3 id="Proxy-相比于-defineProperty-的优势"><a href="#Proxy-相比于-defineProperty-的优势" class="headerlink" title="Proxy 相比于 defineProperty 的优势"></a>Proxy 相比于 defineProperty 的优势</h3><p>Object.defineProperty() 的问题主要有三个：</p>
+<ul>
+<li>不能监听数组的变化</li>
+<li>必须深层遍历嵌套的对象</li>
+<li>必须遍历对象的每个属性</li>
+</ul>
+<p>Proxy 在 ES2015 规范中被正式加入，它有以下几个特点：</p>
+<ul>
+<li>针对对象：针对整个对象，而不是对象的某个属性，所以也就不需要对 keys 进行遍历。这解决了上述 Object.defineProperty() 第二个问题</li>
+<li>支持数组：Proxy 不需要对数组的方法进行重载，省去了众多 hack，减少代码量等于减少了维护成本，而且标准的就是最好的。</li>
+</ul>
+<p>除了上述两点之外，Proxy 还拥有以下优势：</p>
+<ul>
+<li>Proxy 的第二个参数可以有 13 种拦截方法，这比起 Object.defineProperty() 要更加丰富</li>
+<li>Proxy 作为新标准受到浏览器厂商的重点关注和性能优化，相比之下 Object.defineProperty() 是一个已有的老方法。</li>
+</ul>
+<h3 id="vue2为什么不使用proxy？"><a href="#vue2为什么不使用proxy？" class="headerlink" title="vue2为什么不使用proxy？"></a>vue2为什么不使用proxy？</h3><p> 答： 兼容性</p>
+<h3 id="vue3性能比vue2好的原因？"><a href="#vue3性能比vue2好的原因？" class="headerlink" title="vue3性能比vue2好的原因？"></a>vue3性能比vue2好的原因？</h3><p>1.diff算法优化</p>
+<p>2.静态提升hoistStatic</p>
+<p>3.事件侦听器缓存cacheHandles</p>
+<p><a href="https://www.cnblogs.com/ygunoil/p/14463687.html" target="_blank" rel="noopener">https://www.cnblogs.com/ygunoil/p/14463687.html</a></p>
+<h3 id="Vue3-0-里为什么要用-Proxy-API-替代-defineProperty-API？"><a href="#Vue3-0-里为什么要用-Proxy-API-替代-defineProperty-API？" class="headerlink" title="Vue3.0 里为什么要用 Proxy API 替代 defineProperty API？"></a>Vue3.0 里为什么要用 Proxy API 替代 defineProperty API？</h3><p>响应式优化<strong>（高频，重点！！！）</strong></p>
+<p>这是在面试中问的最多的一个问题，无论是大厂还是中小型公司，都喜欢问，也是Vue更新的重点。</p>
+<p>1.defineProperty API 的局限性最大原因是<strong>它只能针对单例属性做监听</strong>。</p>
+<p>Vue2.x中的响应式实现正是基于defineProperty中的descriptor，对 data 中的属性做了遍历 + 递归，为每个属性设置了 getter、setter。这也就是为什么 Vue 只能对 data 中预定义过的属性做出响应的原因，在Vue中使用下标的方式直接修改属性的值或者添加一个预先不存在的对象属性是无法做到setter监听的，这是defineProperty的局限性。</p>
+<p>2.Proxy API的监听是针对一个对象的，那么对这个对象的所有操作会进入监听操作， 这就完全可以代理所有属性，将会带来很大的性能提升和更优的代码。</p>
+<p>Proxy 可以理解成，在目标对象之前架设一层“拦截”，外界对该对象的访问，都必须先通过这层拦截，因此提供了一种机制，可以对外界的访问进行过滤和改写。</p>
+<p>3.响应式是惰性的</p>
+<p>在 Vue.js 2.x 中，对于一个深层属性嵌套的对象，要劫持它内部深层次的变化，就需要递归遍历这个对象，<strong>执行 Object.defineProperty 把每一层对象数据都变成响应式的，这无疑会有很大的性能消耗</strong>。在 Vue.js 3.0 中，使用 Proxy API 并不能监听到对象内部深层次的属性变化，因此它的处理方式是在 getter 中去递归响应式，这样的好处是<strong>真正访问到的内部属性才会变成响应式，简单的可以说是按需实现响应式，减少性能消耗。</strong>基础用法：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://pics7.baidu.com/feed/42166d224f4a20a4ac217837b8d32f25730ed088.jpeg?token=ab85fef62897b5de230005159580dbae&s=21F0632201FB2E210CE15E8F0200808A" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+
+
+<h3 id="Vue3-0-编译做了哪些优化？（底层，源码）"><a href="#Vue3-0-编译做了哪些优化？（底层，源码）" class="headerlink" title="Vue3.0 编译做了哪些优化？（底层，源码）"></a>Vue3.0 编译做了哪些优化？<strong>（底层，源码）</strong></h3><h4 id="生成-Block-tree"><a href="#生成-Block-tree" class="headerlink" title="生成 Block tree"></a>生成 Block tree</h4><p>Vue.js 2.x 的数据更新并触发重新渲染的粒度是组件级的，单个组件内部 需要遍历该组件的整个 vnode 树。<strong>在2.0里，渲染效率的快慢与组件大小成正相关：组件越大，渲染效率越慢。**</strong>并且，对于一些静态节点，又无数据更新，这些遍历都是性能浪费。<strong>Vue.js 3.0 做到了通过编译阶段对静态模板的分析，编译生成了 Block tree。 <strong>Block tree</strong></strong>是一个将模版基于动态节点指令切割的嵌套区块<strong>，每个 区块内部的节点结构是固定的，每个区块只需要追踪自身包含的动态节点。所以，</strong>在3.0里，渲染效率不再与模板大小成正相关，而是与模板中动态节点的数量成正相关。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://pics7.baidu.com/feed/8cb1cb13495409230918b8cebad9660eb2de4992.jpeg?token=d8b708fbbfa88364be1301c26a826a6a&s=BAA2F54C1AE0AB7C5C6524030000E0C3" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<h4 id="slot-编译优化"><a href="#slot-编译优化" class="headerlink" title="slot 编译优化"></a>slot 编译优化</h4><p>Vue.js 2.x 中，如果有一个组件传入了slot，那么每次父组件更新的时候，会强制使子组件update，造成性能的浪费。Vue.js 3.0 优化了slot的生成，使得非动态slot中属性的更新只会触发子组件的更新。<strong>动态slot指的是在slot上面使用v-if，v-for，动态slot名字等会导致slot产生运行时动态变化但是又无法被子组件track的操作。**</strong>c. diff算法优化**（此知识点进大厂可能会问到，由于篇幅较长，大家可以去官网看下）</p>
+<h4 id="Vue3-0新特性-——-Composition-API-与-React-js-中-Hooks的异同点（难点问题）"><a href="#Vue3-0新特性-——-Composition-API-与-React-js-中-Hooks的异同点（难点问题）" class="headerlink" title="Vue3.0新特性 —— Composition API 与 React.js 中 Hooks的异同点（难点问题）"></a>Vue3.0新特性 —— Composition API 与 React.js 中 Hooks的异同点（难点问题）</h4><h4 id="React-js-中的-Hooks-基本使用"><a href="#React-js-中的-Hooks-基本使用" class="headerlink" title="React.js 中的 Hooks 基本使用"></a>React.js 中的 Hooks 基本使用</h4><p>React Hooks 允许你 “勾入” 诸如组件状态和副作用处理等 React 功能中。Hooks 只能用在函数组件中，并允许我们在不需要创建类的情况下将状态、副作用处理和更多东西带入组件中。React 核心团队奉上的采纳策略是不反对类组件，所以你可以升级 React 版本、在新组件中开始尝试 Hooks，并保持既有组件不做任何更改。案例：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://pics0.baidu.com/feed/4bed2e738bd4b31cdb2c7638af5790789f2ff8ae.jpeg?token=227aa01d9da625df78e4629dab22e444&s=01F0E9264BAEB64D4C594F8E0200708A" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<p>useState 和 useEffect 是 React Hooks 中的一些例子，使得函数组件中也能增加状态和运行副作用。我们也可以自定义一个Hooks，它打开了代码复用性和扩展性的新大门。</p>
+<h4 id="Vue-Composition-API-基本使用"><a href="#Vue-Composition-API-基本使用" class="headerlink" title="Vue Composition API 基本使用"></a>Vue Composition API 基本使用</h4><p>Vue Composition API 围绕一个新的组件选项 setup 而创建。setup() 为 Vue 组件提供了状态、计算值、watcher 和生命周期钩子。并没有让原来的 API（Options-based API）消失。允许开发者 结合使用新旧两种 API（向下兼容）。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://pics5.baidu.com/feed/fcfaaf51f3deb48f5f457428d89e8d2e2cf578a5.jpeg?token=540b94be60198116f5a6803d43073660&s=09F1EB004BAEB64D0EFC85870200E08A" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<h4 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h4><p>React hook 底层是基于链表实现，调用的条件是每次组件被render的时候都会顺序执行所有的hooks。vue hook 只会被注册调用一次，vue 能避开这些麻烦的问题，原因在于它对数据的响应是基于proxy的，对数据直接代理观察。（这种场景下，只要任何一个更改data的地方，相关的function或者template都会被重新计算，因此避开了react可能遇到的性能上的问题）。react 中，数据更改的时候，会导致重新render，重新render又会重新把hooks重新注册一次，所以react复杂程度会高一些。</p>
+<h3 id="Vue3-0是如何变得更快的？（底层，源码）"><a href="#Vue3-0是如何变得更快的？（底层，源码）" class="headerlink" title="Vue3.0是如何变得更快的？（底层，源码）"></a>Vue3.0是如何变得更快的？（底层，源码）</h3><h4 id="diff方法优化"><a href="#diff方法优化" class="headerlink" title="diff方法优化"></a>diff方法优化</h4><p>Vue2.x 中的虚拟dom是进行全量的对比。Vue3.0 中新增了静态标记（PatchFlag）：在与上次虚拟结点进行对比的时候，值对比带有patch flag的节点，并且可以通过flag 的信息得知当前节点要对比的具体内容化。</p>
+<h4 id="hoistStatic-静态提升"><a href="#hoistStatic-静态提升" class="headerlink" title="hoistStatic 静态提升"></a>hoistStatic 静态提升</h4><p>Vue2.x : 无论元素是否参与更新，每次都会重新创建。Vue3.0 : 对不参与更新的元素，只会被创建一次，之后会在每次渲染时候被不停的复用。</p>
+<h4 id="cacheHandlers-事件侦听器缓存"><a href="#cacheHandlers-事件侦听器缓存" class="headerlink" title="cacheHandlers 事件侦听器缓存"></a>cacheHandlers 事件侦听器缓存</h4><p>默认情况下onClick会被视为动态绑定，所以每次都会去追踪它的变化但是因为是同一个函数，所以没有追踪变化，直接缓存起来复用即可。说在后面</p>
+<p>其实很多小伙伴都存在这样一种情况：<strong>Vue2.x都用了一年多了，官方文档都还没有去详细过一遍，遇到问题就百度，所以Vue3.0一出就惊慌失措。</strong></p>
+<p>所以我建议正确的学习姿势应该是：</p>
+<p>当我们去接触一门新技术的时候，首要任务就是看官方文档，先大致过一遍，知道有哪些东西。开发的时候遇到问题再去针对具体的知识点细看。遇到实在搞不定的，官方文档看不懂的，再行百度也不迟。</p>
+<h3 id="Vue-3-0-性能提升主要是通过哪几方面体现的？"><a href="#Vue-3-0-性能提升主要是通过哪几方面体现的？" class="headerlink" title="Vue 3.0 性能提升主要是通过哪几方面体现的？"></a>Vue 3.0 性能提升主要是通过哪几方面体现的？</h3><h4 id="响应式系统提升"><a href="#响应式系统提升" class="headerlink" title="响应式系统提升"></a>响应式系统提升</h4><p>vue2在初始化的时候，对data中的每个属性使用definepropery调用getter和setter使之变为响应式对象。如果属性值为对象，还会递归调用defineproperty使之变为响应式对象。<br>vue3使用proxy对象重写响应式。proxy的性能本来比defineproperty好，proxy可以拦截属性的访问、赋值、删除等操作，不需要初始化的时候遍历所有属性，另外有多层属性嵌套的话，只有访问某个属性的时候，才会递归处理下一级的属性。<br>优势：<br>可以监听动态新增的属性；<br>可以监听删除的属性 ；<br>可以监听数组的索引和 length 属性；</p>
+<h4 id="编译优化"><a href="#编译优化" class="headerlink" title="编译优化"></a>编译优化</h4><p>优化编译和重写虚拟dom，让首次渲染和更新dom性能有更大的提升<br>vue2 通过标记静态根节点,优化 diff 算法<br>vue3 标记和提升所有静态根节点,diff 的时候只比较动态节点内容</p>
+<p>Fragments, 模板里面不用创建唯一根节点,可以直接放同级标签和文本内容</p>
+<p>静态提升</p>
+<p>patch flag, 跳过静态节点,直接对比动态节点</p>
+<p>缓存事件处理函数</p>
+<h4 id="源码体积的优化"><a href="#源码体积的优化" class="headerlink" title="源码体积的优化"></a>源码体积的优化</h4><p>vue3移除了一些不常用的api，例如：inline-template、filter等<br>使用tree-shaking</p>
+<h4 id="Vue-3-0-所采用的-Composition-Api-与-Vue-2-x使用的Options-Api-有什么区别？"><a href="#Vue-3-0-所采用的-Composition-Api-与-Vue-2-x使用的Options-Api-有什么区别？" class="headerlink" title="Vue 3.0 所采用的 Composition Api 与 Vue 2.x使用的Options Api 有什么区别？"></a>Vue 3.0 所采用的 Composition Api 与 Vue 2.x使用的Options Api 有什么区别？</h4><h4 id="Options-Api"><a href="#Options-Api" class="headerlink" title="Options Api"></a>Options Api</h4><p>包含一个描述组件选项（data、methods、props等）的对象 options；<br>API开发复杂组件，同一个功能逻辑的代码被拆分到不同选项 ；<br>使用mixin重用公用代码，也有问题：命名冲突，数据来源不清晰；</p>
+<h4 id="composition-Api"><a href="#composition-Api" class="headerlink" title="composition Api"></a>composition Api</h4><p>vue3 新增的一组 api，它是基于函数的 api，可以更灵活的组织组件的逻辑。<br>解决options api在大型项目中，options api不好拆分和重用的问题。</p>
+<h3 id="Proxy-相对于-Object-defineProperty-有哪些优点？"><a href="#Proxy-相对于-Object-defineProperty-有哪些优点？" class="headerlink" title="Proxy 相对于 Object.defineProperty 有哪些优点？"></a>Proxy 相对于 Object.defineProperty 有哪些优点？</h3><p>proxy的性能本来比defineproperty好，proxy可以拦截属性的访问、赋值、删除等操作，不需要初始化的时候遍历所有属性，另外有多层属性嵌套的话，只有访问某个属性的时候，才会递归处理下一级的属性。</p>
+<p>可以监听数组变化<br>可以劫持整个对象<br>操作时不是对原对象操作,是 new Proxy 返回的一个新对象<br>可以劫持的操作有 13 种</p>
+<h3 id="Vue-3-0-在编译方面有哪些优化？"><a href="#Vue-3-0-在编译方面有哪些优化？" class="headerlink" title="Vue 3.0 在编译方面有哪些优化？"></a>Vue 3.0 在编译方面有哪些优化？</h3><p>vue.js 3.x中标记和提升所有的静态节点，diff的时候只需要对比动态节点内容；<br>Fragments（升级vetur插件): template中不需要唯一根节点，可以直接放文本或者同级标签<br>静态提升(hoistStatic),当使用 hoistStatic 时,所有静态的节点都被提升到 render 方法之外.只会在应用启动的时候被创建一次,之后使用只需要应用提取的静态节点，随着每次的渲染被不停的复用。<br>patch flag, 在动态标签末尾加上相应的标记,只能带 patchFlag 的节点才被认为是动态的元素,会被追踪属性的修改,能快速的找到动态节点,而不用逐个逐层遍历，提高了虚拟dom diff的性能。<br>缓存事件处理函数cacheHandler,避免每次触发都要重新生成全新的function去更新之前的函数<br>tree shaking 通过摇树优化核心库体积,减少不必要的代码量</p>
+<h3 id="Vue-js-3-0-响应式系统的实现原理？"><a href="#Vue-js-3-0-响应式系统的实现原理？" class="headerlink" title="Vue.js 3.0 响应式系统的实现原理？"></a>Vue.js 3.0 响应式系统的实现原理？</h3><h4 id="reactive"><a href="#reactive" class="headerlink" title="reactive"></a>reactive</h4><p>设置对象为响应式对象。接收一个参数，判断这参数是否是对象。不是对象则直接返回这个参数，不做响应式处理。<br>创建拦截器handerler，设置get/set/deleteproperty。<br>get<br>收集依赖（track）；<br>如果当前 key 的值是对象，则为当前 key 的对象创建拦截器 handler, 设置 get/set/deleteProperty；<br>如果当前的 key 的值不是对象，则返回当前 key 的值。<br>set<br>设置的新值和老值不相等时，更新为新值，并触发更新（trigger）。<br>deleteProperty<br>当前对象有这个 key 的时候，删除这个 key 并触发更新（trigger）。</p>
+<h4 id="effect"><a href="#effect" class="headerlink" title="effect"></a>effect</h4><p>接收一个函数作为参数。作用是：访问响应式对象属性时去收集依赖</p>
+<h4 id="track"><a href="#track" class="headerlink" title="track"></a>track</h4><p>接收两个参数：target 和 key<br>－如果没有 activeEffect，则说明没有创建 effect 依赖<br>－如果有 activeEffect，则去判断 WeakMap 集合中是否有 target 属性<br>－WeakMap 集合中没有 target 属性，则 set(target, (depsMap = new Map()))<br>－WeakMap 集合中有 target 属性，则判断 target 属性的 map 值的 depsMap 中是否有 key 属性<br>－depsMap 中没有 key 属性，则 set(key, (dep = new Set()))<br>－depsMap 中有 key 属性，则添加这个 activeEffect</p>
+<h4 id="trigger"><a href="#trigger" class="headerlink" title="trigger"></a>trigger</h4><p>判断 WeakMap 中是否有 target 属性，WeakMap 中有 target 属性，则判断 target 属性的 map 值中是否有 key 属性，有的话循环触发收集的 effect()。</p>
+<p>昨晚做了一个梦，梦见自己到了一家大厂面试，面试官走近房间，坐了下来：是杨溜溜吧？国际惯例，先来个自我介绍吧。</p>
+<p>于是我巴拉巴拉开始了长达两分钟的自我介绍，与此同时，面试官边听边看我的简历，边看边皱眉，结束后问：看你之前的项目经常用到vue，对Vue熟悉吗？</p>
+<p>我嘴角一笑，心里暗喜：幸好有专门看Vue的面试题，看来这次稳了。于是谦虚又装逼的回答：还行吧，您随便问。</p>
+<p>于是面试官看我口气那么大，心想：哟嚯，来了一个装逼的，劳资今天就只问Vue。</p>
+<h3 id="来，先介绍一下Vue的响应式系统"><a href="#来，先介绍一下Vue的响应式系统" class="headerlink" title="来，先介绍一下Vue的响应式系统"></a>来，先介绍一下Vue的响应式系统</h3><p>Vue为MVVM框架，当数据模型data变化时，页面视图会得到响应更新，其原理对data的getter/setter方法进行拦截（Object.defineProperty或者Proxy），利用发布订阅的设计模式，在getter方法中进行订阅，在setter方法中发布通知，让所有订阅者完成响应。</p>
+<p>在响应式系统中，Vue会为数据模型data的每一个属性新建一个订阅中心作为发布者，而监听器watch、计算属性computed、视图渲染template/render三个角色同时作为订阅者，对于监听器watch，会直接订阅观察监听的属性，对于计算属性computed和视图渲染template/render，如果内部执行获取了data的某个属性，就会执行该属性的getter方法，然后自动完成对该属性的订阅，当属性被修改时，就会执行该属性的setter方法，从而完成该属性的发布通知，通知所有订阅者进行更新。</p>
+<h3 id="computed与watch的区别"><a href="#computed与watch的区别" class="headerlink" title="computed与watch的区别"></a>computed与watch的区别</h3><p>计算属性computed和监听器watch<strong>都可以观察属性的变化从而做出响应</strong>，不同的是：</p>
+<p>计算属性computed更多是<strong>作为缓存功能的观察者</strong>，它可以将一个或者多个data的属性进行复杂的计算生成一个新的值，提供给渲染函数使用，当依赖的属性变化时，computed不会立即重新计算生成新的值，而是先标记为脏数据，当下次computed被获取时候，才会进行重新计算并返回。</p>
+<p>而监听器watch<strong>并不具备缓存性，监听器watch提供一个监听函数，当监听的属性发生变化时，会立即执行该函数。</strong></p>
+<h3 id="介绍一下Vue的生命周期"><a href="#介绍一下Vue的生命周期" class="headerlink" title="介绍一下Vue的生命周期"></a>介绍一下Vue的生命周期</h3><p>beforeCreate：是new Vue()之后触发的第一个钩子，在当前阶段data、methods、computed以及watch上的<strong>数据和方法都不能被访问</strong>。</p>
+<p>created：在实例创建完成后发生，当前阶段已经完成了数据观测，也就是<strong>可以使用数据，更改数据</strong>，在这里更改数据不会触发updated函数。可以做一些初始数据的获取，在当前阶段<strong>无法与Dom进行交互</strong>，如果非要想，可以通过vm.$nextTick来访问Dom。</p>
+<p>beforeMount：发生在挂载之前，在这之前template模板已导入渲染函数编译。而当前阶段虚拟Dom已经创建完成，即将开始渲染。在此时<strong>也可以对数据进行更改，不会触发updated</strong>。</p>
+<p>mounted：在挂载完成后发生，在当前阶段，<strong>真实的Dom挂载完毕，数据完成双向绑定，可以访问到Dom节点，使用$refs属性对Dom进行操作。</strong></p>
+<p>beforeUpdate：发生在更新之前，也就是响应式数据发生更新，虚拟dom重新渲染之前被触发，你可以在当前阶段进行更改数据，不会造成重渲染。</p>
+<p>updated：发生在更新完成之后，当前阶段组件Dom已完成更新。要注意的是避免在此期间更改数据，因为这可能会导致无限循环的更新。</p>
+<p>beforeDestroy：发生在实例销毁之前，在当前阶段实例完全可以被使用，我们可以在这时进行善后收尾工作，比如清除计时器。</p>
+<p>destroyed：发生在实例销毁之后，这个时候只剩下了dom空壳。组件已被拆解，数据绑定被卸除，监听被移出，子实例也统统被销毁。</p>
+<h3 id="为什么组件的data必须是一个函数"><a href="#为什么组件的data必须是一个函数" class="headerlink" title="为什么组件的data必须是一个函数"></a>为什么组件的data必须是一个函数</h3><p>一个组件可能在很多地方使用，也就是会创建很多个实例，如果data是一个对象的话，对象是引用类型，一个实例修改了data会影响到其他实例，所以data必须使用函数，为每一个实例创建一个属于自己的data，使其同一个组件的不同实例互不影响。</p>
+<h3 id="组件之间是怎么通信的"><a href="#组件之间是怎么通信的" class="headerlink" title="组件之间是怎么通信的"></a>组件之间是怎么通信的</h3><p>父子组件通信<br>父组件 -&gt; 子组件：prop</p>
+<p>子组件 -&gt; 父组件：$on/$emit</p>
+<p>获取组件实例：使用$parent/$children，$refs.xxx，获取到实例后直接获取属性数据或调用组件方法</p>
+<p>兄弟组件通信<br>Event Bus：每一个Vue实例都是一个Event Bus，都支持$on/$emit，可以为兄弟组件的实例之间new一个Vue实例，作为Event Bus进行通信。</p>
+<p>Vuex：将状态和方法提取到Vuex，完成共享</p>
+<p>跨级组件通信<br>使用provide/inject</p>
+<p>Event Bus：同兄弟组件Event Bus通信</p>
+<p>Vuex：将状态和方法提取到Vuex，完成共享</p>
+<h3 id="Vue事件绑定原理说一下"><a href="#Vue事件绑定原理说一下" class="headerlink" title="Vue事件绑定原理说一下"></a>Vue事件绑定原理说一下</h3><p>每一个Vue实例都是一个Event Bus，当子组件被创建的时候，父组件将事件传递给子组件，子组件初始化的时候是有$on方法将事件注册到内部，在需要的时候使用$emit触发函数，而对于原生native事件，使用addEventListener绑定到真实的DOM元素上。</p>
+<h3 id="slot是什么？有什么作用？原理是什么？"><a href="#slot是什么？有什么作用？原理是什么？" class="headerlink" title="slot是什么？有什么作用？原理是什么？"></a>slot是什么？有什么作用？原理是什么？</h3><p>slot又名插槽，是Vue的内容分发机制，组件内部的模板引擎使用slot元素作为承载分发内容的出口。插槽slot是子组件的一个模板标签元素，而这一个标签元素是否显示，以及怎么显示是由父组件决定的。</p>
+<p>slot又分三类，默认插槽，具名插槽和作用域插槽。</p>
+<h4 id="默认插槽"><a href="#默认插槽" class="headerlink" title="默认插槽"></a>默认插槽</h4><p>又名匿名插槽，当slot没有指定name属性值的时候一个默认显示插槽，一个组件内只有有一个匿名插槽。</p>
+<h4 id="具名插槽"><a href="#具名插槽" class="headerlink" title="具名插槽"></a>具名插槽</h4><p>带有具体名字的插槽，也就是带有name属性的slot，一个组件可以出现多个具名插槽。</p>
+<h4 id="作用域插槽"><a href="#作用域插槽" class="headerlink" title="作用域插槽"></a>作用域插槽</h4><p>默认插槽、具名插槽的一个变体，可以是匿名插槽，也可以是具名插槽，该插槽的不同点是在子组件渲染作用域插槽时，可以将子组件内部的数据传递给父组件，让父组件根据子组件的传递过来的数据决定如何渲染该插槽。<br>实现原理：当子组件vm实例化时，获取到父组件传入的slot标签的内容，存放在vm.$slot中，默认插槽为vm.$slot.default，具名插槽为vm.$slot.xxx，xxx 为插槽名，当组件执行渲染函数时候，遇到slot标签，使用$slot中的内容进行替换，此时可以为插槽传递数据，若存在数据，则可称该插槽为作用域插槽。</p>
+<h3 id="Vue模板渲染的原理是什么？"><a href="#Vue模板渲染的原理是什么？" class="headerlink" title="Vue模板渲染的原理是什么？"></a>Vue模板渲染的原理是什么？</h3><p>vue中的模板template无法被浏览器解析并渲染，因为这不属于浏览器的标准，不是正确的html语法，所有需要将template转化成一个JavaScript函数，这样浏览器就可以执行这一个函数并渲染出对应的html元素，就可以让视图跑起来了，这一个转化的过程，就成为模板编译。</p>
+<p>模板编译又分三个阶段，解析parse，优化optimize，生成generate，最终生成可执行函数render。</p>
+<p>parse阶段：使用大量的正则表达式对template字符串进行解析，将标签、指令、属性等转化为抽象语法树AST。<br>optimize阶段：遍历AST，找到其中的一些静态节点并进行标记，方便在页面重渲染的时候进行diff比较时，直接跳过这一些静态节点，优化runtime的性能。<br>generate阶段：将最终的AST转化为render函数字符串。</p>
+<h3 id="template预编译是什么？"><a href="#template预编译是什么？" class="headerlink" title="template预编译是什么？"></a>template预编译是什么？</h3><p>对于 Vue 组件来说，模板编译只会在<strong>组件实例化的时候编译一次</strong>，生成渲染函数之后在也不会进行编译。因此，编译对组件的 runtime 是一种性能损耗。</p>
+<p>而模板编译的目的仅仅是将template转化为render function，这个过程，正好可以在项目构建的过程中完成，这样可以让实际组件在 runtime 时直接跳过模板渲染，进而提升性能，这个在项目构建的编译template的过程，就是预编译。</p>
+<h3 id="那template和jsx的有什么分别？"><a href="#那template和jsx的有什么分别？" class="headerlink" title="那template和jsx的有什么分别？"></a>那template和jsx的有什么分别？</h3><p>对于 runtime 来说，只需要保证组件存在 render 函数即可，而我们有了预编译之后，我们只需要保证构建过程中生成 render 函数就可以。</p>
+<p>在 webpack 中，我们使用vue-loader编译.vue文件，内部依赖的vue-template-compiler模块，在 webpack 构建过程中，将template预编译成 render 函数。</p>
+<p>与 react 类似，在添加了jsx的语法糖解析器babel-plugin-transform-vue-jsx之后，就可以直接手写render函数。</p>
+<p>所以，template和jsx的都是render的一种表现形式，不同的是：</p>
+<p>JSX相对于template而言，具有更高的灵活性，在复杂的组件中，更具有优势，而 template 虽然显得有些呆滞。但是 template 在代码结构上更符合视图与逻辑分离的习惯，更简单、更直观、更好维护。</p>
+<h3 id="说一下什么是Virtual-DOM"><a href="#说一下什么是Virtual-DOM" class="headerlink" title="说一下什么是Virtual DOM"></a>说一下什么是Virtual DOM</h3><p>Virtual DOM 是 DOM 节点在 JavaScript 中的一种抽象数据结构，之所以需要虚拟DOM，是因为浏览器中操作DOM的代价比较昂贵，频繁操作DOM会产生性能问题。虚拟DOM的作用是在每一次响应式数据发生变化引起页面重渲染时，<strong>Vue对比更新前后的虚拟DOM，匹配找出尽可能少的需要更新的真实DOM，从而达到提升性能的目的。</strong></p>
+<h3 id="介绍一下Vue中的Diff算法"><a href="#介绍一下Vue中的Diff算法" class="headerlink" title="介绍一下Vue中的Diff算法"></a>介绍一下Vue中的Diff算法</h3><p>在新老虚拟DOM对比时</p>
+<p>首先，对比节点本身，判断是否为同一节点，如果不为相同节点，则删除该节点重新创建节点进行替换<br>如果为相同节点，进行patchVnode，判断如何对该节点的子节点进行处理，先判断一方有子节点一方没有子节点的情况(如果新的children没有子节点，将旧的子节点移除)<br>比较如果都有子节点，则进行updateChildren，判断如何对这些新老节点的子节点进行操作（diff核心）。<br>匹配时，找到相同的子节点，递归比较子节点<br>在diff中，只对同层的子节点进行比较，放弃跨级的节点比较，使得时间复杂从O(n^3)降低值O(n)，也就是说，只有当新旧children都为多个子节点时才需要用核心的Diff算法进行同层级比较。</p>
+<h3 id="key属性的作用是什么"><a href="#key属性的作用是什么" class="headerlink" title="key属性的作用是什么"></a>key属性的作用是什么</h3><p>在对节点进行diff的过程中，判断是否为相同节点的一个很重要的条件是key是否相等，如果是相同节点，则会尽可能的复用原有的DOM节点。所以key属性是提供给框架在diff的时候使用的，而非开发者。</p>
+<h3 id="说说Vue2-0和Vue3-0有什么区别"><a href="#说说Vue2-0和Vue3-0有什么区别" class="headerlink" title="说说Vue2.0和Vue3.0有什么区别"></a>说说Vue2.0和Vue3.0有什么区别</h3><p>重构响应式系统，使用Proxy替换Object.defineProperty，使用Proxy优势：<br>可直接监听数组类型的数据变化<br>监听的目标为对象本身，不需要像Object.defineProperty一样遍历每个属性，有一定的性能提升<br>可拦截apply、ownKeys、has等13种方法，而Object.defineProperty不行<br>直接实现对象属性的新增/删除<br>新增Composition API，更好的逻辑复用和代码组织<br>重构 Virtual DOM<br>模板编译时的优化，将一些静态节点编译成常量<br>slot优化，将slot编译为lazy函数，将slot的渲染的决定权交给子组件<br>模板中内联事件的提取并重用（原本每次渲染都重新生成内联函数）<br>代码结构调整，更便于Tree shaking，使得体积更小<br>使用Typescript替换Flow</p>
+<h3 id="为什么要新增Composition-API，它能解决什么问题"><a href="#为什么要新增Composition-API，它能解决什么问题" class="headerlink" title="为什么要新增Composition API，它能解决什么问题"></a>为什么要新增Composition API，它能解决什么问题</h3><p>Vue2.0中，随着功能的增加，组件变得越来越复杂，越来越难维护，而难以维护的根本原因是Vue的API设计迫使开发者使用watch，computed，methods选项组织代码，而不是实际的业务逻辑。</p>
+<p>另外Vue2.0缺少一种较为简洁的低成本的机制来完成逻辑复用，虽然可以minxis完成逻辑复用，但是当mixin变多的时候，会使得难以找到对应的data、computed或者method来源于哪个mixin，使得类型推断难以进行。</p>
+<p>所以Composition API的出现，主要是也是为了解决Option API带来的问题，第一个是代码组织问题，Compostion API可以让开发者根据业务逻辑组织自己的代码，让代码具备更好的可读性和可扩展性，也就是说当下一个开发者接触这一段不是他自己写的代码时，他可以更好的利用代码的组织反推出实际的业务逻辑，或者根据业务逻辑更好的理解代码。</p>
+<p>第二个是实现代码的逻辑提取与复用，当然mixin也可以实现逻辑提取与复用，但是像前面所说的，多个mixin作用在同一个组件时，很难看出property是来源于哪个mixin，来源不清楚，另外，多个mixin的property存在变量命名冲突的风险。而Composition API刚好解决了这两个问题。</p>
+<h3 id="都说Composition-API与React-Hook很像，说说区别"><a href="#都说Composition-API与React-Hook很像，说说区别" class="headerlink" title="都说Composition API与React Hook很像，说说区别"></a>都说Composition API与React Hook很像，说说区别</h3><p>从React Hook的实现角度看，React Hook是根据useState调用的顺序来确定下一次重渲染时的state是来源于哪个useState，所以出现了以下限制</p>
+<p>不能在循环、条件、嵌套函数中调用Hook<br>必须确保总是在你的React函数的顶层调用Hook<br>useEffect、useMemo等函数必须手动确定依赖关系<br>而Composition API是基于Vue的响应式系统实现的，与React Hook的相比</p>
+<p>声明在setup函数内，一次组件实例化只调用一次setup，而React Hook每次重渲染都需要调用Hook，使得React的GC比Vue更有压力，性能也相对于Vue来说也较慢<br>Compositon API的调用不需要顾虑调用顺序，也可以在循环、条件、嵌套函数中使用<br>响应式系统自动实现了依赖收集，进而组件的部分的性能优化由Vue内部自己完成，而React Hook需要手动传入依赖，而且必须必须保证依赖的顺序，让useEffect、useMemo等函数正确的捕获依赖变量，否则会由于依赖不正确使得组件性能下降。<br>虽然Compositon API看起来比React Hook好用，但是其设计思想也是借鉴React Hook的。</p>
+<h3 id="SSR有了解吗？原理是什么？"><a href="#SSR有了解吗？原理是什么？" class="headerlink" title="SSR有了解吗？原理是什么？"></a>SSR有了解吗？原理是什么？</h3><p>在客户端请求服务器的时候，服务器到数据库中获取到相关的数据，并且<strong>在服务器内部将Vue组件渲染成HTML</strong>，并且将数据、HTML一并返回给客户端，这个在服务器将数据和组件转化为HTML的过程，叫做<strong>服务端渲染SSR</strong>。</p>
+<p>而当客户端拿到服务器渲染的HTML和数据之后，由于数据已经有了，客户端不需要再一次请求数据，而只需要将数据同步到组件或者Vuex内部即可。除了数据以外，HTML也结构已经有了，客户端在渲染组件的时候，也只需要将HTML的DOM节点映射到Virtual DOM即可，不需要重新创建DOM节点，这个将数据和HTML同步的过程，又叫做<strong>客户端激活</strong>。</p>
+<h3 id="使用SSR的好处："><a href="#使用SSR的好处：" class="headerlink" title="使用SSR的好处："></a>使用SSR的好处：</h3><h4 id="有利于seo"><a href="#有利于seo" class="headerlink" title="有利于seo"></a>有利于seo</h4><p>其实就是有利于爬虫来爬你的页面，因为部分页面爬虫是不支持执行JavaScript的，这种不支持执行JavaScript的爬虫抓取到的非SSR的页面会是一个空的HTML页面，而有了SSR以后，这些爬虫就可以获取到完整的HTML结构的数据，进而收录到搜索引擎中。</p>
+<h4 id="白屏时间更短"><a href="#白屏时间更短" class="headerlink" title="白屏时间更短"></a>白屏时间更短</h4><p>相对于客户端渲染，服务端渲染在浏览器请求URL之后已经得到了一个带有数据的HTML文本，<strong>浏览器只需要解析HTML，直接构建DOM树就可以</strong>。而客户端渲染，需要先得到一个空的HTML页面，这个时候页面已经进入白屏，之后还需要经过<strong>加载并执行 JavaScript、请求后端服务器获取数据、JavaScript 渲染页面</strong>几个过程才可以看到最后的页面。特别是在复杂应用中，由于需要加载 JavaScript 脚本，越是复杂的应用，需要加载的 JavaScript 脚本就越多、越大，这会导致应用的首屏加载时间非常长，进而降低了体验感。</p>
+<h2 id="一、Vue3-里-script-的三种写法"><a href="#一、Vue3-里-script-的三种写法" class="headerlink" title="一、Vue3 里 script 的三种写法"></a>一、Vue3 里 <code>script</code> 的三种写法</h2><p>首先，Vue3 新增了一个叫做组合式 api 的东西，英文名叫 Composition API。因此 Vue3 的 <code>script</code> 现在支持三种写法，</p>
+<h3 id="1、最基本的-Vue2-写法"><a href="#1、最基本的-Vue2-写法" class="headerlink" title="1、最基本的 Vue2 写法"></a><strong>1、最基本的 Vue2 写法</strong></h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; count &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"onClick"</span>&gt;</span></span><br><span class="line">    增加 1</span><br><span class="line">  <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">  data() &#123;</span><br><span class="line"><span class="actionscript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line">      count: 1,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    onClick() &#123;</span><br><span class="line"><span class="actionscript">      <span class="keyword">this</span>.count += <span class="number">1</span>;</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2、setup-属性"><a href="#2、setup-属性" class="headerlink" title="2、setup() 属性"></a><strong>2、setup() 属性</strong></h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; count &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"onClick"</span>&gt;</span></span><br><span class="line">    增加 1</span><br><span class="line">  <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> &#123; ref &#125; <span class="keyword">from</span> <span class="string">'vue'</span>;</span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">  <span class="comment">// 注意这部分</span></span></span><br><span class="line">  setup() &#123;</span><br><span class="line"><span class="javascript">    <span class="keyword">let</span> count = ref(<span class="number">1</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">const</span> onClick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span></span><br><span class="line">      count.value += 1;</span><br><span class="line">    &#125;;</span><br><span class="line"><span class="actionscript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line">      count,</span><br><span class="line">      onClick,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  </span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3、script-setup"><a href="#3、script-setup" class="headerlink" title="3、script setup"></a>3、<code>script setup</code></h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; count &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"onClick"</span>&gt;</span></span><br><span class="line">    增加 1</span><br><span class="line">  <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> &#123; ref &#125; <span class="keyword">from</span> <span class="string">'vue'</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript"><span class="keyword">const</span> count = ref(<span class="number">1</span>);</span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> onClick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span></span><br><span class="line">  count.value += 1;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>正如你看到的那样，无论是代码行数，还是代码的精简度，<code>script setup</code> 的方式是最简单的形式。</p>
+<p><strong>如果你对 Vue 很熟悉，那么，我推荐你使用</strong><code>script setup</code><strong>的方式。</strong></p>
+<p>这种写法，让 Vue3 成了我最喜欢的前端框架。</p>
+<p><strong>如果你还是前端新人，那么，我推荐你先学习第一种写法。</strong></p>
+<p>因为第一种写法的学习负担更小，先学第一种方式，掌握最基本的 Vue 用法，然后再根据我这篇文章，快速掌握 Vue3 里最需要关心的内容。</p>
+<p>第一种写法，跟过去 Vue2 的写法是一样的，所以我们不过多介绍。</p>
+<p>第二种写法，所有的对象和方法都需要 <code>return</code> 才能使用，太啰嗦。除了旧项目，可以用这种方式体验 Vue3 的新特性以外，我个人不建议了解这种方式。反正我自己暂时不打算精进这部分。</p>
+<p>所以，接下来，我们主要介绍的，也就是<code>script setup</code> ，这种写法里需要了解的内容。</p>
+<p><strong>注意：</strong><code>script setup</code>本质上是第二种写法的语法糖，掌握了这种写法，其实第二种写法也基本上就会了。（又多了一个不学第二种写法的理由）。</p>
+<h2 id="二、如何使用script-setup编写组件"><a href="#二、如何使用script-setup编写组件" class="headerlink" title="二、如何使用script setup编写组件"></a>二、如何使用<code>script setup</code>编写组件</h2><p><strong>学习 Vue3 并不代表你需要新学习一个技术，Vue3 的底层开发思想，跟 Vue2 是没有差别的。</strong></p>
+<p><strong>V3 和 V2 的区别就像是，你用不同的语言或者方言说同一句话。</strong></p>
+<p>所以我们需要关心的，就是 Vue2 里的内容，怎么用 Vue3 的方式写出来。</p>
+<h3 id="1、data——唯一需要注意的地方"><a href="#1、data——唯一需要注意的地方" class="headerlink" title="1、data——唯一需要注意的地方"></a>1、<code>data</code>——唯一需要注意的地方</h3><p>整个 <code>data</code> 这一部分的内容，你只需要记住下面这一点。</p>
+<p><strong>以前在</strong> <strong><code>data</code></strong> <strong>中创建的属性，现在全都用</strong> <strong><code>ref()</code></strong> <strong>声明。</strong></p>
+<p><strong>在</strong> <strong><code>template</code></strong> <strong>中直接用，在</strong> <strong><code>script</code></strong> <strong>中记得加</strong> <strong><code>.value</code></strong> <strong>。</strong></p>
+<p>在开头，我就已经写了一个简单的例子，我们直接拿过来做对比。</p>
+<h4 id="1）写法对比"><a href="#1）写法对比" class="headerlink" title="1）写法对比"></a><strong>1）写法对比</strong></h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"> // Vue2 的写法</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; count &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"onClick"</span>&gt;</span></span><br><span class="line">    增加 1</span><br><span class="line">  <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">  data() &#123;</span><br><span class="line"><span class="actionscript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line">      count: 1,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    onClick() &#123;</span><br><span class="line"><span class="actionscript">      <span class="keyword">this</span>.count += <span class="number">1</span>;</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"> // Vue3 的写法</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; count &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"onClick"</span>&gt;</span></span><br><span class="line">    增加 1</span><br><span class="line">  <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> &#123; ref &#125; <span class="keyword">from</span> <span class="string">'vue'</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript"> <span class="comment">// 用这种方式声明</span></span></span><br><span class="line"><span class="actionscript"><span class="keyword">const</span> count = ref(<span class="number">1</span>);</span></span><br><span class="line"></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> onClick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="actionscript">   <span class="comment">// 使用的时候记得 .value</span></span></span><br><span class="line">  count.value += 1;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2）注意事项——组合式-api-的心智负担"><a href="#2）注意事项——组合式-api-的心智负担" class="headerlink" title="2）注意事项——组合式 api 的心智负担"></a><strong>2）注意事项——组合式</strong> <strong>api</strong> <strong>的心智负担</strong></h4><h5 id="a、ref-和-reactive"><a href="#a、ref-和-reactive" class="headerlink" title="a、ref 和 reactive"></a><strong>a、ref 和 reactive</strong></h5><p>Vue3 里，还提供了一个叫做 <code>reactive</code> 的 <code>api</code>。</p>
+<p>但是我的建议是，你不需要关心它。绝大多数场景下，<code>ref</code> 都够用了。</p>
+<h5 id="b、什么时候用-ref-包裹，什么时候不用。"><a href="#b、什么时候用-ref-包裹，什么时候不用。" class="headerlink" title="b、什么时候用 ref() 包裹，什么时候不用。"></a><strong>b、什么时候用</strong> <strong><code>ref()</code></strong> <strong>包裹，什么时候不用。</strong></h5><p>要不要用ref，就看你的这个变量的值改变了以后，页面要不要跟着变。</p>
+<p>当然，你可以完全不需要关心这一点，跟过去写 <code>data</code> 一样就行。</p>
+<p>只不过这样做，你在使用的时候，需要一直 <code>.value</code>。</p>
+<h5 id="c、不要解构使用"><a href="#c、不要解构使用" class="headerlink" title="c、不要解构使用"></a><strong>c、不要解构使用</strong></h5><p>在使用时，不要像下面这样去写，会<strong>丢失响应性。</strong></p>
+<p><strong>也就是会出现更新了值，但是页面没有更新的情况</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// Vue3 的写法</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; count &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"onClick"</span>&gt;</span></span><br><span class="line">    增加 1</span><br><span class="line">  <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> &#123; ref &#125; <span class="keyword">from</span> <span class="string">'vue'</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript"><span class="keyword">const</span> count = ref(<span class="number">1</span>);</span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> onClick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="actionscript">  <span class="comment">// 不要这样写！！</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">const</span> &#123; value &#125; = count;</span></span><br><span class="line">  value += 1;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong> 学习 Vue3 就需要考虑像这样的内容，徒增了学习成本。实际上这些心智负担，在学习的过程中，是可以完全不需要考虑的。</p>
+<p><strong>这也是为什么我推荐新人先学习 Vue2 的写法。</strong></p>
+<h3 id="2、methods"><a href="#2、methods" class="headerlink" title="2、methods"></a><strong>2、methods</strong></h3><p>声明事件方法，我们只需要在 <code>script</code> 标签里，创建一个方法对象即可。</p>
+<p>剩下的在 Vue2 里是怎么写的，Vue3 是同样的写法。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">// Vue2 的写法</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> @<span class="attr">click</span>=<span class="string">"onClick"</span>&gt;</span></span><br><span class="line">    这是一个div</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">  methods: &#123;</span><br><span class="line">    onClick() &#123;</span><br><span class="line"><span class="javascript">      <span class="built_in">console</span>.log(<span class="string">'clicked'</span>)</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">// Vue3 的写法</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> @<span class="attr">click</span>=<span class="string">"onClick"</span>&gt;</span></span><br><span class="line">    这是一个div</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript"><span class="comment">// 注意这部分</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> onClick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="javascript">  <span class="built_in">console</span>.log(<span class="string">'clicked'</span>)</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3、props"><a href="#3、props" class="headerlink" title="3、props"></a><strong>3、props</strong></h3><p>声明 <code>props</code> 我们可以用 <code>defineProps()</code>，具体写法，我们看代码。</p>
+<h4 id="1）写法对比-1"><a href="#1）写法对比-1" class="headerlink" title="1）写法对比"></a><strong>1）写法对比</strong></h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">// Vue2 的写法</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; foo &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">  props: &#123;</span><br><span class="line"><span class="javascript">    foo: <span class="built_in">String</span>,</span></span><br><span class="line">  &#125;,</span><br><span class="line">  created() &#123;</span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(<span class="keyword">this</span>.foo);</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">// Vue3 的写法</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; foo &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript"><span class="comment">// 注意这里</span></span></span><br><span class="line"><span class="actionscript"><span class="keyword">const</span> props = defineProps(&#123;</span></span><br><span class="line"><span class="javascript">  foo: <span class="built_in">String</span></span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="actionscript"><span class="comment">// 在 script 标签里使用</span></span></span><br><span class="line"><span class="javascript"><span class="built_in">console</span>.log(props.foo)</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2）注意事项——组合式-api-的心智负担-1"><a href="#2）注意事项——组合式-api-的心智负担-1" class="headerlink" title="2）注意事项——组合式 api 的心智负担"></a><strong>2）注意事项——组合式</strong> <strong>api</strong> <strong>的心智负担</strong></h4><p>使用 props 时，同样注意不要使用解构的方式。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span></span><br><span class="line"><span class="actionscript"><span class="keyword">const</span> props = defineProps(&#123;</span></span><br><span class="line"><span class="javascript">  foo: <span class="built_in">String</span></span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="actionscript"> <span class="comment">// 不要这样写</span></span></span><br><span class="line"><span class="actionscript"><span class="keyword">const</span> &#123; foo &#125; = props;</span></span><br><span class="line"><span class="javascript"><span class="built_in">console</span>.log(foo)</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4、emits-事件"><a href="#4、emits-事件" class="headerlink" title="4、emits 事件"></a><strong>4、emits 事件</strong></h3><p>与 <code>props</code> 相同，声明 <code>emits</code> 我们可以用 <code>defineEmits()</code>，具体写法，我们看代码。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">// Vue2 的写法</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> @<span class="attr">click</span>=<span class="string">"onClick"</span>&gt;</span></span><br><span class="line">    这是一个div</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript">  emits: [<span class="string">'click'</span>], <span class="comment">// 注意这里</span></span></span><br><span class="line">  methods: &#123;</span><br><span class="line">    onClick() &#123;</span><br><span class="line"><span class="actionscript">      <span class="keyword">this</span>.$emit(<span class="string">'click'</span>); <span class="comment">// 注意这里</span></span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line"> </span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">// Vue3 的写法</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> @<span class="attr">click</span>=<span class="string">"onClick"</span>&gt;</span></span><br><span class="line">    这是一个div</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript"><span class="comment">// 注意这里</span></span></span><br><span class="line"><span class="actionscript"><span class="keyword">const</span> emit = defineEmits([<span class="string">'click'</span>]);</span></span><br><span class="line"></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> onClick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="actionscript">  emit(<span class="string">'click'</span>) <span class="comment">// 注意这里</span></span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5、computed"><a href="#5、computed" class="headerlink" title="5、computed"></a><strong>5、computed</strong></h3><p>直接上写法对比。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">// Vue2 的写法</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; value &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; reversedValue &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">  data() &#123;</span><br><span class="line"><span class="actionscript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="actionscript">      value: <span class="string">'this is a value'</span>,</span></span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    reversedValue() &#123;</span><br><span class="line"><span class="actionscript">      <span class="keyword">return</span> value</span></span><br><span class="line"><span class="actionscript">        .split(<span class="string">''</span>).reverse().join(<span class="string">''</span>);</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">// Vue3 的写法</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; value &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; reversedValue &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> &#123;ref, computed&#125; <span class="keyword">from</span> <span class="string">'vue'</span></span></span><br><span class="line"><span class="actionscript"><span class="keyword">const</span> value = ref(<span class="string">'this is a value'</span>)</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript"><span class="comment">// 注意这里</span></span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> reversedValue = computed(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="actionscript">  <span class="comment">// 使用 ref 需要 .value</span></span></span><br><span class="line"><span class="actionscript">  <span class="keyword">return</span> value.value</span></span><br><span class="line"><span class="actionscript">    .split(<span class="string">''</span>).reverse().join(<span class="string">''</span>);</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6、watch"><a href="#6、watch" class="headerlink" title="6、watch"></a>6、watch</h3><p>这一部分，我们需要注意一下了，Vue3 中，watch 有两种写法。一种是直接使用 <code>watch</code>，还有一种是使用 <code>watchEffect</code>。</p>
+<p>两种写法的区别是：</p>
+<ul>
+<li><code>watch</code> 需要你明确指定依赖的变量，才能做到监听效果。</li>
+<li>而 <code>watchEffect</code> 会根据你使用的变量，自动的实现监听效果。</li>
+</ul>
+<h4 id="1）直接使用-watch"><a href="#1）直接使用-watch" class="headerlink" title="1）直接使用 watch"></a>1）直接使用 <code>watch</code></h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">// Vue2 的写法</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; count &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; anotherCount &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"onClick"</span>&gt;</span></span><br><span class="line">    增加 1</span><br><span class="line">  <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">  data() &#123;</span><br><span class="line"><span class="actionscript">    <span class="keyword">return</span> &#123;  </span></span><br><span class="line">      count: 1,</span><br><span class="line">      anotherCount: 0,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    onClick() &#123;</span><br><span class="line"><span class="actionscript">      <span class="keyword">this</span>.count += <span class="number">1</span>;</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    count(newValue) &#123;</span><br><span class="line"><span class="actionscript">      <span class="keyword">this</span>.anotherCount = newValue - <span class="number">1</span>;</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">// Vue3 的写法</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; count &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; anotherCount &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"onClick"</span>&gt;</span></span><br><span class="line">    增加 1</span><br><span class="line">  <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> &#123; ref, watch &#125; <span class="keyword">from</span> <span class="string">'vue'</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript"><span class="keyword">const</span> count = ref(<span class="number">1</span>);</span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> onClick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span></span><br><span class="line">  count.value += 1;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="actionscript"><span class="keyword">const</span> anotherCount = ref(<span class="number">0</span>);</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript"><span class="comment">// 注意这里</span></span></span><br><span class="line"><span class="actionscript"><span class="comment">// 需要在这里，</span></span></span><br><span class="line"><span class="actionscript"><span class="comment">// 明确指定依赖的是 count 这个变量</span></span></span><br><span class="line">watch(count, (newValue) =&gt; &#123;</span><br><span class="line">  anotherCount.value = newValue - 1;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="2）使用-watchEffect"><a href="#2）使用-watchEffect" class="headerlink" title="2）使用 watchEffect"></a>2）使用 <code>watchEffect</code></h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">// Vue2 的写法</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; count &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; anotherCount &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"onClick"</span>&gt;</span></span><br><span class="line">    增加 1</span><br><span class="line">  <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">  data() &#123;</span><br><span class="line"><span class="actionscript">    <span class="keyword">return</span> &#123;  </span></span><br><span class="line">      count: 1,</span><br><span class="line">      anotherCount: 0,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    onClick() &#123;</span><br><span class="line"><span class="actionscript">      <span class="keyword">this</span>.count += <span class="number">1</span>;</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    count(newValue) &#123;</span><br><span class="line"><span class="actionscript">      <span class="keyword">this</span>.anotherCount = newValue - <span class="number">1</span>;</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">// Vue3 的写法</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; count &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;&#123; anotherCount &#125;&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> @<span class="attr">click</span>=<span class="string">"onClick"</span>&gt;</span></span><br><span class="line">    增加 1</span><br><span class="line">  <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">import</span> &#123; ref, watchEffect &#125; <span class="keyword">from</span> <span class="string">'vue'</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript"><span class="keyword">const</span> count = ref(<span class="number">1</span>);</span></span><br><span class="line"><span class="javascript"><span class="keyword">const</span> onClick = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</span></span><br><span class="line">  count.value += 1;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="actionscript"><span class="keyword">const</span> anotherCount = ref(<span class="number">0</span>);</span></span><br><span class="line"></span><br><span class="line"><span class="actionscript"><span class="comment">// 注意这里</span></span></span><br><span class="line"><span class="javascript">watchEffect(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span></span><br><span class="line"><span class="actionscript">  <span class="comment">// 会自动根据 count.value 的变化，</span></span></span><br><span class="line"><span class="actionscript">  <span class="comment">// 触发下面的操作</span></span></span><br><span class="line">  anotherCount.value = count.value - 1;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="7、生命周期"><a href="#7、生命周期" class="headerlink" title="7、生命周期"></a>7、生命周期</h3><p>Vue3 里，除了将两个 <code>destroy</code> 相关的钩子，改成了 <code>unmount</code>，剩下的需要注意的，就是在 `` 中，不能使用 <code>beforeCreate</code> 和 <code>created</code> 两个钩子。</p>
+<p>如果你熟悉相关的生命周期，只需要记得在 <code>setup</code> 里，用 <code>on</code> 开头，加上大写首字母就行。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">// 选项式 api 写法</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">  beforeCreate() &#123;&#125;,</span><br><span class="line">  created() &#123;&#125;,</span><br><span class="line">  </span><br><span class="line">  beforeMount() &#123;&#125;,</span><br><span class="line">  mounted() &#123;&#125;,</span><br><span class="line">  </span><br><span class="line">  beforeUpdate() &#123;&#125;,</span><br><span class="line">  updated() &#123;&#125;,</span><br><span class="line">  </span><br><span class="line"><span class="actionscript">  <span class="comment">// Vue2 里叫 beforeDestroy</span></span></span><br><span class="line">  beforeUnmount() &#123;&#125;,</span><br><span class="line"><span class="actionscript">  <span class="comment">// Vue2 里叫 destroyed</span></span></span><br><span class="line">  unmounted() &#123;&#125;,</span><br><span class="line">  </span><br><span class="line"><span class="actionscript">  <span class="comment">// 其他钩子不常用，所以不列了。</span></span></span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">// 组合式 api 写法</span><br><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span></span><br><span class="line"><span class="actionscript"><span class="meta"><span class="meta-keyword">import</span> &#123;</span></span></span><br><span class="line">  onBeforeMount,</span><br><span class="line">  onMounted,</span><br><span class="line"></span><br><span class="line">  onBeforeUpdate,</span><br><span class="line">  onUpdated,</span><br><span class="line"></span><br><span class="line">  onBeforeUnmount,</span><br><span class="line">  onUnmounted,</span><br><span class="line"><span class="javascript">&#125; <span class="keyword">from</span> <span class="string">'vue'</span></span></span><br><span class="line"></span><br><span class="line"><span class="javascript">onBeforeMount(<span class="function"><span class="params">()</span> =&gt;</span> &#123;&#125;)</span></span><br><span class="line"><span class="javascript">onMounted(<span class="function"><span class="params">()</span> =&gt;</span> &#123;&#125;)</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">onBeforeUpdate(<span class="function"><span class="params">()</span> =&gt;</span> &#123;&#125;)</span></span><br><span class="line"><span class="javascript">onUpdated(<span class="function"><span class="params">()</span> =&gt;</span> &#123;&#125;)</span></span><br><span class="line"></span><br><span class="line"><span class="javascript">onBeforeUnmount(<span class="function"><span class="params">()</span> =&gt;</span> &#123;&#125;)</span></span><br><span class="line"><span class="javascript">onUnmounted(<span class="function"><span class="params">()</span> =&gt;</span> &#123;&#125;)</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="三、结语"><a href="#三、结语" class="headerlink" title="三、结语"></a>三、结语</h2><p>好了，对于快速上手 Vue3 来说，以上内容基本已经足够了。</p>
+<p>如果觉得这篇文章不错，有帮你节省时间的话，还想听我说哪些内容，欢迎评论区里告诉我。</p>
+<p>这篇文章本身不能做到帮你理解所有 Vue3 的内容，但是能帮你快速掌握 Vue3 的写法。</p>
+<p>如果想做到对 Vue3 的整个内容心里有数，还需要你自己多看看 Vue3 的官方文档。<br>原文链接：<a href="https://juejin.cn/post/7225267685763907621" target="_blank" rel="noopener">https://juejin.cn/post/7225267685763907621</a></p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-03-28T18:11:02.000Z" itemprop="dateUpdated">2024-03-29 02:11:02</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/interview/vue3.html" target="_blank" rel="external">https://qw66.gitee.io/interview/vue3.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue3/">vue3</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/interview/vue3.html&title=《vue3》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/interview/vue3.html&title=《vue3》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/interview/vue3.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vue3》 — 秦伟博客&url=https://qw66.gitee.io/interview/vue3.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/interview/vue3.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/interview/qian-duan-mian-shi-ti.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">前端面试题</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/interview/vue.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">vue</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/interview/vue3.html&title=《vue3》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/interview/vue3.html&title=《vue3》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/interview/vue3.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vue3》 — 秦伟博客&url=https://qw66.gitee.io/interview/vue3.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/interview/vue3.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABtklEQVR42u3aS27DMAwFwNz/0u62RWvjkbQUpxitjMCQxlkQ/Oj1itfxbf3+Jfn9bM/XioWLizvmHpfr+p3k4LM3k/3/2BkXF3cjt3pMftjZwckH4+Lifgp3kiRdfzAuLu5/4laLH1xc3E/hVsube4lLajVcXNwBt5eg3Pu8pL+Li4vb4h7FVS1pkvSlcDouLu4Wbh5QeslH3nLNh7u4uLirudWBx3yAOmqs4OLibuFGDcqbxiGTtsipChcXdwG3WrpUQfPk5sczLi7uFu69gax3/SIZ2ODi4u7k3hV6eqnPqFbDxcVdxu0Fsnzro7Vujru4uLhFbjWQXacm1YZp+QoXLi7uFm61oTm5XHVbrYaLi7uRW900D1s5K/o7cHFxH8DNxxvV9ke1uMLFxX0vt3phYpIqJWkNLi7uu7jzCW21ddILdri4uKu5vSHHfHxSHqbi4uJu5OYrCWHV8JQ0Xpsfg4uLO+bmQaf3YXlKlKRKuLi4O7nJWLRXFC2p1XBxcR/JnRQzo3CJi4v7SG6UiARlT+9SFy4u7k5udRBS5VaHK4UhKy4u7gJuNZTML3JV0bi4uBu5X6kwe4plaKjdAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

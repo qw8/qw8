@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>前端代码片段 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="前端">
+    <meta name="description" content="在日常的开发过程中，我们都会有一些常用的代码片段，这些代码片段可以直接复制到各个项目中使用，非常方便。如果你有接手过别人的项目，就可以很明显感受到几个项目一般都会有一些相同的工具类方法，这些方法就是之前开发者的常用代码片段。 现在前端社区相当完善，有许多好用质量又有保证的库，如 lodash、dayjs、classnames、js-cookie 等，这些库基本能满足你开发中对数组、日期、类名、co">
+<meta name="keywords" content="前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端代码片段">
+<meta property="og:url" content="https://qw66.gitee.io/knowledges/qian-duan-dai-ma-pian-duan.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="在日常的开发过程中，我们都会有一些常用的代码片段，这些代码片段可以直接复制到各个项目中使用，非常方便。如果你有接手过别人的项目，就可以很明显感受到几个项目一般都会有一些相同的工具类方法，这些方法就是之前开发者的常用代码片段。 现在前端社区相当完善，有许多好用质量又有保证的库，如 lodash、dayjs、classnames、js-cookie 等，这些库基本能满足你开发中对数组、日期、类名、co">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:updated_time" content="2024-06-03T03:11:37.352Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端代码片段">
+<meta name="twitter:description" content="在日常的开发过程中，我们都会有一些常用的代码片段，这些代码片段可以直接复制到各个项目中使用，非常方便。如果你有接手过别人的项目，就可以很明显感受到几个项目一般都会有一些相同的工具类方法，这些方法就是之前开发者的常用代码片段。 现在前端社区相当完善，有许多好用质量又有保证的库，如 lodash、dayjs、classnames、js-cookie 等，这些库基本能满足你开发中对数组、日期、类名、co">
+<meta name="twitter:image" content="https://qw66.gitee.io/img/loading.gif">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">前端代码片段</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">前端代码片段</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2021-11-25T07:26:47.000Z" itemprop="datePublished" class="page-time">
+  2021-11-25
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-检测元素之外的点击"><span class="post-toc-number">1.</span> <span class="post-toc-text">1. 检测元素之外的点击</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-快速打开官网"><span class="post-toc-number">2.</span> <span class="post-toc-text">2. 快速打开官网</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-一次性的事件监听"><span class="post-toc-number">3.</span> <span class="post-toc-text">3. 一次性的事件监听</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-格式化时分秒"><span class="post-toc-number">4.</span> <span class="post-toc-text">4. 格式化时分秒</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-URL-参数转化为对象"><span class="post-toc-number">5.</span> <span class="post-toc-text">5. URL 参数转化为对象</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-打开新页签"><span class="post-toc-number">6.</span> <span class="post-toc-text">6. 打开新页签</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-显示上传的图片"><span class="post-toc-number">7.</span> <span class="post-toc-text">7. 显示上传的图片</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8-文件下载"><span class="post-toc-number">8.</span> <span class="post-toc-text">8. 文件下载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9-缓存结果"><span class="post-toc-number">9.</span> <span class="post-toc-text">9. 缓存结果</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#10-多行省略号"><span class="post-toc-number">10.</span> <span class="post-toc-text">10. 多行省略号</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#11-选中最后几个元素"><span class="post-toc-number">11.</span> <span class="post-toc-text">11. 选中最后几个元素</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#12-滚动条样式"><span class="post-toc-number">12.</span> <span class="post-toc-text">12. 滚动条样式</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#13-百分比计算-最大余额法"><span class="post-toc-number">13.</span> <span class="post-toc-text">13. 百分比计算 - 最大余额法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#14-限制并发"><span class="post-toc-number">14.</span> <span class="post-toc-text">14. 限制并发</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#15-uuid"><span class="post-toc-number">15.</span> <span class="post-toc-text">15. uuid</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#16-打开-Modal-时禁止-body-滚动"><span class="post-toc-number">16.</span> <span class="post-toc-text">16. 打开 Modal 时禁止 body 滚动</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#将内容复制到剪贴板"><span class="post-toc-number">17.</span> <span class="post-toc-text">将内容复制到剪贴板</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用URLSearchParams获取URL的搜索参数"><span class="post-toc-number">18.</span> <span class="post-toc-text">使用URLSearchParams获取URL的搜索参数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#平滑滚动至页面顶部"><span class="post-toc-number">19.</span> <span class="post-toc-text">平滑滚动至页面顶部</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#获取当前页面滚动距离"><span class="post-toc-number">20.</span> <span class="post-toc-text">获取当前页面滚动距离</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#判断当前设备是Andoird还是iOS"><span class="post-toc-number">21.</span> <span class="post-toc-text">判断当前设备是Andoird还是iOS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#格式化货币"><span class="post-toc-number">22.</span> <span class="post-toc-text">格式化货币</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进入和退出全屏"><span class="post-toc-number">23.</span> <span class="post-toc-text">进入和退出全屏</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-knowledges/前端代码片段"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">前端代码片段</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2021-11-25 15:26:47" datetime="2021-11-25T07:26:47.000Z"  itemprop="datePublished">2021-11-25</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <p>在日常的开发过程中，我们都会有一些常用的代码片段，这些代码片段可以直接复制到各个项目中使用，非常方便。如果你有接手过别人的项目，就可以很明显感受到几个项目一般都会有一些相同的工具类方法，这些方法就是之前开发者的常用代码片段。</p>
+<p>现在前端社区相当完善，有许多好用质量又有保证的库，如 lodash、dayjs、classnames、js-cookie 等，这些库基本能满足你开发中对数组、日期、类名、cookie 等的处理。</p>
+<p>所以本文会尽量不重复介绍那些很常见的代码片段。</p>
+<h3 id="1-检测元素之外的点击"><a href="#1-检测元素之外的点击" class="headerlink" title="1. 检测元素之外的点击"></a>1. 检测元素之外的点击</h3><p>在实现隐藏弹窗或收起下拉框时，如果你还在一层层判断是否点击了某个元素之外的区域，赶紧试试使用 <code>contains</code> 方法来实现。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">document.addEventListener(&apos;click&apos;, function (evt) &#123;</span><br><span class="line">    // isClickedOutside 为 true 如果点击的元素在 ele 之外</span><br><span class="line">    const isClickedOutside = !ele.contains(evt.target);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-快速打开官网"><a href="#2-快速打开官网" class="headerlink" title="2. 快速打开官网"></a>2. 快速打开官网</h3><p>当你想查看第三方库的主页和代码仓库时，你可以使用一下命令快速打开：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 打开主页</span><br><span class="line">npm home PACKAGE_NAME</span><br><span class="line">npm home react</span><br><span class="line"></span><br><span class="line">// 打开代码仓库</span><br><span class="line">npm repo PACKAGE_NAME</span><br><span class="line">npm repo react</span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://mmbiz.qpic.cn/sz_mmbiz_gif/lLBsScfW7cV8PVyFqWxLrHE8EjLSxdYWrh4M8pjuoHibYPyuhic7PlnCL38KtoBzdRa8Rg05wphw47q1jN4ibwVRw/640?wx_fmt=gif&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片" title>
+                </div>
+                <div class="image-caption">图片</div>
+            </figure>
+
+
+
+<h3 id="3-一次性的事件监听"><a href="#3-一次性的事件监听" class="headerlink" title="3. 一次性的事件监听"></a>3. 一次性的事件监听</h3><p>除了在监听的事件函数中移除当前的监听外，也可以使用 <code>once</code> 参数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const handler = function (e) &#123;&#125;;</span><br><span class="line">ele.addEventListener(&apos;event-name&apos;, handler, &#123; once: true &#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-格式化时分秒"><a href="#4-格式化时分秒" class="headerlink" title="4. 格式化时分秒"></a>4. 格式化时分秒</h3><p>在展示音视频时长之类的场景时，需要把时长秒数格式为 HH:mm:ss 的格式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const formatSeconds = (s) =&gt;</span><br><span class="line">  [parseInt(s / 60 / 60), parseInt((s / 60) % 60), parseInt(s % 60)]</span><br><span class="line">    .join(&apos;:&apos;)</span><br><span class="line">    .replace(/\b(\d)\b/g, &apos;0$1&apos;)</span><br></pre></td></tr></table></figure>
+
+<p>如果你想显示“刚刚”、“5分钟前”之类的内容，可以尝试 timeago.js 库。</p>
+<h3 id="5-URL-参数转化为对象"><a href="#5-URL-参数转化为对象" class="headerlink" title="5. URL 参数转化为对象"></a>5. URL 参数转化为对象</h3><p>获取 url 参数有个热门的库 query-string，如果不想使用的话，可以通过 <code>URLSearchParams</code> API 实现。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">const getUrlParams = (query) =&gt;</span><br><span class="line">  Array.from(new URLSearchParams(query)).reduce(</span><br><span class="line">    (p, [k, v]) =&gt;</span><br><span class="line">      Object.assign(&#123;&#125;, p, &#123; [k]: p[k] ? (Array.isArray(p[k]) ? p[k] : [p[k]]).concat(v) : v &#125;),</span><br><span class="line">    &#123;&#125;</span><br><span class="line">  )</span><br><span class="line">  </span><br><span class="line">// 获取 query 参数</span><br><span class="line">getUrlParams(location.query)</span><br><span class="line">// &#123; a: [&apos;1&apos;, &apos;4&apos;], b: &apos;2&apos;, c: &apos;3&apos; &#125;</span><br><span class="line">getUrlParams(&apos;?a=1&amp;b=2&amp;c=3&amp;a=4&apos;)</span><br><span class="line"></span><br><span class="line">// 获取 hash 参数</span><br><span class="line">getUrlParams(location.hash.split(&apos;?&apos;)[1])</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-打开新页签"><a href="#6-打开新页签" class="headerlink" title="6. 打开新页签"></a>6. 打开新页签</h3><p>看似平平无奇的打开页签，但是需要关注下 <code>rel</code>，如果要打开外链，建议设置为 <code>noopener noreferrer</code>，避免一些恶意网站通过 <code>window.opener.location</code> 重定向你的网站地址。<code>window.open</code> 方法同理。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 高版本浏览器 rel 默认为 noopener，不过建议显示设置，兼容低版本。</span><br><span class="line">&lt;a target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;...&lt;/a&gt;</span><br><span class="line">// window.open rel 默认为 opener，需要自己设置</span><br><span class="line">window.open(&apos;https://baidu.com&apos;, &apos;baidu&apos;, &apos;noopener,noreferrer&apos;)</span><br></pre></td></tr></table></figure>
+
+<p>以下有安全漏洞，打开的新页签可以通过 window.opener.location 重定向你的网站</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;a target=&quot;_blank&quot; rel=&quot;opener&quot;&gt;...&lt;/a&gt;</span><br><span class="line">window.opener.location = &apos;http://fake.website.here&apos;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-显示上传的图片"><a href="#7-显示上传的图片" class="headerlink" title="7. 显示上传的图片"></a>7. 显示上传的图片</h3><p>通过 <code>fileReader</code> API 的 <code>readAsDataURL</code> 方法来显示上传图片。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">function readImage() &#123;</span><br><span class="line">  const fileReader = new FileReader()</span><br><span class="line">  const file = document.getElementById(&apos;uploaded-file&apos;).files[0]</span><br><span class="line"></span><br><span class="line">  if (file) &#123;</span><br><span class="line">    fileReader.readAsDataURL(file)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  fileReader.addEventListener(</span><br><span class="line">    &apos;load&apos;,</span><br><span class="line">    () =&gt; &#123;</span><br><span class="line">      const result = fileReader.result</span><br><span class="line">      const resultContainer = document.getElementById(&apos;result&apos;)</span><br><span class="line">      const img = document.createElement(&apos;img&apos;)</span><br><span class="line">      img.src = result</span><br><span class="line">      resultContainer.append(img)</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123; once: true &#125;</span><br><span class="line">  )</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-文件下载"><a href="#8-文件下载" class="headerlink" title="8. 文件下载"></a>8. 文件下载</h3><p>使用 <code>a</code> 标签的 <code>download</code> 属性，同源才能触发下载，IE 不支持，移动端兼容性也不太好。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;/path/to/file&quot; download&gt;Download&lt;/a&gt;</span><br><span class="line">// 或者 js 临时生成 a</span><br><span class="line">function download(url) &#123;</span><br><span class="line">  const link = document.createElement(&apos;a&apos;)</span><br><span class="line">  link.download = &apos;file name&apos;</span><br><span class="line">  link.href = &apos;url&apos;</span><br><span class="line"></span><br><span class="line">  document.body.appendChild(link)</span><br><span class="line">  link.click()</span><br><span class="line">  document.body.removeChild(link)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>静态资源服务器设置响应头也能触发浏览器下载。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Content-Disposition: attachment; filename=&quot;filename.jpg&quot;</span><br></pre></td></tr></table></figure>
+
+<p>除了在线文件下载，你还可以创建一个 text 或 json 文件，并下载，主要用到了 <code>Blob</code> 对象和 <code>createObjectURL</code> 方法。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const data = JSON.stringify(&#123; &apos;message&apos;: &apos;Hello Word&apos; &#125;);</span><br><span class="line"></span><br><span class="line">const blob = new Blob([data], &#123; type: &apos;application/json&apos; &#125;);</span><br><span class="line"></span><br><span class="line">// 创建一个 URL</span><br><span class="line">const url = window.URL.createObjectURL(blob);</span><br><span class="line"></span><br><span class="line">// 用上面的 download 方法下载这个 url</span><br><span class="line">...</span><br><span class="line"></span><br><span class="line">// 释放创建的 URL</span><br><span class="line">window.URL.revokeObjectURL(url);</span><br></pre></td></tr></table></figure>
+
+<h3 id="9-缓存结果"><a href="#9-缓存结果" class="headerlink" title="9. 缓存结果"></a>9. 缓存结果</h3><p>缓存函数的结果，当计算比较复杂时可以使用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const memoize = (fn) =&gt;</span><br><span class="line">  (</span><br><span class="line">    (cache = Object.create(null)) =&gt;</span><br><span class="line">    (arg) =&gt;</span><br><span class="line">      cache[arg] || (cache[arg] = fn(arg))</span><br><span class="line">  )()</span><br></pre></td></tr></table></figure>
+
+<h3 id="10-多行省略号"><a href="#10-多行省略号" class="headerlink" title="10. 多行省略号"></a>10. 多行省略号</h3><p>单行或多行截断显示省略号，很常用的 CSS 片段。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">.truncate &#123;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">  text-overflow: ellipsis;</span><br><span class="line">  white-space: nowrap;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.truncate &#123;</span><br><span class="line">  display: -webkit-box;</span><br><span class="line">  -webkit-box-orient: vertical;</span><br><span class="line">  -webkit-line-clamp: 2;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-选中最后几个元素"><a href="#11-选中最后几个元素" class="headerlink" title="11. 选中最后几个元素"></a>11. 选中最后几个元素</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 前三个</span><br><span class="line">li:nth-child(-n + 3) &#123;</span><br><span class="line">  text-decoration: underline;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 选中 2-5 的列表项</span><br><span class="line">li:nth-child(n + 2):nth-child(-n + 5) &#123;</span><br><span class="line">  color: #2563eb;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 倒数两个</span><br><span class="line">li:nth-last-child(-n + 2) &#123;</span><br><span class="line">  text-decoration-line: line-through;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://mmbiz.qpic.cn/sz_mmbiz_png/lLBsScfW7cV8PVyFqWxLrHE8EjLSxdYWK3ZQHAsy6ic3dKnPsia1EIns2m91CS6QsjDJSVkkwjlLIUx2nliaciakPA/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片" title>
+                </div>
+                <div class="image-caption">图片</div>
+            </figure>
+
+
+
+<h3 id="12-滚动条样式"><a href="#12-滚动条样式" class="headerlink" title="12. 滚动条样式"></a>12. 滚动条样式</h3><p>自定义滚动条样式也是很常见的需求，除了通过样式，也可以通过第三方库（如 better-scroll 等）来实现自定义滚动条样式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/</span><br><span class="line">::-webkit-scrollbar &#123;</span><br><span class="line">  width: 8px;</span><br><span class="line">  height: 8px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*定义滚动条轨道 内阴影+圆角*/</span><br><span class="line">::-webkit-scrollbar-track &#123;</span><br><span class="line">  border-radius: 10px;</span><br><span class="line">  background-color: #fafafa;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*定义滑块 内阴影+圆角*/</span><br><span class="line">::-webkit-scrollbar-thumb &#123;</span><br><span class="line">  border-radius: 10px;</span><br><span class="line">  background: rgb(191, 191, 191);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/*较新的 API*/</span><br><span class="line">body &#123;</span><br><span class="line">  scrollbar-width: thin;</span><br><span class="line">  scrollbar-color: #718096 #edf2f7;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="13-百分比计算-最大余额法"><a href="#13-百分比计算-最大余额法" class="headerlink" title="13. 百分比计算 - 最大余额法"></a>13. 百分比计算 - 最大余额法</h3><p>计算百分比时，由于四舍五入，各个比例相加可能不等于 1，通过最大余额法可以保证总数为 1。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://mmbiz.qpic.cn/sz_mmbiz_png/lLBsScfW7cV8PVyFqWxLrHE8EjLSxdYWViaXq92nr6JsvMADC2bZqJMl1zJ8NQBibfuLlw9ibrpicJynzKO7UyOj6g/640?wx_fmt=png&from=appmsg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片" title>
+                </div>
+                <div class="image-caption">图片</div>
+            </figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">// 输出 [&apos;32.56%&apos;, &apos;6.97%&apos;, &apos;27.91%&apos;, &apos;32.56%&apos;]</span><br><span class="line">getPercentWithPrecision([56, 12, 48, 56], 2)</span><br><span class="line"></span><br><span class="line">// 具体最大余额法算法可以网上搜索查看</span><br><span class="line">function getPercentWithPrecision(valueList, precision) &#123;</span><br><span class="line">  // 根据保留的小数位做对应的放大</span><br><span class="line">  const digits = Math.pow(10, precision)</span><br><span class="line">  const sum = valueList.reduce((total, cur) =&gt; total + cur, 0)</span><br><span class="line">  </span><br><span class="line">  // 计算每项占比，并做放大，保证整数部分就是当前获得的席位，小数部分就是余额</span><br><span class="line">  const votesPerQuota = valueList.map((val) =&gt; &#123;</span><br><span class="line">      return val / sum * 100 * digits</span><br><span class="line">  &#125;)</span><br><span class="line">  // 整数部分就是每项首次分配的席位</span><br><span class="line">  const seats = votesPerQuota.map((val) =&gt; &#123;</span><br><span class="line">    return Math.floor(val);</span><br><span class="line">  &#125;);</span><br><span class="line">  // 计算各项的余额</span><br><span class="line">  const remainder = votesPerQuota.map((val) =&gt; &#123;</span><br><span class="line">    return val - Math.floor(val)</span><br><span class="line">  &#125;)</span><br><span class="line">    </span><br><span class="line">  // 总席位</span><br><span class="line">  const totalSeats = 100 * digits</span><br><span class="line">  // 当前已经分配出去的席位总数</span><br><span class="line">  let currentSeats = votesPerQuota.reduce((total, cur) =&gt; total + Math.floor(cur), 0)</span><br><span class="line">    </span><br><span class="line">  // 按最大余额法分配</span><br><span class="line">  while(totalSeats - currentSeats &gt; 0) &#123;</span><br><span class="line">    let maxIdx = -1 // 余数最大的 id</span><br><span class="line">    let maxValue = Number.NEGATIVE_INFINITY // 最大余额, 初始重置为无穷小</span><br><span class="line"></span><br><span class="line">    // 选出这组余额数据中最大值</span><br><span class="line">    for(var i = 0; i &lt; remainder.length; i++) &#123;</span><br><span class="line">      if (maxValue &lt; remainder[i]) &#123;</span><br><span class="line">        maxValue = remainder[i]</span><br><span class="line">        maxIdx = i</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    // 对应的项席位加 1，余额清零，当前分配席位加 1</span><br><span class="line">    seats[maxIdx]++</span><br><span class="line">    remainder[maxIdx] = 0</span><br><span class="line">    currentSeats++</span><br><span class="line">  &#125;</span><br><span class="line">    </span><br><span class="line">  return seats.map((val) =&gt; `$&#123;val / totalSeats * 100&#125;%`)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="14-限制并发"><a href="#14-限制并发" class="headerlink" title="14. 限制并发"></a>14. 限制并发</h3><p>当有大量请求需要发起时，往往需求限制并发数量保证其他请求能优先返回。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">async function asyncPool(poolLimit, iterable, iteratorFn) &#123;</span><br><span class="line">  // 用于保存所有异步请求</span><br><span class="line">  const ret = [];</span><br><span class="line">  // 用户保存正在进行的请求</span><br><span class="line">  const executing = new Set();</span><br><span class="line">  for (const item of iterable) &#123;</span><br><span class="line">    // 构造出请求 Promise</span><br><span class="line">    const p = Promise.resolve().then(() =&gt; iteratorFn(item, iterable));</span><br><span class="line">    ret.push(p);</span><br><span class="line">    executing.add(p);</span><br><span class="line">    // 请求执行结束后从正在进行的数组中移除</span><br><span class="line">    const clean = () =&gt; executing.delete(p);</span><br><span class="line">    p.then(clean).catch(clean);</span><br><span class="line">    // 如果正在执行的请求数大于并发数，就使用 Promise.race 等待一个最快执行完的请求</span><br><span class="line">    if (executing.size &gt;= poolLimit) &#123;</span><br><span class="line">      await Promise.race(executing);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  // 返回所有结果</span><br><span class="line">  return Promise.all(ret);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 使用方法</span><br><span class="line">const timeout = i =&gt; new Promise(resolve =&gt; setTimeout(() =&gt; resolve(i), i));</span><br><span class="line">asyncPool(2, [1000, 5000, 3000, 2000], timeout).then(results =&gt; &#123;</span><br><span class="line">  console.log(results)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="15-uuid"><a href="#15-uuid" class="headerlink" title="15. uuid"></a>15. uuid</h3><p>生成 uuid 的代码片段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const uuid = (a) =&gt;</span><br><span class="line">  a</span><br><span class="line">    ? (a ^ ((Math.random() * 16) &gt;&gt; (a / 4))).toString(16)</span><br><span class="line">    : ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, uuid)</span><br></pre></td></tr></table></figure>
+
+<h3 id="16-打开-Modal-时禁止-body-滚动"><a href="#16-打开-Modal-时禁止-body-滚动" class="headerlink" title="16. 打开 Modal 时禁止 body 滚动"></a>16. 打开 Modal 时禁止 body 滚动</h3><p>打开弹窗的时候，会发现背后的内容还是可以滚动，我们需要在弹窗出现时禁用滚动，在弹窗消失时恢复。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">// 打开 Modal 时，禁止 body 滚动</span><br><span class="line">document.body.style.overflow = &apos;hidden&apos;;</span><br><span class="line"></span><br><span class="line">// 恢复滚动</span><br><span class="line">document.body.style.removeProperty(&apos;overflow&apos;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="将内容复制到剪贴板"><a href="#将内容复制到剪贴板" class="headerlink" title="将内容复制到剪贴板"></a>将内容复制到剪贴板</h3><p>通过按钮，将指定 dom 中的内容复制到用户的剪贴板</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const copyToClipboard = (content) =&gt; &#123;</span><br><span class="line">  const textarea = document.createElement(&quot;textarea&quot;)</span><br><span class="line">  </span><br><span class="line">  textarea.value = content</span><br><span class="line">  document.body.appendChild(textarea)</span><br><span class="line">  textarea.select()</span><br><span class="line">  document.execCommand(&quot;Copy&quot;)</span><br><span class="line">  textarea.remove()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="使用URLSearchParams获取URL的搜索参数"><a href="#使用URLSearchParams获取URL的搜索参数" class="headerlink" title="使用URLSearchParams获取URL的搜索参数"></a>使用URLSearchParams获取URL的搜索参数</h3><p>这应该是一个非常常见的操作，之前经常会使用 正则来完成，现在有了更简单的方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const getQueryByName = (name) =&gt; &#123;</span><br><span class="line">  const query = new URLSearchParams(location.search)</span><br><span class="line">  return decodeURIComponent(query.get(name))</span><br><span class="line">&#125;</span><br><span class="line">// url: https://sunday.com/?name=fatfish&amp;age=100</span><br><span class="line">const name = getQueryByName(&apos;name&apos;) // fatfish</span><br><span class="line">const age = getQueryByName(&apos;age&apos;) // 100</span><br><span class="line">const gender = getQueryByName(&apos;gender&apos;) // null</span><br></pre></td></tr></table></figure>
+
+<h3 id="平滑滚动至页面顶部"><a href="#平滑滚动至页面顶部" class="headerlink" title="平滑滚动至页面顶部"></a>平滑滚动至页面顶部</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const scrollToTop = () =&gt; &#123;</span><br><span class="line">  const c = document.documentElement.scrollTop || document.body.scrollTop</span><br><span class="line">  </span><br><span class="line">  if (c &gt; 0) &#123;</span><br><span class="line">    window.requestAnimationFrame(scrollToTop)</span><br><span class="line">    window.scrollTo(0, c - c / 8)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="获取当前页面滚动距离"><a href="#获取当前页面滚动距离" class="headerlink" title="获取当前页面滚动距离"></a>获取当前页面滚动距离</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const getScrollPosition = (el = window) =&gt; (&#123;</span><br><span class="line">  x: el.pageXOffset !== undefined ? el.pageXOffset : el.scrollLeft,</span><br><span class="line">  y: el.pageYOffset !== undefined ? el.pageYOffset : el.scrollTop,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">getScrollPosition() // &#123; x: 0, y: 215 &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="判断当前设备是Andoird还是iOS"><a href="#判断当前设备是Andoird还是iOS" class="headerlink" title="判断当前设备是Andoird还是iOS"></a>判断当前设备是Andoird还是iOS</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function getOSType() &#123;</span><br><span class="line">  let u = navigator.userAgent,</span><br><span class="line">    app = navigator.appVersion</span><br><span class="line">  let isAndroid = u.indexOf(&quot;Android&quot;) &gt; -1 || u.indexOf(&quot;Linux&quot;) &gt; -1</span><br><span class="line">  let isIOS = !!u.match(/\(i[^]+( U)? CPU.+Mac OS X/)</span><br><span class="line">  </span><br><span class="line">  if (isIOS) &#123;</span><br><span class="line">    return 0</span><br><span class="line">  &#125; else if (isAndroid) &#123;</span><br><span class="line">    return 1</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    return 2</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">getOSType() // 0</span><br></pre></td></tr></table></figure>
+
+<h3 id="格式化货币"><a href="#格式化货币" class="headerlink" title="格式化货币"></a>格式化货币</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const formatMoney = (money) =&gt; &#123;</span><br><span class="line">  return money.toLocaleString()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">formatMoney(123456789) // &apos;123,456,789&apos;</span><br><span class="line">formatMoney(123456789.123) // &apos;123,456,789.123&apos;</span><br><span class="line">formatMoney(123) // &apos;123&apos;</span><br></pre></td></tr></table></figure>
+
+<h3 id="进入和退出全屏"><a href="#进入和退出全屏" class="headerlink" title="进入和退出全屏"></a>进入和退出全屏</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">// 进入全屏</span><br><span class="line">function fullScreen() &#123;</span><br><span class="line">  let el = document.documentElement</span><br><span class="line">  let rfs = el.requestFullScreen || el.webkitRequestFullScreen || el.mozRequestFullScreen || el.msRequestFullScreen</span><br><span class="line">  //typeof rfs != &quot;undefined&quot; &amp;&amp; rfs</span><br><span class="line">  if (rfs) &#123;</span><br><span class="line">    rfs.call(el)</span><br><span class="line">  &#125; else if (typeof window.ActiveXObject !== &quot;undefined&quot;) &#123;</span><br><span class="line">    let wscript = new ActiveXObject(&quot;WScript.Shell&quot;)</span><br><span class="line">    if (wscript != null) &#123;</span><br><span class="line">      wscript.SendKeys(&quot;&#123;F11&#125;&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 退出全屏</span><br><span class="line">function exitScreen() &#123;</span><br><span class="line">  let el = document</span><br><span class="line">  let cfs = el.cancelFullScreen || el.webkitCancelFullScreen || el.mozCancelFullScreen || el.exitFullScreen</span><br><span class="line">  //typeof cfs != &quot;undefined&quot; &amp;&amp; cfs</span><br><span class="line">  if (cfs) &#123;</span><br><span class="line">    cfs.call(el)</span><br><span class="line">  &#125; else if (typeof window.ActiveXObject !== &quot;undefined&quot;) &#123;</span><br><span class="line">    let wscript = new ActiveXObject(&quot;WScript.Shell&quot;)</span><br><span class="line">    if (wscript != null) &#123;</span><br><span class="line">      wscript.SendKeys(&quot;&#123;F11&#125;&quot;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-06-03T03:11:37.352Z" itemprop="dateUpdated">2024-06-03 11:11:37</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/knowledges/qian-duan-dai-ma-pian-duan.html" target="_blank" rel="external">https://qw66.gitee.io/knowledges/qian-duan-dai-ma-pian-duan.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/qian-duan-dai-ma-pian-duan.html&title=《前端代码片段》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/qian-duan-dai-ma-pian-duan.html&title=《前端代码片段》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/qian-duan-dai-ma-pian-duan.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端代码片段》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/qian-duan-dai-ma-pian-duan.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/qian-duan-dai-ma-pian-duan.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/questions/qian-duan-wen-ti.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">前端问题</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/knowledges/zhu-yu-ming-ci.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">术语名词</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/qian-duan-dai-ma-pian-duan.html&title=《前端代码片段》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/qian-duan-dai-ma-pian-duan.html&title=《前端代码片段》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/qian-duan-dai-ma-pian-duan.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端代码片段》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/qian-duan-dai-ma-pian-duan.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/qian-duan-dai-ma-pian-duan.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACsUlEQVR42u3aQZLbMAwEwP3/p5NrcpA8A5DZTVXr5JJsiq2DCA/49RUfv/443s+/f2d2PI187MDDw8NbTP196OTq0/jvn5++/z7O+6zw8PDwbvPyaT3doH0zJ9/Ml5/H83h4eHg/gNfC2inmo+Hh4eH9X7x88dgADpTjeHh4eNd4eYSaRBWbILjFH8ta8PDw8GLeppz9rs9X+nt4eHh46656G6run3TbfvswWzw8PLwLvHwqbcH9XjTnn9tyGQ8PD++7eLMYIglVZxuqNo8JDw8P7yxvdvv2xZ0vFe2213qjKh4eHt6a15bO+xChjYlnCS0eHh7ePV4bxbbt/7Y0T/Crrh0eHh7eUV5eOs/K5XwhaR/Zh/4eHh4e3gVeXn3PSue23VU0t94XDzw8PLwLvCS6zZteZx/HPgrBw8PDu81rNwS0Je8qVigzBzw8PLzbvH0M0b7o26N9WMUuCTw8PLySlwSpm17SbGFot4LVxTQeHh7egpcX1rM22Ps4mzC3DXnx8PDwzvLy9n+7IeDURqu2mP7rKh4eHt5R3iwOmBXcOSNps0VNNTw8PLwLvDrrjVv4+dVZgHts0xUeHh5eyUteym1IMXzGwX3rx4qHh4f3z3mbjVltSNFOPSro8fDw8C7w8g0ESdndNsba88PiGw8PD+8a71To0Ma1szl8iG7vZSp4eHh4i4C1fZVvyu58Po+RBB4eHt4FXnJmeIPF0rJZfvDw8PBu8GaTngW+s1o3L6BXe8rw8PDwJleHf/vbCDjfrJB3//N2Gh4eHt4p3mYxSKKH/Pzm1f94FQ8PD+8ab9ayym+5WpfKwAIPDw/vJ/PyIGCz5BwoqfHw8PC+lZcHEO2Gg7y4LxpveHh4eNd4s0HbqHc28ibCwMPDw7vBO/CHfzSJfCqb3+Lh4eEd5f0GsPmccWJxSn4AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

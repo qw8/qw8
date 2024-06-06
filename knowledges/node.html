@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>Node | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="Node">
+    <meta name="description" content="对 Node 的优点和缺点提出了自己的看法？优点：  因为 Node 是基于事件驱动和无阻塞的，所以非常适合处理并发请求，因此构建在 Node 上的代理服务器相比其他技术实现（如 Ruby）的服务器表现要好得多。 与 Node 代理服务器交互的客户端代码是由 javascript 语言编写的，因此客户端和服务器端都用同一种语言编写，这是非常美妙的事情。 擅长处理高并发，适合I/O密集型应用。 事件">
+<meta name="keywords" content="Node">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Node">
+<meta property="og:url" content="https://qw66.gitee.io/knowledges/node.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="对 Node 的优点和缺点提出了自己的看法？优点：  因为 Node 是基于事件驱动和无阻塞的，所以非常适合处理并发请求，因此构建在 Node 上的代理服务器相比其他技术实现（如 Ruby）的服务器表现要好得多。 与 Node 代理服务器交互的客户端代码是由 javascript 语言编写的，因此客户端和服务器端都用同一种语言编写，这是非常美妙的事情。 擅长处理高并发，适合I/O密集型应用。 事件">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:updated_time" content="2024-03-31T12:15:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Node">
+<meta name="twitter:description" content="对 Node 的优点和缺点提出了自己的看法？优点：  因为 Node 是基于事件驱动和无阻塞的，所以非常适合处理并发请求，因此构建在 Node 上的代理服务器相比其他技术实现（如 Ruby）的服务器表现要好得多。 与 Node 代理服务器交互的客户端代码是由 javascript 语言编写的，因此客户端和服务器端都用同一种语言编写，这是非常美妙的事情。 擅长处理高并发，适合I/O密集型应用。 事件">
+<meta name="twitter:image" content="https://qw66.gitee.io/img/loading.gif">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">Node</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">Node</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-12-08T11:25:55.000Z" itemprop="datePublished" class="page-time">
+  2019-12-08
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对-Node-的优点和缺点提出了自己的看法？"><span class="post-toc-number">1.</span> <span class="post-toc-text">对 Node 的优点和缺点提出了自己的看法？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Node-的应用场景"><span class="post-toc-number">2.</span> <span class="post-toc-text">Node 的应用场景</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#node有哪些特征，与其他服务器端对比"><span class="post-toc-number">3.</span> <span class="post-toc-text">node有哪些特征，与其他服务器端对比</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CommonJS中require-exports和ES6中import-export区别"><span class="post-toc-number">4.</span> <span class="post-toc-text">CommonJS中require/exports和ES6中import/export区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用NPM有哪些好处？"><span class="post-toc-number">5.</span> <span class="post-toc-text">使用NPM有哪些好处？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AMD-CMD规范的区别"><span class="post-toc-number">6.</span> <span class="post-toc-text">AMD CMD规范的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何判断当前脚本运行在浏览器还是node环境中"><span class="post-toc-number">7.</span> <span class="post-toc-text">如何判断当前脚本运行在浏览器还是node环境中</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#简述同步和异步的区别，如何避免回调地狱"><span class="post-toc-number">8.</span> <span class="post-toc-text">简述同步和异步的区别，如何避免回调地狱</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#几种常见模块化规范的简介"><span class="post-toc-number">9.</span> <span class="post-toc-text">几种常见模块化规范的简介</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#app-use和app-get区别"><span class="post-toc-number">10.</span> <span class="post-toc-text">app.use和app.get区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#node怎么跟MongoDB建立连接"><span class="post-toc-number">11.</span> <span class="post-toc-text">node怎么跟MongoDB建立连接</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#node-和-前端项目怎么解决跨域的"><span class="post-toc-number">12.</span> <span class="post-toc-text">node 和 前端项目怎么解决跨域的</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是-error-first-callback-？"><span class="post-toc-number">13.</span> <span class="post-toc-text">什么是 error-first callback ？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Node-程序如何监听-80-端口？"><span class="post-toc-number">14.</span> <span class="post-toc-text">Node 程序如何监听 80 端口？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#使用什么工具检查代码风格？"><span class="post-toc-number">15.</span> <span class="post-toc-text">使用什么工具检查代码风格？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#操作错误和程序错误的区别是什么？"><span class="post-toc-number">16.</span> <span class="post-toc-text">操作错误和程序错误的区别是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么-npmshrinkwarp-非常有用？"><span class="post-toc-number">17.</span> <span class="post-toc-text">为什么 npmshrinkwarp 非常有用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是-stub？说出它的用途？举个使用场景？"><span class="post-toc-number">18.</span> <span class="post-toc-text">什么是 stub？说出它的用途？举个使用场景？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是测试金字塔？在做-HTTP-API-的时候要怎么实现？"><span class="post-toc-number">19.</span> <span class="post-toc-text">什么是测试金字塔？在做 HTTP API 的时候要怎么实现？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#你最喜欢的-HTTP-框架，并说明原因？"><span class="post-toc-number">20.</span> <span class="post-toc-text">你最喜欢的 HTTP 框架，并说明原因？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？"><span class="post-toc-number">21.</span> <span class="post-toc-text">需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#为什么用Nodejs-它有哪些缺点？"><span class="post-toc-number">22.</span> <span class="post-toc-text">为什么用Nodejs,它有哪些缺点？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是错误优先的回调函数？"><span class="post-toc-number">23.</span> <span class="post-toc-text">什么是错误优先的回调函数？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何避免回调地狱？"><span class="post-toc-number">24.</span> <span class="post-toc-text">如何避免回调地狱？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是Promise"><span class="post-toc-number">25.</span> <span class="post-toc-text">什么是Promise?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#用什么工具保证一致的代码风格？为什么要这样？"><span class="post-toc-number">26.</span> <span class="post-toc-text">用什么工具保证一致的代码风格？为什么要这样？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是stub？举例说明"><span class="post-toc-number">27.</span> <span class="post-toc-text">什么是stub？举例说明</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是测试金字塔？举例说明"><span class="post-toc-number">28.</span> <span class="post-toc-text">什么是测试金字塔？举例说明</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何用Node监听80端口"><span class="post-toc-number">29.</span> <span class="post-toc-text">如何用Node监听80端口</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#NodeJS-的工作原理"><span class="post-toc-number">30.</span> <span class="post-toc-text">NodeJS 的工作原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是事件循环（event-loop）？"><span class="post-toc-number">31.</span> <span class="post-toc-text">什么是事件循环（event loop）？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#什么是事件循环"><span class="post-toc-number">32.</span> <span class="post-toc-text">什么是事件循环</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#运算错误与程序员错误的区别"><span class="post-toc-number">33.</span> <span class="post-toc-text">运算错误与程序员错误的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1、Node模块机制"><span class="post-toc-number">34.</span> <span class="post-toc-text">1、Node模块机制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-1-请介绍一下node里的模块是什么"><span class="post-toc-number">34.1.</span> <span class="post-toc-text">1.1 请介绍一下node里的模块是什么</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-2-请介绍一下require的模块加载机制"><span class="post-toc-number">34.2.</span> <span class="post-toc-text">1.2 请介绍一下require的模块加载机制</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-3-加载模块时，为什么每个模块都有dirname-filename属性呢，new-Module的时候我们看到1-1部分没有这两个属性的，那么这两个属性是从哪里来的"><span class="post-toc-number">34.3.</span> <span class="post-toc-text">1.3 加载模块时，为什么每个模块都有dirname,filename属性呢，new Module的时候我们看到1.1部分没有这两个属性的，那么这两个属性是从哪里来的</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-4-我们知道node导出模块有两种方式，一种是exports-xxx-xxx和Module-exports-有什么区别吗"><span class="post-toc-number">34.4.</span> <span class="post-toc-text">1.4 我们知道node导出模块有两种方式，一种是exports.xxx=xxx和Module.exports={}有什么区别吗</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2、Node的异步I-O"><span class="post-toc-number">35.</span> <span class="post-toc-text">2、Node的异步I/O</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-1-请介绍一下Node事件循环的流程"><span class="post-toc-number">35.1.</span> <span class="post-toc-text">2.1 请介绍一下Node事件循环的流程</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-2-在每个tick的过程中，如何判断是否有事件需要处理呢？"><span class="post-toc-number">35.2.</span> <span class="post-toc-text">2.2 在每个tick的过程中，如何判断是否有事件需要处理呢？</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-3-请描述一下整个异步I-O的流程"><span class="post-toc-number">35.3.</span> <span class="post-toc-text">2.3 请描述一下整个异步I/O的流程</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3、V8的垃圾回收机制"><span class="post-toc-number">36.</span> <span class="post-toc-text">3、V8的垃圾回收机制</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-1-如何查看V8的内存使用情况"><span class="post-toc-number">36.1.</span> <span class="post-toc-text">3.1 如何查看V8的内存使用情况</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-2-V8的内存限制是多少，为什么V8这样设计"><span class="post-toc-number">36.2.</span> <span class="post-toc-text">3.2 V8的内存限制是多少，为什么V8这样设计</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-3-V8的内存分代和回收算法请简单讲一讲"><span class="post-toc-number">36.3.</span> <span class="post-toc-text">3.3 V8的内存分代和回收算法请简单讲一讲</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一、全局变量"><span class="post-toc-number">37.</span> <span class="post-toc-text">一、全局变量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二、闭包"><span class="post-toc-number">38.</span> <span class="post-toc-text">二、闭包</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#三、事件监听"><span class="post-toc-number">39.</span> <span class="post-toc-text">三、事件监听</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4、Buffer模块"><span class="post-toc-number">40.</span> <span class="post-toc-text">4、Buffer模块</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-1-新建Buffer会占用V8分配的内存吗"><span class="post-toc-number">40.1.</span> <span class="post-toc-text">4.1 新建Buffer会占用V8分配的内存吗</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-2-Buffer-alloc和Buffer-allocUnsafe的区别"><span class="post-toc-number">40.2.</span> <span class="post-toc-text">4.2 Buffer.alloc和Buffer.allocUnsafe的区别</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-3-Buffer的内存分配机制"><span class="post-toc-number">40.3.</span> <span class="post-toc-text">4.3 Buffer的内存分配机制</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-4-Buffer乱码问题"><span class="post-toc-number">40.4.</span> <span class="post-toc-text">4.4 Buffer乱码问题</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5、webSocket"><span class="post-toc-number">41.</span> <span class="post-toc-text">5、webSocket</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-1-webSocket与传统的http有什么优势"><span class="post-toc-number">41.1.</span> <span class="post-toc-text">5.1 webSocket与传统的http有什么优势</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-2-webSocket协议升级时什么，能简述一下吗？"><span class="post-toc-number">41.2.</span> <span class="post-toc-text">5.2 webSocket协议升级时什么，能简述一下吗？</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6、https"><span class="post-toc-number">42.</span> <span class="post-toc-text">6、https</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-1-https用哪些端口进行通信，这些端口分别有什么用"><span class="post-toc-number">42.1.</span> <span class="post-toc-text">6.1 https用哪些端口进行通信，这些端口分别有什么用</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-2-身份验证过程中会涉及到密钥，-对称加密，非对称加密，摘要的概念，请解释一下"><span class="post-toc-number">42.2.</span> <span class="post-toc-text">6.2 身份验证过程中会涉及到密钥， 对称加密，非对称加密，摘要的概念，请解释一下</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-3-为什么需要CA机构对证书签名"><span class="post-toc-number">42.3.</span> <span class="post-toc-text">6.3 为什么需要CA机构对证书签名</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-4-https验证身份也就是TSL-SSL身份验证的过程"><span class="post-toc-number">42.4.</span> <span class="post-toc-text">6.4 https验证身份也就是TSL/SSL身份验证的过程</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7、进程通信"><span class="post-toc-number">43.</span> <span class="post-toc-text">7、进程通信</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-1-请简述一下node的多进程架构"><span class="post-toc-number">43.1.</span> <span class="post-toc-text">7.1 请简述一下node的多进程架构</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-2-请问创建子进程的方法有哪些，简单说一下它们的区别"><span class="post-toc-number">43.2.</span> <span class="post-toc-text">7.2 请问创建子进程的方法有哪些，简单说一下它们的区别</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-3-请问你知道spawn在创建子进程的时候，第三个参数有一个stdio选项吗，这个选项的作用是什么，默认的值是什么。"><span class="post-toc-number">43.3.</span> <span class="post-toc-text">7.3 请问你知道spawn在创建子进程的时候，第三个参数有一个stdio选项吗，这个选项的作用是什么，默认的值是什么。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-4-请问实现一个node子进程被杀死，然后自动重启代码的思路"><span class="post-toc-number">43.4.</span> <span class="post-toc-text">7.4 请问实现一个node子进程被杀死，然后自动重启代码的思路</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-5-在7-4的基础上，实现限量重启，比如我最多让其在1分钟内重启5次，超过了就报警给运维"><span class="post-toc-number">43.5.</span> <span class="post-toc-text">7.5 在7.4的基础上，实现限量重启，比如我最多让其在1分钟内重启5次，超过了就报警给运维</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-6-如何实现进程间的状态共享，或者数据共享"><span class="post-toc-number">43.6.</span> <span class="post-toc-text">7.6 如何实现进程间的状态共享，或者数据共享</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#8、中间件"><span class="post-toc-number">44.</span> <span class="post-toc-text">8、中间件</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#8-1-如果使用过koa、egg这两个Node框架，请简述其中的中间件原理，最好用代码表示一下"><span class="post-toc-number">44.1.</span> <span class="post-toc-text">8.1 如果使用过koa、egg这两个Node框架，请简述其中的中间件原理，最好用代码表示一下</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#9、其它"><span class="post-toc-number">45.</span> <span class="post-toc-text">9、其它</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#10、杂想"><span class="post-toc-number">45.1.</span> <span class="post-toc-text">10、杂想</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第1题-什么是nodejs？我们在哪里使用它？"><span class="post-toc-number">46.</span> <span class="post-toc-text">第1题, 什么是nodejs？我们在哪里使用它？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第2题，为什么要使用node-js？"><span class="post-toc-number">47.</span> <span class="post-toc-text">第2题，为什么要使用node js？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第3题，nodejs有哪些特点？"><span class="post-toc-number">48.</span> <span class="post-toc-text">第3题，nodejs有哪些特点？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第4题，-Set-immediate和set-time-out-区别在哪里"><span class="post-toc-number">49.</span> <span class="post-toc-text">第4题， Set immediate和set time out 区别在哪里?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第5题，如何更新nodejs的版本"><span class="post-toc-number">50.</span> <span class="post-toc-text">第5题，如何更新nodejs的版本?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第6题，为什么nodejs是单线程的？"><span class="post-toc-number">51.</span> <span class="post-toc-text">第6题，为什么nodejs是单线程的？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第7题，什么是回调函数？"><span class="post-toc-number">52.</span> <span class="post-toc-text">第7题，什么是回调函数？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第8题-什么叫做回调地狱"><span class="post-toc-number">53.</span> <span class="post-toc-text">第8题, 什么叫做回调地狱?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第9题，如何阻止回调地狱"><span class="post-toc-number">54.</span> <span class="post-toc-text">第9题，如何阻止回调地狱?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第10题，解释一下repl的作用"><span class="post-toc-number">55.</span> <span class="post-toc-text">第10题，解释一下repl的作用?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第11题，API函数的类型有哪些"><span class="post-toc-number">56.</span> <span class="post-toc-text">第11题，API函数的类型有哪些?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第12题，回调函数的第1个参数是什么"><span class="post-toc-number">57.</span> <span class="post-toc-text">第12题，回调函数的第1个参数是什么?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第13题，NPM的作用是什么"><span class="post-toc-number">58.</span> <span class="post-toc-text">第13题，NPM的作用是什么?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第14题，nodejs和ajax的区别是什么？"><span class="post-toc-number">59.</span> <span class="post-toc-text">第14题，nodejs和ajax的区别是什么？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第15题，解释一下nodejs中chaining"><span class="post-toc-number">60.</span> <span class="post-toc-text">第15题，解释一下nodejs中chaining.</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第16题，什么是streams？解释一下有哪些类型"><span class="post-toc-number">61.</span> <span class="post-toc-text">第16题，什么是streams？解释一下有哪些类型?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第17题，退出代码是什么？有哪些退出代码"><span class="post-toc-number">62.</span> <span class="post-toc-text">第17题，退出代码是什么？有哪些退出代码?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第18题-什么是globals"><span class="post-toc-number">63.</span> <span class="post-toc-text">第18题, 什么是globals?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第19题，-Angular-js和node-js的区别是什么"><span class="post-toc-number">64.</span> <span class="post-toc-text">第19题， Angular js和node js的区别是什么?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第20题-为什么统一的风格儿非常重要，有什么工具可以保证这一点"><span class="post-toc-number">65.</span> <span class="post-toc-text">第20题, 为什么统一的风格儿非常重要，有什么工具可以保证这一点?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第21题-用什么方法来处理没有被处理的异常"><span class="post-toc-number">66.</span> <span class="post-toc-text">第21题, 用什么方法来处理没有被处理的异常?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第22题-Node-js是如何支持多处理器平台的"><span class="post-toc-number">67.</span> <span class="post-toc-text">第22题, Node js是如何支持多处理器平台的?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第23题-如何配置开发模式和生产模式的环境"><span class="post-toc-number">68.</span> <span class="post-toc-text">第23题, 如何配置开发模式和生产模式的环境?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第24题-nodejs中跟时间相关的函数有哪些"><span class="post-toc-number">69.</span> <span class="post-toc-text">第24题, nodejs中跟时间相关的函数有哪些?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第25题-解释一下什么是reactor-pattern。"><span class="post-toc-number">70.</span> <span class="post-toc-text">第25题, 解释一下什么是reactor pattern。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第26题，lts版本是什么意思？"><span class="post-toc-number">71.</span> <span class="post-toc-text">第26题，lts版本是什么意思？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第27题，你为什么需要把express-APP和server分开？"><span class="post-toc-number">72.</span> <span class="post-toc-text">第27题，你为什么需要把express APP和server分开？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#第28题，next-tick和setImmediate的区别是什么？"><span class="post-toc-number">73.</span> <span class="post-toc-text">第28题，next tick和setImmediate的区别是什么？</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-knowledges/Node"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">Node</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-12-08 19:25:55" datetime="2019-12-08T11:25:55.000Z"  itemprop="datePublished">2019-12-08</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="对-Node-的优点和缺点提出了自己的看法？"><a href="#对-Node-的优点和缺点提出了自己的看法？" class="headerlink" title="对 Node 的优点和缺点提出了自己的看法？"></a>对 Node 的优点和缺点提出了自己的看法？</h3><p><strong>优点：</strong></p>
+<ol>
+<li>因为 Node 是基于事件驱动和无阻塞的，所以非常适合处理并发请求，因此构建在 Node 上的代理服务器相比其他技术实现（如 Ruby）的服务器表现要好得多。</li>
+<li>与 Node 代理服务器交互的客户端代码是由 javascript 语言编写的，因此客户端和服务器端都用同一种语言编写，这是非常美妙的事情。</li>
+<li>擅长处理高并发，适合I/O密集型应用。</li>
+<li>事件驱动，通过闭包很容易实现客户端的生命活期。</li>
+<li>不用担心多线程，锁，并行计算的问题。</li>
+<li>V8 引擎速度非常快。</li>
+<li>对于游戏来说，写一遍游戏逻辑代码，前端后端通用。</li>
+</ol>
+<p><strong>缺点：</strong></p>
+<ol>
+<li>Node 是一个相对新的开源项目，所以不太稳定，它总是一直在变。nodejs 更新很快，可能会出现版本兼容；还不算成熟，还没有大制作；</li>
+<li>nodejs 不像其他的服务器，对于不同的链接，不支持进程和线程操作</li>
+<li>不适合CPU密集运算；不能充分利用多核CPU；可靠性低，某个环节出错会导致整个系统崩溃</li>
+</ol>
+<h3 id="Node-的应用场景"><a href="#Node-的应用场景" class="headerlink" title="Node 的应用场景"></a>Node 的应用场景</h3><ul>
+<li><p>RESTFUL API</p>
+</li>
+<li><p>工具类应用：前端部署(npm, gulp)</p>
+</li>
+<li><p>实时应用：如实时在线聊天，图文直播，实时通知推送等等（如 socket.io）</p>
+</li>
+<li><p>客户端逻辑强大的单页 APP：本地化的在线音乐应用，本地化的在线搜索应用，本地化的在线 APP 等。</p>
+</li>
+<li><p>分布式应用：通过高效的并行 I/O 使用已有的数据</p>
+</li>
+<li><p>工具类应用：海量的工具，小到前端压缩部署（如 grunt），大到桌面图形界面应用程序</p>
+</li>
+<li><p>游戏类应用：游戏领域对实时和并发有很高的要求（如网易的 pomelo 框架）</p>
+</li>
+<li><p>利用稳定接口提升 Web 渲染能力</p>
+</li>
+<li><p>前后端编程语言环境统一：前端开发人员可以非常快速地切入到服务器端的开发（如著名的纯 Javascript 全栈式 MEAN 架构）</p>
+</li>
+</ul>
+<p><a href="https://www.cnblogs.com/kevin9103/p/5053517.html" target="_blank" rel="noopener">参考</a></p>
+<h3 id="node有哪些特征，与其他服务器端对比"><a href="#node有哪些特征，与其他服务器端对比" class="headerlink" title="node有哪些特征，与其他服务器端对比"></a>node有哪些特征，与其他服务器端对比</h3><p>　　特征：单线程、事件驱动、非阻塞I/O</p>
+<p>　　node 无法直接渲染静态页面，提供静态服务</p>
+<p>　　node 没有根目录的概念</p>
+<p>　　node 必须通过路由程序指定文件才能渲染文件</p>
+<p>　　node 比其他服务端性能更好，速度更快</p>
+<h3 id="CommonJS中require-exports和ES6中import-export区别"><a href="#CommonJS中require-exports和ES6中import-export区别" class="headerlink" title="CommonJS中require/exports和ES6中import/export区别"></a>CommonJS中require/exports和ES6中import/export区别</h3><p>　　CommonJS模块的重要特性是加载时执行，及脚本代码在require的时候，就会全部执行。一旦出现某个模块被“循环加载”就只输出已经执行的部分，还没有执行的部分是不输出的</p>
+<p>　　ES6模块是动态引用，如果使用import从一个模块加载变量，那些变量不会缓存，而是成为一个指向被加载模块的引用,impor/export最终都是编译为require/exports来执行的</p>
+<h3 id="使用NPM有哪些好处？"><a href="#使用NPM有哪些好处？" class="headerlink" title="使用NPM有哪些好处？"></a>使用NPM有哪些好处？</h3><p>通过NPM，你可以安装和管理项目的依赖，并且能够指明依赖项的具体版本号。</p>
+<p>对于Node应用开发而言，你可以通过<code>package.json</code>文件来管理项目信息，配置脚本，以及指明依赖的具体版本</p>
+<h3 id="AMD-CMD规范的区别"><a href="#AMD-CMD规范的区别" class="headerlink" title="AMD CMD规范的区别"></a>AMD CMD规范的区别</h3><p>　　CommonJS和AMD都是JavaScript模块化规范</p>
+<p>　　CMD依赖就近，而AMD依赖前置</p>
+<p>　　CMD是延迟执行的，而AMD是提前执行的</p>
+<p>　　AMD的API默认是一个当多个用，CMD的API严格区分，推崇职责单一</p>
+<h3 id="如何判断当前脚本运行在浏览器还是node环境中"><a href="#如何判断当前脚本运行在浏览器还是node环境中" class="headerlink" title="如何判断当前脚本运行在浏览器还是node环境中"></a>如何判断当前脚本运行在浏览器还是node环境中</h3><p>　　通过判断 Global 对象是否为 window ，如果不为window ，当前脚本没有运行在浏览器中</p>
+<h3 id="简述同步和异步的区别，如何避免回调地狱"><a href="#简述同步和异步的区别，如何避免回调地狱" class="headerlink" title="简述同步和异步的区别，如何避免回调地狱"></a>简述同步和异步的区别，如何避免回调地狱</h3><p>　　同步方法调用一旦开始，调用者必须等到方法调用返回后，才能继续后续的行为</p>
+<p>　　异步方法调用一旦开始，方法调用就会立即返回，调用者就可以继续后续的操作。而异步方法通常会在另外一个线程中，整个过程，不会阻碍调用者的工作</p>
+<p>　　避免回调地狱：</p>
+<p>　　1）Promise</p>
+<p>　　2）async/await</p>
+<p>　　3）generator</p>
+<p>　　4）事件发布/监听模式</p>
+<p>　　</p>
+<h3 id="几种常见模块化规范的简介"><a href="#几种常见模块化规范的简介" class="headerlink" title="几种常见模块化规范的简介"></a>几种常见模块化规范的简介</h3><p>　　 CommonJS规范主要用于服务端编程，加载模块是同步的，这并不适合在浏览器环境，因为同步意味着阻塞加载，浏览器资源是异步加载的</p>
+<p>　　AMD规范在浏览器环境中异步加载模块，而且可以并行加载多个模块。不过，AMD规范开发成本高，代码的阅读和书写比较困难</p>
+<p>　　CMD规范与AMD规范很相似，都用于浏览器编程，依赖就近，延迟执行，可以很容易在Node.js中运行（依赖SPM 打包，模块的加载逻辑偏重）</p>
+<p>　　ES6 在语言标准的层面上，实现了模块功能，而且实现得相当简单，完全可以取代 CommonJS 和 AMD 规范，成为浏览器和服务器通用的模块解决方案</p>
+<h3 id="app-use和app-get区别"><a href="#app-use和app-get区别" class="headerlink" title="app.use和app.get区别"></a>app.use和app.get区别</h3><p>　　app.use(path,callback)中的callback既可以是router(路由)对象又可以是函数</p>
+<p>　　app.get(path,callback)中的callback只能是函数</p>
+<h3 id="node怎么跟MongoDB建立连接"><a href="#node怎么跟MongoDB建立连接" class="headerlink" title="node怎么跟MongoDB建立连接"></a>node怎么跟MongoDB建立连接</h3><p>　　1）引入mongoose</p>
+<p>　　2）使用mongoose.connect()方法连接到MongoDB数据库</p>
+<p>　　3）监听连接是否成功</p>
+<p>　　4）然后通过node，书写接口，对数据库进行增删改查</p>
+<h3 id="node-和-前端项目怎么解决跨域的"><a href="#node-和-前端项目怎么解决跨域的" class="headerlink" title="node 和 前端项目怎么解决跨域的"></a>node 和 前端项目怎么解决跨域的</h3><p>通过在node服务器端设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//解决跨域问题</span><br><span class="line">app.use(async(ctx, next) =&gt; &#123;</span><br><span class="line">    </span><br><span class="line">    //指定服务器端允许进行跨域资源访问的来源域。可以用通配符*表示允许任何域的JavaScript访问资源，但是在响应一个携带身份信息(Credential)的HTTP请求时，必需指定具体的域，不能用通配符</span><br><span class="line">    ctx.set(&quot;Access-Control-Allow-Origin&quot;, &quot;*&quot;);</span><br><span class="line"></span><br><span class="line">    //可选。它的值是一个布尔值，表示是否允许客户端跨域请求时携带身份信息(Cookie或者HTTP认证信息)。默认情况下，Cookie不包括在CORS请求之中。当设置成允许请求携带cookie时，需要保证&quot;Access-Control-Allow-Origin&quot;是服务器有的域名，而不能是&quot;*&quot;;如果没有设置这个值，浏览器会忽略此次响应。</span><br><span class="line">    ctx.set(&quot;Access-Control-Allow-Credentials&quot;, true);</span><br><span class="line">    </span><br><span class="line">    //指定服务器允许进行跨域资源访问的请求方法列表，一般用在响应预检请求上</span><br><span class="line">    ctx.set(&quot;Access-Control-Allow-Methods&quot;, &quot;OPTIONS, GET, PUT, POST, DELETE&quot;);</span><br><span class="line">    </span><br><span class="line">    //必需。指定服务器允许进行跨域资源访问的请求头列表，一般用在响应预检请求上</span><br><span class="line">    ctx.set(&quot;Access-Control-Allow-Headers&quot;, &quot;x-requested-with, accept, origin, content-type&quot;);</span><br><span class="line">    // ctx.set(&quot;X-Powered-By&quot;, &apos; 3.2.1&apos;);</span><br><span class="line">    </span><br><span class="line">    //告诉客户端返回数据的MIME的类型，这只是一个标识信息,并不是真正的数据文件的一部分</span><br><span class="line">    ctx.set(&quot;Content-Type&quot;, &quot;application/json;charset=utf-8&quot;);</span><br><span class="line">    </span><br><span class="line">    //如果不设置mode，直接设置content-type为application/json，则fetch会默认这是跨域模式（mode:&apos;cors&apos;），在跨域POST之前，客户端会先发一条OPTIONS请求来”探探路”，如果服务器允许，再继续POST数据。对于这种OPTIONS请求，需要在服务器配置允许接受OPTIONS请求，这样写就是直接允许了所有的OPTIONS请求，也可以按照需求来判断OPTIONS请求中更详细的信息</span><br><span class="line">    if (ctx.request.method == &quot;OPTIONS&quot;) &#123;</span><br><span class="line">        ctx.response.status = 200</span><br><span class="line">    &#125;</span><br><span class="line">    await next();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="什么是-error-first-callback-？"><a href="#什么是-error-first-callback-？" class="headerlink" title="什么是 error-first callback ？"></a>什么是 error-first callback ？</h3><p>答案：error-first callback 用来传递错误和数据。第一个参数永远是一个错误对象（error-object），回调函数必须检查它。余下的参数用不过来传递数据。</p>
+<p>解析：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">fs.readFile(filePath, <span class="function"><span class="keyword">function</span>(<span class="params">err, data</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (err) &#123;</span><br><span class="line">    <span class="comment">//处理出现错误的情况</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">//处理数据</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>考察面试者对于 Node 异步操作基本知识的见解</p>
+<h3 id="Node-程序如何监听-80-端口？"><a href="#Node-程序如何监听-80-端口？" class="headerlink" title="Node 程序如何监听 80 端口？"></a>Node 程序如何监听 80 端口？</h3><p>答案：脑筋急转弯！你不应该直接使用 Node 监听 80 端口（在*nix 系统中），这样做需要 root 权限，对于运行程序来说这不是一个好主意。</p>
+<p>不过，你可以使 Node 监听 1024 以上的端口，然后在 Node 前面部署 nginx 反向代理。</p>
+<p>解析：<a href="https://blog.csdn.net/newborn2012/article/details/23860687" target="_blank" rel="noopener">参考</a></p>
+<h3 id="使用什么工具检查代码风格？"><a href="#使用什么工具检查代码风格？" class="headerlink" title="使用什么工具检查代码风格？"></a>使用什么工具检查代码风格？</h3><p>答案：</p>
+<ul>
+<li>JSLint by Douglas Crockford</li>
+<li>JSHint</li>
+<li>ESLint</li>
+<li>JSCS<br>开发团队项目时，强制指定代码风格和使用静态分析，捕捉常见的错误，这些工具都非常有用。</li>
+</ul>
+<h3 id="操作错误和程序错误的区别是什么？"><a href="#操作错误和程序错误的区别是什么？" class="headerlink" title="操作错误和程序错误的区别是什么？"></a>操作错误和程序错误的区别是什么？</h3><p>答案：操作错误不是 bug，是系统的问题，例如超时或者硬件故障。<br>另一方面，程序错误（programmer errors）是实际的错误。</p>
+<h3 id="为什么-npmshrinkwarp-非常有用？"><a href="#为什么-npmshrinkwarp-非常有用？" class="headerlink" title="为什么 npmshrinkwarp 非常有用？"></a>为什么 npmshrinkwarp 非常有用？</h3><p>答案：这个命令在部署 Node.js 应用时是非常有用的——它可以保证所部属的版本就是依赖的版本。</p>
+<p>解析：<a href="http://www.tuicool.com/articles/EBVNV37" target="_blank" rel="noopener">参考</a></p>
+<h3 id="什么是-stub？说出它的用途？举个使用场景？"><a href="#什么是-stub？说出它的用途？举个使用场景？" class="headerlink" title="什么是 stub？说出它的用途？举个使用场景？"></a>什么是 stub？说出它的用途？举个使用场景？</h3><p>stub是用于模拟一个组件行为或模块的函数或程序。</p>
+<p>Stubs 提供已知的答案来调用函数，另外你还可以断言哪个 stubs 被调用</p>
+<p>在测试用例中，简单的说，你可以用stub去模拟一个方法，从而避免调用真实的方法，使用stub你还可以返回虚构的结果。你可以配合断言使用stub。</p>
+<p>举个例子，在一个读取文件的场景中，当你不想读取一个真正的文件时：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var fs = require(&apos;fs&apos;);</span><br><span class="line">var readFileStub = sinon.stub(fs, &apos;readFile&apos;, function (path, cb) &#123;</span><br><span class="line">	return cb(null, &apos;filecontent&apos;); </span><br><span class="line">&#125;);</span><br><span class="line">expect(readFileStub).to.be.called;</span><br><span class="line">readFileStub.restore();</span><br></pre></td></tr></table></figure>
+
+<p>在单元测试中：Stub是完全模拟一个外部依赖，而Mock常用来判断测试通过还是失败</p>
+<h3 id="什么是测试金字塔？在做-HTTP-API-的时候要怎么实现？"><a href="#什么是测试金字塔？在做-HTTP-API-的时候要怎么实现？" class="headerlink" title="什么是测试金字塔？在做 HTTP API 的时候要怎么实现？"></a>什么是测试金字塔？在做 HTTP API 的时候要怎么实现？</h3><p>答案：测试金字塔意思是在写测试时应该编写的底层但愿测试要多于高级的端到端测试。<br>对于 HTTP APIs，应该归结为：</p>
+<ul>
+<li>对你的模型多很多单元测试</li>
+<li>在你的模型与其他交互时更少的集成测试</li>
+<li>更少的验收测试，在 HTTP 端</li>
+</ul>
+<h3 id="你最喜欢的-HTTP-框架，并说明原因？"><a href="#你最喜欢的-HTTP-框架，并说明原因？" class="headerlink" title="你最喜欢的 HTTP 框架，并说明原因？"></a>你最喜欢的 HTTP 框架，并说明原因？</h3><p>答案：LiteHttp 好多的优点<br>单线程 灵活的架构 轻量级 多文件上传 自动重定向 禁用一种或多种网络</p>
+<p>解析：<a href="http://blog.csdn.net/kymjs/article/details/45716797" target="_blank" rel="noopener">参考</a></p>
+<h3 id="需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？"><a href="#需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？" class="headerlink" title="需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？"></a>需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？</h3><p>答案：至少给出自己的思路（url-hash,可以使用已有的一些框架 history.js 等）</p>
+<h3 id="为什么用Nodejs-它有哪些缺点？"><a href="#为什么用Nodejs-它有哪些缺点？" class="headerlink" title="为什么用Nodejs,它有哪些缺点？"></a>为什么用Nodejs,它有哪些缺点？</h3><ul>
+<li>事件驱动，通过闭包很容易实现客户端的生命活期。</li>
+<li>不用担心多线程，锁，并行计算的问题</li>
+<li>V8引擎速度非常快</li>
+<li>对于游戏来说，写一遍游戏逻辑代码，前端后端通用</li>
+</ul>
+<p>当然Nodejs也有一些缺点：</p>
+<ul>
+<li>nodejs更新很快，可能会出现版本兼容</li>
+<li>nodejs还不算成熟，还没有大制作</li>
+<li>nodejs不像其他的服务器，对于不同的链接，不支持进程和线程操作</li>
+</ul>
+<h3 id="什么是错误优先的回调函数？"><a href="#什么是错误优先的回调函数？" class="headerlink" title="什么是错误优先的回调函数？"></a>什么是错误优先的回调函数？</h3><p>错误优先(Error-first)的回调函数（Error-First Callback）用于同时返回错误和数据。第一个参数返回错误，并且验证它是否出错；其他参数返回数据。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">fs.readFile(filePath, function(err, data)</span><br><span class="line">&#123;</span><br><span class="line">    if (err)</span><br><span class="line">    &#123;</span><br><span class="line">        // 处理错误</span><br><span class="line">        return console.log(err);</span><br><span class="line">    &#125;</span><br><span class="line">    console.log(data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何避免回调地狱？"><a href="#如何避免回调地狱？" class="headerlink" title="如何避免回调地狱？"></a>如何避免回调地狱？</h3><p>以下方式避免回调地狱</p>
+<ul>
+<li>模块化：将回调函数转换为独立的函数</li>
+<li>使用流程控制库，例如[aync]</li>
+<li>使用Promise</li>
+<li>使用aync/await</li>
+</ul>
+<h3 id="什么是Promise"><a href="#什么是Promise" class="headerlink" title="什么是Promise?"></a>什么是Promise?</h3><p>Promise可以帮助我们更好地处理异步操作。下面的实例中，100ms后会打印result字符串。catch用于错误处理。多个Promise可以链接起来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">new Promise((resolve, reject) =&gt;</span><br><span class="line">    &#123;</span><br><span class="line">        setTimeout(() =&gt;</span><br><span class="line">        &#123;</span><br><span class="line">            resolve(&apos;result&apos;);</span><br><span class="line">        &#125;, 100)</span><br><span class="line">    &#125;)</span><br><span class="line">    .then(console.log)</span><br><span class="line">    .catch(console.error);</span><br></pre></td></tr></table></figure>
+
+<h3 id="用什么工具保证一致的代码风格？为什么要这样？"><a href="#用什么工具保证一致的代码风格？为什么要这样？" class="headerlink" title="用什么工具保证一致的代码风格？为什么要这样？"></a>用什么工具保证一致的代码风格？为什么要这样？</h3><ul>
+<li>团队协作时，保证一致的代码风格是非常重要的，这样团队成员才可以更快地修改代码，而不需要每次去适应新的风格。这些工具可以帮助我们：</li>
+<li>[ESLint] (<a href="http://eslint.org/" target="_blank" rel="noopener">http://eslint.org/</a>)</li>
+<li>[Standard] (<a href="https://standardjs.com/" target="_blank" rel="noopener">https://standardjs.com/</a>)</li>
+<li>JSLint</li>
+<li>JSHint</li>
+<li>ESLint</li>
+<li>JSCS推荐</li>
+</ul>
+<h3 id="什么是stub？举例说明"><a href="#什么是stub？举例说明" class="headerlink" title="什么是stub？举例说明"></a>什么是stub？举例说明</h3><p>stub用于模块的行为。测试时，stub可以为函数调用返回模拟的结果。比如说，我们写文件时，实际上并不需要真正去写。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var fs = require(&apos;fs&apos;);</span><br><span class="line">var writeFileStub = sinon.stub(fs, &apos;writeFile&apos;, function(path, data, cb)</span><br><span class="line">&#123;</span><br><span class="line">    return cb(null);</span><br><span class="line">&#125;);</span><br><span class="line">expect(writeFileStub).to.be.called;</span><br><span class="line">writeFileStub.restore();</span><br></pre></td></tr></table></figure>
+
+<h3 id="什么是测试金字塔？举例说明"><a href="#什么是测试金字塔？举例说明" class="headerlink" title="什么是测试金字塔？举例说明"></a>什么是测试金字塔？举例说明</h3><p>测试金字塔反应了需要写的单元测试，集成测试以及端到端测试的比例：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://img-blog.csdnimg.cn/img_convert/d8e54e6efab0aaee7cfa04b9d01fc1c0.png" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<ul>
+<li>测试HTTP接口时应该是这样的：</li>
+<li>很多单元测试，分别测试各个模块(依赖需要stub)</li>
+<li>较少的集成测试，测试各个模块之间的交互(依赖不能stub)</li>
+<li>少量端到端测试，去调用真正地接口(依赖不能stub)</li>
+</ul>
+<h3 id="如何用Node监听80端口"><a href="#如何用Node监听80端口" class="headerlink" title="如何用Node监听80端口"></a>如何用Node监听80端口</h3><ul>
+<li>这题有陷阱！在类Unix系统中你不应该去监听80端口，因为这需要超级用户权限。因此不推荐让你的应用直接监听这个端口。</li>
+<li>目前，如果你一定要让你的应用80端口的话，你可以有通过在Node应用的前方再添加一层反向代理（例如nginx）来实现，如下图。否则，建议你直接监听大于1024的端口<br><img src="/img/loading.gif" data-original="https://img-blog.csdnimg.cn/img_convert/f8268836da6ec8cca9519798f76c899d.png" alt="img"></li>
+<li>方向代理指的是以代理服务器来接收Internet上的连接请求，然后将请求转发给内部网络上的服务器， 并且将服务器返回的结果发送给客户端。</li>
+</ul>
+<h3 id="NodeJS-的工作原理"><a href="#NodeJS-的工作原理" class="headerlink" title="NodeJS 的工作原理"></a>NodeJS 的工作原理</h3><p>答案：事件循环</p>
+<h3 id="什么是事件循环（event-loop）？"><a href="#什么是事件循环（event-loop）？" class="headerlink" title="什么是事件循环（event loop）？"></a>什么是事件循环（event loop）？</h3><p>答案：至少从开发者的角度来看，Node.js 是单线程运行的。底层使用 libuv 使用多线程。<br>每一个 I/O 操作都需要一个回调，一旦操作完成会被事件循环执行</p>
+<p>解析：<a href="http://blog.csdn.net/yanghua_kobe/article/details/12145537" target="_blank" rel="noopener">参考</a></p>
+<h3 id="什么是事件循环"><a href="#什么是事件循环" class="headerlink" title="什么是事件循环"></a>什么是事件循环</h3><p>Node采用的是单线程的处理机制(所有的I/O请求都采用非阻塞的工作方式)，至少从Node.js开发者的角度是这样的。而在底层，Node.js借助libuv来作为抽象封装层，从而屏蔽不同操作系统的差异，Node可以借助livuv来实现线程。下图表示Node和libuv的关系</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://img-blog.csdnimg.cn/img_convert/e0887371264c92388e3bdadf42970cde.png" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<p>Libuv库负责Node API的执行。它将不同的任务分配给不同的线程，形成一个事件循环，以异步的方式将任务的执行结果返回给V8引擎。可以简单用下面这张图来表示</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://img-blog.csdnimg.cn/img_convert/f7b0149e185dbecabd4490f3f4293a30.png" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<p>每一个I/O都需要一个回调函数————一旦执行完便堆到事件循环上用于执行</p>
+<h3 id="运算错误与程序员错误的区别"><a href="#运算错误与程序员错误的区别" class="headerlink" title="运算错误与程序员错误的区别"></a>运算错误与程序员错误的区别</h3><p>运算错误并不是bug，这是和系统相关的问题，例如请求超时或者硬件故障。而程序员错误就是所谓的bug</p>
+<h3 id="1、Node模块机制"><a href="#1、Node模块机制" class="headerlink" title="1、Node模块机制"></a>1、Node模块机制</h3><h4 id="1-1-请介绍一下node里的模块是什么"><a href="#1-1-请介绍一下node里的模块是什么" class="headerlink" title="1.1 请介绍一下node里的模块是什么"></a>1.1 请介绍一下node里的模块是什么</h4><p>Node中，每个文件模块都是一个对象，它的定义如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function Module(id, parent) &#123;</span><br><span class="line"> this.id = id;</span><br><span class="line"> this.exports = &#123;&#125;;</span><br><span class="line"> this.parent = parent;</span><br><span class="line"> this.filename = null;</span><br><span class="line"> this.loaded = false;</span><br><span class="line"> this.children = [];</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line">module.exports = Module;</span><br><span class="line"> </span><br><span class="line">var module = new Module(filename, parent);</span><br></pre></td></tr></table></figure>
+
+<p>所有的模块都是 Module 的实例。可以看到，当前模块（module.js）也是 Module 的一个实例。</p>
+<h4 id="1-2-请介绍一下require的模块加载机制"><a href="#1-2-请介绍一下require的模块加载机制" class="headerlink" title="1.2 请介绍一下require的模块加载机制"></a>1.2 请介绍一下require的模块加载机制</h4><p>这道题基本上就可以了解到面试者对Node模块机制的了解程度基本上面试提到</p>
+<p>1、先计算模块路径</p>
+<p>2、如果模块在缓存里面，取出缓存</p>
+<p>3、加载模块</p>
+<p>4、的输出模块的exports属性即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">// require 其实内部调用 Module._load 方法</span><br><span class="line">Module._load = function(request, parent, isMain) &#123;</span><br><span class="line"> // 计算绝对路径</span><br><span class="line"> var filename = Module._resolveFilename(request, parent);</span><br><span class="line"> </span><br><span class="line"> // 第一步：如果有缓存，取出缓存</span><br><span class="line"> var cachedModule = Module._cache[filename];</span><br><span class="line"> if (cachedModule) &#123;</span><br><span class="line"> return cachedModule.exports;</span><br><span class="line"> </span><br><span class="line"> // 第二步：是否为内置模块</span><br><span class="line"> if (NativeModule.exists(filename)) &#123;</span><br><span class="line"> return NativeModule.require(filename);</span><br><span class="line"> &#125;</span><br><span class="line">  </span><br><span class="line"> /********************************这里注意了**************************/</span><br><span class="line"> // 第三步：生成模块实例，存入缓存</span><br><span class="line"> // 这里的Module就是我们上面的1.1定义的Module</span><br><span class="line"> var module = new Module(filename, parent);</span><br><span class="line"> Module._cache[filename] = module;</span><br><span class="line"> </span><br><span class="line"> /********************************这里注意了**************************/</span><br><span class="line"> // 第四步：加载模块</span><br><span class="line"> // 下面的module.load实际上是Module原型上有一个方法叫Module.prototype.load</span><br><span class="line"> try &#123;</span><br><span class="line"> module.load(filename);</span><br><span class="line"> hadException = false;</span><br><span class="line"> &#125; finally &#123;</span><br><span class="line"> if (hadException) &#123;</span><br><span class="line">  delete Module._cache[filename];</span><br><span class="line"> &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> </span><br><span class="line"> // 第五步：输出模块的exports属性</span><br><span class="line"> return module.exports;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>接着上一题继续发问</p>
+<h4 id="1-3-加载模块时，为什么每个模块都有dirname-filename属性呢，new-Module的时候我们看到1-1部分没有这两个属性的，那么这两个属性是从哪里来的"><a href="#1-3-加载模块时，为什么每个模块都有dirname-filename属性呢，new-Module的时候我们看到1-1部分没有这两个属性的，那么这两个属性是从哪里来的" class="headerlink" title="1.3 加载模块时，为什么每个模块都有dirname,filename属性呢，new Module的时候我们看到1.1部分没有这两个属性的，那么这两个属性是从哪里来的"></a>1.3 加载模块时，为什么每个模块都有<strong>dirname,</strong>filename属性呢，new Module的时候我们看到1.1部分没有这两个属性的，那么这两个属性是从哪里来的</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 上面(1.2部分)的第四步module.load(filename)</span><br><span class="line">// 这一步，module模块相当于被包装了，包装形式如下</span><br><span class="line">// 加载js模块，相当于下面的代码（加载node模块和json模块逻辑不一样）</span><br><span class="line">(function (exports, require, module, __filename, __dirname) &#123;</span><br><span class="line"> // 模块源码</span><br><span class="line"> // 假如模块代码如下</span><br><span class="line"> var math = require(&apos;math&apos;);</span><br><span class="line"> exports.area = function(radius)&#123;</span><br><span class="line">  return Math.PI * radius * radius</span><br><span class="line"> &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>也就是说，每个module里面都会传入__filename, __dirname参数，这两个参数并不是module本身就有的，是外界传入的</p>
+<h4 id="1-4-我们知道node导出模块有两种方式，一种是exports-xxx-xxx和Module-exports-有什么区别吗"><a href="#1-4-我们知道node导出模块有两种方式，一种是exports-xxx-xxx和Module-exports-有什么区别吗" class="headerlink" title="1.4 我们知道node导出模块有两种方式，一种是exports.xxx=xxx和Module.exports={}有什么区别吗"></a>1.4 我们知道node导出模块有两种方式，一种是exports.xxx=xxx和Module.exports={}有什么区别吗</h4><ul>
+<li>exports其实就是module.exports</li>
+<li>其实1.3问题的代码已经说明问题了，接着我引用廖雪峰大神的讲解，希望能讲的更清楚</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br></pre></td><td class="code"><pre><span class="line">module.exports vs exports</span><br><span class="line">很多时候，你会看到，在Node环境中，有两种方法可以在一个模块中输出变量：</span><br><span class="line"></span><br><span class="line">方法一：对module.exports赋值：</span><br><span class="line"></span><br><span class="line">// hello.js</span><br><span class="line"></span><br><span class="line">function hello() &#123;</span><br><span class="line"> console.log(&apos;Hello, world!&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function greet(name) &#123;</span><br><span class="line"> console.log(&apos;Hello, &apos; + name + &apos;!&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line"> hello: hello,</span><br><span class="line"> greet: greet</span><br><span class="line">&#125;;</span><br><span class="line">方法二：直接使用exports：</span><br><span class="line"></span><br><span class="line">// hello.js</span><br><span class="line"></span><br><span class="line">function hello() &#123;</span><br><span class="line"> console.log(&apos;Hello, world!&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function greet(name) &#123;</span><br><span class="line"> console.log(&apos;Hello, &apos; + name + &apos;!&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function hello() &#123;</span><br><span class="line"> console.log(&apos;Hello, world!&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">exports.hello = hello;</span><br><span class="line">exports.greet = greet;</span><br><span class="line">但是你不可以直接对exports赋值：</span><br><span class="line"></span><br><span class="line">// 代码可以执行，但是模块并没有输出任何变量:</span><br><span class="line">exports = &#123;</span><br><span class="line"> hello: hello,</span><br><span class="line"> greet: greet</span><br><span class="line">&#125;;</span><br><span class="line">如果你对上面的写法感到十分困惑，不要着急，我们来分析Node的加载机制：</span><br><span class="line"></span><br><span class="line">首先，Node会把整个待加载的hello.js文件放入一个包装函数load中执行。在执行这个load()函数前，Node准备好了module变量：</span><br><span class="line"></span><br><span class="line">var module = &#123;</span><br><span class="line"> id: &apos;hello&apos;,</span><br><span class="line"> exports: &#123;&#125;</span><br><span class="line">&#125;;</span><br><span class="line">load()函数最终返回module.exports：</span><br><span class="line"></span><br><span class="line">var load = function (exports, module) &#123;</span><br><span class="line"> // hello.js的文件内容</span><br><span class="line"> ...</span><br><span class="line"> // load函数返回:</span><br><span class="line"> return module.exports;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var exported = load(module.exports, module);</span><br><span class="line">也就是说，默认情况下，Node准备的exports变量和module.exports变量实际上是同一个变量，并且初始化为空对象&#123;&#125;，于是，我们可以写：</span><br><span class="line"></span><br><span class="line">exports.foo = function () &#123; return &apos;foo&apos;; &#125;;</span><br><span class="line">exports.bar = function () &#123; return &apos;bar&apos;; &#125;;</span><br><span class="line">也可以写：</span><br><span class="line"></span><br><span class="line">module.exports.foo = function () &#123; return &apos;foo&apos;; &#125;;</span><br><span class="line">module.exports.bar = function () &#123; return &apos;bar&apos;; &#125;;</span><br><span class="line">换句话说，Node默认给你准备了一个空对象&#123;&#125;，这样你可以直接往里面加东西。</span><br><span class="line"></span><br><span class="line">但是，如果我们要输出的是一个函数或数组，那么，只能给module.exports赋值：</span><br><span class="line"></span><br><span class="line">module.exports = function () &#123; return &apos;foo&apos;; &#125;;</span><br><span class="line">给exports赋值是无效的，因为赋值后，module.exports仍然是空对象&#123;&#125;。</span><br><span class="line"></span><br><span class="line">结论</span><br><span class="line">如果要输出一个键值对象&#123;&#125;，可以利用exports这个已存在的空对象&#123;&#125;，并继续在上面添加新的键值；</span><br><span class="line"></span><br><span class="line">如果要输出一个函数或数组，必须直接对module.exports对象赋值。</span><br><span class="line"></span><br><span class="line">所以我们可以得出结论：直接对module.exports赋值，可以应对任何情况：</span><br><span class="line"></span><br><span class="line">module.exports = &#123;</span><br><span class="line"> foo: function () &#123; return &apos;foo&apos;; &#125;</span><br><span class="line">&#125;;</span><br><span class="line">或者：</span><br><span class="line"></span><br><span class="line">module.exports = function () &#123; return &apos;foo&apos;; &#125;;</span><br><span class="line">最终，我们强烈建议使用module.exports = xxx的方式来输出模块变量，这样，你只需要记忆一种方法。</span><br></pre></td></tr></table></figure>
+
+<h3 id="2、Node的异步I-O"><a href="#2、Node的异步I-O" class="headerlink" title="2、Node的异步I/O"></a>2、Node的异步I/O</h3><p>本章的答题思路大多借鉴于朴灵大神的《深入浅出的NodeJS》</p>
+<h4 id="2-1-请介绍一下Node事件循环的流程"><a href="#2-1-请介绍一下Node事件循环的流程" class="headerlink" title="2.1 请介绍一下Node事件循环的流程"></a>2.1 请介绍一下Node事件循环的流程</h4><ul>
+<li>在进程启动时，Node便会创建一个类似于while(true)的循环，每执行一次循环体的过程我们成为Tick。</li>
+<li>每个Tick的过程就是查看是否有事件待处理。如果有就取出事件及其相关的回调函数。然后进入下一个循环，如果不再有事件处理，就退出进程。</li>
+</ul>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://img.jbzj.com/file_images/article/201910/2019100915292637.png" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<h4 id="2-2-在每个tick的过程中，如何判断是否有事件需要处理呢？"><a href="#2-2-在每个tick的过程中，如何判断是否有事件需要处理呢？" class="headerlink" title="2.2 在每个tick的过程中，如何判断是否有事件需要处理呢？"></a>2.2 在每个tick的过程中，如何判断是否有事件需要处理呢？</h4><ol>
+<li>每个事件循环中有一个或者多个观察者，而判断是否有事件需要处理的过程就是向这些观察者询问是否有要处理的事件。</li>
+<li>在Node中，事件主要来源于网络请求、文件的I/O等，这些事件对应的观察者有文件I/O观察者，网络I/O的观察者。</li>
+<li>事件循环是一个典型的生产者/消费者模型。异步I/O，网络请求等则是事件的生产者，源源不断为Node提供不同类型的事件，这些事件被传递到对应的观察者那里，事件循环则从观察者那里取出事件并处理。</li>
+<li>在windows下，这个循环基于IOCP创建，在*nix下则基于多线程创建</li>
+</ol>
+<h4 id="2-3-请描述一下整个异步I-O的流程"><a href="#2-3-请描述一下整个异步I-O的流程" class="headerlink" title="2.3 请描述一下整个异步I/O的流程"></a>2.3 请描述一下整个异步I/O的流程</h4><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://img.jbzj.com/file_images/article/201910/2019100915292638.png" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+
+
+<h3 id="3、V8的垃圾回收机制"><a href="#3、V8的垃圾回收机制" class="headerlink" title="3、V8的垃圾回收机制"></a>3、V8的垃圾回收机制</h3><h4 id="3-1-如何查看V8的内存使用情况"><a href="#3-1-如何查看V8的内存使用情况" class="headerlink" title="3.1 如何查看V8的内存使用情况"></a>3.1 如何查看V8的内存使用情况</h4><p>使用process.memoryUsage(),返回如下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> rss: 4935680,</span><br><span class="line"> heapTotal: 1826816,</span><br><span class="line"> heapUsed: 650472,</span><br><span class="line"> external: 49879</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>heapTotal和heapUsed代表V8的内存使用情况。external代表V8管理的，绑定到Javascript的C++对象的内存使用情况。rss, 驻留集大小, 是给这个进程分配了多少物理内存(占总分配内存的一部分) 这些物理内存中包含堆，栈，和代码段。</p>
+<h4 id="3-2-V8的内存限制是多少，为什么V8这样设计"><a href="#3-2-V8的内存限制是多少，为什么V8这样设计" class="headerlink" title="3.2 V8的内存限制是多少，为什么V8这样设计"></a>3.2 V8的内存限制是多少，为什么V8这样设计</h4><p>64位系统下是1.4GB， 32位系统下是0.7GB。因为1.5GB的垃圾回收堆内存，V8需要花费50毫秒以上，做一次非增量式的垃圾回收甚至要1秒以上。这是垃圾回收中引起Javascript线程暂停执行的事件，在这样的花销下，应用的性能和影响力都会直线下降。</p>
+<h4 id="3-3-V8的内存分代和回收算法请简单讲一讲"><a href="#3-3-V8的内存分代和回收算法请简单讲一讲" class="headerlink" title="3.3 V8的内存分代和回收算法请简单讲一讲"></a>3.3 V8的内存分代和回收算法请简单讲一讲</h4><p>在V8中，主要将内存分为新生代和老生代两代。新生代中的对象存活时间较短的对象，老生代中的对象存活时间较长，或常驻内存的对象。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://img.jbzj.com/file_images/article/201910/2019100915292739.png" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<p>3.3.1 新生代</p>
+<p>新生代中的对象主要通过Scavenge算法进行垃圾回收。这是一种采用复制的方式实现的垃圾回收算法。它将堆内存一份为二，每一部分空间成为semispace。在这两个semispace空间中，只有一个处于使用中，另一个处于闲置状态。处于使用状态的semispace空间称为From空间，处于闲置状态的空间称为To空间。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://img.jbzj.com/file_images/article/201910/2019100915292740.png" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<ul>
+<li>当开始垃圾回收的时候，会检查From空间中的存活对象，这些存活对象将被复制到To空间中，而非存活对象占用的空间将会被释放。完成复制后，From空间和To空间发生角色对换。</li>
+<li>应为新生代中对象的生命周期比较短，就比较适合这个算法。</li>
+<li>当一个对象经过多次复制依然存活，它将会被认为是生命周期较长的对象。这种新生代中生命周期较长的对象随后会被移到老生代中。</li>
+</ul>
+<p>3.3.2 老生代</p>
+<p>老生代主要采取的是标记清除的垃圾回收算法。与Scavenge复制活着的对象不同，标记清除算法在标记阶段遍历堆中的所有对象，并标记活着的对象，只清理死亡对象。活对象在新生代中只占叫小部分，死对象在老生代中只占较小部分，这是为什么采用标记清除算法的原因。</p>
+<p>3.3.3 标记清楚算法的问题</p>
+<p>主要问题是每一次进行标记清除回收后，内存空间会出现不连续的状态</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://img.jbzj.com/file_images/article/201910/2019100915292741.png" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<ul>
+<li>这种内存碎片会对后续内存分配造成问题，很可能出现需要分配一个大对象的情况，这时所有的碎片空间都无法完成此次分配，就会提前触发垃圾回收，而这次回收是不必要的。</li>
+<li>为了解决碎片问题，标记整理被提出来。就是在对象被标记死亡后，在整理的过程中，将活着的对象往一端移动，移动完成后，直接清理掉边界外的内存。</li>
+</ul>
+<p>3.3.4 哪些情况会造成V8无法立即回收内存</p>
+<p>闭包和全局变量</p>
+<p>3.3.5 请谈一下内存泄漏是什么，以及常见内存泄漏的原因，和排查的方法</p>
+<p>什么是内存泄漏</p>
+<ul>
+<li>内存泄漏(Memory Leak)指由于疏忽或错误造成程序未能释放已经不再使用的内存的情况。</li>
+<li>如果内存泄漏的位置比较关键，那么随着处理的进行可能持有越来越多的无用内存，这些无用的内存变多会引起服务器响应速度变慢。</li>
+<li>严重的情况下导致内存达到某个极限(可能是进程的上限，如 v8 的上限;也可能是系统可提供的内存上限)会使得应用程序崩溃。常见内存泄漏的原因内存泄漏的几种情况:</li>
+</ul>
+<h3 id="一、全局变量"><a href="#一、全局变量" class="headerlink" title="一、全局变量"></a>一、全局变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a = 10; </span><br><span class="line">//未声明对象。 </span><br><span class="line">global.b = 11; </span><br><span class="line">//全局变量引用 </span><br><span class="line">这种比较简单的原因，全局变量直接挂在 root 对象上，不会被清除掉。</span><br></pre></td></tr></table></figure>
+
+<h3 id="二、闭包"><a href="#二、闭包" class="headerlink" title="二、闭包"></a>二、闭包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function out() &#123; </span><br><span class="line"> const bigData = new Buffer(100); </span><br><span class="line"> inner = function () &#123; </span><br><span class="line">  </span><br><span class="line"> &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>闭包会引用到父级函数中的变量，如果闭包未释放，就会导致内存泄漏。上面例子是 inner 直接挂在了 root 上，那么每次执行 out 函数所产生的 bigData 都不会释放，从而导致内存泄漏。</p>
+<p>需要注意的是，这里举得例子只是简单的将引用挂在全局对象上，实际的业务情况可能是挂在某个可以从 root 追溯到的对象上导致的。</p>
+<h3 id="三、事件监听"><a href="#三、事件监听" class="headerlink" title="三、事件监听"></a>三、事件监听</h3><p>Node.js 的事件监听也可能出现的内存泄漏。例如对同一个事件重复监听，忘记移除(removeListener)，将造成内存泄漏。这种情况很容易在复用对象上添加事件时出现，所以事件重复监听可能收到如下警告：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">emitter.setMaxListeners() to increase limit</span><br></pre></td></tr></table></figure>
+
+<p>例如，Node.js 中 Agent 的 keepAlive 为 true 时，可能造成的内存泄漏。当 Agent keepAlive 为 true 的时候，将会复用之前使用过的 socket，如果在 socket 上添加事件监听，忘记清除的话，因为 socket 的复用，将导致事件重复监听从而产生内存泄漏。</p>
+<p>原理上与前一个添加事件监听的时候忘了清除是一样的。在使用 Node.js 的 http 模块时，不通过 keepAlive 复用是没有问题的，复用了以后就会可能产生内存泄漏。所以，你需要了解添加事件监听的对象的生命周期，并注意自行移除。</p>
+<p><strong>排查方法</strong></p>
+<ul>
+<li>想要定位内存泄漏，通常会有两种情况：</li>
+<li>对于只要正常使用就可以重现的内存泄漏，这是很简单的情况只要在测试环境模拟就可以排查了。</li>
+<li>对于偶然的内存泄漏，一般会与特殊的输入有关系。想稳定重现这种输入是很耗时的过程。如果不能通过代码的日志定位到这个特殊的输入，那么推荐去生产环境打印内存快照了。</li>
+<li>需要注意的是，打印内存快照是很耗 CPU 的操作，可能会对线上业务造成影响。快照工具推荐使用 heapdump 用来保存内存快照，使用 devtool 来查看内存快照。</li>
+<li>使用 heapdump 保存内存快照时，只会有 Node.js 环境中的对象，不会受到干扰(如果使用 node-inspector 的话，快照中会有前端的变量干扰)。</li>
+<li>PS：安装 heapdump 在某些 Node.js 版本上可能出错，建议使用 npm install heapdump -target=Node.js 版本来安装。</li>
+</ul>
+<h3 id="4、Buffer模块"><a href="#4、Buffer模块" class="headerlink" title="4、Buffer模块"></a>4、Buffer模块</h3><h4 id="4-1-新建Buffer会占用V8分配的内存吗"><a href="#4-1-新建Buffer会占用V8分配的内存吗" class="headerlink" title="4.1 新建Buffer会占用V8分配的内存吗"></a>4.1 新建Buffer会占用V8分配的内存吗</h4><p>不会，Buffer属于堆外内存，不是V8分配的。</p>
+<h4 id="4-2-Buffer-alloc和Buffer-allocUnsafe的区别"><a href="#4-2-Buffer-alloc和Buffer-allocUnsafe的区别" class="headerlink" title="4.2 Buffer.alloc和Buffer.allocUnsafe的区别"></a>4.2 Buffer.alloc和Buffer.allocUnsafe的区别</h4><p>Buffer.allocUnsafe创建的 Buffer 实例的底层内存是未初始化的。 新创建的 Buffer 的内容是未知的，可能包含敏感数据。 使用 Buffer.alloc() 可以创建以零初始化的 Buffer 实例。</p>
+<h4 id="4-3-Buffer的内存分配机制"><a href="#4-3-Buffer的内存分配机制" class="headerlink" title="4.3 Buffer的内存分配机制"></a>4.3 Buffer的内存分配机制</h4><p>为了高效的使用申请来的内存，Node采用了slab分配机制。slab是一种动态的内存管理机制。Node以8kb为界限来来区分Buffer为大对象还是小对象，如果是小于8kb就是小Buffer，大于8kb就是大Buffer。</p>
+<p>例如第一次分配一个1024字节的Buffer，Buffer.alloc(1024),那么这次分配就会用到一个slab，接着如果继续Buffer.alloc(1024),那么上一次用的slab的空间还没有用完，因为总共是8kb，1024+1024 = 2048个字节，没有8kb，所以就继续用这个slab给Buffer分配空间。</p>
+<p>如果超过8bk，那么直接用C++底层地宫的SlowBuffer来给Buffer对象提供空间。</p>
+<h4 id="4-4-Buffer乱码问题"><a href="#4-4-Buffer乱码问题" class="headerlink" title="4.4 Buffer乱码问题"></a>4.4 Buffer乱码问题</h4><p>例如一个份文件test.md里的内容如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">床前明月光，疑是地上霜，举头望明月，低头思故乡</span><br></pre></td></tr></table></figure>
+
+<p>我们这样读取就会出现乱码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var rs = require(&apos;fs&apos;).createReadStream(&apos;test.md&apos;, &#123;highWaterMark: 11&#125;);</span><br><span class="line">// 床前明???光，疑???地上霜，举头???明月，???头思故乡</span><br></pre></td></tr></table></figure>
+
+<p>一般情况下，只需要设置rs.setEncoding(‘utf8’)即可解决乱码问题</p>
+<h3 id="5、webSocket"><a href="#5、webSocket" class="headerlink" title="5、webSocket"></a>5、webSocket</h3><h4 id="5-1-webSocket与传统的http有什么优势"><a href="#5-1-webSocket与传统的http有什么优势" class="headerlink" title="5.1 webSocket与传统的http有什么优势"></a>5.1 webSocket与传统的http有什么优势</h4><ul>
+<li>客户端与服务器只需要一个TCP连接，比http长轮询使用更少的连接</li>
+<li>webSocket服务端可以推送数据到客户端</li>
+<li>更轻量的协议头，减少数据传输量</li>
+</ul>
+<h4 id="5-2-webSocket协议升级时什么，能简述一下吗？"><a href="#5-2-webSocket协议升级时什么，能简述一下吗？" class="headerlink" title="5.2 webSocket协议升级时什么，能简述一下吗？"></a>5.2 webSocket协议升级时什么，能简述一下吗？</h4><p>首先，WebSocket连接必须由浏览器发起，因为请求协议是一个标准的HTTP请求，格式如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">GET ws://localhost:3000/ws/chat HTTP/1.1</span><br><span class="line">Host: localhost</span><br><span class="line">Upgrade: websocket</span><br><span class="line">Connection: Upgrade</span><br><span class="line">Origin: http://localhost:3000</span><br><span class="line">Sec-WebSocket-Key: client-random-string</span><br><span class="line">Sec-WebSocket-Version: 13</span><br></pre></td></tr></table></figure>
+
+<p>该请求和普通的HTTP请求有几点不同：</p>
+<ul>
+<li>GET请求的地址不是类似/path/，而是以ws://开头的地址；</li>
+<li>请求头Upgrade: websocket和Connection: Upgrade表示这个连接将要被转换为WebSocket连接；</li>
+<li>Sec-WebSocket-Key是用于标识这个连接，并非用于加密数据；</li>
+<li>Sec-WebSocket-Version指定了WebSocket的协议版本。</li>
+</ul>
+<p>随后，服务器如果接受该请求，就会返回如下响应：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 101 Switching Protocols</span><br><span class="line">Upgrade: websocket</span><br><span class="line">Connection: Upgrade</span><br><span class="line">Sec-WebSocket-Accept: server-random-string</span><br></pre></td></tr></table></figure>
+
+<p>该响应代码101表示本次连接的HTTP协议即将被更改，更改后的协议就是Upgrade: websocket指定的WebSocket协议。</p>
+<h3 id="6、https"><a href="#6、https" class="headerlink" title="6、https"></a>6、https</h3><h4 id="6-1-https用哪些端口进行通信，这些端口分别有什么用"><a href="#6-1-https用哪些端口进行通信，这些端口分别有什么用" class="headerlink" title="6.1 https用哪些端口进行通信，这些端口分别有什么用"></a>6.1 https用哪些端口进行通信，这些端口分别有什么用</h4><ul>
+<li>443端口用来验证服务器端和客户端的身份，比如验证证书的合法性</li>
+<li>80端口用来传输数据（在验证身份合法的情况下，用来数据传输）</li>
+</ul>
+<h4 id="6-2-身份验证过程中会涉及到密钥，-对称加密，非对称加密，摘要的概念，请解释一下"><a href="#6-2-身份验证过程中会涉及到密钥，-对称加密，非对称加密，摘要的概念，请解释一下" class="headerlink" title="6.2 身份验证过程中会涉及到密钥， 对称加密，非对称加密，摘要的概念，请解释一下"></a>6.2 身份验证过程中会涉及到密钥， 对称加密，非对称加密，摘要的概念，请解释一下</h4><ul>
+<li>密钥：密钥是一种参数，它是在明文转换为密文或将密文转换为明文的算法中输入的参数。密钥分为对称密钥与非对称密钥，分别应用在对称加密和非对称加密上。</li>
+<li>对称加密：对称加密又叫做私钥加密，即信息的发送方和接收方使用同一个密钥去加密和解密数据。对称加密的特点是算法公开、加密和解密速度快，适合于对大数据量进行加密，常见的对称加密算法有DES、3DES、TDEA、Blowfish、RC5和IDEA。</li>
+<li>非对称加密：非对称加密也叫做公钥加密。非对称加密与对称加密相比，其安全性更好。对称加密的通信双方使用相同的密钥，如果一方的密钥遭泄露，那么整个通信就会被破解。而非对称加密使用一对密钥，即公钥和私钥，且二者成对出现。私钥被自己保存，不能对外泄露。公钥指的是公共的密钥，任何人都可以获得该密钥。用公钥或私钥中的任何一个进行加密，用另一个进行解密。</li>
+<li>摘要： 摘要算法又称哈希/散列算法。它通过一个函数，把任意长度的数据转换为一个长度固定的数据串（通常用16进制的字符串表示）。算法不可逆。</li>
+</ul>
+<h4 id="6-3-为什么需要CA机构对证书签名"><a href="#6-3-为什么需要CA机构对证书签名" class="headerlink" title="6.3 为什么需要CA机构对证书签名"></a>6.3 为什么需要CA机构对证书签名</h4><p>如果不签名会存在中间人攻击的风险，签名之后保证了证书里的信息，比如公钥、服务器信息、企业信息等不被篡改，能够验证客户端和服务器端的“合法性”。</p>
+<h4 id="6-4-https验证身份也就是TSL-SSL身份验证的过程"><a href="#6-4-https验证身份也就是TSL-SSL身份验证的过程" class="headerlink" title="6.4 https验证身份也就是TSL/SSL身份验证的过程"></a>6.4 https验证身份也就是TSL/SSL身份验证的过程</h4><p>简要图解如下</p>
+<p><strong><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://img.jbzj.com/file_images/article/201910/2019100915292742.jpg" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure></strong></p>
+<h3 id="7、进程通信"><a href="#7、进程通信" class="headerlink" title="7、进程通信"></a>7、进程通信</h3><h4 id="7-1-请简述一下node的多进程架构"><a href="#7-1-请简述一下node的多进程架构" class="headerlink" title="7.1 请简述一下node的多进程架构"></a>7.1 请简述一下node的多进程架构</h4><p>面对node单线程对多核CPU使用不足的情况，Node提供了child_process模块，来实现进程的复制，node的多进程架构是主从模式，如下所示：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://img.jbzj.com/file_images/article/201910/2019100915292743.png" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var fork = require(&apos;child_process&apos;).fork;</span><br><span class="line">var cpus = require(&apos;os&apos;).cpus();</span><br><span class="line">for(var i = 0; i &lt; cpus.length; i++)&#123;</span><br><span class="line"> fork(&apos;./worker.js&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在linux中，我们通过ps aux | grep worker.js查看进程</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://img.jbzj.com/file_images/article/201910/2019100915292844.png" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<p>这就是著名的主从模式，Master-Worker</p>
+<h4 id="7-2-请问创建子进程的方法有哪些，简单说一下它们的区别"><a href="#7-2-请问创建子进程的方法有哪些，简单说一下它们的区别" class="headerlink" title="7.2 请问创建子进程的方法有哪些，简单说一下它们的区别"></a>7.2 请问创建子进程的方法有哪些，简单说一下它们的区别</h4><p>创建子进程的方法大致有：</p>
+<ul>
+<li>spawn()： 启动一个子进程来执行命令</li>
+<li>exec(): 启动一个子进程来执行命令，与spawn()不同的是其接口不同，它有一个回调函数获知子进程的状况</li>
+<li>execFlie(): 启动一个子进程来执行可执行文件</li>
+<li>fork(): 与spawn()类似，不同电在于它创建Node子进程需要执行js文件</li>
+<li>spawn()与exec()、execFile()不同的是，后两者创建时可以指定timeout属性设置超时时间，一旦创建的进程超过设定的时间就会被杀死</li>
+<li>exec()与execFile()不同的是，exec()适合执行已有命令，execFile()适合执行文件。</li>
+</ul>
+<h4 id="7-3-请问你知道spawn在创建子进程的时候，第三个参数有一个stdio选项吗，这个选项的作用是什么，默认的值是什么。"><a href="#7-3-请问你知道spawn在创建子进程的时候，第三个参数有一个stdio选项吗，这个选项的作用是什么，默认的值是什么。" class="headerlink" title="7.3 请问你知道spawn在创建子进程的时候，第三个参数有一个stdio选项吗，这个选项的作用是什么，默认的值是什么。"></a>7.3 请问你知道spawn在创建子进程的时候，第三个参数有一个stdio选项吗，这个选项的作用是什么，默认的值是什么。</h4><ul>
+<li>选项用于配置在父进程和子进程之间建立的管道。</li>
+<li>默认情况下，子进程的 stdin、 stdout 和 stderr 会被重定向到 ChildProcess 对象上相应的 subprocess.stdin、subprocess.stdout 和 subprocess.stderr 流。</li>
+<li>这相当于将 options.stdio 设置为 [‘pipe’, ‘pipe’, ‘pipe’]。</li>
+</ul>
+<h4 id="7-4-请问实现一个node子进程被杀死，然后自动重启代码的思路"><a href="#7-4-请问实现一个node子进程被杀死，然后自动重启代码的思路" class="headerlink" title="7.4 请问实现一个node子进程被杀死，然后自动重启代码的思路"></a>7.4 请问实现一个node子进程被杀死，然后自动重启代码的思路</h4><p>在创建子进程的时候就让子进程监听exit事件，如果被杀死就重新fork一下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var createWorker = function()&#123;</span><br><span class="line"> var worker = fork(__dirname + &apos;worker.js&apos;)</span><br><span class="line"> worker.on(&apos;exit&apos;, function()&#123;</span><br><span class="line">  console.log(&apos;Worker&apos; + worker.pid + &apos;exited&apos;);</span><br><span class="line">  // 如果退出就创建新的worker</span><br><span class="line">  createWorker()</span><br><span class="line"> &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-5-在7-4的基础上，实现限量重启，比如我最多让其在1分钟内重启5次，超过了就报警给运维"><a href="#7-5-在7-4的基础上，实现限量重启，比如我最多让其在1分钟内重启5次，超过了就报警给运维" class="headerlink" title="7.5 在7.4的基础上，实现限量重启，比如我最多让其在1分钟内重启5次，超过了就报警给运维"></a>7.5 在7.4的基础上，实现限量重启，比如我最多让其在1分钟内重启5次，超过了就报警给运维</h4><ul>
+<li>思路大概是在创建worker的时候，就判断创建的这个worker是否在1分钟内重启次数超过5次</li>
+<li>所以每一次创建worker的时候都要记录这个worker 创建时间，放入一个数组队列里面，每次创建worker都去取队列里前5条记录</li>
+<li>如果这5条记录的时间间隔小于1分钟，就说明到了报警的时候了</li>
+</ul>
+<h4 id="7-6-如何实现进程间的状态共享，或者数据共享"><a href="#7-6-如何实现进程间的状态共享，或者数据共享" class="headerlink" title="7.6 如何实现进程间的状态共享，或者数据共享"></a>7.6 如何实现进程间的状态共享，或者数据共享</h4><p>我自己没用过Kafka这类消息队列工具，问了java,可以用类似工具来实现进程间通信，更好的方法欢迎留言</p>
+<h3 id="8、中间件"><a href="#8、中间件" class="headerlink" title="8、中间件"></a>8、中间件</h3><h4 id="8-1-如果使用过koa、egg这两个Node框架，请简述其中的中间件原理，最好用代码表示一下"><a href="#8-1-如果使用过koa、egg这两个Node框架，请简述其中的中间件原理，最好用代码表示一下" class="headerlink" title="8.1 如果使用过koa、egg这两个Node框架，请简述其中的中间件原理，最好用代码表示一下"></a>8.1 如果使用过koa、egg这两个Node框架，请简述其中的中间件原理，最好用代码表示一下</h4><figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://img.jbzj.com/file_images/article/201910/2019100915292845.png" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<p>上面是在网上找的一个示意图，就是说中间件执行就像洋葱一样，最早use的中间件，就放在最外层。处理顺序从左到右，左边接收一个request，右边输出返回response</p>
+<p>一般的中间件都会执行两次，调用next之前为第一次，调用next时把控制传递给下游的下一个中间件。当下游不再有中间件或者没有执行next函数时，就将依次恢复上游中间件的行为，让上游中间件执行next之后的代码</p>
+<p>例如下面这段代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const Koa = require(&apos;koa&apos;)</span><br><span class="line">const app = new Koa()</span><br><span class="line">app.use((ctx, next) =&gt; &#123;</span><br><span class="line"> console.log(1)</span><br><span class="line"> next()</span><br><span class="line"> console.log(3)</span><br><span class="line">&#125;)</span><br><span class="line">app.use((ctx) =&gt; &#123;</span><br><span class="line"> console.log(2)</span><br><span class="line">&#125;)</span><br><span class="line">app.listen(3001)</span><br><span class="line">执行结果是1=&gt;2=&gt;3</span><br></pre></td></tr></table></figure>
+
+<p>koa中间件实现源码大致思路如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">// 注意其中的compose函数，这个函数是实现中间件洋葱模型的关键</span><br><span class="line">// 场景模拟</span><br><span class="line">// 异步 promise 模拟</span><br><span class="line">const delay = async () =&gt; &#123;</span><br><span class="line"> return new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line"> setTimeout(() =&gt; &#123;</span><br><span class="line">  resolve();</span><br><span class="line"> &#125;, 2000);</span><br><span class="line"> &#125;);</span><br><span class="line">&#125;</span><br><span class="line">// 中间间模拟</span><br><span class="line">const fn1 = async (ctx, next) =&gt; &#123;</span><br><span class="line"> console.log(1);</span><br><span class="line"> await next();</span><br><span class="line"> console.log(2);</span><br><span class="line">&#125;</span><br><span class="line">const fn2 = async (ctx, next) =&gt; &#123;</span><br><span class="line"> console.log(3);</span><br><span class="line"> await delay();</span><br><span class="line"> await next();</span><br><span class="line"> console.log(4);</span><br><span class="line">&#125;</span><br><span class="line">const fn3 = async (ctx, next) =&gt; &#123;</span><br><span class="line"> console.log(5);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const middlewares = [fn1, fn2, fn3];</span><br><span class="line"></span><br><span class="line">// compose 实现洋葱模型</span><br><span class="line">const compose = (middlewares, ctx) =&gt; &#123;</span><br><span class="line"> const dispatch = (i) =&gt; &#123;</span><br><span class="line"> let fn = middlewares[i];</span><br><span class="line"> if(!fn)&#123; return Promise.resolve() &#125;</span><br><span class="line"> return Promise.resolve(fn(ctx, () =&gt; &#123;</span><br><span class="line">  return dispatch(i+1);</span><br><span class="line"> &#125;));</span><br><span class="line"> &#125;</span><br><span class="line"> return dispatch(0);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">compose(middlewares, 1);</span><br></pre></td></tr></table></figure>
+
+<h3 id="9、其它"><a href="#9、其它" class="headerlink" title="9、其它"></a>9、其它</h3><p>现在在重新过一遍node 12版本的主要API，有很多新发现，比如说</p>
+<ul>
+<li>fs.watch这个模块，事件的回调函数有一个参数是触发的事件名称，但是呢，无论我增删改，都是触发rename事件（如果更改是update事件，删除delete事件，重命名是rename事件，这样语义明晰该多好）。后来网上找到一个node-watch模块，此模块增删改都有对应的事件， 并且还高效的支持递归watch 文件。</li>
+<li>util模块有个promisify方法，可以让一个遵循异常优先的回调风格的函数，即 (err, value) =&gt; … 回调函数是最后一个参数，返回一个返回值是一个 promise 版本的函数。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const util = require(&apos;util&apos;);</span><br><span class="line">const fs = require(&apos;fs&apos;);</span><br><span class="line"></span><br><span class="line">const stat = util.promisify(fs.stat);</span><br><span class="line">stat(&apos;.&apos;).then((stats) =&gt; &#123;</span><br><span class="line"> // 处理 `stats`。</span><br><span class="line">&#125;).catch((error) =&gt; &#123;</span><br><span class="line"> // 处理错误。</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="10、杂想"><a href="#10、杂想" class="headerlink" title="10、杂想"></a>10、杂想</h4><ul>
+<li>crypto模块，可以考察基础的加密学知识，比如摘要算法有哪些（md5, sha1, sha256，加盐的md5,sha256等等）,接着可以问如何用md5自己模拟一个加盐的md5算法， 接着可以问加密算法（crypto.createCiphe）中的aes,eds算法的区别，分组加密模式有哪些（比如ECB,CBC,为什么ECB不推荐），node里的分组加密模式是哪种（CMM），这些加密算法里的填充和向量是什么意思，接着可以问数字签名和https的流程（为什么需要CA，为什么要对称加密来加密公钥等等）</li>
+<li>tcp/ip，可以问很多基础问题，比如链路层通过什么协议根据IP地址获取物理地址（arp），网关是什么，ip里的ICMP协议有什么用，tcp的三次握手，四次分手的过程是什么，tcp如何控制重发，网络堵塞TCP会怎么办等等，udp和tcp的区别，udp里的广播和组播是什么，组播在node里通过什么模块实现。</li>
+<li>os，操作系统相关基础，io的流程是什么（从硬盘里读取数据到内核的内存中，然后内核的内存将数据传入到调用io的应用程序的进程内存中），冯诺依曼体系是什么，进程和线程的区别等等（我最近在看马哥linux教程，因为自己不是科班出身，听了很多基础的计算机知识，受益匪浅，建议去bilibili看）</li>
+<li>linux相关操作知识（node涉及到后台，虽然是做中台，不涉及数据库，但是基本的linux操作还是要会的）</li>
+<li>node性能监控（自己也正在学习中）</li>
+<li>测试，因为用的egg框架，有很完善的学习单元测试的文档，省略这部分</li>
+<li>数据库可以问一些比如事务的等级有哪些，mysql默认的事务等级是什么，会产生什么问题，然后考一些mysql查询的笔试题。。。和常用优化技巧，node的mysql的orm工具使用过没有。。。（比如我自己是看的尚硅谷mysql初级+高级视频，书是看的mysql必知必会，我自己出于爱好学习一下。。。没有实战过）</li>
+</ul>
+<h3 id="第1题-什么是nodejs？我们在哪里使用它？"><a href="#第1题-什么是nodejs？我们在哪里使用它？" class="headerlink" title="第1题, 什么是nodejs？我们在哪里使用它？"></a>第1题, 什么是nodejs？我们在哪里使用它？</h3><p>Nodejs是服务器端的一门技术。它是基于Google V8 JavaScript引擎而开发的。用来开发可扩展的服务端程序。</p>
+<h3 id="第2题，为什么要使用node-js？"><a href="#第2题，为什么要使用node-js？" class="headerlink" title="第2题，为什么要使用node js？"></a>第2题，为什么要使用node js？</h3><p>nodejs会让我们的编程工作变得简单，它主要包含如下几点几个好处:</p>
+<p>执行快速。</p>
+<p>永远不会阻滞。</p>
+<p>JavaScript是通用的编程语言。</p>
+<p>异步处理机制。</p>
+<p>避免并行所带来的问题。</p>
+<h3 id="第3题，nodejs有哪些特点？"><a href="#第3题，nodejs有哪些特点？" class="headerlink" title="第3题，nodejs有哪些特点？"></a>第3题，nodejs有哪些特点？</h3><p>是单线程的，但是有很高的可扩展性，使用JavaScript作为主流编程语言。使用的是异步处理机制和事件驱动。处理高效。</p>
+<h3 id="第4题，-Set-immediate和set-time-out-区别在哪里"><a href="#第4题，-Set-immediate和set-time-out-区别在哪里" class="headerlink" title="第4题， Set immediate和set time out 区别在哪里?"></a>第4题， Set immediate和set time out 区别在哪里?</h3><p>Set immediate就是马上执行的意思。Set time out, 时间参数传为0，也想获得同样的功能。只不过前者要快一些。</p>
+<h3 id="第5题，如何更新nodejs的版本"><a href="#第5题，如何更新nodejs的版本" class="headerlink" title="第5题，如何更新nodejs的版本?"></a>第5题，如何更新nodejs的版本?</h3><p>npm install npm -g</p>
+<h3 id="第6题，为什么nodejs是单线程的？"><a href="#第6题，为什么nodejs是单线程的？" class="headerlink" title="第6题，为什么nodejs是单线程的？"></a>第6题，为什么nodejs是单线程的？</h3><p>Nodejs使用的是单线程没错，但是通过异步处理的方式，可以处理大量的数据吞吐量，从而有更好的性能和扩可扩展性。</p>
+<h3 id="第7题，什么是回调函数？"><a href="#第7题，什么是回调函数？" class="headerlink" title="第7题，什么是回调函数？"></a>第7题，什么是回调函数？</h3><p>回调函数是指用一个函数作为参数传入另一个函数，这个函数会被在某个时机调用。</p>
+<h3 id="第8题-什么叫做回调地狱"><a href="#第8题-什么叫做回调地狱" class="headerlink" title="第8题, 什么叫做回调地狱?"></a>第8题, 什么叫做回调地狱?</h3><p>回调地狱是由嵌套的回调函数导致的。这样的机制会导致有些函数无法到达，并且很难维护。</p>
+<h3 id="第9题，如何阻止回调地狱"><a href="#第9题，如何阻止回调地狱" class="headerlink" title="第9题，如何阻止回调地狱?"></a>第9题，如何阻止回调地狱?</h3><p>有三种方法， 对每个错误都要处理到， 保证代码的贯通， 程序代码模块化。</p>
+<h3 id="第10题，解释一下repl的作用"><a href="#第10题，解释一下repl的作用" class="headerlink" title="第10题，解释一下repl的作用?"></a>第10题，解释一下repl的作用?</h3><p>Read evaluate print loop， 用于测试，调试和实验用。</p>
+<h3 id="第11题，API函数的类型有哪些"><a href="#第11题，API函数的类型有哪些" class="headerlink" title="第11题，API函数的类型有哪些?"></a>第11题，API函数的类型有哪些?</h3><p>有两种，</p>
+<p>一种是阻滞型函数。阻滞型函数会等待操作完成以后再进行下一步。</p>
+<p>另外一种是非阻滞型函数。这种函数使用回调函数来处理当前函数获取的结果。</p>
+<h3 id="第12题，回调函数的第1个参数是什么"><a href="#第12题，回调函数的第1个参数是什么" class="headerlink" title="第12题，回调函数的第1个参数是什么?"></a>第12题，回调函数的第1个参数是什么?</h3><p>通常是错误对象。如果这个参数为空，表示没有错误。</p>
+<h3 id="第13题，NPM的作用是什么"><a href="#第13题，NPM的作用是什么" class="headerlink" title="第13题，NPM的作用是什么?"></a>第13题，NPM的作用是什么?</h3><p>Node package manager, 主要有两个功能。</p>
+<p>它是一个网端模块的存储介质。</p>
+<p>它的另一个作用是安装程序依赖和版本管理。</p>
+<h3 id="第14题，nodejs和ajax的区别是什么？"><a href="#第14题，nodejs和ajax的区别是什么？" class="headerlink" title="第14题，nodejs和ajax的区别是什么？"></a>第14题，nodejs和ajax的区别是什么？</h3><p>Nodejs和ajax也就是asynchronous JavaScript and xml，都是通过JavaScript来表现的，但是他们的目的截然不同。</p>
+<p>Ajax是设计用来动态的更新页面的某个区域，从而不需要更新整个页面。</p>
+<p>Nodejs是用来开发客户服务器类型应用的。</p>
+<h3 id="第15题，解释一下nodejs中chaining"><a href="#第15题，解释一下nodejs中chaining" class="headerlink" title="第15题，解释一下nodejs中chaining."></a>第15题，解释一下nodejs中chaining.</h3><p>Chaining是指从一个数据流到另一个数据流的链接，从而实现多个流操作。</p>
+<h3 id="第16题，什么是streams？解释一下有哪些类型"><a href="#第16题，什么是streams？解释一下有哪些类型" class="headerlink" title="第16题，什么是streams？解释一下有哪些类型?"></a>第16题，什么是streams？解释一下有哪些类型?</h3><p>流的概念是不间断的，它可以不间断的从某个地方读取数据，或者向某个地方写入数据。</p>
+<p>有4种类型的流数据。可读，可写。既可读，又可写，转化。</p>
+<h3 id="第17题，退出代码是什么？有哪些退出代码"><a href="#第17题，退出代码是什么？有哪些退出代码" class="headerlink" title="第17题，退出代码是什么？有哪些退出代码?"></a>第17题，退出代码是什么？有哪些退出代码?</h3><p>退出代码是指中断nodejs运行时返回的代码。</p>
+<p>有这么几种unused, uncaught fatal exception, fatal error, non function internal exception handler, internal exception handler run time failure,internal JavaScript evaluation failure.</p>
+<h3 id="第18题-什么是globals"><a href="#第18题-什么是globals" class="headerlink" title="第18题, 什么是globals?"></a>第18题, 什么是globals?</h3><p>有三个global的关键字。</p>
+<p>Global代表的是最上层的命名空间,用来管理所有其他的全局对象。</p>
+<p>Process 是一个全局对象，可以把异步函数转化成异步回调, 它可以在任何地方被访问，它主要是用来返回系统的应用信息和环境信息.</p>
+<p>Buffer, 是用来处理二进制数据的类.</p>
+<h3 id="第19题，-Angular-js和node-js的区别是什么"><a href="#第19题，-Angular-js和node-js的区别是什么" class="headerlink" title="第19题， Angular js和node js的区别是什么?"></a>第19题， Angular js和node js的区别是什么?</h3><p>Angular js是网络应用开发框架，而nodejs是一个实时系统。</p>
+<h3 id="第20题-为什么统一的风格儿非常重要，有什么工具可以保证这一点"><a href="#第20题-为什么统一的风格儿非常重要，有什么工具可以保证这一点" class="headerlink" title="第20题, 为什么统一的风格儿非常重要，有什么工具可以保证这一点?"></a>第20题, 为什么统一的风格儿非常重要，有什么工具可以保证这一点?</h3><p>统一的风格可以让所有的组成员按照一种规矩来写代码。工具有Standard和eslint.</p>
+<h3 id="第21题-用什么方法来处理没有被处理的异常"><a href="#第21题-用什么方法来处理没有被处理的异常" class="headerlink" title="第21题, 用什么方法来处理没有被处理的异常?"></a>第21题, 用什么方法来处理没有被处理的异常?</h3><p>在应用和node js之间使用domain来处理这样的异常。</p>
+<h3 id="第22题-Node-js是如何支持多处理器平台的"><a href="#第22题-Node-js是如何支持多处理器平台的" class="headerlink" title="第22题, Node js是如何支持多处理器平台的?"></a>第22题, Node js是如何支持多处理器平台的?</h3><p>Cluster模块是用来支持这方面的。它可以允许多个nodejs工作进程运行在相同的端口上。</p>
+<h3 id="第23题-如何配置开发模式和生产模式的环境"><a href="#第23题-如何配置开发模式和生产模式的环境" class="headerlink" title="第23题, 如何配置开发模式和生产模式的环境?"></a>第23题, 如何配置开发模式和生产模式的环境?</h3><p>首先有一个配置文件，然后通过环境变量参数来获取对应的配置内容。</p>
+<h3 id="第24题-nodejs中跟时间相关的函数有哪些"><a href="#第24题-nodejs中跟时间相关的函数有哪些" class="headerlink" title="第24题, nodejs中跟时间相关的函数有哪些?"></a>第24题, nodejs中跟时间相关的函数有哪些?</h3><p>Set time out, clear time out.</p>
+<p>Set interval, clear interval.</p>
+<p>Set immediate, clear immediate.</p>
+<p>Process.nextTick.</p>
+<h3 id="第25题-解释一下什么是reactor-pattern。"><a href="#第25题-解释一下什么是reactor-pattern。" class="headerlink" title="第25题, 解释一下什么是reactor pattern。"></a>第25题, 解释一下什么是reactor pattern。</h3><p>Reactor pattern主要是非阻滞的i/o操作。提供一个回调函数来关联io操作。io请求完成以后会不会提交给demultiplexer, 这是一个通知接口用来处理并发性的非阻滞的io操作，这个功能是通过查询一个event loop来实现的.</p>
+<h3 id="第26题，lts版本是什么意思？"><a href="#第26题，lts版本是什么意思？" class="headerlink" title="第26题，lts版本是什么意思？"></a>第26题，lts版本是什么意思？</h3><p>也就是long term support版本。至少会被支持18个月。使用的是偶数来标识。这种版本有稳定性和安全性的保证。</p>
+<h3 id="第27题，你为什么需要把express-APP和server分开？"><a href="#第27题，你为什么需要把express-APP和server分开？" class="headerlink" title="第27题，你为什么需要把express APP和server分开？"></a>第27题，你为什么需要把express APP和server分开？</h3><p>分开以后方便维护以及测试，在测试某个模块的时候，尤其是APP模块的时候，你不需要去对网络方面的连接配置做工作。</p>
+<h3 id="第28题，next-tick和setImmediate的区别是什么？"><a href="#第28题，next-tick和setImmediate的区别是什么？" class="headerlink" title="第28题，next tick和setImmediate的区别是什么？"></a>第28题，next tick和setImmediate的区别是什么？</h3><p>Next tick会等待当前的event执行完成或者下一轮儿事件循环到达再执行。</p>
+<p>Set immediate, 会在下一轮的事件循环中，执行回调并且返回当前的循环来做读写操作.</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-03-31T12:15:30.000Z" itemprop="dateUpdated">2024-03-31 20:15:30</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/knowledges/node.html" target="_blank" rel="external">https://qw66.gitee.io/knowledges/node.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node/">Node</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/node.html&title=《Node》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/node.html&title=《Node》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/node.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Node》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/node.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/node.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/knowledges/jquery.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">JQuery</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/knowledges/npm.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">npm</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/node.html&title=《Node》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/node.html&title=《Node》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/node.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Node》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/node.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/node.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABv0lEQVR42u3aS47DIAwA0Nz/0p0DzED8iWk0eqyqpIVHF5aNua7w+JRGZM5rYuDi4ra5kSUjiN9v909W899sGxcX9yB3v/xq4UjwWr3dz798jouL+2LuihL/jIuL+1+58bAV3yQuLu57uJHip7OZSMh7uFbDxcVtcOPhae7zyPkuLi5uiTvRGsmmL4nVcXFxj3BrCUrtkDTbmFl+ExcXd5g7kaDUipZ9IXTN5VO4uLiBY5HIk0jDNds+Sac4uLi4R7id1kgEXSul/hDi4uIOc7MTTRQ/8etfuLi4Z7jZMiaS4tQOQdLFDy4u7hi3nx/1g2C8rMLFxT3JzaYg/V/VAiguLu57uE81VB6r1XBxcQ+eM2RLl07Sk53tgZsduLi4JW6nmIkHtdqcN3dGcHFxx7j90iWbxNSOX3FxcU9ysxcrO5czsqtkXuPi4na5n+SobaDfhsHFxT3JjY9sWyUSwjq/xcXFneZGgtc+ACWuUASOS27+UVxc3IPc+GWs2hHqeK2Gi4v7VW72wkQ2hF213eDi4n6V2y9gshVYqJWCi4s7wM22WmvXOuPodE8YFxf3UW6tvbpPX55F4+LiHuT+AP4Ae4p4AyKfAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

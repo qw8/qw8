@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>yarn | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="yarn">
+    <meta name="description" content="1.1. 什么是 yarn?Yarn 是 facebook 发布的一款取代 npm 的包管理工具。 1.2. yarn 的特点1.2.1. 速度超快。Yarn 缓存了每个下载过的包, 所以再次使用时无需重复下载。 同时利用并行下载以最大化资源利用率, 因此安装速度更快。 1.2.2. 超级安全。在执行代码之前, Yarn 会通过算法校验每个安装包的完整性。 1.2.3. 超级可靠。使用详细、简洁的">
+<meta name="keywords" content="yarn">
+<meta property="og:type" content="article">
+<meta property="og:title" content="yarn">
+<meta property="og:url" content="https://qw66.gitee.io/knowledges/yarn.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="1.1. 什么是 yarn?Yarn 是 facebook 发布的一款取代 npm 的包管理工具。 1.2. yarn 的特点1.2.1. 速度超快。Yarn 缓存了每个下载过的包, 所以再次使用时无需重复下载。 同时利用并行下载以最大化资源利用率, 因此安装速度更快。 1.2.2. 超级安全。在执行代码之前, Yarn 会通过算法校验每个安装包的完整性。 1.2.3. 超级可靠。使用详细、简洁的">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2024-05-20T10:30:48.063Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="yarn">
+<meta name="twitter:description" content="1.1. 什么是 yarn?Yarn 是 facebook 发布的一款取代 npm 的包管理工具。 1.2. yarn 的特点1.2.1. 速度超快。Yarn 缓存了每个下载过的包, 所以再次使用时无需重复下载。 同时利用并行下载以最大化资源利用率, 因此安装速度更快。 1.2.2. 超级安全。在执行代码之前, Yarn 会通过算法校验每个安装包的完整性。 1.2.3. 超级可靠。使用详细、简洁的">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">yarn</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">yarn</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-08-27T11:21:17.000Z" itemprop="datePublished" class="page-time">
+  2020-08-27
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-1-什么是-yarn"><span class="post-toc-number">1.</span> <span class="post-toc-text">1.1. 什么是 yarn?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-2-yarn-的特点"><span class="post-toc-number">2.</span> <span class="post-toc-text">1.2. yarn 的特点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-3-为什么会出现-yarn"><span class="post-toc-number">3.</span> <span class="post-toc-text">1.3. 为什么会出现 yarn</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-4-yarn-的安装"><span class="post-toc-number">4.</span> <span class="post-toc-text">1.4. yarn 的安装</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-5-yarn-的常用命令"><span class="post-toc-number">5.</span> <span class="post-toc-text">1.5. yarn 的常用命令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-6-npm-与-yarn-命令比较"><span class="post-toc-number">6.</span> <span class="post-toc-text">1.6. npm 与 yarn 命令比较</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-7-使用-yrm-工具管理一些-npm-源"><span class="post-toc-number">7.</span> <span class="post-toc-text">1.7. 使用 yrm 工具管理一些 npm 源</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-8-快速删除-node-modules"><span class="post-toc-number">8.</span> <span class="post-toc-text">1.8. 快速删除 node_modules</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-9-Yarn-docs"><span class="post-toc-number">9.</span> <span class="post-toc-text">1.9. Yarn docs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#yarn与npm区别"><span class="post-toc-number">10.</span> <span class="post-toc-text">yarn与npm区别</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Yarn的优点？"><span class="post-toc-number">10.1.</span> <span class="post-toc-text">Yarn的优点？</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Yarn和npm命令对比"><span class="post-toc-number">10.2.</span> <span class="post-toc-text">Yarn和npm命令对比</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#yarn使用报错系统上禁止运行脚本"><span class="post-toc-number">11.</span> <span class="post-toc-text">yarn使用报错系统上禁止运行脚本</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#yarn使用报错信息"><span class="post-toc-number">11.1.</span> <span class="post-toc-text">yarn使用报错信息</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#解决方法"><span class="post-toc-number">11.2.</span> <span class="post-toc-text">解决方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#再次尝试"><span class="post-toc-number">11.3.</span> <span class="post-toc-text">再次尝试</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#怎么更新yarn-lock文件"><span class="post-toc-number">12.</span> <span class="post-toc-text">怎么更新yarn.lock文件</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-knowledges/yarn"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">yarn</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-08-27 19:21:17" datetime="2020-08-27T11:21:17.000Z"  itemprop="datePublished">2020-08-27</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="1-1-什么是-yarn"><a href="#1-1-什么是-yarn" class="headerlink" title="1.1. 什么是 yarn?"></a>1.1. 什么是 yarn?</h3><p>Yarn 是 facebook 发布的一款取代 npm 的包管理工具。</p>
+<h3 id="1-2-yarn-的特点"><a href="#1-2-yarn-的特点" class="headerlink" title="1.2. yarn 的特点"></a>1.2. yarn 的特点</h3><p>1.2.1. 速度超快。<br>Yarn 缓存了每个下载过的包, 所以再次使用时无需重复下载。 同时利用并行下载以最大化资源利用率, 因此安装速度更快。</p>
+<p>1.2.2. 超级安全。<br>在执行代码之前, Yarn 会通过算法校验每个安装包的完整性。</p>
+<p>1.2.3. 超级可靠。<br>使用详细、简洁的锁文件格式和明确的安装算法, Yarn 能够保证在不同系统上无差异的工作。</p>
+<h3 id="1-3-为什么会出现-yarn"><a href="#1-3-为什么会出现-yarn" class="headerlink" title="1.3. 为什么会出现 yarn"></a>1.3. 为什么会出现 yarn</h3><p>npm 存在一些历史遗留问题, npm 很多依赖不会指定版本号, 默认会安装最新的版本, 这样就会出现问题: 当新版本无法兼容之前的项目, 原项目可能会出现 bug。yarn 为了解决这个问题推出了 yarn.lock 的机制, 把依赖模块的版本号全部锁定, 当你执行 yarn install 的时候, yarn 会读取这个文件获得依赖的版本号, 然后依照这个版本号去安装对应的依赖模块, 这样依赖就会被锁定, 以后再也不用担心版本号的问题了。其他人或者其他环境下使用的时候, 把这个 yarn.lock 拷贝到相应的环境项目下再安装即可。<br>注意: 这个文件不要手动修改它, 当你使用一些操作如 yarn add 时, yarn 会自动更新 yarn.lock。</p>
+<h3 id="1-4-yarn-的安装"><a href="#1-4-yarn-的安装" class="headerlink" title="1.4. yarn 的安装"></a>1.4. yarn 的安装</h3><p>1.4.1. 下载 node.js, 使用 npm 安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g yarn</span><br></pre></td></tr></table></figure>
+
+<p>查看版本: yarn –version</p>
+<p>1.4.2. Yarn 淘宝源安装, 分别复制粘贴以下代码行到黑窗口运行即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn config set registry https://registry.npm.taobao.org -g</span><br><span class="line">yarn config set sass_binary_site http://cdn.npm.taobao.org/dist/node-sass -g</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-5-yarn-的常用命令"><a href="#1-5-yarn-的常用命令" class="headerlink" title="1.5. yarn 的常用命令"></a>1.5. yarn 的常用命令</h3><p>1.5.1. 初始化项目</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn init // 同 npm init, 执行输入信息后, 会生成 package.json 文件</span><br></pre></td></tr></table></figure>
+
+<p>1.5.2. yarn 的配置项</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yarn config list // 显示所有配置项</span><br><span class="line">yarn config get &lt;key&gt; // 显示某配置项</span><br><span class="line">yarn config delete &lt;key&gt; // 删除某配置项</span><br><span class="line">yarn config set &lt;key&gt; &lt;value&gt; [-g|--global] // 设置配置项</span><br></pre></td></tr></table></figure>
+
+<p>1.5.3. 安装包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">yarn install // 安装 package.json 里所有包, 并将包及它的所有依赖项保存进 yarn.lock</span><br><span class="line">yarn install --flat // 安装一个包的单一版本</span><br><span class="line">yarn install --force // 强制重新下载所有包</span><br><span class="line">yarn install --production // 只安装 dependencies 里的包</span><br><span class="line">yarn install --no-lockfile // 不读取或生成 yarn.lock</span><br><span class="line">yarn install --pure-lockfile // 不生成 yarn.lock</span><br></pre></td></tr></table></figure>
+
+<p>1.5.4. 添加包 (会更新 package.json 和 yarn.lock)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yarn add [package] // 在当前的项目中添加一个依赖包, 会自动更新到 package.json 和 yarn.lock 文件中</span><br><span class="line">yarn add [package]@[version] // 安装指定版本, 这里指的是主要版本, 如果需要精确到小版本, 使用 - E 参数</span><br><span class="line">yarn add [package]@[tag] // 安装某个 tag(比如 beta,next 或者 latest)</span><br></pre></td></tr></table></figure>
+
+<p>默认安装包的主要版本里的最新版本, 下面两个命令可以指定版本:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn add --exact/-E // 安装包的精确版本。例如 yarn add foo@1.2.3 会接受 1.9.1 版, 但是 yarn add foo@1.2.3 --exact 只会接受 1.2.3 版</span><br><span class="line">yarn add --tilde/-T // 安装包的次要版本里的最新版。例如 yarn add foo@1.2.3 --tilde 会接受 1.2.9, 但不接受 1.3.0</span><br></pre></td></tr></table></figure>
+
+<p>1.5.5. 发布包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn publish</span><br></pre></td></tr></table></figure>
+
+<p>1.5.6. 移除一个包<br>yarn remove <packagename>: 移除一个包, 会自动更新 package.json 和 yarn.lock</packagename></p>
+<p>1.5.7. 更新一个依赖<br>yarn upgrade用于更新包到基于规范范围的最新版本</p>
+<p>更新到特定版本，可以指定版本号 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn upgrade vue@2.7.16</span><br></pre></td></tr></table></figure>
+
+<p>1.5.8. 运行脚本<br>yarn run 用来执行在 package.json 中 scripts 属性下定义的脚本</p>
+<p>1.5.9. 显示某个包的信息<br>yarn info <packagename> 可以用来查看某个模块的最新版本信息</packagename></p>
+<p>1.5.10. 缓存<br>yarn cache<br>yarn cache list # 列出已缓存的每个包 yarn cache dir # 返回 全局缓存位置 yarn cache clean # 清除缓存</p>
+<h3 id="1-6-npm-与-yarn-命令比较"><a href="#1-6-npm-与-yarn-命令比较" class="headerlink" title="1.6. npm 与 yarn 命令比较"></a>1.6. npm 与 yarn 命令比较</h3><table>
+<thead>
+<tr>
+<th>NPM</th>
+<th>YARN</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>npm init</td>
+<td>yarn init</td>
+<td>初始化某个项目</td>
+</tr>
+<tr>
+<td>npm install/link</td>
+<td>yarn install/link</td>
+<td>默认的安装依赖操作</td>
+</tr>
+<tr>
+<td>npm install taco –save</td>
+<td>yarn add taco</td>
+<td>安装某个依赖, 并且默认保存到 package</td>
+</tr>
+<tr>
+<td>npm uninstall taco –save</td>
+<td>yarn remove taco</td>
+<td>移除某个依赖项目</td>
+</tr>
+<tr>
+<td>npm install taco –save –dev</td>
+<td>yarn add taco –dev</td>
+<td>安装某个开发时依赖项目</td>
+</tr>
+<tr>
+<td>npm update taco –save</td>
+<td>yarn upgrade taco</td>
+<td>更新某个依赖项目</td>
+</tr>
+<tr>
+<td>npm install taco –global</td>
+<td>yarn global add taco</td>
+<td>安装某个全局依赖项目</td>
+</tr>
+<tr>
+<td>npm publish/login/logout</td>
+<td>yarn publish/login/logout</td>
+<td>发布 / 登录 / 登出, 一系列 NPM Registry 操作</td>
+</tr>
+<tr>
+<td>npm run/test</td>
+<td>yarn run/test</td>
+<td>运行某个命令</td>
+</tr>
+</tbody></table>
+<h3 id="1-7-使用-yrm-工具管理一些-npm-源"><a href="#1-7-使用-yrm-工具管理一些-npm-源" class="headerlink" title="1.7. 使用 yrm 工具管理一些 npm 源"></a>1.7. 使用 yrm 工具管理一些 npm 源</h3><p>1.7.1. 安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn global add yrm</span><br></pre></td></tr></table></figure>
+
+<p>1.7.2. 查看可用源</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yrm ls</span><br></pre></td></tr></table></figure>
+
+<p>1.7.3. 选择源</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yrm use yarn</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-8-快速删除-node-modules"><a href="#1-8-快速删除-node-modules" class="headerlink" title="1.8. 快速删除 node_modules"></a>1.8. 快速删除 node_modules</h3><p>手动删除真的很慢:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">安装: npm install rimraf -g</span><br><span class="line">使用: rimraf node_modules</span><br></pre></td></tr></table></figure>
+
+<p>rimraf 是 node 的一个包, 可以快速删除 node_modules, 再也不用等半天了。</p>
+<h3 id="1-9-Yarn-docs"><a href="#1-9-Yarn-docs" class="headerlink" title="1.9. Yarn docs"></a>1.9. Yarn docs</h3><p>Yarn 1 (Classic): <a href="https://classic.yarnpkg.com/en/docs/cli/run" target="_blank" rel="noopener">https://classic.yarnpkg.com/en/docs/cli/run</a><br>Yarn 2+: <a href="https://yarnpkg.com/getting-started/migration" target="_blank" rel="noopener">https://yarnpkg.com/getting-started/migration</a></p>
+<h3 id="yarn与npm区别"><a href="#yarn与npm区别" class="headerlink" title="yarn与npm区别"></a>yarn与npm区别</h3><p>Yarn和npm都是JavaScript的包管理工具，用于在项目中安装、更新、删除和管理依赖关系。</p>
+<p>以下是Yarn和npm之间的一些区别：</p>
+<ol>
+<li>性能：Yarn在性能方面通常比npm更快。Yarn使用并行和缓存机制来加快包的下载和安装速度。</li>
+<li>离线模式：Yarn可以离线运行，因为它会缓存所有已安装过的包。这使得在没有网络连接或网络不稳定的情况下，能够继续安装依赖项。</li>
+<li>安全性：Yarn通过使用哈希算法验证每个下载的包的完整性，以提供更高的安全性。</li>
+<li>依赖关系解析：Yarn使用锁定文件 (yarn.lock) 来确保在不同设备上的开发者之间共享相同的依赖版本。这可以防止由于环境差异而引起的构建问题。</li>
+<li>脚本执行：npm允许在项目中运行自定义脚本（例如npm run build），而Yarn则需要使用yarn run命令来运行类似的脚本。</li>
+</ol>
+<p>不论选择使用Yarn还是npm，都要根据项目的需求和团队的偏好来决定。</p>
+<h4 id="Yarn的优点？"><a href="#Yarn的优点？" class="headerlink" title="Yarn的优点？"></a>Yarn的优点？</h4><ul>
+<li>速度快 。速度快主要来自以下两个方面：</li>
+</ul>
+<ol>
+<li>并行安装：无论 npm 还是 Yarn 在执行包的安装时，都会执行一系列任务。npm 是按照队列执行每个 package，也就是说必须要等到当前 package 安装完成之后，才能继续后面的安装。而 Yarn 是同步执行所有任务，提高了性能。</li>
+<li>离线模式：如果之前已经安装过一个软件包，用Yarn再次安装时之间从缓存中获取，就不用像npm那样再从网络下载了。</li>
+</ol>
+<ul>
+<li>安装版本统一：为了防止拉取到不同的版本，Yarn 有一个锁定文件 (lock file) 记录了被确切安装上的模块的版本号。每次只要新增了一个模块，Yarn 就会创建（或更新）yarn.lock 这个文件。这么做就保证了，每一次拉取同一个项目依赖时，使用的都是一样的模块版本。npm 其实也有办法实现处处使用相同版本的 packages，但需要开发者执行 npm shrinkwrap 命令。这个命令将会生成一个锁定文件，在执行 npm install 的时候，该锁定文件会先被读取，和 Yarn 读取 yarn.lock 文件一个道理。npm 和 Yarn 两者的不同之处在于，Yarn 默认会生成这样的锁定文件，而 npm 要通过 shrinkwrap 命令生成 npm-shrinkwrap.json 文件，只有当这个文件存在的时候，packages 版本信息才会被记录和更新。</li>
+<li>更简洁的输出：npm 的输出信息比较冗长。在执行 npm install <package> 的时候，命令行里会不断地打印出所有被安装上的依赖。相比之下，Yarn 简洁太多：默认情况下，结合了 emoji直观且直接地打印出必要的信息，也提供了一些命令供开发者查询额外的安装信息。</package></li>
+<li>多注册来源处理：所有的依赖包，不管他被不同的库间接关联引用多少次，安装这个包时，只会从一个注册来源去装，要么是 npm 要么是 bower, 防止出现混乱不一致。</li>
+<li>更好的语义化： yarn改变了一些npm命令的名称，比如 yarn add/remove，感觉上比 npm 原本的 install/uninstall 要更清晰。</li>
+</ul>
+<h4 id="Yarn和npm命令对比"><a href="#Yarn和npm命令对比" class="headerlink" title="Yarn和npm命令对比"></a>Yarn和npm命令对比</h4><table>
+<thead>
+<tr>
+<th>npm</th>
+<th>yarn</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>npm install</td>
+<td>yarn</td>
+</tr>
+<tr>
+<td>npm install react –save</td>
+<td>yarn add react</td>
+</tr>
+<tr>
+<td>npm uninstall react –save</td>
+<td>yarn remove react</td>
+</tr>
+<tr>
+<td>npm install react –save-dev</td>
+<td>yarn add react –dev</td>
+</tr>
+<tr>
+<td>npm update –save</td>
+<td>yarn upgrade</td>
+</tr>
+</tbody></table>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">1、查看版本</span><br><span class="line">yarn --version</span><br><span class="line">npm -version(或者 node -v)</span><br><span class="line"></span><br><span class="line">2、安装淘宝镜像</span><br><span class="line">yarn config set registry &apos;https://registry.npm.taobao.org&apos;</span><br><span class="line">npm install -g cnpm --registry=http://registry.npm.taobao.org</span><br><span class="line"></span><br><span class="line">3、初始化某个项目</span><br><span class="line">yarn init                                   </span><br><span class="line">npm init</span><br><span class="line"></span><br><span class="line">4、默认安装项目依赖</span><br><span class="line">yarn install</span><br><span class="line">cnpm install</span><br><span class="line"></span><br><span class="line">5、安装某个依赖，并且默认保存到package</span><br><span class="line">yarn add xxx</span><br><span class="line">cnpm install xxx --save</span><br><span class="line"></span><br><span class="line">6、卸载某个项目依赖</span><br><span class="line">yarn remove xxx</span><br><span class="line">cnpm uninstall xxx --save</span><br><span class="line"></span><br><span class="line">7、更新某个项目依赖</span><br><span class="line">yarn upgrade xxx</span><br><span class="line">cnpm update xxx --save</span><br><span class="line"></span><br><span class="line">8、安装某个全局的项目依赖</span><br><span class="line">yarn global add xxx</span><br><span class="line">cnpm install xxx -g</span><br><span class="line"></span><br><span class="line">9、安装某个特定版本号的项目依赖</span><br><span class="line">yarn add xxx@</span><br><span class="line">cnpm install xxx@1.2.33 --save</span><br><span class="line"></span><br><span class="line">10、发布/登录/登出，一系列NPM Registry操作</span><br><span class="line">yarn publish/login/logout</span><br><span class="line">npm publish/login/logout</span><br><span class="line"></span><br><span class="line">11、运行某个命令</span><br><span class="line">yarn run/test</span><br><span class="line">npm run/test</span><br></pre></td></tr></table></figure>
+
+<h3 id="yarn使用报错系统上禁止运行脚本"><a href="#yarn使用报错系统上禁止运行脚本" class="headerlink" title="yarn使用报错系统上禁止运行脚本"></a>yarn使用报错系统上禁止运行脚本</h3><h4 id="yarn使用报错信息"><a href="#yarn使用报错信息" class="headerlink" title="yarn使用报错信息"></a>yarn使用报错信息</h4><p>yarn : 无法加载文件 C:\Users\Administrator\AppData\Roaming\npm\ya<br>rn.ps1，因为在此系统上禁止运行脚本。有关详细信息</p>
+<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p>要解决这个问题，可以通过以下步骤打开 PowerShell 的管理权限窗口，修改 PowerShell 执行策略即可：</p>
+<p>1.以管理员身份运行 PowerShell 终端。方法是：在开始菜单中找到“Windows PowerShell”，右键点击它并选择“以管理员身份运行”。</p>
+<p>2.运行以下命令：Get-ExecutionPolicy -List</p>
+<p>3.查看目前 PowerShell 的执行策略。输出结果应该类似于下面这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Scope    ExecutionPolicy</span><br><span class="line">-----    ---------------</span><br></pre></td></tr></table></figure>
+
+<p>MachinePolicy Undefined<br>UserPolicy Undefined<br>Process RemoteSigned<br>CurrentUser Restricted<br>LocalMachine Undefined<br>4.把当前用户的执行策略改为 RemoteSigned 或者更为宽松的 Unrestricted，方法是运行以下命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy RemoteSigned -Scope CurrentUser 或者 Set-ExecutionPolicy Unrestricted -Scope CurrentUser</span><br></pre></td></tr></table></figure>
+
+<p>5.输入 Y 并按回车确认更改。然后再次输入以下命令验证更改是否生效：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Get-ExecutionPolicy -List</span><br></pre></td></tr></table></figure>
+
+<p>6.输出应该会显示类似如下所示的结果：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Scope    ExecutionPolicy</span><br><span class="line">-----    ---------------</span><br></pre></td></tr></table></figure>
+
+<p>MachinePolicy Undefined<br>UserPolicy Undefined<br>Process Undefined<br>CurrentUser RemoteSigned<br>LocalMachine Undefined</p>
+<h4 id="再次尝试"><a href="#再次尝试" class="headerlink" title="再次尝试"></a>再次尝试</h4><p>现在再尝试使用 yarn 进行安装，应该就能正常执行了。完成之后，如果担心安全问题可以把 PowerShell 的执行策略修改回 Restricted 阻止运行脚本。</p>
+<h3 id="怎么更新yarn-lock文件"><a href="#怎么更新yarn-lock文件" class="headerlink" title="怎么更新yarn.lock文件"></a>怎么更新yarn.lock文件</h3><p>要更新<code>yarn.lock</code>文件，你可以遵循以下步骤：</p>
+<ol>
+<li><p><strong>安装或更新依赖包</strong>：</p>
+<ul>
+<li>添加新依赖：使用命令<code>yarn add [package_name]</code>来添加一个新的依赖包到项目中。这将自动更新<code>yarn.lock</code>文件以包含新包及其依赖的精确版本。</li>
+<li>更新依赖包：要更新一个已存在的依赖到最新版本，可以使用<code>yarn upgrade [package_name]</code>。如果想更新到特定版本，可以指定版本号，如<code>yarn upgrade [package_name]@[version]</code>。此操作同样会更新<code>yarn.lock</code>文件。</li>
+<li>删除依赖：使用<code>yarn remove [package_name]</code>来移除不再需要的依赖，这也会相应地更新<code>yarn.lock</code>文件。</li>
+</ul>
+</li>
+<li><p><strong>整体更新所有依赖</strong>：</p>
+<ul>
+<li>要将所有依赖更新到它们各自的最新版本（符合<code>package.json</code>中的版本范围），可以运行<code>yarn upgrade</code>或<code>yarn upgrade-interactive</code>。后者提供了一个交互式的界面，让你可以选择要更新的包。</li>
+</ul>
+</li>
+<li><p><strong>解决冲突或不一致</strong>：</p>
+<ul>
+<li>在团队协作中，如果<code>yarn.lock</code>文件存在合并冲突或需要与远程分支同步，首先解决冲突，然后运行<code>yarn install</code>以确保本地环境与<code>yarn.lock</code>文件匹配，这也会解决任何潜在的依赖不一致问题。</li>
+</ul>
+</li>
+</ol>
+<p>记住，<strong>不要直接手动编辑<code>yarn.lock</code>文件</strong>，除非你非常清楚自己在做什么，因为手动更改容易引入错误，导致依赖不一致。始终让Yarn工具自动管理这个文件，以保证依赖的确定性和项目环境的一致性。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-05-20T10:30:48.063Z" itemprop="dateUpdated">2024-05-20 18:30:48</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/knowledges/yarn.html" target="_blank" rel="external">https://qw66.gitee.io/knowledges/yarn.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/yarn/">yarn</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/yarn.html&title=《yarn》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/yarn.html&title=《yarn》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/yarn.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《yarn》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/yarn.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/yarn.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/knowledges/css.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">CSS</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/interview/es6.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">ES6</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/yarn.html&title=《yarn》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/yarn.html&title=《yarn》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/yarn.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《yarn》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/yarn.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/yarn.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK4AAACuCAAAAACKZ2kyAAABx0lEQVR42u3aQYrDMAwF0N7/0h2Y3VDifFm2M4XnVWhC+rwR1lder3i9f9fVL5/Xn88n71y2cHFx29z3cI1BV0/mKzfg4uKe544LzfgVVxtLSl5uwMXF/Z/cKijZPC4u7rdzO01Of5O4uLjnuatamnwz23s1XFzcBrcamO643pjv4uLiFrmdcHN8iJmLXG/+HRcX9wg3iTn6wei4FlWDElxc3Ge5q4ra3BGqMGTFxcVdys1jiOTJvOHJ45I/v+Di4h7kdkpS3ghVDzo3bQ8uLu427txnFklhSsrc5IEJFxf3CLcakXSOL8kmC40TLi7uNm5eUPJXJ3erYSsuLu5JbnIQ6R9cqgOb8lgFFxd3KTcvHNUQJA9WCqUNFxd3M7c6ROm0LuUPsJLJDy4u7gZuJ8rsQKttGC4u7kluP9rIm6W5wSouLu5T3FUfRsyNVQpDF1xc3IPcalsyV+Dy0hbZcXFxt3GrBaUfcOSD1cmxKy4u7iJuXryqw5W5dujmLi4u7kFutXhVP9eYK3CF27i4uA9xO2elaix7uT1cXNyv4lYHJ9VSiIuLe55bDUk7B508eG3FIri4uA3u3AElH8SuGrrg4uIe4f4AAG4GHOngNH8AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

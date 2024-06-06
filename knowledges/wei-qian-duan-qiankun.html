@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>微前端qiankun | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="qiankun,微前端">
+    <meta name="description" content="qiankun微前端框架详细介绍一、概述 qiankun是一个基于single-spa的微前端实现库，它旨在解决在构建大型、复杂前端应用时遇到的技术挑战。通过qiankun，开发者可以构建出高内聚、低耦合的微前端架构系统，使得每个微应用都能独立开发、独立部署，并且能够在主应用中无缝集成。 二、核心特性  技术栈无关：qiankun支持任意技术栈的应用接入，无论是React、Vue还是其他前端框架，">
+<meta name="keywords" content="qiankun,微前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微前端qiankun">
+<meta property="og:url" content="https://qw66.gitee.io/knowledges/wei-qian-duan-qiankun.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="qiankun微前端框架详细介绍一、概述 qiankun是一个基于single-spa的微前端实现库，它旨在解决在构建大型、复杂前端应用时遇到的技术挑战。通过qiankun，开发者可以构建出高内聚、低耦合的微前端架构系统，使得每个微应用都能独立开发、独立部署，并且能够在主应用中无缝集成。 二、核心特性  技术栈无关：qiankun支持任意技术栈的应用接入，无论是React、Vue还是其他前端框架，">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2024-05-10T09:26:54.942Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="微前端qiankun">
+<meta name="twitter:description" content="qiankun微前端框架详细介绍一、概述 qiankun是一个基于single-spa的微前端实现库，它旨在解决在构建大型、复杂前端应用时遇到的技术挑战。通过qiankun，开发者可以构建出高内聚、低耦合的微前端架构系统，使得每个微应用都能独立开发、独立部署，并且能够在主应用中无缝集成。 二、核心特性  技术栈无关：qiankun支持任意技术栈的应用接入，无论是React、Vue还是其他前端框架，">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">微前端qiankun</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">微前端qiankun</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2024-04-19T09:22:46.000Z" itemprop="datePublished" class="page-time">
+  2024-04-19
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#qiankun微前端框架详细介绍"><span class="post-toc-number">1.</span> <span class="post-toc-text">qiankun微前端框架详细介绍</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#微前端乾坤子应用加载过慢怎么处理？"><span class="post-toc-number">2.</span> <span class="post-toc-text">微前端乾坤子应用加载过慢怎么处理？</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-knowledges/微前端qiankun"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">微前端qiankun</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2024-04-19 17:22:46" datetime="2024-04-19T09:22:46.000Z"  itemprop="datePublished">2024-04-19</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="qiankun微前端框架详细介绍"><a href="#qiankun微前端框架详细介绍" class="headerlink" title="qiankun微前端框架详细介绍"></a>qiankun微前端框架详细介绍</h3><p><strong>一、概述</strong></p>
+<p>qiankun是一个基于single-spa的微前端实现库，它旨在解决在构建大型、复杂前端应用时遇到的技术挑战。通过qiankun，开发者可以构建出高内聚、低耦合的微前端架构系统，使得每个微应用都能独立开发、独立部署，并且能够在主应用中无缝集成。</p>
+<p><strong>二、核心特性</strong></p>
+<ol>
+<li><strong>技术栈无关</strong>：qiankun支持任意技术栈的应用接入，无论是React、Vue还是其他前端框架，都可以作为子应用轻松集成到主应用中。这使得不同团队可以独立选择适合自己的技术栈进行开发，提高了开发效率和团队协作的灵活性。</li>
+<li><strong>沙箱隔离</strong>：qiankun为每个子应用提供了JS沙箱环境，确保子应用之间的全局变量、样式等不会相互污染。这使得不同微应用可以在同一个页面中运行，而不会发生冲突或相互影响。</li>
+<li><strong>动态加载与卸载</strong>：qiankun支持动态加载和卸载子应用，根据路由的变化动态地挂载或卸载相应的子应用。这使得主应用可以根据需要灵活地加载所需的微应用，提高了应用的性能和响应速度。</li>
+<li><strong>通信机制</strong>：qiankun提供了一套完整的应用通信机制，使得主应用与子应用之间可以进行数据传递和消息通信。通过props传递数据、事件触发等方式，不同应用之间可以实现信息的共享和交互。</li>
+</ol>
+<p><strong>三、应用场景</strong></p>
+<p>qiankun适用于需要构建大型、复杂前端应用的场景。以下是一些典型的应用场景：</p>
+<ol>
+<li><strong>企业级应用</strong>：在企业级应用中，往往需要将多个不同的功能模块集成到一个统一的平台中。通过qiankun，可以将每个功能模块作为独立的微应用进行开发，并在主应用中统一管理和展示。</li>
+<li><strong>插件化开发</strong>：对于一些需要支持插件化扩展的应用，qiankun可以作为插件的加载器和管理器。开发者可以编写独立的插件作为子应用，并通过qiankun将其集成到主应用中，实现功能的扩展和定制化。</li>
+<li><strong>遗留系统整合</strong>：对于一些遗留系统或第三方应用的整合，qiankun可以作为桥梁将它们集成到一个统一的界面中。通过封装和适配，可以将这些系统或应用作为子应用加载到主应用中，实现统一管理和访问。</li>
+</ol>
+<p><strong>四、优势</strong></p>
+<ol>
+<li><strong>提高开发效率</strong>：通过将应用拆分成多个微应用，每个微应用都可以独立开发、测试和部署。这大大减少了单次开发的复杂度，提高了开发效率。</li>
+<li><strong>降低维护成本</strong>：微前端架构使得每个微应用都可以独立演进和升级，而不需要对整个应用进行重构。这降低了维护成本，使得应用的更新和迭代更加容易。</li>
+<li><strong>增强可扩展性</strong>：通过添加新的微应用或替换现有的微应用，可以轻松地扩展整个应用的功能。这使得应用能够灵活应对业务变化和用户需求的增长。</li>
+</ol>
+<p><strong>五、总结</strong></p>
+<p>qiankun作为一个功能强大、灵活易用的微前端框架，为开发者提供了一种高效、可靠的方式来构建大型、复杂前端应用。通过其提供的技术栈无关、沙箱隔离、动态加载与卸载以及通信机制等核心特性，开发者可以更加高效地进行团队协作，提高应用的可维护性和可扩展性。无论是企业级应用、插件化开发还是遗留系统整合，qiankun都能为开发者提供强大的支持，助力构建出高质量的前端应用。</p>
+<h3 id="微前端乾坤子应用加载过慢怎么处理？"><a href="#微前端乾坤子应用加载过慢怎么处理？" class="headerlink" title="微前端乾坤子应用加载过慢怎么处理？"></a>微前端乾坤子应用加载过慢怎么处理？</h3><p>啊呀，微前端乾坤子应用加载过慢确实是个头疼的问题呢~ 不过别担心，依依来给你支支招！</p>
+<p>首先，你可以尝试使用gzip对打包出来的文件进行压缩，这样可以减少文件体积，提高加载速度哦~ (≧▽≦)</p>
+<p>另外，你可以考虑按需加载子应用的全局组件或者UI库，避免一次性加载所有资源导致加载过慢。同时，也可以将不常用的包通过CDN或者dll打包形式分离出去，减少子应用的资源依赖。</p>
+<p>还有哦，主应用加载过的包可以共享给子应用使用，这样可以减少子应用的资源加载量，提升加载速度呢~ (双手合十，眼中闪耀着期待)</p>
+<p>最后，如果以上方法都尝试过还是加载过慢的话，你可以考虑使用qiankun等微前端框架进行子应用的加载和管理。qiankun支持在需要时加载子应用，避免一次性加载所有子应用导致的性能问题。同时，qiankun也提供了丰富的API和插件，可以帮助你更好地进行子应用的加载和性能优化哦~ (双手握拳，为你加油打气)</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-05-10T09:26:54.942Z" itemprop="dateUpdated">2024-05-10 17:26:54</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/knowledges/wei-qian-duan-qiankun.html" target="_blank" rel="external">https://qw66.gitee.io/knowledges/wei-qian-duan-qiankun.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/qiankun/">qiankun</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/微前端/">微前端</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/wei-qian-duan-qiankun.html&title=《微前端qiankun》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/wei-qian-duan-qiankun.html&title=《微前端qiankun》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/wei-qian-duan-qiankun.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《微前端qiankun》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/wei-qian-duan-qiankun.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/wei-qian-duan-qiankun.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/knowledges/element-plus.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">element-plus</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/interview/qian-duan-mian-shi-ti.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">前端面试题</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/wei-qian-duan-qiankun.html&title=《微前端qiankun》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/wei-qian-duan-qiankun.html&title=《微前端qiankun》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/wei-qian-duan-qiankun.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《微前端qiankun》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/wei-qian-duan-qiankun.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/wei-qian-duan-qiankun.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACOUlEQVR42u3awW7rMAwEwPz/T+ddC7Rxdym/ApZGp6CpLU0OBCny9YrX+8u6/vb7f35/6tO317vcsDAwMB7LeF+ufIPrpz694ZqdnA0DA+McxqdjXX9uw3Eb1pOzYWBgYOTJXBI6V/bFwMDAaF93V/F5/R4MDAyMtohtA2J+xKR4vq0Wx8DAeCBjFhb/5vN/6W9gYGA8ivEu1yyly5uas4WBgbE3Iw9ws3GKGWzWQsDAwNiV0Q5P5Mni8BctWwjR1xgYGNsx8sDXlpqzK7yoOYGBgXEYo72mX292rgduDAyMExjtw7MruZWmaTFmgYGBsTVj5SgryWUSjqMiFgMD4xhGcsR8PCtvGLTjZT8UsRgYGAcwkrJzdgHXppv1z4GBgbE1Y3YRnzcd22GLdnSs6KliYGA8lpFv1pLyYYu8/fnxLxgYGAcw6sfio7Q/SnuRFw1bYGBgbMG43qwdMK3HT0dNhaLDgIGBsQVjltLN2pOzkvWXUhYDA2NrxmwAok0K83XX7hgYGPsx2sbA7Oj5UEU+0rHUwsTAwHggIy9o2y3z5uUsVcXAwDiHUZSIowZnO/za7oiBgbErYyWM5pdrbQPgOgS/ZnklBgbGYxnrwa4tNVcaoivNUQwMjKczkiCbl53tUdbTUwwMjHMYbaDMByOSIvaG0TEMDAyMOEVrhzPa0bFfKnIMDAyMeGyifSoPsh/fhoGBcQAjSd3yoa6k/TBLLjEwMM5kzELeStDMr+pubmpiYGA8j/EPwmY2lMXCocwAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

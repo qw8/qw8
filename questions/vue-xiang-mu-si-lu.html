@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>vue项目思路 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="vue,前端">
+    <meta name="description" content="vue判断设备是手机端还是pc端在 App.vue（或者主页面）的 created 方法中对设置进行判断，如下: 123456789101112created() &amp;#123;    if (this.isMobile()) &amp;#123;      alert(&amp;quot;手机端&amp;quot;);      this.$router.replace(&amp;apos;/m_index&amp;apos;);">
+<meta name="keywords" content="vue,前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue项目思路">
+<meta property="og:url" content="https://qw66.gitee.io/questions/vue-xiang-mu-si-lu.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="vue判断设备是手机端还是pc端在 App.vue（或者主页面）的 created 方法中对设置进行判断，如下: 123456789101112created() &amp;#123;    if (this.isMobile()) &amp;#123;      alert(&amp;quot;手机端&amp;quot;);      this.$router.replace(&amp;apos;/m_index&amp;apos;);">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2024-06-06T02:21:10.215Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue项目思路">
+<meta name="twitter:description" content="vue判断设备是手机端还是pc端在 App.vue（或者主页面）的 created 方法中对设置进行判断，如下: 123456789101112created() &amp;#123;    if (this.isMobile()) &amp;#123;      alert(&amp;quot;手机端&amp;quot;);      this.$router.replace(&amp;apos;/m_index&amp;apos;);">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">vue项目思路</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">vue项目思路</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2022-05-22T14:40:25.000Z" itemprop="datePublished" class="page-time">
+  2022-05-22
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端问题/">前端问题</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vue判断设备是手机端还是pc端"><span class="post-toc-number">1.</span> <span class="post-toc-text">vue判断设备是手机端还是pc端</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#js判断设备是手机还是PC还是ipad"><span class="post-toc-number">2.</span> <span class="post-toc-text">js判断设备是手机还是PC还是ipad</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ElementUI、iview中input回车触发页面刷新问题及其解决方法"><span class="post-toc-number">3.</span> <span class="post-toc-text">ElementUI、iview中input回车触发页面刷新问题及其解决方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解决方案："><span class="post-toc-number">4.</span> <span class="post-toc-text">解决方案：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#解决方法："><span class="post-toc-number">4.1.</span> <span class="post-toc-text">解决方法：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#v-model直接绑定到v-for迭代别名，这将无法修改v-for源数组"><span class="post-toc-number">5.</span> <span class="post-toc-text">v-model直接绑定到v-for迭代别名，这将无法修改v-for源数组</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vue2升级最高版"><span class="post-toc-number">6.</span> <span class="post-toc-text">vue2升级最高版</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#vue-template-compiler是什么，有什么用？"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">vue-template-compiler是什么，有什么用？</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#域名1获取到token，跳转到域名2实现自动登录，写出思路和完整代码"><span class="post-toc-number">7.</span> <span class="post-toc-text">域名1获取到token，跳转到域名2实现自动登录，写出思路和完整代码</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#file-type是数组-1-2-，代表选中两个按钮，这两个按钮可以多选，请用vue写出按钮点击公用事件（两个按钮最少选中一个，只剩下一个选中按钮时禁止取消）"><span class="post-toc-number">8.</span> <span class="post-toc-text">file_type是数组[1,2]，代表选中两个按钮，这两个按钮可以多选，请用vue写出按钮点击公用事件（两个按钮最少选中一个，只剩下一个选中按钮时禁止取消）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#有个key每天有一定使用额度次数，因为是不同用户在使用，无法计数，只能通过接口报错知道key用完了，需要用另一个key来替换，请用vue实现这个逻辑。"><span class="post-toc-number">9.</span> <span class="post-toc-text">有个key每天有一定使用额度次数，因为是不同用户在使用，无法计数，只能通过接口报错知道key用完了，需要用另一个key来替换，请用vue实现这个逻辑。</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vue2怎么通过dargList数组元素顺序的改变、是否选中，对应同步实现表格数据数组元素顺序的改变、是否存在，并使用localStorage缓存dargList数据"><span class="post-toc-number">10.</span> <span class="post-toc-text">vue2怎么通过dargList数组元素顺序的改变、是否选中，对应同步实现表格数据数组元素顺序的改变、是否存在，并使用localStorage缓存dargList数据</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#通义："><span class="post-toc-number">10.1.</span> <span class="post-toc-text">通义：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-初始化数据"><span class="post-toc-number">10.2.</span> <span class="post-toc-text">1. 初始化数据</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-更新listTableColumns逻辑"><span class="post-toc-number">10.3.</span> <span class="post-toc-text">2. 更新listTableColumns逻辑</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-监听dargList变化"><span class="post-toc-number">10.4.</span> <span class="post-toc-text">3. 监听dargList变化</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-保存到localStorage"><span class="post-toc-number">10.5.</span> <span class="post-toc-text">4. 保存到localStorage</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#注意事项"><span class="post-toc-number">10.6.</span> <span class="post-toc-text">注意事项</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#一个项目有很多表格，请优化缓存方案"><span class="post-toc-number">10.7.</span> <span class="post-toc-text">一个项目有很多表格，请优化缓存方案</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-使用统一的键名规则与命名空间"><span class="post-toc-number">11.</span> <span class="post-toc-text">1. 使用统一的键名规则与命名空间</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-结构化缓存数据"><span class="post-toc-number">12.</span> <span class="post-toc-text">2. 结构化缓存数据</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-压缩数据"><span class="post-toc-number">13.</span> <span class="post-toc-text">3. 压缩数据</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#4-分页或懒加载"><span class="post-toc-number">14.</span> <span class="post-toc-text">4. 分页或懒加载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#5-过期策略"><span class="post-toc-number">15.</span> <span class="post-toc-text">5. 过期策略</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#6-使用IndexedDB替代"><span class="post-toc-number">16.</span> <span class="post-toc-text">6. 使用IndexedDB替代</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#7-用户体验与反馈"><span class="post-toc-number">17.</span> <span class="post-toc-text">7. 用户体验与反馈</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#根据这个方案重写saveToLocalStorage，loadFromLocalStorage方法"><span class="post-toc-number">18.</span> <span class="post-toc-text">根据这个方案重写saveToLocalStorage，loadFromLocalStorage方法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改后的数据结构"><span class="post-toc-number">19.</span> <span class="post-toc-text">修改后的数据结构</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#重写saveToLocalStorage"><span class="post-toc-number">20.</span> <span class="post-toc-text">重写saveToLocalStorage</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#重写loadFromLocalStorage"><span class="post-toc-number">21.</span> <span class="post-toc-text">重写loadFromLocalStorage</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#注意事项-1"><span class="post-toc-number">22.</span> <span class="post-toc-text">注意事项</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vue2通过route-name-该页面序号来命名tableName，保证项目中所有tableName不重复，代码怎么实现"><span class="post-toc-number">23.</span> <span class="post-toc-text">vue2通过route.name+该页面序号来命名tableName，保证项目中所有tableName不重复，代码怎么实现</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#拖拽排序问题"><span class="post-toc-number">24.</span> <span class="post-toc-text">拖拽排序问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#ChatGPT："><span class="post-toc-number">24.1.</span> <span class="post-toc-text">ChatGPT：</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#步骤指南"><span class="post-toc-number">24.2.</span> <span class="post-toc-text">步骤指南</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#示例代码"><span class="post-toc-number">24.3.</span> <span class="post-toc-text">示例代码</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#注意事项-2"><span class="post-toc-number">24.4.</span> <span class="post-toc-text">注意事项</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#通过watch监听数组改变好？还是通过拖拽事件触发好？"><span class="post-toc-number">24.5.</span> <span class="post-toc-text">通过watch监听数组改变好？还是通过拖拽事件触发好？</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#通过watch-数组改变："><span class="post-toc-number">24.5.1.</span> <span class="post-toc-text">通过watch 数组改变：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#通过拖拽事件触发："><span class="post-toc-number">24.5.2.</span> <span class="post-toc-text">通过拖拽事件触发：</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#建议："><span class="post-toc-number">24.5.3.</span> <span class="post-toc-text">建议：</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vue2二维码列表通过v-for循环出来，并通过数组来管理每个二维码的显示状态，首次只展示第一张二维码，其他二维码通过用户点击事件获取，每个二维码从创建开始，倒计时5分钟后为不显示状态"><span class="post-toc-number">25.</span> <span class="post-toc-text">vue2二维码列表通过v-for循环出来，并通过数组来管理每个二维码的显示状态，首次只展示第一张二维码，其他二维码通过用户点击事件获取，每个二维码从创建开始，倒计时5分钟后为不显示状态</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-questions/vue项目思路"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">vue项目思路</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2022-05-22 22:40:25" datetime="2022-05-22T14:40:25.000Z"  itemprop="datePublished">2022-05-22</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端问题/">前端问题</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="vue判断设备是手机端还是pc端"><a href="#vue判断设备是手机端还是pc端" class="headerlink" title="vue判断设备是手机端还是pc端"></a>vue判断设备是手机端还是pc端</h3><p>在 App.vue（或者主页面）的 created 方法中对设置进行判断，如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">created() &#123;</span><br><span class="line">    if (this.isMobile()) &#123;</span><br><span class="line">      alert(&quot;手机端&quot;);</span><br><span class="line">      this.$router.replace(&apos;/m_index&apos;);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      alert(&quot;pc端&quot;);</span><br><span class="line">      this.$router.replace(&apos;/pc_index&apos;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    // 或者</span><br><span class="line">    this.isMobile()</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<p>在 App.vue（或者主页面）的 methods方法中做手机型号设置，如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">methods: &#123;</span><br><span class="line">   isMobile() &#123;</span><br><span class="line">     let flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)</span><br><span class="line">     return flag;</span><br><span class="line">   &#125;</span><br><span class="line">   </span><br><span class="line">   // 或者</span><br><span class="line">   // 根据浏览器信息判断是否移动端并存到本地</span><br><span class="line">   isMobile()&#123;</span><br><span class="line">     const isMobile = localStorage.getItem(&quot;isMobile&quot;)</span><br><span class="line">     if(isMobile === null)&#123;</span><br><span class="line">       const flag = navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i);</span><br><span class="line">       if(flag)&#123;</span><br><span class="line">         localStorage.setItem(&quot;isMobile&quot;, true)</span><br><span class="line">       &#125;else&#123;</span><br><span class="line">         localStorage.setItem(&quot;isMobile&quot;, false)</span><br><span class="line">       &#125;</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line"> </span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="js判断设备是手机还是PC还是ipad"><a href="#js判断设备是手机还是PC还是ipad" class="headerlink" title="js判断设备是手机还是PC还是ipad"></a>js判断设备是手机还是PC还是ipad</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">// 判断浏览器信息并存到本地</span><br><span class="line">   judgeDevice()&#123;</span><br><span class="line">     // const device = localStorage.getItem(&quot;device&quot;)</span><br><span class="line">     // if(device === null)&#123; // 只执行一次</span><br><span class="line">       const device = navigator.userAgent</span><br><span class="line">       console.log(device)</span><br><span class="line">       if (device.match(/android/ig)) &#123;</span><br><span class="line">         localStorage.setItem(&quot;device&quot;, &quot;android&quot;)</span><br><span class="line">       &#125; else if (device.match(/iPad/ig)) &#123;</span><br><span class="line">         localStorage.setItem(&quot;device&quot;, &quot;iPad&quot;)</span><br><span class="line">       &#125; else if (device.match(/WindowsWechat/ig)) &#123;</span><br><span class="line">         // 因为企微也有Safari，所以提前判断</span><br><span class="line">         localStorage.setItem(&quot;device&quot;, &quot;pc&quot;)</span><br><span class="line">       &#125; else if (device.match(/iphone|ipod|iOS|Safari/ig)) &#123;</span><br><span class="line">         // 部分iPhone也有Safari</span><br><span class="line">         localStorage.setItem(&quot;device&quot;, &quot;ios&quot;)</span><br><span class="line">       &#125; else &#123;</span><br><span class="line">         localStorage.setItem(&quot;device&quot;, &quot;pc&quot;)</span><br><span class="line">       &#125;</span><br><span class="line">     // &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="ElementUI、iview中input回车触发页面刷新问题及其解决方法"><a href="#ElementUI、iview中input回车触发页面刷新问题及其解决方法" class="headerlink" title="ElementUI、iview中input回车触发页面刷新问题及其解决方法"></a>ElementUI、iview中input回车触发页面刷新问题及其解决方法</h3><p>在日常的开发过程中，你可能会遇到一个问题：在ElementUI的el-form表单中，如果只存在一个el-input输入框，当你输入值后按下回车，页面会发生刷新。</p>
+<p>这是因为当form元素中只有一个输入框时，按下回车将触发表单的默认提交事件，这是W3C标准的规定。form表单提交的时候会刷新页面。</p>
+<h3 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h3><ol>
+<li>在form表单里禁止自动提交</li>
+<li>在页面全局禁止键盘按下enter事件</li>
+<li>input禁止键盘按下enter事件</li>
+<li>vue项目中可在form标签上加上@submit.native.prevent</li>
+<li>直接去除掉form表单，当然这是最简单粗暴的方法。</li>
+<li>如果一个input会自动提交，那么比较容易想到的是再加一个input。值得注意的是 这里的input不能设置type为hidden，这样一样是不生效的，form一样会认为只有一个input。</li>
+</ol>
+<h4 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h4><p>ElementUI也给出了解决方法。如果你希望阻止这一默认行为，可以<strong>在<el-form>标签上添加@submit.native.prevent</el-form></strong></p>
+<p>例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-form </span><br><span class="line">  :model=&quot;form&quot; </span><br><span class="line">  ref=&quot;form&quot; </span><br><span class="line">  label-width=&quot;200px&quot; </span><br><span class="line">  class=&quot;form&quot; </span><br><span class="line">  @submit.native.prevent</span><br><span class="line">&gt;</span><br><span class="line">  &lt;el-form-item</span><br><span class="line">    label=&quot;姓名&quot;</span><br><span class="line">    prop=&quot;name&quot;</span><br><span class="line">  &gt;</span><br><span class="line">    &lt;el-input v-model.number=&quot;form.name&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">  &lt;/el-form-item&gt;</span><br><span class="line">  &lt;el-form-item&gt;</span><br><span class="line">    &lt;el-button type=&quot;primary&quot; @click=&quot;submit(&apos;form&apos;)&quot;&gt;提交&lt;/el-button&gt;</span><br><span class="line">    &lt;el-button @click=&quot;reset(&apos;form&apos;)&quot;&gt;重置&lt;/el-button&gt;</span><br><span class="line">  &lt;/el-form-item&gt;</span><br><span class="line">&lt;/el-form&gt;</span><br></pre></td></tr></table></figure>
+
+<p> 然而，上述方法只是阻止了默认行为，如果你仍需要回车来提交表单，你可以通过以下方式解决： </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-form </span><br><span class="line">  :model=&quot;form&quot; </span><br><span class="line">  ref=&quot;form&quot; </span><br><span class="line">  label-width=&quot;200px&quot; </span><br><span class="line">  class=&quot;form&quot; </span><br><span class="line">  @submit.native.prevent=&quot;() =&gt; submit(&apos;form&apos;)&quot;</span><br><span class="line">&gt;</span><br><span class="line">  &lt;el-form-item</span><br><span class="line">    label=&quot;姓名&quot;</span><br><span class="line">    prop=&quot;name&quot;</span><br><span class="line">  &gt;</span><br><span class="line">    &lt;el-input v-model.number=&quot;form.name&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">  &lt;/el-form-item&gt;</span><br><span class="line">  &lt;el-form-item&gt;</span><br><span class="line">    &lt;el-button type=&quot;primary&quot; native-type=&quot;submit&quot;&gt;提交&lt;/el-button&gt;</span><br><span class="line">    &lt;el-button @click=&quot;reset(&apos;form&apos;)&quot;&gt;重置&lt;/el-button&gt;</span><br><span class="line">  &lt;/el-form-item&gt;</span><br><span class="line">&lt;/el-form&gt;</span><br></pre></td></tr></table></figure>
+
+<p>请注意以下几点：</p>
+<ul>
+<li>确保使用 @submit.native.prevent 阻止原生事件，执行方法为搜索按钮按click事件</li>
+<li>搜索按钮需要被包裹在 el-form 中</li>
+<li>移除搜索按钮的click事件</li>
+<li>确保增加 native-type=”submit” 属性</li>
+</ul>
+<p>此外，原生的form表单的单input和form包裹el-input回车刷新的问题也可以解决，有以下几种方法：</p>
+<ol>
+<li><p>在form表单内再增加一个隐藏的input框，可以通过hidden定义隐藏的输入字段，或者通过CSS样式进行隐藏。</p>
+</li>
+<li><p>去掉输入框的回车事件（根据需求来定，有的需要回车事件提交表单来查询或者执行其他操作则该方法不适用）。</p>
+</li>
+<li><p>阻止表单默认提交事件。例如，使用onsubmit句柄返回false来阻止原生form内的input的默认提交事件。</p>
+</li>
+</ol>
+<h3 id="v-model直接绑定到v-for迭代别名，这将无法修改v-for源数组"><a href="#v-model直接绑定到v-for迭代别名，这将无法修改v-for源数组" class="headerlink" title="v-model直接绑定到v-for迭代别名，这将无法修改v-for源数组"></a>v-model直接绑定到v-for迭代别名，这将无法修改v-for源数组</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;view class=&quot;trip-item&quot;</span><br><span class="line">                   v-for=&quot;(item, index) in tripList&quot;</span><br><span class="line">                   :key=&quot;index&quot;&gt;</span><br><span class="line">                       &lt;input v-if=&quot;index === 0&quot;</span><br><span class="line">                           v-model=&quot;item&quot;</span><br><span class="line">                           @input=&quot;inputSpot&quot;</span><br><span class="line">                           @focus=&quot;focus(index)&quot;</span><br><span class="line">                           placeholder=&quot;请输入起点&quot;</span><br><span class="line">                           maxlength=&quot;32&quot;</span><br><span class="line">                           :auto-focus=&quot;autoFocus[0]&quot; /&gt;</span><br><span class="line">               &lt;/view&gt;</span><br><span class="line"></span><br><span class="line">tripList: [&apos;&apos;, &apos;&apos;]</span><br></pre></td></tr></table></figure>
+
+<p>编译模板时出错：<br>11:03:46.014＜input v-model=“item”＞：您正在将v-model直接绑定到v-for迭代别名。这将无法修改v-for源数组，因为写入别名就像修改函数的局部变量。请考虑使用对象数组，并在对象属性上使用v-model。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Errors compiling template:</span><br><span class="line">11:03:46.014   &lt;input v-model=&quot;item&quot;&gt;: You are binding v-model directly to a v-for iteration alias. This will not be able to modify the v-for source array because writing to the alias is like modifying a function local variable. Consider using an array of objects and use v-model on an object property instead.</span><br></pre></td></tr></table></figure>
+
+<p>解决方案</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">:value=&quot;item&quot;</span><br><span class="line"></span><br><span class="line">inputSpot(e) &#123;</span><br><span class="line">	this.tripList[this.inputIndex] = e.detail.value</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h3 id="vue2升级最高版"><a href="#vue2升级最高版" class="headerlink" title="vue2升级最高版"></a>vue2升级最高版</h3><p>Vue 2 的最高版本是 <strong>2.7.16</strong>，也被称为“Swan Song”（绝唱）版本。这个版本在 2023 年 12 月 24 日正式发布，标志着 Vue 2 的生命周期终点。从 2023 年 12 月 31 日起，Vue 官方将不再对 Vue 2 进行维护，而是将精力全部放在 Vue 3 的维护上。</p>
+<p>Vue 2.7.16 版本修复了一些已知问题，并改进了与 Vue 3 的类型一致性。如果你正在使用 Vue 2，并且计划启动一个新项目，Vue 官方强烈建议从 Vue 的最新版本（即 Vue 3.x）开始。Vue 3 提供了许多新的特性和改进，可以帮助你构建更高效、更可维护的应用程序。</p>
+<p>记得同时升级vue-template-compiler</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;vue-template-compiler&quot;: &quot;^2.7.16&quot;,</span><br></pre></td></tr></table></figure>
+
+<h4 id="vue-template-compiler是什么，有什么用？"><a href="#vue-template-compiler是什么，有什么用？" class="headerlink" title="vue-template-compiler是什么，有什么用？"></a>vue-template-compiler是什么，有什么用？</h4><p><strong>是一个用于编译Vue模板的包</strong>，它的主要作用是将Vue模板预编译为渲染函数（template =&gt; ast =&gt; render），以避免运行时编译开销和CSP（内容安全策略）限制。</p>
+<p>在Vue工程中，vue-template-compiler通常与vue-loader一起使用，特别是在Webpack构建过程中，vue-loader会使用vue-template-compiler来完成实际编译的繁重工作，例如.vue文件的编译。vue-template-compiler的两个主要功能是：将模板转换为render()函数和解析单个文件组件。</p>
+<p>此外，由于Vue模板只是一个普通的字符串，Vue模板编译器的compile()函数可以转换这个模板字符串，使其可以作为render()函数为组件提供功能。</p>
+<p>在构建Vue项目时，需要注意vue-template-compiler和vue的版本必须保持一致，否则可能会引发错误。</p>
+<h3 id="域名1获取到token，跳转到域名2实现自动登录，写出思路和完整代码"><a href="#域名1获取到token，跳转到域名2实现自动登录，写出思路和完整代码" class="headerlink" title="域名1获取到token，跳转到域名2实现自动登录，写出思路和完整代码"></a>域名1获取到token，跳转到域名2实现自动登录，写出思路和完整代码</h3><p>要实现域名1获取到token，然后跳转到域名2实现自动登录，可以使用以下思路和代码实现：</p>
+<ol>
+<li>在域名1上，用户登录成功后生成一个包含token的URL，并将该URL传递给域名2。</li>
+<li>在域名2上，接收到包含token的URL后，提取出token的值。</li>
+<li>在域名2上，发送一个POST请求到域名1的某个登录验证接口，将token作为参数，并且将withCredentials设置为true以允许跨域携带凭证（例如cookies）。</li>
+<li>在域名1的登录验证接口上，验证token的合法性，并通过设置response header的Access-Control-Allow-Origin为域名2，允许来自域名2的跨域请求。</li>
+<li>在域名2上，根据返回的响应结果进行相应的操作，例如登录成功则跳转到用户页面，登录失败则返回错误提示。</li>
+</ol>
+<p>下面是一个可能的代码示例：</p>
+<p>在域名1上的页面：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 用户登录成功后生成包含token的URL</span></span><br><span class="line"><span class="keyword">var</span> token = <span class="string">'abc123'</span>; <span class="comment">// 假设已经获取到了token</span></span><br><span class="line"><span class="keyword">var</span> redirectURL = <span class="string">'http://domain2.com/login?token='</span> + token;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 域名1跳转到域名2</span></span><br><span class="line"><span class="built_in">window</span>.location.href = redirectURL;</span><br></pre></td></tr></table></figure>
+
+<p>在域名2上的登录页面：</p>
+<p>vue</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 带token跳转过来自动登录</span><br><span class="line">      async tokenLogin() &#123;</span><br><span class="line">          console.log(this.$route.query)</span><br><span class="line">          let access_token = this.$route.query.access_token</span><br><span class="line">          if (access_token) &#123;</span><br><span class="line">              utils.saveLogin(&#123; access_token &#125;)</span><br><span class="line">              await this.dispathAuthorCode()</span><br><span class="line">              this.$router.push(&#123;</span><br><span class="line">                  name: &apos;app&apos;</span><br><span class="line">              &#125;)</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+
+<p>HTML</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 提取URL中的token值</span></span><br><span class="line"><span class="keyword">var</span> tokenIndex = location.href.indexOf(<span class="string">'?token='</span>) + <span class="string">'?token='</span>.length;</span><br><span class="line"><span class="keyword">var</span> token = location.href.substring(tokenIndex);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 发送跨域POST请求到域名1的登录验证接口</span></span><br><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line">xhr.withCredentials = <span class="literal">true</span>;</span><br><span class="line">xhr.open(<span class="string">'POST'</span>, <span class="string">'http://domain1.com/login-verify'</span>, <span class="literal">true</span>);</span><br><span class="line">xhr.setRequestHeader(<span class="string">'Content-Type'</span>, <span class="string">'application/x-www-form-urlencoded'</span>);</span><br><span class="line">xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (xhr.readyState === <span class="number">4</span> &amp;&amp; xhr.status === <span class="number">200</span>) &#123;</span><br><span class="line">        <span class="keyword">var</span> response = <span class="built_in">JSON</span>.parse(xhr.responseText);</span><br><span class="line">        <span class="comment">// 根据响应结果进行相应的操作，例如登录成功则跳转到用户页面</span></span><br><span class="line">        <span class="keyword">if</span> (response.status === <span class="string">'success'</span>) &#123;</span><br><span class="line">            <span class="built_in">window</span>.location.href = <span class="string">'http://domain2.com/user'</span>; <span class="comment">// 假设用户页面URL为http://domain2.com/user</span></span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            alert(<span class="string">'登录失败：'</span> + response.message);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 发送POST请求，将token作为参数</span></span><br><span class="line">xhr.send(<span class="string">'token='</span> + token);</span><br></pre></td></tr></table></figure>
+
+<p>在域名1的登录验证接口上，根据具体的后端语言和框架来实现验证token合法性的逻辑，并设置response header的Access-Control-Allow-Origin为域名2。例如，在PHP中可以这样实现：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">header(<span class="string">'Access-Control-Allow-Origin: http://domain2.com'</span>);</span><br><span class="line">$response = <span class="keyword">array</span>();</span><br><span class="line">$token = $_POST[<span class="string">'token'</span>];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 验证token的合法性，在此处根据具体需求编写验证</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="file-type是数组-1-2-，代表选中两个按钮，这两个按钮可以多选，请用vue写出按钮点击公用事件（两个按钮最少选中一个，只剩下一个选中按钮时禁止取消）"><a href="#file-type是数组-1-2-，代表选中两个按钮，这两个按钮可以多选，请用vue写出按钮点击公用事件（两个按钮最少选中一个，只剩下一个选中按钮时禁止取消）" class="headerlink" title="file_type是数组[1,2]，代表选中两个按钮，这两个按钮可以多选，请用vue写出按钮点击公用事件（两个按钮最少选中一个，只剩下一个选中按钮时禁止取消）"></a>file_type是数组[1,2]，代表选中两个按钮，这两个按钮可以多选，请用vue写出按钮点击公用事件（两个按钮最少选中一个，只剩下一个选中按钮时禁止取消）</h3><p>好的，下面是根据您的要求使用 Vue 来实现按钮点击公用事件的代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">button</span> <span class="attr">v-for</span>=<span class="string">"button in buttons"</span> <span class="attr">:key</span>=<span class="string">"button"</span> @<span class="attr">click</span>=<span class="string">"buttonClick(button)"</span> <span class="attr">:class</span>=<span class="string">"&#123; active: selectedButtons.includes(button) &#125;"</span>&gt;</span></span><br><span class="line">      Button &#123;&#123; button &#125;&#125;</span><br><span class="line">    <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="javascript"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span></span><br><span class="line">  data() &#123;</span><br><span class="line"><span class="actionscript">    <span class="keyword">return</span> &#123;</span></span><br><span class="line"><span class="actionscript">      buttons: [<span class="number">1</span>, <span class="number">2</span>], <span class="comment">// 可选按钮列表</span></span></span><br><span class="line"><span class="actionscript">      selectedButtons: [] <span class="comment">// 当前选中的按钮列表</span></span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    buttonClick(button) &#123;</span><br><span class="line"><span class="actionscript">      <span class="comment">// 判断按钮是否已选中</span></span></span><br><span class="line"><span class="actionscript">      <span class="keyword">const</span> selectedIndex = <span class="keyword">this</span>.selectedButtons.indexOf(button);</span></span><br><span class="line"><span class="actionscript">      <span class="keyword">if</span> (selectedIndex &gt; <span class="number">-1</span>) &#123;</span></span><br><span class="line"><span class="actionscript">        <span class="comment">// 如果按钮已选中</span></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">if</span> (<span class="keyword">this</span>.selectedButtons.length === <span class="number">1</span>) &#123;</span></span><br><span class="line"><span class="actionscript">          <span class="comment">// 如果只剩下一个选中按钮，则禁止取消选中</span></span></span><br><span class="line"><span class="actionscript">          <span class="keyword">return</span>;</span></span><br><span class="line">        &#125;</span><br><span class="line"><span class="actionscript">        <span class="comment">// 取消选中按钮</span></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">this</span>.selectedButtons.splice(selectedIndex, <span class="number">1</span>);</span></span><br><span class="line"><span class="actionscript">      &#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="actionscript">        <span class="comment">// 如果按钮未选中</span></span></span><br><span class="line"><span class="actionscript">        <span class="comment">// 添加选中按钮</span></span></span><br><span class="line"><span class="actionscript">        <span class="keyword">this</span>.selectedButtons.push(button);</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted() &#123;</span><br><span class="line"><span class="actionscript">    <span class="comment">// 默认选中第一个按钮</span></span></span><br><span class="line"><span class="actionscript">    <span class="keyword">this</span>.selectedButtons.push(<span class="keyword">this</span>.buttons[<span class="number">0</span>]);</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在上述代码中，我使用了 <code>v-for</code> 指令来循环渲染按钮，通过 给每个按钮绑定 <code>@click</code> 事件监听点击事件。</p>
+<p>在 <code>buttonClick</code> 方法内部，首先判断按钮是否已选中。如果已选中，再判断是否只剩下一个选中按钮，如果是，则禁止取消选中。如果按钮未选中，则将其添加到 <code>selectedButtons</code> 中。</p>
+<p>启动后，默认选中了第一个按钮。</p>
+<p>这样，就实现了通过公用事件控制多个按钮的选中状态，并满足了最少选中一个按钮、只剩下一个选中按钮时禁止取消的需求。</p>
+<h3 id="有个key每天有一定使用额度次数，因为是不同用户在使用，无法计数，只能通过接口报错知道key用完了，需要用另一个key来替换，请用vue实现这个逻辑。"><a href="#有个key每天有一定使用额度次数，因为是不同用户在使用，无法计数，只能通过接口报错知道key用完了，需要用另一个key来替换，请用vue实现这个逻辑。" class="headerlink" title="有个key每天有一定使用额度次数，因为是不同用户在使用，无法计数，只能通过接口报错知道key用完了，需要用另一个key来替换，请用vue实现这个逻辑。"></a>有个key每天有一定使用额度次数，因为是不同用户在使用，无法计数，只能通过接口报错知道key用完了，需要用另一个key来替换，请用vue实现这个逻辑。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">// 腾讯地图接口失败处理</span><br><span class="line">		tMapFail(err) &#123;</span><br><span class="line">			// 模拟失败的测试数据</span><br><span class="line">			// err.status = 121</span><br><span class="line">			// err.message = &apos;此key每日调用量已达到上限&apos;</span><br><span class="line">			// err.request_id = err.request_id</span><br><span class="line"></span><br><span class="line">			console.log(&apos;腾讯地图接口失败&apos;, err);</span><br><span class="line">			if (err.status === 121) &#123;</span><br><span class="line">				uni.showToast(&#123;</span><br><span class="line">					title: &apos;地图key每日上限，请退出此页面重试&apos;,</span><br><span class="line">					icon: &apos;none&apos;,</span><br><span class="line">					duration: 2500</span><br><span class="line">				&#125;)</span><br><span class="line">				const setTime = Utils.formatDate(new Date())</span><br><span class="line">				console.log(setTime);</span><br><span class="line">				// 如果接口报错达到上限，启用备用的key（下次onLaunch，如果超过一天，会使用原始的key）</span><br><span class="line">				this.$store.commit(&apos;setMap&apos;, &#123;</span><br><span class="line">					key: Config.backupMapKey,</span><br><span class="line">					keyName: Config.mapKeyName,</span><br><span class="line">					setTime</span><br><span class="line">				&#125;)</span><br><span class="line">				this.newMap()</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+
+<p>onLaunch重置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">// 设置地图信息</span><br><span class="line">		setMapInfo(context) &#123;</span><br><span class="line">			const setTime = Utils.getDateFromTimeString(this.state.login.map.setTime)</span><br><span class="line">			const time = new Date()</span><br><span class="line">			let day = (time - setTime) / (1000 * 60 * 60 * 24)</span><br><span class="line">			console.log(setTime, time, day)</span><br><span class="line">			// 如果第一次进入 或者 超过一天，使用原始的key</span><br><span class="line">			if (!setTime || day &gt; 1) &#123;</span><br><span class="line">				// 保存腾讯地图信息</span><br><span class="line">				context.commit(&apos;setMap&apos;, &#123;</span><br><span class="line">					key: Config.mapKey,</span><br><span class="line">					keyName: Config.mapKeyName,</span><br><span class="line">					setTime: Utils.formatDate(time)</span><br><span class="line">				&#125;);</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;,</span><br></pre></td></tr></table></figure>
+
+<h3 id="vue2怎么通过dargList数组元素顺序的改变、是否选中，对应同步实现表格数据数组元素顺序的改变、是否存在，并使用localStorage缓存dargList数据"><a href="#vue2怎么通过dargList数组元素顺序的改变、是否选中，对应同步实现表格数据数组元素顺序的改变、是否存在，并使用localStorage缓存dargList数据" class="headerlink" title="vue2怎么通过dargList数组元素顺序的改变、是否选中，对应同步实现表格数据数组元素顺序的改变、是否存在，并使用localStorage缓存dargList数据"></a>vue2怎么通过dargList数组元素顺序的改变、是否选中，对应同步实现表格数据数组元素顺序的改变、是否存在，并使用localStorage缓存dargList数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">表格列数据</span><br><span class="line">listTableColumns: [</span><br><span class="line">          &#123;</span><br><span class="line">            prop: &apos;behavior&apos;,</span><br><span class="line">            label: &apos;敏感行为类型&apos;,</span><br><span class="line">            fixed: &apos;left&apos;,</span><br><span class="line">            showOverflowTooltip: true,</span><br><span class="line">            minWidth: &apos;160&apos;</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">            prop: &apos;msgContent&apos;,</span><br><span class="line">            label: &apos;消息内容&apos;,</span><br><span class="line">            minWidth: &apos;230&apos;,</span><br><span class="line">            showOverflowTooltip: true</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">            prop: &apos;senderName&apos;,</span><br><span class="line">            label: &apos;发送人&apos;,</span><br><span class="line">            minWidth: &apos;150&apos;,</span><br><span class="line">            showOverflowTooltip: true</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">            prop: &apos;option&apos;,</span><br><span class="line">            label: &apos;操作&apos;,</span><br><span class="line">            fixed: &apos;right&apos;,</span><br><span class="line">          &#125;]</span><br><span class="line"></span><br><span class="line">拖拽组件数据（没有fixed列）</span><br><span class="line">dargList: [</span><br><span class="line">          &#123;</span><br><span class="line">            prop: &apos;msgContent&apos;,</span><br><span class="line">            label: &apos;消息内容&apos;,</span><br><span class="line">            checked: true</span><br><span class="line">          &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">            prop: &apos;senderName&apos;,</span><br><span class="line">            label: &apos;发送人&apos;,</span><br><span class="line">            checked: false</span><br><span class="line">          &#125;]</span><br></pre></td></tr></table></figure>
+
+<h4 id="通义："><a href="#通义：" class="headerlink" title="通义："></a>通义：</h4><p>在Vue 2中，根据<code>dargList</code>的顺序和选中状态同步更新<code>listTableColumns</code>数组，并且使用localStorage来缓存<code>dargList</code>，你可以采取以下步骤：</p>
+<h4 id="1-初始化数据"><a href="#1-初始化数据" class="headerlink" title="1. 初始化数据"></a>1. 初始化数据</h4><p>首先，确保<code>listTableColumns</code>和<code>dargList</code>初始化时正确关联，并从localStorage加载<code>dargList</code>（如果之前保存过）。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">data() &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    listTableColumns: [</span><br><span class="line">      <span class="comment">// 初始列配置...</span></span><br><span class="line">    ],</span><br><span class="line">    dargList: [], <span class="comment">// 将从localStorage加载</span></span><br><span class="line">    columnMap: <span class="keyword">new</span> <span class="built_in">Map</span>(), <span class="comment">// 用于快速查找列</span></span><br><span class="line">  &#125;;</span><br><span class="line">&#125;,</span><br><span class="line">mounted() &#123;</span><br><span class="line">  <span class="keyword">this</span>.loadFromLocalStorage();</span><br><span class="line">  <span class="keyword">this</span>.syncListTableColumns();</span><br><span class="line">&#125;,</span><br><span class="line">methods: &#123;</span><br><span class="line">  loadFromLocalStorage() &#123;</span><br><span class="line">    <span class="keyword">const</span> storedDargList = localStorage.getItem(<span class="string">'dargList'</span>);</span><br><span class="line">    <span class="keyword">if</span> (storedDargList) &#123;</span><br><span class="line">      <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">this</span>.dargList = <span class="built_in">JSON</span>.parse(storedDargList);</span><br><span class="line">        <span class="keyword">this</span>.dargList.forEach(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">          <span class="keyword">this</span>.columnMap.set(item.prop, item);</span><br><span class="line">        &#125;);</span><br><span class="line">      &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">        <span class="built_in">console</span>.error(<span class="string">"Error loading dargList from localStorage"</span>, e);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  syncListTableColumns() &#123;</span><br><span class="line">    <span class="comment">// 根据dargList同步listTableColumns</span></span><br><span class="line">    <span class="keyword">this</span>.listTableColumns = <span class="keyword">this</span>.dargList</span><br><span class="line">      .filter(<span class="function"><span class="params">item</span> =&gt;</span> item.checked)</span><br><span class="line">      .map(<span class="function"><span class="params">check</span> =&gt;</span> <span class="keyword">this</span>.columnMap.get(check.prop));</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-更新listTableColumns逻辑"><a href="#2-更新listTableColumns逻辑" class="headerlink" title="2. 更新listTableColumns逻辑"></a>2. 更新<code>listTableColumns</code>逻辑</h4><p>创建一个方法来根据<code>dargList</code>的当前状态更新<code>listTableColumns</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">methods: &#123;</span><br><span class="line">  <span class="comment">// ...其他方法</span></span><br><span class="line">  updateListTableColumns() &#123;</span><br><span class="line">    <span class="comment">// 首先，提取出所有动态列</span></span><br><span class="line">    <span class="keyword">const</span> dynamicColumns = <span class="keyword">this</span>.dargList</span><br><span class="line">      .filter(<span class="function"><span class="params">item</span> =&gt;</span> item.checked)</span><br><span class="line">      .map(<span class="function"><span class="params">check</span> =&gt;</span> <span class="keyword">this</span>.columnMap.get(check.prop));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 然后，从原始的listTableColumns中筛选出固定列</span></span><br><span class="line">    <span class="keyword">const</span> fixedColumnsLeft = <span class="keyword">this</span>.listTableColumns.filter(<span class="function"><span class="params">col</span> =&gt;</span> col.fixed === <span class="string">'left'</span>);</span><br><span class="line">    <span class="keyword">const</span> fixedColumnsRight = <span class="keyword">this</span>.listTableColumns.filter(<span class="function"><span class="params">col</span> =&gt;</span> col.fixed === <span class="string">'right'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 合并固定列与动态列，保持固定列在相应位置</span></span><br><span class="line">    <span class="keyword">const</span> updatedListTableColumns = [...fixedColumnsLeft, ...dynamicColumns, ...fixedColumnsRight];</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 更新listTableColumns</span></span><br><span class="line">    <span class="keyword">this</span>.listTableColumns = updatedListTableColumns;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 保存更新后的dargList到localStorage</span></span><br><span class="line">    <span class="keyword">this</span>.saveToLocalStorage();</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>这段代码首先根据<code>dargList</code>中的选中状态和顺序提取出动态列，然后分别提取出原始<code>listTableColumns</code>中的左固定列和右固定列。接下来，将固定列与动态列按期望的顺序合并：先是左固定列，接着是动态列，最后是右固定列。这样，无论动态列如何排序，固定列都会保持在它们应有的位置上。</p>
+<p>记得在适当的地方调用<code>updateListTableColumns</code>方法，比如在<code>dargList</code>变化时，以确保视图始终与数据同步。</p>
+<h4 id="3-监听dargList变化"><a href="#3-监听dargList变化" class="headerlink" title="3. 监听dargList变化"></a>3. 监听<code>dargList</code>变化</h4><p>使用<code>watch</code>来监听<code>dargList</code>的任何变化（包括排序或选中状态的改变），然后调用<code>updateListTableColumns</code>方法同步<code>listTableColumns</code>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">watch: &#123;</span><br><span class="line">  dargList: &#123;</span><br><span class="line">    deep: <span class="literal">true</span>,</span><br><span class="line">    handler() &#123;</span><br><span class="line">      <span class="keyword">this</span>.updateListTableColumns();</span><br><span class="line">      <span class="keyword">this</span>.saveToLocalStorage();</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-保存到localStorage"><a href="#4-保存到localStorage" class="headerlink" title="4. 保存到localStorage"></a>4. 保存到localStorage</h4><p>创建一个方法来将更新后的<code>dargList</code>保存到localStorage。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">methods: &#123;</span><br><span class="line">  <span class="comment">// ...其他方法</span></span><br><span class="line">  saveToLocalStorage() &#123;</span><br><span class="line">    localStorage.setItem(<span class="string">'dargList'</span>, <span class="built_in">JSON</span>.stringify(<span class="keyword">this</span>.dargList));</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h4 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li>确保在拖拽排序或改变列的选中状态后调用<code>updateListTableColumns</code>和<code>saveToLocalStorage</code>方法。</li>
+<li><code>columnMap</code>是用来快速根据<code>prop</code>找到<code>dargList</code>中对应项的，确保在初始化和数据变化时保持同步。</li>
+<li>注意localStorage的大小限制和安全性问题，避免存储敏感信息。</li>
+</ul>
+<h4 id="一个项目有很多表格，请优化缓存方案"><a href="#一个项目有很多表格，请优化缓存方案" class="headerlink" title="一个项目有很多表格，请优化缓存方案"></a>一个项目有很多表格，请优化缓存方案</h4><p>在一个项目中，如果有多张表格需要根据用户自定义进行列显示的调整并进行缓存，那么单独为每张表格使用localStorage进行缓存可能会导致存储空间迅速消耗和管理上的复杂性。针对这种情况，可以采取一些优化策略来改进缓存方案：</p>
+<h3 id="1-使用统一的键名规则与命名空间"><a href="#1-使用统一的键名规则与命名空间" class="headerlink" title="1. 使用统一的键名规则与命名空间"></a>1. 使用统一的键名规则与命名空间</h3><p>为了避免键名冲突，可以为不同的表格设置统一的命名规则，如使用表格的唯一标识符（如ID或名称）作为前缀，后面跟上固定的字符串如<code>_columns</code>，形成独特的键名。例如，对于表格A，键名为<code>tableA_columns</code>。</p>
+<h3 id="2-结构化缓存数据"><a href="#2-结构化缓存数据" class="headerlink" title="2. 结构化缓存数据"></a>2. 结构化缓存数据</h3><p>考虑到可能有多个表格的配置需要缓存，可以将所有表格的配置整合成一个对象，再整体存入localStorage，这样可以减少存储条目，易于管理和查找。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="string">"tableA"</span>: [&#123;<span class="string">"prop"</span>: <span class="string">"col1"</span>, <span class="string">"label"</span>: <span class="string">"列1"</span>, <span class="string">"checked"</span>: <span class="literal">true</span>&#125;, ...],</span><br><span class="line">  <span class="string">"tableB"</span>: [&#123;<span class="string">"prop"</span>: <span class="string">"colX"</span>, <span class="string">"label"</span>: <span class="string">"列X"</span>, <span class="string">"checked"</span>: <span class="literal">false</span>&#125;, ...]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-压缩数据"><a href="#3-压缩数据" class="headerlink" title="3. 压缩数据"></a>3. 压缩数据</h3><p>由于localStorage存储容量有限，对于大量或复杂的配置数据，可以考虑使用JSON.stringify的第二个参数进行深度递归，移除循环引用和不必要的属性，或者使用如LZ-String之类的轻量级库对数据进行压缩后再存储，使用时解压。</p>
+<h3 id="4-分页或懒加载"><a href="#4-分页或懒加载" class="headerlink" title="4. 分页或懒加载"></a>4. 分页或懒加载</h3><p>如果单个表格的列配置非常庞大，可以考虑分页或懒加载策略来管理这些配置。只在用户实际查看或编辑某一页的列配置时，才从localStorage中读取或写入这部分数据。</p>
+<h3 id="5-过期策略"><a href="#5-过期策略" class="headerlink" title="5. 过期策略"></a>5. 过期策略</h3><p>为缓存数据设置过期时间，比如用户的配置在一周后自动清空，促使用户重新定制，或者定期清理旧的、不再访问的表配置，以释放存储空间。</p>
+<h3 id="6-使用IndexedDB替代"><a href="#6-使用IndexedDB替代" class="headerlink" title="6. 使用IndexedDB替代"></a>6. 使用IndexedDB替代</h3><p>如果localStorage的大小限制成为瓶颈，考虑使用IndexedDB作为替代。IndexedDB提供了更大的存储空间和更灵活的数据操作能力，支持索引和事务处理，适合存储结构化的大量数据。</p>
+<h3 id="7-用户体验与反馈"><a href="#7-用户体验与反馈" class="headerlink" title="7. 用户体验与反馈"></a>7. 用户体验与反馈</h3><p>在实施缓存策略时，确保提供良好的用户体验，比如在用户更改配置后给予明确的保存成功提示，以及在数据恢复时的反馈，让用户知道他们的设置被记忆并应用了。</p>
+<p>通过上述策略，可以在保证用户个性化体验的同时，有效管理存储资源，提升应用的性能和稳定性。</p>
+<h3 id="根据这个方案重写saveToLocalStorage，loadFromLocalStorage方法"><a href="#根据这个方案重写saveToLocalStorage，loadFromLocalStorage方法" class="headerlink" title="根据这个方案重写saveToLocalStorage，loadFromLocalStorage方法"></a>根据这个方案重写saveToLocalStorage，loadFromLocalStorage方法</h3><p>基于之前的讨论，我们来优化<code>saveToLocalStorage</code>和<code>loadFromLocalStorage</code>方法，以便在一个项目中管理多张表格的列配置。我们将使用统一的命名空间和结构化数据的方式来存储和读取缓存。</p>
+<h3 id="修改后的数据结构"><a href="#修改后的数据结构" class="headerlink" title="修改后的数据结构"></a>修改后的数据结构</h3><p>首先，假设每张表格的配置数据被组织在一个对象中，便于整体存取和管理：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">data() &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    allTableConfigs: &#123;</span><br><span class="line">      tableA: &#123; <span class="comment">/* 表格A的列配置 */</span> &#125;,</span><br><span class="line">      tableB: &#123; <span class="comment">/* 表格B的列配置 */</span> &#125;,</span><br><span class="line">      <span class="comment">// ...</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">    currentTableName: <span class="string">'tableA'</span>, <span class="comment">// 当前操作的表格标识</span></span><br><span class="line">    <span class="comment">// 其他数据...</span></span><br><span class="line">  &#125;;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h3 id="重写saveToLocalStorage"><a href="#重写saveToLocalStorage" class="headerlink" title="重写saveToLocalStorage"></a>重写<code>saveToLocalStorage</code></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">methods: &#123;</span><br><span class="line">  saveToLocalStorage(tableName = <span class="keyword">this</span>.currentTableName) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!tableName) <span class="keyword">return</span>; <span class="comment">// 如果没有指定表格名，则不保存</span></span><br><span class="line">    <span class="keyword">const</span> configKey = <span class="string">`<span class="subst">$&#123;tableName&#125;</span>_columns`</span>;</span><br><span class="line">    <span class="keyword">const</span> configsToSave = &#123;&#125;;</span><br><span class="line">    configsToSave[configKey] = <span class="keyword">this</span>.allTableConfigs[tableName];</span><br><span class="line">    localStorage.setItem(<span class="string">'tableConfigs'</span>, <span class="built_in">JSON</span>.stringify(configsToSave));</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h3 id="重写loadFromLocalStorage"><a href="#重写loadFromLocalStorage" class="headerlink" title="重写loadFromLocalStorage"></a>重写<code>loadFromLocalStorage</code></h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">methods: &#123;</span><br><span class="line">  loadFromLocalStorage(tableName = <span class="keyword">this</span>.currentTableName) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!tableName) <span class="keyword">return</span>; <span class="comment">// 如果没有指定表格名，则不加载</span></span><br><span class="line">    <span class="keyword">const</span> configKey = <span class="string">`<span class="subst">$&#123;tableName&#125;</span>_columns`</span>;</span><br><span class="line">    <span class="keyword">const</span> storedData = localStorage.getItem(<span class="string">'tableConfigs'</span>);</span><br><span class="line">    <span class="keyword">if</span> (storedData) &#123;</span><br><span class="line">      <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> parsedData = <span class="built_in">JSON</span>.parse(storedData);</span><br><span class="line">        <span class="keyword">if</span> (parsedData[configKey]) &#123;</span><br><span class="line">          <span class="keyword">this</span>.allTableConfigs[tableName] = parsedData[configKey];</span><br><span class="line">          <span class="comment">// 如果是当前表格，可能需要调用syncListTableColumns来更新视图</span></span><br><span class="line">          <span class="keyword">if</span> (tableName === <span class="keyword">this</span>.currentTableName) &#123;</span><br><span class="line">            <span class="keyword">this</span>.syncListTableColumns();</span><br><span class="line">          &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          <span class="built_in">console</span>.warn(<span class="string">`No configuration found for table <span class="subst">$&#123;tableName&#125;</span> in localStorage.`</span>);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">        <span class="built_in">console</span>.error(<span class="string">"Error parsing stored table configurations"</span>, error);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">"No table configurations found in localStorage."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h3 id="注意事项-1"><a href="#注意事项-1" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>确保在适当的时候调用<code>saveToLocalStorage(tableName)</code>，比如在表格配置发生变化后。</li>
+<li><code>loadFromLocalStorage(tableName)</code>可以在组件的<code>mounted</code>生命周期钩子中调用，或在需要时手动调用来恢复用户上次的配置。</li>
+<li><code>currentTableName</code>应根据当前操作的表格动态设置，以确保加载和保存正确的配置。</li>
+<li>考虑到性能和存储限制，对于非常大的配置，还是建议使用更高效的存储解决方案如IndexedDB。</li>
+</ul>
+<p>通过这种方式，我们可以更高效和有序地管理多个表格的列配置缓存，同时保持代码的清晰和可维护性。</p>
+<h3 id="vue2通过route-name-该页面序号来命名tableName，保证项目中所有tableName不重复，代码怎么实现"><a href="#vue2通过route-name-该页面序号来命名tableName，保证项目中所有tableName不重复，代码怎么实现" class="headerlink" title="vue2通过route.name+该页面序号来命名tableName，保证项目中所有tableName不重复，代码怎么实现"></a>vue2通过route.name+该页面序号来命名tableName，保证项目中所有tableName不重复，代码怎么实现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.tableName = this.config.name ? `$&#123;this.$route.name&#125;-$&#123;this.config.name&#125;` : this.$route.name</span><br></pre></td></tr></table></figure>
+
+<h3 id="拖拽排序问题"><a href="#拖拽排序问题" class="headerlink" title="拖拽排序问题"></a>拖拽排序问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">拖拽排序方法</span><br><span class="line">this.listTableColumns = this.dargList</span><br><span class="line">        .filter(item =&gt; item.checked)</span><br><span class="line">        .map(check =&gt; this.columnMap.get(check.prop))</span><br><span class="line">第一个写法不能更新表格顺序</span><br><span class="line">&lt;el-table-column</span><br><span class="line">        v-for=&quot;item in listTableColumns&quot;</span><br><span class="line">        :key=&quot;item.uniqueKey&quot;</span><br><span class="line">第二个写法可以更新表格顺序，但是否选中时偶尔会错乱</span><br><span class="line">&lt;el-table-column</span><br><span class="line">        v-for=&quot;(item, index) in listTableColumns&quot;</span><br><span class="line">        :key=&quot;index&quot;</span><br><span class="line">怎么解决</span><br><span class="line">:key=&quot;`$&#123;item.uniqueKey&#125;-$&#123;index&#125;`&quot;</span><br></pre></td></tr></table></figure>
+
+<p>最终源码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br></pre></td><td class="code"><pre><span class="line">data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      listTableColumns: [], // 初始其他正常列</span><br><span class="line">      dargList: [], // 拖拽列表数据</span><br><span class="line">      columnMap: new Map(), // 正常列键值对数据，用于快速查找列</span><br><span class="line">      tableConfigs: &#123;</span><br><span class="line">        // tableA: [] // 表格A的列配置</span><br><span class="line">      &#125;,</span><br><span class="line">      tableName: &apos;&apos;, // 当前操作的表格标识（整个项目唯一）</span><br><span class="line">      selection: false, // 是否需要多选列</span><br><span class="line">      tableMaxHeight: 0</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line">     * 初始化方法：</span><br><span class="line">     *  1、处理多选列是否显示</span><br><span class="line">     */</span><br><span class="line">    init () &#123;</span><br><span class="line">      // 初始化列的键值对数据</span><br><span class="line">      this.columns.forEach(item =&gt; &#123;</span><br><span class="line">        if (item.prop) &#123;</span><br><span class="line">          this.columnMap.set(item.prop, item)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;)</span><br><span class="line">      // 如果我后期加了一列，怎么更新缓存？可以改个表名config.name</span><br><span class="line">      this.tableName = this.config.name ? `$&#123;this.$route.name&#125;-$&#123;this.config.name&#125;` : this.$route.name</span><br><span class="line">      let hasCache = false</span><br><span class="line">      const storedData = localStorage.getItem(&apos;tableConfigs&apos;)</span><br><span class="line">      if (storedData) &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">          const parsedData = JSON.parse(storedData)</span><br><span class="line">          this.tableConfigs = parsedData</span><br><span class="line">          if (parsedData[this.tableName]) &#123;</span><br><span class="line">            hasCache = true</span><br><span class="line">            this.dargList = parsedData[this.tableName]</span><br><span class="line">          &#125; else &#123;</span><br><span class="line">            // console.warn(`没找到$&#123;this.tableName&#125;的缓存`)</span><br><span class="line">          &#125;</span><br><span class="line">        &#125; catch (error) &#123;</span><br><span class="line">          // console.error(&apos;Error parsing stored table configurations&apos;, error)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        // console.log(&apos;没有tableConfigs&apos;)</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      // 多选列是否显示</span><br><span class="line">      if (this.initShow) &#123;</span><br><span class="line">        this.selection = this.columns &amp;&amp; this.columns[0] &amp;&amp; this.columns[0].selection</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        // 目前pc-manage-archives都是false</span><br><span class="line">        this.selection = this.columns.length &gt; 0 ? this.columns[0].selection : false</span><br><span class="line">      &#125;</span><br><span class="line">      // 深度复制columns数组</span><br><span class="line">      const uniqueKeyList = _.cloneDeep(this.columns)</span><br><span class="line">      if (hasCache) &#123;</span><br><span class="line">        // 有缓存直接更新视图</span><br><span class="line">        this.updateColumns()</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        // 没有缓存，则初始化</span><br><span class="line">        const checks = []</span><br><span class="line">        uniqueKeyList.forEach((item, index) =&gt; &#123;</span><br><span class="line">          // 每个元素添加一个唯一key，其值为索引、prop属性（如果存在）和当前时间的毫秒表示的组合</span><br><span class="line">          item.uniqueKey = `$&#123;index&#125;$&#123;item.prop ? item.prop : &apos;-&apos;&#125;$&#123;Date.parse(new Date())&#125;`</span><br><span class="line">          // 设置拖拽列表需要的数据（有键、不固定）</span><br><span class="line">          if (item.prop &amp;&amp; !item.fixed) &#123;</span><br><span class="line">            checks.push(&#123;</span><br><span class="line">              prop: item.prop,</span><br><span class="line">              label: item.label,</span><br><span class="line">              checked: true</span><br><span class="line">            &#125;)</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        this.dargList = checks</span><br><span class="line">        if (this.selection) &#123;</span><br><span class="line">          // 多选列显示</span><br><span class="line">          if (this.initShow) &#123;</span><br><span class="line">            this.listTableColumns = this.remove(uniqueKeyList)</span><br><span class="line">          &#125; else &#123;</span><br><span class="line">            // 目前pc-manage-archives都是false</span><br><span class="line">            // 多选列显示：将第一列给剔除掉，使用后续的数据来初始化正常列</span><br><span class="line">            const len = uniqueKeyList.length - 1</span><br><span class="line">            this.listTableColumns = uniqueKeyList.splice(1, len)</span><br><span class="line">            // 对 Table 进行重新布局。当 Table 或其祖先元素由隐藏切换为显示时，可能需要调用此方法</span><br><span class="line">            this.$refs.listTable &amp;&amp; this.$refs.listTable.doLayout()</span><br><span class="line">          &#125;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">          // 多选列不显示</span><br><span class="line">          this.listTableColumns = uniqueKeyList</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      console.log(this.columns, uniqueKeyList, this.listTableColumns, this.dargList)</span><br><span class="line">    &#125;,</span><br><span class="line">    remove (list) &#123;</span><br><span class="line">      return list.filter(e =&gt; e.selection !== true)</span><br><span class="line">    &#125;,</span><br><span class="line">    // 更新列数据</span><br><span class="line">    updateColumns () &#123;</span><br><span class="line">      // 首先，提取出所有动态列</span><br><span class="line">      const dynamicColumns = this.dargList</span><br><span class="line">        .filter(item =&gt; item.checked)</span><br><span class="line">        .map(check =&gt; this.columnMap.get(check.prop))</span><br><span class="line">      // 然后，从原始的listTableColumns中筛选出固定列</span><br><span class="line">      const fixedColumnsLeft = this.columns.filter(col =&gt; col.fixed === &apos;left&apos;)</span><br><span class="line">      const fixedColumnsRight = this.columns.filter(col =&gt; col.fixed === &apos;right&apos;)</span><br><span class="line">      // 合并固定列与动态列，保持固定列在相应位置</span><br><span class="line">      const updatedListTableColumns = [...fixedColumnsLeft, ...dynamicColumns, ...fixedColumnsRight]</span><br><span class="line">      // 更新listTableColumns</span><br><span class="line">      this.listTableColumns = updatedListTableColumns</span><br><span class="line">      console.log(this.listTableColumns, this.dargList)</span><br><span class="line">    &#125;,</span><br><span class="line">    // 保存列设置</span><br><span class="line">    saveColumns () &#123;</span><br><span class="line">      this.updateColumns()</span><br><span class="line">      this.tableConfigs[this.tableName] = this.dargList</span><br><span class="line">      localStorage.setItem(&apos;tableConfigs&apos;, JSON.stringify(this.tableConfigs))</span><br><span class="line">    &#125;,</span><br></pre></td></tr></table></figure>
+
+<h4 id="ChatGPT："><a href="#ChatGPT：" class="headerlink" title="ChatGPT："></a>ChatGPT：</h4><p>在Vue 2中，你可以通过拖拽组件的排序事件，然后更新表格的列顺序，并将更新后的列顺序存储到<code>localStorage</code>中。下面是一个简单的步骤指南和示例代码，展示如何实现这一功能：</p>
+<h4 id="步骤指南"><a href="#步骤指南" class="headerlink" title="步骤指南"></a>步骤指南</h4><ol>
+<li><p>拖拽组件的排序事件*<em>：拖拽组件通常会有一个事件，当列的顺序改变时触发。你需要 *</em>这个事件，并获取新的列顺序。</p>
+</li>
+<li><p><strong>更新表格列的顺序</strong>：一旦你获得了新的列顺序，你需要更新表格的列定义，以反映这个新的顺序。</p>
+</li>
+<li><p><strong>存储到localStorage</strong>：将更新后的列顺序存储到<code>localStorage</code>中，以便在下次页面加载时恢复这个顺序。</p>
+</li>
+</ol>
+<h4 id="示例代码"><a href="#示例代码" class="headerlink" title="示例代码"></a>示例代码</h4><p>假设你的拖拽组件提供了一个<code>onChange</code>事件，当列的顺序改变时触发，并传递一个包含新顺序的列对象数组。</p>
+<p>首先，在你的Vue组件中，你需要一个方法来处理这个事件并更新列的顺序：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  data() &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      columns: [</span><br><span class="line">        <span class="comment">// ... 你的初始列定义</span></span><br><span class="line">      ],</span><br><span class="line">      sortColumns: [</span><br><span class="line">        <span class="comment">// ... 你的初始拖拽组件列定义</span></span><br><span class="line">      ]</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    handleSortChange(newSortColumns) &#123;</span><br><span class="line">      <span class="comment">// 更新表格的列顺序</span></span><br><span class="line">      <span class="keyword">this</span>.columns = newSortColumns.map(<span class="function"><span class="params">sortColumn</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">const</span> originalColumn = <span class="keyword">this</span>.columns.find(<span class="function"><span class="params">column</span> =&gt;</span> column.prop === sortColumn.prop);</span><br><span class="line">        <span class="keyword">if</span> (originalColumn) &#123;</span><br><span class="line">          <span class="keyword">return</span> originalColumn;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 如果没有找到匹配的列，可以返回一个默认列或进行错误处理</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">      &#125;).filter(<span class="function"><span class="params">column</span> =&gt;</span> column !== <span class="literal">null</span>); <span class="comment">// 过滤掉null值</span></span><br><span class="line"></span><br><span class="line">      <span class="comment">// 存储到localStorage</span></span><br><span class="line">      localStorage.setItem(<span class="string">'sortColumns'</span>, <span class="built_in">JSON</span>.stringify(newSortColumns));</span><br><span class="line">    &#125;,</span><br><span class="line">    loadSavedSortColumns() &#123;</span><br><span class="line">      <span class="comment">// 加载localStorage中保存的列顺序</span></span><br><span class="line">      <span class="keyword">const</span> savedSortColumns = localStorage.getItem(<span class="string">'sortColumns'</span>);</span><br><span class="line">      <span class="keyword">if</span> (savedSortColumns) &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">          <span class="keyword">this</span>.sortColumns = <span class="built_in">JSON</span>.parse(savedSortColumns);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">          <span class="comment">// 解析错误处理</span></span><br><span class="line">          <span class="built_in">console</span>.error(<span class="string">'Error parsing saved sort columns:'</span>, e);</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created() &#123;</span><br><span class="line">    <span class="comment">// 在组件创建时加载保存的列顺序</span></span><br><span class="line">    <span class="keyword">this</span>.loadSavedSortColumns();</span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    <span class="comment">//  ** sortColumns的变化，以便在需要时更新localStorage（如果你需要在其他时候手动更新localStorage）</span></span><br><span class="line">    sortColumns: &#123;</span><br><span class="line">      deep: <span class="literal">true</span>,</span><br><span class="line">      handler() &#123;</span><br><span class="line">        localStorage.setItem(<span class="string">'sortColumns'</span>, <span class="built_in">JSON</span>.stringify(<span class="keyword">this</span>.sortColumns));</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>在你的模板中，你需要绑定<code>onChange</code>事件到你的拖拽组件：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">your-draggable-component</span> <span class="attr">:columns</span>=<span class="string">"sortColumns"</span> @<span class="attr">change</span>=<span class="string">"handleSortChange"</span>&gt;</span><span class="tag">&lt;/<span class="name">your-draggable-component</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>请注意，你需要替换<code>&lt;your-draggable-component&gt;</code>和相关的属性、事件为你实际使用的拖拽组件的标记和API。此外，确保你的拖拽组件确实提供了类似<code>onChange</code>的事件，并且传递了正确的数据。</p>
+<h4 id="注意事项-2"><a href="#注意事项-2" class="headerlink" title="注意事项"></a>注意事项</h4><ul>
+<li><code>localStorage</code>只能存储字符串，因此你需要使用<code>JSON.stringify()</code>来存储数组，以及<code>JSON.parse()</code>来解析存储的数据。</li>
+<li>如果你的列定义除了<code>prop</code>之外还有其他重要的属性（如<code>label</code>、<code>width</code>等），你需要在<code>handleSortChange</code>方法中确保这些属性也被正确地复制到新的列定义中。</li>
+<li>如果拖拽组件没有直接提供列顺序变化的事件，你可能需要手动计算或追踪列的顺序变化。</li>
+<li>错误处理是很重要的，特别是当处理<code>localStorage</code>时，因为用户可能禁用了这个功能，或者存储的数据可能已损坏。</li>
+</ul>
+<h4 id="通过watch监听数组改变好？还是通过拖拽事件触发好？"><a href="#通过watch监听数组改变好？还是通过拖拽事件触发好？" class="headerlink" title="通过watch监听数组改变好？还是通过拖拽事件触发好？"></a>通过watch监听数组改变好？还是通过拖拽事件触发好？</h4><p>关于通过<code>watch</code> 监听 数组改变还是通过拖拽事件触发，这个问题的答案实际上取决于你的具体需求和场景。</p>
+<ol>
+<li><h5 id="通过watch-数组改变："><a href="#通过watch-数组改变：" class="headerlink" title="通过watch 数组改变："></a>通过<code>watch</code> 数组改变：</h5></li>
+</ol>
+<ul>
+<li><strong>优点</strong>：<ul>
+<li>可以自动捕获数组的任何变化，无需手动触发事件。</li>
+<li>可以方便地执行与数组变化相关的逻辑。</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：<ul>
+<li>如果数组变化频繁，可能会导致性能问题，因为<code>watch</code>可能会多次触发。</li>
+<li>如果只是关心特定的变化（例如，数组的某个特定元素的改变），<code>watch</code>可能不是最高效的方法。</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li><h5 id="通过拖拽事件触发："><a href="#通过拖拽事件触发：" class="headerlink" title="通过拖拽事件触发："></a>通过拖拽事件触发：</h5></li>
+</ol>
+<ul>
+<li><strong>优点</strong>：<ul>
+<li>可以精确地控制何时触发事件，只在用户进行拖拽操作时发生。</li>
+<li>可以方便地获取拖拽的详细信息（如拖拽的起始位置、结束位置等）。</li>
+</ul>
+</li>
+<li><strong>缺点</strong>：<ul>
+<li>需要手动编写拖拽事件的 ** 和处理逻辑。</li>
+<li>如果拖拽逻辑复杂，可能需要更多的代码来维护。</li>
+</ul>
+</li>
+</ul>
+<h5 id="建议："><a href="#建议：" class="headerlink" title="建议："></a>建议：</h5><ul>
+<li>如果你的应用主要依赖于数组的变化来执行某些操作，并且这些操作不需要精确地与用户的拖拽行为绑定，那么使用<code>watch</code>来监听数组的变化可能更为方便。</li>
+<li>如果你的应用需要精确地响应用户的拖拽行为，并且拖拽操作与数组的变化紧密相关，那么通过拖拽事件触发可能更为合适。</li>
+</ul>
+<p>总之，选择哪种方法取决于你的具体需求和场景。在实际开发中，可以根据应用的实际情况进行选择和调整。</p>
+<h3 id="vue2二维码列表通过v-for循环出来，并通过数组来管理每个二维码的显示状态，首次只展示第一张二维码，其他二维码通过用户点击事件获取，每个二维码从创建开始，倒计时5分钟后为不显示状态"><a href="#vue2二维码列表通过v-for循环出来，并通过数组来管理每个二维码的显示状态，首次只展示第一张二维码，其他二维码通过用户点击事件获取，每个二维码从创建开始，倒计时5分钟后为不显示状态" class="headerlink" title="vue2二维码列表通过v-for循环出来，并通过数组来管理每个二维码的显示状态，首次只展示第一张二维码，其他二维码通过用户点击事件获取，每个二维码从创建开始，倒计时5分钟后为不显示状态"></a>vue2二维码列表通过v-for循环出来，并通过数组来管理每个二维码的显示状态，首次只展示第一张二维码，其他二维码通过用户点击事件获取，每个二维码从创建开始，倒计时5分钟后为不显示状态</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br></pre></td><td class="code"><pre><span class="line">		  &lt;img class=&quot;code&quot;</span><br><span class="line">            v-if=&quot;item.countdown&gt;0&quot;</span><br><span class="line">            :src=&quot;item.codeUrl&quot;</span><br><span class="line">            alt=&quot;&quot;</span><br><span class="line">            @click=&quot;showImg(item.codeUrl)&quot; /&gt;</span><br><span class="line">          &lt;img class=&quot;mask&quot;</span><br><span class="line">            v-else</span><br><span class="line">            src=&quot;@/assets/images/employee-group/mask@2x.png&quot;</span><br><span class="line">            alt=&quot;&quot; /&gt;</span><br><span class="line">          &lt;div class=&quot;btn&quot;</span><br><span class="line">            v-if=&quot;item.countdown===0&quot;</span><br><span class="line">            @click=&quot;getQRCode(item)&quot;&gt;获取我的二维码&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      groupList: [</span><br><span class="line">        &#123;</span><br><span class="line">          empGroupId: 11111,</span><br><span class="line">          empGroupName: &apos;名称1：&apos;,</span><br><span class="line">          status: 1,</span><br><span class="line">          codeUrl: require(&apos;@/assets/images/employee-group/code.png&apos;)</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          empGroupId: 22222,</span><br><span class="line">          empGroupName: &apos;名称2：&apos;,</span><br><span class="line">          status: 0,</span><br><span class="line">          codeUrl: &apos;&apos;</span><br><span class="line">        &#125;</span><br><span class="line">      ],</span><br><span class="line">      isCountingDown: false, // 控制倒计时是否正在进行</span><br><span class="line">      globalCountdownId: null, // 用于存储全局倒计时的ID</span><br><span class="line">      countdownLimit: 10, // 倒计时总时长限制，单位：秒</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    // 获取当前最大的倒计时，即只要有一个倒计时大于0，表示还不能结束</span><br><span class="line">    countdownMax() &#123;</span><br><span class="line">      return this.groupList.reduce(</span><br><span class="line">        (max, item) =&gt; Math.max(max, item.countdown),</span><br><span class="line">        0</span><br><span class="line">      )</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  watch: &#123;</span><br><span class="line">    // 监听countdownMax变化</span><br><span class="line">    countdownMax(newMax) &#123;</span><br><span class="line">      if (newMax &gt; 0 &amp;&amp; !this.isCountingDown) &#123;</span><br><span class="line">        // 当有倒计时 且 尚未启动倒计时器时启动</span><br><span class="line">        this.startGlobalCountdown()</span><br><span class="line">      &#125; else if (newMax === 0 &amp;&amp; this.isCountingDown) &#123;</span><br><span class="line">        // 倒计时全部结束，停止倒计时器</span><br><span class="line">        this.stopGlobalCountdown()</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  created() &#123;</span><br><span class="line">    // 初始化倒计时</span><br><span class="line">    this.groupList.forEach((item, index) =&gt; &#123;</span><br><span class="line">      if (index === 0) &#123;</span><br><span class="line">        // 首次只展示第一张二维码</span><br><span class="line">        item.countdown = this.countdownLimit</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">        item.countdown = 0</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  beforeDestroy() &#123;</span><br><span class="line">    // 组件销毁时，确保清除倒计时</span><br><span class="line">    this.stopGlobalCountdown()</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    // 启动倒计时</span><br><span class="line">    startGlobalCountdown() &#123;</span><br><span class="line">      console.log(&apos;启动倒计时&apos;, this.groupList)</span><br><span class="line">      this.isCountingDown = true</span><br><span class="line">      this.globalCountdownId = setInterval(() =&gt; &#123;</span><br><span class="line">        this.updateQrCodesCountdown()</span><br><span class="line">        // 检查是否所有倒计时已结束</span><br><span class="line">        if (this.groupList.every((item) =&gt; item.countdown === 0)) &#123;</span><br><span class="line">          this.stopGlobalCountdown()</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, 1000)</span><br><span class="line">    &#125;,</span><br><span class="line">    // 更新倒计时</span><br><span class="line">    updateQrCodesCountdown() &#123;</span><br><span class="line">      // 使用了数组的map方法来创建新的数组对象，避免了直接修改响应式依赖项的问题</span><br><span class="line">      this.groupList = this.groupList.map((item) =&gt; &#123;</span><br><span class="line">        if (item.countdown &gt; 0) &#123;</span><br><span class="line">          return &#123; ...item, countdown: item.countdown - 1 &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        return item</span><br><span class="line">      &#125;)</span><br><span class="line">      console.log(&apos;当前最大的倒计时&apos;, this.countdownMax)</span><br><span class="line">    &#125;,</span><br><span class="line">    // 停止倒计时</span><br><span class="line">    stopGlobalCountdown() &#123;</span><br><span class="line">      console.log(&apos;停止倒计时&apos;)</span><br><span class="line">      clearInterval(this.globalCountdownId)</span><br><span class="line">      this.isCountingDown = false</span><br><span class="line">      this.globalCountdownId = null</span><br><span class="line">    &#125;,</span><br><span class="line">    // 图片预览</span><br><span class="line">    showImg(codeUrl) &#123;</span><br><span class="line">      this.previewImages = [codeUrl]</span><br><span class="line">      // this.previewImages = [this.$kaCommonUtils.file.getFileUrl(codeUrl)]</span><br><span class="line">      this.isPreview = true</span><br><span class="line">    &#125;,</span><br><span class="line">    // 获取二维码</span><br><span class="line">    getQRCode(item) &#123;</span><br><span class="line">      // 请求接口获取图片，开启倒计时</span><br><span class="line">      item.codeUrl = require(&apos;@/assets/images/employee-group/code.png&apos;)</span><br><span class="line">      item.countdown = this.countdownLimit</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-06-06T02:21:10.215Z" itemprop="dateUpdated">2024-06-06 10:21:10</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/questions/vue-xiang-mu-si-lu.html" target="_blank" rel="external">https://qw66.gitee.io/questions/vue-xiang-mu-si-lu.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/questions/vue-xiang-mu-si-lu.html&title=《vue项目思路》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/questions/vue-xiang-mu-si-lu.html&title=《vue项目思路》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/questions/vue-xiang-mu-si-lu.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vue项目思路》 — 秦伟博客&url=https://qw66.gitee.io/questions/vue-xiang-mu-si-lu.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/questions/vue-xiang-mu-si-lu.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/interview/vuex.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">vuex</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/questions/vue-wen-ti.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">vue问题</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/questions/vue-xiang-mu-si-lu.html&title=《vue项目思路》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/questions/vue-xiang-mu-si-lu.html&title=《vue项目思路》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/questions/vue-xiang-mu-si-lu.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vue项目思路》 — 秦伟博客&url=https://qw66.gitee.io/questions/vue-xiang-mu-si-lu.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/questions/vue-xiang-mu-si-lu.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKklEQVR42u3a0W4iMQwFUP7/p+nrSnSm98YgLcnJE0JpMmcqGTvx4xGP58v49/t8TjLzdf7bBgYGxtcynrfjfs7VOslDv85JXs3lOhgYGAcw8qXvN0v+NomZ+bNhYGBgtIw2QWz3xcDAwGiXa0NqHnYxMDAw1orY/KHbMrgtnjEwME5jTILgpz9/5H4DAwPjqxjPckyuOfNLhfqpMDAwtmZMUr3JEf8nUk8MDIwTGGsH+vlx2GRm9PowMDA2ZUxatSY15uT7X54QAwPjGEayaHud2ZbE9/tehmAMDIytGWtBc61JInk1bdI5ukLAwMD4QkZyNLa2zf3Mlje6a8XAwPhCRl6mtgXnWqi93/dyZQwMjAMY7RJ5E8bazDpVxcDAOIaRJ21rl5FJwrcW9DEwMPZmtMXte5st2vD6mAwMDIyvZeSNpPmR2X2InJwLFj0jGBgYGzGSSXm69q7AOvqVwMDA2I6RtHC1iVperCaHfdHuGBgYWzNaTHIM15ava80Wo/8JBgbGFoy1Y/qE15a7RfDFwMA4gDFJBFtScjFZF8MYGBgHMCbnWu3h3dqx2h9UDAyMTRnPciSBci1MtyH4MinEwMDYjjEJdm1WttZU0bbAYmBg7MrIC9H8inFyMbmYPmJgYBzAyAPfWnPGu1K9yx0xMDAwBuG1bSOr2ywwMDAw/psrgT9eEAYGxgGMtnX1c+lj/rIwMDDOYay1WbSF6P0jTtJHDAyMrRk/Vu9fXauz0aMAAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

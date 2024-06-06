@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>自定义表格列 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="vue,表格">
+    <meta name="description" content="element ui vue2怎么实现根据用户自定义缓存设置 是否显示表格的某列在 Element UI（用于 Vue.js 的组件库）中，如果你想根据用户的自定义缓存设置来决定是否显示表格的某列，你可以通过以下步骤实现：  存储用户设置：首先，你需要一种方式来存储用户的设置。这可以是 localStorage、Cookies、Vuex 状态管理或者其他后端存储方式。 读取用户设置：在组件加载时，">
+<meta name="keywords" content="vue,表格">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自定义表格列">
+<meta property="og:url" content="https://qw66.gitee.io/articles/zi-ding-yi-biao-ge-lie.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="element ui vue2怎么实现根据用户自定义缓存设置 是否显示表格的某列在 Element UI（用于 Vue.js 的组件库）中，如果你想根据用户的自定义缓存设置来决定是否显示表格的某列，你可以通过以下步骤实现：  存储用户设置：首先，你需要一种方式来存储用户的设置。这可以是 localStorage、Cookies、Vuex 状态管理或者其他后端存储方式。 读取用户设置：在组件加载时，">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2024-05-10T09:10:43.336Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="自定义表格列">
+<meta name="twitter:description" content="element ui vue2怎么实现根据用户自定义缓存设置 是否显示表格的某列在 Element UI（用于 Vue.js 的组件库）中，如果你想根据用户的自定义缓存设置来决定是否显示表格的某列，你可以通过以下步骤实现：  存储用户设置：首先，你需要一种方式来存储用户的设置。这可以是 localStorage、Cookies、Vuex 状态管理或者其他后端存储方式。 读取用户设置：在组件加载时，">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">自定义表格列</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">自定义表格列</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2024-05-10T16:00:00.000Z" itemprop="datePublished" class="page-time">
+  2024-05-11
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端文章/">前端文章</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#element-ui-vue2怎么实现根据用户自定义缓存设置-是否显示表格的某列"><span class="post-toc-number">1.</span> <span class="post-toc-text">element ui vue2怎么实现根据用户自定义缓存设置 是否显示表格的某列</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-假设你有一个用于存储用户设置的变量"><span class="post-toc-number">2.</span> <span class="post-toc-text">1. 假设你有一个用于存储用户设置的变量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-在-Vue-组件中，根据这些设置动态渲染列"><span class="post-toc-number">3.</span> <span class="post-toc-text">2. 在 Vue 组件中，根据这些设置动态渲染列</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-读取和更新用户设置"><span class="post-toc-number">4.</span> <span class="post-toc-text">3. 读取和更新用户设置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#注意事项："><span class="post-toc-number">5.</span> <span class="post-toc-text">注意事项：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如果el-table-column是通过v-for循环出来的，应该怎么处理"><span class="post-toc-number">6.</span> <span class="post-toc-text">如果el-table-column是通过v-for循环出来的，应该怎么处理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#哪个elementui项目支持列设置"><span class="post-toc-number">7.</span> <span class="post-toc-text">哪个elementui项目支持列设置</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-articles/自定义表格列"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">自定义表格列</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2024-05-11 00:00:00" datetime="2024-05-10T16:00:00.000Z"  itemprop="datePublished">2024-05-11</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端文章/">前端文章</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="element-ui-vue2怎么实现根据用户自定义缓存设置-是否显示表格的某列"><a href="#element-ui-vue2怎么实现根据用户自定义缓存设置-是否显示表格的某列" class="headerlink" title="element ui vue2怎么实现根据用户自定义缓存设置 是否显示表格的某列"></a>element ui vue2怎么实现根据用户自定义缓存设置 是否显示表格的某列</h3><p>在 Element UI（用于 Vue.js 的组件库）中，如果你想根据用户的自定义缓存设置来决定是否显示表格的某列，你可以通过以下步骤实现：</p>
+<ol>
+<li><strong>存储用户设置</strong>：首先，你需要一种方式来存储用户的设置。这可以是 localStorage、Cookies、Vuex 状态管理或者其他后端存储方式。</li>
+<li><strong>读取用户设置</strong>：在组件加载时，读取用户的设置。</li>
+<li><strong>动态渲染表格列</strong>：基于用户的设置，动态地渲染表格的列。</li>
+</ol>
+<p>以下是一个基本的实现示例：</p>
+<h3 id="1-假设你有一个用于存储用户设置的变量"><a href="#1-假设你有一个用于存储用户设置的变量" class="headerlink" title="1. 假设你有一个用于存储用户设置的变量"></a>1. 假设你有一个用于存储用户设置的变量</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 假设这是从 localStorage 或其他地方读取的用户设置  </span></span><br><span class="line"><span class="keyword">let</span> userSettings = &#123;  </span><br><span class="line">  showColumnA: <span class="literal">true</span>,  </span><br><span class="line">  showColumnB: <span class="literal">false</span>,  </span><br><span class="line">  <span class="comment">// ... 其他列的设置  </span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-在-Vue-组件中，根据这些设置动态渲染列"><a href="#2-在-Vue-组件中，根据这些设置动态渲染列" class="headerlink" title="2. 在 Vue 组件中，根据这些设置动态渲染列"></a>2. 在 Vue 组件中，根据这些设置动态渲染列</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;  </span><br><span class="line">  &lt;el-table :data=&quot;tableData&quot;&gt;  </span><br><span class="line">    &lt;el-table-column v-if=&quot;userSettings.showColumnA&quot; prop=&quot;columnA&quot; label=&quot;Column A&quot;&gt;&lt;/el-table-column&gt;  </span><br><span class="line">    &lt;el-table-column v-if=&quot;userSettings.showColumnB&quot; prop=&quot;columnB&quot; label=&quot;Column B&quot;&gt;&lt;/el-table-column&gt;  </span><br><span class="line">    &lt;!-- ... 其他列 --&gt;  </span><br><span class="line">  &lt;/el-table&gt;  </span><br><span class="line">&lt;/template&gt;  </span><br><span class="line">  </span><br><span class="line">&lt;script&gt;  </span><br><span class="line">export default &#123;  </span><br><span class="line">  data() &#123;  </span><br><span class="line">    return &#123;  </span><br><span class="line">      tableData: [  </span><br><span class="line">        // ... 你的表格数据  </span><br><span class="line">      ],  </span><br><span class="line">      userSettings: &#123;  </span><br><span class="line">        // 这里应该根据你的应用逻辑来初始化或读取用户设置  </span><br><span class="line">        showColumnA: true,  </span><br><span class="line">        showColumnB: false,  </span><br><span class="line">        // ... 其他列的设置  </span><br><span class="line">      &#125;,  </span><br><span class="line">    &#125;;  </span><br><span class="line">  &#125;,  </span><br><span class="line">  // ... 其他选项和方法  </span><br><span class="line">&#125;;  </span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-读取和更新用户设置"><a href="#3-读取和更新用户设置" class="headerlink" title="3. 读取和更新用户设置"></a>3. 读取和更新用户设置</h3><p>你可能需要提供一种方式来让用户更新这些设置，并将它们保存回存储中。这可以通过表单、对话框或其他 UI 元素来实现。当用户更新设置时，你应该更新 <code>userSettings</code> 对象，并可能还需要将这些更改保存回 localStorage 或其他存储中。</p>
+<h3 id="注意事项："><a href="#注意事项：" class="headerlink" title="注意事项："></a>注意事项：</h3><ul>
+<li>确保你的表格数据（<code>tableData</code>）中的属性与你在 <code>el-table-column</code> 中使用的 <code>prop</code> 属性匹配。</li>
+<li>如果你使用的是 Vuex 或其他状态管理库，你可能需要将 <code>userSettings</code> 保存在 Vuex store 中，并在需要时从 store 中读取它们。</li>
+<li>当用户更改设置时，你可能需要触发一个事件或调用一个方法来更新你的 UI 和/或保存更改到存储中。</li>
+</ul>
+<h3 id="如果el-table-column是通过v-for循环出来的，应该怎么处理"><a href="#如果el-table-column是通过v-for循环出来的，应该怎么处理" class="headerlink" title="如果el-table-column是通过v-for循环出来的，应该怎么处理"></a>如果el-table-column是通过v-for循环出来的，应该怎么处理</h3><p>如果 <code>el-table-column</code> 是通过 <code>v-for</code> 循环动态生成的，你可以根据用户设置来决定是否渲染每一列。这通常涉及到在循环中检查用户设置来确定是否包含某个列。</p>
+<p>以下是一个例子，展示如何根据用户设置使用 <code>v-for</code> 来动态生成 <code>el-table-column</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;  </span><br><span class="line">  &lt;el-table :data=&quot;tableData&quot;&gt;  </span><br><span class="line">    &lt;el-table-column  </span><br><span class="line">      v-for=&quot;(column, index) in columns&quot;  </span><br><span class="line">      :key=&quot;index&quot;  </span><br><span class="line">      :prop=&quot;column.prop&quot;  </span><br><span class="line">      :label=&quot;column.label&quot;  </span><br><span class="line">      v-if=&quot;userSettings[column.key] || userSettings[column.key] === undefined&quot;  </span><br><span class="line">    &gt;&lt;/el-table-column&gt;  </span><br><span class="line">  &lt;/el-table&gt;  </span><br><span class="line">&lt;/template&gt;  </span><br><span class="line">  </span><br><span class="line">&lt;script&gt;  </span><br><span class="line">export default &#123;  </span><br><span class="line">  data() &#123;  </span><br><span class="line">    return &#123;  </span><br><span class="line">      tableData: [  </span><br><span class="line">        // ... 你的表格数据  </span><br><span class="line">      ],  </span><br><span class="line">      columns: [  </span><br><span class="line">        &#123; prop: &apos;columnA&apos;, label: &apos;Column A&apos;, key: &apos;showColumnA&apos; &#125;,  </span><br><span class="line">        &#123; prop: &apos;columnB&apos;, label: &apos;Column B&apos;, key: &apos;showColumnB&apos; &#125;,  </span><br><span class="line">        // ... 其他列配置  </span><br><span class="line">      ],  </span><br><span class="line">      userSettings: &#123;  </span><br><span class="line">        // 假设这是从 localStorage 或其他地方读取的用户设置  </span><br><span class="line">        // 默认为 undefined，表示未明确设置是否显示该列  </span><br><span class="line">        // 可以设置 true 或 false 来控制列的显示与隐藏  </span><br><span class="line">        showColumnA: true,  </span><br><span class="line">        showColumnB: false,  </span><br><span class="line">        // ... 其他列的设置  </span><br><span class="line">      &#125;,  </span><br><span class="line">    &#125;;  </span><br><span class="line">  &#125;,  </span><br><span class="line">  // ... 其他选项和方法  </span><br><span class="line">&#125;;  </span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，<code>columns</code> 数组包含了表格列的配置，每个对象都有一个 <code>key</code> 属性，这个属性与 <code>userSettings</code> 中的键对应。<code>v-if</code> 指令检查 <code>userSettings[column.key]</code> 的值来确定是否渲染该列。</p>
+<p>注意，我添加了 <code>|| userSettings[column.key] === undefined</code> 的条件，这是为了处理那些用户尚未明确设置是否显示的列（即 <code>userSettings</code> 中没有该键）。如果你希望用户必须明确设置每一列的显示状态，你可以去掉这个条件。</p>
+<p>此外，确保 <code>userSettings</code> 中的键与 <code>columns</code> 数组中每个对象的 <code>key</code> 属性相匹配。这样，你就可以通过修改 <code>userSettings</code> 来控制哪些列应该被渲染。</p>
+<h3 id="哪个elementui项目支持列设置"><a href="#哪个elementui项目支持列设置" class="headerlink" title="哪个elementui项目支持列设置"></a>哪个elementui项目支持列设置</h3><p>Element UI 本身并没有直接提供一个支持列设置的现成项目，但你可以通过封装 Element UI 的表格组件（``）来实现列设置的功能。这通常涉及到以下几个步骤：</p>
+<ol>
+<li><strong>封装 <code>el-table</code> 组件</strong>：你可以创建一个自定义的 Vue 组件，该组件内部使用 <code>el-table</code> 并添加一些额外的逻辑来处理列设置。</li>
+<li><strong>定义列设置数据</strong>：在你的 Vue 组件中，你需要定义一些数据来存储列的设置信息，例如哪些列是可见的，哪些列是固定的等。</li>
+<li><strong>动态渲染列</strong>：使用 <code>v-for</code> 指令来根据列设置数据动态地渲染表格的列。你可以检查每个列的设置来决定是否渲染它。</li>
+<li><strong>提供列设置界面</strong>：你可能需要创建一个界面来允许用户更改列的设置。这可以是一个对话框、侧边栏或其他任何适合你的应用的界面。</li>
+<li><strong>处理列设置更改</strong>：当用户更改列设置时，你需要更新你的列设置数据，并重新渲染表格以反映这些更改。</li>
+</ol>
+<p>这里有一些具体的实现技巧：</p>
+<ul>
+<li><strong>使用 Vuex 或其他状态管理库</strong>：如果你的应用已经使用了 Vuex 或其他状态管理库，你可以将列设置数据存储在 Vuex store 中，并在需要时从 store 中读取和更新它。</li>
+<li><strong>使用计算属性（Computed Properties）</strong>：如果你的列设置数据会影响表格的渲染方式，你可以使用计算属性来根据列设置数据计算出一个新的渲染列表。</li>
+<li><strong>自定义列模板</strong>：你可以使用 Element UI 的 ` 功能来为每个列定义自定义的模板。这允许你根据列的数据和设置来显示不同的内容。</li>
+</ul>
+<p>请注意，具体的实现方式会根据你的应用需求和设计而有所不同。你可能需要根据你的具体情况来调整上述步骤和技巧。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-05-10T09:10:43.336Z" itemprop="dateUpdated">2024-05-10 17:10:43</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/articles/zi-ding-yi-biao-ge-lie.html" target="_blank" rel="external">https://qw66.gitee.io/articles/zi-ding-yi-biao-ge-lie.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/表格/">表格</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/articles/zi-ding-yi-biao-ge-lie.html&title=《自定义表格列》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/articles/zi-ding-yi-biao-ge-lie.html&title=《自定义表格列》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/articles/zi-ding-yi-biao-ge-lie.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《自定义表格列》 — 秦伟博客&url=https://qw66.gitee.io/articles/zi-ding-yi-biao-ge-lie.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/articles/zi-ding-yi-biao-ge-lie.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between flex-row-reverse">
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/knowledges/qiankun-xiang-mu-da-jian.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">qiankun项目搭建</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/articles/zi-ding-yi-biao-ge-lie.html&title=《自定义表格列》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/articles/zi-ding-yi-biao-ge-lie.html&title=《自定义表格列》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/articles/zi-ding-yi-biao-ge-lie.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《自定义表格列》 — 秦伟博客&url=https://qw66.gitee.io/articles/zi-ding-yi-biao-ge-lie.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/articles/zi-ding-yi-biao-ge-lie.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKElEQVR42u3aQW4CMQwFUO5/abpFage+7VBpkpcVoinkzcLYsR+PeD1f1us77/df7bz66+9vWbwwMDBuy3i+XVd7Jp+fP6DkbBgYGOcwqkEzCbXVMJqHdQwMDIycMaGu+l4MDAyM/IjVQjcpYjEwMDCqRWxelFaRefG8oBbHwMC4IaNamv7n66/0NzAwMG7FeBZX8r/VUF5tBvzxORgYGFsz5gVqkvBVhyp658HAwNiVkY8+VHc2n+jbJujlOxgYGAczkiHU3iXdvEVaCLgYGBg3ZySpWIKpHmW+Mwq7GBgYGzGS67Mk7Zs0QSetUAwMjL0ZvSv7SfuzN0b2YQ8GBsbxjDx1y8vaVU2CD51YDAyMjRjz1G2eVvaaBxgYGCcwCjVucKBqGyDfX3gcGBgYWzMmV/MLBiaKZTAGBsaZjOo1fT42kQ+Z5Zduhas3DAyMmzNWFaujNK7VhFjQwsTAwLgJY1UR23udh+nmzAgGBsYxjGpZWw27vQYnBgbGaYxVCdzkiq030nqZ52JgYGzKSD70G1dp+QBZFHAxMDAOY6xtbU5SzCjRxMDA2JTxLK4eMr+eyy/1HvnvAwYGxs0ZvWCXB9besSZFMgYGxq6MapDNBykmRy+njxgYGAcweoHvfSKYjJRVfwE+5LkYGBgYS5sBkweEgYGB0Ssmk0K3d2WWFM8YGBgnMJLUbT5smo+F5fsxMDBOYIxKx/iybFVbdNTUxMDAuB/jB36WxgR6XyCsAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

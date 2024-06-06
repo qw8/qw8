@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>JQuery | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JQuery,jQuery UI,Zepto">
+    <meta name="description" content="jquery的一些基本用法jquery的一些基本用法 jQuery的详细解析以及用法 jQuery隐藏和显示12345678910// 左侧栏隐藏   $(&amp;quot;.close&amp;quot;).click(function () &amp;#123;       $(&amp;quot;.ask&amp;quot;).hide();       $(&amp;quot;.ask-hidden&amp;quot;).show();">
+<meta name="keywords" content="JQuery,jQuery UI,Zepto">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JQuery">
+<meta property="og:url" content="https://qw66.gitee.io/knowledges/jquery.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="jquery的一些基本用法jquery的一些基本用法 jQuery的详细解析以及用法 jQuery隐藏和显示12345678910// 左侧栏隐藏   $(&amp;quot;.close&amp;quot;).click(function () &amp;#123;       $(&amp;quot;.ask&amp;quot;).hide();       $(&amp;quot;.ask-hidden&amp;quot;).show();">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2023-12-08T09:03:22.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="JQuery">
+<meta name="twitter:description" content="jquery的一些基本用法jquery的一些基本用法 jQuery的详细解析以及用法 jQuery隐藏和显示12345678910// 左侧栏隐藏   $(&amp;quot;.close&amp;quot;).click(function () &amp;#123;       $(&amp;quot;.ask&amp;quot;).hide();       $(&amp;quot;.ask-hidden&amp;quot;).show();">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">JQuery</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">JQuery</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2019-12-22T10:22:11.000Z" itemprop="datePublished" class="page-time">
+  2019-12-22
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jquery的一些基本用法"><span class="post-toc-number">1.</span> <span class="post-toc-text">jquery的一些基本用法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jQuery隐藏和显示"><span class="post-toc-number">2.</span> <span class="post-toc-text">jQuery隐藏和显示</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jQuery实现不同按钮的切换选中效果"><span class="post-toc-number">3.</span> <span class="post-toc-text">jQuery实现不同按钮的切换选中效果</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#回车键按下触发搜索"><span class="post-toc-number">4.</span> <span class="post-toc-text">回车键按下触发搜索</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#给动态添加的html绑定点击事件"><span class="post-toc-number">5.</span> <span class="post-toc-text">给动态添加的html绑定点击事件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jQuery怎么根据不同条件动态加载js文件"><span class="post-toc-number">6.</span> <span class="post-toc-text">jQuery怎么根据不同条件动态加载js文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#根据不同域名加载js"><span class="post-toc-number">7.</span> <span class="post-toc-text">根据不同域名加载js</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何使用jQuery清空Input的值"><span class="post-toc-number">8.</span> <span class="post-toc-text">如何使用jQuery清空Input的值</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#一、从jQuery获取Input的输入值"><span class="post-toc-number">8.1.</span> <span class="post-toc-text">一、从jQuery获取Input的输入值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#二、jQuery如何修改Input的value值"><span class="post-toc-number">8.2.</span> <span class="post-toc-text">二、jQuery如何修改Input的value值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#三、jQuery取Input的值"><span class="post-toc-number">8.3.</span> <span class="post-toc-text">三、jQuery取Input的值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#四、jQuery获取Input的value值"><span class="post-toc-number">8.4.</span> <span class="post-toc-text">四、jQuery获取Input的value值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#五、jQuery设置Input的值"><span class="post-toc-number">8.5.</span> <span class="post-toc-text">五、jQuery设置Input的值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#六、jQuery通过name获取Input的值"><span class="post-toc-number">8.6.</span> <span class="post-toc-text">六、jQuery通过name获取Input的值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#七、jQuery获取Input输入框的值"><span class="post-toc-number">8.7.</span> <span class="post-toc-text">七、jQuery获取Input输入框的值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#八、JS怎么清空Input的值"><span class="post-toc-number">8.8.</span> <span class="post-toc-text">八、JS怎么清空Input的值</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#九、jQuery清空文本框的值"><span class="post-toc-number">8.9.</span> <span class="post-toc-text">九、jQuery清空文本框的值</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jQuery-的实现原理？"><span class="post-toc-number">9.</span> <span class="post-toc-text">jQuery 的实现原理？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#你觉得jQuery或zepto源码有哪些写的好的地方"><span class="post-toc-number">10.</span> <span class="post-toc-text">你觉得jQuery或zepto源码有哪些写的好的地方</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jQuery-和-Zepto-的区别？-各自的使用场景？"><span class="post-toc-number">11.</span> <span class="post-toc-text">jQuery 和 Zepto 的区别？ 各自的使用场景？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jquery-extend-与-jquery-fn-extend的区别？"><span class="post-toc-number">12.</span> <span class="post-toc-text">jquery.extend 与 jquery.fn.extend的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jQuery-UI-如何自定义组件？"><span class="post-toc-number">13.</span> <span class="post-toc-text">jQuery UI 如何自定义组件？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jQuery-与-jQuery-UI、jQuery-Mobile-区别？"><span class="post-toc-number">14.</span> <span class="post-toc-text">jQuery 与 jQuery UI、jQuery Mobile 区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jQuery-一个对象可以同时绑定多个事件，这是如何实现的？"><span class="post-toc-number">15.</span> <span class="post-toc-text">jQuery 一个对象可以同时绑定多个事件，这是如何实现的？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jQuery-的-slideUp-动画，当鼠标快速连续触发-动画会滞后反复执行，该如何处理呢"><span class="post-toc-number">16.</span> <span class="post-toc-text">jQuery 的 slideUp 动画，当鼠标快速连续触发, 动画会滞后反复执行，该如何处理呢?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何判断当前脚本运行在浏览器还是node环境中？（阿里）"><span class="post-toc-number">17.</span> <span class="post-toc-text">如何判断当前脚本运行在浏览器还是node环境中？（阿里）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jQuery-的-slideUp动画-，如果目标元素是被外部事件驱动-当鼠标快速地连续触发外部元素事件-动画会滞后的反复执行，该如何处理呢"><span class="post-toc-number">18.</span> <span class="post-toc-text">jQuery 的 slideUp动画 ，如果目标元素是被外部事件驱动, 当鼠标快速地连续触发外部元素事件, 动画会滞后的反复执行，该如何处理呢?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#那些操作会造成内存泄漏？"><span class="post-toc-number">19.</span> <span class="post-toc-text">那些操作会造成内存泄漏？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JQuery一个对象可以同时绑定多个事件，这是如何实现的？"><span class="post-toc-number">20.</span> <span class="post-toc-text">JQuery一个对象可以同时绑定多个事件，这是如何实现的？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jQuery-fn-的-init-方法返回的-this-指的是什么对象？-为什么要返回-this？"><span class="post-toc-number">21.</span> <span class="post-toc-text">jQuery.fn 的 init 方法返回的 this 指的是什么对象？ 为什么要返回 this？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jQuery-的属性拷贝-extend-的实现原理是什么，如何实现深拷贝？"><span class="post-toc-number">22.</span> <span class="post-toc-text">jQuery 的属性拷贝(extend)的实现原理是什么，如何实现深拷贝？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jQuery-中的-bind-live-delegate-on-的区别？"><span class="post-toc-number">23.</span> <span class="post-toc-text">jQuery 中的 bind(), live(), delegate(), on()的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#是否知道自定义事件？-jQuery-里的-fire-函数是什么意思，什么时候用？"><span class="post-toc-number">24.</span> <span class="post-toc-text">是否知道自定义事件？ jQuery 里的 fire 函数是什么意思，什么时候用？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jQuery-通过哪个方法和-Sizzle-选择器结合的？"><span class="post-toc-number">25.</span> <span class="post-toc-text">jQuery 通过哪个方法和 Sizzle 选择器结合的？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jQuery-中如何将数组转化为-JSON-字符串，然后再转化回来？"><span class="post-toc-number">26.</span> <span class="post-toc-text">jQuery 中如何将数组转化为 JSON 字符串，然后再转化回来？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#谈一下-Jquery-中的-bind-live-delegate-on-的区别？"><span class="post-toc-number">27.</span> <span class="post-toc-text">谈一下 Jquery 中的 bind(),live(),delegate(),on()的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jQuery-extend-与-jQuery-fn-extend-的区别？"><span class="post-toc-number">28.</span> <span class="post-toc-text">jQuery.extend 与 jQuery.fn.extend 的区别？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jQuery-的队列是如何实现的？队列可以用在哪些地方？"><span class="post-toc-number">29.</span> <span class="post-toc-text">jQuery 的队列是如何实现的？队列可以用在哪些地方？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#jquery-中如何将数组转化为json字符串，然后再转化回来？"><span class="post-toc-number">30.</span> <span class="post-toc-text">jquery 中如何将数组转化为json字符串，然后再转化回来？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#针对-jQuery-的优化方法？"><span class="post-toc-number">31.</span> <span class="post-toc-text">针对 jQuery 的优化方法？</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Zepto的点透问题如何解决？"><span class="post-toc-number">32.</span> <span class="post-toc-text">Zepto的点透问题如何解决？</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-knowledges/jQuery"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">JQuery</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2019-12-22 18:22:11" datetime="2019-12-22T10:22:11.000Z"  itemprop="datePublished">2019-12-22</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="jquery的一些基本用法"><a href="#jquery的一些基本用法" class="headerlink" title="jquery的一些基本用法"></a>jquery的一些基本用法</h3><p><a href="https://blog.csdn.net/qq719365064/article/details/52925155" target="_blank" rel="noopener">jquery的一些基本用法</a></p>
+<p><a href="https://blog.csdn.net/liuyingv8/article/details/79758403" target="_blank" rel="noopener">jQuery的详细解析以及用法</a></p>
+<h3 id="jQuery隐藏和显示"><a href="#jQuery隐藏和显示" class="headerlink" title="jQuery隐藏和显示"></a>jQuery隐藏和显示</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 左侧栏隐藏</span><br><span class="line">   $(&quot;.close&quot;).click(function () &#123;</span><br><span class="line">       $(&quot;.ask&quot;).hide();</span><br><span class="line">       $(&quot;.ask-hidden&quot;).show();</span><br><span class="line">   &#125;);</span><br><span class="line">   // 左侧栏显示</span><br><span class="line">   $(&quot;.ask-hidden&quot;).click(function () &#123;</span><br><span class="line">       $(&quot;.ask&quot;).show();</span><br><span class="line">       $(&quot;.ask-hidden&quot;).hide();</span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="jQuery实现不同按钮的切换选中效果"><a href="#jQuery实现不同按钮的切换选中效果" class="headerlink" title="jQuery实现不同按钮的切换选中效果"></a>jQuery实现不同按钮的切换选中效果</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function tagClick(value) &#123;</span><br><span class="line">     $(&quot;.tag&quot;).click(function () &#123;</span><br><span class="line">       $(&quot;.tag&quot;).removeClass(&quot;active&quot;); // 清除已经选中了的按钮的样式</span><br><span class="line">       $(this).addClass(&quot;active&quot;); // 重新给新选中的按钮添加选中样式</span><br><span class="line">     &#125;);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(this).addClass(&apos;selected&apos;).siblings().removeClass(&apos;selected&apos;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="回车键按下触发搜索"><a href="#回车键按下触发搜索" class="headerlink" title="回车键按下触发搜索"></a>回车键按下触发搜索</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// 回车键按下触发搜索</span><br><span class="line">   $(document).keydown(function (event) &#123;</span><br><span class="line">     if (event.keyCode == 13) &#123;</span><br><span class="line">       filter();</span><br><span class="line">     &#125;</span><br><span class="line">   &#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="给动态添加的html绑定点击事件"><a href="#给动态添加的html绑定点击事件" class="headerlink" title="给动态添加的html绑定点击事件"></a>给动态添加的html绑定点击事件</h3><p>第一种是在动态添加的html代码中添加oclick事件，然后传递一个唯一的参数来判断点击的是哪个，然后做相应的操作。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var timestamp = parseInt((new Date()).valueOf()); //唯一的标识</span><br><span class="line">      console.log(timestamp);</span><br><span class="line">      document.getElementById(&quot;joblist&quot;).innerhtml +=</span><br><span class="line">          `&lt;div id=&quot;job` + timestamp + `&quot; class=&quot;job&quot;&gt;</span><br><span class="line">          &lt;input name=&quot;CompanyName&quot; type=&quot;text&quot; value=&quot;公司` + timestamp + `&quot; /&gt;</span><br><span class="line">          &lt;button onclick=&quot;DelJob(` + timestamp + `)&quot;&gt;删除&lt;/button&gt;</span><br><span class="line">          &lt;/div&gt;`;</span><br><span class="line">      &#125;</span><br><span class="line">      // 删除工作经历</span><br><span class="line">      function DelJob(timestamp) &#123;</span><br><span class="line">        document.getElementById(&quot;job&quot; + timestamp).remove();</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+
+<p>第二种是通过事件委托的原理进行处理，事件委托将一个 事件监听器实际上绑定到整个容器，然后每个列表项被点击就可以访问，这样效率更高。</p>
+<h3 id="jQuery怎么根据不同条件动态加载js文件"><a href="#jQuery怎么根据不同条件动态加载js文件" class="headerlink" title="jQuery怎么根据不同条件动态加载js文件"></a>jQuery怎么根据不同条件动态加载js文件</h3><p>要根据不同条件动态加载js文件，可以使用jQuery的<code>$.getScript()</code>方法。该方法可以通过异步加载外部的js文件并执行。</p>
+<p>以下是根据不同条件动态加载js文件的示例代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">if (condition1) &#123;</span><br><span class="line">  $.getScript(&quot;script1.js&quot;, function() &#123;</span><br><span class="line">    // script1.js文件加载完成后执行的回调函数</span><br><span class="line">    // 在这里可以编写需要执行的代码</span><br><span class="line">  &#125;);</span><br><span class="line">&#125; else if (condition2) &#123;</span><br><span class="line">  $.getScript(&quot;script2.js&quot;, function() &#123;</span><br><span class="line">    // script2.js文件加载完成后执行的回调函数</span><br><span class="line">    // 在这里可以编写需要执行的代码</span><br><span class="line">  &#125;);</span><br><span class="line">&#125; else &#123;</span><br><span class="line">  $.getScript(&quot;defaultScript.js&quot;, function() &#123;</span><br><span class="line">    // defaultScript.js文件加载完成后执行的回调函数</span><br><span class="line">    // 在这里可以编写需要执行的代码</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="根据不同域名加载js"><a href="#根据不同域名加载js" class="headerlink" title="根据不同域名加载js"></a>根据不同域名加载js</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var hostname = window.location.hostname</span><br><span class="line">      // 测试数据</span><br><span class="line">      // hostname = &apos;www.sxjayu.cn&apos;</span><br><span class="line">      // hostname = &apos;xiuchuan.52dingfang.cn&apos;</span><br><span class="line">      // hostname = &apos;car-test.xiuchuan.com&apos;</span><br><span class="line">      // hostname = &apos;carxiuchuan.manshang.com&apos;</span><br><span class="line">      var arr1 = hostname.split(&apos;.&apos;);</span><br><span class="line">      arr1.shift();</span><br><span class="line">      domain1 = arr1.join(&apos;.&apos;);</span><br><span class="line">      // 除这两个域名都用智齿</span><br><span class="line">      if (domain1 === &apos;sxjayu.cn&apos; || domain1 === &apos;52dingfang.cn&apos;) &#123;</span><br><span class="line">          document.write(&quot;&lt;script src=&apos;https://scripts.easyliao.com/js/easyliao.js&apos;&gt;&lt;\/script&gt;&quot;);</span><br><span class="line">          document.write(&quot;&lt;script src=&apos;https://scripts.easyliao.com/34415/112627.js&apos;&gt;&lt;\/script&gt;&quot;);</span><br><span class="line">      &#125; else &#123;</span><br><span class="line">          // 初始化智齿客服</span><br><span class="line">          initZhichi()</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="如何使用jQuery清空Input的值"><a href="#如何使用jQuery清空Input的值" class="headerlink" title="如何使用jQuery清空Input的值"></a>如何使用jQuery清空Input的值</h3><h4 id="一、从jQuery获取Input的输入值"><a href="#一、从jQuery获取Input的输入值" class="headerlink" title="一、从jQuery获取Input的输入值"></a>一、从jQuery获取Input的输入值</h4><p>要清空Input的值，首先需要获取当前Input中的值。可以使用jQuery的.val()函数获取输入框的值。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;input:text&apos;).val();</span><br></pre></td></tr></table></figure>
+
+<p>代码中，通过选择器选中所有的Input输入框，然后使用.val()函数获取其值。这个函数对于所有类型的Input都适用：text, password, checkbox, radio, 等等。</p>
+<h4 id="二、jQuery如何修改Input的value值"><a href="#二、jQuery如何修改Input的value值" class="headerlink" title="二、jQuery如何修改Input的value值"></a>二、jQuery如何修改Input的value值</h4><p>如果需要修改一个Input的值，可以通过.val()函数设置新的值。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;input:text&apos;).val(&apos;新的值&apos;);</span><br></pre></td></tr></table></figure>
+
+<p>代码中，使用val()函数设置新值“新的值”到所有被选中的文本Input中。</p>
+<h4 id="三、jQuery取Input的值"><a href="#三、jQuery取Input的值" class="headerlink" title="三、jQuery取Input的值"></a>三、jQuery取Input的值</h4><p>与.val()函数相反，如果需要获取Input的value值，可以使用jQuery的.attr()函数。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;input:text&apos;).attr(&apos;value&apos;);</span><br></pre></td></tr></table></figure>
+
+<p>代码中，通过选择器选中所有文本Input，然后用.attr()函数获取它们的值。这个函数的快捷方式是使用.val()函数，但是在一些情况下（例如，checkbox或radio）使用.attr()函数可以获得更准确的值。</p>
+<h4 id="四、jQuery获取Input的value值"><a href="#四、jQuery获取Input的value值" class="headerlink" title="四、jQuery获取Input的value值"></a>四、jQuery获取Input的value值</h4><p>如果要获取所有选中的Input的值，可以使用jQuery的serialize()函数。这个函数可以通过序列化表单值的方式将它们组成一个字符串。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;form&apos;).serialize();</span><br></pre></td></tr></table></figure>
+
+<p>代码中，通过选择器选中所有的form元素，然后使用.serialize()函数获取值。</p>
+<h4 id="五、jQuery设置Input的值"><a href="#五、jQuery设置Input的值" class="headerlink" title="五、jQuery设置Input的值"></a>五、jQuery设置Input的值</h4><p>如果要为所有被选中的Input元素设置相同的值，可以使用如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;input:text&apos;).val(&apos;新值&apos;);</span><br></pre></td></tr></table></figure>
+
+<p>代码中，使用.val()函数替换所有文本Input元素的值为“新值”。</p>
+<h4 id="六、jQuery通过name获取Input的值"><a href="#六、jQuery通过name获取Input的值" class="headerlink" title="六、jQuery通过name获取Input的值"></a>六、jQuery通过name获取Input的值</h4><p>如果不想使用选择器，可以通过给Input元素设置name属性获取它的值。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;form input[name=&quot;username&quot;]&apos;).val();</span><br></pre></td></tr></table></figure>
+
+<p>代码中，通过选择器选中form元素中name属性为“username”的Input元素，然后使用.val()函数获取它的值。</p>
+<h4 id="七、jQuery获取Input输入框的值"><a href="#七、jQuery获取Input输入框的值" class="headerlink" title="七、jQuery获取Input输入框的值"></a>七、jQuery获取Input输入框的值</h4><p>要获取一个Input输入框的值，可以使用如下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;input:text&apos;).val();</span><br></pre></td></tr></table></figure>
+
+<p>代码中，使用选择器选取所有文本Input，然后使用.val()函数获取它们的值。</p>
+<h4 id="八、JS怎么清空Input的值"><a href="#八、JS怎么清空Input的值" class="headerlink" title="八、JS怎么清空Input的值"></a>八、JS怎么清空Input的值</h4><p>如果不想使用jQuery库，可以使用JavaScript直接清空一个Input元素的值。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&quot;myInput&quot;).value = &quot;&quot;;</span><br></pre></td></tr></table></figure>
+
+<p>代码中，使用JavaScript的原生方法获取Input元素，然后将它的值设置为空字符串即可清除它的值。</p>
+<h4 id="九、jQuery清空文本框的值"><a href="#九、jQuery清空文本框的值" class="headerlink" title="九、jQuery清空文本框的值"></a>九、jQuery清空文本框的值</h4><p>使用jQuery清空文本框的值非常简单。只需要给文本框的value属性设置为空字符串即可。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&apos;input:text&apos;).val(&apos;&apos;);</span><br></pre></td></tr></table></figure>
+
+<p>代码中，使用选择器选取所有文本Input，然后使用.val()函数将它们的值设置为空字符串。这样即可清空文本框中的值。</p>
+<h3 id="jQuery-的实现原理？"><a href="#jQuery-的实现原理？" class="headerlink" title="jQuery 的实现原理？"></a>jQuery 的实现原理？</h3><ul>
+<li><p><code>(function(window, undefined) {})(window);</code></p>
+</li>
+<li><p>jQuery 利用 JS 函数作用域的特性，采用立即调用表达式包裹了自身，解决命名空间和变量污染问题</p>
+</li>
+<li><p><code>window.jQuery = window.$ = jQuery;</code></p>
+</li>
+<li><p>在闭包当中将 jQuery 和 $ 绑定到 window 上，从而将 jQuery 和 $ 暴露为全局变量</p>
+</li>
+</ul>
+<h3 id="你觉得jQuery或zepto源码有哪些写的好的地方"><a href="#你觉得jQuery或zepto源码有哪些写的好的地方" class="headerlink" title="你觉得jQuery或zepto源码有哪些写的好的地方"></a>你觉得jQuery或zepto源码有哪些写的好的地方</h3><ul>
+<li>jquery源码封装在一个匿名函数的自执行环境中，有助于防止变量的全局污染，然后通过传入window对象参数，可以使window对象作为局部变量使用，好处是当jquery中访问window对象的时候，就不用将作用域链退回到顶层作用域了，从而可以更快的访问window对象。同样，传入undefined参数，可以缩短查找undefined时的作用域链</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">(function( window, undefined ) &#123;</span><br><span class="line"></span><br><span class="line">        //用一个函数域包起来，就是所谓的沙箱</span><br><span class="line"></span><br><span class="line">        //在这里边var定义的变量，属于这个函数域内的局部变量，避免污染全局</span><br><span class="line"></span><br><span class="line">        //把当前沙箱需要的外部变量通过函数参数引入进来</span><br><span class="line"></span><br><span class="line">        //只要保证参数对内提供的接口的一致性，你还可以随意替换传进来的这个参数</span><br><span class="line"></span><br><span class="line">       window.jQuery = window.$ = jQuery;</span><br><span class="line"></span><br><span class="line">   &#125;)( window );</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>jquery将一些原型属性和方法封装在了jquery.prototype中，为了缩短名称，又赋值给了jquery.fn，这是很形象的写法</li>
+<li>有一些数组或对象的方法经常能使用到，jQuery将其保存为局部变量以提高访问速度</li>
+<li>jquery实现的链式调用可以节约代码，所返回的都是同一个对象，可以提高代码效率</li>
+</ul>
+<h3 id="jQuery-和-Zepto-的区别？-各自的使用场景？"><a href="#jQuery-和-Zepto-的区别？-各自的使用场景？" class="headerlink" title="jQuery 和 Zepto 的区别？ 各自的使用场景？"></a>jQuery 和 Zepto 的区别？ 各自的使用场景？</h3><ul>
+<li>jQuery 主要目标是PC的网页中，兼容全部主流浏览器。在移动设备方面，单独推出 jQuery Mobile</li>
+<li>Zepto 从一开始就定位移动设备，相对更轻量级。它的 API 基本兼容 jQuery，但对PC浏览器兼容不理想</li>
+</ul>
+<h3 id="jquery-extend-与-jquery-fn-extend的区别？"><a href="#jquery-extend-与-jquery-fn-extend的区别？" class="headerlink" title="jquery.extend 与 jquery.fn.extend的区别？"></a>jquery.extend 与 jquery.fn.extend的区别？</h3><ul>
+<li>jquery.extend 为jquery类添加类方法，可以理解为添加静态方法</li>
+<li>jquery.fn.extend:源码中jquery.fn = jquery.prototype，所以对jquery.fn的扩展，就是为jquery类添加成员函数<br>使用：</li>
+<li>jquery.extend扩展，需要通过jquery类来调用，而jquery.fn.extend扩展，所有jquery实例都可以直接调用</li>
+</ul>
+<h3 id="jQuery-UI-如何自定义组件？"><a href="#jQuery-UI-如何自定义组件？" class="headerlink" title="jQuery UI 如何自定义组件？"></a>jQuery UI 如何自定义组件？</h3><ul>
+<li>通过向 $.widget() 传递组件名称和一个原型对象来完成</li>
+<li><code>$.widget(&quot;ns.widgetName&quot;, [baseWidget], widgetPrototype);</code></li>
+</ul>
+<h3 id="jQuery-与-jQuery-UI、jQuery-Mobile-区别？"><a href="#jQuery-与-jQuery-UI、jQuery-Mobile-区别？" class="headerlink" title="jQuery 与 jQuery UI、jQuery Mobile 区别？"></a>jQuery 与 jQuery UI、jQuery Mobile 区别？</h3><ul>
+<li><p>jQuery 是 JS 库，兼容各种PC浏览器，主要用作更方便地处理 DOM、事件、动画、AJAX，主要提供的功能是选择器，属性修改和事件绑定等等</p>
+</li>
+<li><p>jQuery UI 是建立在 jQuery 库上，利用jQuery的扩展性设计的插件，一组用户界面交互、特效、小部件及主题。供了一些常用的界面元素，诸如对话框、拖动行为、改变大小行为等等</p>
+</li>
+<li><p>jQuery Mobile 以 jQuery 为基础，用于创建“移动Web应用”的框架</p>
+</li>
+</ul>
+<h3 id="jQuery-一个对象可以同时绑定多个事件，这是如何实现的？"><a href="#jQuery-一个对象可以同时绑定多个事件，这是如何实现的？" class="headerlink" title="jQuery 一个对象可以同时绑定多个事件，这是如何实现的？"></a>jQuery 一个对象可以同时绑定多个事件，这是如何实现的？</h3><p>jQuery可以给一个对象同时绑定多个事件，低层实现方式是使用addEventListner或attachEvent兼容不同的浏览器实现事件的绑定，这样可以给同一个对象注册多个事件。</p>
+<h3 id="jQuery-的-slideUp-动画，当鼠标快速连续触发-动画会滞后反复执行，该如何处理呢"><a href="#jQuery-的-slideUp-动画，当鼠标快速连续触发-动画会滞后反复执行，该如何处理呢" class="headerlink" title="jQuery 的 slideUp 动画，当鼠标快速连续触发, 动画会滞后反复执行，该如何处理呢?"></a>jQuery 的 slideUp 动画，当鼠标快速连续触发, 动画会滞后反复执行，该如何处理呢?</h3><ul>
+<li>在触发元素上的事件设置为延迟处理：使用 JS 原生 setTimeout 方法</li>
+<li>在触发元素的事件时预先停止所有的动画，再执行相应的动画事件：$(‘.tab’).stop().slideUp();</li>
+</ul>
+<h3 id="如何判断当前脚本运行在浏览器还是node环境中？（阿里）"><a href="#如何判断当前脚本运行在浏览器还是node环境中？（阿里）" class="headerlink" title="如何判断当前脚本运行在浏览器还是node环境中？（阿里）"></a>如何判断当前脚本运行在浏览器还是node环境中？（阿里）</h3><ul>
+<li>this === window ? ‘browser’ : ‘node’;</li>
+<li>通过判断Global对象是否为window，如果不为window，当前脚本没有运行在浏览器中</li>
+</ul>
+<h3 id="jQuery-的-slideUp动画-，如果目标元素是被外部事件驱动-当鼠标快速地连续触发外部元素事件-动画会滞后的反复执行，该如何处理呢"><a href="#jQuery-的-slideUp动画-，如果目标元素是被外部事件驱动-当鼠标快速地连续触发外部元素事件-动画会滞后的反复执行，该如何处理呢" class="headerlink" title="jQuery 的 slideUp动画 ，如果目标元素是被外部事件驱动, 当鼠标快速地连续触发外部元素事件, 动画会滞后的反复执行，该如何处理呢?"></a>jQuery 的 slideUp动画 ，如果目标元素是被外部事件驱动, 当鼠标快速地连续触发外部元素事件, 动画会滞后的反复执行，该如何处理呢?</h3><ul>
+<li>jquery stop(): 如：$(“#div”).stop().animate({width:”100px”},100);</li>
+</ul>
+<h3 id="那些操作会造成内存泄漏？"><a href="#那些操作会造成内存泄漏？" class="headerlink" title="那些操作会造成内存泄漏？"></a>那些操作会造成内存泄漏？</h3><ul>
+<li>内存泄漏指任何对象在您不再拥有或需要它之后仍然存在</li>
+<li>垃圾回收器定期扫描对象，并计算引用了每个对象的其他对象的数量。如果一个对象的引用数量为 0（没有其他对象引用过该对象），或对该对象的惟一引用是循环的，那么该对象的内存即可回收</li>
+<li>setTimeout 的第一个参数使用字符串而非函数的话，会引发内存泄漏。<br>闭包、控制台日志、循环（在两个对象彼此引用且彼此保留时，就会产生一个循环)</li>
+</ul>
+<h3 id="JQuery一个对象可以同时绑定多个事件，这是如何实现的？"><a href="#JQuery一个对象可以同时绑定多个事件，这是如何实现的？" class="headerlink" title="JQuery一个对象可以同时绑定多个事件，这是如何实现的？"></a>JQuery一个对象可以同时绑定多个事件，这是如何实现的？</h3><ul>
+<li>多个事件同一个函数：<code>$(&quot;div&quot;).on(&quot;click mouseover&quot;, function(){});</code></li>
+<li>多个事件不同函数</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;div&quot;).on(&#123;</span><br><span class="line">	click: function()&#123;&#125;,</span><br><span class="line">	mouseover: function()&#123;&#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#btn"</span>).on(<span class="string">"mouseover mouseout"</span>, func);</span><br><span class="line"></span><br><span class="line">$(<span class="string">"#btn"</span>).on(&#123;</span><br><span class="line">    mouseover: func1,</span><br><span class="line">    mouseout: func2,</span><br><span class="line">    click: func3</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="jQuery-fn-的-init-方法返回的-this-指的是什么对象？-为什么要返回-this？"><a href="#jQuery-fn-的-init-方法返回的-this-指的是什么对象？-为什么要返回-this？" class="headerlink" title="jQuery.fn 的 init 方法返回的 this 指的是什么对象？ 为什么要返回 this？"></a>jQuery.fn 的 init 方法返回的 this 指的是什么对象？ 为什么要返回 this？</h3><ul>
+<li>jQuery.fn 的 init 方法 返回的 this 就是 jQuery 对象</li>
+<li>用户使用 jQuery() 或 $() 即可初始化 jQuery 对象，不需要动态的去调用 init 方法</li>
+</ul>
+<h3 id="jQuery-的属性拷贝-extend-的实现原理是什么，如何实现深拷贝？"><a href="#jQuery-的属性拷贝-extend-的实现原理是什么，如何实现深拷贝？" class="headerlink" title="jQuery 的属性拷贝(extend)的实现原理是什么，如何实现深拷贝？"></a>jQuery 的属性拷贝(extend)的实现原理是什么，如何实现深拷贝？</h3><ul>
+<li><p>浅拷贝（只复制一份原始对象的引用）<br><code>var newObject = $.extend({}, oldObject);</code></p>
+</li>
+<li><p>深拷贝（对原始对象属性所引用的对象进行进行递归拷贝）<br><code>var newObject = $.extend(true, {}, oldObject);</code></p>
+</li>
+</ul>
+<h3 id="jQuery-中的-bind-live-delegate-on-的区别？"><a href="#jQuery-中的-bind-live-delegate-on-的区别？" class="headerlink" title="jQuery 中的 bind(), live(), delegate(), on()的区别？"></a>jQuery 中的 bind(), live(), delegate(), on()的区别？</h3><ul>
+<li>bind 直接绑定在目标元素上</li>
+<li>live 通过冒泡传播事件，默认document上，支持动态数据</li>
+<li>delegate 更精确的小范围使用事件代理，性能优于 live</li>
+<li>on 是最新的1.9版本整合了之前的三种方式的新事件绑定机制</li>
+</ul>
+<h3 id="是否知道自定义事件？-jQuery-里的-fire-函数是什么意思，什么时候用？"><a href="#是否知道自定义事件？-jQuery-里的-fire-函数是什么意思，什么时候用？" class="headerlink" title="是否知道自定义事件？ jQuery 里的 fire 函数是什么意思，什么时候用？"></a>是否知道自定义事件？ jQuery 里的 fire 函数是什么意思，什么时候用？</h3><ul>
+<li>事件即“发布/订阅”模式，自定义事件即“消息发布”，事件的监听即“订阅订阅”</li>
+<li>JS 原生支持自定义事件，示例：</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.createEvent(type); <span class="comment">// 创建事件</span></span><br><span class="line">event.initEvent(eventType, canBubble, prevent); <span class="comment">// 初始化事件</span></span><br><span class="line">target.addEventListener(<span class="string">'dataavailable'</span>, handler, <span class="literal">false</span>); <span class="comment">// 监听事件</span></span><br><span class="line">target.dispatchEvent(e);  <span class="comment">// 触发事件</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>jQuery 里的 fire 函数用于调用 jQuery 自定义事件列表中的事件</li>
+</ul>
+<h3 id="jQuery-通过哪个方法和-Sizzle-选择器结合的？"><a href="#jQuery-通过哪个方法和-Sizzle-选择器结合的？" class="headerlink" title="jQuery 通过哪个方法和 Sizzle 选择器结合的？"></a>jQuery 通过哪个方法和 Sizzle 选择器结合的？</h3><ul>
+<li>Sizzle 选择器采取 Right To Left 的匹配模式，先搜寻所有匹配标签，再判断它的父节点</li>
+<li>jQuery 通过 $(selecter).find(selecter); 和 Sizzle 选择器结合</li>
+</ul>
+<h3 id="jQuery-中如何将数组转化为-JSON-字符串，然后再转化回来？"><a href="#jQuery-中如何将数组转化为-JSON-字符串，然后再转化回来？" class="headerlink" title="jQuery 中如何将数组转化为 JSON 字符串，然后再转化回来？"></a>jQuery 中如何将数组转化为 JSON 字符串，然后再转化回来？</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 通过原生 JSON.stringify/JSON.parse 扩展 jQuery 实现</span></span><br><span class="line"> $.array2json = <span class="function"><span class="keyword">function</span>(<span class="params">array</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">JSON</span>.stringify(array);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> $.json2array = <span class="function"><span class="keyword">function</span>(<span class="params">array</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// $.parseJSON(array); // 3.0 开始，已过时</span></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">JSON</span>.parse(array);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="comment">// 调用</span></span><br><span class="line"> <span class="keyword">var</span> json = $.array2json([<span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>]);</span><br><span class="line"> <span class="keyword">var</span> array = $.json2array(json);</span><br></pre></td></tr></table></figure>
+
+<h3 id="谈一下-Jquery-中的-bind-live-delegate-on-的区别？"><a href="#谈一下-Jquery-中的-bind-live-delegate-on-的区别？" class="headerlink" title="谈一下 Jquery 中的 bind(),live(),delegate(),on()的区别？"></a>谈一下 Jquery 中的 bind(),live(),delegate(),on()的区别？</h3><ul>
+<li>bind： 绑定事件，对新添加的事件不起作用，方法用于将一个处理程序附加到每个匹配元素的事件上并返回 jQuery 对象。</li>
+<li>live： 方法将一个事件处理程序附加到与当前选择器匹配的所有元素（包含现有的或将来添加的）的指定事件上并返回 jQuery 对象。</li>
+<li>delegate： 方法基于一组特定的根元素将处理程序附加到匹配选择器的所有元素（现有的或将来的）的一个或多个事件上。</li>
+</ul>
+<h3 id="jQuery-extend-与-jQuery-fn-extend-的区别？"><a href="#jQuery-extend-与-jQuery-fn-extend-的区别？" class="headerlink" title="jQuery.extend 与 jQuery.fn.extend 的区别？"></a>jQuery.extend 与 jQuery.fn.extend 的区别？</h3><ul>
+<li>$.fn.extend() 和 $.extend() 是 jQuery 为扩展插件提拱了两个方法</li>
+<li>$.extend(object); // 为jQuery添加“静态方法”（工具方法）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$.extend(&#123;</span><br><span class="line">　　min: function(a, b) &#123; return a &lt; b ? a : b; &#125;,</span><br><span class="line">　　max: function(a, b) &#123; return a &gt; b ? a : b; &#125;</span><br><span class="line">&#125;);</span><br><span class="line">$.min(2,3); //  2</span><br><span class="line">$.max(4,5); //  5</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>$.extend([true,] targetObject, object1[, object2]); // 对targt对象进行扩展</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var settings = &#123;validate:false, limit:5&#125;;</span><br><span class="line">var options = &#123;validate:true, name:&quot;bar&quot;&#125;;</span><br><span class="line">$.extend(settings, options);  // 注意：不支持第一个参数传 false</span><br><span class="line">// settings == &#123;validate:true, limit:5, name:&quot;bar&quot;&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<ul>
+<li>$.fn.extend(json); // 为jQuery添加“成员函数”（实例方法）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">$.fn.extend(&#123;</span><br><span class="line">   alertValue: function() &#123;</span><br><span class="line">      $(this).click(function()&#123;</span><br><span class="line">        alert($(this).val());</span><br><span class="line">      &#125;);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">$(&quot;#email&quot;).alertValue();</span><br></pre></td></tr></table></figure>
+
+<h3 id="jQuery-的队列是如何实现的？队列可以用在哪些地方？"><a href="#jQuery-的队列是如何实现的？队列可以用在哪些地方？" class="headerlink" title="jQuery 的队列是如何实现的？队列可以用在哪些地方？"></a>jQuery 的队列是如何实现的？队列可以用在哪些地方？</h3><ul>
+<li>jQuery 核心中有一组队列控制方法，由 queue()/dequeue()/clearQueue() 三个方法组成。</li>
+<li>主要应用于 animate()，ajax，其他要按时间顺序执行的事件中</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> func1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;alert(<span class="string">'事件1'</span>);&#125;</span><br><span class="line"><span class="keyword">var</span> func2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;alert(<span class="string">'事件2'</span>);&#125;</span><br><span class="line"><span class="keyword">var</span> func3 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;alert(<span class="string">'事件3'</span>);&#125;</span><br><span class="line"><span class="keyword">var</span> func4 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;alert(<span class="string">'事件4'</span>);&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 入栈队列事件</span></span><br><span class="line">$(<span class="string">'#box'</span>).queue(<span class="string">"queue1"</span>, func1);  <span class="comment">// push func1 to queue1</span></span><br><span class="line">$(<span class="string">'#box'</span>).queue(<span class="string">"queue1"</span>, func2);  <span class="comment">// push func2 to queue1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 替换队列事件</span></span><br><span class="line">$(<span class="string">'#box'</span>).queue(<span class="string">"queue1"</span>, []);  <span class="comment">// delete queue1 with empty array</span></span><br><span class="line">$(<span class="string">'#box'</span>).queue(<span class="string">"queue1"</span>, [func3, func4]);  <span class="comment">// replace queue1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取队列事件（返回一个函数数组）</span></span><br><span class="line">$(<span class="string">'#box'</span>).queue(<span class="string">"queue1"</span>);  <span class="comment">// [func3(), func4()]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 出栈队列事件并执行</span></span><br><span class="line">$(<span class="string">'#box'</span>).dequeue(<span class="string">"queue1"</span>); <span class="comment">// return func3 and do func3</span></span><br><span class="line">$(<span class="string">'#box'</span>).dequeue(<span class="string">"queue1"</span>); <span class="comment">// return func4 and do func4</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 清空整个队列</span></span><br><span class="line">$(<span class="string">'#box'</span>).clearQueue(<span class="string">"queue1"</span>); <span class="comment">// delete queue1 with clearQueue</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="jquery-中如何将数组转化为json字符串，然后再转化回来？"><a href="#jquery-中如何将数组转化为json字符串，然后再转化回来？" class="headerlink" title="jquery 中如何将数组转化为json字符串，然后再转化回来？"></a>jquery 中如何将数组转化为json字符串，然后再转化回来？</h3><ul>
+<li>jQuery中没有提供这个功能，所以你需要先编写两个jQuery的扩展：</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$.fn.stringifyArray = function(array) &#123;</span><br><span class="line">    return JSON.stringify(array)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">$.fn.parseArray = function(array) &#123;</span><br><span class="line">    return JSON.parse(array)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">然后调用：</span><br><span class="line">$(&quot;&quot;).stringifyArray(array)</span><br></pre></td></tr></table></figure>
+
+<h3 id="针对-jQuery-的优化方法？"><a href="#针对-jQuery-的优化方法？" class="headerlink" title="针对 jQuery 的优化方法？"></a>针对 jQuery 的优化方法？</h3><ul>
+<li><p>尽量使用id选择器代替class选择器。基于Class的选择性的性能相对于Id选择器开销很大，因为需遍历所有DOM元素。</p>
+</li>
+<li><p>频繁操作的DOM，先缓存起来再操作。用Jquery的链式调用更好</p>
+<p>比如：var str=$(“a”).attr(“href”);</p>
+</li>
+<li><p>for (var i = size; i &lt; arr.length; i++) {}</p>
+<p>for 循环每一次循环都查找了数组 (arr) 的.length 属性，在开始循环的时候设置一个变量来存储这个数字，可以让循环跑得更快：</p>
+<p>for (var i = size, length = arr.length; i &lt; length; i++) {}</p>
+</li>
+</ul>
+<ul>
+<li>总是从#id选择器来继承</li>
+<li>尽量使用链式操作</li>
+<li>使用时间委托 on 绑定事件</li>
+<li>采用jQuery的内部函数data()来存储数据</li>
+<li>使用最新版本的 jQuery</li>
+</ul>
+<h3 id="Zepto的点透问题如何解决？"><a href="#Zepto的点透问题如何解决？" class="headerlink" title="Zepto的点透问题如何解决？"></a>Zepto的点透问题如何解决？</h3><p>点透主要是由于两个 div 重合，例如：一个 div 调用 show()，一个 div 调用 hide()；这个时候当点击上面的 div 的时候就会影响到下面的那个 div；<br>解决办法主要有 2 种：</p>
+<ul>
+<li>github 上有一个叫做 fastclick 的库，它也能规避移动设备上 click 事件的延迟响应，<a href="https://github.com/ftlabs/fastclick" target="_blank" rel="noopener">https://github.com/ftlabs/fastclick</a><br>将它用 script 标签引入页面（该库支持 AMD，于是你也可以按照 AMD 规范，用诸如 require.js 的模块加载器引入），并且在 dom ready 时初始化在 body 上，</li>
+<li>根据分析，如果不引入其它类库，也不想自己按照上述 fastclcik 的思路再开发一套东西，需要 1.一个优先于下面的“divClickUnder”捕获的事件；2.并且通过这个事件阻止掉默认行为（下面的“divClickUnder”对 click 事件的捕获，在 ios 的 safari，click 的捕获被认为和滚屏、点击输入框弹起键盘等一样，是一种浏览器默认行为，即可以被 event.preventDefault()阻止的行为）。</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2023-12-08T09:03:22.000Z" itemprop="dateUpdated">2023-12-08 17:03:22</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/knowledges/jquery.html" target="_blank" rel="external">https://qw66.gitee.io/knowledges/jquery.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JQuery/">JQuery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Zepto/">Zepto</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/jQuery-UI/">jQuery UI</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/jquery.html&title=《JQuery》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/jquery.html&title=《JQuery》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/jquery.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JQuery》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/jquery.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/jquery.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/knowledges/javascript-zuo-yong-yu.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">JavaScript作用域</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/knowledges/node.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">Node</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/knowledges/jquery.html&title=《JQuery》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/knowledges/jquery.html&title=《JQuery》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/knowledges/jquery.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JQuery》 — 秦伟博客&url=https://qw66.gitee.io/knowledges/jquery.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/knowledges/jquery.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACKElEQVR42u3aQW7DMAwEwPz/0+61QOB0SapFLY1OgRPLGh8UUuTrFY/r23i/fvf5/a7q7xcPDAyMxzKuj+P9kZ8XdMf+vMScdzsPBgbGAYzJ1MlsySaevL7b6xgYGBjx1Pn2XQ03MTAwMBJGEt7NQ0YMDAyMSRI7CRD/US6OgYHxQEaecP7951+pb2BgYDyKcRVHtVQ5SWsLM2BgYGzN6JUwJ4XJaniXz4+BgbEro3qwNW+5yBdXONrDwMA4gDE50kru6pUKCi8RAwPjGEa1VFBdyhxcjh8xMDC2YEwKA73HVO+a/yVgYGA8nZFsf9V2il6zRfUP4FVdKAYGxhaMpCTZ2xarBYMceZvEYmBgbMRINrVqYWDeilGuwWJgYGzNmDQ95EvM0+C8pIqBgXEOI0lK8w33Nw708xQaAwPjHEbeqtVLcXvXF1RlMTAwNmXMA7h5cbRZa8XAwNiI0btt7cFZteT5Q7MFBgbGdozq3tUrUvYaMqpFCAwMjL0Z86XMD/QXvCwMDIxjGHnDVr4h5qFktckDAwPjHEbh69bmWL2enKphYGCcw7iKIz+Gy4/S8m+jd4+BgbEdo1fgzMPHPMhLfr+gBQ0DA+OxjEkZsldIyJ/VbAjDwMDYlFFNVvMiQfVKtdUDAwMDIy9AVo/y86Aw2l0xMDAwWgWD6uFaEoYuCw0xMDAeyJgksXmSnBcMynNiYGBszeiljquaxvJAc0FREwMD43mML40Q/vW0E5qrAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

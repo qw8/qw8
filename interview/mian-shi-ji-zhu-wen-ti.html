@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>面试技术问题 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JavaScript,HTML,CSS">
+    <meta name="description" content="HTML  Doctype作用？严格模式与混杂模式如何区分？它们有何意义? HTML5 为什么只需要写 ？ 页面导入样式时，使用link和@import有什么区别？ 介绍一下你对浏览器内核的理解？ 常见的浏览器内核有哪些？ 如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？ HTML5的离线储存怎么使用，工作原理能不能解释一下？ 浏览器是怎么对HTML5的离线储存资源进">
+<meta name="keywords" content="JavaScript,HTML,CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面试技术问题">
+<meta property="og:url" content="https://qw66.gitee.io/interview/mian-shi-ji-zhu-wen-ti.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="HTML  Doctype作用？严格模式与混杂模式如何区分？它们有何意义? HTML5 为什么只需要写 ？ 页面导入样式时，使用link和@import有什么区别？ 介绍一下你对浏览器内核的理解？ 常见的浏览器内核有哪些？ 如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？ HTML5的离线储存怎么使用，工作原理能不能解释一下？ 浏览器是怎么对HTML5的离线储存资源进">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2024-03-28T16:30:48.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="面试技术问题">
+<meta name="twitter:description" content="HTML  Doctype作用？严格模式与混杂模式如何区分？它们有何意义? HTML5 为什么只需要写 ？ 页面导入样式时，使用link和@import有什么区别？ 介绍一下你对浏览器内核的理解？ 常见的浏览器内核有哪些？ 如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？ HTML5的离线储存怎么使用，工作原理能不能解释一下？ 浏览器是怎么对HTML5的离线储存资源进">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">面试技术问题</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">面试技术问题</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2021-02-09T12:48:55.000Z" itemprop="datePublished" class="page-time">
+  2021-02-09
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端面试题/">前端面试题</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTML"><span class="post-toc-number">1.</span> <span class="post-toc-text">HTML</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#CSS"><span class="post-toc-number">2.</span> <span class="post-toc-text">CSS</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JavaScript"><span class="post-toc-number">3.</span> <span class="post-toc-text">JavaScript</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#其他问题"><span class="post-toc-number">4.</span> <span class="post-toc-text">其他问题</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-interview/面试技术问题"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">面试技术问题</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2021-02-09 20:48:55" datetime="2021-02-09T12:48:55.000Z"  itemprop="datePublished">2021-02-09</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端面试题/">前端面试题</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><hr>
+<ul>
+<li>Doctype作用？严格模式与混杂模式如何区分？它们有何意义?</li>
+<li>HTML5 为什么只需要写 <!DOCTYPE HTML>？</li>
+<li>页面导入样式时，使用link和@import有什么区别？</li>
+<li>介绍一下你对浏览器内核的理解？</li>
+<li>常见的浏览器内核有哪些？</li>
+<li>如何处理HTML5新标签的浏览器兼容问题？如何区分 HTML 和 HTML5？</li>
+<li>HTML5的离线储存怎么使用，工作原理能不能解释一下？</li>
+<li>浏览器是怎么对HTML5的离线储存资源进行管理和加载的呢？</li>
+<li>iframe有那些缺点？</li>
+<li>Label的作用是什么？是怎么用的？（加 for 或 包裹）</li>
+<li>HTML5的form如何关闭自动完成功能？</li>
+<li>如何实现浏览器内多个标签页之间的通信? (阿里)</li>
+<li>webSocket如何兼容低浏览器？(阿里)</li>
+<li>页面可见性（Page Visibility）API 可以有哪些用途？</li>
+<li>如何在页面上实现一个圆形的可点击区域？</li>
+<li>实现不使用 border 画出1px高的线，在不同浏览器的Quirksmode和CSSCompat模式下都能保持同一效果。</li>
+<li>网页验证码是干嘛的，是为了解决什么安全问题？</li>
+<li>tite与h1的区别、b与strong的区别、i与em的区别？</li>
+</ul>
+<h3 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h3><hr>
+<ul>
+<li><p>介绍一下标准的CSS的盒子模型？与低版本IE的盒子模型有什么不同的？</p>
+</li>
+<li><p>CSS选择符有哪些？哪些属性可以继承？</p>
+</li>
+<li><p>CSS优先级算法如何计算？</p>
+</li>
+<li><p>CSS3新增伪类有那些？</p>
+</li>
+<li><p>如何居中div？如何居中一个浮动元素？如何让绝对定位的div居中？</p>
+</li>
+<li><p>display有哪些值？说明他们的作用。</p>
+</li>
+<li><p>position的值relative和absolute定位原点是？</p>
+</li>
+<li><p>请解释一下CSS3的Flexbox（弹性盒布局模型）,以及适用场景？</p>
+</li>
+<li><p>用纯CSS创建一个三角形的原理是什么？</p>
+</li>
+<li><p>一个满屏 品 字布局 如何设计?</p>
+</li>
+<li><p>常见兼容性问题？</p>
+</li>
+<li><p>li与li之间有看不见的空白间隔是什么原因引起的？有什么解决办法？</p>
+</li>
+<li><p>经常遇到的浏览器的兼容性有哪些？原因，解决方法是什么，常用hack的技巧 ？</p>
+</li>
+<li><p>为什么要初始化CSS样式。</p>
+</li>
+<li><p>absolute的containing block计算方式跟正常流有什么不同？</p>
+</li>
+<li><p>CSS里的visibility属性有个collapse属性值是干嘛用的？在不同浏览器下以后什么区别？</p>
+</li>
+<li><p>position跟display、margin collapse、overflow、float这些特性相互叠加后会怎么样？</p>
+</li>
+<li><p>对BFC规范(块级格式化上下文：block formatting context)的理解？</p>
+</li>
+<li><p>CSS权重优先级是如何计算的？</p>
+</li>
+<li><p>请解释一下为什么会出现浮动和什么时候需要清除浮动？清除浮动的方式</p>
+</li>
+<li><p>移动端的布局用过媒体查询吗？</p>
+</li>
+<li><p>浏览器是怎样解析CSS选择器的？</p>
+</li>
+<li><p>在网页中的应该使用奇数还是偶数的字体？为什么呢？</p>
+</li>
+<li><p>margin和padding分别适合什么场景使用？</p>
+</li>
+<li><p>抽离样式模块怎么写，说出思路，有无实践经验？[阿里航旅的面试题]</p>
+</li>
+<li><p>元素竖向的百分比设定是相对于容器的高度吗？</p>
+</li>
+<li><p>全屏滚动的原理是什么？用到了CSS的那些属性？</p>
+</li>
+<li><p>什么是响应式设计？响应式设计的基本原理是什么？如何兼容低版本的IE？</p>
+</li>
+<li><p>视差滚动效果，如何给每页做不同的动画？（回到顶部，向下滑动要再次出现，和只出现一次分别怎么做？）</p>
+</li>
+<li><p>::before 和 :after中双冒号和单冒号 有什么区别？解释一下这2个伪元素的作用。</p>
+</li>
+<li><p>如何修改chrome记住密码后自动填充表单的黄色背景 ？</p>
+</li>
+<li><p>你对line-height是如何理解的？</p>
+</li>
+<li><p>设置元素浮动后，该元素的display值是多少？（自动变成display:block）</p>
+</li>
+<li><p>怎么让Chrome支持小于12px 的文字？</p>
+</li>
+<li><p>让页面里的字体变清晰，变细用CSS怎么做？（-webkit-font-smoothing: antialiased;）</p>
+</li>
+<li><p>font-style属性可以让它赋值为“oblique” oblique是什么意思？</p>
+</li>
+<li><p>position:fixed;在android下无效怎么处理？</p>
+</li>
+<li><p>如果需要手动写动画，你认为最小时间间隔是多久，为什么？（阿里）</p>
+</li>
+<li><p>display:inline-block 什么时候会显示间隙？(携程)</p>
+</li>
+<li><p>overflow: scroll时不能平滑滚动的问题怎么处理？</p>
+</li>
+<li><p>有一个高度自适应的div，里面有两个div，一个高度100px，希望另一个填满剩下的高度。</p>
+</li>
+<li><p>png、jpg、gif 这些图片格式解释一下，分别什么时候用。有没有了解过webp？</p>
+</li>
+<li><p>style标签写在body后与body前有什么区别？</p>
+</li>
+</ul>
+<h3 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h3><hr>
+<ul>
+<li><p>说说写JavaScript的基本规范？</p>
+</li>
+<li><p>JavaScript原型，原型链 ? 有什么特点？</p>
+</li>
+<li><p>JavaScript有几种类型的值？（堆：原始数据类型和 栈：引用数据类型），你能画一下他们的内存图吗？</p>
+</li>
+<li><p>Javascript如何实现继承？</p>
+</li>
+<li><p>Javascript创建对象的几种方式？</p>
+</li>
+<li><p>Javascript作用链域?</p>
+</li>
+<li><p>谈谈This对象的理解。</p>
+</li>
+<li><p>eval是做什么的？</p>
+</li>
+<li><p>什么是window对象? 什么是document对象?</p>
+</li>
+<li><p>null，undefined的区别？</p>
+</li>
+<li><p>写一个通用的事件侦听器函数(机试题)。</p>
+</li>
+<li><p>[“1”, “2”, “3”].map(parseInt) 答案是多少？</p>
+</li>
+<li><p>关于事件，IE与火狐的事件机制有什么区别？ 如何阻止冒泡？</p>
+</li>
+<li><p>什么是闭包（closure），为什么要用它？</p>
+</li>
+<li><p>javascript 代码中的”use strict”;是什么意思 ? 使用它区别是什么？</p>
+</li>
+<li><p>如何判断一个对象是否属于某个类？</p>
+</li>
+<li><p>用原生JavaScript的实现过什么功能吗？</p>
+</li>
+<li><p>Javascript中，有一个函数，执行时对象查找时，永远不会去查找原型，这个函数是？</p>
+</li>
+<li><p>对JSON的了解？</p>
+</li>
+<li><p>[].forEach.call($$(“*”),function(a){ a.style.outline=”1px solid #”+(~~(Math.random()*(1&lt;&lt;24))).toString(16) }) - 能解释一下这段代码的意思吗？</p>
+</li>
+<li><p>js延迟加载的方式有哪些？</p>
+</li>
+<li><p>Ajax 是什么? 如何创建一个Ajax？</p>
+</li>
+<li><p>同步和异步的区别?</p>
+</li>
+<li><p>如何解决跨域问题?</p>
+</li>
+<li><p>页面编码和被请求的资源编码如果不一致如何处理？</p>
+</li>
+<li><p>模块化开发怎么做？</p>
+</li>
+<li><p>AMD（Modules/Asynchronous-Definition）、CMD（Common Module Definition）规范区别？</p>
+</li>
+<li><p>requireJS的核心原理是什么？（如何动态加载的？如何避免多次加载的？如何 缓存的？）</p>
+</li>
+<li><p>让你自己设计实现一个requireJS，你会怎么做？</p>
+</li>
+<li><p>谈一谈你对ECMAScript6的了解？</p>
+</li>
+<li><p>ECMAScript6 怎么写class么，为什么会出现class这种东西?</p>
+</li>
+<li><p>异步加载的方式有哪些？</p>
+</li>
+<li><p>documen.write和 innerHTML的区别?</p>
+</li>
+<li><p>DOM操作——怎样添加、移除、移动、复制、创建和查找节点?</p>
+</li>
+<li><p>数组和对象有哪些原生方法，列举一下？</p>
+</li>
+<li><p>JS 怎么实现一个类。怎么实例化这个类</p>
+</li>
+<li><p>JavaScript中的作用域与变量声明提升？</p>
+</li>
+<li><p>如何编写高性能的Javascript？</p>
+</li>
+<li><p>那些操作会造成内存泄漏？</p>
+</li>
+<li><p>JQuery的源码看过吗？能不能简单概况一下它的实现原理？</p>
+</li>
+<li><p>jQuery.fn的init方法返回的this指的是什么对象？为什么要返回this？</p>
+</li>
+<li><p>jquery中如何将数组转化为json字符串，然后再转化回来？</p>
+</li>
+<li><p>jQuery 的属性拷贝(extend)的实现原理是什么，如何实现深拷贝？</p>
+</li>
+<li><p>jquery.extend 与 jquery.fn.extend的区别？</p>
+</li>
+<li><p>jQuery 的队列是如何实现的？队列可以用在哪些地方？</p>
+</li>
+<li><p>谈一下Jquery中的bind(),live(),delegate(),on()的区别？</p>
+</li>
+<li><p>JQuery一个对象可以同时绑定多个事件，这是如何实现的？</p>
+</li>
+<li><p>是否知道自定义事件。jQuery里的fire函数是什么意思，什么时候用？</p>
+</li>
+<li><p>jQuery 是通过哪个方法和 Sizzle 选择器结合的？（jQuery.fn.find()进入Sizzle）</p>
+</li>
+<li><p>针对 jQuery性能的优化方法？</p>
+</li>
+<li><p>Jquery与jQuery UI有啥区别？</p>
+</li>
+<li><p>JQuery的源码看过吗？能不能简单说一下它的实现原理？</p>
+</li>
+<li><p>jquery 中如何将数组转化为json字符串，然后再转化回来？</p>
+</li>
+<li><p>jQuery和Zepto的区别？各自的使用场景？</p>
+</li>
+<li><p>针对 jQuery 的优化方法？</p>
+</li>
+<li><p>Zepto的点透问题如何解决？</p>
+</li>
+<li><p>jQueryUI如何自定义组件?</p>
+</li>
+<li><p>需求：实现一个页面操作不会整页刷新的网站，并且能在浏览器前进、后退时正确响应。给出你的技术实现方案？</p>
+</li>
+<li><p>如何判断当前脚本运行在浏览器还是node环境中？（阿里）</p>
+</li>
+<li><p>移动端最小触控区域是多大？</p>
+</li>
+<li><p>jQuery 的 slideUp动画 ，如果目标元素是被外部事件驱动, 当鼠标快速地连续触发外部元素事件, 动画会滞后的反复执行，该如何处理呢?</p>
+</li>
+<li><p>把 Script 标签 放在页面的最底部的body封闭之前 和封闭之后有什么区别？浏览器会如何解析它们？</p>
+</li>
+<li><p>移动端的点击事件的有延迟，时间是多久，为什么会有？ 怎么解决这个延时？（click 有 300ms 延迟,为了实现safari的双击事件的设计，浏览器要知道你是不是要双击操作。）</p>
+</li>
+<li><p>知道各种JS框架(Angular, Backbone, Ember, React, Meteor, Knockout…)么? 能讲出他们各自的优点和缺点么?</p>
+</li>
+<li><p>Underscore 对哪些 JS 原生对象进行了扩展以及提供了哪些好用的函数方法？</p>
+</li>
+<li><p>解释JavaScript中的作用域与变量声明提升？</p>
+</li>
+<li><p>那些操作会造成内存泄漏？</p>
+</li>
+<li><p>JQuery一个对象可以同时绑定多个事件，这是如何实现的？</p>
+</li>
+<li><p>Node.js的适用场景？</p>
+</li>
+<li><p>(如果会用node)知道route, middleware, cluster, nodemon, pm2, server-side rendering么?</p>
+</li>
+<li><p>解释一下 Backbone 的 MVC 实现方式？</p>
+</li>
+<li><p>什么是“前端路由”?什么时候适合使用“前端路由”? “前端路由”有哪些优点和缺点?</p>
+</li>
+<li><p>知道什么是webkit么? 知道怎么用浏览器的各种工具来调试和debug代码么?</p>
+</li>
+<li><p>如何测试前端代码么? 知道BDD, TDD, Unit Test么? - 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qUnit..)?</p>
+</li>
+<li><p>前端templating(Mustache, underscore, handlebars)是干嘛的, 怎么用?</p>
+</li>
+<li><p>简述一下 Handlebars 的基本用法？</p>
+</li>
+<li><p>简述一下 Handlerbars 的对模板的基本处理流程， 如何编译的？如何缓存的？</p>
+</li>
+<li><p>用js实现千位分隔符?(来源：前端农民工，提示：正则+replace)</p>
+</li>
+<li><p>检测浏览器版本版本有哪些方式？</p>
+</li>
+<li><p>我们给一个dom同时绑定两个点击事件，一个用捕获，一个用冒泡，你来说下会执行几次事件，然后会先执行冒泡还是捕获]</p>
+</li>
+</ul>
+<h3 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h3><hr>
+<ul>
+<li><p>原来公司工作流程是怎么样的，如何与其他人协作的？如何夸部门合作的？</p>
+</li>
+<li><p>你遇到过比较难的技术问题是？你是如何解决的？</p>
+</li>
+<li><p>设计模式 知道什么是singleton, factory, strategy, decrator么?</p>
+</li>
+<li><p>常使用的库有哪些？常用的前端开发工具？开发过什么应用或组件？</p>
+</li>
+<li><p>页面重构怎么操作？</p>
+</li>
+<li><p>列举IE与其他浏览器不一样的特性？</p>
+</li>
+<li><p>99%的网站都需要被重构是那本书上写的？</p>
+</li>
+<li><p>什么叫优雅降级和渐进增强？</p>
+</li>
+<li><p>是否了解公钥加密和私钥加密。</p>
+</li>
+<li><p>WEB应用从服务器主动推送Data到客户端有那些方式？</p>
+</li>
+<li><p>对Node的优点和缺点提出了自己的看法？</p>
+</li>
+<li><p>你有用过哪些前端性能优化的方法？</p>
+</li>
+<li><p>http状态码有那些？分别代表是什么意思？</p>
+</li>
+<li><p>一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？（流程说的越详细越好）</p>
+</li>
+<li><p>部分地区用户反应网站很卡，请问有哪些可能性的原因，以及解决方法？</p>
+</li>
+<li><p>从打开app到刷新出内容，整个过程中都发生了什么，如果感觉慢，怎么定位问题，怎么解决?</p>
+</li>
+<li><p>除了前端以外还了解什么其它技术么？你最最厉害的技能是什么？</p>
+</li>
+<li><p>你用的得心应手用的熟练地编辑器&amp;开发环境是什么样子？</p>
+</li>
+<li><p>对前端界面工程师这个职位是怎么样理解的？它的前景会怎么样？</p>
+</li>
+<li><p>你怎么看待Web App 、hybrid App、Native App？</p>
+</li>
+<li><p>你移动端前端开发的理解？（和 Web 前端开发的主要区别是什么？）</p>
+</li>
+<li><p>你对加班的看法？</p>
+</li>
+<li><p>平时如何管理你的项目？</p>
+</li>
+<li><p>说说最近最流行的一些东西吧？常去哪些网站？</p>
+</li>
+<li><p>如何设计突发大规模并发架构？</p>
+</li>
+<li><p>说说最近最流行的一些东西吧？常去哪些网站？</p>
+</li>
+<li><p>是否了解开源的工具 bower、npm、yeoman、grunt、gulp，一个 npm 的包里的 package.json 具备的必要的字段都有哪些？（名称、版本号，依赖）</p>
+</li>
+<li><p>每个模块的代码结构都应该比较简单，且每个模块之间的关系也应该非常清晰，随着功能和迭代次数越来越多，你会如何去保持这个状态的？</p>
+</li>
+<li><p>Git知道branch, diff, merge么?</p>
+</li>
+<li><p>如何设计突发大规模并发架构？</p>
+</li>
+<li><p>当团队人手不足，把功能代码写完已经需要加班的情况下，你会做前端代码的测试吗？</p>
+</li>
+<li><p>说说最近最流行的一些东西吧？平时常去哪些网站？</p>
+</li>
+<li><p>知道什么是SEO并且怎么优化么? 知道各种meta data的含义么?</p>
+</li>
+<li><p>移动端（Android IOS）怎么做好用户体验?</p>
+</li>
+<li><p>简单描述一下你做过的移动APP项目研发流程？</p>
+</li>
+<li><p>你在现在的团队处于什么样的角色，起到了什么明显的作用？</p>
+</li>
+<li><p>你认为怎样才是全端工程师（Full Stack developer）？</p>
+</li>
+<li><p>介绍一个你最得意的作品吧？</p>
+</li>
+<li><p>你有自己的技术博客吗，用了哪些技术？</p>
+</li>
+<li><p>对前端安全有什么看法？</p>
+</li>
+<li><p>是否了解Web注入攻击，说下原理，最常见的两种攻击（XSS 和 CSRF）了解到什么程度？</p>
+</li>
+<li><p>项目中遇到国哪些印象深刻的技术难题，具体是什么问题，怎么解决？。</p>
+</li>
+<li><p>最近在学什么东西？</p>
+</li>
+<li><p>你的优点是什么？缺点是什么？</p>
+</li>
+<li><p>如何管理前端团队?</p>
+</li>
+<li><p>最近在学什么？能谈谈你未来3，5年给自己的规划吗？</p>
+</li>
+</ul>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-03-28T16:30:48.000Z" itemprop="dateUpdated">2024-03-29 00:30:48</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/interview/mian-shi-ji-zhu-wen-ti.html" target="_blank" rel="external">https://qw66.gitee.io/interview/mian-shi-ji-zhu-wen-ti.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/interview/mian-shi-ji-zhu-wen-ti.html&title=《面试技术问题》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/interview/mian-shi-ji-zhu-wen-ti.html&title=《面试技术问题》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/interview/mian-shi-ji-zhu-wen-ti.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《面试技术问题》 — 秦伟博客&url=https://qw66.gitee.io/interview/mian-shi-ji-zhu-wen-ti.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/interview/mian-shi-ji-zhu-wen-ti.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/interview/mian-shi-ji-qiao.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">面试技巧</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/interview/qian-duan-bu-ju-dai-ma.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">前端布局代码</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/interview/mian-shi-ji-zhu-wen-ti.html&title=《面试技术问题》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/interview/mian-shi-ji-zhu-wen-ti.html&title=《面试技术问题》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/interview/mian-shi-ji-zhu-wen-ti.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《面试技术问题》 — 秦伟博客&url=https://qw66.gitee.io/interview/mian-shi-ji-zhu-wen-ti.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/interview/mian-shi-ji-zhu-wen-ti.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACMElEQVR42u3aQW7jMAwF0N7/0ikwqwKB4/8pdzAjPa2CVJH1vGApkV9f8Xj9GT8///zm/fv3+fnM9/mPDQwMjP+W8fo4rhhXK1zNSWZ+hl3tDQMD4xxGG2QTWBuIk5Uvv8fAwMAoU708QVwJ3BgYGBhtipYfTVfSUAwMjJMZ7RZvjpSjW7LZ68PAwDiBMSsM/J3Pv17fwMDA+OcZr3Lk66zMrHeFgYGxNSO/CMvbLJ5KBNsLOAwMjBMY+XV/EjpnpLaEgIGBcQLjc2jLk7Yk+VspLRSVDQwMjE0Z+VbyAud6KpmXCjAwME5gzBq/ZklefjRd+r+BgYGxEWN29TZLEFeSzpqEgYGxHSMPf+tH07w80KahGBgYJzDadodnC5ztXzEwMM5hFK0M+VsZHTvbHBYDAwNj1lTxVMtXfQ2HgYGxNSM5oLYFgKL0GKxQN4dhYGBsx5g9Mk8N2+Cbt3RgYGCcxkgCbn719tSVXJEgYmBgbM1ILr9mx9roMQvPwsDAOIfRlirzELxylM1bPTAwMM5htC0X7TE1+W0eXm+6RTAwMLZjzJohkvA6eynJHjAwME5jvMrRlg3yVrNZ+nhTGMDAwNiC0Qa7WQI3O7KuFD4xMDD2Yzx1Zda2XLSvqc4cMTAwtmOsLD0rErTj5rcYGBgY5bV+3uyVr3OzZwwMDIxR6rZeDMiTVwwMjBMYbWFydqF/0zARx8/LgIuBgbEpY/0A2QbWWTmhfREYGBhbML4B0ufwLlHSlV0AAAAASUVORK5CYII=" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>

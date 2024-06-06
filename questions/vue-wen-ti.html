@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>vue问题 | 秦伟博客 | 前端、全栈、SEO的知识点、面试题与学习链接的整理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="vue,前端,ElementUI">
+    <meta name="description" content="【VueJS】实例中data属性的三种写法及区别12345678&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;    var app=new Vue(&amp;#123;        el:&amp;apos;#app&amp;apos;,        data:&amp;#123;            isLogin: false        &amp;#125;    &amp;#12">
+<meta name="keywords" content="vue,前端,ElementUI">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue问题">
+<meta property="og:url" content="https://qw66.gitee.io/questions/vue-wen-ti.html">
+<meta property="og:site_name" content="秦伟博客">
+<meta property="og:description" content="【VueJS】实例中data属性的三种写法及区别12345678&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;    var app=new Vue(&amp;#123;        el:&amp;apos;#app&amp;apos;,        data:&amp;#123;            isLogin: false        &amp;#125;    &amp;#12">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:image" content="https://qw66.gitee.io/img/loading.gif">
+<meta property="og:updated_time" content="2024-06-06T02:20:20.510Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue问题">
+<meta name="twitter:description" content="【VueJS】实例中data属性的三种写法及区别12345678&amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;    var app=new Vue(&amp;#123;        el:&amp;apos;#app&amp;apos;,        data:&amp;#123;            isLogin: false        &amp;#125;    &amp;#12">
+<meta name="twitter:image" content="https://qw66.gitee.io/img/loading.gif">
+    
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+<div id="loading" class="active"></div>
+
+<aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">秦伟</h5>
+          <a href="mailto:124729081@qq.com" title="124729081@qq.com" class="mail">124729081@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                分类
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-hourglass"></i>
+                时光
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://wpa.qq.com/msgrd?v=3&uin=124729081&site=qq&menu=yes" target="_blank" >
+                <i class="icon icon-lg icon-qq"></i>
+                聊天
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=124729081@qq.com"  >
+                <i class="icon icon-lg icon-envelope-o"></i>
+                邮箱
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/user"  >
+                <i class="icon icon-lg icon-user"></i>
+                简介
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://gitee.com/qw66" target="_blank" >
+                <i class="icon icon-lg icon-code"></i>
+                Gitee
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qw8" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+<main id="main">
+    <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">vue问题</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">vue问题</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2022-05-21T15:40:25.000Z" itemprop="datePublished" class="page-time">
+  2022-05-21
+</time>
+
+
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端问题/">前端问题</a></li></ul>
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#【VueJS】实例中data属性的三种写法及区别"><span class="post-toc-number">1.</span> <span class="post-toc-text">【VueJS】实例中data属性的三种写法及区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自定义路径别名-assets和static文件夹的区别"><span class="post-toc-number">2.</span> <span class="post-toc-text">自定义路径别名 assets和static文件夹的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#在js数据中用-requier-的方法引用图片"><span class="post-toc-number">3.</span> <span class="post-toc-text">在js数据中用 requier 的方法引用图片</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#–save-dev和–save的区别"><span class="post-toc-number">4.</span> <span class="post-toc-text">–save-dev和–save的区别</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建vue项目完整流程"><span class="post-toc-number">5.</span> <span class="post-toc-text">创建vue项目完整流程</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#1-选定路径，新建vue项目test"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">1. 选定路径，新建vue项目test</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#2-npm-start运行项目，浏览器打开http-localhost-8080"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">2.npm start运行项目，浏览器打开http://localhost:8080</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#3-路由目录下文件index-js改成动态加载，-为src文件夹。"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">3.路由目录下文件index.js改成动态加载，@为src文件夹。</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#4-安装所需依赖工具"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">4.安装所需依赖工具</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#5-src下新建api文件夹，用于api统一管理和封装axios"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">5.src下新建api文件夹，用于api统一管理和封装axios</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#6-配置mian-js"><span class="post-toc-number">5.6.</span> <span class="post-toc-text">6.配置mian.js</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#7-修改App-vue默认样式"><span class="post-toc-number">5.7.</span> <span class="post-toc-text">7.修改App.vue默认样式</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#8-新建vue-config-js文件"><span class="post-toc-number">5.8.</span> <span class="post-toc-text">8.新建vue.config.js文件</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vue项目让局域网ip访问配置设置"><span class="post-toc-number">6.</span> <span class="post-toc-text">vue项目让局域网ip访问配置设置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#行内样式绑定"><span class="post-toc-number">7.</span> <span class="post-toc-text">行内样式绑定</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#手机号和图片上传的验证规则"><span class="post-toc-number">8.</span> <span class="post-toc-text">手机号和图片上传的验证规则</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vuex使用"><span class="post-toc-number">9.</span> <span class="post-toc-text">vuex使用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#全局导航守卫和退出"><span class="post-toc-number">10.</span> <span class="post-toc-text">全局导航守卫和退出</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数组或对象遍历渲染页面"><span class="post-toc-number">11.</span> <span class="post-toc-text">数组或对象遍历渲染页面</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vue点击图片预览放大（可旋转、翻转、缩放、上下切换、键盘操作）"><span class="post-toc-number">12.</span> <span class="post-toc-text">vue点击图片预览放大（可旋转、翻转、缩放、上下切换、键盘操作）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#element-ui日期格式化（如何保存数据库中）"><span class="post-toc-number">13.</span> <span class="post-toc-text">element-ui日期格式化（如何保存数据库中）</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#element-ui无法正常显示绑定值"><span class="post-toc-number">14.</span> <span class="post-toc-text">element-ui无法正常显示绑定值</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vue-使用element-ui步骤条流程"><span class="post-toc-number">15.</span> <span class="post-toc-text">Vue 使用element-ui步骤条流程</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#改Element-UI默认样式不生效"><span class="post-toc-number">16.</span> <span class="post-toc-text">改Element-UI默认样式不生效</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Element-UI的Backtop回到顶部"><span class="post-toc-number">17.</span> <span class="post-toc-text">Element-UI的Backtop回到顶部</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#图片上传"><span class="post-toc-number">18.</span> <span class="post-toc-text">图片上传</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改Vue项目名称"><span class="post-toc-number">19.</span> <span class="post-toc-text">修改Vue项目名称</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#按钮不可用提示"><span class="post-toc-number">20.</span> <span class="post-toc-text">按钮不可用提示</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#选择器触发事件，选项标签组合"><span class="post-toc-number">21.</span> <span class="post-toc-text">选择器触发事件，选项标签组合</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多选实现"><span class="post-toc-number">22.</span> <span class="post-toc-text">多选实现</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Element-ui滚动条"><span class="post-toc-number">23.</span> <span class="post-toc-text">Element-ui滚动条</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#VUE中-click-事件不生效"><span class="post-toc-number">24.</span> <span class="post-toc-text">VUE中 @click 事件不生效</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#表格中switch开关触发事件"><span class="post-toc-number">25.</span> <span class="post-toc-text">表格中switch开关触发事件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Element表单"><span class="post-toc-number">26.</span> <span class="post-toc-text">Element表单</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#VUE权限管理"><span class="post-toc-number">27.</span> <span class="post-toc-text">VUE权限管理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#日期格式yyyy-MM-dd"><span class="post-toc-number">28.</span> <span class="post-toc-text">日期格式yyyy-MM-dd</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#对象中是否存在某个属性"><span class="post-toc-number">29.</span> <span class="post-toc-text">对象中是否存在某个属性</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#今天日期"><span class="post-toc-number">30.</span> <span class="post-toc-text">今天日期</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#课程表切换上一周下一周"><span class="post-toc-number">31.</span> <span class="post-toc-text">课程表切换上一周下一周</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vue的组件为什么要export-default"><span class="post-toc-number">32.</span> <span class="post-toc-text">Vue的组件为什么要export default</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#iPhone中style不生效问题"><span class="post-toc-number">33.</span> <span class="post-toc-text">iPhone中style不生效问题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#子组件props数据无法动态更新"><span class="post-toc-number">34.</span> <span class="post-toc-text">子组件props数据无法动态更新</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#图片引用不生效"><span class="post-toc-number">35.</span> <span class="post-toc-text">图片引用不生效</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Uncaught-in-promise-far-lt-0"><span class="post-toc-number">36.</span> <span class="post-toc-text">Uncaught (in promise) far &lt;= 0</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#将Vue项目methods中的方法暴露在window上"><span class="post-toc-number">37.</span> <span class="post-toc-text">将Vue项目methods中的方法暴露在window上</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vue项目如何实现返回上一页-并刷新上一页数据"><span class="post-toc-number">38.</span> <span class="post-toc-text">vue项目如何实现返回上一页 并刷新上一页数据</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#mounted中获取不到dom"><span class="post-toc-number">39.</span> <span class="post-toc-text">mounted中获取不到dom</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vuex-mutations或actions使用state中储存的数据"><span class="post-toc-number">40.</span> <span class="post-toc-text">vuex mutations或actions使用state中储存的数据</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#解决Duplicate-keys-detected-‘0‘-This-may-cause-an-update-error"><span class="post-toc-number">41.</span> <span class="post-toc-text">解决Duplicate keys detected: ‘0‘. This may cause an update error.</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#问题产生原因分析"><span class="post-toc-number">41.1.</span> <span class="post-toc-text">问题产生原因分析</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#解决方案"><span class="post-toc-number">41.2.</span> <span class="post-toc-text">解决方案</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vue中的-ob-Le"><span class="post-toc-number">42.</span> <span class="post-toc-text">vue中的__ob__: Le</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#执行settimeout后要清理吗"><span class="post-toc-number">43.</span> <span class="post-toc-text">执行settimeout后要清理吗</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Unexpected-token-‘-‘-报错处理"><span class="post-toc-number">44.</span> <span class="post-toc-text">Unexpected token ‘??=‘ 报错处理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vxe-table清除表头编辑的icon"><span class="post-toc-number">45.</span> <span class="post-toc-text">vxe-table清除表头编辑的icon</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#表格vxe-column循环，顺序和数组顺序不一致"><span class="post-toc-number">46.</span> <span class="post-toc-text">表格vxe-column循环，顺序和数组顺序不一致</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#乾坤微应用，重新进入子应用，vue组件怎么监听"><span class="post-toc-number">47.</span> <span class="post-toc-text">乾坤微应用，重新进入子应用，vue组件怎么监听</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#使用-QianKun-生命周期钩子"><span class="post-toc-number">47.1.</span> <span class="post-toc-text">使用 QianKun 生命周期钩子</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#具体步骤："><span class="post-toc-number">47.2.</span> <span class="post-toc-text">具体步骤：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#离开子应用后重新进入，不会触发mouted钩子，怎么解决"><span class="post-toc-number">48.</span> <span class="post-toc-text">离开子应用后重新进入，不会触发mouted钩子，怎么解决</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#解决方案："><span class="post-toc-number">48.1.</span> <span class="post-toc-text">解决方案：</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vue使用动态路由引入组件，mounted钩子不会重新触发，怎么解决"><span class="post-toc-number">49.</span> <span class="post-toc-text">vue使用动态路由引入组件，mounted钩子不会重新触发，怎么解决</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#elment表格组件最大高度工具屏幕高度动态变化，如果头部和尾部不确定高度，怎么把表格封装为公共组件，动态最大高度，vue2具体怎么实现"><span class="post-toc-number">50.</span> <span class="post-toc-text">elment表格组件最大高度工具屏幕高度动态变化，如果头部和尾部不确定高度，怎么把表格封装为公共组件，动态最大高度，vue2具体怎么实现</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#elment表格组件最大高度工具屏幕高度动态变化，如果头部和尾部不确定高度，怎么把表格封装为公共组件，动态最大高度，vue2具体怎么实现-1"><span class="post-toc-number">51.</span> <span class="post-toc-text">elment表格组件最大高度工具屏幕高度动态变化，如果头部和尾部不确定高度，怎么把表格封装为公共组件，动态最大高度，vue2具体怎么实现</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#步骤-1-使用-Flex-或-Grid-布局"><span class="post-toc-number">51.1.</span> <span class="post-toc-text">步骤 1: 使用 Flex 或 Grid 布局</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#步骤-2-表格组件封装"><span class="post-toc-number">51.2.</span> <span class="post-toc-text">步骤 2: 表格组件封装</span></a></li></ol></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-questions/vue问题"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">vue问题</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2022-05-21 23:40:25" datetime="2022-05-21T15:40:25.000Z"  itemprop="datePublished">2022-05-21</time>
+
+            
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端问题/">前端问题</a></li></ul>
+
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h3 id="【VueJS】实例中data属性的三种写法及区别"><a href="#【VueJS】实例中data属性的三种写法及区别" class="headerlink" title="【VueJS】实例中data属性的三种写法及区别"></a>【VueJS】实例中data属性的三种写法及区别</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    var app=new Vue(&#123;</span><br><span class="line">        el:&apos;#app&apos;,</span><br><span class="line">        data:&#123;</span><br><span class="line">            isLogin: false</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    var app=new Vue(&#123;</span><br><span class="line">        el:&apos;#app&apos;,</span><br><span class="line">        data: function()&#123;</span><br><span class="line">            return &#123;</span><br><span class="line">                isLogin: false</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">    var app=new Vue(&#123;</span><br><span class="line">        el:&apos;#app&apos;,</span><br><span class="line">        data() &#123;</span><br><span class="line">            return &#123;</span><br><span class="line">                isLogin: false</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>第3种是第2种的ES6写法</p>
+<p><strong>区别</strong></p>
+<p>1）在简单的Vue实例中，没什么区别，因为你app对象不会被复用。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var app = new Vue(&#123;...&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>2）但是在组件中，因为可能在多处调用同一组件，所以为了不让多处的组件共享同一data对象，只能返回函数。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">export default&#123;</span><br><span class="line">    data()&#123;</span><br><span class="line">        return &#123;</span><br><span class="line">            ...</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.11.27</p>
+<h3 id="自定义路径别名-assets和static文件夹的区别"><a href="#自定义路径别名-assets和static文件夹的区别" class="headerlink" title="自定义路径别名 assets和static文件夹的区别"></a>自定义路径别名 assets和static文件夹的区别</h3><p>相信有很多人知道vue-cli有两个放置静态资源的地方，分别是<code>src/assets</code>文件夹和<code>static</code>文件夹,这两者的区别很多人可能不太清楚。</p>
+<p><strong>assets目录中的文件会被webpack处理解析为模块依赖</strong>，只支持相对路径形式。例如，在  <code>&lt;img src=&quot;./logo.png&quot;&gt;</code>和<code>background: url(./logo.png)</code>中，”./logo.png” 是相对的资源路径，将由Webpack解析为模块依赖。</p>
+<p><strong>static/ 目录下的文件并不会被Webpack处理：它们会直接被复制到最终的打包目录（默认是dist/static）下。</strong>必须使用绝对路径引用这些文件，这是通过在 config.js 文件中的 build.assetsPublicPath 和 build.assetsSubDirectory 连接来确定的。</p>
+<p>任何放在 static/ 中文件需要以绝对路径的形式引用：/static/[filename]。</p>
+<p>在我们实际的开发中，总的来说：<strong>static放不会变动的文件 assets放可能会变动的文件。</strong></p>
+<p>vue项目有两个地方可以存放静态资源。一个是assets文件夹，一个是static文件夹（地址栏输入static可以直接访问）。放到static里面webpack打包后只会把资源复制到发布目录而不会把小图片优化为base64。而assets内的资源会被webpack打包,比如图片,会被转为BASE64。为了兼顾图片资源优化，所以还是不适合把图片资源放到static。</p>
+<p>assets 里面的图片是会经过 webpack 的 loader 处理的，而 static 里面的图片是被直接复制到 dist/static 下面的。</p>
+<p>总结日期：2019.11.27</p>
+<h3 id="在js数据中用-requier-的方法引用图片"><a href="#在js数据中用-requier-的方法引用图片" class="headerlink" title="在js数据中用 requier 的方法引用图片"></a>在js数据中用 requier 的方法引用图片</h3><p>因为webpack会将图片当做模块来引用，所以在js中需要使用require将图片引用进来，不能直接以字符串的形式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">js部分：</span><br><span class="line">data () &#123;</span><br><span class="line">	return&#123;</span><br><span class="line">		imgUrl: &apos;图片地址&apos;,//错误写法</span><br><span class="line">		imgUrl: require(&apos;图片地址&apos;)//正确的写法</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">template部分：</span><br><span class="line">img标签形式：&quot;img&quot;/&gt;或者p背景图形式：&quot;&#123;backgroundImage: &apos;url(&apos; + img + &apos;)&apos;&#125;&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>因为webpack会将图片当做模块来引用，所以在js中需要使用require将图片引用进来，而不是直接以字符串的形式。</strong></p>
+<p>node编程中最重要的思想就是模块化，<code>import</code>和 <code>require</code>都是被模块化所使用。</p>
+<p><strong>遵循规范</strong></p>
+<ol>
+<li><code>require</code>是 AMD 规范引入方式</li>
+<li><code>import</code>是 ES6 的一个新的语法标准，如果要兼容浏览器的话必须转化成 ES5 的语法</li>
+</ol>
+<p><strong>调用时间</strong></p>
+<ol>
+<li>require 是在运行时调用，所以 require 理论上可以放在代码的任何地方</li>
+<li>import 是在编译时调用，所以必须放在文件开头</li>
+</ol>
+<p><strong>本质</strong></p>
+<ol>
+<li>require 是赋值过程，其实 require 的结果就是对象、数字、字符串、函数等，再把 require 的结果赋值给某个变量</li>
+<li>import 是解构过程，但是目前所有的引擎都还没有实现 import，我们在 node 中使用 babel 支持 ES6，也仅仅是将 ES6 转码为 ES5 再执行，import 语法会被转码为 require</li>
+</ol>
+<p>总结日期：2019.11.27</p>
+<h3 id="–save-dev和–save的区别"><a href="#–save-dev和–save的区别" class="headerlink" title="–save-dev和–save的区别"></a>–save-dev和–save的区别</h3><p>当你使用<code>--save-dev</code>或者-S，安装依赖的时候就会放在package.json的devDependencies对象下面，相反的，当你使用<code>--save</code>，安装依赖的时候就会出现在dependencies对象下面。</p>
+<p> –save-dev 是你开发时候依赖的东西，–save 是你发布之后还依赖的东西。</p>
+<p>总结日期：2019.11.27</p>
+<h3 id="创建vue项目完整流程"><a href="#创建vue项目完整流程" class="headerlink" title="创建vue项目完整流程"></a>创建vue项目完整流程</h3><h4 id="1-选定路径，新建vue项目test"><a href="#1-选定路径，新建vue项目test" class="headerlink" title="1. 选定路径，新建vue项目test"></a>1. 选定路径，新建vue项目test</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install vue-cli -g</span><br><span class="line">vue init webpack test</span><br></pre></td></tr></table></figure>
+
+<p>一级文件夹：</p>
+<ul>
+<li>build：主要是用来配置构建项目以及webpack</li>
+<li>config:项目开发配置</li>
+<li>node_modules ：npm或者cnpm或者yarm所下载的依赖包。</li>
+<li>src:你的源代码</li>
+<li>assets：存放资源文件，例如css、js、image公共文件</li>
+<li>components：存放公共组件，例如menu、tabBar、sideBar等组件</li>
+<li>static:静态文件夹</li>
+<li>test：测试，一般可以删掉。</li>
+<li>index.html ：最外层的页面一般title等都设置在这里。</li>
+<li>package.json ：存放你要依赖包的json数据。</li>
+</ul>
+<p>现在我们来看看HelloWorld.vue这个页面，这里js，css的代码放置格式它已经帮你写出来了，按照这种格式写就行了，需要提醒的就是style标签中的scoped属性，如果没写这条那么这个style的样式会影响到这个页面所有的子路由，如果加了那么这个样式只对当前页面起作用。</p>
+<p>简单介绍一下routers中的结构，这里主要用来配置路由的，上面说过所有子路由都在App.vue下，所有App.vue是最外层的父路由，这里的routes中存的就是路由的数组，path就是你要访问你所创建的页面的路径，name想到与给它命名这个比较无关紧要，component相当于你要引用的页面，这里引用的是HelloWorld.vue这个页面，主要上面的import，这里的HelloWorld是一个变量，对应上面的路径文件。</p>
+<ul>
+<li>router-link组件是用来跳转路由的，to属性是将要跳转的路由页地址。</li>
+<li>router-view组件是用来展示组件页的。</li>
+<li>编程式导航，也就是说通过js控制跳转路由页。</li>
+<li>$route.query来获取URL 查询参数，例如你有一个路由地址：/detail?id=100，则有 let id= $route.query.id || -1，如果没有查询参数，则默认给了个-1的数值。</li>
+<li>了解vue-router的history和hash两种模式。</li>
+</ul>
+<h4 id="2-npm-start运行项目，浏览器打开http-localhost-8080"><a href="#2-npm-start运行项目，浏览器打开http-localhost-8080" class="headerlink" title="2.npm start运行项目，浏览器打开http://localhost:8080"></a>2.npm start运行项目，浏览器打开<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a></h4><h4 id="3-路由目录下文件index-js改成动态加载，-为src文件夹。"><a href="#3-路由目录下文件index-js改成动态加载，-为src文件夹。" class="headerlink" title="3.路由目录下文件index.js改成动态加载，@为src文件夹。"></a>3.路由目录下文件index.js改成动态加载，@为src文件夹。</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  path: &apos;/&apos;,</span><br><span class="line">  name: &apos;HelloWorld&apos;,</span><br><span class="line">  component:()=&gt;import(&quot;@/components/HelloWorld&quot;)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-安装所需依赖工具"><a href="#4-安装所需依赖工具" class="headerlink" title="4.安装所需依赖工具"></a>4.安装所需依赖工具</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cnpm install element-ui -S</span><br><span class="line">cnpm install node-sass@4.13.0 -S</span><br><span class="line">cnpm install sass-loader@7.1.0 -S</span><br><span class="line">cnpm install axios -S</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-src下新建api文件夹，用于api统一管理和封装axios"><a href="#5-src下新建api文件夹，用于api统一管理和封装axios" class="headerlink" title="5.src下新建api文件夹，用于api统一管理和封装axios"></a>5.src下新建api文件夹，用于api统一管理和封装axios</h4><p>新建api.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//集中管理所有api，可以增加</span><br><span class="line">export default &#123;</span><br><span class="line">    LOGIN:&quot;/api/admin/login&quot;,</span><br><span class="line">    UPLOAD:&quot;/api/upload/upload&quot;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>新建init.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">//初始化配置</span><br><span class="line">import axios from &quot;axios&quot;;</span><br><span class="line">import &#123;Message&#125; from &apos;element-ui&apos;;//单独引用message</span><br><span class="line"></span><br><span class="line">const instance = axios.create(&#123;</span><br><span class="line">    timeout: 3000</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">// 添加请求拦截器</span><br><span class="line">instance.interceptors.request.use(function (config) &#123;</span><br><span class="line">    // 在发送请求之前做些什么</span><br><span class="line">    if (sessionStorage.getItem(&quot;token&quot;)) &#123;</span><br><span class="line">        config[&quot;headers&quot;]=&#123;</span><br><span class="line">            &quot;X_ACCESS_TOKEN&quot;:sessionStorage.token</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    return config;</span><br><span class="line">&#125;, function (error) &#123;</span><br><span class="line">    // 对请求错误做些什么</span><br><span class="line">    return Promise.reject(error);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">instance.interceptors.response.use(function (response) &#123;</span><br><span class="line">    // 对响应数据做点什么</span><br><span class="line">    if (response.data.code !== 200) &#123;</span><br><span class="line">        Message.error(response.data.msg);</span><br><span class="line">    &#125;</span><br><span class="line">    return response;</span><br><span class="line">&#125;, function (error) &#123;</span><br><span class="line">    // 对响应错误做点什么</span><br><span class="line">    Message.error(&quot;服务器错误&quot;);</span><br><span class="line">    return Promise.reject(error);</span><br><span class="line">&#125;);</span><br><span class="line">export &#123;instance&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>新建methods.js</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">//封装请求方法</span><br><span class="line">import &#123;instance&#125; from &quot;./init&quot;;</span><br><span class="line">export default &#123;</span><br><span class="line">    get(url,data=&#123;&#125;)&#123;</span><br><span class="line">        return instance(&#123;</span><br><span class="line">            method:&quot;get&quot;,</span><br><span class="line">            url,</span><br><span class="line">            params:data</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    post(url,data=&#123;&#125;)&#123;</span><br><span class="line">        return instance(&#123;</span><br><span class="line">            method:&quot;post&quot;,</span><br><span class="line">            url,</span><br><span class="line">            data</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    put(url,data=&#123;&#125;)&#123;</span><br><span class="line">        return instance(&#123;</span><br><span class="line">            method:&quot;put&quot;,</span><br><span class="line">            url,</span><br><span class="line">            data</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;,</span><br><span class="line">    delete(url,data=&#123;&#125;)&#123;</span><br><span class="line">        return instance(&#123;</span><br><span class="line">            method:&quot;delete&quot;,</span><br><span class="line">            url,</span><br><span class="line">            params:data</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-配置mian-js"><a href="#6-配置mian-js" class="headerlink" title="6.配置mian.js"></a>6.配置mian.js</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &apos;vue&apos;</span><br><span class="line">import App from &apos;./App&apos;</span><br><span class="line">import router from &apos;./router&apos;</span><br><span class="line">import ElementUI from &apos;element-ui&apos;;</span><br><span class="line">import &apos;element-ui/lib/theme-chalk/index.css&apos;;</span><br><span class="line">import axios from &quot;./api/methods&quot;;//引入请求插件</span><br><span class="line">import api from &quot;./api/api&quot;;//引入api文件</span><br><span class="line"></span><br><span class="line">//全局注册到vue原型上</span><br><span class="line">Vue.prototype.$axios = axios;</span><br><span class="line">Vue.prototype.$api = api;</span><br><span class="line"></span><br><span class="line">Vue.config.productionTip = false;//阻止vue启动时生成生产提示</span><br><span class="line"></span><br><span class="line">Vue.use(ElementUI);//安装vue插件</span><br><span class="line"></span><br><span class="line">/* eslint-disable no-new */</span><br><span class="line">new Vue(&#123;</span><br><span class="line">  el: &apos;#app&apos;,</span><br><span class="line">  router,</span><br><span class="line">  components: &#123; App &#125;,</span><br><span class="line">  template: &apos;&lt;App/&gt;&apos;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-修改App-vue默认样式"><a href="#7-修改App-vue默认样式" class="headerlink" title="7.修改App.vue默认样式"></a>7.修改App.vue默认样式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line">    #app &#123;</span><br><span class="line">        font-family: &apos;Avenir&apos;, Helvetica, Arial, sans-serif;</span><br><span class="line">        -webkit-font-smoothing: antialiased;</span><br><span class="line">        -moz-osx-font-smoothing: grayscale;</span><br><span class="line">        height: 100%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    html, body &#123;</span><br><span class="line">        width: 100%;</span><br><span class="line">        height: 100%;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    * &#123;</span><br><span class="line">        margin: 0;</span><br><span class="line">        padding: 0;</span><br><span class="line">        list-style: none;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-新建vue-config-js文件"><a href="#8-新建vue-config-js文件" class="headerlink" title="8.新建vue.config.js文件"></a>8.新建vue.config.js文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">    //所有的资源都会被链接为相对路径，这样打包出来可以被部署在任意路径</span><br><span class="line">    publicPath:&quot;./&quot;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.11.27</p>
+<h3 id="vue项目让局域网ip访问配置设置"><a href="#vue项目让局域网ip访问配置设置" class="headerlink" title="vue项目让局域网ip访问配置设置"></a>vue项目让局域网ip访问配置设置</h3><p>在开发中，为了让同一局域网的小伙伴，都可以通过IP地址访问到vue-cli搭建的项目，要怎么配置呢?</p>
+<p><strong>第一步：修改config文件夹中 index.js 文件里面的host改成 ‘0.0.0.0’，关闭开发机防火墙</strong></p>
+<p> *<em>第二步：命令行输入ipconfig，查看开发机的ip地址，并告诉给其他小伙伴，IP地址+端口，如 <a href="http://192.168.1.87:8080/#/" target="_blank" rel="noopener">http://192.168.1.87:8080/#/</a> *</em> </p>
+<p>总结日期：2019.12.2</p>
+<h3 id="行内样式绑定"><a href="#行内样式绑定" class="headerlink" title="行内样式绑定"></a>行内样式绑定</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">:style=&quot;&#123; width: activewidth &#125;&quot;</span><br><span class="line"></span><br><span class="line">data: () =&gt; (&#123;</span><br><span class="line">            collapse: false,</span><br><span class="line">            activewidth: &quot;200px&quot;</span><br><span class="line">        &#125;),</span><br><span class="line">methods: &#123;</span><br><span class="line">   //导航栏伸缩</span><br><span class="line">   toggleMenu() &#123;</span><br><span class="line">   this.collapse = !this.collapse;</span><br><span class="line">   if (this.collapse) &#123;</span><br><span class="line">       this.activewidth = &quot;72px&quot;;</span><br><span class="line">   &#125;else &#123;</span><br><span class="line">       this.activewidth = &quot;200px&quot;;</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.2</p>
+<h3 id="手机号和图片上传的验证规则"><a href="#手机号和图片上传的验证规则" class="headerlink" title="手机号和图片上传的验证规则"></a>手机号和图片上传的验证规则</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thumb: &#123;required: true, message: &quot;请上传缩略图&quot;&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>常用的验证对图片上传通不过，所以写个验证规则简单方便。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-form :model=&quot;form&quot; :rules=&quot;rules&quot; ref=&quot;loginForm&quot; :status-icon=&quot;true&quot;&gt;</span><br><span class="line">   &lt;el-form-item prop=&quot;username&quot;&gt;</span><br><span class="line">      &lt;el-input v-model=&quot;form.username&quot; placeholder=&quot;请输入手机号&quot; prefix-icon=&quot;el-icon-user&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">   &lt;/el-form-item&gt;</span><br><span class="line">   &lt;el-form-item label=&quot;学生照片&quot; prop=&quot;avatorId&quot;&gt;</span><br><span class="line">                    &lt;!-- 头像type=1,--&gt;</span><br><span class="line">                    &lt;el-upload</span><br><span class="line">                            drag</span><br><span class="line">                            class=&quot;avatar-uploader&quot;</span><br><span class="line">                            :data=&#123;type:1&#125;</span><br><span class="line">                            :action=&quot;upload&quot;</span><br><span class="line">                            :show-file-list=&quot;false&quot;</span><br><span class="line">                            :on-success=&quot;handleAvatarSuccess&quot;</span><br><span class="line">                            :before-upload=&quot;beforeAvatarUpload&quot;&gt;</span><br><span class="line">                        &lt;img v-if=&quot;this.form.avatorId&quot; :src=&quot;studentImg&quot; class=&quot;avatar&quot;&gt;</span><br><span class="line">                        &lt;i v-else class=&quot;el-icon-plus avatar-uploader-icon&quot;&gt;&lt;/i&gt;</span><br><span class="line">                    &lt;/el-upload&gt;</span><br><span class="line">    &lt;/el-form-item&gt;</span><br><span class="line">    &lt;el-form-item label=&quot;扣课时数&quot; prop=&quot;useNumber&quot;&gt;</span><br><span class="line">                    &lt;el-input v-model=&quot;form.useNumber&quot; type=&quot;number&quot; placeholder=&quot;请输入扣课时数&quot; clearable style=&quot;width: 46%&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">    &lt;/el-form-item&gt;</span><br><span class="line">&lt;/el-form&gt;</span><br><span class="line">                    </span><br><span class="line">data() &#123;</span><br><span class="line">        //手机号验证规则</span><br><span class="line">        let checkPhone = (rule, value, callback) =&gt; &#123;</span><br><span class="line">                if (!value) &#123;</span><br><span class="line">                    return callback(new Error(&apos;手机号不能为空&apos;));</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    const reg = /^1[3|4|5|7|8][0-9]\d&#123;8&#125;$/</span><br><span class="line">                    // console.log(reg.test(value));</span><br><span class="line">                    if (reg.test(value)) &#123;</span><br><span class="line">                        callback();</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        return callback(new Error(&apos;请输入正确的手机号&apos;));</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;;</span><br><span class="line">            //图片上传验证规则</span><br><span class="line">            let checkAvator = (rule, value, callback) =&gt; &#123;</span><br><span class="line">                    if (!this.form.avatorId) &#123;</span><br><span class="line">                        callback(new Error(&apos;请上传图片&apos;));</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        callback();</span><br><span class="line">                    &#125;&#125;;</span><br><span class="line">            //正整数验证规则</span><br><span class="line">            let checkNum = (rule, value, callback) =&gt; &#123;</span><br><span class="line">                if (Number.isInteger(Number(value)) &amp;&amp; Number(value) &gt; 0 &amp;&amp; Number(value) &lt; 10001) &#123;</span><br><span class="line">                    callback()</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    callback(new Error(&apos;请输入1-10000的正整数&apos;))</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;;</span><br><span class="line">            return &#123;</span><br><span class="line">                form: &#123;</span><br><span class="line">                    username: &quot;&quot;,</span><br><span class="line">                    avatorId:&quot;&quot;,</span><br><span class="line">                    useNumber:&quot;&quot;</span><br><span class="line">                &#125;,</span><br><span class="line">                rules: &#123;</span><br><span class="line">                    username:</span><br><span class="line">                        [</span><br><span class="line">                            &#123;required: true, message: &quot;手机号不能为空&quot;, trigger: &quot;blur&quot;&#125;,</span><br><span class="line">                            &#123;validator: checkPhone, trigger: &quot;blur&quot;&#125;</span><br><span class="line">                        ],</span><br><span class="line">                    avatorId: &#123;required: true, message: &quot;请上传学生照片&quot;,validator: checkAvator,trigger:&quot;change&quot;&#125;,</span><br><span class="line">                    useNumber: [&#123;required: true, message: &quot;请输入扣课时数&quot;, trigger: &quot;blur&quot;&#125;,</span><br><span class="line">                        &#123;validator: checkNum, trigger: &quot;blur&quot;&#125;],</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.2</p>
+<h3 id="vuex使用"><a href="#vuex使用" class="headerlink" title="vuex使用"></a>vuex使用</h3><p>1.安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install vuex -S</span><br></pre></td></tr></table></figure>
+
+<p>2.浏览器安装扩展程序Vue.js devtools</p>
+<p>3.在src文件夹下创建一个store.js文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">import Vue from &apos;vue&apos;</span><br><span class="line">import Vuex from &apos;vuex&apos;</span><br><span class="line"></span><br><span class="line">Vue.use(Vuex);</span><br><span class="line"></span><br><span class="line">//要设置的全局访问的state对象</span><br><span class="line">const state = &#123;</span><br><span class="line">    count: 0</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">const mutations = &#123;</span><br><span class="line">//自定义改变state初始值的方法，这里面的参数除了state之外还可以再传额外的参数(变量或对象);</span><br><span class="line">    mutationsAddCount(state, n = 0) &#123;</span><br><span class="line">        return (state.count += n)</span><br><span class="line">    &#125;,</span><br><span class="line">    mutationsReduceCount(state, n = 0) &#123;</span><br><span class="line">        return (state.count -= n)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export default new Vuex.Store(&#123;</span><br><span class="line">    state,</span><br><span class="line">    mutations</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>4.在main.js中引入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import store from &quot;./store&quot;;//引入vuex</span><br><span class="line"></span><br><span class="line">new Vue(&#123;</span><br><span class="line">  el: &apos;#app&apos;,</span><br><span class="line">  router,</span><br><span class="line">  store,</span><br><span class="line">  components: &#123; App &#125;,</span><br><span class="line">  template: &apos;&lt;App/&gt;&apos;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>5.在组件中引用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;h3&gt;&#123;&#123;$store.state.count&#125;&#125;&lt;/h3&gt;</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.3</p>
+<h3 id="全局导航守卫和退出"><a href="#全局导航守卫和退出" class="headerlink" title="全局导航守卫和退出"></a>全局导航守卫和退出</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">router.beforeEach((to, from, next) =&gt; &#123;</span><br><span class="line">  //如果已经登陆或者本来就是登陆页面就不拦截</span><br><span class="line">  if (window.sessionStorage.getItem(&quot;userId&quot;) || to.name === &quot;login&quot;) &#123;</span><br><span class="line">    next();</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    //要跳转的不是login就强制跳到login，避免了直接访问内部路径，更加安全</span><br><span class="line">    next(&#123;name: &quot;login&quot;&#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">logout() &#123;</span><br><span class="line">     //清除全部缓存，导航守卫自动跳到登陆页面</span><br><span class="line">     sessionStorage.clear();</span><br><span class="line">     location.reload();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.3</p>
+<h3 id="数组或对象遍历渲染页面"><a href="#数组或对象遍历渲染页面" class="headerlink" title="数组或对象遍历渲染页面"></a>数组或对象遍历渲染页面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-col class=&quot;circle&quot; v-for=&quot;(value, key) in items&quot; :key=&quot;key&quot;&gt;</span><br><span class="line">     &#123;&#123; key &#125;&#125;: &#123;&#123; value &#125;&#125;</span><br><span class="line">&lt;/el-col&gt;</span><br><span class="line">                </span><br><span class="line">items: &#123;</span><br><span class="line">    a: &apos;苹果&apos;,</span><br><span class="line">    b: &apos;凤梨&apos;,</span><br><span class="line">    c: &apos;香蕉&apos;</span><br><span class="line">&#125;</span><br><span class="line">                </span><br><span class="line">                &lt;!--                班级详情循环数组渲染--&gt;</span><br><span class="line">                &lt;el-col :span=&quot;6&quot; v-for=&quot;Details in classesDetailsList&quot;</span><br><span class="line">                        :key=&quot;Details.classesId&quot;</span><br><span class="line">                        class=&quot;circle&quot;</span><br><span class="line">                        :class=&quot;&#123; &apos;daban&apos;:Details.classesCategoryId===1||Details.classesCategoryId===4,&apos;zhoban&apos;:Details.classesCategoryId===2,&apos;xiaoban&apos;:Details.classesCategoryId===3&#125;&quot;&gt;</span><br><span class="line">                    &lt;h5&gt;&#123;&#123;Details.categoryName&#125;&#125;&lt;/h5&gt;</span><br><span class="line">                    &lt;pre&gt;</span><br><span class="line">    名称： &#123;&#123;Details.classesName&#125;&#125;</span><br><span class="line">    人数：  &#123;&#123;Details.totalCount&#125;&#125;人</span><br><span class="line">    比例: 男&#123;&#123;Details.boyCount&#125;&#125;、女&#123;&#123;Details.girlCount&#125;&#125;</span><br><span class="line">    教师:&#123;&#123;Details.teacherName&#125;&#125;</span><br><span class="line">                    &lt;/pre&gt;</span><br><span class="line">                    &lt;el-row&gt;</span><br><span class="line">                        &lt;el-button icon=&quot;el-icon-edit&quot; @click=&quot;edit(Details.classesId)&quot; circle size=&quot;mini&quot;</span><br><span class="line">                                   style=&quot;border: none&quot;&gt;&lt;/el-button&gt;</span><br><span class="line">&lt;!--                        总人数等于0才能删除--&gt;</span><br><span class="line">                        &lt;el-button icon=&quot;el-icon-delete&quot; v-if=&quot;Details.totalCount===0&quot; @click=&quot;del(Details.classesId)&quot;</span><br><span class="line">                                   circle size=&quot;mini&quot;</span><br><span class="line">                                   style=&quot;border: none&quot;&gt;&lt;/el-button&gt;</span><br><span class="line">                        &lt;el-button icon=&quot;el-icon-delete&quot; v-else disabled</span><br><span class="line">                                   @click=&quot;del(Details.classesId)&quot; circle size=&quot;mini&quot;</span><br><span class="line">                                   style=&quot;border: none&quot;&gt;&lt;/el-button&gt;</span><br><span class="line">                    &lt;/el-row&gt;</span><br><span class="line">                &lt;/el-col&gt;</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.5</p>
+<h3 id="vue点击图片预览放大（可旋转、翻转、缩放、上下切换、键盘操作）"><a href="#vue点击图片预览放大（可旋转、翻转、缩放、上下切换、键盘操作）" class="headerlink" title="vue点击图片预览放大（可旋转、翻转、缩放、上下切换、键盘操作）"></a>vue点击图片预览放大（可旋转、翻转、缩放、上下切换、键盘操作）</h3><p>因项目需求（ui框架element-ui），需要实现图片的点击放大，还要能旋转以及上下切换。适合vue的插件，viewerjs的GitHub地址：<a href="https://github.com/fengyuanchen/viewerjs" target="_blank" rel="noopener">https://github.com/fengyuanchen/viewerjs</a> </p>
+<p>说实话，它的功能还是很多很强大的，大家可以自己去看。主要使用的旋转、翻转、缩放、上下切换、键盘操作等功能都有。</p>
+<p>1、安装</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install v-viewer -S</span><br></pre></td></tr></table></figure>
+
+<p>2、安装完main.js中引用（还要记得引用它的css样式）</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Viewer <span class="keyword">from</span> <span class="string">'v-viewer'</span>;</span><br><span class="line"><span class="keyword">import</span> <span class="string">'viewerjs/dist/viewer.css'</span>;</span><br></pre></td></tr></table></figure>
+
+<p>3、vue注册调用，再调用setDefaults方法，根据自己项目需求配置。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//注册调用图片展示插件</span></span><br><span class="line">Vue.use(Viewer);</span><br><span class="line">Viewer.setDefaults(&#123;</span><br><span class="line">  <span class="string">'inline'</span>:<span class="literal">false</span>,<span class="comment">//true会直接打开大图模式</span></span><br><span class="line">  <span class="string">'button'</span>:<span class="literal">true</span>, <span class="comment">//右上角按钮</span></span><br><span class="line">  <span class="string">"navbar"</span>: <span class="literal">true</span>, <span class="comment">//底部缩略图</span></span><br><span class="line">  <span class="string">"title"</span>: <span class="literal">true</span>, <span class="comment">//当前图片标题</span></span><br><span class="line">  <span class="string">"toolbar"</span>: <span class="literal">true</span>, <span class="comment">//底部工具栏</span></span><br><span class="line">  <span class="string">"tooltip"</span>: <span class="literal">true</span>, <span class="comment">//显示缩放百分比</span></span><br><span class="line">  <span class="string">"movable"</span>: <span class="literal">true</span>, <span class="comment">//是否可以移动</span></span><br><span class="line">  <span class="string">"zoomable"</span>: <span class="literal">true</span>, <span class="comment">//是否可以缩放</span></span><br><span class="line">  <span class="string">"rotatable"</span>: <span class="literal">true</span>, <span class="comment">//是否可旋转</span></span><br><span class="line">  <span class="string">"scalable"</span>: <span class="literal">true</span>, <span class="comment">//是否可翻转</span></span><br><span class="line">  <span class="string">"transition"</span>: <span class="literal">true</span>, <span class="comment">//使用 CSS3 过度</span></span><br><span class="line">  <span class="string">"fullscreen"</span>: <span class="literal">true</span>, <span class="comment">//播放时是否全屏</span></span><br><span class="line">  <span class="string">"keyboard"</span>: <span class="literal">true</span>, <span class="comment">//是否支持键盘</span></span><br><span class="line">  <span class="string">"url"</span>: <span class="string">"data-source"</span>,</span><br><span class="line">    </span><br><span class="line">  <span class="comment">//以下方法如果不需要自定义可以不写</span></span><br><span class="line">  ready: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.type,<span class="string">'组件以初始化'</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  show: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.type,<span class="string">'图片显示开始'</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  shown: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.type,<span class="string">'图片显示结束'</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  hide: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.type,<span class="string">'图片隐藏完成'</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  hidden: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.type,<span class="string">'图片隐藏结束'</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  view: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.type,<span class="string">'视图开始'</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  viewed: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.type,<span class="string">'视图结束'</span>);</span><br><span class="line">    <span class="comment">// 索引为 1 的图片旋转20度</span></span><br><span class="line">    <span class="keyword">if</span>(e.detail.index === <span class="number">1</span>)&#123;</span><br><span class="line">      <span class="keyword">this</span>.viewer.rotate(<span class="number">20</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  zoom: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.type,<span class="string">'图片缩放开始'</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  zoomed: <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(e.type,<span class="string">'图片缩放结束'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>表格说明：</p>
+<table>
+<thead>
+<tr>
+<th align="left">名称</th>
+<th align="left">默认值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">inline</td>
+<td align="left">false</td>
+<td align="left">启用 inline 模式</td>
+</tr>
+<tr>
+<td align="left">button</td>
+<td align="left">true</td>
+<td align="left">显示右上角关闭按钮</td>
+</tr>
+<tr>
+<td align="left">navbar</td>
+<td align="left">true</td>
+<td align="left">显示缩略图导航</td>
+</tr>
+<tr>
+<td align="left">title</td>
+<td align="left">true</td>
+<td align="left">显示当前图片的标题</td>
+</tr>
+<tr>
+<td align="left">toolbar</td>
+<td align="left">true</td>
+<td align="left">显示工具栏</td>
+</tr>
+<tr>
+<td align="left">tooltip</td>
+<td align="left">true</td>
+<td align="left">显示缩放百分比</td>
+</tr>
+<tr>
+<td align="left">movable</td>
+<td align="left">true</td>
+<td align="left">图片是否可移动</td>
+</tr>
+<tr>
+<td align="left">zoomable</td>
+<td align="left">true</td>
+<td align="left">图片是否可缩放</td>
+</tr>
+<tr>
+<td align="left">rotatable</td>
+<td align="left">true</td>
+<td align="left">图片是否可旋转</td>
+</tr>
+<tr>
+<td align="left">scalable</td>
+<td align="left">true</td>
+<td align="left">图片是否可翻转</td>
+</tr>
+<tr>
+<td align="left">transition</td>
+<td align="left">true</td>
+<td align="left">使用 CSS3 过度</td>
+</tr>
+<tr>
+<td align="left">fullscreen</td>
+<td align="left">true</td>
+<td align="left">播放时是否全屏</td>
+</tr>
+<tr>
+<td align="left">keyboard</td>
+<td align="left">true</td>
+<td align="left">是否支持键盘</td>
+</tr>
+<tr>
+<td align="left">url</td>
+<td align="left">src</td>
+<td align="left">设置大图片的 url</td>
+</tr>
+</tbody></table>
+<p>图片说明：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://img-blog.csdnimg.cn/20190410100634249.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2d1b3poYW5ncWlhbmc=,size_16,color_FFFFFF,t_70" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<p>4、代码中使用</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">viewer</span> <span class="attr">:images</span>=<span class="string">"images"</span> <span class="attr">style</span>=<span class="string">"margin: 10px 0"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">img</span> <span class="attr">v-for</span>=<span class="string">"item in images"</span> <span class="attr">:src</span>=<span class="string">"item.src"</span> <span class="attr">:key</span>=<span class="string">"item.index"</span> <span class="attr">height</span>=<span class="string">"100"</span> <span class="attr">style</span>=<span class="string">"width:97px; margin-right: 10px"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">viewer</span>&gt;</span></span><br><span class="line"></span><br><span class="line">//data中定义</span><br><span class="line">images:[             &#123;src:'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3272199364,3404297250&amp;fm=26&amp;gp=0.jpg',index:1&#125;,</span><br><span class="line"> &#123;src:'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3267295166,2381808815&amp;fm=26&amp;gp=0.jpg',index:2&#125;,              &#123;src:'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3429654663,2972188411&amp;fm=26&amp;gp=0.jpg',index:3&#125;,     &#123;src:'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3597323878,2962972725&amp;fm=26&amp;gp=0.jpg',index:4&#125;</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.6</p>
+<h3 id="element-ui日期格式化（如何保存数据库中）"><a href="#element-ui日期格式化（如何保存数据库中）" class="headerlink" title="element-ui日期格式化（如何保存数据库中）"></a>element-ui日期格式化（如何保存数据库中）</h3><p>一，日期格式为yyyy-mm-dd<br>1，项目中需要的日期格式为yyyy-mm-dd，但是我们在使用的element-ui的 日期选择器后默认的时间格式为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Fri Sep 07 2018 00:00:00 GMT+0800 (中国标准时间)</span><br></pre></td></tr></table></figure>
+
+<p>2，datepicker中添加一句value-format=”yyyy-MM-dd” 即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-date-picker</span><br><span class="line">   v-model=&quot;editForm.birthday&quot;</span><br><span class="line">   type=&quot;date&quot;</span><br><span class="line">   value-format=yyyy-MM-dd</span><br><span class="line">   placeholder=&quot;请选择日期&quot;&gt;</span><br><span class="line">&lt;/el-date-picker&gt;</span><br></pre></td></tr></table></figure>
+
+<p>3，格式化为时间戳<br>datepicker中添加一句value-format=“timestamp” 即可</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-date-picker</span><br><span class="line">	v-model=&quot;formInline.timeStart&quot;</span><br><span class="line">	type=&quot;datetime&quot;</span><br><span class="line">	placeholder=&quot;选择日期时间&quot;</span><br><span class="line">	value-format=&quot;timestamp&quot;&gt;</span><br><span class="line">&lt;/el-date-picker&gt;</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.9</p>
+<h3 id="element-ui无法正常显示绑定值"><a href="#element-ui无法正常显示绑定值" class="headerlink" title="element-ui无法正常显示绑定值"></a>element-ui无法正常显示绑定值</h3><p><strong>1.element-ui Radio 单选框组件默认值选不中？</strong></p>
+<p>常是由于数据类型的问题导致，如数字/布尔等类型，比如请求返回的值是 radio = 1，而组件是这样写的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;el-radio v-model=&quot;radio&quot; label=&quot;1&quot;&gt;备选项1&lt;/el-radio&gt;</span><br><span class="line">  &lt;el-radio v-model=&quot;radio&quot; label=&quot;2&quot;&gt;备选项2&lt;/el-radio&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+
+<p>此时label是字符串1， 而请求返回值是数字1，由于两者不匹配，于是该Radio单选框组件默认值就选不中<code>备选项1</code></p>
+<p>解决办法：</p>
+<p>我们只要保证label的值和请求返回的值完全一样即可，如radio有数字有字符串，那么我们可以将请求返回值radio全转换为字符串即可。</p>
+<p><strong>若radio全是数字，我们仅需在label前加<code>:</code> 即可, 这样label中的值会被当成js元素来执行，1就变成了数字。</strong></p>
+<p><strong>2.表单绑定选择器可能是数据库传过来是整型，文档默认为字符串</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">options: [&#123;</span><br><span class="line">	value: 1,</span><br><span class="line">	label: &apos;男&apos;</span><br><span class="line">&#125;, </span><br><span class="line">&#123;</span><br><span class="line">	value: 2,</span><br><span class="line">	label: &apos;女&apos;</span><br><span class="line">&#125;]</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.switch开关绑定自定义数字1,2</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-form-item label=&quot;是否可登陆&quot; prop=&quot;isUsable&quot;&gt;</span><br><span class="line">    &lt;el-switch</span><br><span class="line">       v-model=&quot;editForm.isUsable&quot;</span><br><span class="line">       :active-value=1</span><br><span class="line">       :inactive-value=2</span><br><span class="line">       active-color=&quot;#13ce66&quot;</span><br><span class="line">       inactive-color=&quot;#ff4949&quot;&gt;</span><br><span class="line">       &lt;/el-switch&gt;</span><br><span class="line">&lt;/el-form-item&gt;</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.9</p>
+<h3 id="Vue-使用element-ui步骤条流程"><a href="#Vue-使用element-ui步骤条流程" class="headerlink" title="Vue 使用element-ui步骤条流程"></a>Vue 使用element-ui步骤条流程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-dialog title=&quot;添加学生&quot; :visible.sync=&quot;dialogVisible&quot;&gt;</span><br><span class="line"></span><br><span class="line">			&lt;!--步骤条--&gt;</span><br><span class="line">            &lt;el-steps :active=&quot;active&quot; finish-status=&quot;success&quot;&gt;</span><br><span class="line">                &lt;el-step title=&quot;基本信息&quot;&gt;&lt;/el-step&gt;</span><br><span class="line">                &lt;el-step title=&quot;其他信息&quot;&gt;&lt;/el-step&gt;</span><br><span class="line">            &lt;/el-steps&gt;</span><br><span class="line">            </span><br><span class="line">            &lt;!--第一步，基本信息--&gt;</span><br><span class="line">            &lt;el-form :model=&quot;addForm&quot; ref=&quot;addForm&quot; :rules=&quot;addRules&quot; label-width=&quot;100px&quot; v-if=&quot;active===1&quot;&gt;</span><br><span class="line">                &lt;el-form-item label=&quot;姓名&quot; prop=&quot;name&quot;&gt;</span><br><span class="line">                    &lt;el-input v-model=&quot;addForm.name&quot; placeholder=&quot;请输入姓名&quot; clearable suffix-icon=&quot;el-icon-edit&quot;</span><br><span class="line">                              style=&quot;width: 65%&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">                &lt;/el-form-item&gt;</span><br><span class="line">            &lt;/el-form&gt;</span><br><span class="line">            </span><br><span class="line">            &lt;!--第二步，其他信息--&gt;</span><br><span class="line">            &lt;el-form :model=&quot;addForm&quot; ref=&quot;addForm&quot; :rules=&quot;addRules&quot; label-width=&quot;100px&quot; v-if=&quot;active===2&quot;&gt;</span><br><span class="line">                &lt;el-form-item label=&quot;手机号&quot; prop=&quot;phone&quot;&gt;</span><br><span class="line">                    &lt;el-input v-model=&quot;addForm.phone&quot; placeholder=&quot;该手机号为教师登录账号，密码会短信通知&quot; clearable</span><br><span class="line">                              suffix-icon=&quot;el-icon-edit&quot;</span><br><span class="line">                              style=&quot;width: 65%&quot;&gt;&lt;/el-input&gt;</span><br><span class="line">                &lt;/el-form-item&gt;</span><br><span class="line">            &lt;/el-form&gt;</span><br><span class="line">            </span><br><span class="line">            &lt;div slot=&quot;footer&quot; class=&quot;dialog-footer&quot;&gt;</span><br><span class="line">                &lt;!--上一步，下一步按钮--&gt;</span><br><span class="line">                &lt;el-button @click=&quot;dialogVisible = false&quot; v-if=&quot;active===1&quot;&gt;取 消&lt;/el-button&gt;</span><br><span class="line">                &lt;el-button type=&quot;primary&quot; @click=&quot;next&quot; v-if=&quot;active===1&quot;&gt;下一步&lt;/el-button&gt;</span><br><span class="line">                &lt;el-button @click=&quot;prev&quot; v-if=&quot;active===2&quot;&gt;上一步&lt;/el-button&gt;</span><br><span class="line">                &lt;el-button type=&quot;primary&quot; @click=&quot;addSubmit&quot; v-if=&quot;active===2&quot;&gt;确 定&lt;/el-button&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">&lt;/el-dialog&gt;</span><br><span class="line"></span><br><span class="line">data中定义</span><br><span class="line">active: 1,//打开默认第一步</span><br><span class="line"></span><br><span class="line">methods中定义方法</span><br><span class="line">//步骤条:上一步，下一步</span><br><span class="line">prev() &#123;</span><br><span class="line">   --this.active;</span><br><span class="line">   if (active &lt; 1) &#123;</span><br><span class="line">      this.active = 1;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;,</span><br><span class="line">next() &#123;</span><br><span class="line">   if (this.active++ &gt; 2) &#123;</span><br><span class="line">      this.active = 1;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.9</p>
+<h3 id="改Element-UI默认样式不生效"><a href="#改Element-UI默认样式不生效" class="headerlink" title="改Element-UI默认样式不生效"></a>改Element-UI默认样式不生效</h3><p>去掉scoped就可以显示样式，但此时会污染全局样式。</p>
+<p>加一个该组件特定父类，避免全局变量污染</p>
+<p>总结日期：2019.12.10</p>
+<h3 id="Element-UI的Backtop回到顶部"><a href="#Element-UI的Backtop回到顶部" class="headerlink" title="Element-UI的Backtop回到顶部"></a>Element-UI的Backtop回到顶部</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-backtop target=&quot;.el-main&quot;&gt;&lt;/el-backtop&gt;</span><br></pre></td></tr></table></figure>
+
+<p>返回页面顶部的操作按钮</p>
+<p>target为触发滚动的对象，挂载点需要是一个滚动区域（可设置高度。overflow-y：scroll）</p>
+<p>总结日期：2019.12.10</p>
+<h3 id="图片上传"><a href="#图片上传" class="headerlink" title="图片上传"></a>图片上传</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-form-item label=&quot;照片&quot; prop=&quot;avatorId&quot;&gt;</span><br><span class="line">                                &lt;el-upload</span><br><span class="line">                                        drag</span><br><span class="line">                                        class=&quot;avatar-uploader studentimg&quot;</span><br><span class="line">                                        :data=&quot;upLoadData&quot;</span><br><span class="line">                                        :action=&quot;upload&quot;</span><br><span class="line">                                        :show-file-list=&quot;false&quot;</span><br><span class="line">                                        :on-success=&quot;handleAvatarSuccess&quot;</span><br><span class="line">                                        :before-upload=&quot;beforeAvatarUpload&quot;&gt;</span><br><span class="line">                                    &lt;img v-if=&quot;this.addForm.avatorId&quot; :src=&quot;studentImg&quot; class=&quot;avatar&quot;&gt;</span><br><span class="line">                                    &lt;i v-else class=&quot;el-icon-plus avatar-uploader-icon&quot;&gt;&lt;/i&gt;</span><br><span class="line">                                &lt;/el-upload&gt;</span><br><span class="line">&lt;/el-form-item&gt;</span><br><span class="line">//限制9张图片上传</span><br><span class="line">&lt;el-form-item label=&quot;上课图片&quot; prop=&quot;imageIds&quot;&gt;</span><br><span class="line">                    &lt;el-upload</span><br><span class="line">                            multiple	//可多选</span><br><span class="line">                            ref=&apos;upload1&apos;	//清空图片数组需要</span><br><span class="line">                            :limit=&quot;9&quot;</span><br><span class="line">                            :action=&quot;upload&quot;</span><br><span class="line">                            list-type=&quot;picture-card&quot;</span><br><span class="line">                            :data=&quot;&#123;type:2&#125;&quot;	//参数</span><br><span class="line">                            :on-preview=&quot;handlePictureCardPreview&quot;  //预览大图</span><br><span class="line">                            :on-remove=&quot;handleRemove&quot;		//清除</span><br><span class="line">                            :on-exceed=&quot;beyondQuantity&quot;		//超出数量提示</span><br><span class="line">                            :on-success=&quot;handleSuccess&quot;</span><br><span class="line">                            :before-upload=&quot;beforeUpload&quot;&gt;</span><br><span class="line">                        &lt;i class=&quot;el-icon-plus&quot;&gt;&lt;/i&gt;</span><br><span class="line">                    &lt;/el-upload&gt;</span><br><span class="line">                &lt;/el-form-item&gt;</span><br><span class="line">//预览大图</span><br><span class="line">&lt;el-dialog :visible.sync=&quot;dialogVisible&quot;&gt;</span><br><span class="line">            &lt;img width=&quot;100%&quot; :src=&quot;dialogImageUrl&quot;&gt;</span><br><span class="line">&lt;/el-dialog&gt;</span><br><span class="line"></span><br><span class="line">data中</span><br><span class="line"> 				upload: &quot;&quot;,//上传图片的服务器路径</span><br><span class="line">                studentImg: &quot;&quot;,//返回的图片路径</span><br><span class="line">                upLoadData: &#123;</span><br><span class="line">                    type: 1,</span><br><span class="line">                    schoolId: sessionStorage.schoolId</span><br><span class="line">                &#125;,//上传图片的时候额外参数</span><br><span class="line"> 				//大图</span><br><span class="line">                dialogVisible: false,</span><br><span class="line">                dialogImageUrl: &apos;&apos;,</span><br><span class="line"> addRules: &#123;</span><br><span class="line">            imageIds: &#123;required: true, message: &quot;请上传上课照片&quot;&#125;,</span><br><span class="line">           &#125;, </span><br><span class="line"></span><br><span class="line">methods中</span><br><span class="line">handleRemove(file, fileList) &#123;//删除图片钩子</span><br><span class="line">                // console.log(file);</span><br><span class="line">                // console.log(fileList);</span><br><span class="line">                let delId = file.response.avatorId + &quot;,&quot;;</span><br><span class="line">                // console.log(delId);</span><br><span class="line">                //删除图片数组中删除的那张图片id</span><br><span class="line">                this.addForm.imageIds = this.addForm.imageIds.split(delId).join(&quot;&quot;);</span><br><span class="line">                // console.log(this.addForm.imageIds);</span><br><span class="line">            &#125;,</span><br><span class="line">handleAvatarSuccess(res) &#123;//成功钩子</span><br><span class="line">                if (res.data.code === 200) &#123;</span><br><span class="line">                    this.$message.success(&quot;图片上传成功(*^▽^*)&quot;);</span><br><span class="line">                    //上传成功返回图片路径，页面可以显示;返回图片id，可以表单提交</span><br><span class="line">                    this.studentImg = res.data.studentImg;</span><br><span class="line">                    this.addForm.avatorId = res.data.avatorId;</span><br><span class="line">                    this.addForm.imageIds += res.avatorId + &quot;,&quot;;</span><br><span class="line">                    this.$refs.addForm.validateField(&quot;studentImg&quot;);</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    this.$message.error(&quot;图片上传失败(ಥ﹏ಥ)&quot;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">beforeAvatarUpload(file) &#123;</span><br><span class="line">                //限制图片格式和大小</span><br><span class="line">                let typeArr = [&quot;image/jpg&quot;, &quot;image/jpeg&quot;, &quot;image/png&quot;, &quot;image/gif&quot;];</span><br><span class="line">                if (!typeArr.includes(file.type)) &#123;</span><br><span class="line">                    this.$message.error(&apos;请选择正确的图片格式&apos;);</span><br><span class="line">                    return false;</span><br><span class="line">                &#125;</span><br><span class="line">                //限制大小</span><br><span class="line">                const isLt2M = file.size / 1024 / 1024 &lt; 2;</span><br><span class="line">                if (!isLt2M) &#123;</span><br><span class="line">                    this.$message.error(&apos;上传图片大小不能超过 2MB!&apos;);</span><br><span class="line">                &#125;</span><br><span class="line">                return true;</span><br><span class="line">            &#125;,</span><br><span class="line">handlePictureCardPreview(file) &#123;//预览大图钩子</span><br><span class="line">                // console.log(file);</span><br><span class="line">                this.dialogImageUrl = file.url;</span><br><span class="line">                this.dialogVisible = true;</span><br><span class="line">            &#125;,</span><br><span class="line">beyondQuantity(file, fileList) &#123;//超出图片数量钩子</span><br><span class="line">                // console.log(file, fileList);</span><br><span class="line">                this.$message.error(&quot;(。・＿・。)ﾉsorry~最多上传9张图片&quot;);</span><br><span class="line">            &#125;,</span><br><span class="line"></span><br><span class="line">addSubmit() &#123;</span><br><span class="line">                this.$refs.addForm.validate(valid =&gt; &#123;</span><br><span class="line">                    if (valid) &#123;</span><br><span class="line">                        this.addForm.imageIds = this.addForm.imageIds.slice(0, -1);</span><br><span class="line">                        this.$axios.post(this.$api.addStudentAssessment, this.addForm).then(res =&gt; &#123;</span><br><span class="line">                            if (res.data.code === 200) &#123;</span><br><span class="line">                                this.$message.success(&quot;添加成功(*^▽^*)&quot;);</span><br><span class="line">                                this.fetchData();</span><br><span class="line">                                //清空表单和图片</span><br><span class="line">                                this.$refs.addForm.resetFields();</span><br><span class="line">                                this.$refs.upload1.clearFiles();</span><br><span class="line">                                this.dialogVisible1 = false;</span><br><span class="line">                            &#125; else &#123;</span><br><span class="line">                                this.$message.error(&quot;添加失败(ಥ﹏ಥ)&quot;);</span><br><span class="line">                                this.dialogVisible1 = false;</span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125;)</span><br><span class="line">                    &#125; else &#123;</span><br><span class="line">                        return false;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;);</span><br><span class="line">            &#125;,</span><br><span class="line">            </span><br><span class="line"> mounted() &#123;</span><br><span class="line">            //图片上传路径</span><br><span class="line">            this.upload = this.$api.UPLOAD;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.10</p>
+<h3 id="修改Vue项目名称"><a href="#修改Vue项目名称" class="headerlink" title="修改Vue项目名称"></a>修改Vue项目名称</h3><p>1、创建一个新的项目文件夹，复制之前的项目文件夹里面除了node_modules文件夹以外的内容到新的项目文件夹</p>
+<p>2、然后修改根目录下的package.json文件，把name修改成你的项目名称</p>
+<p>3、修改根目录下面的index.html文件的title，改好之后，vue文件的title就改过来了</p>
+<p>4、重新cnpm instrall一次，记得npm 之后，之前通过npm安装的插件，也要重新安装</p>
+<p>总结日期：2019.12.11</p>
+<h3 id="按钮不可用提示"><a href="#按钮不可用提示" class="headerlink" title="按钮不可用提示"></a>按钮不可用提示</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-button size=&quot;small&quot; @click=&quot;shift&quot; v-if=&quot;searchForm.classesId===&apos;&apos;&quot; </span><br><span class="line">disabled title=&quot;请先选中班级&quot;&gt;批量调班&lt;/el-button&gt;</span><br><span class="line">&lt;el-button size=&quot;small&quot; @click=&quot;shift&quot; v-else&gt;批量调班&lt;/el-button&gt;</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.12</p>
+<h3 id="选择器触发事件，选项标签组合"><a href="#选择器触发事件，选项标签组合" class="headerlink" title="选择器触发事件，选项标签组合"></a>选择器触发事件，选项标签组合</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-select v-model=&quot;searchForm.classesId&quot; filterable clearable placeholder=&quot;请选择班级名称&quot;</span><br><span class="line">                                   size=&quot;small&quot;</span><br><span class="line">                                   @change=fetchData&gt;</span><br><span class="line">     &lt;el-option</span><br><span class="line">           v-for=&quot;item in classesNameList&quot;</span><br><span class="line">           :key=&quot;item.classesId&quot;</span><br><span class="line">           :label=&quot;item.classesName+&apos;(&apos;+item.classesCategoryName+&apos;)&apos;&quot;</span><br><span class="line">           :value=&quot;item.classesId&quot;&gt;</span><br><span class="line">     &lt;/el-option&gt;</span><br><span class="line">&lt;/el-select&gt;</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.12</p>
+<h3 id="多选实现"><a href="#多选实现" class="headerlink" title="多选实现"></a>多选实现</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-row&gt;</span><br><span class="line">                &lt;el-checkbox :indeterminate=&quot;isIndeterminate&quot; v-model=&quot;checkAll&quot; @change=&quot;handleCheckAll&quot;&gt;全选</span><br><span class="line">                &lt;/el-checkbox&gt;</span><br><span class="line">                &lt;div style=&quot;margin: 15px 0;&quot;&gt;&lt;/div&gt;</span><br><span class="line">                &lt;el-checkbox-group v-model=&quot;checkedStudents&quot; @change=&quot;handleCheckedStudentsChange&quot;&gt;</span><br><span class="line">                    &lt;el-col :span=&quot;1&quot; class=&quot;student&quot; v-for=&quot;student in studentList&quot; :key=&quot;student.studentId&quot;&gt;</span><br><span class="line">                        &lt;!--                        label需要绑定数据，不然无法选中--&gt;</span><br><span class="line">                        &lt;el-checkbox :label=student.studentId&gt;&lt;/el-checkbox&gt;</span><br><span class="line">                        &lt;img src=&quot;../../assets/images/student/boy.png&quot; alt=&quot;男孩&quot; v-if=&quot;student.sex===1&quot;&gt;</span><br><span class="line">                        &lt;img src=&quot;../../assets/images/student/girl.png&quot; alt=&quot;女孩&quot; v-else&gt;</span><br><span class="line">                        &lt;p&gt;&#123;&#123;student.studentName&#125;&#125;&lt;/p&gt;</span><br><span class="line">                    &lt;/el-col&gt;</span><br><span class="line">                &lt;/el-checkbox-group&gt;</span><br><span class="line">            &lt;/el-row&gt;</span><br><span class="line">            &lt;el-row&gt;已选择&#123;&#123;this.checkedStudents.length&#125;&#125;个学生&lt;/el-row&gt;</span><br><span class="line">            </span><br><span class="line">data中</span><br><span class="line">checkAll: false,</span><br><span class="line">studentList: [],</span><br><span class="line">checkedStudents: [],</span><br><span class="line">isIndeterminate: true,</span><br><span class="line"></span><br><span class="line">methods中</span><br><span class="line">handleCheckAll(val) &#123;</span><br><span class="line">                // val为布尔型，是否全选</span><br><span class="line">                if (val) &#123;</span><br><span class="line">                    this.checkedStudents = [];//清空之前的选中值</span><br><span class="line">                    for (let student in this.studentList) &#123;</span><br><span class="line">                        this.checkedStudents.push(this.studentList[student].studentId);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    this.checkedStudents = [];</span><br><span class="line">                &#125;</span><br><span class="line">                // console.log(this.checkedStudents);</span><br><span class="line">                this.isIndeterminate = false;</span><br><span class="line">            &#125;,</span><br><span class="line">handleCheckedStudentsChange(value) &#123;</span><br><span class="line">                // value为选中值</span><br><span class="line">                // console.log(this.checkedStudents);</span><br><span class="line">                let checkedCount = value.length;</span><br><span class="line">                this.checkAll = checkedCount === this.studentList.length;</span><br><span class="line">                this.isIndeterminate = checkedCount &gt; 0 &amp;&amp; checkedCount &lt; this.studentList.length;</span><br><span class="line">            &#125;,</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.12</p>
+<h3 id="Element-ui滚动条"><a href="#Element-ui滚动条" class="headerlink" title="Element-ui滚动条"></a>Element-ui滚动条</h3><p>在使用时要设置外层容器高度。并且要设置el-scrollbar 的高度为100%</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div style=&quot;height: 54vh&quot; class=&quot;tiaoban&quot;&gt;</span><br><span class="line">    &lt;el-scrollbar&gt;</span><br><span class="line">          ....... blabla.....</span><br><span class="line">    &lt;/el-scrollbar&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;style lang=&quot;scss&quot;&gt;</span><br><span class="line">    .tiaoban .el-scrollbar &#123;</span><br><span class="line">        height: 100%;</span><br><span class="line">        margin: 10px 0;</span><br><span class="line">        padding: 10px;</span><br><span class="line">        border-radius: 4px;</span><br><span class="line">        border: 1px #EEEEEE solid;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	//去掉横向的滚动条</span><br><span class="line">    .tiaoban .el-scrollbar__wrap &#123;</span><br><span class="line">        overflow-x: hidden;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.12</p>
+<h3 id="VUE中-click-事件不生效"><a href="#VUE中-click-事件不生效" class="headerlink" title="VUE中 @click 事件不生效"></a>VUE中 @click 事件不生效</h3><p>给vue组件绑定事件时候，必须加上native ，不然不会生效（监听根元素的原生事件，使用 .native 修饰符）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-col :span=&quot;1&quot; class=&quot;student&quot; v-for=&quot;student in studentList&quot; :key=&quot;student.studentId&quot;</span><br><span class="line">                        @click.native=&quot;edit(student.studentId)&quot;&gt;</span><br><span class="line">                    &lt;img src=&quot;../../assets/images/student/boy.png&quot; alt=&quot;男孩&quot; v-if=&quot;student.sex===1&quot;&gt;</span><br><span class="line">                    &lt;img src=&quot;../../assets/images/student/girl.png&quot; alt=&quot;女孩&quot; v-else&gt;</span><br><span class="line">                    &lt;p&gt;&#123;&#123;student.studentName&#125;&#125;&lt;/p&gt;</span><br><span class="line">&lt;/el-col&gt;</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.12</p>
+<h3 id="表格中switch开关触发事件"><a href="#表格中switch开关触发事件" class="headerlink" title="表格中switch开关触发事件"></a>表格中switch开关触发事件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-table-column label=&quot;上架状态&quot; prop=&quot;status&quot;&gt;</span><br><span class="line">     &lt;template #default=&quot;o&quot;&gt;</span><br><span class="line">         &lt;!-- 原生事件绑定到组件上--&gt;</span><br><span class="line">         &lt;el-switch @click.native=&quot;changeState(o.row.id,o.row.status)&quot; :value=&quot;o.row.status===1&quot; active-color=&quot;#13ce66&quot; inactive-color=&quot;#ff4949&quot;&gt;&lt;/el-switch&gt;</span><br><span class="line">     &lt;/template&gt;</span><br><span class="line">&lt;/el-table-column&gt;</span><br><span class="line"></span><br><span class="line">methods中</span><br><span class="line"> //表格中状态改变</span><br><span class="line">changeState(sourceId, status) &#123;</span><br><span class="line">   this.$axios.get(this.$api.changeStudentStatus, &#123;sourceId, status: status === 1 ? 2 : 1&#125;).then(res =&gt; &#123;</span><br><span class="line">       if (res.data.code === 200) &#123;</span><br><span class="line">       this.fetchData();</span><br><span class="line">       this.$message.success(&quot;修改成功(*^▽^*)&quot;);</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.16</p>
+<h3 id="Element表单"><a href="#Element表单" class="headerlink" title="Element表单"></a>Element表单</h3><p>npm cache clean –force    清理npm缓存</p>
+<p>忽然发现设置表单为对象时，无须定义添加表单字段，刚开始undefined，输入内容就自动添加上值了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">addForm: &#123;</span><br><span class="line">                &#125;,</span><br></pre></td></tr></table></figure>
+
+<p>发现以前老师教的有点多余，表格编辑的时候无需获取后台信息，直接@click=”edit(o.row)”就能传过来全部数据，然后this.editForm=row，不用重新请求一个接口了</p>
+<p>关闭对话框触发事件clean清空表单</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-dialog title=&quot;编辑合同&quot; :visible.sync=&quot;dialogVisible1&quot; @close=&quot;clean&quot;&gt;</span><br><span class="line"></span><br><span class="line">methods中</span><br><span class="line">clean() &#123;</span><br><span class="line">           this.dialogVisible = false;</span><br><span class="line">           this.$refs.addForm.resetFields();</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.19</p>
+<h3 id="VUE权限管理"><a href="#VUE权限管理" class="headerlink" title="VUE权限管理"></a>VUE权限管理</h3><p>可以直接在主页main.vue中的导航栏写个v-if判断用户是那种角色（登陆后获取一下权限类别字段），然后根据权限写两种不同菜单，只改变一下下面的index路径就行，这样不同权限的人就显示不同的导航，这么简单的思路，不用改路由或者存数据库搞那么复杂的。</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="../../images/vue004.png" alt title>
+                </div>
+                <div class="image-caption"></div>
+            </figure>
+
+<p>总结日期：2019.12.20</p>
+<h3 id="日期格式yyyy-MM-dd"><a href="#日期格式yyyy-MM-dd" class="headerlink" title="日期格式yyyy-MM-dd"></a>日期格式yyyy-MM-dd</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">//装b方法</span><br><span class="line">this.searchForm.courseDate=new Date().format(&quot;yyyy-MM-dd&quot;);</span><br><span class="line">//简单方法</span><br><span class="line">this.searchForm.courseDate=new Date().getFullYear()+&quot;-&quot;+(new Date().getMonth() + 1)+&quot;-&quot;+new Date().getDate();</span><br><span class="line"></span><br><span class="line">main.js中</span><br><span class="line">Date.prototype.format = function(fmt) &#123;</span><br><span class="line">  var o = &#123;</span><br><span class="line">    &quot;M+&quot; : this.getMonth()+1,                 //月份</span><br><span class="line">    &quot;d+&quot; : this.getDate(),                    //日</span><br><span class="line">    &quot;h+&quot; : this.getHours(),                   //小时</span><br><span class="line">    &quot;m+&quot; : this.getMinutes(),                 //分</span><br><span class="line">    &quot;s+&quot; : this.getSeconds(),                 //秒</span><br><span class="line">    &quot;q+&quot; : Math.floor((this.getMonth()+3)/3), //季度</span><br><span class="line">    &quot;S&quot;  : this.getMilliseconds()             //毫秒</span><br><span class="line">  &#125;;</span><br><span class="line">  if(/(y+)/.test(fmt)) &#123;</span><br><span class="line">    fmt=fmt.replace(RegExp.$1, (this.getFullYear()+&quot;&quot;).substr(4 - RegExp.$1.length));</span><br><span class="line">  &#125;</span><br><span class="line">  for(var k in o) &#123;</span><br><span class="line">    if(new RegExp(&quot;(&quot;+ k +&quot;)&quot;).test(fmt))&#123;</span><br><span class="line">      fmt = fmt.replace(RegExp.$1, (RegExp.$1.length==1) ? (o[k]) : ((&quot;00&quot;+ o[k]).substr((&quot;&quot;+ o[k]).length)));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  return fmt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.24</p>
+<h3 id="对象中是否存在某个属性"><a href="#对象中是否存在某个属性" class="headerlink" title="对象中是否存在某个属性"></a>对象中是否存在某个属性</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">//表格选择事件，val为选中行的全部数据</span><br><span class="line"> handleSelectionChange(val) &#123;</span><br><span class="line">                // console.log(val);</span><br><span class="line">                this.addForm.studentList = val;</span><br><span class="line">            &#125;,</span><br><span class="line"></span><br><span class="line">//提交前先判断是否选中学生</span><br><span class="line">if (&quot;studentList&quot; in this.addForm) &#123;</span><br><span class="line">                    console.log(this.addForm);</span><br><span class="line">                    this.$axios.post(this.$api.addAppointmentStudent, this.addForm).then(res =&gt; &#123;</span><br><span class="line">                        if (res.data.code === 200) &#123;</span><br><span class="line">                            this.$message.success(&quot;添加成功(*^▽^*)&quot;);</span><br><span class="line">                            this.fetchData();</span><br><span class="line">                            //清空对象</span><br><span class="line">                            this.addForm = &#123;&#125;;</span><br><span class="line">                            this.dialogVisible = false;</span><br><span class="line">                        &#125; else &#123;</span><br><span class="line">                            this.$message.error(&quot;添加失败(ಥ﹏ಥ)&quot;);</span><br><span class="line">                            this.dialogVisible = false;</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;)</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    this.$message.error(&quot;请您至少选择一个学生&quot;);</span><br><span class="line">                    return;</span><br><span class="line">                &#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.28</p>
+<h3 id="今天日期"><a href="#今天日期" class="headerlink" title="今天日期"></a>今天日期</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">courseDate: new Date().getFullYear() + &quot;-&quot; + (new Date().getMonth() + 1) + &quot;-&quot; + new Date().getDate(),</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.28</p>
+<h3 id="课程表切换上一周下一周"><a href="#课程表切换上一周下一周" class="headerlink" title="课程表切换上一周下一周"></a>课程表切换上一周下一周</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-row&gt;</span><br><span class="line">    	&lt;el-button @click=&quot;lastclick&quot;&gt;上一周&lt;/el-button&gt;</span><br><span class="line">        &lt;span&gt;&#123;&#123;todayDate&#125;&#125;&lt;/span&gt;</span><br><span class="line">        &lt;el-button @click=&quot;nextclick&quot;&gt;下一周&lt;/el-button&gt;</span><br><span class="line">&lt;/el-row&gt;</span><br><span class="line">&lt;el-row&gt;</span><br><span class="line">                    &lt;table border=&quot;1&quot;&gt;</span><br><span class="line">                        &lt;tr&gt;</span><br><span class="line">                            &lt;th v-if=&quot;educationType===1&quot;&gt;托育课程表&lt;/th&gt;</span><br><span class="line">                            &lt;th v-if=&quot;educationType===2&quot;&gt;早教课程表&lt;/th&gt;</span><br><span class="line">                            &lt;th&gt;时间段&lt;/th&gt;</span><br><span class="line">                           &lt;th v-for=&quot;(item,index) in weekDayArr&quot; :key=&quot;index&quot;&gt;&#123;&#123;item.adate&#125;&#125;&lt;/th&gt;</span><br><span class="line">                        &lt;/tr&gt;</span><br><span class="line">                        &lt;tr v-for=&quot;timeSlot in morning&quot;&gt;</span><br><span class="line">                            &lt;td&gt;上午&lt;/td&gt;</span><br><span class="line">                            &lt;td v-for=&quot;classes in timeSlot&quot;&gt;</span><br><span class="line">                                &lt;!-- 单选框需要绑定一个唯一值--&gt;</span><br><span class="line">                                &lt;el-radio v-model=&quot;radio&quot; :label=&quot;classes.courseName+classes.week+classes.startTime&quot;</span><br><span class="line">                                          v-if=&quot;classes.courseTableId&gt;0&quot; @change=&quot;choose(classes)&quot; border size=&quot;mini&quot;&gt;</span><br><span class="line">                                    &#123;&#123;classes.courseName&#125;&#125;</span><br><span class="line">                                &lt;/el-radio&gt;</span><br><span class="line">                                &lt;div v-else&gt;&#123;&#123;classes.courseName&#125;&#125;&lt;/div&gt;</span><br><span class="line">                            &lt;/td&gt;</span><br><span class="line">                        &lt;/tr&gt;</span><br><span class="line">                        &lt;tr v-for=&quot;timeSlot in afternoon&quot;&gt;</span><br><span class="line">                            &lt;td&gt;下午&lt;/td&gt;</span><br><span class="line">                            &lt;td v-for=&quot;classes in timeSlot&quot;&gt;</span><br><span class="line">                                &lt;el-radio v-model=&quot;radio&quot; :label=&quot;classes.courseName+classes.week+classes.startTime&quot;</span><br><span class="line">                                          v-if=&quot;classes.courseTableId&gt;0&quot; @change=&quot;choose(classes)&quot; border size=&quot;mini&quot;&gt;</span><br><span class="line">                                    &#123;&#123;classes.courseName&#125;&#125;</span><br><span class="line">                                &lt;/el-radio&gt;</span><br><span class="line">                                &lt;div v-else&gt;&#123;&#123;classes.courseName&#125;&#125;&lt;/div&gt;</span><br><span class="line">                            &lt;/td&gt;</span><br><span class="line">                        &lt;/tr&gt;</span><br><span class="line">                    &lt;/table&gt;</span><br><span class="line">                &lt;/el-row&gt;</span><br><span class="line"></span><br><span class="line">data中</span><br><span class="line"> 				currentFirstDate: &quot;&quot;,</span><br><span class="line">                clen: 7,</span><br><span class="line">                todayDate: &quot;&quot;,</span><br><span class="line">                weekDayArr: []</span><br><span class="line"></span><br><span class="line">created() &#123;</span><br><span class="line">            this.todayDate = this.formatDate(new Date());</span><br><span class="line">            this.setDate(new Date());</span><br><span class="line">        &#125;,</span><br><span class="line">methods: &#123;</span><br><span class="line">//单选</span><br><span class="line">            choose(classes) &#123;</span><br><span class="line">                // console.log(classes);</span><br><span class="line">                this.addForm.courseTableId = classes.courseTableId;</span><br><span class="line">                this.addForm.week = classes.week;</span><br><span class="line">                //重点：获取选中周次的日期拼接</span><br><span class="line">                this.addForm.subscribeDate = new Date().getFullYear() + &quot;-&quot; + this.weekDayArr[classes.week - 1].adate.slice(0, -4);</span><br><span class="line">                console.log(this.addForm.subscribeDate);</span><br><span class="line">                this.classes = classes;//保存参数</span><br><span class="line">            &#125;,</span><br><span class="line">            </span><br><span class="line">            // 日期格式处理</span><br><span class="line">            formatDate(date) &#123;</span><br><span class="line">                var month = (date.getMonth() + 1) + &apos;-&apos;;</span><br><span class="line">                var day = date.getDate();</span><br><span class="line">                var week = &apos;(&apos; + [&apos;周日&apos;, &apos;周一&apos;, &apos;周二&apos;, &apos;周三&apos;, &apos;周四&apos;, &apos;周五&apos;, &apos;周六&apos;][date.getDay()] + &apos;)&apos;;</span><br><span class="line">                return month + day + &apos; &apos; + week;</span><br><span class="line">            &#125;,</span><br><span class="line">            addDate(date, n) &#123;</span><br><span class="line">                date.setDate(date.getDate() + n);</span><br><span class="line">                return date;</span><br><span class="line">            &#125;,</span><br><span class="line">            setDate(date) &#123;</span><br><span class="line">                var week = date.getDay() - 1;</span><br><span class="line">                date = this.addDate(date, week * -1);</span><br><span class="line">                this.currentFirstDate = new Date(date);</span><br><span class="line">                for (var i = 0; i &lt; this.clen; i++) &#123;</span><br><span class="line">                    this.weekDayArr.push(&#123;&quot;adate&quot;: this.formatDate(i == 0 ? date : this.addDate(date, 1))&#125;)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            //上一周</span><br><span class="line">            lastclick() &#123;</span><br><span class="line">                this.weekDayArr = [];</span><br><span class="line">                this.setDate(this.addDate(this.currentFirstDate, -7));</span><br><span class="line">                console.log(this.weekDayArr);</span><br><span class="line">            &#125;,</span><br><span class="line">            //下一周</span><br><span class="line">            nextclick() &#123;</span><br><span class="line">                this.weekDayArr = [];</span><br><span class="line">                this.setDate(this.addDate(this.currentFirstDate, 7));</span><br><span class="line">                console.log(this.weekDayArr);</span><br><span class="line">            &#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">table &#123;//默认样式修改</span><br><span class="line">        text-align:center;/*文本居中*/</span><br><span class="line">        border-collapse:collapse; /*表格的边框合并，如果相邻，则共用一个边框*/</span><br><span class="line">        border-spacing:0; /*设置行与单元格边框的间距。当表格边框独立（即border-collapse:separate;）此属性才起作用*/</span><br><span class="line"></span><br><span class="line">        th, td &#123;</span><br><span class="line">            padding: 5px 10px;</span><br><span class="line">            white-space: nowrap;</span><br><span class="line">            border: #C8161D 2px solid;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>总结日期：2019.12.28</p>
+<h3 id="Vue的组件为什么要export-default"><a href="#Vue的组件为什么要export-default" class="headerlink" title="Vue的组件为什么要export default"></a>Vue的组件为什么要export default</h3><p>Vue 的模块机制</p>
+<p>　　Vue 是通过 webpack 实现的模块化，因此可以使用 import 来引入模块，例如：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://images2018.cnblogs.com/blog/1170308/201803/1170308-20180313210235200-1714149358.png" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<p>　　此外，你还可以在 bulid/webpack.base.conf.js 文件中修改相关配置：</p>
+<figure class="image-bubble">
+                <div class="img-lightbox">
+                    <div class="overlay"></div>
+                    <img src="/img/loading.gif" data-original="https://images2018.cnblogs.com/blog/1170308/201803/1170308-20180313210924147-1028432506.png" alt="img" title>
+                </div>
+                <div class="image-caption">img</div>
+            </figure>
+
+<p>　　意思是，你的模块可以省略 “.js”，”.vue”，“.json” 后缀，weebpack 会在之后自动添加上；可以用 “@” 符号代替 “src” 字符串等。</p>
+<p>　　export 用来导出模块，Vue 的单文件组件通常需要导出一个对象，这个对象是 Vue 实例的选项对象，以便于在其它地方可以使用 import 引入。而 new Vue() 相当于一个构造函数，在入口文件 main.js 构造根组件的同时，如果根组件还包含其它子组件，那么 Vue 会通过引入的选项对象构造其对应的 Vue 实例，最终形成一棵组件树。</p>
+<p>　　export 和export default 的区别在于：export 可以导出多个命名模块，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//demo1.js</span><br><span class="line">export const str = &apos;hello world&apos;</span><br><span class="line"></span><br><span class="line">export function f(a)&#123;</span><br><span class="line">    return a+1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>　　对应的引入方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//demo2.js</span><br><span class="line">import &#123; str, f &#125; from &apos;demo1&apos;</span><br></pre></td></tr></table></figure>
+
+<p>　　export default 只能导出一个默认模块，这个模块可以匿名，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//demo1.js</span><br><span class="line">export default &#123;</span><br><span class="line">    a: &apos;hello&apos;,</span><br><span class="line">    b: &apos;world&apos;      </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>　　对应的引入方式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//demo2.js</span><br><span class="line">import obj from &apos;demo1&apos;</span><br></pre></td></tr></table></figure>
+
+<p>　　引入的时候可以给这个模块取任意名字，例如 “obj”，且不需要用大括号括起来。</p>
+<p>总结日期：2021.08.22</p>
+<h3 id="iPhone中style不生效问题"><a href="#iPhone中style不生效问题" class="headerlink" title="iPhone中style不生效问题"></a>iPhone中style不生效问题</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">:style=&quot;&#123; &apos;height&apos;: transHeight + &apos;vh&apos;, &apos;padding-bottom&apos;: iosBottom + &apos;px&apos; &#125;&quot;</span><br><span class="line"></span><br><span class="line">// data中</span><br><span class="line">isIos: localStorage.getItem(&quot;device&quot;) === &quot;ios&quot; || localStorage.getItem(&quot;device&quot;) === &quot;iPad&quot;,</span><br><span class="line"></span><br><span class="line">// iPhone中试了一下:style不生效，只能绑定class，改为以下代码</span><br><span class="line">:class=&quot;isIos ? &apos;ios-bottom content-info&apos; : &apos;content-info&apos;&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="子组件props数据无法动态更新"><a href="#子组件props数据无法动态更新" class="headerlink" title="子组件props数据无法动态更新"></a>子组件props数据无法动态更新</h3><p>1.数据改变后使用this.$nextTick调用子组件方法就可以</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">handleEdit(id)&#123;</span><br><span class="line">          this.editId = id</span><br><span class="line">          console.log(this.editId)</span><br><span class="line">          this.$nextTick(() =&gt; &#123;</span><br><span class="line">              this.$refs.addCar.openDrawer()</span><br><span class="line">          &#125;);</span><br><span class="line">      &#125;,</span><br></pre></td></tr></table></figure>
+
+<p>2.用watch监听子组件接收的数据的变化，从而实现更新操作</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">watch:&#123;</span><br><span class="line">    addshow()&#123;</span><br><span class="line">    	this.addModelshow=this.addshow;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>参考链接：<a href="https://blog.csdn.net/weixin_50576800/article/details/125092510" target="_blank" rel="noopener">https://blog.csdn.net/weixin_50576800/article/details/125092510</a></p>
+<h3 id="图片引用不生效"><a href="#图片引用不生效" class="headerlink" title="图片引用不生效"></a>图片引用不生效</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;img :src=&quot;item.isOpened?&apos;@/assets/images/employee-group/up@2x.png&apos;:&apos;@/assets/images/employee-group/down@2x.png&apos;&quot;</span><br><span class="line">            alt=&quot;&quot; /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>下面使用了<code>require()</code>函数来直接导入图片。这种方式在Webpack环境下能够更好地处理图片资源，特别是当图片需要动态加载或者处理时。但请记得，这种方式在模板中使用会增加打包后的体积，因为每个可能的分支都会被包含进来。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img :src=&quot;item.isOpened ? require(&apos;@/assets/images/employee-group/up@2x.png&apos;) : require(&apos;@/assets/images/employee-group/down@2x.png&apos;)&quot; alt=&quot;&quot; /&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Uncaught-in-promise-far-lt-0"><a href="#Uncaught-in-promise-far-lt-0" class="headerlink" title="Uncaught (in promise) far &lt;= 0"></a>Uncaught (in promise) far &lt;= 0</h3><p>腾讯地图初始化渲染的时候找不到所要渲染到的元素了，导致的报错。建议查找下对应元素是否书写正确，是否在渲染的过程中被隐藏或注销。 </p>
+<p>解决办法： 确保加载完成再调用</p>
+<h3 id="将Vue项目methods中的方法暴露在window上"><a href="#将Vue项目methods中的方法暴露在window上" class="headerlink" title="将Vue项目methods中的方法暴露在window上"></a>将Vue项目methods中的方法暴露在window上</h3><p>在接口调用中，有时会返回给我们一个函数回调，来自动执行我们在前端定义好的某个函数（多出现于通过回调的方式传递某个数值）。在原生项目中，我们只要提供一下这个方法就好了，通过函数回调会自动执行。问题就出现在，我使用的是Vue项目，方法是定义在methods中的，这样返回给我的函数回调就没有办法执行这段函数。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">   created() &#123;</span><br><span class="line">       // Vue的方法给原生调用，则需要把方法挂在Window下面</span><br><span class="line">       window.cb = this.cb;</span><br><span class="line">   &#125;,</span><br><span class="line">// 路线规划请求</span><br><span class="line">   reqPolyline(from, to) &#123;</span><br><span class="line">       // WebServiceAPI请求URL（驾车路线规划默认会参考实时路况进行计算）</span><br><span class="line">       var url = &quot;https://apis.map.qq.com/ws/direction/v1/driving/&quot;; //请求路径</span><br><span class="line">       url += `?from=$&#123;from.latitude&#125;,$&#123;from.longitude&#125;`;  //起点坐标</span><br><span class="line">       url += `&amp;to=$&#123;to.latitude&#125;,$&#123;to.longitude&#125;`;  //起点坐标</span><br><span class="line">       url += &quot;&amp;output=jsonp&amp;callback=cb&quot;;  //指定JSONP回调函数名，本例为cb</span><br><span class="line">       url = url + &quot;&amp;key=&quot; + this.mapKey; //开发key，可在控制台自助创建</span><br><span class="line">       //发起JSONP请求，获取路线规划结果（浏览器调用WebServiceAPI需要通过Jsonp的方式）</span><br><span class="line">       var script = document.createElement(&apos;script&apos;);</span><br><span class="line">       script.src = url;</span><br><span class="line">       document.body.appendChild(script);</span><br><span class="line">   &#125;,</span><br></pre></td></tr></table></figure>
+
+<h3 id="vue项目如何实现返回上一页-并刷新上一页数据"><a href="#vue项目如何实现返回上一页-并刷新上一页数据" class="headerlink" title="vue项目如何实现返回上一页 并刷新上一页数据"></a>vue项目如何实现返回上一页 并刷新上一页数据</h3><p>vue 返回上一页有两种方法：</p>
+<ul>
+<li>如果使用的是 vue-router ，this.$router.go(-1) 就可以回到上一页。</li>
+<li>history.go(-1) 是回到浏览器上一页。 </li>
+</ul>
+<p>在上一页中重新获取数据</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">activated() &#123;</span><br><span class="line">	this.getList();</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+
+<h3 id="mounted中获取不到dom"><a href="#mounted中获取不到dom" class="headerlink" title="mounted中获取不到dom"></a>mounted中获取不到dom</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(() =&gt; &#123;</span><br><span class="line">    // 设置对话框位置，延时才能获取到dom</span><br><span class="line">    let ele = document.getElementById(&quot;zc__sdk__container&quot;);</span><br><span class="line">    ele.style.right = &quot;108px&quot;;</span><br><span class="line">    ele.style.bottom = &quot;calc(50% - 360px)&quot;;</span><br><span class="line">&#125;, 500);</span><br></pre></td></tr></table></figure>
+
+<h3 id="vuex-mutations或actions使用state中储存的数据"><a href="#vuex-mutations或actions使用state中储存的数据" class="headerlink" title="vuex mutations或actions使用state中储存的数据"></a>vuex mutations或actions使用state中储存的数据</h3><p>在控制台中输出this，发现这里this指代的是store。输出this.state.a和this.state.b，显示的是需要的数据。</p>
+<p>总结：在vuex的index,js中，this指代的是store，因此如果要在actions和mutations中使用state中的数据，需要写成this.state.xxx，而不是this.xxx</p>
+<h3 id="解决Duplicate-keys-detected-‘0‘-This-may-cause-an-update-error"><a href="#解决Duplicate-keys-detected-‘0‘-This-may-cause-an-update-error" class="headerlink" title="解决Duplicate keys detected: ‘0‘. This may cause an update error."></a>解决Duplicate keys detected: ‘0‘. This may cause an update error.</h3><p>在我们使用vue或者uniapp开做v-for时，可能会出现这种异常</p>
+<h4 id="问题产生原因分析"><a href="#问题产生原因分析" class="headerlink" title="问题产生原因分析"></a>问题产生原因分析</h4><p>vue规定v-for时我们必须指定一个key，而我们习惯将遍历索引作为key来使用。而key的作用也容易被我们所忽略，key的作用简单理解就是vue为dom做的标记</p>
+<p>即在同一个dom节点中包含了两个v-for也就出现了两个key，而这两个key都是遍历的索引，所以两个key的值会是相同的，违反了类似唯一约束的原则。</p>
+<h4 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h4><p>1、我们可以不让他们在同一个dom节点内，用一个盒子来隔离他们。</p>
+<p>2、我们可以修改其中一个key，让他和遍历索引可以区分开，比如修改为item.id。</p>
+<h3 id="vue中的-ob-Le"><a href="#vue中的-ob-Le" class="headerlink" title="vue中的__ob__: Le"></a>vue中的<code>__ob__: Le</code></h3><p>如果你发现你拿到的数据中含有这个不要惊慌，这是vue内部属性，如果想要去掉可以使用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JSON.parse(JSON.stringify())</span><br></pre></td></tr></table></figure>
+
+<p>之后使用的数组或者数组中的对象也不会再带有这个属性了<br>百度所有的答案：<code>__ob__: Le</code>都说是vue设置的监控，如果删除将失去了vue的意义</p>
+<h3 id="执行settimeout后要清理吗"><a href="#执行settimeout后要清理吗" class="headerlink" title="执行settimeout后要清理吗"></a>执行settimeout后要清理吗</h3><p>在JavaScript中，使用<code>setTimeout</code>函数设置的定时器，默认情况下是不会自动清理的。一旦定时器到期，相关的代码逻辑将被执行。如果你希望在定时器完成后清理它，你可以使用<code>clearTimeout</code>函数来取消定时器。</p>
+<p><code>clearTimeout</code>函数接受一个参数，即要清除的定时器的ID。这个ID可以通过<code>setTimeout</code>函数返回的结果得到。例如：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> timerId = setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 定时器到期时执行的代码逻辑</span></span><br><span class="line">&#125;, <span class="number">1000</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 在需要的时候清除定时器</span></span><br><span class="line">clearTimeout(timerId);</span><br></pre></td></tr></table></figure>
+
+<p>以上代码将在设置了1秒后执行的定时器到期前，立即清除定时器。</p>
+<p>另外，如果在页面卸载或刷新时，定时器仍然处于活动状态，可能会造成内存泄漏。因此，在不再需要定时器时，最好手动清除它，以确保浏览器不会继续持有它的引用。。</p>
+<p>在vue中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">closeTimer: null // 自动关闭弹窗定时器id</span><br><span class="line"></span><br><span class="line">this.closeTimer = setTimeout(() =&gt; &#123;</span><br><span class="line">	this.close()</span><br><span class="line">&#125;, 5000)</span><br><span class="line">console.log(&apos;定时器开启&apos;, this.closeTimer)</span><br><span class="line">                    </span><br><span class="line">// 清除上一个自动关闭弹窗定时器，防止一直重复点按钮 自动关闭的越来越快</span><br><span class="line">clearTimeout(this.closeTimer)</span><br><span class="line">console.log(&apos;定时器关闭&apos;, this.closeTimer)</span><br></pre></td></tr></table></figure>
+
+<h3 id="Unexpected-token-‘-‘-报错处理"><a href="#Unexpected-token-‘-‘-报错处理" class="headerlink" title="Unexpected token ‘??=‘ 报错处理"></a>Unexpected token ‘??=‘ 报错处理</h3><p>UnhandledPromiseRejectionWarning: SyntaxError: Unexpected token ‘??=‘ 报错处理</p>
+<p>使用Vue3+Vite创建项目时忽然报这个错</p>
+<p>逻辑空赋值(??=)是ES2021的语法，node v15.0.0以上才支持逻辑空赋值(??=)的语法。之前为了兼容旧代码使用的node版本是14。</p>
+<p>使用nvm切换16的node，成功解决</p>
+<h3 id="vxe-table清除表头编辑的icon"><a href="#vxe-table清除表头编辑的icon" class="headerlink" title="vxe-table清除表头编辑的icon"></a>vxe-table清除表头编辑的icon</h3><p>showIcon : false可以去掉</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:edit-config=&quot;&#123;trigger: &apos;manual&apos;, mode: &apos;row&apos;, showIcon : false&#125;&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="表格vxe-column循环，顺序和数组顺序不一致"><a href="#表格vxe-column循环，顺序和数组顺序不一致" class="headerlink" title="表格vxe-column循环，顺序和数组顺序不一致"></a>表格vxe-column循环，顺序和数组顺序不一致</h3><p>:key=”index”即可</p>
+<p>之前绑定了item.key，造成dom复用，导致不更新</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;vxe-table show-overflow</span><br><span class="line">            border=&quot;inner&quot;</span><br><span class="line">            :data=&quot;tableData&quot;</span><br><span class="line">            :loading=&quot;loading&quot;&gt;</span><br><span class="line">            &lt;vxe-column v-for=&quot;(item,index) in columns&quot;</span><br><span class="line">                :key=&quot;index&quot;</span><br><span class="line">                :field=&quot;item.key&quot;</span><br><span class="line">                :title=&quot;item.title&quot;</span><br><span class="line">                :width=&quot;item?.width&quot;&gt;&lt;/vxe-column&gt;</span><br><span class="line">        &lt;/vxe-table&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="乾坤微应用，重新进入子应用，vue组件怎么监听"><a href="#乾坤微应用，重新进入子应用，vue组件怎么监听" class="headerlink" title="乾坤微应用，重新进入子应用，vue组件怎么监听"></a>乾坤微应用，重新进入子应用，vue组件怎么监听</h3><p>在乾坤微前端框架中，当重新进入子应用时，Vue组件想要监听这个事件，可以采取以下策略：</p>
+<h4 id="使用-QianKun-生命周期钩子"><a href="#使用-QianKun-生命周期钩子" class="headerlink" title="使用 QianKun 生命周期钩子"></a>使用 QianKun 生命周期钩子</h4><p>乾坤微前端为子应用提供了特定的生命周期钩子，可以在这些钩子中触发自定义的监听逻辑。对于Vue组件来说，通常需要在子应用的入口文件（通常是<code>main.js</code>或类似文件）中利用这些钩子，然后通过Vue的事件总线、Vuex状态管理或props等方式将事件传递到需要监听的组件中。</p>
+<h4 id="具体步骤："><a href="#具体步骤：" class="headerlink" title="具体步骤："></a>具体步骤：</h4><p>1.在子应用入口文件中监听：<br>利用QianKun提供的生命周期函数，如<code>mount</code>，在这个阶段可以认为是子应用被激活或重新进入的时候。<br>在<code>mount</code>钩子中触发一个自定义事件或者更新全局状态（如Vuex）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">// 子应用入口文件</span><br><span class="line">import &#123; mount &#125; from &apos;@qiankun/mount&apos;;</span><br><span class="line"></span><br><span class="line">export async function bootstrap() &#123;</span><br><span class="line"> console.log(&apos;子应用：bootstrap&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export async function mount(props) &#123;</span><br><span class="line"> console.log(&apos;子应用：mount&apos;);</span><br><span class="line"> // 触发全局事件或状态更新</span><br><span class="line"> window.dispatchEvent(new Event(&apos;subAppReentered&apos;));</span><br><span class="line"> // 或者使用Vuex来更新状态</span><br><span class="line"> store.commit(&apos;setSubAppStatus&apos;, &apos;reentered&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">export async function unmount() &#123;</span><br><span class="line"> console.log(&apos;子应用：unmount&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.Vue组件内监听：<br>  - 在需要监听的Vue组件内部，你可以根据上面选择的通信方式来监听变化。<br>  - 如果是全局事件，使用<code>mounted</code>钩子绑定事件监听器，并在<code>beforeDestroy</code>或<code>unmounted</code>钩子中移除。<br>  - 如果是Vuex状态，使用<code>computed</code>属性结合<code>watch</code>来监听状态变化。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line"> &lt;!-- 组件内容 --&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line"> name: &apos;YourComponent&apos;,</span><br><span class="line"> computed: &#123;</span><br><span class="line">  subAppState() &#123;</span><br><span class="line">   return this.$store.state.subAppState;</span><br><span class="line">  &#125;,</span><br><span class="line"> &#125;,</span><br><span class="line"> watch: &#123;</span><br><span class="line">  subAppState(newValue) &#123;</span><br><span class="line">   if (newValue === &apos;reentered&apos;) &#123;</span><br><span class="line">    console.log(&apos;子应用被重新进入&apos;);</span><br><span class="line">    // 执行你的逻辑</span><br><span class="line">   &#125;</span><br><span class="line">  &#125;,</span><br><span class="line"> &#125;,</span><br><span class="line"> mounted() &#123;</span><br><span class="line">  // 监听全局事件示例（如果使用了这种方式）</span><br><span class="line">  window.addEventListener(&apos;subAppReentered&apos;, this.handleReentry);</span><br><span class="line"> &#125;,</span><br><span class="line"> beforeDestroy() &#123;</span><br><span class="line">  // 清理事件监听器</span><br><span class="line">  window.removeEventListener(&apos;subAppReentered&apos;, this.handleReentry);</span><br><span class="line"> &#125;,</span><br><span class="line"> methods: &#123;</span><br><span class="line">  handleReentry() &#123;</span><br><span class="line">   console.log(&apos;子应用被重新进入&apos;);</span><br><span class="line">   // 执行你的逻辑</span><br><span class="line">  &#125;,</span><br><span class="line"> &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这样，当子应用被重新进入时，相关组件就能通过上述机制监听到并作出响应。 </p>
+<h3 id="离开子应用后重新进入，不会触发mouted钩子，怎么解决"><a href="#离开子应用后重新进入，不会触发mouted钩子，怎么解决" class="headerlink" title="离开子应用后重新进入，不会触发mouted钩子，怎么解决"></a>离开子应用后重新进入，不会触发mouted钩子，怎么解决</h3><p>在Vue中，特别是使用了QianKun微前端框架的情况下，如果你发现离开子应用后重新进入时，组件的<code>mounted</code>钩子没有被触发，这可能是因为Vue为了性能考虑复用了已经创建的组件实例，而不是重新创建它们。此时，你可以利用Vue的<code>activated</code>钩子来处理这种情况。</p>
+<h4 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h4><p>Vue提供了<code>keep-alive</code>组件来缓存组件实例，以避免重复渲染和优化性能。在QianKun框架中，当子应用被切换时，实际上是在管理这些缓存的组件。因此，你应该在组件内使用<code>activated</code>和<code>deactivated</code>这两个生命周期钩子来替代或补充原本的<code>mounted</code>和<code>destroyed</code>。</p>
+<p>- <strong>activated</strong>: 当组件被激活（即从不可见变为可见）时调用，这发生在组件被缓存后重新进入时。<br>- <strong>deactivated</strong>: 当组件被停用（即从可见变为不可见）时调用。</p>
+<p>示例代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line"> &lt;div&gt;</span><br><span class="line">  &lt;!-- 组件内容 --&gt;</span><br><span class="line"> &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line"> name: &apos;YourComponent&apos;,</span><br><span class="line"> mounted() &#123;</span><br><span class="line">  // 首次加载时的初始化逻辑依然可以放在这里</span><br><span class="line">  console.log(&apos;组件首次挂载&apos;);</span><br><span class="line"> &#125;,</span><br><span class="line"> activated() &#123;</span><br><span class="line">  // 当组件从非活跃状态变为活跃状态时调用，类似重新进入</span><br><span class="line">  console.log(&apos;组件重新激活&apos;);</span><br><span class="line">  // 在这里执行你需要在重新进入时运行的逻辑</span><br><span class="line"> &#125;,</span><br><span class="line"> deactivated() &#123;</span><br><span class="line">  // 当组件从活跃状态变为非活跃状态时调用，类似离开</span><br><span class="line">  console.log(&apos;组件失去焦点&apos;);</span><br><span class="line">  // 可以在这里清理一些资源，例如取消未完成的请求</span><br><span class="line"> &#125;,</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>确保在你的主应用中，对于需要缓存的子应用路由或组件，使用了<code>&lt;keep-alive&gt;</code>包裹<code>&lt;router-view&gt;</code>，这样Vue才会在路由切换时复用组件实例，并触发<code>activated</code>和<code>deactivated</code>钩子。</p>
+<p>注意事项：</p>
+<p>- 如果你发现即使使用了<code>activated</code>依然没有达到预期效果，请检查是否有正确配置<code>&lt;keep-alive&gt;</code>，以及是否所有相关的路由切换逻辑都支持这种模式。<br>- 对于需要在每次进入时都执行某些初始化逻辑的情况，<code>activated</code>是最佳选择。而对于只需在第一次加载时执行的逻辑，则应继续使用<code>mounted</code>。 </p>
+<h3 id="vue使用动态路由引入组件，mounted钩子不会重新触发，怎么解决"><a href="#vue使用动态路由引入组件，mounted钩子不会重新触发，怎么解决" class="headerlink" title="vue使用动态路由引入组件，mounted钩子不会重新触发，怎么解决"></a>vue使用动态路由引入组件，mounted钩子不会重新触发，怎么解决</h3><p>在Vue中，如果你发现使用动态路由时<code>mounted</code>钩子没有如预期那样触发，这可能是因为Vue为了性能考虑，对于已经创建过的组件实例，在路由参数改变但组件本身不变化时，不会再次调用<code>mounted</code>钩子。这种情况下，可以考虑使用其他生命周期钩子来处理数据的更新逻辑。</p>
+<p>对于动态路由页面内容更新的问题，可以考虑使用以下钩子：</p>
+<ol>
+<li><p><strong>updated</strong>: 当组件的响应式数据变化引起虚拟DOM重新渲染和打补丁时调用。但是，请注意频繁触发可能导致性能问题。</p>
+</li>
+<li><p><strong>watch</strong>: 你可以使用<code>watch</code>来监听路由参数或查询参数的变化，并在变化时执行相应逻辑。这对于基于路由参数动态更新数据特别有用。</p>
+</li>
+<li><p><strong>activated</strong> (对于keep-alive组件): 如果你的组件被包裹在<code>&lt;keep-alive&gt;</code>中，那么当组件被重新激活时（比如，从一个路由切换回来），<code>activated</code>钩子会被触发。这个钩子适合用来处理数据的重新获取或组件状态的恢复。</p>
+</li>
+</ol>
+<p>示例代码（使用<code>watch</code>）:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  watch: &#123;</span><br><span class="line">    <span class="string">'$route'</span>(to, <span class="keyword">from</span>) &#123;</span><br><span class="line">      <span class="comment">// 当路由发生变化时执行的逻辑</span></span><br><span class="line">      <span class="keyword">this</span>.fetchData(); <span class="comment">// 假设这是你获取数据的方法</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted() &#123;</span><br><span class="line">    <span class="keyword">this</span>.fetchData(); <span class="comment">// 首次加载时获取数据</span></span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    fetchData() &#123;</span><br><span class="line">      <span class="comment">// 获取数据的逻辑</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>或者，如果你的组件被<code>&lt;keep-alive&gt;</code>包含，可以使用<code>activated</code>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  activated() &#123;</span><br><span class="line">    <span class="keyword">this</span>.fetchData(); <span class="comment">// 每当组件被重新激活时获取数据</span></span><br><span class="line">  &#125;,</span><br><span class="line">  mounted() &#123;</span><br><span class="line">    <span class="keyword">this</span>.fetchData(); <span class="comment">// 首次加载时获取数据</span></span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    fetchData() &#123;</span><br><span class="line">      <span class="comment">// 获取数据的逻辑</span></span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>这样，无论是在首次加载还是路由参数变化时，都能确保数据的及时更新。</p>
+<h3 id="elment表格组件最大高度工具屏幕高度动态变化，如果头部和尾部不确定高度，怎么把表格封装为公共组件，动态最大高度，vue2具体怎么实现"><a href="#elment表格组件最大高度工具屏幕高度动态变化，如果头部和尾部不确定高度，怎么把表格封装为公共组件，动态最大高度，vue2具体怎么实现" class="headerlink" title="elment表格组件最大高度工具屏幕高度动态变化，如果头部和尾部不确定高度，怎么把表格封装为公共组件，动态最大高度，vue2具体怎么实现"></a>elment表格组件最大高度工具屏幕高度动态变化，如果头部和尾部不确定高度，怎么把表格封装为公共组件，动态最大高度，vue2具体怎么实现</h3><p>在 Vue 2 中，若要将 Element UI 的表格组件封装为一个公共组件，使其最大高度根据屏幕高度动态变化，同时考虑到头部和尾部高度是不确定的，可以采取以下策略：</p>
+<p> 步骤 1: 创建公共表格组件</p>
+<p>首先，创建一个名为 <code>DynamicHeightTable.vue</code> 的公共组件文件。</p>
+<p>DynamicHeightTable.vue</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div ref=&quot;tableContainer&quot; class=&quot;table-container&quot;&gt;</span><br><span class="line">    &lt;el-table :data=&quot;tableData&quot; :max-height=&quot;computedMaxHeight&quot;&gt;</span><br><span class="line">      &lt;!-- 表格列定义 --&gt;</span><br><span class="line">    &lt;/el-table&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    tableData: &#123;</span><br><span class="line">      type: Array,</span><br><span class="line">      required: true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      // 这里可以初始化一些状态，如果需要的话</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    computedMaxHeight() &#123;</span><br><span class="line">      // 获取可视区高度</span><br><span class="line">      const windowHeight = window.innerHeight || document.documentElement.clientHeight;</span><br><span class="line">      </span><br><span class="line">      // 计算表格容器的实际可用高度</span><br><span class="line">      const containerRect = this.$refs.tableContainer.getBoundingClientRect();</span><br><span class="line">      const actualHeight = windowHeight - containerRect.top;</span><br><span class="line"></span><br><span class="line">      // 减去估算的头部和尾部高度，可以通过实际获取这两个元素的高度或预留一定比例</span><br><span class="line">      // 这里假设头部和尾部高度未知，使用一个预留值或动态计算（如果头部和尾部组件是可控的）</span><br><span class="line">      const estimatedHeaderFooterHeight = 200; // 示例预留值，实际情况需根据设计调整</span><br><span class="line"></span><br><span class="line">      return actualHeight - estimatedHeaderFooterHeight;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted() &#123;</span><br><span class="line">    // 添加窗口大小变化的监听器</span><br><span class="line">    window.addEventListener(&apos;resize&apos;, this.$refs.tableContainer.offsetHeight);</span><br><span class="line">  &#125;,</span><br><span class="line">  beforeDestroy() &#123;</span><br><span class="line">    // 在组件销毁前移除监听器</span><br><span class="line">    window.removeEventListener(&apos;resize&apos;, this.$refs.tableContainer.offsetHeight);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">.table-container &#123;</span><br><span class="line">  position: relative; /* 可能需要相对定位，以便计算正确的高度 */</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p> 步骤 2: 在父组件中使用公共表格组件</p>
+<p>在需要使用此表格的父组件中，引入并使用 <code>DynamicHeightTable</code> 组件，无需直接传递头部和尾部高度，因为公共组件会根据屏幕高度动态计算。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- ParentComponent.vue --&gt;</span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;header&gt;动态高度的头部&lt;/header&gt;</span><br><span class="line">    &lt;dynamic-height-table :table-data=&quot;yourTableData&quot;&gt;&lt;/dynamic-height-table&gt;</span><br><span class="line">    &lt;footer&gt;动态高度的底部&lt;/footer&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">import DynamicHeightTable from &apos;@/components/DynamicHeightTable.vue&apos;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  components: &#123;</span><br><span class="line">    DynamicHeightTable</span><br><span class="line">  &#125;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      yourTableData: [] // 你的表格数据</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p> 注意事项</p>
+<p>- 上述代码中，为了简化，头部和尾部的高度预留了一个固定的估计值。在实际项目中，如果头部和尾部高度可以通过Vue实例访问到（例如，它们也是Vue组件且高度是响应式的），那么可以直接计算它们的实际高度，而不是使用固定值。<br>- 确保父组件的布局方式（如使用Flexbox或Grid）支持动态高度调整，这样表格组件才能正确计算其可用空间。<br>- 当头部或尾部高度变化时，如果这些变化是响应式的，那么表格组件的 <code>computedMaxHeight</code> 会自动重新计算，但如果是由于非Vue数据驱动的DOM操作导致的高度变化，则可能需要额外的逻辑来手动触发高度的重计算。 </p>
+<h3 id="elment表格组件最大高度工具屏幕高度动态变化，如果头部和尾部不确定高度，怎么把表格封装为公共组件，动态最大高度，vue2具体怎么实现-1"><a href="#elment表格组件最大高度工具屏幕高度动态变化，如果头部和尾部不确定高度，怎么把表格封装为公共组件，动态最大高度，vue2具体怎么实现-1" class="headerlink" title="elment表格组件最大高度工具屏幕高度动态变化，如果头部和尾部不确定高度，怎么把表格封装为公共组件，动态最大高度，vue2具体怎么实现"></a>elment表格组件最大高度工具屏幕高度动态变化，如果头部和尾部不确定高度，怎么把表格封装为公共组件，动态最大高度，vue2具体怎么实现</h3><p> 如果头部和尾部的高度是动态不确定的，你可以进一步封装一个更通用的解决方案，使得表格组件能够自适应其外部容器的高度，而不直接依赖于固定高度的头部和尾部。下面是一种实现思路：</p>
+<h4 id="步骤-1-使用-Flex-或-Grid-布局"><a href="#步骤-1-使用-Flex-或-Grid-布局" class="headerlink" title="步骤 1: 使用 Flex 或 Grid 布局"></a>步骤 1: 使用 Flex 或 Grid 布局</h4><p>首先，确保你的页面布局采用 Flexbox 或 CSS Grid，这两种布局模式允许你更灵活地分配空间，特别是对于未知高度的情况。</p>
+<h4 id="步骤-2-表格组件封装"><a href="#步骤-2-表格组件封装" class="headerlink" title="步骤 2: 表格组件封装"></a>步骤 2: 表格组件封装</h4><p>在封装表格组件时，可以通过传入一个引用或者父容器的高度来动态计算表格的最大高度。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- TableComponent.vue --&gt;</span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div ref=&quot;tableWrapper&quot; class=&quot;table-wrapper&quot;&gt;</span><br><span class="line">    &lt;el-table :data=&quot;tableData&quot; :max-height=&quot;computedMaxHeight&quot;&gt;</span><br><span class="line">      &lt;!-- 表格列定义 --&gt;</span><br><span class="line">    &lt;/el-table&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    parentRef: &#123; // 传递父容器的引用</span><br><span class="line">      type: Object,</span><br><span class="line">      required: true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      tableData: [] // 你的表格数据</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    computedMaxHeight() &#123;</span><br><span class="line">      if (this.parentRef) &#123;</span><br><span class="line">        // 计算父容器高度减去头部和尾部高度</span><br><span class="line">        const parentRect = this.parentRef.getBoundingClientRect();</span><br><span class="line">        const headerRect = this.parentRef.querySelector(&apos;.header&apos;).getBoundingClientRect();</span><br><span class="line">        const footerRect = this.parentRef.querySelector(&apos;.footer&apos;).getBoundingClientRect();</span><br><span class="line"></span><br><span class="line">        // 动态计算表格最大高度</span><br><span class="line">        return parentRect.height - (headerRect.height + footerRect.height);</span><br><span class="line">      &#125;</span><br><span class="line">      return 0; // 默认值或错误处理</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  mounted() &#123;</span><br><span class="line">    // 如果头部和尾部高度可能变化，可以在这里添加监听器来响应变化</span><br><span class="line">    // 注意：这取决于头部和尾部高度变化的具体方式</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p> 步骤 3: 使用公共组件</p>
+<p>在父组件中使用这个表格组件，并将包含头部、表格和尾部的容器的引用传递给它。 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- ParentComponent.vue --&gt;</span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;container&quot;&gt;</span><br><span class="line">    &lt;header class=&quot;header&quot;&gt;头部内容&lt;/header&gt;</span><br><span class="line">    &lt;TableComponent :parent-ref=&quot;$refs.container&quot; :table-data=&quot;yourData&quot;/&gt;</span><br><span class="line">    &lt;footer class=&quot;footer&quot;&gt;底部内容&lt;/footer&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">import TableComponent from &apos;./TableComponent.vue&apos;;</span><br><span class="line"></span><br><span class="line">export default &#123;</span><br><span class="line">  components: &#123;</span><br><span class="line">    TableComponent</span><br><span class="line">  &#125;,</span><br><span class="line">  data() &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      yourData: [] // 表格数据</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">.container &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  flex-direction: column;</span><br><span class="line">  height: 100%; /* 或其他适合的百分比/视窗单位 */</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+<p>通过这样的设计，你的表格组件能够动态适应其父容器的高度变化，即使头部和尾部的高度是动态的。</p>
+<p>注意，这种方法依赖于外部容器的布局和高度管理，确保父容器有一个确定的或可计算的高度。 </p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2024-06-06T02:20:20.510Z" itemprop="dateUpdated">2024-06-06 10:20:20</time>
+</span><br>
+
+
+        
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/questions/vue-wen-ti.html" target="_blank" rel="external">https://qw66.gitee.io/questions/vue-wen-ti.html</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qw66.gitee.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
+            秦伟
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ElementUI/">ElementUI</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/vue/">vue</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/questions/vue-wen-ti.html&title=《vue问题》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/questions/vue-wen-ti.html&title=《vue问题》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/questions/vue-wen-ti.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vue问题》 — 秦伟博客&url=https://qw66.gitee.io/questions/vue-wen-ti.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/questions/vue-wen-ti.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/questions/vue-xiang-mu-si-lu.html" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">vue项目思路</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/questions/yuan-sheng-chang-jian-wen-ti.html" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">原生常见问题</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Valine Comments -->
+    <div class="comments vcomment" id="comments"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <!-- Valine Comments script -->
+    <script>
+        var GUEST_INFO = ['nick','mail','link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function(item){
+          return GUEST_INFO.indexOf(item) > -1
+        });
+        new Valine({
+            el: '#comments',
+            notify: 'false' == 'true',
+            verify: 'false' == 'true',
+            appId: "TJ17Ax10JrfIIljlO8qkwGvz-gzGzoHsz",
+            appKey: "jDGQKdWT9hlzsTLRAbInE4bK",
+            avatar: "mm",
+            placeholder: "说点什么吧(*╹▽╹*)",
+            guest_info: guest_info.length == 0 ? GUEST_INFO : guest_info,
+            pageSize: "10"
+        })
+    </script>
+    <!-- Valine Comments end -->
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢您，我会继续努力哒(*^▽^*)
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+    <footer class="footer">
+    <div class="top">
+        <div class="map">
+            <!--地球信息-->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="//rf.revolvermaps.com/0/0/8.js?i=5mz4gy0w2d8&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=33" async="async">  <\/script>');
+    }
+</script>
+        </div>
+        <p>
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+</p>
+        <p>
+            <span>本网站总字数：832.4k</span>
+            <span id="sitetime"></span>
+        </p>
+        <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
+        <p>
+            
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
+                    class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p>
+            <span>Copyright &copy; 2019 - 2024 <a
+                href="http://pdouyin.com/" target="_blank">秦伟的个人博客</a> All Rights Reserved.</span>
+            <!-- <span>
+                
+                
+            </span> -->
+        </p>
+    </div>
+</footer>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2019, 8, 25, 18, 0, 0); // 北京时间
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "已安全运行 " + diffYears + "年 " + diffDays + "天 " + diffHours + "小时 " + diffMinutes + "分钟 " + diffSeconds + "秒";
+    }
+    siteTime();
+</script>
+</main>
+<div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw66.gitee.io/questions/vue-wen-ti.html&title=《vue问题》 — 秦伟博客&pic=https://qw66.gitee.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw66.gitee.io/questions/vue-wen-ti.html&title=《vue问题》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw66.gitee.io/questions/vue-wen-ti.html" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《vue问题》 — 秦伟博客&url=https://qw66.gitee.io/questions/vue-wen-ti.html&via=https://qw66.gitee.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw66.gitee.io/questions/vue-wen-ti.html" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJUlEQVR42u3azY6DUAgG0Hn/l57ZNmm0H2AnEY8rY/y5pwsKF35+4uP35Ti6/n683vP+1NH5+/2XHRgYGLdl5Es5/8A59YiUw47WhoGB8RxG9dXV8/wrVTYGBgbGeXqXH9VEEwMDA+MqxvkbeokjBgYGxqSInWzP5cv9ei2OgYFxQ0a+rP8//0p/AwMD41aMXiE6uT//mQpfwcDAWM3olaC9DbVeq6BQEmNgYKxmJBtbedlZvdJ7NsphMTAwVjOqQ2CjEHlRcwIDA2MrIy9T8/CXj2hU2wmHa8DAwFjNmITRXhsybzb0QjAGBsZuRq+k7I155S2E8mgFBgbGOkZ1CKzaHvhGslguYjEwMG7OyFO0Xgo4ASd/AxgYGE9g5FtpSUpX/VF6SWc0LYKBgbGIkZe1vQZntTyuDoJgYGA8hzFJB6uACenDUxgYGKsZ+VhDdSxj0pJs/ldgYGCsZvQ+UG1JzhPHMg8DA2MFI0/15pv4vXHYUVKIgYHxAEY1dFYbCb1m54daHAMDYykjP65KEKthujzGioGBsY6Rb59VW5554doL+hgYGLsZk1DbaxLk4EIbFQMDYzVjEuyqoTkpZXsNCQwMjCcwqiVr3h7IE8QL0lMMDIwHMHqBr7qhNp8EOXwbBgYGRqvpmF/Jc9gPm24YGBgYrc7DpNlQCPEYGBgPYMwHJvIhjGRZ5RENDAyM1YxqyEs20fJNvWoLYdTIxMDAuB/jD3OunTuixWEsAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="/js/main.min.js?v=1.7.2"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="/js/search.min.js?v=1.7.2" async></script>
+
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+});
+</script>
+
+<script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+
+
+
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '(つェ⊂)咦!跑去哪里了';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '欢迎回来━(*｀∀´*)ノ';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+
+<!-- 点击特效 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+<!--动态线条背景-->
+<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200"
+        src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="/js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+    var windowWidth = $(window).width();
+    if (windowWidth > 480) {
+        document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+    }
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script><script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script></body>
+</html>
