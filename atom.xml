@@ -176,9 +176,9 @@
     
       <category term="JavaScript" scheme="https://qw8.github.io/tags/JavaScript/"/>
     
-      <category term="DOM" scheme="https://qw8.github.io/tags/DOM/"/>
-    
       <category term="BOM" scheme="https://qw8.github.io/tags/BOM/"/>
+    
+      <category term="DOM" scheme="https://qw8.github.io/tags/DOM/"/>
     
       <category term="事件循环" scheme="https://qw8.github.io/tags/%E4%BA%8B%E4%BB%B6%E5%BE%AA%E7%8E%AF/"/>
     
@@ -257,9 +257,9 @@
       <category term="前端知识点" scheme="https://qw8.github.io/categories/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
     
     
-      <category term="vuex" scheme="https://qw8.github.io/tags/vuex/"/>
-    
       <category term="vue-router" scheme="https://qw8.github.io/tags/vue-router/"/>
+    
+      <category term="vuex" scheme="https://qw8.github.io/tags/vuex/"/>
     
       <category term="vue-cli" scheme="https://qw8.github.io/tags/vue-cli/"/>
     
@@ -367,11 +367,11 @@
     
       <category term="JavaScript" scheme="https://qw8.github.io/tags/JavaScript/"/>
     
-      <category term="DOM" scheme="https://qw8.github.io/tags/DOM/"/>
-    
       <category term="BOM" scheme="https://qw8.github.io/tags/BOM/"/>
     
       <category term="字符串" scheme="https://qw8.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+      <category term="DOM" scheme="https://qw8.github.io/tags/DOM/"/>
     
       <category term="同步异步" scheme="https://qw8.github.io/tags/%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5/"/>
     
