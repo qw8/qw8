@@ -20,12 +20,12 @@
     <meta name="theme-color" content="#3F51B5">
     
     
-    <meta name="keywords" content="Angular,数据绑定,MVVM">
+    <meta name="keywords" content="MVVM,Angular,数据绑定">
     <meta name="description" content="angular 的数据绑定采用什么机制？详述原理脏检查机制。 解析：双向数据绑定是 AngularJS 的核心机制之一。当 view 中有任何数据变化时，会更新到 model ，当 model 中数据有变化时，view 也会同步更新，显然，这需要一个监控。 原理就是，Angular 在 scope 模型上设置了一个监听队列，用来监听数据变化并更新 view 。每次绑定一个东西到 view 上时 A">
-<meta name="keywords" content="Angular,数据绑定,MVVM">
+<meta name="keywords" content="MVVM,Angular,数据绑定">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Angular">
-<meta property="og:url" content="https://qw8.github.io/qw8/knowledges/angular.html">
+<meta property="og:url" content="https://qw8.github.io/knowledges/angular.html">
 <meta property="og:site_name" content="秦伟博客">
 <meta property="og:description" content="angular 的数据绑定采用什么机制？详述原理脏检查机制。 解析：双向数据绑定是 AngularJS 的核心机制之一。当 view 中有任何数据变化时，会更新到 model ，当 model 中数据有变化时，view 也会同步更新，显然，这需要一个监控。 原理就是，Angular 在 scope 模型上设置了一个监听队列，用来监听数据变化并更新 view 。每次绑定一个东西到 view 上时 A">
 <meta property="og:locale" content="zh-CN">
@@ -34,10 +34,10 @@
 <meta name="twitter:title" content="Angular">
 <meta name="twitter:description" content="angular 的数据绑定采用什么机制？详述原理脏检查机制。 解析：双向数据绑定是 AngularJS 的核心机制之一。当 view 中有任何数据变化时，会更新到 model ，当 model 中数据有变化时，view 也会同步更新，显然，这需要一个监控。 原理就是，Angular 在 scope 模型上设置了一个监听队列，用来监听数据变化并更新 view 。每次绑定一个东西到 view 上时 A">
     
-        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/qw8/atom.xml">
+        <link rel="alternate" type="application/atom+xml" title="秦伟博客" href="/atom.xml">
     
-    <link rel="shortcut icon" href="/qw8/img/qw.ico">
-    <link rel="stylesheet" href="/qw8/css/style.css?v=1.7.2">
+    <link rel="shortcut icon" href="/img/qw.ico">
+    <link rel="stylesheet" href="/css/style.css?v=1.7.2">
     <script>window.lazyScripts=[]</script>
 
     <!-- custom head -->
@@ -53,10 +53,10 @@
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
     </a>
-    <div class="brand-wrap" style="background-image:url(/qw8/img/brand.jpg)">
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
       <div class="brand">
-        <a href="/qw8/" class="avatar waves-effect waves-circle waves-light">
-          <img src="/qw8/img/avatar.jpg">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
         </a>
         <hgroup class="introduce">
           <h5 class="nickname">秦伟</h5>
@@ -68,28 +68,28 @@
       <ul class="nav">
         
             <li class="waves-block waves-effect">
-              <a href="/qw8/"  >
+              <a href="/"  >
                 <i class="icon icon-lg icon-home"></i>
                 主页
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/qw8/categories"  >
+              <a href="/categories"  >
                 <i class="icon icon-lg icon-th-list"></i>
                 分类
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/qw8/tags"  >
+              <a href="/tags"  >
                 <i class="icon icon-lg icon-tags"></i>
                 标签
               </a>
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/qw8/archives"  >
+              <a href="/archives"  >
                 <i class="icon icon-lg icon-hourglass"></i>
                 时光
               </a>
@@ -110,7 +110,7 @@
             </li>
         
             <li class="waves-block waves-effect">
-              <a href="/qw8/user"  >
+              <a href="/user"  >
                 <i class="icon icon-lg icon-user"></i>
                 简介
               </a>
@@ -171,7 +171,7 @@
 </time>
 
 
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/qw8/categories/前端知识点/">前端知识点</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
 
             
         </h5>
@@ -202,7 +202,7 @@
             <time class="post-time" title="2019-10-07 15:38:24" datetime="2019-10-07T07:38:24.000Z"  itemprop="datePublished">2019-10-07</time>
 
             
-	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/qw8/categories/前端知识点/">前端知识点</a></li></ul>
+	<ul class="article-category-list"><li class="article-category-list-item"><a class="article-category-list-link" href="/categories/前端知识点/">前端知识点</a></li></ul>
 
 
 
@@ -334,13 +334,13 @@
 
 
         
-        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/qw8/knowledges/angular.html" target="_blank" rel="external">https://qw8.github.io/qw8/knowledges/angular.html</a>
+        感谢您的阅读，欢迎评论(*^▽^*) 转载请附上本文链接：<a href="/knowledges/angular.html" target="_blank" rel="external">https://qw8.github.io/knowledges/angular.html</a>
         
     </div>
     
     <footer>
-        <a href="https://qw8.github.io/qw8">
-            <img src="/qw8/img/avatar.jpg" alt="秦伟">
+        <a href="https://qw8.github.io">
+            <img src="/img/avatar.jpg" alt="秦伟">
             秦伟
         </a>
     </footer>
@@ -355,7 +355,7 @@
 
         <div class="post-footer">
             
-	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/qw8/tags/Angular/">Angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/qw8/tags/MVVM/">MVVM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/qw8/tags/数据绑定/">数据绑定</a></li></ul>
+	<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MVVM/">MVVM</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据绑定/">数据绑定</a></li></ul>
 
 
             
@@ -365,7 +365,7 @@
 <div class="page-share" id="pageShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw8.github.io/qw8/knowledges/angular.html&title=《Angular》 — 秦伟博客&pic=https://qw8.github.io/qw8/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw8.github.io/knowledges/angular.html&title=《Angular》 — 秦伟博客&pic=https://qw8.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -375,22 +375,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw8.github.io/qw8/knowledges/angular.html&title=《Angular》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw8.github.io/knowledges/angular.html&title=《Angular》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw8.github.io/qw8/knowledges/angular.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw8.github.io/knowledges/angular.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Angular》 — 秦伟博客&url=https://qw8.github.io/qw8/knowledges/angular.html&via=https://qw8.github.io/qw8" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Angular》 — 秦伟博客&url=https://qw8.github.io/knowledges/angular.html&via=https://qw8.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw8.github.io/qw8/knowledges/angular.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw8.github.io/knowledges/angular.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -413,7 +413,7 @@
 <nav class="post-nav flex-row flex-justify-between">
   
     <div class="waves-block waves-effect prev">
-      <a href="/qw8/knowledges/bom.html" id="post-prev" class="post-nav-link">
+      <a href="/knowledges/bom.html" id="post-prev" class="post-nav-link">
         <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
         <h4 class="title">BOM</h4>
       </a>
@@ -422,7 +422,7 @@
 
   
     <div class="waves-block waves-effect next">
-      <a href="/qw8/interview/zi-jie-tiao-dong-mian-jing-zong-jie.html" id="post-next" class="post-nav-link">
+      <a href="/interview/zi-jie-tiao-dong-mian-jing-zong-jie.html" id="post-next" class="post-nav-link">
         <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
         <h4 class="title">字节跳动面经总结</h4>
       </a>
@@ -489,12 +489,12 @@
     <div class="reward-content">
         
         <div class="reward-code">
-            <img id="rewardCode" src="/qw8/img/wechat.png" alt="打赏二维码">
+            <img id="rewardCode" src="/img/wechat.png" alt="打赏二维码">
         </div>
         
         <label class="reward-toggle">
             <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
-                data-wechat="/qw8/img/wechat.png" data-alipay="/qw8/img/alipay.jpg">
+                data-wechat="/img/wechat.png" data-alipay="/img/alipay.jpg">
             <div class="reward-toggle-ctrol">
                 <span class="reward-toggle-item wechat">微信</span>
                 <span class="reward-toggle-label"></span>
@@ -539,7 +539,7 @@
         <p>部分内容来源于互联网，用于个人知识的总结，如有侵权还请联系删除</p>
         <p>
             
-            <span><a href="/qw8/atom.xml" target="_blank" class="rss" title="rss"><i
+            <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i
                     class="icon icon-lg icon-rss"></i></a></span>
             
             <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
@@ -602,7 +602,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw8.github.io/qw8/knowledges/angular.html&title=《Angular》 — 秦伟博客&pic=https://qw8.github.io/qw8/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qw8.github.io/knowledges/angular.html&title=《Angular》 — 秦伟博客&pic=https://qw8.github.io/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -612,22 +612,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw8.github.io/qw8/knowledges/angular.html&title=《Angular》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qw8.github.io/knowledges/angular.html&title=《Angular》 — 秦伟博客&source=前端、全栈、SEO的知识点、面试题与学习链接的整理" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw8.github.io/qw8/knowledges/angular.html" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qw8.github.io/knowledges/angular.html" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Angular》 — 秦伟博客&url=https://qw8.github.io/qw8/knowledges/angular.html&via=https://qw8.github.io/qw8" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Angular》 — 秦伟博客&url=https://qw8.github.io/knowledges/angular.html&via=https://qw8.github.io" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw8.github.io/qw8/knowledges/angular.html" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qw8.github.io/knowledges/angular.html" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -638,7 +638,7 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACHUlEQVR42u3aQXLDMAgF0N7/0ukB2iofUDpj6XmVhWPzvGBA8PUVX68f11/3rH+vn7Z+/oYLAwPjsYzX8urdU+VN3ouBgXEPI0+geepM0uj6zuRfGBgYGOvyLkmL69KwWlZiYGBgVBNu8px16HkpiYGBgZE0qPOgq+XgR3pxDAyMBzLyU/f///2R+QYGBsajGK/iNaHmwZWjwsDAOJpRbVB76xS9crAaDwYGxtmMPOXlI8mk6U3wvRYaAwPjJEYe6ISUhDgao2JgYBzNqDaNn0jHk7UwDAyMexjV5YnqkkSv4Nu1AoKBgXEe43+O1arpeDTUxMDAeDgjbyyrS2O9NNr7TBgYGLcxJgdkOb6aUt+8CwMD42hGtWSsHv1PUvY69DIAAwPj4YxqYbcOKE/c+clftDOCgYFxAWMSyiQpVxNutGyBgYFxEKP3gl1JedSOYmBgXMMobF4UB5BJ4bgrfWNgYNzJyBcm8nScjASqQ4hCp4uBgXEQo7pC0Qtx12f6M+FiYGAczUia0uqIsVpQNstHDAyMyxjNIWKr3e0dsf3yBAwMjEMZr+K1iz1JwW9msBgYGMcxemmul4h7rWl1yRUDA+NUxiTJbmg+47b5zWfFwMC4gFFYa4gx88+UL2FgYGBgJGOAvHCcjDbLPgwMjIsZ1SHBZCQQFY4YGBgXMKprXvlR/q5m+E08GBgYRzN2pbzekGDvGzEwMI5jfAPux8YEEbAXqwAAAABJRU5ErkJggg==" alt="微信分享二维码">
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAAAAACs8KCBAAACJUlEQVR42u3a0W7DIBAEwPz/T7uvlSK7u0AqBYanyEowQ6XrcdzrFY/r13h//v6d9+d3s93N8PrEwMDA+FrG9TjuXpADnkn5DHffwcDAOIdxN/Xz53ye/C2D78LAwMCIg2CS6rWhHAMDA6NlJCldEnbnU0kMDIzTGEnozItieRjNQ/ayszgGBsYXMvKq+/9//sj9BgYGxlcxrnLM8PIAXa8KAwNja0Ye4MYKamOwdj0YGBinMZIFzYfXmXdFVUMMDIztGEmJf6yRYlUBrv6bYGBgHMYYO462h9WZwI2BgXECY0FL1qKgPPMWDAyMXRmrErL2t/nGRQ0WGBgYWzPaH+QNpsv+G4wFXwwMjO0YeXhty/15a+yCMh8GBsamjLHi13NRLJ9hVQKKgYGxNyMpx7dLb8P0TFsGBgYGRlsmm9mCfA1FhouBgbERI0/IZkJqHnbrPhEMDIwDGPkRNAnBz4fV9qBb3FFiYGBszcj7FtqSWXv9OZM4YmBg7M2YaZgYaxHLF1psHAYGxgGMtmGrTfjaI26eJmJgYJzDWLWUtnWjDfTRZQAGBsZGjKscY8lfu6/1IRkDA2NrxqqYnbd2tQlf3nyGgYGxN2Os6J8UyMZI7TwYGBjnMMYuAPLC3HzI/mNVGBgYGGUAbdsp2pJc0WyBgYFxJGOs0DZ2GZCkoRgYGOcw8oPl2NKfE8Tn59GmYGBgbM1oQ14CW3UxMNMCgoGBsQXjB4yxDcuvzLbvAAAAAElFTkSuQmCC" alt="微信分享二维码">
 </div>
 
 
@@ -646,12 +646,12 @@
 
 <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
-var BLOG = { ROOT: '/qw8/', SHARE: true, REWARD: true };
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
 
 
 </script>
 
-<script src="/qw8/js/main.min.js?v=1.7.2"></script>
+<script src="/js/main.min.js?v=1.7.2"></script>
 
 
 <div class="search-panel" id="search-panel">
@@ -671,7 +671,7 @@ var BLOG = { ROOT: '/qw8/', SHARE: true, REWARD: true };
 </li>
 </template>
 
-<script src="/qw8/js/search.min.js?v=1.7.2" async></script>
+<script src="/js/search.min.js?v=1.7.2" async></script>
 
 
 
@@ -739,5 +739,5 @@ MathJax.Hub.Queue(function() {
     }
 </script>
 
-<script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script><script src="/qw8/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/qw8/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+<script>!function(e){var r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function t(){for(var c=0;c<r.length;c++)t=r[c],void 0,0<=(n=t.getBoundingClientRect()).top&&0<=n.left&&n.top<=(e.innerHeight||document.documentElement.clientHeight)&&function(){var t,n,e,i,o=r[c];t=o,n=function(){r=r.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}t(),e.addEventListener("scroll",function(){!function(t,n){clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)}(t,e)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"position":"right","width":150,"height":300,"hOffset":-25,"vOffset":30},"mobile":{"show":false,"scale":1.2},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
 </html>
