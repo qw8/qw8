@@ -1,0 +1,3732 @@
+{
+  "articles": [
+    {
+      "id": "link-AI",
+      "title": "AI",
+      "summary": "术业有专攻，中文能力用豆包，编程用Claude 3.7，聊天用gork3，视觉识别功能用gpt ，视频图片生成用Gemini ，各有所长，没有一个模型能够全部功能占优的。\n\n\n\n常用\n\n| 名称     | 网址                           |\n| -------- | --...",
+      "category": "link",
+      "tags": [
+        "链接"
+      ],
+      "author": "博主",
+      "date": "2025-01-11T19:00:00.000Z",
+      "wordCount": 1916,
+      "readingTime": 8,
+      "views": 964,
+      "likes": 15,
+      "filePath": "/static/md/link/AI.md",
+      "searchText": "ai 术业有专攻，中文能力用豆包，编程用claude 3.7，聊天用gork3，视觉识别功能用gpt ，视频图片生成用gemini ，各有所长，没有一个模型能够全部功能占优的。\n\n\n\n常用\n\n| 名称     | 网址                           |\n| -------- | --... 链接 link"
+    },
+    {
+      "id": "other-vscode-plugins",
+      "title": "VSCode插件",
+      "summary": "VS Code 代码编辑器支持多种编程语言，并提供了丰富的插件生态系统，可以帮助开发人员自定义编辑器以满足需求。\n\n工欲善其事，必先利其器，下面推荐一些VSCode插件，可以帮助开发者提高代码质量、加速开发速度、简化常见任务，并且易于安装和使用。\n\n必备\n\nChinese (Simplified)...",
+      "category": "other",
+      "tags": [
+        "电脑"
+      ],
+      "author": "博主",
+      "date": "2024-06-09T11:58:08.000Z",
+      "wordCount": 7417,
+      "readingTime": 30,
+      "views": 417,
+      "likes": 62,
+      "filePath": "/static/md/other/vscode-plugins.md",
+      "searchText": "vscode插件 vs code 代码编辑器支持多种编程语言，并提供了丰富的插件生态系统，可以帮助开发人员自定义编辑器以满足需求。\n\n工欲善其事，必先利其器，下面推荐一些vscode插件，可以帮助开发者提高代码质量、加速开发速度、简化常见任务，并且易于安装和使用。\n\n必备\n\nchinese (simplified)... 电脑 other"
+    },
+    {
+      "id": "other-VSCode",
+      "title": "VSCode",
+      "summary": "下载安装\n\nhttps://code.visualstudio.com/\n\n\n\nvscode设置中文的方法\n\n首先打开vscode ，并按快捷键“Ctrl+Shift+P”；\n\n然后输入“configure language”，并回车；\n\n最后选择简体中文安装即可。\n\n\n\n快捷键设置\n\n格式化文档，...",
+      "category": "other",
+      "tags": [
+        "电脑"
+      ],
+      "author": "博主",
+      "date": "2024-06-08T11:58:08.000Z",
+      "wordCount": 8027,
+      "readingTime": 33,
+      "views": 270,
+      "likes": 49,
+      "filePath": "/static/md/other/VSCode.md",
+      "searchText": "vscode 下载安装\n\nhttps://code.visualstudio.com/\n\n\n\nvscode设置中文的方法\n\n首先打开vscode ，并按快捷键“ctrl+shift+p”；\n\n然后输入“configure language”，并回车；\n\n最后选择简体中文安装即可。\n\n\n\n快捷键设置\n\n格式化文档，... 电脑 other"
+    },
+    {
+      "id": "articles-custom-table-columns",
+      "title": "自定义表格列",
+      "summary": "element ui vue2怎么实现根据用户自定义缓存设置 是否显示表格的某列 \n\n在 Element UI（用于 Vue.js 的组件库）中，如果你想根据用户的自定义缓存设置来决定是否显示表格的某列，你可以通过以下步骤实现：\n\n1. 存储用户设置：首先，你需要一种方式来存储用户的设置。这可以是...",
+      "category": "articles",
+      "tags": [
+        "vue",
+        "表格"
+      ],
+      "author": "博主",
+      "date": "2024-05-11T00:00:00.000Z",
+      "wordCount": 1288,
+      "readingTime": 6,
+      "views": 515,
+      "likes": 54,
+      "filePath": "/static/md/articles/custom-table-columns.md",
+      "searchText": "自定义表格列 element ui vue2怎么实现根据用户自定义缓存设置 是否显示表格的某列 \n\n在 element ui（用于 vue.js 的组件库）中，如果你想根据用户的自定义缓存设置来决定是否显示表格的某列，你可以通过以下步骤实现：\n\n1. 存储用户设置：首先，你需要一种方式来存储用户的设置。这可以是... vue 表格 articles"
+    },
+    {
+      "id": "questions-iview",
+      "title": "iview",
+      "summary": "iview inoput type=textarea 禁止拉伸\n\n设置 :maxRows.minRows相同即可\n\n\n\n\n\n限制输入两位小数\n\n第二行可以使用type=\"number\"来代替\n\n\n\n\n\n表单校验prop动态切换\n\n\n\n\n\nresetFields重置表单不生效\n\n内容必须要在每个for...",
+      "category": "questions",
+      "tags": [
+        "iview"
+      ],
+      "author": "博主",
+      "date": "2024-05-01T11:11:11.000Z",
+      "wordCount": 159,
+      "readingTime": 1,
+      "views": 756,
+      "likes": 102,
+      "filePath": "/static/md/questions/iview.md",
+      "searchText": "iview iview inoput type=textarea 禁止拉伸\n\n设置 :maxrows.minrows相同即可\n\n\n\n\n\n限制输入两位小数\n\n第二行可以使用type=\"number\"来代替\n\n\n\n\n\n表单校验prop动态切换\n\n\n\n\n\nresetfields重置表单不生效\n\n内容必须要在每个for... iview questions"
+    },
+    {
+      "id": "questions-html-practice",
+      "title": "HTML实践",
+      "summary": "HTML map 标签使用详解\n\n在图片中标注usemap：\n\n\n\n定义map：\n\n\n\nmap标签定义map，area标签定义可点击的热点，area属性：\n\nshape：定义热点形状，可选参数 rect(矩形)、circle(圆形)、poligon(自定义形状)。\n\ncoords：定义形状路径：...",
+      "category": "questions",
+      "tags": [
+        "HTML"
+      ],
+      "author": "博主",
+      "date": "2024-04-30T11:11:11.000Z",
+      "wordCount": 1423,
+      "readingTime": 6,
+      "views": 255,
+      "likes": 47,
+      "filePath": "/static/md/questions/html-practice.md",
+      "searchText": "html实践 html map 标签使用详解\n\n在图片中标注usemap：\n\n\n\n定义map：\n\n\n\nmap标签定义map，area标签定义可点击的热点，area属性：\n\nshape：定义热点形状，可选参数 rect(矩形)、circle(圆形)、poligon(自定义形状)。\n\ncoords：定义形状路径：... html questions"
+    },
+    {
+      "id": "questions-ElementUI",
+      "title": "ElementUI",
+      "summary": "element-ui封装Loading公共方法\n\n注册到vue实例上，全屏或者局部页面都可以使用，项目文件引用方便一点\n\n要将 Loading 功能封装成公共方法并注册到 Vue 实例上，这样可以在任何组件中通过 this.$loading.show() 和 this.$loading.hide()...",
+      "category": "questions",
+      "tags": [
+        "组件库",
+        "element"
+      ],
+      "author": "博主",
+      "date": "2024-04-28T11:11:11.000Z",
+      "wordCount": 2568,
+      "readingTime": 11,
+      "views": 407,
+      "likes": 71,
+      "filePath": "/static/md/questions/ElementUI.md",
+      "searchText": "elementui element-ui封装loading公共方法\n\n注册到vue实例上，全屏或者局部页面都可以使用，项目文件引用方便一点\n\n要将 loading 功能封装成公共方法并注册到 vue 实例上，这样可以在任何组件中通过 this.$loading.show() 和 this.$loading.hide()... 组件库 element questions"
+    },
+    {
+      "id": "knowledges-qiankun-project-setup",
+      "title": "qiankun项目搭建",
+      "summary": "基座配置\n\n> 基座采用是的 Vue3 + vite + ts，只负责导航的渲染和登录态的下发，为子应用提供一个挂载的容器div\n>\n> qiankun这个库只需要在基座引入\n\n\n\n在main.ts 中注册子应用，为了方便管理，我们将子应用的配置都放在：/utils/qiankun.ts下...",
+      "category": "knowledges",
+      "tags": [
+        "qiankun",
+        "vue"
+      ],
+      "author": "博主",
+      "date": "2024-04-28T10:02:08.000Z",
+      "wordCount": 532,
+      "readingTime": 3,
+      "views": 335,
+      "likes": 55,
+      "filePath": "/static/md/knowledges/qiankun-project-setup.md",
+      "searchText": "qiankun项目搭建 基座配置\n\n> 基座采用是的 vue3 + vite + ts，只负责导航的渲染和登录态的下发，为子应用提供一个挂载的容器div\n>\n> qiankun这个库只需要在基座引入\n\n\n\n在main.ts 中注册子应用，为了方便管理，我们将子应用的配置都放在：/utils/qiankun.ts下... qiankun vue knowledges"
+    },
+    {
+      "id": "knowledges-vue-project-template",
+      "title": "vue项目模板",
+      "summary": "从零开始搭建企业级前端项目模板（vue3+vite+ts）\n\n\n\n主要内容\n\n> 技术：vite，eslint，prettierrc，husky，commitlint，lint-staget，stylelint，vuex，vue-router，axios，pinia\n> 环境：win11，node...",
+      "category": "knowledges",
+      "tags": [
+        "vue",
+        "vite"
+      ],
+      "author": "博主",
+      "date": "2024-04-28T09:02:08.000Z",
+      "wordCount": 1961,
+      "readingTime": 8,
+      "views": 163,
+      "likes": 107,
+      "filePath": "/static/md/knowledges/vue-project-template.md",
+      "searchText": "vue项目模板 从零开始搭建企业级前端项目模板（vue3+vite+ts）\n\n\n\n主要内容\n\n> 技术：vite，eslint，prettierrc，husky，commitlint，lint-staget，stylelint，vuex，vue-router，axios，pinia\n> 环境：win11，node... vue vite knowledges"
+    },
+    {
+      "id": "questions-element-plus",
+      "title": "element-plus",
+      "summary": "element+ 引入图标报错\n\nInternal server error: Failed to resolve import \"@element-plus/icons-vue\" from \"src\\components\\TimeLine.vue\". Does the file exist?\n\n原...",
+      "category": "questions",
+      "tags": [
+        "组件库",
+        "element"
+      ],
+      "author": "博主",
+      "date": "2024-04-27T11:11:11.000Z",
+      "wordCount": 2398,
+      "readingTime": 10,
+      "views": 170,
+      "likes": 81,
+      "filePath": "/static/md/questions/element-plus.md",
+      "searchText": "element-plus element+ 引入图标报错\n\ninternal server error: failed to resolve import \"@element-plus/icons-vue\" from \"src\\components\\timeline.vue\". does the file exist?\n\n原... 组件库 element questions"
+    },
+    {
+      "id": "knowledges-micro-frontend-qiankun",
+      "title": "微前端qiankun",
+      "summary": "qiankun微前端框架详细介绍\n\n一、概述\n\nqiankun是一个基于single-spa的微前端实现库，它旨在解决在构建大型、复杂前端应用时遇到的技术挑战。通过qiankun，开发者可以构建出高内聚、低耦合的微前端架构系统，使得每个微应用都能独立开发、独立部署，并且能够在主应用中无缝集成。\n\n二...",
+      "category": "knowledges",
+      "tags": [
+        "微前端",
+        "qiankun"
+      ],
+      "author": "博主",
+      "date": "2024-04-19T17:22:46.000Z",
+      "wordCount": 5934,
+      "readingTime": 24,
+      "views": 753,
+      "likes": 57,
+      "filePath": "/static/md/knowledges/micro-frontend-qiankun.md",
+      "searchText": "微前端qiankun qiankun微前端框架详细介绍\n\n一、概述\n\nqiankun是一个基于single-spa的微前端实现库，它旨在解决在构建大型、复杂前端应用时遇到的技术挑战。通过qiankun，开发者可以构建出高内聚、低耦合的微前端架构系统，使得每个微应用都能独立开发、独立部署，并且能够在主应用中无缝集成。\n\n二... 微前端 qiankun knowledges"
+    },
+    {
+      "id": "interview-frontend-interview",
+      "title": "前端面试",
+      "summary": "new操作符具体干了什么呢?\n\n- 创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。\n- 属性和方法被加入到 this 引用的对象中。\n- 新创建的对象由 this 所引用，并且最后隐式的返回 this\n\n\n\n\n\nnew操作符具体干了什么呢?\n\n\n\n1. 创建一个新的空对象...",
+      "category": "interview",
+      "tags": [
+        "JavaScript",
+        "DOM",
+        "BOM",
+        "事件循环"
+      ],
+      "author": "博主",
+      "date": "2024-03-29T01:25:00.000Z",
+      "wordCount": 45259,
+      "readingTime": 182,
+      "views": 152,
+      "likes": 99,
+      "filePath": "/static/md/interview/frontend-interview.md",
+      "searchText": "前端面试 new操作符具体干了什么呢?\n\n- 创建一个空对象，并且 this 变量引用该对象，同时还继承了该函数的原型。\n- 属性和方法被加入到 this 引用的对象中。\n- 新创建的对象由 this 所引用，并且最后隐式的返回 this\n\n\n\n\n\nnew操作符具体干了什么呢?\n\n\n\n1. 创建一个新的空对象... javascript dom bom 事件循环 interview"
+    },
+    {
+      "id": "knowledges-vue-practice",
+      "title": "vue实践",
+      "summary": "vue几种传值方式\n\n1 :v-bind  $mit \n2 回调函数(callback)\n3 parent + $children\n4 provide + inject\n5 $attrs + $ilsteners\n6 ref refs\n\n\n\nvue中的activated和deactivated\n\n当...",
+      "category": "knowledges",
+      "tags": [
+        "vue"
+      ],
+      "author": "博主",
+      "date": "2024-03-11T21:02:08.000Z",
+      "wordCount": 2050,
+      "readingTime": 9,
+      "views": 803,
+      "likes": 97,
+      "filePath": "/static/md/knowledges/vue-practice.md",
+      "searchText": "vue实践 vue几种传值方式\n\n1 :v-bind  $mit \n2 回调函数(callback)\n3 parent + $children\n4 provide + inject\n5 $attrs + $ilsteners\n6 ref refs\n\n\n\nvue中的activated和deactivated\n\n当... vue knowledges"
+    },
+    {
+      "id": "interview-vue3",
+      "title": "vue3",
+      "summary": "vue3的新特性\n\n1、响应系统的变动\n\n由原来的Object.defineProperty 的getter和setter，改变成为了ES2015 Proxy 作为其观察机制。\n\nProxy的优势：消除了以前存在的警告，使速度加倍，并节省了一半的内存开销。\n\n2、虚拟DOM重写（Virtual DO...",
+      "category": "interview",
+      "tags": [
+        "vue3"
+      ],
+      "author": "博主",
+      "date": "2024-03-10T21:02:08.000Z",
+      "wordCount": 8493,
+      "readingTime": 34,
+      "views": 811,
+      "likes": 74,
+      "filePath": "/static/md/interview/vue3.md",
+      "searchText": "vue3 vue3的新特性\n\n1、响应系统的变动\n\n由原来的object.defineproperty 的getter和setter，改变成为了es2015 proxy 作为其观察机制。\n\nproxy的优势：消除了以前存在的警告，使速度加倍，并节省了一半的内存开销。\n\n2、虚拟dom重写（virtual do... vue3 interview"
+    },
+    {
+      "id": "knowledges-vue-ecosystem",
+      "title": "vue全家桶",
+      "summary": "vue-router\n\nvue-router 有哪几种导航钩子（ 导航守卫 ）？\n\n答案：三种\n\n第一种是全局导航钩子：router.beforeEach(to,from,next)，作用：跳转前进行判断拦截。\n第二种：组件内的钩子；\n第三种：单独路由独享组件\n\n\n\n怎么定义 vue-router...",
+      "category": "knowledges",
+      "tags": [
+        "vue",
+        "vue-router",
+        "vue-cli"
+      ],
+      "author": "博主",
+      "date": "2024-03-10T21:02:08.000Z",
+      "wordCount": 1662,
+      "readingTime": 7,
+      "views": 331,
+      "likes": 40,
+      "filePath": "/static/md/knowledges/vue-ecosystem.md",
+      "searchText": "vue全家桶 vue-router\n\nvue-router 有哪几种导航钩子（ 导航守卫 ）？\n\n答案：三种\n\n第一种是全局导航钩子：router.beforeeach(to,from,next)，作用：跳转前进行判断拦截。\n第二种：组件内的钩子；\n第三种：单独路由独享组件\n\n\n\n怎么定义 vue-router... vue vue-router vue-cli knowledges"
+    },
+    {
+      "id": "interview-vue",
+      "title": "vue",
+      "summary": "[TOC]\n\n\n\n面试题链接\n\nhttps://blog.csdn.net/qq_41646249/article/details/104644647\n\nhttps://blog.csdn.net/qq_41646249/article/details/104644712\n\n\n\nVue 中的 key...",
+      "category": "interview",
+      "tags": [
+        "vue",
+        "MVVM"
+      ],
+      "author": "博主",
+      "date": "2024-03-09T21:02:08.000Z",
+      "wordCount": 36459,
+      "readingTime": 146,
+      "views": 90,
+      "likes": 93,
+      "filePath": "/static/md/interview/vue.md",
+      "searchText": "vue [toc]\n\n\n\n面试题链接\n\nhttps://blog.csdn.net/qq_41646249/article/details/104644647\n\nhttps://blog.csdn.net/qq_41646249/article/details/104644712\n\n\n\nvue 中的 key... vue mvvm interview"
+    },
+    {
+      "id": "knowledges-vue-advanced",
+      "title": "vue高级",
+      "summary": "12 个Vue开发中的性能优化小技巧\n\n性能优化，是每一个开发者都会遇到的问题，特别是现在越来越重视体验，以及竞争越来越激烈的环境下，对于我们开发者来说，只完成迭代，把功能做好是远远不够的，最重要的是把产品做好，让更多人愿意使用，让用户用得更爽，这不也是我们开发者价值与能力的体现吗。重视性能问题，优...",
+      "category": "knowledges",
+      "tags": [
+        "vue"
+      ],
+      "author": "博主",
+      "date": "2024-03-09T21:02:08.000Z",
+      "wordCount": 3579,
+      "readingTime": 15,
+      "views": 162,
+      "likes": 101,
+      "filePath": "/static/md/knowledges/vue-advanced.md",
+      "searchText": "vue高级 12 个vue开发中的性能优化小技巧\n\n性能优化，是每一个开发者都会遇到的问题，特别是现在越来越重视体验，以及竞争越来越激烈的环境下，对于我们开发者来说，只完成迭代，把功能做好是远远不够的，最重要的是把产品做好，让更多人愿意使用，让用户用得更爽，这不也是我们开发者价值与能力的体现吗。重视性能问题，优... vue knowledges"
+    },
+    {
+      "id": "knowledges-vue-recursive-component",
+      "title": "vue递归组件",
+      "summary": "递归组件\n\n对于一些有规律的DOM结构，如果我们再一遍遍的编写同样的代码，显然代码是比较繁琐和不科学的，而且自己的工作量会大大增加。\n\n那么有没有一种方法来解决这个问题呢？\n\n答案是肯定的，我们可以通过 递归 方式来生成这个结构，我们可以在 Vue 的组件中调用自己本身，这样就能达到目的。\n\n递归组...",
+      "category": "knowledges",
+      "tags": [
+        "vue"
+      ],
+      "author": "博主",
+      "date": "2024-03-09T08:02:08.000Z",
+      "wordCount": 2583,
+      "readingTime": 11,
+      "views": 1039,
+      "likes": 21,
+      "filePath": "/static/md/knowledges/vue-recursive-component.md",
+      "searchText": "vue递归组件 递归组件\n\n对于一些有规律的dom结构，如果我们再一遍遍的编写同样的代码，显然代码是比较繁琐和不科学的，而且自己的工作量会大大增加。\n\n那么有没有一种方法来解决这个问题呢？\n\n答案是肯定的，我们可以通过 递归 方式来生成这个结构，我们可以在 vue 的组件中调用自己本身，这样就能达到目的。\n\n递归组... vue knowledges"
+    },
+    {
+      "id": "knowledges-vue3-practice",
+      "title": "vue3实践",
+      "summary": "自定义Hooks\n\n简介： 自定义 Hooks 在 Vue3 中的应用和重要性\n\n👀 你有没有遇到过这样的问题：在不同的组件中重复编写相似的逻辑？是否觉得维护这些代码既费时又乏味？\n\n如果你的回答是肯定的，那么自定义Hooks无疑是你的救星！\n\n![img](https://ucc.alicdn....",
+      "category": "knowledges",
+      "tags": [
+        "vue3"
+      ],
+      "author": "博主",
+      "date": "2024-03-09T00:02:08.000Z",
+      "wordCount": 7957,
+      "readingTime": 32,
+      "views": 358,
+      "likes": 96,
+      "filePath": "/static/md/knowledges/vue3-practice.md",
+      "searchText": "vue3实践 自定义hooks\n\n简介： 自定义 hooks 在 vue3 中的应用和重要性\n\n👀 你有没有遇到过这样的问题：在不同的组件中重复编写相似的逻辑？是否觉得维护这些代码既费时又乏味？\n\n如果你的回答是肯定的，那么自定义hooks无疑是你的救星！\n\n![img](https://ucc.alicdn.... vue3 knowledges"
+    },
+    {
+      "id": "knowledges-vue3",
+      "title": "vue3",
+      "summary": "一、Vue3 里 script 的三种写法\n\n首先，Vue3 新增了一个叫做组合式 api 的东西，英文名叫 Composition API。因此 Vue3 的 script 现在支持三种写法，\n\n1、最基本的 Vue2 写法\n\n\n\n2、setup() 属性\n\n\n\n3、script setup...",
+      "category": "knowledges",
+      "tags": [
+        "vue"
+      ],
+      "author": "博主",
+      "date": "2024-03-08T21:02:08.000Z",
+      "wordCount": 13849,
+      "readingTime": 56,
+      "views": 583,
+      "likes": 22,
+      "filePath": "/static/md/knowledges/vue3.md",
+      "searchText": "vue3 一、vue3 里 script 的三种写法\n\n首先，vue3 新增了一个叫做组合式 api 的东西，英文名叫 composition api。因此 vue3 的 script 现在支持三种写法，\n\n1、最基本的 vue2 写法\n\n\n\n2、setup() 属性\n\n\n\n3、script setup... vue knowledges"
+    },
+    {
+      "id": "knowledges-vue",
+      "title": "vue",
+      "summary": "Vue基础介绍\n\nVue.js是一套构建用户界面的渐进式框架。\n 它提供了MVVM [数据绑定]()和一个可组合的[组件]()系统。\n 在Vue中，一个核心的概念，就是让用户不再操作DOM元素。\n\n- 响应的数据绑定\n   当数据发生改变时，自动更新视图。\n   是利用Object.definePr...",
+      "category": "knowledges",
+      "tags": [
+        "vue",
+        "MVVM"
+      ],
+      "author": "博主",
+      "date": "2024-03-07T21:02:08.000Z",
+      "wordCount": 25501,
+      "readingTime": 103,
+      "views": 873,
+      "likes": 85,
+      "filePath": "/static/md/knowledges/vue.md",
+      "searchText": "vue vue基础介绍\n\nvue.js是一套构建用户界面的渐进式框架。\n 它提供了mvvm [数据绑定]()和一个可组合的[组件]()系统。\n 在vue中，一个核心的概念，就是让用户不再操作dom元素。\n\n- 响应的数据绑定\n   当数据发生改变时，自动更新视图。\n   是利用object.definepr... vue mvvm knowledges"
+    },
+    {
+      "id": "knowledges-vite",
+      "title": "vite",
+      "summary": "vue3的vite中图片的动态加载\n\n将图片资源放入public目录下\n\n\n\n\n我们看到实际上我们不希望资源文件被vite编译可以把图片放到public 目录会更省事，不管是开发环境还是生产环境，可以始终以根目录保持图片路径的一致。\n\n> public 目录如果你有下列这些资源： 不会被源码引用（例...",
+      "category": "knowledges",
+      "tags": [
+        "vue",
+        "vite"
+      ],
+      "author": "博主",
+      "date": "2024-03-06T21:02:08.000Z",
+      "wordCount": 1184,
+      "readingTime": 5,
+      "views": 224,
+      "likes": 98,
+      "filePath": "/static/md/knowledges/vite.md",
+      "searchText": "vite vue3的vite中图片的动态加载\n\n将图片资源放入public目录下\n\n\n\n\n我们看到实际上我们不希望资源文件被vite编译可以把图片放到public 目录会更省事，不管是开发环境还是生产环境，可以始终以根目录保持图片路径的一致。\n\n> public 目录如果你有下列这些资源： 不会被源码引用（例... vue vite knowledges"
+    },
+    {
+      "id": "knowledges-utils-functions",
+      "title": "utils函数",
+      "summary": "vue3\n\n通用步骤\n\n@/utils/index.js中写入\n\n在页面中使用\n\n\n\n\n\nvue3的vite中图片的动态加载\n\n\n\n注意：这里只能通过 …/…/ 这种方式去获取路径，无法通过@/assets\n\n页面中\n\n\n\n\n\n截取指定长度字符串\n\n\n\n页面中\n\n\n\n\n\n\n\n\n\nvue2\n\n工具函数...",
+      "category": "knowledges",
+      "tags": [
+        "vue",
+        "函数"
+      ],
+      "author": "博主",
+      "date": "2024-03-05T21:02:08.000Z",
+      "wordCount": 2482,
+      "readingTime": 10,
+      "views": 104,
+      "likes": 56,
+      "filePath": "/static/md/knowledges/utils-functions.md",
+      "searchText": "utils函数 vue3\n\n通用步骤\n\n@/utils/index.js中写入\n\n在页面中使用\n\n\n\n\n\nvue3的vite中图片的动态加载\n\n\n\n注意：这里只能通过 …/…/ 这种方式去获取路径，无法通过@/assets\n\n页面中\n\n\n\n\n\n截取指定长度字符串\n\n\n\n页面中\n\n\n\n\n\n\n\n\n\nvue2\n\n工具函数... vue 函数 knowledges"
+    },
+    {
+      "id": "knowledges-javascript-execution",
+      "title": "JavaScript执行机制",
+      "summary": "简述同步和异步的区别，如何避免回调地狱\n\n　　同步方法调用一旦开始，调用者必须等到方法调用返回后，才能继续后续的行为\n\n　　异步方法调用一旦开始，方法调用就会立即返回，调用者就可以继续后续的操作。而异步方法通常会在另外一个线程中，整个过程，不会阻碍调用者的工作\n\n　　避免回调地狱：\n\n　　1）Pro...",
+      "category": "knowledges",
+      "tags": [
+        "JavaScript"
+      ],
+      "author": "博主",
+      "date": "2024-02-27T10:24:57.000Z",
+      "wordCount": 6839,
+      "readingTime": 28,
+      "views": 352,
+      "likes": 35,
+      "filePath": "/static/md/knowledges/javascript-execution.md",
+      "searchText": "javascript执行机制 简述同步和异步的区别，如何避免回调地狱\n\n　　同步方法调用一旦开始，调用者必须等到方法调用返回后，才能继续后续的行为\n\n　　异步方法调用一旦开始，方法调用就会立即返回，调用者就可以继续后续的操作。而异步方法通常会在另外一个线程中，整个过程，不会阻碍调用者的工作\n\n　　避免回调地狱：\n\n　　1）pro... javascript knowledges"
+    },
+    {
+      "id": "other-ui-design",
+      "title": "UI设计",
+      "summary": "ui设计详细介绍\n\nUI（用户界面）设计是创建图形界面的过程，它涵盖了从商业和市场营销到心理学和工业设计的广泛领域。一个成功的UI设计应该能够使产品易于使用，同时提供良好的用户体验。以下是UI设计的一些关键方面：\n\n1. 用户研究\n了解你的用户是谁非常重要。这包括他们的需求、目标、技能、偏好以及限制...",
+      "category": "other",
+      "tags": [
+        "UI设计"
+      ],
+      "author": "博主",
+      "date": "2024-02-27T09:44:06.000Z",
+      "wordCount": 1354,
+      "readingTime": 6,
+      "views": 530,
+      "likes": 49,
+      "filePath": "/static/md/other/ui-design.md",
+      "searchText": "ui设计 ui设计详细介绍\n\nui（用户界面）设计是创建图形界面的过程，它涵盖了从商业和市场营销到心理学和工业设计的广泛领域。一个成功的ui设计应该能够使产品易于使用，同时提供良好的用户体验。以下是ui设计的一些关键方面：\n\n1. 用户研究\n了解你的用户是谁非常重要。这包括他们的需求、目标、技能、偏好以及限制... ui设计 other"
+    },
+    {
+      "id": "other-python",
+      "title": "python",
+      "summary": "兴趣\n\n扒站\nPython爬取网站\n仿站工具\n网站克隆\n扒网站\n\n\n\n知识\n\n安装Python\n\n你可以从Python官方网站（https://www.python.org/downloads/）下载并安装Python。确保下载适合你操作系统的版本。如 [Windows installer (64-...",
+      "category": "other",
+      "tags": [
+        "python"
+      ],
+      "author": "博主",
+      "date": "2024-02-26T09:44:06.000Z",
+      "wordCount": 1100,
+      "readingTime": 5,
+      "views": 227,
+      "likes": 51,
+      "filePath": "/static/md/other/python.md",
+      "searchText": "python 兴趣\n\n扒站\npython爬取网站\n仿站工具\n网站克隆\n扒网站\n\n\n\n知识\n\n安装python\n\n你可以从python官方网站（https://www.python.org/downloads/）下载并安装python。确保下载适合你操作系统的版本。如 [windows installer (64-... python other"
+    },
+    {
+      "id": "interview-JavaScript",
+      "title": "JavaScript",
+      "summary": "JS的基本数据类型和引用数据类型\n\n- 基本数据类型\n\n  | 类型      | 值                                                           |\n  | --------- | ------------------------------...",
+      "category": "interview",
+      "tags": [
+        "JavaScript",
+        "DOM",
+        "BOM",
+        "字符串",
+        "同步异步"
+      ],
+      "author": "博主",
+      "date": "2024-02-14T10:24:57.000Z",
+      "wordCount": 42547,
+      "readingTime": 171,
+      "views": 394,
+      "likes": 19,
+      "filePath": "/static/md/interview/JavaScript.md",
+      "searchText": "javascript js的基本数据类型和引用数据类型\n\n- 基本数据类型\n\n  | 类型      | 值                                                           |\n  | --------- | ------------------------------... javascript dom bom 字符串 同步异步 interview"
+    },
+    {
+      "id": "articles-vue-frontend-architecture",
+      "title": "基于Vue的前端架构",
+      "summary": "1.分解需求\n\n技术栈\n\n- 考虑到后续招人和现有人员的技术栈，选择 Vue 作为框架。\n- 公司主要业务是 GIS 和 BIM，通常开发一些中大型的系统，所以 vue-router 和 vuex 都是必不可少的。\n- 放弃了 Element UI 选择了 Ant Design Vue（最近 Ele...",
+      "category": "articles",
+      "tags": [
+        "前端架构"
+      ],
+      "author": "博主",
+      "date": "2023-12-17T00:00:00.000Z",
+      "wordCount": 5071,
+      "readingTime": 21,
+      "views": 808,
+      "likes": 19,
+      "filePath": "/static/md/articles/vue-frontend-architecture.md",
+      "searchText": "基于vue的前端架构 1.分解需求\n\n技术栈\n\n- 考虑到后续招人和现有人员的技术栈，选择 vue 作为框架。\n- 公司主要业务是 gis 和 bim，通常开发一些中大型的系统，所以 vue-router 和 vuex 都是必不可少的。\n- 放弃了 element ui 选择了 ant design vue（最近 ele... 前端架构 articles"
+    },
+    {
+      "id": "articles-frontend-permission",
+      "title": "前端权限开发",
+      "summary": "前端权限开发——设计到实践（保姆级）\n\n\n\n1.权限控制的方案选择。\n\n做后台项目区别于做其它的项目，权限验证与安全性是非常重要的，可以说是一个后台项目一开始就必须考虑和搭建的基础核心功能。在后台管理系统中，实现权限控制可以采用多种方案：\n\n| 权限方案类型...",
+      "category": "articles",
+      "tags": [
+        "权限"
+      ],
+      "author": "博主",
+      "date": "2023-12-16T00:00:00.000Z",
+      "wordCount": 10115,
+      "readingTime": 41,
+      "views": 166,
+      "likes": 85,
+      "filePath": "/static/md/articles/frontend-permission.md",
+      "searchText": "前端权限开发 前端权限开发——设计到实践（保姆级）\n\n\n\n1.权限控制的方案选择。\n\n做后台项目区别于做其它的项目，权限验证与安全性是非常重要的，可以说是一个后台项目一开始就必须考虑和搭建的基础核心功能。在后台管理系统中，实现权限控制可以采用多种方案：\n\n| 权限方案类型... 权限 articles"
+    },
+    {
+      "id": "articles-admin-management-system",
+      "title": "后台管理系统",
+      "summary": "总是做后台管理系统，到底要怎么提升自己呢？\n\n很多人都来问我：我平时写的东西都是后台管理系统，根本就没啥亮点的东西，我也没啥进步，我该咋办呢？\n\n\n\n后台管理不丢人\n\n其实据我了解，大部分前端在公司其实就是做后台管理系统，偶尔做做移动端，那么大家都是做后台管理，你要怎么比别人强呢？其实就是一个点：你...",
+      "category": "articles",
+      "tags": [
+        "管理系统"
+      ],
+      "author": "博主",
+      "date": "2023-12-15T00:00:00.000Z",
+      "wordCount": 1407,
+      "readingTime": 6,
+      "views": 759,
+      "likes": 50,
+      "filePath": "/static/md/articles/admin-management-system.md",
+      "searchText": "后台管理系统 总是做后台管理系统，到底要怎么提升自己呢？\n\n很多人都来问我：我平时写的东西都是后台管理系统，根本就没啥亮点的东西，我也没啥进步，我该咋办呢？\n\n\n\n后台管理不丢人\n\n其实据我了解，大部分前端在公司其实就是做后台管理系统，偶尔做做移动端，那么大家都是做后台管理，你要怎么比别人强呢？其实就是一个点：你... 管理系统 articles"
+    },
+    {
+      "id": "knowledges-frontend-cache",
+      "title": "前端缓存",
+      "summary": "前言\n\nweb缓存是高级前端工程师必修技能。是我们变成大牛过程中绕不开的知识点。\n\n文章会尽量用通俗易懂的言语来细说web缓存的概念和用处。\n\n本期文章的大纲是\n\n1. 什么是web缓存（前端缓存）\n\n2. 缓存可以解决什么问题？他的缺点是什么？\n\n3. 强制缓存原理讲解\n\n   3.1.基于Exp...",
+      "category": "knowledges",
+      "tags": [
+        "缓存"
+      ],
+      "author": "博主",
+      "date": "2023-12-08T21:51:01.000Z",
+      "wordCount": 4766,
+      "readingTime": 20,
+      "views": 910,
+      "likes": 27,
+      "filePath": "/static/md/knowledges/frontend-cache.md",
+      "searchText": "前端缓存 前言\n\nweb缓存是高级前端工程师必修技能。是我们变成大牛过程中绕不开的知识点。\n\n文章会尽量用通俗易懂的言语来细说web缓存的概念和用处。\n\n本期文章的大纲是\n\n1. 什么是web缓存（前端缓存）\n\n2. 缓存可以解决什么问题？他的缺点是什么？\n\n3. 强制缓存原理讲解\n\n   3.1.基于exp... 缓存 knowledges"
+    },
+    {
+      "id": "articles-webpack-optimization",
+      "title": "Webpack优化实践",
+      "summary": "Vue项目Webpack优化实践，构建效率提高50\\\\%\n\n前言      \n\n 公司的前端项目使用Vue框架，Vue框架使用Webpack进行构建，随着项目不断迭代，项目逐渐变得庞大，然而项目的构建速度随之变得缓慢，于是对Webpack构建进行优化变得刻不容缓。经过不断的摸索和实践，通过以下方法优...",
+      "category": "articles",
+      "tags": [
+        "Webpack"
+      ],
+      "author": "博主",
+      "date": "2023-11-21T00:00:00.000Z",
+      "wordCount": 2587,
+      "readingTime": 11,
+      "views": 264,
+      "likes": 10,
+      "filePath": "/static/md/articles/webpack-optimization.md",
+      "searchText": "webpack优化实践 vue项目webpack优化实践，构建效率提高50\\\\%\n\n前言      \n\n 公司的前端项目使用vue框架，vue框架使用webpack进行构建，随着项目不断迭代，项目逐渐变得庞大，然而项目的构建速度随之变得缓慢，于是对webpack构建进行优化变得刻不容缓。经过不断的摸索和实践，通过以下方法优... webpack articles"
+    },
+    {
+      "id": "articles-vue-virtual-dom",
+      "title": "Vue核心之虚拟DOM",
+      "summary": "深入剖析：Vue核心之虚拟DOM\n\n前言\n\n使用 Vue 做项目也有两年时间了，对 Vue 的 api 也用的比较得心应手了，虽然对 Vue 的一些实现原理也耳有所闻，例如 虚拟DOM、flow、数据驱动、路由原理等等，但是自己并没有特意去探究这些原理的基础以及 Vue 源码是如何利用这些原理进行框...",
+      "category": "articles",
+      "tags": [
+        "虚拟DOM"
+      ],
+      "author": "博主",
+      "date": "2023-11-20T00:00:00.000Z",
+      "wordCount": 5429,
+      "readingTime": 22,
+      "views": 895,
+      "likes": 109,
+      "filePath": "/static/md/articles/vue-virtual-dom.md",
+      "searchText": "vue核心之虚拟dom 深入剖析：vue核心之虚拟dom\n\n前言\n\n使用 vue 做项目也有两年时间了，对 vue 的 api 也用的比较得心应手了，虽然对 vue 的一些实现原理也耳有所闻，例如 虚拟dom、flow、数据驱动、路由原理等等，但是自己并没有特意去探究这些原理的基础以及 vue 源码是如何利用这些原理进行框... 虚拟dom articles"
+    },
+    {
+      "id": "articles-Nodejs",
+      "title": "Nodejs",
+      "summary": "[从零开始nodejs系列文章](http://blog.fens.me/series-nodejs/)，将介绍如何利Javascript做为服务端脚本，通过Nodejs框架web开发。Nodejs框架是基于V8的引擎，是目前速度最快的Javascript引擎。chrome浏览器就基于V8，同时打开...",
+      "category": "articles",
+      "tags": [
+        "Nodejs"
+      ],
+      "author": "博主",
+      "date": "2023-11-19T00:00:00.000Z",
+      "wordCount": 1881,
+      "readingTime": 8,
+      "views": 641,
+      "likes": 105,
+      "filePath": "/static/md/articles/Nodejs.md",
+      "searchText": "nodejs [从零开始nodejs系列文章](http://blog.fens.me/series-nodejs/)，将介绍如何利javascript做为服务端脚本，通过nodejs框架web开发。nodejs框架是基于v8的引擎，是目前速度最快的javascript引擎。chrome浏览器就基于v8，同时打开... nodejs articles"
+    },
+    {
+      "id": "articles-javascript-33-concepts",
+      "title": "JavaScript的33个概念",
+      "summary": "<h1 align=\"center\">\n<br>\n  <a href=\"https://github.com/stephentian/33-js-concepts\"><img src=\"33_js_concepts.jpg\" alt=\"每位 JS 开发应该懂的 33 个概念\" width=200\">...",
+      "category": "articles",
+      "tags": [
+        "JavaScript"
+      ],
+      "author": "博主",
+      "date": "2023-11-18T00:00:00.000Z",
+      "wordCount": 955,
+      "readingTime": 4,
+      "views": 903,
+      "likes": 35,
+      "filePath": "/static/md/articles/javascript-33-concepts.md",
+      "searchText": "javascript的33个概念 <h1 align=\"center\">\n<br>\n  <a href=\"https://github.com/stephentian/33-js-concepts\"><img src=\"33_js_concepts.jpg\" alt=\"每位 js 开发应该懂的 33 个概念\" width=200\">... javascript articles"
+    },
+    {
+      "id": "articles-yahoo-35-rules",
+      "title": "雅虎35条军规",
+      "summary": "前端性能优化之雅虎35条军规\n\n阅读19分钟\n\n本文主要考虑客户端性能、服务器端和网络性能，内容框架来自[Yahoo Developer Network](https://link.juejin.cn/?target=https\\\\%3A\\\\%2F\\\\%2Fdeveloper.yahoo.com\\\\...",
+      "category": "articles",
+      "tags": [
+        "性能优化"
+      ],
+      "author": "博主",
+      "date": "2023-11-18T00:00:00.000Z",
+      "wordCount": 5871,
+      "readingTime": 24,
+      "views": 125,
+      "likes": 17,
+      "filePath": "/static/md/articles/yahoo-35-rules.md",
+      "searchText": "雅虎35条军规 前端性能优化之雅虎35条军规\n\n阅读19分钟\n\n本文主要考虑客户端性能、服务器端和网络性能，内容框架来自[yahoo developer network](https://link.juejin.cn/?target=https\\\\%3a\\\\%2f\\\\%2fdeveloper.yahoo.com\\\\... 性能优化 articles"
+    },
+    {
+      "id": "articles-website-performance-optimization",
+      "title": "网站性能优化实战",
+      "summary": "作为互联网项目，最重要的便是用户体验。在举国“互联网+”的热潮中，用户至上也已经被大多数企业所接收，特别是在如今移动端快速发展的时代，我们的网页不仅只是呈现在用户的PC浏览器里，更多的时候，用户是通过移动产品浏览我们的网页。加之有越来越多的开发者投入到Web APP和Hybrid APP的开发队伍中...",
+      "category": "articles",
+      "tags": [
+        "性能优化"
+      ],
+      "author": "博主",
+      "date": "2023-11-17T00:00:00.000Z",
+      "wordCount": 3783,
+      "readingTime": 16,
+      "views": 67,
+      "likes": 47,
+      "filePath": "/static/md/articles/website-performance-optimization.md",
+      "searchText": "网站性能优化实战 作为互联网项目，最重要的便是用户体验。在举国“互联网+”的热潮中，用户至上也已经被大多数企业所接收，特别是在如今移动端快速发展的时代，我们的网页不仅只是呈现在用户的pc浏览器里，更多的时候，用户是通过移动产品浏览我们的网页。加之有越来越多的开发者投入到web app和hybrid app的开发队伍中... 性能优化 articles"
+    },
+    {
+      "id": "articles-frontend-skills",
+      "title": "前端技能",
+      "summary": "第一阶段：\n\nHTML+CSS:\n\nHTML进阶、CSS进阶、div+css布局、HTML+css整站开发、\n\nJavaScript基础：\n\nJs基础教程、js内置对象常用方法、常见DOM树操作大全、ECMAscript、DOM、BOM、定时器和焦点图。\n\nJS基本特效：\n\n常见特效、例如：tab、...",
+      "category": "articles",
+      "tags": [
+        "前端技能"
+      ],
+      "author": "博主",
+      "date": "2023-11-16T00:00:00.000Z",
+      "wordCount": 1934,
+      "readingTime": 8,
+      "views": 560,
+      "likes": 104,
+      "filePath": "/static/md/articles/frontend-skills.md",
+      "searchText": "前端技能 第一阶段：\n\nhtml+css:\n\nhtml进阶、css进阶、div+css布局、html+css整站开发、\n\njavascript基础：\n\njs基础教程、js内置对象常用方法、常见dom树操作大全、ecmascript、dom、bom、定时器和焦点图。\n\njs基本特效：\n\n常见特效、例如：tab、... 前端技能 articles"
+    },
+    {
+      "id": "articles-frontend-code-review",
+      "title": "前端代码评审",
+      "summary": "前端代码评审checklist清单\n\n前言\n\n​       前端团队有评审代码的要求，但由于每个开发人员的水平不同，技术关注点不同，所以对代码评审的关注点不同，为了保证代码质量，团队代码风格统一，特此拟定一份《前端团队代码评审 CheckList 清单》，这样代码评审人员在评审代码时，可以参照这份...",
+      "category": "articles",
+      "tags": [
+        "代码评审"
+      ],
+      "author": "博主",
+      "date": "2023-11-15T00:00:00.000Z",
+      "wordCount": 2022,
+      "readingTime": 9,
+      "views": 423,
+      "likes": 93,
+      "filePath": "/static/md/articles/frontend-code-review.md",
+      "searchText": "前端代码评审 前端代码评审checklist清单\n\n前言\n\n​       前端团队有评审代码的要求，但由于每个开发人员的水平不同，技术关注点不同，所以对代码评审的关注点不同，为了保证代码质量，团队代码风格统一，特此拟定一份《前端团队代码评审 checklist 清单》，这样代码评审人员在评审代码时，可以参照这份... 代码评审 articles"
+    },
+    {
+      "id": "articles-high-performance-javascript",
+      "title": "编写高性能的JavaScript",
+      "summary": "前言\n\n随着计算机硬件的不断升级，开发者越发觉得Javascript性能优化的好不好对网页的执行效率影响不明显，所以一些性能方面的知识被很多开发者忽视。但在某些情况下，不优化的Javascript代码必然会影响用户的体验。因此，即使在当前硬件性能已经大大提升的时代，在编写Javascript代码时，...",
+      "category": "articles",
+      "tags": [
+        "前端优化"
+      ],
+      "author": "博主",
+      "date": "2023-11-14T00:00:00.000Z",
+      "wordCount": 1519,
+      "readingTime": 7,
+      "views": 268,
+      "likes": 60,
+      "filePath": "/static/md/articles/high-performance-javascript.md",
+      "searchText": "编写高性能的javascript 前言\n\n随着计算机硬件的不断升级，开发者越发觉得javascript性能优化的好不好对网页的执行效率影响不明显，所以一些性能方面的知识被很多开发者忽视。但在某些情况下，不优化的javascript代码必然会影响用户的体验。因此，即使在当前硬件性能已经大大提升的时代，在编写javascript代码时，... 前端优化 articles"
+    },
+    {
+      "id": "knowledges-regular-expressions",
+      "title": "正则表达式",
+      "summary": "正则表达式\n\n正则表达式为标书字符串规则的表达式。下面为两个例子为在 JavaScript 中的使用，\n\n- /pattern/attrs\n- new RegExp(pattern, attrs)\n\n\n\n锚点\n\n锚点用于匹配一个位置，下列为常用的锚点\n\n- ^ 起始的位置 /^http/\n- $ 结...",
+      "category": "knowledges",
+      "tags": [
+        "正则",
+        "表单校验"
+      ],
+      "author": "博主",
+      "date": "2023-11-13T20:01:23.000Z",
+      "wordCount": 2753,
+      "readingTime": 12,
+      "views": 360,
+      "likes": 23,
+      "filePath": "/static/md/knowledges/regular-expressions.md",
+      "searchText": "正则表达式 正则表达式\n\n正则表达式为标书字符串规则的表达式。下面为两个例子为在 javascript 中的使用，\n\n- /pattern/attrs\n- new regexp(pattern, attrs)\n\n\n\n锚点\n\n锚点用于匹配一个位置，下列为常用的锚点\n\n- ^ 起始的位置 /^http/\n- $ 结... 正则 表单校验 knowledges"
+    },
+    {
+      "id": "knowledges-uniapp-components",
+      "title": "uniapp组件",
+      "summary": "弹窗确认提示框组件Alert.vue\n\n\n\n使用方式：\n\n\n\n\n\n打卡弹窗组件ClockPopup.vue\n\n\n\n使用方式：\n\n\n\n\n\n时间选择组件DateTime.vue\n\n\n\n使用方式：\n\n\n\n\n\n输入框下拉组件DropDown.vue\n\n\n\n使用方式：\n\n\n\n\n\n菜单栏组件ListBar.vu...",
+      "category": "knowledges",
+      "tags": [
+        "uniapp",
+        "小程序"
+      ],
+      "author": "博主",
+      "date": "2023-04-30T08:03:10.000Z",
+      "wordCount": 134,
+      "readingTime": 1,
+      "views": 589,
+      "likes": 53,
+      "filePath": "/static/md/knowledges/uniapp-components.md",
+      "searchText": "uniapp组件 弹窗确认提示框组件alert.vue\n\n\n\n使用方式：\n\n\n\n\n\n打卡弹窗组件clockpopup.vue\n\n\n\n使用方式：\n\n\n\n\n\n时间选择组件datetime.vue\n\n\n\n使用方式：\n\n\n\n\n\n输入框下拉组件dropdown.vue\n\n\n\n使用方式：\n\n\n\n\n\n菜单栏组件listbar.vu... uniapp 小程序 knowledges"
+    },
+    {
+      "id": "knowledges-uniapp-web-h5",
+      "title": "uniapp网页H5",
+      "summary": "uniapp动态引入script\n\n\n\n\n\nuniapp的H5项目腾讯地图跨域问题\n\n用uni-app开发，h5和小程序使用的都是腾讯地图-微信小程序sdk，但它是为小程序设计的，所以在vue的h5中使用会有跨域问题，所以结合vue-jsonp对这个sdk做了一下修改，可以直接放入h5中使用。此方法...",
+      "category": "knowledges",
+      "tags": [
+        "uniapp"
+      ],
+      "author": "博主",
+      "date": "2023-04-29T10:03:10.000Z",
+      "wordCount": 1411,
+      "readingTime": 6,
+      "views": 329,
+      "likes": 101,
+      "filePath": "/static/md/knowledges/uniapp-web-h5.md",
+      "searchText": "uniapp网页h5 uniapp动态引入script\n\n\n\n\n\nuniapp的h5项目腾讯地图跨域问题\n\n用uni-app开发，h5和小程序使用的都是腾讯地图-微信小程序sdk，但它是为小程序设计的，所以在vue的h5中使用会有跨域问题，所以结合vue-jsonp对这个sdk做了一下修改，可以直接放入h5中使用。此方法... uniapp knowledges"
+    },
+    {
+      "id": "knowledges-uniapp-dingtalk",
+      "title": "uniapp钉钉",
+      "summary": "小问题\n\n- 钉钉小程序后台添加完Webview安全域名需要重新发布应用（或者重新真机调试），并不是实时生效\n\n- uni.getLocation放在onLoad偶尔获取不到位置，放在onReady可以避免这个问题\n\n- 统一授权套件目前只能在H5与小程序使用，PC端暂不支持\n\n  https://...",
+      "category": "knowledges",
+      "tags": [
+        "uniapp",
+        "小程序"
+      ],
+      "author": "博主",
+      "date": "2023-04-28T19:03:10.000Z",
+      "wordCount": 943,
+      "readingTime": 4,
+      "views": 782,
+      "likes": 17,
+      "filePath": "/static/md/knowledges/uniapp-dingtalk.md",
+      "searchText": "uniapp钉钉 小问题\n\n- 钉钉小程序后台添加完webview安全域名需要重新发布应用（或者重新真机调试），并不是实时生效\n\n- uni.getlocation放在onload偶尔获取不到位置，放在onready可以避免这个问题\n\n- 统一授权套件目前只能在h5与小程序使用，pc端暂不支持\n\n  https://... uniapp 小程序 knowledges"
+    },
+    {
+      "id": "knowledges-uniapp-mall-project",
+      "title": "uniapp商城项目",
+      "summary": "黑马商城实战项目\n\n项目搭建\n\n+ 利用HBuilder X创建基本项目结构\n\n+ 运行项目\n\n+ 整理基本项目结构，并修改窗口外观\n\n  \n\n\n配置tabbar\n\n+ 创建tabbar对应的四个页面和图标准备好\n\n+ 将页面路径配置到pages.json中的pages数组中\n\n  \n\n+ 配置ta...",
+      "category": "knowledges",
+      "tags": [
+        "uniapp",
+        "小程序"
+      ],
+      "author": "博主",
+      "date": "2023-04-27T18:03:10.000Z",
+      "wordCount": 662,
+      "readingTime": 3,
+      "views": 690,
+      "likes": 26,
+      "filePath": "/static/md/knowledges/uniapp-mall-project.md",
+      "searchText": "uniapp商城项目 黑马商城实战项目\n\n项目搭建\n\n+ 利用hbuilder x创建基本项目结构\n\n+ 运行项目\n\n+ 整理基本项目结构，并修改窗口外观\n\n  \n\n\n配置tabbar\n\n+ 创建tabbar对应的四个页面和图标准备好\n\n+ 将页面路径配置到pages.json中的pages数组中\n\n  \n\n+ 配置ta... uniapp 小程序 knowledges"
+    },
+    {
+      "id": "knowledges-uniapp-android-ios",
+      "title": "uniapp安卓IOS",
+      "summary": "uniapp---app开发(nvue)\n\n1. 如果view包括文字，需要再文字外层包括text\n\n2. 不能使用百分比控制宽高，vh，vw也不支持\n\n3. 仅支持css写法\n\n4. nvue 页面只能使用flex布局，nvue 页面的布局排列方向默认为竖排（column）\n\n5. 文字内容，必须...",
+      "category": "knowledges",
+      "tags": [
+        "uniapp"
+      ],
+      "author": "博主",
+      "date": "2023-04-27T17:03:10.000Z",
+      "wordCount": 841,
+      "readingTime": 4,
+      "views": 277,
+      "likes": 16,
+      "filePath": "/static/md/knowledges/uniapp-android-ios.md",
+      "searchText": "uniapp安卓ios uniapp---app开发(nvue)\n\n1. 如果view包括文字，需要再文字外层包括text\n\n2. 不能使用百分比控制宽高，vh，vw也不支持\n\n3. 仅支持css写法\n\n4. nvue 页面只能使用flex布局，nvue 页面的布局排列方向默认为竖排（column）\n\n5. 文字内容，必须... uniapp knowledges"
+    },
+    {
+      "id": "knowledges-uniapp-basics",
+      "title": "uniapp基础知识",
+      "summary": "uni-app的基本使用\n\n+ 环境搭建\n+ 页面外观配置\n+ 数据绑定\n+ uni-app的生命周期\n+ 组件的使用\n+ uni-app中样式学习\n+ 在uni-app中使用字体图标和开启scss\n+ 条件注释跨端兼容\n+ uni中的事件\n+ 导航跳转\n+ 组件创建和通讯，及组件的生命周期\n+ u...",
+      "category": "knowledges",
+      "tags": [
+        "uniapp",
+        "小程序"
+      ],
+      "author": "博主",
+      "date": "2023-04-26T19:03:10.000Z",
+      "wordCount": 5191,
+      "readingTime": 21,
+      "views": 265,
+      "likes": 50,
+      "filePath": "/static/md/knowledges/uniapp-basics.md",
+      "searchText": "uniapp基础知识 uni-app的基本使用\n\n+ 环境搭建\n+ 页面外观配置\n+ 数据绑定\n+ uni-app的生命周期\n+ 组件的使用\n+ uni-app中样式学习\n+ 在uni-app中使用字体图标和开启scss\n+ 条件注释跨端兼容\n+ uni中的事件\n+ 导航跳转\n+ 组件创建和通讯，及组件的生命周期\n+ u... uniapp 小程序 knowledges"
+    },
+    {
+      "id": "knowledges-uniapp",
+      "title": "uniapp",
+      "summary": "小技巧\n\n右击“新建页面“可以直接创建xx文件夹和xx.vue并配置好pages.json，可以自定义模板如下：\n\n\n\n\n\n小问题\n\n- uniapp登录并不会执行App.vue中的onlunch，因为onlunch是进入小程序执行一次，onlunch后才能看到登录页\n\n- switch、delet...",
+      "category": "knowledges",
+      "tags": [
+        "uniapp",
+        "小程序"
+      ],
+      "author": "博主",
+      "date": "2023-04-25T18:03:10.000Z",
+      "wordCount": 6638,
+      "readingTime": 27,
+      "views": 162,
+      "likes": 40,
+      "filePath": "/static/md/knowledges/uniapp.md",
+      "searchText": "uniapp 小技巧\n\n右击“新建页面“可以直接创建xx文件夹和xx.vue并配置好pages.json，可以自定义模板如下：\n\n\n\n\n\n小问题\n\n- uniapp登录并不会执行app.vue中的onlunch，因为onlunch是进入小程序执行一次，onlunch后才能看到登录页\n\n- switch、delet... uniapp 小程序 knowledges"
+    },
+    {
+      "id": "other-desktop-program",
+      "title": "桌面程序",
+      "summary": "什么语言适合制作桌面应用程序\n\n制作桌面应用程序可以选择多种编程语言，每种语言都有其独特的优势和适用场景。以下是一些常见的编程语言及其特点，适合制作桌面应用程序：\n\n1. C++\n- 优点：\n  - 高性能，适合对性能要求极高的应用。\n  - 可以直接访问底层硬件资源。\n  - 大量成熟的库和框架支...",
+      "category": "other",
+      "tags": [
+        "桌面程序"
+      ],
+      "author": "博主",
+      "date": "2023-02-26T09:44:06.000Z",
+      "wordCount": 2695,
+      "readingTime": 11,
+      "views": 624,
+      "likes": 33,
+      "filePath": "/static/md/other/desktop-program.md",
+      "searchText": "桌面程序 什么语言适合制作桌面应用程序\n\n制作桌面应用程序可以选择多种编程语言，每种语言都有其独特的优势和适用场景。以下是一些常见的编程语言及其特点，适合制作桌面应用程序：\n\n1. c++\n- 优点：\n  - 高性能，适合对性能要求极高的应用。\n  - 可以直接访问底层硬件资源。\n  - 大量成熟的库和框架支... 桌面程序 other"
+    },
+    {
+      "id": "other-dropshipping",
+      "title": "无货源",
+      "summary": "什么是无货源网店？\n\n无货源网店最火的模式，零成本，无货源，无风险，无需人脉在家也可以月入十万的项目\n\n首先说下传统自己开网店需要做的事项。\n\n第一、说到开网店，我们首先得有货源，我们的货源渠道，无非就是自己本地有厂家生产商品，或者批发商品。再或者就是网上渠道。\n\n第二、我们得有自己的网店，自己做美...",
+      "category": "other",
+      "tags": [
+        "无货源"
+      ],
+      "author": "博主",
+      "date": "2023-02-25T09:44:06.000Z",
+      "wordCount": 3549,
+      "readingTime": 15,
+      "views": 301,
+      "likes": 10,
+      "filePath": "/static/md/other/dropshipping.md",
+      "searchText": "无货源 什么是无货源网店？\n\n无货源网店最火的模式，零成本，无货源，无风险，无需人脉在家也可以月入十万的项目\n\n首先说下传统自己开网店需要做的事项。\n\n第一、说到开网店，我们首先得有货源，我们的货源渠道，无非就是自己本地有厂家生产商品，或者批发商品。再或者就是网上渠道。\n\n第二、我们得有自己的网店，自己做美... 无货源 other"
+    },
+    {
+      "id": "knowledges-frontend-standards",
+      "title": "前端规范",
+      "summary": "组件@returnPhone=\"returnPhone\"和@return-phone=\"returnPhone\"应该使用哪种写法\n\n在Vue.js中，你可以使用两种方式来绑定事件处理器：驼峰式命名（camelCase）和短横线分隔式命名（kebab-case）。这两种写法在Vue中都是有效的，但是它...",
+      "category": "knowledges",
+      "tags": [
+        "前端"
+      ],
+      "author": "博主",
+      "date": "2022-11-25T15:26:47.000Z",
+      "wordCount": 438,
+      "readingTime": 2,
+      "views": 481,
+      "likes": 11,
+      "filePath": "/static/md/knowledges/frontend-standards.md",
+      "searchText": "前端规范 组件@returnphone=\"returnphone\"和@return-phone=\"returnphone\"应该使用哪种写法\n\n在vue.js中，你可以使用两种方式来绑定事件处理器：驼峰式命名（camelcase）和短横线分隔式命名（kebab-case）。这两种写法在vue中都是有效的，但是它... 前端 knowledges"
+    },
+    {
+      "id": "knowledges-vuex",
+      "title": "vuex",
+      "summary": "什么是vuex？\n\nvuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。\n\n\n\nVuex是什么？怎么使用？\n\nVuex是实现组件全局状态（数据）管理的一种机制，可以方便实现组件数据之间的共享；Vu...",
+      "category": "knowledges",
+      "tags": [
+        "vue",
+        "vuex"
+      ],
+      "author": "博主",
+      "date": "2022-07-28T21:02:08.000Z",
+      "wordCount": 12196,
+      "readingTime": 49,
+      "views": 321,
+      "likes": 43,
+      "filePath": "/static/md/knowledges/vuex.md",
+      "searchText": "vuex 什么是vuex？\n\nvuex 是一个专为 vue.js 应用程序开发的状态管理模式。它采用集中式存储管理应用的所有组件的状态，并以相应的规则保证状态以一种可预测的方式发生变化。\n\n\n\nvuex是什么？怎么使用？\n\nvuex是实现组件全局状态（数据）管理的一种机制，可以方便实现组件数据之间的共享；vu... vue vuex knowledges"
+    },
+    {
+      "id": "other-database",
+      "title": "数据库",
+      "summary": "关系型数据库（RDBMS）介绍\n\n关系型数据库（Relational Database Management System，RDBMS） 是一种基于关系模型管理数据的数据库系统，数据以表格形式存储，表格中的数据通过行（记录）和列（字段）来组织。关系型数据库的核心概念是“关系”，即表格中的数据之间存在...",
+      "category": "other",
+      "tags": [
+        "数据库"
+      ],
+      "author": "博主",
+      "date": "2022-06-09T11:58:08.000Z",
+      "wordCount": 7288,
+      "readingTime": 30,
+      "views": 801,
+      "likes": 34,
+      "filePath": "/static/md/other/database.md",
+      "searchText": "数据库 关系型数据库（rdbms）介绍\n\n关系型数据库（relational database management system，rdbms） 是一种基于关系模型管理数据的数据库系统，数据以表格形式存储，表格中的数据通过行（记录）和列（字段）来组织。关系型数据库的核心概念是“关系”，即表格中的数据之间存在... 数据库 other"
+    },
+    {
+      "id": "questions-vant",
+      "title": "vant",
+      "summary": "uni-app 或 微信小程序，使用vant组件\n\n1.下载vant组件\n\n[vant的GitHub下载地址](https://github.com/youzan/vant-weapp/releases)下载完成后解压，然后在项目根目录下创建文件夹wxcomponents，注意这里的wxcompon...",
+      "category": "questions",
+      "tags": [
+        "vue"
+      ],
+      "author": "博主",
+      "date": "2022-05-23T23:40:25.000Z",
+      "wordCount": 1842,
+      "readingTime": 8,
+      "views": 249,
+      "likes": 56,
+      "filePath": "/static/md/questions/vant.md",
+      "searchText": "vant uni-app 或 微信小程序，使用vant组件\n\n1.下载vant组件\n\n[vant的github下载地址](https://github.com/youzan/vant-weapp/releases)下载完成后解压，然后在项目根目录下创建文件夹wxcomponents，注意这里的wxcompon... vue questions"
+    },
+    {
+      "id": "questions-vue-practice",
+      "title": "vue实践",
+      "summary": "【VueJS】实例中data属性的三种写法及区别\n\n\n\n\n\n\n\n第3种是第2种的ES6写法\n\n区别\n\n1）在简单的Vue实例中，没什么区别，因为你app对象不会被复用。\n\n\n\n2）但是在组件中，因为可能在多处调用同一组件，所以为了不让多处的组件共享同一data对象，只能返回函数。\n\n\n\n总结日期：2...",
+      "category": "questions",
+      "tags": [
+        "vue",
+        "前端"
+      ],
+      "author": "博主",
+      "date": "2022-05-23T23:40:25.000Z",
+      "wordCount": 5980,
+      "readingTime": 24,
+      "views": 233,
+      "likes": 21,
+      "filePath": "/static/md/questions/vue-practice.md",
+      "searchText": "vue实践 【vuejs】实例中data属性的三种写法及区别\n\n\n\n\n\n\n\n第3种是第2种的es6写法\n\n区别\n\n1）在简单的vue实例中，没什么区别，因为你app对象不会被复用。\n\n\n\n2）但是在组件中，因为可能在多处调用同一组件，所以为了不让多处的组件共享同一data对象，只能返回函数。\n\n\n\n总结日期：2... vue 前端 questions"
+    },
+    {
+      "id": "questions-project-ideas",
+      "title": "项目思路",
+      "summary": "域名1获取到token，跳转到域名2实现自动登录，写出思路和完整代码 \n\n要实现域名1获取到token，然后跳转到域名2实现自动登录，可以使用以下思路和代码实现：\n\n1. 在域名1上，用户登录成功后生成一个包含token的URL，并将该URL传递给域名2。\n2. 在域名2上，接收到包含token的U...",
+      "category": "questions",
+      "tags": [
+        "vue",
+        "前端"
+      ],
+      "author": "博主",
+      "date": "2022-05-22T22:40:25.000Z",
+      "wordCount": 4974,
+      "readingTime": 20,
+      "views": 985,
+      "likes": 40,
+      "filePath": "/static/md/questions/project-ideas.md",
+      "searchText": "项目思路 域名1获取到token，跳转到域名2实现自动登录，写出思路和完整代码 \n\n要实现域名1获取到token，然后跳转到域名2实现自动登录，可以使用以下思路和代码实现：\n\n1. 在域名1上，用户登录成功后生成一个包含token的url，并将该url传递给域名2。\n2. 在域名2上，接收到包含token的u... vue 前端 questions"
+    },
+    {
+      "id": "questions-uView",
+      "title": "uView",
+      "summary": "空白页可以这样写\n\n\n\n\n\nTabs标签栏实现对齐（实现不了）",
+      "category": "questions",
+      "tags": [
+        "vue"
+      ],
+      "author": "博主",
+      "date": "2022-05-21T23:40:25.000Z",
+      "wordCount": 22,
+      "readingTime": 1,
+      "views": 159,
+      "likes": 108,
+      "filePath": "/static/md/questions/uView.md",
+      "searchText": "uview 空白页可以这样写\n\n\n\n\n\ntabs标签栏实现对齐（实现不了） vue questions"
+    },
+    {
+      "id": "questions-css-practice",
+      "title": "CSS实践",
+      "summary": "常用公共css\n\n\n\n\n\ncss控制文字显示几行\n\n一行\n\n\n\n如果文本中间有换行符，如果不设置高度就会失效，所以尽量设置高度。\n\n问题： 父元素需要自适应宽度flex: 1;子元素期望超出一行省略\n\n解决：父元素设置overflow: hidden;不然会被撑宽，困扰好久的问题\n\n\n\n多行...",
+      "category": "questions",
+      "tags": [
+        "CSS"
+      ],
+      "author": "博主",
+      "date": "2022-05-21T19:45:42.000Z",
+      "wordCount": 6438,
+      "readingTime": 26,
+      "views": 691,
+      "likes": 81,
+      "filePath": "/static/md/questions/css-practice.md",
+      "searchText": "css实践 常用公共css\n\n\n\n\n\ncss控制文字显示几行\n\n一行\n\n\n\n如果文本中间有换行符，如果不设置高度就会失效，所以尽量设置高度。\n\n问题： 父元素需要自适应宽度flex: 1;子元素期望超出一行省略\n\n解决：父元素设置overflow: hidden;不然会被撑宽，困扰好久的问题\n\n\n\n多行... css questions"
+    },
+    {
+      "id": "questions-qiankun-issues",
+      "title": "qiankun问题",
+      "summary": "有一个乾坤项目目录，里面有很多子应用的目录，怎么一键启动五个常用子应用platform、home...等，命令都是yarn dev\n\n要实现一键启动五个子应用（如 platform、home 等），您可以使用 并行执行工具 结合 脚本定制。以下是具体步骤：\n\n------\n\n方法 1：使用 conc...",
+      "category": "questions",
+      "tags": [
+        "qiankun",
+        "前端"
+      ],
+      "author": "博主",
+      "date": "2022-05-20T20:45:42.000Z",
+      "wordCount": 4179,
+      "readingTime": 17,
+      "views": 954,
+      "likes": 86,
+      "filePath": "/static/md/questions/qiankun-issues.md",
+      "searchText": "qiankun问题 有一个乾坤项目目录，里面有很多子应用的目录，怎么一键启动五个常用子应用platform、home...等，命令都是yarn dev\n\n要实现一键启动五个子应用（如 platform、home 等），您可以使用 并行执行工具 结合 脚本定制。以下是具体步骤：\n\n------\n\n方法 1：使用 conc... qiankun 前端 questions"
+    },
+    {
+      "id": "questions-native-common-issues",
+      "title": "原生常见问题",
+      "summary": "JavaScript文件位置\n\n在本网站（HTML5学堂）正式上线之前，统计工具针对本网站的SEO优化提出了一些建议，说是将JS文件放置在body标签之后会提升加载速度。不过最终我们还是放置在了head标签里。这里就涉及到一个JS文件位置的选择。到底JS文件的引入放置在头部好还是尾部好？一起来看看吧...",
+      "category": "questions",
+      "tags": [
+        "JavaScript",
+        "Css",
+        "前端"
+      ],
+      "author": "博主",
+      "date": "2022-05-20T19:45:42.000Z",
+      "wordCount": 5280,
+      "readingTime": 22,
+      "views": 242,
+      "likes": 99,
+      "filePath": "/static/md/questions/native-common-issues.md",
+      "searchText": "原生常见问题 javascript文件位置\n\n在本网站（html5学堂）正式上线之前，统计工具针对本网站的seo优化提出了一些建议，说是将js文件放置在body标签之后会提升加载速度。不过最终我们还是放置在了head标签里。这里就涉及到一个js文件位置的选择。到底js文件的引入放置在头部好还是尾部好？一起来看看吧... javascript css 前端 questions"
+    },
+    {
+      "id": "questions-frontend-issues",
+      "title": "前端问题",
+      "summary": "本地pnpm版本与packageManager中pnpm版本不一致\n\n问题：ERR_PNPM_BAD_PM_VERSION  This project is configured to use v8.6.10 of pnpm. Your current pnpm is v9.1.0\n\n解决：If y...",
+      "category": "questions",
+      "tags": [
+        "前端"
+      ],
+      "author": "博主",
+      "date": "2022-05-19T23:40:25.000Z",
+      "wordCount": 682,
+      "readingTime": 3,
+      "views": 179,
+      "likes": 33,
+      "filePath": "/static/md/questions/frontend-issues.md",
+      "searchText": "前端问题 本地pnpm版本与packagemanager中pnpm版本不一致\n\n问题：err_pnpm_bad_pm_version  this project is configured to use v8.6.10 of pnpm. your current pnpm is v9.1.0\n\n解决：if y... 前端 questions"
+    },
+    {
+      "id": "questions-javascript-practice",
+      "title": "JavaScript实践",
+      "summary": "24小时时间转换\n\n\n\n\n\n获取浏览器宽度、高度\n\n\n\n\n\n有什么区别，哪个方法好\n\n\n\n在JavaScript中，Object.assign(this.summaryData, data || \\\\{\\\\}) 和 this.summaryData = data || \\\\{\\\\} 是两种不同的数据...",
+      "category": "questions",
+      "tags": [
+        "JavaScript"
+      ],
+      "author": "博主",
+      "date": "2022-05-19T20:45:42.000Z",
+      "wordCount": 642,
+      "readingTime": 3,
+      "views": 50,
+      "likes": 13,
+      "filePath": "/static/md/questions/javascript-practice.md",
+      "searchText": "javascript实践 24小时时间转换\n\n\n\n\n\n获取浏览器宽度、高度\n\n\n\n\n\n有什么区别，哪个方法好\n\n\n\n在javascript中，object.assign(this.summarydata, data || \\\\{\\\\}) 和 this.summarydata = data || \\\\{\\\\} 是两种不同的数据... javascript questions"
+    },
+    {
+      "id": "knowledges-VuePress",
+      "title": "VuePress",
+      "summary": "从头搭建一个简单的 VuePress 文档\n\n1.创建并进入一个新目录（也可以手动右键新建）\n\n\n\n2.使用你喜欢的包管理器进行初始化\n\n\n\n3.将 VuePress 安装为本地依赖\n\n已经不再推荐全局安装 VuePress\n\n\n\n如果你的现有项目依赖了 webpack 3.x，推荐使用 [Yarn...",
+      "category": "knowledges",
+      "tags": [
+        "vue"
+      ],
+      "author": "博主",
+      "date": "2022-04-29T09:02:08.000Z",
+      "wordCount": 488,
+      "readingTime": 2,
+      "views": 189,
+      "likes": 58,
+      "filePath": "/static/md/knowledges/VuePress.md",
+      "searchText": "vuepress 从头搭建一个简单的 vuepress 文档\n\n1.创建并进入一个新目录（也可以手动右键新建）\n\n\n\n2.使用你喜欢的包管理器进行初始化\n\n\n\n3.将 vuepress 安装为本地依赖\n\n已经不再推荐全局安装 vuepress\n\n\n\n如果你的现有项目依赖了 webpack 3.x，推荐使用 [yarn... vue knowledges"
+    },
+    {
+      "id": "knowledges-frontend-code-snippets",
+      "title": "前端代码片段",
+      "summary": "在日常的开发过程中，我们都会有一些常用的代码片段，这些代码片段可以直接复制到各个项目中使用，非常方便。如果你有接手过别人的项目，就可以很明显感受到几个项目一般都会有一些相同的工具类方法，这些方法就是之前开发者的常用代码片段。\n\n现在前端社区相当完善，有许多好用质量又有保证的库，如 lodash、da...",
+      "category": "knowledges",
+      "tags": [
+        "前端"
+      ],
+      "author": "博主",
+      "date": "2021-11-25T15:26:47.000Z",
+      "wordCount": 993,
+      "readingTime": 4,
+      "views": 460,
+      "likes": 55,
+      "filePath": "/static/md/knowledges/frontend-code-snippets.md",
+      "searchText": "前端代码片段 在日常的开发过程中，我们都会有一些常用的代码片段，这些代码片段可以直接复制到各个项目中使用，非常方便。如果你有接手过别人的项目，就可以很明显感受到几个项目一般都会有一些相同的工具类方法，这些方法就是之前开发者的常用代码片段。\n\n现在前端社区相当完善，有许多好用质量又有保证的库，如 lodash、da... 前端 knowledges"
+    },
+    {
+      "id": "knowledges-terminology",
+      "title": "术语名词",
+      "summary": "最近写了太多技术文章，今天想写一点简单的东西。当一个新人问：如何开始学前端？很多知乎人都会发这样的脑图：\n\n![img](https://ask.qcloudimg.com/http-save/yehe-1045939/c624a52c672b72b4b148d47c8f87f279.png)\n\n新...",
+      "category": "knowledges",
+      "tags": [
+        "名词"
+      ],
+      "author": "博主",
+      "date": "2021-10-28T15:55:55.000Z",
+      "wordCount": 16589,
+      "readingTime": 67,
+      "views": 1009,
+      "likes": 62,
+      "filePath": "/static/md/knowledges/terminology.md",
+      "searchText": "术语名词 最近写了太多技术文章，今天想写一点简单的东西。当一个新人问：如何开始学前端？很多知乎人都会发这样的脑图：\n\n![img](https://ask.qcloudimg.com/http-save/yehe-1045939/c624a52c672b72b4b148d47c8f87f279.png)\n\n新... 名词 knowledges"
+    },
+    {
+      "id": "interview-css",
+      "title": "CSS",
+      "summary": "如何居中 div？\n\n-水平居中：给 div 设置一个宽度，然后添加 margin:0 auto 属性\n\n\n\n-水平居中，利用 text-align:center 实现\n\n\n\n-让绝对定位的 div 居中\n\n\n\n-水平垂直居中一\n\n\n\n-水平垂直居中二\n\n\n\n-水平垂直居中三\n\n\n\n-水平垂直居中四...",
+      "category": "interview",
+      "tags": [
+        "CSS",
+        "选择器",
+        "代码题"
+      ],
+      "author": "博主",
+      "date": "2021-07-07T23:30:10.000Z",
+      "wordCount": 1679,
+      "readingTime": 7,
+      "views": 784,
+      "likes": 106,
+      "filePath": "/static/md/interview/css.md",
+      "searchText": "css 如何居中 div？\n\n-水平居中：给 div 设置一个宽度，然后添加 margin:0 auto 属性\n\n\n\n-水平居中，利用 text-align:center 实现\n\n\n\n-让绝对定位的 div 居中\n\n\n\n-水平垂直居中一\n\n\n\n-水平垂直居中二\n\n\n\n-水平垂直居中三\n\n\n\n-水平垂直居中四... css 选择器 代码题 interview"
+    },
+    {
+      "id": "interview-big-company-questions",
+      "title": "大厂高频题",
+      "summary": "[转载自 Advanced-Frontend/Daily-Interview-Question](https://github.com/Advanced-Frontend/Daily-Interview-Question)\n\n第 1 题：写 React / Vue 项目时为什么要在列表组件中写 ke...",
+      "category": "interview",
+      "tags": [
+        "JavaScript",
+        "vue"
+      ],
+      "author": "博主",
+      "date": "2021-06-24T16:42:29.000Z",
+      "wordCount": 4042,
+      "readingTime": 17,
+      "views": 355,
+      "likes": 56,
+      "filePath": "/static/md/interview/big-company-questions.md",
+      "searchText": "大厂高频题 [转载自 advanced-frontend/daily-interview-question](https://github.com/advanced-frontend/daily-interview-question)\n\n第 1 题：写 react / vue 项目时为什么要在列表组件中写 ke... javascript vue interview"
+    },
+    {
+      "id": "other-computer-tips",
+      "title": "电脑知识技巧",
+      "summary": "桌面没有此电脑怎么办？ \n\n设置—个性化—主题—相关设置—桌面图标设置\n\n勾选“计算机”，点击确定\n\n\n\nwin11去掉搜索栏\n\n要删除Win11系统中的搜索栏，您可以按照以下步骤操作：\n\n1. 在桌面任务栏空白处右键点击，选择“任务栏设置”。\n2. 在设置窗口中，选择左侧的“个性化”选项。\n3....",
+      "category": "other",
+      "tags": [
+        "电脑"
+      ],
+      "author": "博主",
+      "date": "2021-06-09T11:58:08.000Z",
+      "wordCount": 9748,
+      "readingTime": 39,
+      "views": 549,
+      "likes": 88,
+      "filePath": "/static/md/other/computer-tips.md",
+      "searchText": "电脑知识技巧 桌面没有此电脑怎么办？ \n\n设置—个性化—主题—相关设置—桌面图标设置\n\n勾选“计算机”，点击确定\n\n\n\nwin11去掉搜索栏\n\n要删除win11系统中的搜索栏，您可以按照以下步骤操作：\n\n1. 在桌面任务栏空白处右键点击，选择“任务栏设置”。\n2. 在设置窗口中，选择左侧的“个性化”选项。\n3.... 电脑 other"
+    },
+    {
+      "id": "other-computer-shortcuts",
+      "title": "电脑常用快捷键",
+      "summary": "文件操作快捷键：\n\nCtrl+C     复制\n\nCtrl+V     粘贴\n\nCtrl+X     剪切\n\nCtrl+A     全选\n\nCtrl      \t多选：按住Ctrl，再用鼠标单击即可选中文件，可以反选；\n\nShift    \t多选：先选中一个文件a，按住Shift键，再用鼠标单击文件...",
+      "category": "other",
+      "tags": [
+        "电脑",
+        "快捷键"
+      ],
+      "author": "博主",
+      "date": "2021-06-08T11:58:08.000Z",
+      "wordCount": 2514,
+      "readingTime": 11,
+      "views": 141,
+      "likes": 63,
+      "filePath": "/static/md/other/computer-shortcuts.md",
+      "searchText": "电脑常用快捷键 文件操作快捷键：\n\nctrl+c     复制\n\nctrl+v     粘贴\n\nctrl+x     剪切\n\nctrl+a     全选\n\nctrl      \t多选：按住ctrl，再用鼠标单击即可选中文件，可以反选；\n\nshift    \t多选：先选中一个文件a，按住shift键，再用鼠标单击文件... 电脑 快捷键 other"
+    },
+    {
+      "id": "other-typing-tutorial",
+      "title": "打字教程",
+      "summary": "一、正确姿势\n\n坐姿端正，腰背挺直，两脚平放在地上。肩部放松，大臂自然下垂，前臂与基本键成水平线。打字的效率跟座位高低很有关系。一般来说，专职打字工作都使用转椅，以调节座位高低。身体与键盘的距离保持20厘米左右，肘部与腰部距离为10厘米左右，以上衣中线(钮扣或拉链)对准键盘正中，视线集中于左侧的打字...",
+      "category": "other",
+      "tags": [
+        "打字"
+      ],
+      "author": "博主",
+      "date": "2021-06-07T11:58:08.000Z",
+      "wordCount": 3292,
+      "readingTime": 14,
+      "views": 1042,
+      "likes": 36,
+      "filePath": "/static/md/other/typing-tutorial.md",
+      "searchText": "打字教程 一、正确姿势\n\n坐姿端正，腰背挺直，两脚平放在地上。肩部放松，大臂自然下垂，前臂与基本键成水平线。打字的效率跟座位高低很有关系。一般来说，专职打字工作都使用转椅，以调节座位高低。身体与键盘的距离保持20厘米左右，肘部与腰部距离为10厘米左右，以上衣中线(钮扣或拉链)对准键盘正中，视线集中于左侧的打字... 打字 other"
+    },
+    {
+      "id": "other-programmer-health",
+      "title": "程序员健康",
+      "summary": "《程序员健康指南》读书笔记\n\n对于一个程序员，往往长期面对电脑，久坐不动，缺少运动，不合理的饮食习惯，熬夜等等。这些不良的生活习惯，往往导致程序员健康出现一些问题，如颈椎病，背部疼痛，腕管综合征等等。\n\n《程序员健康指南》的目标是帮助程序员从一个周身疼痛，病弱且极有可能脾气暴躁的黑客，转变为一个快乐...",
+      "category": "other",
+      "tags": [
+        "程序员"
+      ],
+      "author": "博主",
+      "date": "2021-06-06T11:58:08.000Z",
+      "wordCount": 1316,
+      "readingTime": 6,
+      "views": 646,
+      "likes": 19,
+      "filePath": "/static/md/other/programmer-health.md",
+      "searchText": "程序员健康 《程序员健康指南》读书笔记\n\n对于一个程序员，往往长期面对电脑，久坐不动，缺少运动，不合理的饮食习惯，熬夜等等。这些不良的生活习惯，往往导致程序员健康出现一些问题，如颈椎病，背部疼痛，腕管综合征等等。\n\n《程序员健康指南》的目标是帮助程序员从一个周身疼痛，病弱且极有可能脾气暴躁的黑客，转变为一个快乐... 程序员 other"
+    },
+    {
+      "id": "other-time-passage",
+      "title": "光阴",
+      "summary": "作者：赵丽宏\n\n\n\n![](../../images/sw001.jpg)\n\n\n谁也无法描绘出他的面目。但世界上处处能听到他的脚步。\n\n当旭日驱散夜的残幕时,当夕阳被朦胧的地平线吞噬时,他不慌不忙地走着,光明和黑暗都无法改变他进行的节奏。\n\n当蓓蕾在春风中灿然绽开湿润的花瓣时,当婴儿在产房里以响亮的...",
+      "category": "other",
+      "tags": [
+        "散文"
+      ],
+      "author": "博主",
+      "date": "2021-04-30T10:18:08.000Z",
+      "wordCount": 629,
+      "readingTime": 3,
+      "views": 344,
+      "likes": 64,
+      "filePath": "/static/md/other/time-passage.md",
+      "searchText": "光阴 作者：赵丽宏\n\n\n\n![](../../images/sw001.jpg)\n\n\n谁也无法描绘出他的面目。但世界上处处能听到他的脚步。\n\n当旭日驱散夜的残幕时,当夕阳被朦胧的地平线吞噬时,他不慌不忙地走着,光明和黑暗都无法改变他进行的节奏。\n\n当蓓蕾在春风中灿然绽开湿润的花瓣时,当婴儿在产房里以响亮的... 散文 other"
+    },
+    {
+      "id": "interview-computer-science",
+      "title": "计算机通识",
+      "summary": "数据结构\n\n栈和队列的区别?\n\n- 栈的插入和删除操作都是在一端进行的，而队列的操作却是在两端进行的。\n- 队列先进先出，栈先进后出。\n- 栈只允许在表尾一端进行插入和删除，而队列只允许在表尾一端进行插入，在表头一端进行删除\n\n\n\n栈和堆的区别？\n\n- 栈区（stack）—   由编译器自动分配释放...",
+      "category": "interview",
+      "tags": [
+        "数据结构",
+        "计算机原理",
+        "数据库"
+      ],
+      "author": "博主",
+      "date": "2021-04-08T18:28:58.000Z",
+      "wordCount": 651,
+      "readingTime": 3,
+      "views": 862,
+      "likes": 72,
+      "filePath": "/static/md/interview/computer-science.md",
+      "searchText": "计算机通识 数据结构\n\n栈和队列的区别?\n\n- 栈的插入和删除操作都是在一端进行的，而队列的操作却是在两端进行的。\n- 队列先进先出，栈先进后出。\n- 栈只允许在表尾一端进行插入和删除，而队列只允许在表尾一端进行插入，在表头一端进行删除\n\n\n\n栈和堆的区别？\n\n- 栈区（stack）—   由编译器自动分配释放... 数据结构 计算机原理 数据库 interview"
+    },
+    {
+      "id": "knowledges-harmonyos",
+      "title": "鸿蒙",
+      "summary": "苹果，安卓，鸿蒙三个使用一套代码，推荐什么语言\n\n要开发一套能够在苹果（iOS）、安卓（Android）和鸿蒙（HarmonyOS）等多个平台上运行的应用，你可以考虑使用跨平台开发框架。这些框架允许你用一种编程语言编写代码，并将其编译或打包成适用于不同操作系统的应用程序。以下是一些推荐的跨平台开发框...",
+      "category": "knowledges",
+      "tags": [
+        "前端"
+      ],
+      "author": "博主",
+      "date": "2021-03-22T15:11:22.000Z",
+      "wordCount": 864,
+      "readingTime": 4,
+      "views": 80,
+      "likes": 30,
+      "filePath": "/static/md/knowledges/harmonyos.md",
+      "searchText": "鸿蒙 苹果，安卓，鸿蒙三个使用一套代码，推荐什么语言\n\n要开发一套能够在苹果（ios）、安卓（android）和鸿蒙（harmonyos）等多个平台上运行的应用，你可以考虑使用跨平台开发框架。这些框架允许你用一种编程语言编写代码，并将其编译或打包成适用于不同操作系统的应用程序。以下是一些推荐的跨平台开发框... 前端 knowledges"
+    },
+    {
+      "id": "knowledges-compatibility-issues",
+      "title": "兼容性问题",
+      "summary": "浏览器内核\n\n市场上浏览器种类很多，不同浏览器的内核也不尽相同，所以各个浏览器对网页的解析存在一定的差异。\n\n主要分成两部分：渲染引擎(layout engineer或Rendering Engine)和JS引擎，最开始渲染引擎和JS引擎并没有区分的很明确，后来JS引擎越来越独立，内核就倾向于只指渲...",
+      "category": "knowledges",
+      "tags": [
+        "浏览器兼容",
+        "移动端兼容"
+      ],
+      "author": "博主",
+      "date": "2021-03-21T15:11:22.000Z",
+      "wordCount": 16838,
+      "readingTime": 68,
+      "views": 851,
+      "likes": 80,
+      "filePath": "/static/md/knowledges/compatibility-issues.md",
+      "searchText": "兼容性问题 浏览器内核\n\n市场上浏览器种类很多，不同浏览器的内核也不尽相同，所以各个浏览器对网页的解析存在一定的差异。\n\n主要分成两部分：渲染引擎(layout engineer或rendering engine)和js引擎，最开始渲染引擎和js引擎并没有区分的很明确，后来js引擎越来越独立，内核就倾向于只指渲... 浏览器兼容 移动端兼容 knowledges"
+    },
+    {
+      "id": "knowledges-map",
+      "title": "地图",
+      "summary": "百度地图\n\n点线绘制\n\n在mixins中\n\n\n\n\n\nwgs84坐标系的经纬度转换成bd09的坐标系\n\n通过wx.getLocation且type为wgs84获取用户的当前wgs84坐标系[经纬度](https://so.csdn.net/so/search?q=经纬度&spm=1001.2101.3...",
+      "category": "knowledges",
+      "tags": [
+        "前端"
+      ],
+      "author": "博主",
+      "date": "2021-03-21T15:11:22.000Z",
+      "wordCount": 250,
+      "readingTime": 1,
+      "views": 524,
+      "likes": 44,
+      "filePath": "/static/md/knowledges/map.md",
+      "searchText": "地图 百度地图\n\n点线绘制\n\n在mixins中\n\n\n\n\n\nwgs84坐标系的经纬度转换成bd09的坐标系\n\n通过wx.getlocation且type为wgs84获取用户的当前wgs84坐标系[经纬度](https://so.csdn.net/so/search?q=经纬度&spm=1001.2101.3... 前端 knowledges"
+    },
+    {
+      "id": "knowledges-clean-code",
+      "title": "代码整洁",
+      "summary": "代码整洁\n\n一、为什么要写糟糕的代码？\n\n每个人都有自己的原因，相信很多人都会想着等有时间的话再进行代码优化，但是要记住一句话：稍后等于永不。\n\n二、混乱代码的代价？\n\n后续难以维护和修改，生产力和时间呈现负相关。\n\n三、什么是整洁的代码？\n\n整洁的代码只做好一件事：每个类、每个函数、每个模块都专注...",
+      "category": "knowledges",
+      "tags": [
+        "前端"
+      ],
+      "author": "博主",
+      "date": "2021-03-20T15:11:22.000Z",
+      "wordCount": 1884,
+      "readingTime": 8,
+      "views": 644,
+      "likes": 42,
+      "filePath": "/static/md/knowledges/clean-code.md",
+      "searchText": "代码整洁 代码整洁\n\n一、为什么要写糟糕的代码？\n\n每个人都有自己的原因，相信很多人都会想着等有时间的话再进行代码优化，但是要记住一句话：稍后等于永不。\n\n二、混乱代码的代价？\n\n后续难以维护和修改，生产力和时间呈现负相关。\n\n三、什么是整洁的代码？\n\n整洁的代码只做好一件事：每个类、每个函数、每个模块都专注... 前端 knowledges"
+    },
+    {
+      "id": "knowledges-code-standards",
+      "title": "代码规范",
+      "summary": "Vue前端代码风格指南\n\n一、命名规范\n\n市面上常用的命名规范：\n\n- camelCase（小驼峰式命名法 —— 首字母小写）\n- PascalCase（大驼峰式命名法 —— 首字母大写）\n- kebab-case（短横线连接式）\n- Snake（下划线连接式）\n\n1.1 项目文件命名\n\n1.1.1...",
+      "category": "knowledges",
+      "tags": [
+        "前端"
+      ],
+      "author": "博主",
+      "date": "2021-03-19T15:11:22.000Z",
+      "wordCount": 4319,
+      "readingTime": 18,
+      "views": 160,
+      "likes": 109,
+      "filePath": "/static/md/knowledges/code-standards.md",
+      "searchText": "代码规范 vue前端代码风格指南\n\n一、命名规范\n\n市面上常用的命名规范：\n\n- camelcase（小驼峰式命名法 —— 首字母小写）\n- pascalcase（大驼峰式命名法 —— 首字母大写）\n- kebab-case（短横线连接式）\n- snake（下划线连接式）\n\n1.1 项目文件命名\n\n1.1.1... 前端 knowledges"
+    },
+    {
+      "id": "knowledges-browser-debugging",
+      "title": "浏览器调试",
+      "summary": "知道什么是 webkit 么? 知道怎么用浏览器的各种工具来调试和 debug 代码么?\n\nWebkit 是浏览器引擎，包括 html 渲染和 js 解析功能，手机浏览器的主流内核，与之相对应的引擎有 Gecko（Mozilla Firefox 等使用）和 Trident（也称 MSHTML，IE...",
+      "category": "knowledges",
+      "tags": [
+        "浏览器"
+      ],
+      "author": "博主",
+      "date": "2021-03-13T10:10:10.000Z",
+      "wordCount": 2154,
+      "readingTime": 9,
+      "views": 834,
+      "likes": 58,
+      "filePath": "/static/md/knowledges/browser-debugging.md",
+      "searchText": "浏览器调试 知道什么是 webkit 么? 知道怎么用浏览器的各种工具来调试和 debug 代码么?\n\nwebkit 是浏览器引擎，包括 html 渲染和 js 解析功能，手机浏览器的主流内核，与之相对应的引擎有 gecko（mozilla firefox 等使用）和 trident（也称 mshtml，ie... 浏览器 knowledges"
+    },
+    {
+      "id": "knowledges-browser",
+      "title": "浏览器",
+      "summary": "浏览器端的存储技术有哪些？\n\ncookie\n\ncookie又叫会话跟踪技术（会员卡的意思）由web服务器保存在用户浏览器上的小文本文件，包含用户的相关信息。cookie 其实最开始是服务器端用于记录用户状态的一种方式，由服务器设置，在客户端存储，然后每次发起同源请求时，发送给服务器端。cookie...",
+      "category": "knowledges",
+      "tags": [
+        "存储技术",
+        "事件机制",
+        "跨域",
+        "Service Worker",
+        "渲染机制",
+        "浏览器内核"
+      ],
+      "author": "博主",
+      "date": "2021-03-12T10:10:10.000Z",
+      "wordCount": 10092,
+      "readingTime": 41,
+      "views": 341,
+      "likes": 91,
+      "filePath": "/static/md/knowledges/browser.md",
+      "searchText": "浏览器 浏览器端的存储技术有哪些？\n\ncookie\n\ncookie又叫会话跟踪技术（会员卡的意思）由web服务器保存在用户浏览器上的小文本文件，包含用户的相关信息。cookie 其实最开始是服务器端用于记录用户状态的一种方式，由服务器设置，在客户端存储，然后每次发起同源请求时，发送给服务器端。cookie... 存储技术 事件机制 跨域 service worker 渲染机制 浏览器内核 knowledges"
+    },
+    {
+      "id": "interview-interview-skills",
+      "title": "面试技巧",
+      "summary": "面试是一个非常重要的过程，有些人在这个过程中感到不知所措，或者做得不好，使自己在求职中因小失大，达不到成功。在求职过程中注意了以下基本礼仪和技巧，才能达到事半功倍，增强面试的有效性。\n\n\n\n面试前准备\n\n（1）穿着得体，干净。\n\n（2）对公司做简单的了解\n\n（3）保证充足睡眠，保持自信\n\n\n\n注意事...",
+      "category": "interview",
+      "tags": [
+        "面试技巧",
+        "面试问题",
+        "面试经验"
+      ],
+      "author": "博主",
+      "date": "2021-02-22T15:30:21.000Z",
+      "wordCount": 15291,
+      "readingTime": 62,
+      "views": 820,
+      "likes": 23,
+      "filePath": "/static/md/interview/interview-skills.md",
+      "searchText": "面试技巧 面试是一个非常重要的过程，有些人在这个过程中感到不知所措，或者做得不好，使自己在求职中因小失大，达不到成功。在求职过程中注意了以下基本礼仪和技巧，才能达到事半功倍，增强面试的有效性。\n\n\n\n面试前准备\n\n（1）穿着得体，干净。\n\n（2）对公司做简单的了解\n\n（3）保证充足睡眠，保持自信\n\n\n\n注意事... 面试技巧 面试问题 面试经验 interview"
+    },
+    {
+      "id": "interview-interview-technical-questions",
+      "title": "面试技术问题",
+      "summary": "HTML\n\n---\n\n- Doctype作用？严格模式与混杂模式如何区分？它们有何意义?\n- HTML5 为什么只需要写 <!DOCTYPE HTML>？\n- 页面导入样式时，使用link和@import有什么区别？\n- 介绍一下你对浏览器内核的理解？\n- 常见的浏览器内核有哪些？\n- 如何处理HT...",
+      "category": "interview",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "author": "博主",
+      "date": "2021-02-09T20:48:55.000Z",
+      "wordCount": 3715,
+      "readingTime": 15,
+      "views": 692,
+      "likes": 34,
+      "filePath": "/static/md/interview/interview-technical-questions.md",
+      "searchText": "面试技术问题 html\n\n---\n\n- doctype作用？严格模式与混杂模式如何区分？它们有何意义?\n- html5 为什么只需要写 <!doctype html>？\n- 页面导入样式时，使用link和@import有什么区别？\n- 介绍一下你对浏览器内核的理解？\n- 常见的浏览器内核有哪些？\n- 如何处理ht... html css javascript interview"
+    },
+    {
+      "id": "interview-frontend-layout-code",
+      "title": "前端布局代码",
+      "summary": "左右居中\n\n- 行内元素: text-align: center\n- 定宽块状元素: 左右 margin 值为 auto\n- 不定宽块状元素: table布局，position + transform\n\n\n\n\n\n上下垂直居中\n\n- 定高：margin，position + margin(负值)\n-...",
+      "category": "interview",
+      "tags": [
+        "HTML",
+        "CSS",
+        "页面布局"
+      ],
+      "author": "博主",
+      "date": "2021-01-18T18:36:27.000Z",
+      "wordCount": 2071,
+      "readingTime": 9,
+      "views": 426,
+      "likes": 84,
+      "filePath": "/static/md/interview/frontend-layout-code.md",
+      "searchText": "前端布局代码 左右居中\n\n- 行内元素: text-align: center\n- 定宽块状元素: 左右 margin 值为 auto\n- 不定宽块状元素: table布局，position + transform\n\n\n\n\n\n上下垂直居中\n\n- 定高：margin，position + margin(负值)\n-... html css 页面布局 interview"
+    },
+    {
+      "id": "link-vue-links",
+      "title": "vue链接",
+      "summary": "[vue官网](https://cn.vuejs.org/)\n\n[vue菜鸟教程](https://www.runoob.com/vue2/vue-tutorial.html)\n\n[vue全家桶](http://doc.liangxinghua.com/vue-family/1.html)\n\n[mp...",
+      "category": "link",
+      "tags": [
+        "链接"
+      ],
+      "author": "博主",
+      "date": "2021-01-15T18:00:00.000Z",
+      "wordCount": 476,
+      "readingTime": 2,
+      "views": 394,
+      "likes": 84,
+      "filePath": "/static/md/link/vue-links.md",
+      "searchText": "vue链接 [vue官网](https://cn.vuejs.org/)\n\n[vue菜鸟教程](https://www.runoob.com/vue2/vue-tutorial.html)\n\n[vue全家桶](http://doc.liangxinghua.com/vue-family/1.html)\n\n[mp... 链接 link"
+    },
+    {
+      "id": "link-react-links",
+      "title": "React链接",
+      "summary": "React\n\n用于构建用户界面的声明性、高效和灵活的JavaScript库。\n\n\n\n设计思路\n\n在学习 React 之前，有必要先了解一下 React的设计思想。从而了解作者设计该库的初衷，React与目前热门的前端JS库的区别，以及React为解决哪些复杂的应用场景而生。\n\n- 翻译地址：http...",
+      "category": "link",
+      "tags": [
+        "链接"
+      ],
+      "author": "博主",
+      "date": "2021-01-14T18:00:00.000Z",
+      "wordCount": 473,
+      "readingTime": 2,
+      "views": 767,
+      "likes": 91,
+      "filePath": "/static/md/link/react-links.md",
+      "searchText": "react链接 react\n\n用于构建用户界面的声明性、高效和灵活的javascript库。\n\n\n\n设计思路\n\n在学习 react 之前，有必要先了解一下 react的设计思想。从而了解作者设计该库的初衷，react与目前热门的前端js库的区别，以及react为解决哪些复杂的应用场景而生。\n\n- 翻译地址：http... 链接 link"
+    },
+    {
+      "id": "link-javascript-links",
+      "title": "JavaScript链接",
+      "summary": "JavaScript\n\n>JavaScript 是一种高级的, 动态的, 无类型的和解释型的编程语言, 它已经在 ECMAScript 语言规范中被标准化. 跟 HTML 和 CSS 一样, JavaScript 是 WWW 内容生成的第三种必不可少的技术; 大多数的网会使用Javascript,...",
+      "category": "link",
+      "tags": [
+        "链接"
+      ],
+      "author": "博主",
+      "date": "2021-01-13T18:00:00.000Z",
+      "wordCount": 1974,
+      "readingTime": 8,
+      "views": 477,
+      "likes": 50,
+      "filePath": "/static/md/link/javascript-links.md",
+      "searchText": "javascript链接 javascript\n\n>javascript 是一种高级的, 动态的, 无类型的和解释型的编程语言, 它已经在 ecmascript 语言规范中被标准化. 跟 html 和 css 一样, javascript 是 www 内容生成的第三种必不可少的技术; 大多数的网会使用javascript,... 链接 link"
+    },
+    {
+      "id": "link-css-links",
+      "title": "CSS链接",
+      "summary": "🔖 好玩的、有趣的CSS 网站\n\n🌐  基础学习\n\n[cssreference.io/](https://cssreference.io/) CSS 参考书\n\n[www.awwwards.com/sites/zero-…](https://www.awwwards.com/sites/zero-...",
+      "category": "link",
+      "tags": [
+        "链接"
+      ],
+      "author": "博主",
+      "date": "2021-01-12T18:00:00.000Z",
+      "wordCount": 2078,
+      "readingTime": 9,
+      "views": 608,
+      "likes": 17,
+      "filePath": "/static/md/link/css-links.md",
+      "searchText": "css链接 🔖 好玩的、有趣的css 网站\n\n🌐  基础学习\n\n[cssreference.io/](https://cssreference.io/) css 参考书\n\n[www.awwwards.com/sites/zero-…](https://www.awwwards.com/sites/zero-... 链接 link"
+    },
+    {
+      "id": "link-comprehensive-navigation",
+      "title": "综合导航",
+      "summary": "资源搜索\n\n小云搜索\n\nhttps://www.yunso.net/\n\n毕方铺\n\nhttps://www.iizhi.cn/\n\nUP云搜\n\nhttps://www.upyunso.com/\n\n千帆搜索\n\nhttps://pan.qianfan.app/\n\nhttps://www.niceso.net...",
+      "category": "link",
+      "tags": [
+        "链接"
+      ],
+      "author": "博主",
+      "date": "2021-01-11T18:00:00.000Z",
+      "wordCount": 1215,
+      "readingTime": 5,
+      "views": 883,
+      "likes": 20,
+      "filePath": "/static/md/link/comprehensive-navigation.md",
+      "searchText": "综合导航 资源搜索\n\n小云搜索\n\nhttps://www.yunso.net/\n\n毕方铺\n\nhttps://www.iizhi.cn/\n\nup云搜\n\nhttps://www.upyunso.com/\n\n千帆搜索\n\nhttps://pan.qianfan.app/\n\nhttps://www.niceso.net... 链接 link"
+    },
+    {
+      "id": "link-bookmark-links",
+      "title": "书签链接",
+      "summary": "书签\n\n本文从我的浏览器收藏夹整理而来\n\n[中北大学-个人门户](http://i.nuc.edu.cn/portal.do?bqdm=141993237193175935)\n[CCTV节目官网首页](http://tv.cctv.com/)\n[计算机二级office试题_百度文库](https:/...",
+      "category": "link",
+      "tags": [
+        "链接"
+      ],
+      "author": "博主",
+      "date": "2021-01-10T18:00:00.000Z",
+      "wordCount": 17,
+      "readingTime": 1,
+      "views": 669,
+      "likes": 54,
+      "filePath": "/static/md/link/bookmark-links.md",
+      "searchText": "书签链接 书签\n\n本文从我的浏览器收藏夹整理而来\n\n[中北大学-个人门户](http://i.nuc.edu.cn/portal.do?bqdm=141993237193175935)\n[cctv节目官网首页](http://tv.cctv.com/)\n[计算机二级office试题_百度文库](https:/... 链接 link"
+    },
+    {
+      "id": "link-design-links",
+      "title": "设计链接",
+      "summary": "综合\n\n[设计导航](http://hao.shejidaren.com/)\n\n[admire-每天发现一个好链接](https://admire.so/)\n\n[优设网导航](http://hao.uisdc.com/)\n\n[专注于PPT设计的导航站](http://hippter.com/)\n\n[...",
+      "category": "link",
+      "tags": [
+        "链接"
+      ],
+      "author": "博主",
+      "date": "2021-01-09T18:00:00.000Z",
+      "wordCount": 152,
+      "readingTime": 1,
+      "views": 904,
+      "likes": 84,
+      "filePath": "/static/md/link/design-links.md",
+      "searchText": "设计链接 综合\n\n[设计导航](http://hao.shejidaren.com/)\n\n[admire-每天发现一个好链接](https://admire.so/)\n\n[优设网导航](http://hao.uisdc.com/)\n\n[专注于ppt设计的导航站](http://hippter.com/)\n\n[... 链接 link"
+    },
+    {
+      "id": "link-frontend-knowledge-links",
+      "title": "前端知识",
+      "summary": "HTML\n\n- [HTML语义化](http://justineo.github.io/slideshows/semantic-html/)  一定要了解，否则很容易标签乱用\n- [Jump Start HTML5: Basics - Learnable](https://learnable.com...",
+      "category": "link",
+      "tags": [
+        "链接"
+      ],
+      "author": "博主",
+      "date": "2021-01-08T18:00:00.000Z",
+      "wordCount": 4780,
+      "readingTime": 20,
+      "views": 543,
+      "likes": 62,
+      "filePath": "/static/md/link/frontend-knowledge-links.md",
+      "searchText": "前端知识 html\n\n- [html语义化](http://justineo.github.io/slideshows/semantic-html/)  一定要了解，否则很容易标签乱用\n- [jump start html5: basics - learnable](https://learnable.com... 链接 link"
+    },
+    {
+      "id": "link-frontend-articles-links",
+      "title": "前端文章",
+      "summary": "工具方法\n\n- [7 Essential JavaScript Functions](https://davidwalsh.name/essential-javascript-functions)\n\n\n\n技巧\n\n- [The Art of Debugging(调试的艺术)](https://remy...",
+      "category": "link",
+      "tags": [
+        "链接"
+      ],
+      "author": "博主",
+      "date": "2021-01-07T18:00:00.000Z",
+      "wordCount": 13872,
+      "readingTime": 56,
+      "views": 916,
+      "likes": 40,
+      "filePath": "/static/md/link/frontend-articles-links.md",
+      "searchText": "前端文章 工具方法\n\n- [7 essential javascript functions](https://davidwalsh.name/essential-javascript-functions)\n\n\n\n技巧\n\n- [the art of debugging(调试的艺术)](https://remy... 链接 link"
+    },
+    {
+      "id": "link-frontend-interview",
+      "title": "前端面试",
+      "summary": "必看文档\n\nvue\n\nhttps://cn.vuejs.org/\n\nhttps://vuex.vuejs.org/zh/\n\nhttps://pinia.vuejs.org/zh/\n\nhttps://router.vuejs.org/zh/\n\nTS\n\nhttps://typescript.bootcs...",
+      "category": "link",
+      "tags": [
+        "链接"
+      ],
+      "author": "博主",
+      "date": "2021-01-06T18:00:00.000Z",
+      "wordCount": 160,
+      "readingTime": 1,
+      "views": 980,
+      "likes": 90,
+      "filePath": "/static/md/link/frontend-interview.md",
+      "searchText": "前端面试 必看文档\n\nvue\n\nhttps://cn.vuejs.org/\n\nhttps://vuex.vuejs.org/zh/\n\nhttps://pinia.vuejs.org/zh/\n\nhttps://router.vuejs.org/zh/\n\nts\n\nhttps://typescript.bootcs... 链接 link"
+    },
+    {
+      "id": "link-frontend-frameworks-links",
+      "title": "前端框架",
+      "summary": "常用库与框架的使用文档\n\n[Ext4.1.0 中文文档](http://extjs-doc-cn.github.io/ext4api/)\n\n[Discover Meteor](http://zh.discovermeteor.com/)\n\n[RequireJS 中文网](http://require...",
+      "category": "link",
+      "tags": [
+        "链接"
+      ],
+      "author": "博主",
+      "date": "2021-01-05T18:00:00.000Z",
+      "wordCount": 149,
+      "readingTime": 1,
+      "views": 764,
+      "likes": 101,
+      "filePath": "/static/md/link/frontend-frameworks-links.md",
+      "searchText": "前端框架 常用库与框架的使用文档\n\n[ext4.1.0 中文文档](http://extjs-doc-cn.github.io/ext4api/)\n\n[discover meteor](http://zh.discovermeteor.com/)\n\n[requirejs 中文网](http://require... 链接 link"
+    },
+    {
+      "id": "link-other-links",
+      "title": "其他链接",
+      "summary": "资源resources\n\n脚本之家：https://www.jb51.net/\n\n\n\nAndroid\n\n Android官网：https://developer.android.google.cn/\n\n\n\njava\n\n Struts2教程：https://www.yiibai.com/struts_...",
+      "category": "link",
+      "tags": [
+        "链接"
+      ],
+      "author": "博主",
+      "date": "2021-01-04T18:00:00.000Z",
+      "wordCount": 825,
+      "readingTime": 4,
+      "views": 571,
+      "likes": 55,
+      "filePath": "/static/md/link/other-links.md",
+      "searchText": "其他链接 资源resources\n\n脚本之家：https://www.jb51.net/\n\n\n\nandroid\n\n android官网：https://developer.android.google.cn/\n\n\n\njava\n\n struts2教程：https://www.yiibai.com/struts_... 链接 link"
+    },
+    {
+      "id": "link-development-tools",
+      "title": "开发工具",
+      "summary": "Github\n\n[Github](https://github.com)：声望日盛-全球最大的“同性”网站；\n\n[Github For Mac](https://desktop.github.com/)：设计的非常美观的git管理客户端，它能取代命令行所获得的功能；\n\n[Gitcafe](https...",
+      "category": "link",
+      "tags": [
+        "链接"
+      ],
+      "author": "博主",
+      "date": "2021-01-03T18:00:00.000Z",
+      "wordCount": 2765,
+      "readingTime": 12,
+      "views": 640,
+      "likes": 86,
+      "filePath": "/static/md/link/development-tools.md",
+      "searchText": "开发工具 github\n\n[github](https://github.com)：声望日盛-全球最大的“同性”网站；\n\n[github for mac](https://desktop.github.com/)：设计的非常美观的git管理客户端，它能取代命令行所获得的功能；\n\n[gitcafe](https... 链接 link"
+    },
+    {
+      "id": "link-pending-links",
+      "title": "待总结链接",
+      "summary": "vscode插件\n\nhttps://mp.weixin.qq.com/s/3qsTuTLs_YHInlS4frRvjg\n\nhttps://mp.weixin.qq.com/s/HFMFoViGGhdXsZBWwp1yTQ\n\nhttps://mp.weixin.qq.com/s/XiokGyQBJPv...",
+      "category": "link",
+      "tags": [
+        "链接"
+      ],
+      "author": "博主",
+      "date": "2021-01-02T19:00:00.000Z",
+      "wordCount": 52,
+      "readingTime": 1,
+      "views": 496,
+      "likes": 83,
+      "filePath": "/static/md/link/pending-links.md",
+      "searchText": "待总结链接 vscode插件\n\nhttps://mp.weixin.qq.com/s/3qstutls_yhinls4frrvjg\n\nhttps://mp.weixin.qq.com/s/hfmfovigghdxszbwwp1ytq\n\nhttps://mp.weixin.qq.com/s/xiokgyqbjpv... 链接 link"
+    },
+    {
+      "id": "link-blog-community-projects",
+      "title": "博客社区项目",
+      "summary": "前端简报、资讯和博客\n\n* [shoptalkshow.com](http://shoptalkshow.com/)\n* [frontendfront.com](http://frontendfront.com/)\n* [webtoolsweekly.com](http://webtoolsweek...",
+      "category": "link",
+      "tags": [
+        "链接"
+      ],
+      "author": "博主",
+      "date": "2021-01-02T18:00:00.000Z",
+      "wordCount": 610,
+      "readingTime": 3,
+      "views": 891,
+      "likes": 77,
+      "filePath": "/static/md/link/blog-community-projects.md",
+      "searchText": "博客社区项目 前端简报、资讯和博客\n\n* [shoptalkshow.com](http://shoptalkshow.com/)\n* [frontendfront.com](http://frontendfront.com/)\n* [webtoolsweekly.com](http://webtoolsweek... 链接 link"
+    },
+    {
+      "id": "interview-frontend-engineering",
+      "title": "前端工程化",
+      "summary": "前端工程化\n\n是指将软件工程的方法和理念应用到前端开发中，以提高开发效率、保证项目质量、加快交付速度，并确保项目的可维护性和可扩展性。随着互联网技术的发展和用户需求的日益增长，前端工程化已经成为现代前端开发不可或缺的一部分。\n\n前端工程化的关键组成部分：\n\n1. 模块化：将复杂的前端应用分解为独立的...",
+      "category": "interview",
+      "tags": [
+        "MVVM",
+        "模块化",
+        "前端异常监控"
+      ],
+      "author": "博主",
+      "date": "2021-01-02T10:47:54.000Z",
+      "wordCount": 12261,
+      "readingTime": 50,
+      "views": 355,
+      "likes": 52,
+      "filePath": "/static/md/interview/frontend-engineering.md",
+      "searchText": "前端工程化 前端工程化\n\n是指将软件工程的方法和理念应用到前端开发中，以提高开发效率、保证项目质量、加快交付速度，并确保项目的可维护性和可扩展性。随着互联网技术的发展和用户需求的日益增长，前端工程化已经成为现代前端开发不可或缺的一部分。\n\n前端工程化的关键组成部分：\n\n1. 模块化：将复杂的前端应用分解为独立的... mvvm 模块化 前端异常监控 interview"
+    },
+    {
+      "id": "link-programming-books",
+      "title": "编程书籍",
+      "summary": "CSS/HTML\n\n[学习CSS布局](http://zh.learnlayout.com/)\n\n[通用 CSS 笔记、建议与指导](https://github.com/chadluo/CSS-Guidelines/blob/master/README.md)\n\n[CSS参考手册](http://...",
+      "category": "link",
+      "tags": [
+        "链接"
+      ],
+      "author": "博主",
+      "date": "2021-01-01T18:00:00.000Z",
+      "wordCount": 1057,
+      "readingTime": 5,
+      "views": 974,
+      "likes": 57,
+      "filePath": "/static/md/link/programming-books.md",
+      "searchText": "编程书籍 css/html\n\n[学习css布局](http://zh.learnlayout.com/)\n\n[通用 css 笔记、建议与指导](https://github.com/chadluo/css-guidelines/blob/master/readme.md)\n\n[css参考手册](http://... 链接 link"
+    },
+    {
+      "id": "interview-frontend-resume",
+      "title": "前端简历",
+      "summary": "如今前端市场一片混乱，典型的金字塔形状，前端从业人员很多，但高级开发及以上却非常稀缺。前端招聘也是所有猎头及 HR 的痛点所在，在这种混乱的环境中，如何让自己突出重围？需要实力，也需要技巧。这里的技巧指的就是如何写一份好的前端简历\n\n\n\n注意事项\n\n开发者最好像做项目一样维护一份自己的简历，需要的时...",
+      "category": "interview",
+      "tags": [
+        "简历"
+      ],
+      "author": "博主",
+      "date": "2020-12-21T14:38:24.000Z",
+      "wordCount": 571,
+      "readingTime": 3,
+      "views": 601,
+      "likes": 80,
+      "filePath": "/static/md/interview/frontend-resume.md",
+      "searchText": "前端简历 如今前端市场一片混乱，典型的金字塔形状，前端从业人员很多，但高级开发及以上却非常稀缺。前端招聘也是所有猎头及 hr 的痛点所在，在这种混乱的环境中，如何让自己突出重围？需要实力，也需要技巧。这里的技巧指的就是如何写一份好的前端简历\n\n\n\n注意事项\n\n开发者最好像做项目一样维护一份自己的简历，需要的时... 简历 interview"
+    },
+    {
+      "id": "knowledges-qianduantongxin",
+      "title": "前端通信",
+      "summary": "前言\n\n前端通信类的问题，主要包括以下内容：\n\n前后端如何通信：如果你不准备，估计也就只能说出ajax。这个可以考察出知识面。\n\n如何创建Ajax\n\n> Ajax在前后端通信中经常用到。做业务时，可以借助第三方的库，比如vue框架里的库、jQuery也有封装好的方法。但如果让你用原生的js去实现，该...",
+      "category": "knowledges",
+      "tags": [
+        "同源策略",
+        "通信方式",
+        "Ajax",
+        "JSON",
+        "跨域通信",
+        "异步"
+      ],
+      "author": "博主",
+      "date": "2020-12-10T21:51:01.000Z",
+      "wordCount": 7515,
+      "readingTime": 31,
+      "views": 949,
+      "likes": 17,
+      "filePath": "/static/md/knowledges/qianduantongxin.md",
+      "searchText": "前端通信 前言\n\n前端通信类的问题，主要包括以下内容：\n\n前后端如何通信：如果你不准备，估计也就只能说出ajax。这个可以考察出知识面。\n\n如何创建ajax\n\n> ajax在前后端通信中经常用到。做业务时，可以借助第三方的库，比如vue框架里的库、jquery也有封装好的方法。但如果让你用原生的js去实现，该... 同源策略 通信方式 ajax json 跨域通信 异步 knowledges"
+    },
+    {
+      "id": "knowledges-frontend-new-tech",
+      "title": "前端新技术",
+      "summary": "TypeScript\n\nTypeScript 扩展了JavaScript语法，任何已经存在的JavaScript程序，可以不加任何改动，在TypeScript环境下运行。TypeScript只是向JavaScript添加了一些新的遵循ES6规范的语法，以及基于类的面向对象编程的这种特性。\n\nType...",
+      "category": "knowledges",
+      "tags": [
+        "前端新技术"
+      ],
+      "author": "博主",
+      "date": "2020-11-24T15:26:47.000Z",
+      "wordCount": 5855,
+      "readingTime": 24,
+      "views": 330,
+      "likes": 53,
+      "filePath": "/static/md/knowledges/frontend-new-tech.md",
+      "searchText": "前端新技术 typescript\n\ntypescript 扩展了javascript语法，任何已经存在的javascript程序，可以不加任何改动，在typescript环境下运行。typescript只是向javascript添加了一些新的遵循es6规范的语法，以及基于类的面向对象编程的这种特性。\n\ntype... 前端新技术 knowledges"
+    },
+    {
+      "id": "knowledges-frontend-knowledge-links",
+      "title": "前端知识",
+      "summary": "前端开发知识点\n\n![front-end dev skills](https://raw.githubusercontent.com/dwqs/fedHandlebook/master/images/front-end-skills.png)\n\n对于任何类型的前端开发人员, HTML, CSS, D...",
+      "category": "knowledges",
+      "tags": [
+        "前端技能",
+        "PS",
+        "Git",
+        "SEO",
+        "重构",
+        "前端",
+        "移动端"
+      ],
+      "author": "博主",
+      "date": "2020-11-17T20:30:00.000Z",
+      "wordCount": 4957,
+      "readingTime": 20,
+      "views": 906,
+      "likes": 67,
+      "filePath": "/static/md/knowledges/frontend-knowledge-links.md",
+      "searchText": "前端知识 前端开发知识点\n\n![front-end dev skills](https://raw.githubusercontent.com/dwqs/fedhandlebook/master/images/front-end-skills.png)\n\n对于任何类型的前端开发人员, html, css, d... 前端技能 ps git seo 重构 前端 移动端 knowledges"
+    },
+    {
+      "id": "knowledges-web-design-patterns",
+      "title": "网页设计模式",
+      "summary": "全屏网页设计(Full Screen Design)\n\n网站设计制作所谓设计不分家，近年来平面设计里“纯净”“留白”等概念也被互联网设计吸取，为了更简单明了的突出主体，提供更舒适的感官感受，很多网站开始采用全屏网页设计，利用精心挑选设计的漂亮背景，加上合理的页面布局，视觉冲击力大可很好的吸引观者注意...",
+      "category": "knowledges",
+      "tags": [
+        "设计模式",
+        "网页设计"
+      ],
+      "author": "博主",
+      "date": "2020-10-28T15:55:55.000Z",
+      "wordCount": 3403,
+      "readingTime": 14,
+      "views": 225,
+      "likes": 109,
+      "filePath": "/static/md/knowledges/web-design-patterns.md",
+      "searchText": "网页设计模式 全屏网页设计(full screen design)\n\n网站设计制作所谓设计不分家，近年来平面设计里“纯净”“留白”等概念也被互联网设计吸取，为了更简单明了的突出主体，提供更舒适的感官感受，很多网站开始采用全屏网页设计，利用精心挑选设计的漂亮背景，加上合理的页面布局，视觉冲击力大可很好的吸引观者注意... 设计模式 网页设计 knowledges"
+    },
+    {
+      "id": "knowledges-mini-program",
+      "title": "小程序",
+      "summary": "px、em、rem、rpx 用法 与 区别\n\nPX\n\npx像素（Pixel）。相对长度单位。像素px是相对于显示器屏幕分辨率而言的。\n\nPX特点\n\n1. IE无法调整那些使用px作为单位的字体大小；\n2. 国外的大部分网站能够调整的原因在于其使用了em或rem作为字体单位；\n3. Firefox能够...",
+      "category": "knowledges",
+      "tags": [
+        "小程序"
+      ],
+      "author": "博主",
+      "date": "2020-09-30T16:25:46.000Z",
+      "wordCount": 2514,
+      "readingTime": 11,
+      "views": 842,
+      "likes": 82,
+      "filePath": "/static/md/knowledges/mini-program.md",
+      "searchText": "小程序 px、em、rem、rpx 用法 与 区别\n\npx\n\npx像素（pixel）。相对长度单位。像素px是相对于显示器屏幕分辨率而言的。\n\npx特点\n\n1. ie无法调整那些使用px作为单位的字体大小；\n2. 国外的大部分网站能够调整的原因在于其使用了em或rem作为字体单位；\n3. firefox能够... 小程序 knowledges"
+    },
+    {
+      "id": "knowledges-responsive-layout",
+      "title": "响应式布局",
+      "summary": "响应式布局\n\nResponsive design，意在实现不同屏幕分辨率的终端上浏览网页的不同展示方式。通过响应式设计能使网站在手机和平板电脑上有更好的浏览阅读体验。屏幕尺寸不一样展示给用户的网页内容也不一样，我们利用媒体查询可以检测到屏幕的尺寸（主要检测宽度），并设置不同的CSS样式，就可以实现响...",
+      "category": "knowledges",
+      "tags": [
+        "响应式布局",
+        "网页设计"
+      ],
+      "author": "博主",
+      "date": "2020-09-29T16:25:46.000Z",
+      "wordCount": 3046,
+      "readingTime": 13,
+      "views": 788,
+      "likes": 46,
+      "filePath": "/static/md/knowledges/responsive-layout.md",
+      "searchText": "响应式布局 响应式布局\n\nresponsive design，意在实现不同屏幕分辨率的终端上浏览网页的不同展示方式。通过响应式设计能使网站在手机和平板电脑上有更好的浏览阅读体验。屏幕尺寸不一样展示给用户的网页内容也不一样，我们利用媒体查询可以检测到屏幕的尺寸（主要检测宽度），并设置不同的css样式，就可以实现响... 响应式布局 网页设计 knowledges"
+    },
+    {
+      "id": "knowledges-performance-optimization",
+      "title": "性能优化",
+      "summary": "如何进行网站性能优化\n\n减少HTTP请求\n\n- CSS精灵（CSS Sprites）\n- inline Image\n- 合并样式和脚本\n- 初始首屏之外的图片资源按需加载，静态资源延迟加载\n\n文件大小\n\n- JS、CSS 源码压缩\n- 图片大小控制合适、压缩图片\n- CSS/JS minify，减少...",
+      "category": "knowledges",
+      "tags": [
+        "性能优化",
+        "渲染优化",
+        "网络优化"
+      ],
+      "author": "博主",
+      "date": "2020-09-05T17:46:24.000Z",
+      "wordCount": 6040,
+      "readingTime": 25,
+      "views": 499,
+      "likes": 88,
+      "filePath": "/static/md/knowledges/performance-optimization.md",
+      "searchText": "性能优化 如何进行网站性能优化\n\n减少http请求\n\n- css精灵（css sprites）\n- inline image\n- 合并样式和脚本\n- 初始首屏之外的图片资源按需加载，静态资源延迟加载\n\n文件大小\n\n- js、css 源码压缩\n- 图片大小控制合适、压缩图片\n- css/js minify，减少... 性能优化 渲染优化 网络优化 knowledges"
+    },
+    {
+      "id": "knowledges-Git",
+      "title": "Git",
+      "summary": "Git是什么\n\nGit是目前世界上最先进的分布式版本控制系统（没有之一）\n\n版本控制\n\n版本控制（Version Control）的作用是追踪文件的变化。为什么需要版本控制？简单说，就是当你出错了，可以很容易地回到没出错时的状态。\n\n为什么使用GIT\n\nGit有很多优势，其中之一就是远程操作非常简便...",
+      "category": "knowledges",
+      "tags": [
+        "Git"
+      ],
+      "author": "博主",
+      "date": "2020-08-31T22:30:10.000Z",
+      "wordCount": 11059,
+      "readingTime": 45,
+      "views": 400,
+      "likes": 94,
+      "filePath": "/static/md/knowledges/Git.md",
+      "searchText": "git git是什么\n\ngit是目前世界上最先进的分布式版本控制系统（没有之一）\n\n版本控制\n\n版本控制（version control）的作用是追踪文件的变化。为什么需要版本控制？简单说，就是当你出错了，可以很容易地回到没出错时的状态。\n\n为什么使用git\n\ngit有很多优势，其中之一就是远程操作非常简便... git knowledges"
+    },
+    {
+      "id": "knowledges-css-image-background",
+      "title": "CSS图片背景",
+      "summary": "解决img标签下边距的问题\n\n> 问题描述：如果img标签下跟一个块级标签，那么两者之间会出现一条缝隙。\n>\n> 原因：原因是行级标签具有自身的定位，图片默认的垂直对齐方式是基线(vertical-align: baseline)\n\n解决方案1：\n\n将图片转成块级元素即可(display: bloc...",
+      "category": "knowledges",
+      "tags": [
+        "CSS"
+      ],
+      "author": "博主",
+      "date": "2020-08-31T22:30:10.000Z",
+      "wordCount": 3312,
+      "readingTime": 14,
+      "views": 986,
+      "likes": 65,
+      "filePath": "/static/md/knowledges/css-image-background.md",
+      "searchText": "css图片背景 解决img标签下边距的问题\n\n> 问题描述：如果img标签下跟一个块级标签，那么两者之间会出现一条缝隙。\n>\n> 原因：原因是行级标签具有自身的定位，图片默认的垂直对齐方式是基线(vertical-align: baseline)\n\n解决方案1：\n\n将图片转成块级元素即可(display: bloc... css knowledges"
+    },
+    {
+      "id": "knowledges-css-animation",
+      "title": "CSS动效",
+      "summary": "Web 动画\n\n综合学习:\n\n* [Web 动画的历史](https://www.codeschool.com/courses/adventures-in-web-animations) [watch][$]\n* [Snap.svg 动画](https://webdesign.tutsplus.co...",
+      "category": "knowledges",
+      "tags": [
+        "CSS"
+      ],
+      "author": "博主",
+      "date": "2020-08-30T22:30:10.000Z",
+      "wordCount": 2462,
+      "readingTime": 10,
+      "views": 886,
+      "likes": 85,
+      "filePath": "/static/md/knowledges/css-animation.md",
+      "searchText": "css动效 web 动画\n\n综合学习:\n\n* [web 动画的历史](https://www.codeschool.com/courses/adventures-in-web-animations) [watch][$]\n* [snap.svg 动画](https://webdesign.tutsplus.co... css knowledges"
+    },
+    {
+      "id": "knowledges-css-optimization",
+      "title": "CSS优化",
+      "summary": "前言\n\n随着互联网发展至今，对于网站来说，性能显的越来越重要了，CSS作为页面渲染和内容展现的重要环节，影响着用户对整个网站的第一体验。所以，我们需要重视与CSS相关的性能优化。\n\n项目开发初期我们可能因为各种原因（很大一部分原因是因为项目工期，产品往往把项目上线时间卡的死死的，根本不听你说的什么性...",
+      "category": "knowledges",
+      "tags": [
+        "CSS",
+        "选择器"
+      ],
+      "author": "博主",
+      "date": "2020-08-30T22:30:10.000Z",
+      "wordCount": 5325,
+      "readingTime": 22,
+      "views": 530,
+      "likes": 78,
+      "filePath": "/static/md/knowledges/css-optimization.md",
+      "searchText": "css优化 前言\n\n随着互联网发展至今，对于网站来说，性能显的越来越重要了，css作为页面渲染和内容展现的重要环节，影响着用户对整个网站的第一体验。所以，我们需要重视与css相关的性能优化。\n\n项目开发初期我们可能因为各种原因（很大一部分原因是因为项目工期，产品往往把项目上线时间卡的死死的，根本不听你说的什么性... css 选择器 knowledges"
+    },
+    {
+      "id": "knowledges-flex",
+      "title": "flex",
+      "summary": "Flex 布局教程：语法篇\n\n网页布局（layout）是 CSS 的一个重点应用。\n\n![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/69874e688dfe4f758a22e94ebd66a72d~tplv-k3u1fbpfcp-z...",
+      "category": "knowledges",
+      "tags": [
+        "CSS",
+        "选择器",
+        "flex"
+      ],
+      "author": "博主",
+      "date": "2020-08-30T22:30:10.000Z",
+      "wordCount": 3745,
+      "readingTime": 15,
+      "views": 620,
+      "likes": 79,
+      "filePath": "/static/md/knowledges/flex.md",
+      "searchText": "flex flex 布局教程：语法篇\n\n网页布局（layout）是 css 的一个重点应用。\n\n![img](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/69874e688dfe4f758a22e94ebd66a72d~tplv-k3u1fbpfcp-z... css 选择器 flex knowledges"
+    },
+    {
+      "id": "knowledges-CSS",
+      "title": "CSS",
+      "summary": "前端水平垂直居中的十种方法\n\n第1种： 弹性盒子的方式\n\n> 通过给父元素设置justify-content: center;\n>\n> align-items: center;就可以了\n>\n\n优点： 移动端使用灵活自如\n\n缺点： pc端需要根据兼容情况来判定\n\n第2种： line-height\n\n>...",
+      "category": "knowledges",
+      "tags": [
+        "CSS",
+        "选择器",
+        "盒子模型"
+      ],
+      "author": "博主",
+      "date": "2020-08-29T22:30:10.000Z",
+      "wordCount": 27850,
+      "readingTime": 112,
+      "views": 697,
+      "likes": 32,
+      "filePath": "/static/md/knowledges/CSS.md",
+      "searchText": "css 前端水平垂直居中的十种方法\n\n第1种： 弹性盒子的方式\n\n> 通过给父元素设置justify-content: center;\n>\n> align-items: center;就可以了\n>\n\n优点： 移动端使用灵活自如\n\n缺点： pc端需要根据兼容情况来判定\n\n第2种： line-height\n\n>... css 选择器 盒子模型 knowledges"
+    },
+    {
+      "id": "knowledges-yarn",
+      "title": "yarn",
+      "summary": "什么是 yarn\n\nYarn 是 facebook 发布的一款取代 npm 的包管理工具。\n\n\n\nyarn 的特点\n\n速度超快。\nYarn 缓存了每个下载过的包, 所以再次使用时无需重复下载。 同时利用并行下载以最大化资源利用率, 因此安装速度更快。\n\n超级安全。\n在执行代码之前, Yarn 会通过...",
+      "category": "knowledges",
+      "tags": [
+        "yarn"
+      ],
+      "author": "博主",
+      "date": "2020-08-27T19:21:17.000Z",
+      "wordCount": 4174,
+      "readingTime": 17,
+      "views": 463,
+      "likes": 85,
+      "filePath": "/static/md/knowledges/yarn.md",
+      "searchText": "yarn 什么是 yarn\n\nyarn 是 facebook 发布的一款取代 npm 的包管理工具。\n\n\n\nyarn 的特点\n\n速度超快。\nyarn 缓存了每个下载过的包, 所以再次使用时无需重复下载。 同时利用并行下载以最大化资源利用率, 因此安装速度更快。\n\n超级安全。\n在执行代码之前, yarn 会通过... yarn knowledges"
+    },
+    {
+      "id": "interview-ES6",
+      "title": "ES6",
+      "summary": "ES6（2015）\n\nES6 中的一些新特性\n\nES6 即 ECMAScript 2015，是 JavaScript 的新一代标准。\n\n- 块级作用域：使用 let 和 const 关键字声明块级作用域的变量和常量，避免变量污染和重复定义。\n- 箭头函数：可以更简洁地定义函数，并且它的 this 值...",
+      "category": "interview",
+      "tags": [
+        "JavaScript",
+        "ES6"
+      ],
+      "author": "博主",
+      "date": "2020-08-13T11:42:39.000Z",
+      "wordCount": 7073,
+      "readingTime": 29,
+      "views": 807,
+      "likes": 91,
+      "filePath": "/static/md/interview/ES6.md",
+      "searchText": "es6 es6（2015）\n\nes6 中的一些新特性\n\nes6 即 ecmascript 2015，是 javascript 的新一代标准。\n\n- 块级作用域：使用 let 和 const 关键字声明块级作用域的变量和常量，避免变量污染和重复定义。\n- 箭头函数：可以更简洁地定义函数，并且它的 this 值... javascript es6 interview"
+    },
+    {
+      "id": "knowledges-html-knowledge",
+      "title": "HTML知识点",
+      "summary": "HTML5语义化标签\n\n| 标签         | 描述                                                       |\n| ------------ | -----------------------------------------------...",
+      "category": "knowledges",
+      "tags": [
+        "HTML",
+        "语义化"
+      ],
+      "author": "博主",
+      "date": "2020-07-28T12:12:12.000Z",
+      "wordCount": 1569,
+      "readingTime": 7,
+      "views": 696,
+      "likes": 93,
+      "filePath": "/static/md/knowledges/html-knowledge.md",
+      "searchText": "html知识点 html5语义化标签\n\n| 标签         | 描述                                                       |\n| ------------ | -----------------------------------------------... html 语义化 knowledges"
+    },
+    {
+      "id": "knowledges-HTML",
+      "title": "HTML",
+      "summary": "HTML是什么\n\nHTML的全称为超文本标记语言，是一种标记语言。它包括一系列标签．通过这些标签可以将网络上的文档格式统一，使分散的资源连接为一个逻辑整体。HTML文本是由HTML命令组成的描述性文本。\n\n\n\nHTML中元素分类\n\nHTML中元素可分：行内元素(inline)、块级元素(block)...",
+      "category": "knowledges",
+      "tags": [
+        "HTML",
+        "Web",
+        "标签",
+        "浏览器"
+      ],
+      "author": "博主",
+      "date": "2020-07-26T11:11:11.000Z",
+      "wordCount": 29286,
+      "readingTime": 118,
+      "views": 79,
+      "likes": 100,
+      "filePath": "/static/md/knowledges/HTML.md",
+      "searchText": "html html是什么\n\nhtml的全称为超文本标记语言，是一种标记语言。它包括一系列标签．通过这些标签可以将网络上的文档格式统一，使分散的资源连接为一个逻辑整体。html文本是由html命令组成的描述性文本。\n\n\n\nhtml中元素分类\n\nhtml中元素可分：行内元素(inline)、块级元素(block)... html web 标签 浏览器 knowledges"
+    },
+    {
+      "id": "interview-HTTP",
+      "title": "HTTP",
+      "summary": "超文本传输协议（HTTP）介绍\n\n超文本传输协议（HyperText Transfer Protocol，HTTP）是从服务器传输数据到客户端的传输协议。\n\nHTTP 的主要特点\n\n1. 支持客户/服务器模式。\n2. 简单快速：客户向服务器请求服务时，只需传送请求方法和路径。由于HTTP协议简单，使...",
+      "category": "interview",
+      "tags": [
+        "HTTP",
+        "前端通信"
+      ],
+      "author": "博主",
+      "date": "2020-07-06T17:52:49.000Z",
+      "wordCount": 11880,
+      "readingTime": 48,
+      "views": 766,
+      "likes": 19,
+      "filePath": "/static/md/interview/HTTP.md",
+      "searchText": "http 超文本传输协议（http）介绍\n\n超文本传输协议（hypertext transfer protocol，http）是从服务器传输数据到客户端的传输协议。\n\nhttp 的主要特点\n\n1. 支持客户/服务器模式。\n2. 简单快速：客户向服务器请求服务时，只需传送请求方法和路径。由于http协议简单，使... http 前端通信 interview"
+    },
+    {
+      "id": "interview-javascriptxshiti",
+      "title": "JavaScript笔试题",
+      "summary": "事件循环\n\n结果和解释\n\n\n\n这段代码的执行顺序及解释如下：\n\n输出顺序：2 → 7 → 3 → 6 → 1 → 4 → 5\n\n详细解释：\n\n1. 主线程执行（同步代码）：\n   • new Promise 的构造函数立即执行，输出 2。\n   • console.log(\"7\") 直接执行，输出...",
+      "category": "interview",
+      "tags": [
+        "JavaScript",
+        "DOM",
+        "BOM"
+      ],
+      "author": "博主",
+      "date": "2020-06-16T10:24:57.000Z",
+      "wordCount": 3199,
+      "readingTime": 13,
+      "views": 148,
+      "likes": 10,
+      "filePath": "/static/md/interview/javascriptxshiti.md",
+      "searchText": "javascript笔试题 事件循环\n\n结果和解释\n\n\n\n这段代码的执行顺序及解释如下：\n\n输出顺序：2 → 7 → 3 → 6 → 1 → 4 → 5\n\n详细解释：\n\n1. 主线程执行（同步代码）：\n   • new promise 的构造函数立即执行，输出 2。\n   • console.log(\"7\") 直接执行，输出... javascript dom bom interview"
+    },
+    {
+      "id": "interview-javascriptmianshiti",
+      "title": "JavaScript面试题",
+      "summary": "1.undefined 和 null 有什么区别？\n\n在理解undefined和null之间的差异之前，我们先来看看它们的相似类。\n\n它们属于 JavaScript 的 7 种基本类型。\n\n\n\n它们是属于虚值，可以使用Boolean(value)或!!value将其转换为布尔值时，值为false。...",
+      "category": "interview",
+      "tags": [
+        "JavaScript",
+        "DOM",
+        "BOM"
+      ],
+      "author": "博主",
+      "date": "2020-06-15T10:24:57.000Z",
+      "wordCount": 19306,
+      "readingTime": 78,
+      "views": 606,
+      "likes": 37,
+      "filePath": "/static/md/interview/javascriptmianshiti.md",
+      "searchText": "javascript面试题 1.undefined 和 null 有什么区别？\n\n在理解undefined和null之间的差异之前，我们先来看看它们的相似类。\n\n它们属于 javascript 的 7 种基本类型。\n\n\n\n它们是属于虚值，可以使用boolean(value)或!!value将其转换为布尔值时，值为false。... javascript dom bom interview"
+    },
+    {
+      "id": "knowledges-javascript-code-optimization",
+      "title": "JavaScript代码优化",
+      "summary": "JavaScript小技巧\n\n多个字符串检查\n\n通常，如果我们需要检查字符串是否等于多个值中的一个，往往很快会觉得疲惫不堪。幸运的是，JavaScript有一个内置的方法来帮助你解决这个问题。\n\n\n\n\n\nFor-of和For-in循环\n\nFor-of和For-in循环是迭代array或object的...",
+      "category": "knowledges",
+      "tags": [
+        "JavaScript",
+        "代码优化"
+      ],
+      "author": "博主",
+      "date": "2020-06-10T20:50:00.000Z",
+      "wordCount": 5308,
+      "readingTime": 22,
+      "views": 795,
+      "likes": 48,
+      "filePath": "/static/md/knowledges/javascript-code-optimization.md",
+      "searchText": "javascript代码优化 javascript小技巧\n\n多个字符串检查\n\n通常，如果我们需要检查字符串是否等于多个值中的一个，往往很快会觉得疲惫不堪。幸运的是，javascript有一个内置的方法来帮助你解决这个问题。\n\n\n\n\n\nfor-of和for-in循环\n\nfor-of和for-in循环是迭代array或object的... javascript 代码优化 knowledges"
+    },
+    {
+      "id": "knowledges-javascript-code-snippets",
+      "title": "JavaScript代码片段",
+      "summary": "> ❝ 本文翻译自 [19 Practical ES6 Snippets to Solve Common JS Problems](https://link.zhihu.com/?target=https\\\\%3A//madza.hashnode.dev/19-practical-es6-snipp...",
+      "category": "knowledges",
+      "tags": [
+        "JavaScript"
+      ],
+      "author": "博主",
+      "date": "2020-06-09T21:50:00.000Z",
+      "wordCount": 923,
+      "readingTime": 4,
+      "views": 881,
+      "likes": 21,
+      "filePath": "/static/md/knowledges/javascript-code-snippets.md",
+      "searchText": "javascript代码片段 > ❝ 本文翻译自 [19 practical es6 snippets to solve common js problems](https://link.zhihu.com/?target=https\\\\%3a//madza.hashnode.dev/19-practical-es6-snipp... javascript knowledges"
+    },
+    {
+      "id": "knowledges-javascriptxbao",
+      "title": "JavaScript闭包",
+      "summary": "说说你对闭包的理解（什么是闭包（closure），为什么要用它？）\n\n使用闭包主要是为了设计私有的方法和变量。闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量，利用闭包可以突破作用链域。在js中，函数即闭包，只有...",
+      "category": "knowledges",
+      "tags": [
+        "JavaScript",
+        "闭包"
+      ],
+      "author": "博主",
+      "date": "2020-06-09T20:50:00.000Z",
+      "wordCount": 1651,
+      "readingTime": 7,
+      "views": 578,
+      "likes": 65,
+      "filePath": "/static/md/knowledges/javascriptxbao.md",
+      "searchText": "javascript闭包 说说你对闭包的理解（什么是闭包（closure），为什么要用它？）\n\n使用闭包主要是为了设计私有的方法和变量。闭包是指有权访问另一个函数作用域中变量的函数，创建闭包的最常见的方式就是在一个函数内创建另一个函数，通过另一个函数访问这个函数的局部变量，利用闭包可以突破作用链域。在js中，函数即闭包，只有... javascript 闭包 knowledges"
+    },
+    {
+      "id": "knowledges-ES6",
+      "title": "ES6",
+      "summary": "async函数\n\nES2017 标准引入了 async 函数，使得异步操作变得更加方便。\n\nasync 函数是 Generator 函数的语法糖\n\n> 什么是语法糖？\n>\n> 意指那些没有给计算机语言添加新功能，而只是对人类来说更“甜蜜”的语法。语法糖往往给程序员提供了更实用的编码方式，有益于更好的...",
+      "category": "knowledges",
+      "tags": [
+        "JavaScript"
+      ],
+      "author": "博主",
+      "date": "2020-06-08T20:50:00.000Z",
+      "wordCount": 2809,
+      "readingTime": 12,
+      "views": 323,
+      "likes": 40,
+      "filePath": "/static/md/knowledges/ES6.md",
+      "searchText": "es6 async函数\n\nes2017 标准引入了 async 函数，使得异步操作变得更加方便。\n\nasync 函数是 generator 函数的语法糖\n\n> 什么是语法糖？\n>\n> 意指那些没有给计算机语言添加新功能，而只是对人类来说更“甜蜜”的语法。语法糖往往给程序员提供了更实用的编码方式，有益于更好的... javascript knowledges"
+    },
+    {
+      "id": "interview-javascript-challenges",
+      "title": "JavaScript难题",
+      "summary": "国外某网站给出了44道JS难题，试着做了下，只做对了17道。这些题涉及面非常广，涵盖JS原型、函数细节、强制转换、闭包等知识，而且都是非常细节的东西，透过这些小细节可以折射出很多高级的JS知识点。\n\n你可以通过[传送门](https://link.jianshu.com?t=http://javas...",
+      "category": "interview",
+      "tags": [
+        "JavaScript",
+        "编程题"
+      ],
+      "author": "博主",
+      "date": "2020-05-29T10:41:39.000Z",
+      "wordCount": 4516,
+      "readingTime": 19,
+      "views": 991,
+      "likes": 37,
+      "filePath": "/static/md/interview/javascript-challenges.md",
+      "searchText": "javascript难题 国外某网站给出了44道js难题，试着做了下，只做对了17道。这些题涉及面非常广，涵盖js原型、函数细节、强制转换、闭包等知识，而且都是非常细节的东西，透过这些小细节可以折射出很多高级的js知识点。\n\n你可以通过[传送门](https://link.jianshu.com?t=http://javas... javascript 编程题 interview"
+    },
+    {
+      "id": "interview-javascriptxchengti",
+      "title": "JavaScript编程题",
+      "summary": "常考代码题\n\n防抖和节流区别\n\n防抖（Debouncing）和节流（Throttling）是前端开发中用来优化性能的两种常见技术，主要用于控制函数调用的频率。它们通常用于处理那些可能在短时间内被频繁触发的事件，如窗口调整大小、滚动、输入框内容变化等。\n\n防抖（Debouncing）\n\n防抖的原理是：...",
+      "category": "interview",
+      "tags": [
+        "JavaScript",
+        "算法",
+        "编程题"
+      ],
+      "author": "博主",
+      "date": "2020-05-28T10:41:39.000Z",
+      "wordCount": 12097,
+      "readingTime": 49,
+      "views": 247,
+      "likes": 47,
+      "filePath": "/static/md/interview/javascriptxchengti.md",
+      "searchText": "javascript编程题 常考代码题\n\n防抖和节流区别\n\n防抖（debouncing）和节流（throttling）是前端开发中用来优化性能的两种常见技术，主要用于控制函数调用的频率。它们通常用于处理那些可能在短时间内被频繁触发的事件，如窗口调整大小、滚动、输入框内容变化等。\n\n防抖（debouncing）\n\n防抖的原理是：... javascript 算法 编程题 interview"
+    },
+    {
+      "id": "interview-javascript-uncommon",
+      "title": "JavaScript不常考",
+      "summary": "如何测试前端代码? 知道 BDD, TDD, Unit Test 么? 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qUnit..)\n\n了解 BDD 行为驱动开发与 TDD 测试驱动开发已经单元测试相关概念\n\n\n\n检测浏览器版本版本有哪些方式？\n\n- 根据 navigat...",
+      "category": "interview",
+      "tags": [
+        "JavaScript",
+        "DOM",
+        "BOM"
+      ],
+      "author": "博主",
+      "date": "2020-05-18T20:41:19.000Z",
+      "wordCount": 8239,
+      "readingTime": 33,
+      "views": 485,
+      "likes": 97,
+      "filePath": "/static/md/interview/javascript-uncommon.md",
+      "searchText": "javascript不常考 如何测试前端代码? 知道 bdd, tdd, unit test 么? 知道怎么测试你的前端工程么(mocha, sinon, jasmin, qunit..)\n\n了解 bdd 行为驱动开发与 tdd 测试驱动开发已经单元测试相关概念\n\n\n\n检测浏览器版本版本有哪些方式？\n\n- 根据 navigat... javascript dom bom interview"
+    },
+    {
+      "id": "knowledges-mianxiangduix",
+      "title": "面向对象",
+      "summary": "面向对象的程序设计\n\n什么是面向对象？谈谈对面向对象的理解？\n\n面向对象。它是指把数据与数据的操作方法放在一起，作为一个相互依赖的 整体，即对象。对同类对象抽象出其共性，及类，类中的大多数数据，只能被本类进行处理。站在抽象的角度，例如人，特征，行为。\n\n面向对象是把构成问题事务分解成各个对象，建立对...",
+      "category": "knowledges",
+      "tags": [
+        "JavaScript",
+        "类",
+        "对象"
+      ],
+      "author": "博主",
+      "date": "2020-04-19T12:18:49.000Z",
+      "wordCount": 10548,
+      "readingTime": 43,
+      "views": 962,
+      "likes": 89,
+      "filePath": "/static/md/knowledges/mianxiangduix.md",
+      "searchText": "面向对象 面向对象的程序设计\n\n什么是面向对象？谈谈对面向对象的理解？\n\n面向对象。它是指把数据与数据的操作方法放在一起，作为一个相互依赖的 整体，即对象。对同类对象抽象出其共性，及类，类中的大多数数据，只能被本类进行处理。站在抽象的角度，例如人，特征，行为。\n\n面向对象是把构成问题事务分解成各个对象，建立对... javascript 类 对象 knowledges"
+    },
+    {
+      "id": "knowledges-javascriptduix",
+      "title": "JavaScript对象",
+      "summary": "操作对象\n\n1.Object.assign()\n\n用于拼接，或者创建一个新对象\n\n拼接：相同字段后面会覆盖前面的\n\n\n\n创建新对象：\n\n\n\n2.delete\n\n删除对象某个属性\n\n\n\n3.Object.keys()\n\n返回对象可枚举属性（返回一个数组）\n\n\n\n4.Object.values()\n\n返...",
+      "category": "knowledges",
+      "tags": [
+        "JavaScript",
+        "类",
+        "对象"
+      ],
+      "author": "博主",
+      "date": "2020-04-18T22:10:40.000Z",
+      "wordCount": 11606,
+      "readingTime": 47,
+      "views": 571,
+      "likes": 13,
+      "filePath": "/static/md/knowledges/javascriptduix.md",
+      "searchText": "javascript对象 操作对象\n\n1.object.assign()\n\n用于拼接，或者创建一个新对象\n\n拼接：相同字段后面会覆盖前面的\n\n\n\n创建新对象：\n\n\n\n2.delete\n\n删除对象某个属性\n\n\n\n3.object.keys()\n\n返回对象可枚举属性（返回一个数组）\n\n\n\n4.object.values()\n\n返... javascript 类 对象 knowledges"
+    },
+    {
+      "id": "knowledges-javascript-functions",
+      "title": "JavaScript函数",
+      "summary": "内置函数(原生函数)\n\n- String\n- Number\n- Boolean\n- Object\n- Function\n- Array\n- Date\n- RegExp\n- Error\n- Symbol\n\n\n\n简述创建函数的几种方式\n\n\n\n\n\nJavaScript 中，调用函数有哪几种方式？\n\n* 方...",
+      "category": "knowledges",
+      "tags": [
+        "JavaScript",
+        "函数"
+      ],
+      "author": "博主",
+      "date": "2020-04-05T21:10:40.000Z",
+      "wordCount": 3748,
+      "readingTime": 15,
+      "views": 631,
+      "likes": 53,
+      "filePath": "/static/md/knowledges/javascript-functions.md",
+      "searchText": "javascript函数 内置函数(原生函数)\n\n- string\n- number\n- boolean\n- object\n- function\n- array\n- date\n- regexp\n- error\n- symbol\n\n\n\n简述创建函数的几种方式\n\n\n\n\n\njavascript 中，调用函数有哪几种方式？\n\n* 方... javascript 函数 knowledges"
+    },
+    {
+      "id": "knowledges-javascriptrixshijian",
+      "title": "JavaScript日期时间",
+      "summary": "js获取当前年月日\n\n\n\n\n\n比较两个日期\n\ngetTime() 是 JavaScript Date 对象的一个方法，它返回从 1970 年 1 月 1 日 UTC 00:00:00 起到调用此方法的日期对象所表示的时间的毫秒数。这个值通常被称为“时间戳”，并且对于比较日期和执行涉及时间的计算非常有...",
+      "category": "knowledges",
+      "tags": [
+        "JavaScript"
+      ],
+      "author": "博主",
+      "date": "2020-03-26T21:10:40.000Z",
+      "wordCount": 336,
+      "readingTime": 2,
+      "views": 798,
+      "likes": 64,
+      "filePath": "/static/md/knowledges/javascriptrixshijian.md",
+      "searchText": "javascript日期时间 js获取当前年月日\n\n\n\n\n\n比较两个日期\n\ngettime() 是 javascript date 对象的一个方法，它返回从 1970 年 1 月 1 日 utc 00:00:00 起到调用此方法的日期对象所表示的时间的毫秒数。这个值通常被称为“时间戳”，并且对于比较日期和执行涉及时间的计算非常有... javascript knowledges"
+    },
+    {
+      "id": "knowledges-javascript-class-object-inheritance",
+      "title": "JavaScript类、对象和继承",
+      "summary": "Javascript如何实现继承？\n\n继承的本质就是原型链。（这些问题必问的，其实就是考察你对原型链的掌握程度。）\n\n- 构造函数绑定：使用 call 或 apply 方法，将父对象的构造函数绑定在子对象上\n\n\n\n- 实例继承：将子对象的 prototype 指向父对象的一个实例     \n\n\n\n-...",
+      "category": "knowledges",
+      "tags": [
+        "JavaScript",
+        "继承"
+      ],
+      "author": "博主",
+      "date": "2020-03-25T21:10:40.000Z",
+      "wordCount": 2577,
+      "readingTime": 11,
+      "views": 637,
+      "likes": 52,
+      "filePath": "/static/md/knowledges/javascript-class-object-inheritance.md",
+      "searchText": "javascript类、对象和继承 javascript如何实现继承？\n\n继承的本质就是原型链。（这些问题必问的，其实就是考察你对原型链的掌握程度。）\n\n- 构造函数绑定：使用 call 或 apply 方法，将父对象的构造函数绑定在子对象上\n\n\n\n- 实例继承：将子对象的 prototype 指向父对象的一个实例     \n\n\n\n-... javascript 继承 knowledges"
+    },
+    {
+      "id": "knowledges-javascript-events",
+      "title": "JavaScript事件",
+      "summary": "简介\n\n- JS和HTML之间的交互是通过事件实现的。事件，就是文档或浏览器窗口中发生的一些特定的交互瞬间。可以使用侦听器（或处理程序）来预定事件，以便事件发生时执行相应的代码，这种在传统工程中被称为观察员模式的模型，支持页面的行为（JS）与页面（CSSHTML）之间的松散耦合\n- IE8是最后一个...",
+      "category": "knowledges",
+      "tags": [
+        "JavaScript",
+        "事件"
+      ],
+      "author": "博主",
+      "date": "2020-03-07T21:10:40.000Z",
+      "wordCount": 11235,
+      "readingTime": 45,
+      "views": 801,
+      "likes": 21,
+      "filePath": "/static/md/knowledges/javascript-events.md",
+      "searchText": "javascript事件 简介\n\n- js和html之间的交互是通过事件实现的。事件，就是文档或浏览器窗口中发生的一些特定的交互瞬间。可以使用侦听器（或处理程序）来预定事件，以便事件发生时执行相应的代码，这种在传统工程中被称为观察员模式的模型，支持页面的行为（js）与页面（csshtml）之间的松散耦合\n- ie8是最后一个... javascript 事件 knowledges"
+    },
+    {
+      "id": "knowledges-javascript-data-processing",
+      "title": "JavaScript数据处理",
+      "summary": "js取整方法（四舍五入）总结\n\n\n\n1.round()方法：\n\nround（）方法把一个数字舍入为最接近的整数\n\n例子：\n\n\tconsole.log(Math.round(1.52))//输出2\n\tconsole.log(Math.round(1.12))//输出1\n\tconsole.log(Mat...",
+      "category": "knowledges",
+      "tags": [
+        "JavaScript",
+        "字符串",
+        "数组",
+        "对象"
+      ],
+      "author": "博主",
+      "date": "2020-02-14T18:24:00.000Z",
+      "wordCount": 2881,
+      "readingTime": 12,
+      "views": 420,
+      "likes": 14,
+      "filePath": "/static/md/knowledges/javascript-data-processing.md",
+      "searchText": "javascript数据处理 js取整方法（四舍五入）总结\n\n\n\n1.round()方法：\n\nround（）方法把一个数字舍入为最接近的整数\n\n例子：\n\n\tconsole.log(math.round(1.52))//输出2\n\tconsole.log(math.round(1.12))//输出1\n\tconsole.log(mat... javascript 字符串 数组 对象 knowledges"
+    },
+    {
+      "id": "knowledges-javascriptsuchabiao",
+      "title": "JavaScript速查表",
+      "summary": "JavaScript是一种轻量级、开源且跨平台的编程语言。它在现代开发中无处不在，被全世界的程序员用来创建动态的交互式 Web 内容，比如应用程序和浏览器。它是万维网的核心技术之一，与 HTML 和 CSS 并驾齐驱，并通过帮助创建美观且速度极快的网站，成为快速发展的互联网背后的强大动力。\n\n本文提...",
+      "category": "knowledges",
+      "tags": [
+        "JavaScript",
+        "数组"
+      ],
+      "author": "博主",
+      "date": "2020-02-07T21:10:40.000Z",
+      "wordCount": 3146,
+      "readingTime": 13,
+      "views": 825,
+      "likes": 88,
+      "filePath": "/static/md/knowledges/javascriptsuchabiao.md",
+      "searchText": "javascript速查表 javascript是一种轻量级、开源且跨平台的编程语言。它在现代开发中无处不在，被全世界的程序员用来创建动态的交互式 web 内容，比如应用程序和浏览器。它是万维网的核心技术之一，与 html 和 css 并驾齐驱，并通过帮助创建美观且速度极快的网站，成为快速发展的互联网背后的强大动力。\n\n本文提... javascript 数组 knowledges"
+    },
+    {
+      "id": "knowledges-javascript-arrays",
+      "title": "JavaScript数组",
+      "summary": "数组方法\n\n- Array.length：数组的大小\n\n- join()：用指定的分隔符将数组每一项拼接为字符串\n\n- push() ：向数组的末尾添加新元素，返回值为添加完后的数组的长度\n\n- pop()：删除数组的最后一项，返回值是删除的元素\n\n- shift()：删除数组的第一项， 返回值是删...",
+      "category": "knowledges",
+      "tags": [
+        "JavaScript",
+        "数组"
+      ],
+      "author": "博主",
+      "date": "2020-02-06T21:10:40.000Z",
+      "wordCount": 10832,
+      "readingTime": 44,
+      "views": 362,
+      "likes": 39,
+      "filePath": "/static/md/knowledges/javascript-arrays.md",
+      "searchText": "javascript数组 数组方法\n\n- array.length：数组的大小\n\n- join()：用指定的分隔符将数组每一项拼接为字符串\n\n- push() ：向数组的末尾添加新元素，返回值为添加完后的数组的长度\n\n- pop()：删除数组的最后一项，返回值是删除的元素\n\n- shift()：删除数组的第一项， 返回值是删... javascript 数组 knowledges"
+    },
+    {
+      "id": "knowledges-javascriptyuanxx",
+      "title": "JavaScript原型链",
+      "summary": "面向对象原理：\n\n​    1）目标：实现封装、继承、多态等面向对象的基本功能。\n\n​    2）原理：原型链是面向对象的基础,使用prototype、function 、new、this模拟面向对象的类。\n\n​          JavaScript是面向对象语言，但不使用类（根本不存在类）。Ja...",
+      "category": "knowledges",
+      "tags": [
+        "JavaScript",
+        "原型",
+        "原型链",
+        "instanceof"
+      ],
+      "author": "博主",
+      "date": "2020-01-31T15:10:08.000Z",
+      "wordCount": 1577,
+      "readingTime": 7,
+      "views": 471,
+      "likes": 53,
+      "filePath": "/static/md/knowledges/javascriptyuanxx.md",
+      "searchText": "javascript原型链 面向对象原理：\n\n​    1）目标：实现封装、继承、多态等面向对象的基本功能。\n\n​    2）原理：原型链是面向对象的基础,使用prototype、function 、new、this模拟面向对象的类。\n\n​          javascript是面向对象语言，但不使用类（根本不存在类）。ja... javascript 原型 原型链 instanceof knowledges"
+    },
+    {
+      "id": "knowledges-javascriptzhixdian",
+      "title": "JavaScript知识点",
+      "summary": "[TOC]\n\n概述\n\njs一门运行在浏览器语言\n\njs能做什么：\n\n- 动画效果\n- 页面交互效果\n- 表单提交\n- 与后台进行数据获取/传输\n- 操作页面dom\n- 操作浏览器\n- nodejs\n- 封装插件\n- 游戏/h5\n- …..\n\njs诞生记\n\n布兰登 . 艾奇    10天   函数式编...",
+      "category": "knowledges",
+      "tags": [
+        "JavaScript"
+      ],
+      "author": "博主",
+      "date": "2020-01-18T10:24:57.000Z",
+      "wordCount": 9067,
+      "readingTime": 37,
+      "views": 1018,
+      "likes": 94,
+      "filePath": "/static/md/knowledges/javascriptzhixdian.md",
+      "searchText": "javascript知识点 [toc]\n\n概述\n\njs一门运行在浏览器语言\n\njs能做什么：\n\n- 动画效果\n- 页面交互效果\n- 表单提交\n- 与后台进行数据获取/传输\n- 操作页面dom\n- 操作浏览器\n- nodejs\n- 封装插件\n- 游戏/h5\n- …..\n\njs诞生记\n\n布兰登 . 艾奇    10天   函数式编... javascript knowledges"
+    },
+    {
+      "id": "seo-seo-terminology",
+      "title": "SEO术语",
+      "summary": "TDK（网站TDK）\n\n seo页面中的页面描述与关键词设置。 \n\n其中\"T\"代表页头中的title元素，这里可能还要利用到[分词技术](https://baike.baidu.com/item/分词技术/9122911)，当标题(Title)写好后，我们就尽可能不要再去修改了，尽量简洁，没意义的词...",
+      "category": "seo",
+      "tags": [
+        "SEO"
+      ],
+      "author": "博主",
+      "date": "2020-01-14T18:00:00.000Z",
+      "wordCount": 7080,
+      "readingTime": 29,
+      "views": 676,
+      "likes": 57,
+      "filePath": "/static/md/seo/seo-terminology.md",
+      "searchText": "seo术语 tdk（网站tdk）\n\n seo页面中的页面描述与关键词设置。 \n\n其中\"t\"代表页头中的title元素，这里可能还要利用到[分词技术](https://baike.baidu.com/item/分词技术/9122911)，当标题(title)写好后，我们就尽可能不要再去修改了，尽量简洁，没意义的词... seo seo"
+    },
+    {
+      "id": "seo-seoxzhan",
+      "title": "SEO群站",
+      "summary": "群站：\n\n由人工做的一群相似网站（同一行业，不同地区，模板大同小异），属保证高质量内容、低成本，内容介于单站和站群之间。\n1+N站模型：\n一个官网，N个营销型网站\n官网：企业的门面，面向新老客户、新闻媒体。与SEO的要求有所冲突，无法优化关键词。\nN个营销型网站：弥补官网的缺陷，做SEO、网站排名、...",
+      "category": "seo",
+      "tags": [
+        "SEO"
+      ],
+      "author": "博主",
+      "date": "2020-01-13T18:00:00.000Z",
+      "wordCount": 7684,
+      "readingTime": 31,
+      "views": 83,
+      "likes": 45,
+      "filePath": "/static/md/seo/seoxzhan.md",
+      "searchText": "seo群站 群站：\n\n由人工做的一群相似网站（同一行业，不同地区，模板大同小异），属保证高质量内容、低成本，内容介于单站和站群之间。\n1+n站模型：\n一个官网，n个营销型网站\n官网：企业的门面，面向新老客户、新闻媒体。与seo的要求有所冲突，无法优化关键词。\nn个营销型网站：弥补官网的缺陷，做seo、网站排名、... seo seo"
+    },
+    {
+      "id": "seo-seo-website",
+      "title": "SEO建站",
+      "summary": "错误做法\n\n随着互联网时代的快速飞进，怎么建立网站对于一些人来说已经不是什么难事，而另一件比较头疼的事情，是做优化，很多人在网站建立初期，会为了得到更多的网站流量，而去做网站优化。但是由于操之过急，急求成效，就会很容易出现一些错误做法。为了不让更多的人走进这些误区，下面给大家分享一些要注意的事项，希...",
+      "category": "seo",
+      "tags": [
+        "SEO"
+      ],
+      "author": "博主",
+      "date": "2020-01-12T18:00:00.000Z",
+      "wordCount": 19525,
+      "readingTime": 79,
+      "views": 219,
+      "likes": 30,
+      "filePath": "/static/md/seo/seo-website.md",
+      "searchText": "seo建站 错误做法\n\n随着互联网时代的快速飞进，怎么建立网站对于一些人来说已经不是什么难事，而另一件比较头疼的事情，是做优化，很多人在网站建立初期，会为了得到更多的网站流量，而去做网站优化。但是由于操之过急，急求成效，就会很容易出现一些错误做法。为了不让更多的人走进这些误区，下面给大家分享一些要注意的事项，希... seo seo"
+    },
+    {
+      "id": "seo-seo-tools",
+      "title": "SEO工具",
+      "summary": "SEO网站\n\n站长平台\n\nhttps://ziyuan.baidu.com/百度站长平台\n\nhttp://zhanzhang.sogou.com搜狗站长平台\n\nhttp://zhanzhang.so.com/站长平台360\n\nhttps://zhanzhang.sm.cn/神马站长平台\n\n\n\nSEO...",
+      "category": "seo",
+      "tags": [
+        "SEO"
+      ],
+      "author": "博主",
+      "date": "2020-01-11T18:00:00.000Z",
+      "wordCount": 2318,
+      "readingTime": 10,
+      "views": 770,
+      "likes": 41,
+      "filePath": "/static/md/seo/seo-tools.md",
+      "searchText": "seo工具 seo网站\n\n站长平台\n\nhttps://ziyuan.baidu.com/百度站长平台\n\nhttp://zhanzhang.sogou.com搜狗站长平台\n\nhttp://zhanzhang.so.com/站长平台360\n\nhttps://zhanzhang.sm.cn/神马站长平台\n\n\n\nseo... seo seo"
+    },
+    {
+      "id": "seo-seoxti",
+      "title": "SEO标题",
+      "summary": "TDK\n\n网页标题对于搜索引擎排名来说是绝对重要的第一要素 ，标题包括三个部分， \n标题（title）、描述（description）和关键词（keyword） ，简称TDK。\n\n一、网站标题包含关键词\n\n页面标题对于优化有着很重要的影响，蜘蛛抓取页面内容，先抓取标题内容，在标题中包含关键词，这也是...",
+      "category": "seo",
+      "tags": [
+        "SEO"
+      ],
+      "author": "博主",
+      "date": "2020-01-10T18:00:00.000Z",
+      "wordCount": 5166,
+      "readingTime": 21,
+      "views": 635,
+      "likes": 67,
+      "filePath": "/static/md/seo/seoxti.md",
+      "searchText": "seo标题 tdk\n\n网页标题对于搜索引擎排名来说是绝对重要的第一要素 ，标题包括三个部分， \n标题（title）、描述（description）和关键词（keyword） ，简称tdk。\n\n一、网站标题包含关键词\n\n页面标题对于优化有着很重要的影响，蜘蛛抓取页面内容，先抓取标题内容，在标题中包含关键词，这也是... seo seo"
+    },
+    {
+      "id": "seo-SEO",
+      "title": "SEO",
+      "summary": "搜索引擎优化（SEO）\n\nseo就是在自然搜索结果中获得流量的技术和过程。 \n\n\n\n分析搜索动机，盯住竞争对手\n\n把有价值的信息提供给搜索者\n\n关键词、网站内容、网站体验要好\n\n\n\n分析目标客户真实需求 筛选核心关键词 \n\n\n\n网站TDK、外链、内链、页面、长尾关键词\n\n网站验证提交、网站地图提交...",
+      "category": "seo",
+      "tags": [
+        "SEO"
+      ],
+      "author": "博主",
+      "date": "2020-01-09T18:00:00.000Z",
+      "wordCount": 11006,
+      "readingTime": 45,
+      "views": 945,
+      "likes": 85,
+      "filePath": "/static/md/seo/SEO.md",
+      "searchText": "seo 搜索引擎优化（seo）\n\nseo就是在自然搜索结果中获得流量的技术和过程。 \n\n\n\n分析搜索动机，盯住竞争对手\n\n把有价值的信息提供给搜索者\n\n关键词、网站内容、网站体验要好\n\n\n\n分析目标客户真实需求 筛选核心关键词 \n\n\n\n网站tdk、外链、内链、页面、长尾关键词\n\n网站验证提交、网站地图提交... seo seo"
+    },
+    {
+      "id": "seo-dedecms",
+      "title": "织梦CMS",
+      "summary": "www.dedecms.com织梦\n\n★模板介绍★ \n压滤机过滤机机械设备类网站织梦营销型模板(带手机版)\n★模板安装方法★\n\n1.把文件上传到你的站点的根目录（或者本地www目录配置好host和httpd-vhosts.conf），然后运行 http://你的域名/install/index.ph...",
+      "category": "seo",
+      "tags": [
+        "SEO"
+      ],
+      "author": "博主",
+      "date": "2020-01-08T18:00:00.000Z",
+      "wordCount": 5052,
+      "readingTime": 21,
+      "views": 786,
+      "likes": 11,
+      "filePath": "/static/md/seo/dedecms.md",
+      "searchText": "织梦cms www.dedecms.com织梦\n\n★模板介绍★ \n压滤机过滤机机械设备类网站织梦营销型模板(带手机版)\n★模板安装方法★\n\n1.把文件上传到你的站点的根目录（或者本地www目录配置好host和httpd-vhosts.conf），然后运行 http://你的域名/install/index.ph... seo seo"
+    },
+    {
+      "id": "knowledges-javascript-scope",
+      "title": "JavaScript作用域",
+      "summary": "作用域的概念及作用\n\n概念： 对变量起保护作用的一块区域，一个函数可以访问其他函数中的变量。\n\n- 在Java、C等语言中，作用域为for语句、if语句或\\\\{\\\\}内的一块区域，称为作用域；\n- 而在 JavaScript 中，作用域为function()\\\\{\\\\}内的区域，称为函数作用域。...",
+      "category": "knowledges",
+      "tags": [
+        "JavaScript",
+        "作用域"
+      ],
+      "author": "博主",
+      "date": "2020-01-07T21:10:40.000Z",
+      "wordCount": 1789,
+      "readingTime": 8,
+      "views": 932,
+      "likes": 92,
+      "filePath": "/static/md/knowledges/javascript-scope.md",
+      "searchText": "javascript作用域 作用域的概念及作用\n\n概念： 对变量起保护作用的一块区域，一个函数可以访问其他函数中的变量。\n\n- 在java、c等语言中，作用域为for语句、if语句或\\\\{\\\\}内的一块区域，称为作用域；\n- 而在 javascript 中，作用域为function()\\\\{\\\\}内的区域，称为函数作用域。... javascript 作用域 knowledges"
+    },
+    {
+      "id": "seo-optimization-experience",
+      "title": "优化经验",
+      "summary": "优化经验\n\nhttps://bsb.baidu.com/百度网址安全中心审核网站信息\n\n买老域名\n\n\n\n聚氨酯保温管百度首页竞争对手分析\n\nwww.chitengkeji.com.cn\n\n11年老域名，收录99，16个关键词堆砌，8出站，11反链（5钢管），关键词指向本站\n\nwww.jazbwg.c...",
+      "category": "seo",
+      "tags": [
+        "SEO"
+      ],
+      "author": "博主",
+      "date": "2020-01-07T18:00:00.000Z",
+      "wordCount": 249,
+      "readingTime": 1,
+      "views": 300,
+      "likes": 35,
+      "filePath": "/static/md/seo/optimization-experience.md",
+      "searchText": "优化经验 优化经验\n\nhttps://bsb.baidu.com/百度网址安全中心审核网站信息\n\n买老域名\n\n\n\n聚氨酯保温管百度首页竞争对手分析\n\nwww.chitengkeji.com.cn\n\n11年老域名，收录99，16个关键词堆砌，8出站，11反链（5钢管），关键词指向本站\n\nwww.jazbwg.c... seo seo"
+    },
+    {
+      "id": "knowledges-javascriptzixx",
+      "title": "JavaScript字符串",
+      "summary": "JavaScript 28个常用字符串方法及使用技巧\n\n原文链接https://juejin.cn/post/7010928535053271077，预计阅读16分钟\n\n今天再来看一些JavaScript基础知识，基础太重要了。还清楚的记得，今年春招的时候，某大厂面试官狠狠的嘲讽我 JavaScri...",
+      "category": "knowledges",
+      "tags": [
+        "JavaScript",
+        "字符串"
+      ],
+      "author": "博主",
+      "date": "2020-01-06T21:10:40.000Z",
+      "wordCount": 7212,
+      "readingTime": 29,
+      "views": 1012,
+      "likes": 90,
+      "filePath": "/static/md/knowledges/javascriptzixx.md",
+      "searchText": "javascript字符串 javascript 28个常用字符串方法及使用技巧\n\n原文链接https://juejin.cn/post/7010928535053271077，预计阅读16分钟\n\n今天再来看一些javascript基础知识，基础太重要了。还清楚的记得，今年春招的时候，某大厂面试官狠狠的嘲讽我 javascri... javascript 字符串 knowledges"
+    },
+    {
+      "id": "seo-map",
+      "title": "网站地图",
+      "summary": "XML网站地图\n\n在搜索引擎爬虫进行信息采集的过程中，我们的页面应尽可能主动提交友好的页面的链接。 \n\n\n\n一、XML网站地图中的priority标签是什么意思？\n\n网站地图中的priority表达的是该页面的优先级，范围是0~1.0之间，一般默认为0.5，1.0表示页面非常重要。\n\n\n\n二、XML...",
+      "category": "seo",
+      "tags": [
+        "SEO"
+      ],
+      "author": "博主",
+      "date": "2020-01-06T18:00:00.000Z",
+      "wordCount": 4918,
+      "readingTime": 20,
+      "views": 84,
+      "likes": 69,
+      "filePath": "/static/md/seo/map.md",
+      "searchText": "网站地图 xml网站地图\n\n在搜索引擎爬虫进行信息采集的过程中，我们的页面应尽可能主动提交友好的页面的链接。 \n\n\n\n一、xml网站地图中的priority标签是什么意思？\n\n网站地图中的priority表达的是该页面的优先级，范围是0~1.0之间，一般默认为0.5，1.0表示页面非常重要。\n\n\n\n二、xml... seo seo"
+    },
+    {
+      "id": "seo-randeng-seo",
+      "title": "燃灯SEO",
+      "summary": "燃灯SEO入门视频\n\n第1节：怎么学SEO才能学成\n\n1.心态（2-3个月，实战）\n\n2.SEO方向-赚钱（流量=价值）\n\n第2节：SEO能做什么？SEO职业规划\n\n1.职业（SEO专员，SEO主管）\n\n2.创业（获得客户的技能、开发、投稿、挂广告）\n\n3.跳板\n\n第3节：SEO站长每天都要做什么？...",
+      "category": "seo",
+      "tags": [
+        "SEO"
+      ],
+      "author": "博主",
+      "date": "2020-01-05T18:00:00.000Z",
+      "wordCount": 1108,
+      "readingTime": 5,
+      "views": 781,
+      "likes": 94,
+      "filePath": "/static/md/seo/randeng-seo.md",
+      "searchText": "燃灯seo 燃灯seo入门视频\n\n第1节：怎么学seo才能学成\n\n1.心态（2-3个月，实战）\n\n2.seo方向-赚钱（流量=价值）\n\n第2节：seo能做什么？seo职业规划\n\n1.职业（seo专员，seo主管）\n\n2.创业（获得客户的技能、开发、投稿、挂广告）\n\n3.跳板\n\n第3节：seo站长每天都要做什么？... seo seo"
+    },
+    {
+      "id": "seo-xxseo",
+      "title": "黑帽SEO",
+      "summary": "黑帽SEO\n\n黑帽seo也好，白帽也罢，通过其赚钱的流量几乎无二。既然想通过黑帽seo盈利，首先得选择合适的项目，通过项目或者业务确定要做排名的关键词类别或者类型，然后是建网站亦或者是拿权限等方式，通过黑帽seo技术让既定的关键词到合适的位置，最后是拿佣金或者自盈利赚钱。\n\n\n![黑帽seo赚钱流程...",
+      "category": "seo",
+      "tags": [
+        "SEO"
+      ],
+      "author": "博主",
+      "date": "2020-01-04T18:00:00.000Z",
+      "wordCount": 3658,
+      "readingTime": 15,
+      "views": 368,
+      "likes": 73,
+      "filePath": "/static/md/seo/xxseo.md",
+      "searchText": "黑帽seo 黑帽seo\n\n黑帽seo也好，白帽也罢，通过其赚钱的流量几乎无二。既然想通过黑帽seo盈利，首先得选择合适的项目，通过项目或者业务确定要做排名的关键词类别或者类型，然后是建网站亦或者是拿权限等方式，通过黑帽seo技术让既定的关键词到合适的位置，最后是拿佣金或者自盈利赚钱。\n\n\n![黑帽seo赚钱流程... seo seo"
+    },
+    {
+      "id": "seo-keywords",
+      "title": "关键词",
+      "summary": "关键词\n\n一般我们在搭建之前就要确定我们的网站行业，比如说选择的行业是SEO，当你确定行业之后我们就要去挖掘我们网站的关键词，关键词就是我们网站的核心，网站的根本，无论是运营也好，排名也好都是围绕我们的关键词进行的。\n\n今天说一下我们的关键词挖掘方法：\n\n1.百度下拉框\n\n在百度输入框输入内容会自动...",
+      "category": "seo",
+      "tags": [
+        "SEO"
+      ],
+      "author": "博主",
+      "date": "2020-01-03T18:00:00.000Z",
+      "wordCount": 13957,
+      "readingTime": 56,
+      "views": 413,
+      "likes": 14,
+      "filePath": "/static/md/seo/keywords.md",
+      "searchText": "关键词 关键词\n\n一般我们在搭建之前就要确定我们的网站行业，比如说选择的行业是seo，当你确定行业之后我们就要去挖掘我们网站的关键词，关键词就是我们网站的核心，网站的根本，无论是运营也好，排名也好都是围绕我们的关键词进行的。\n\n今天说一下我们的关键词挖掘方法：\n\n1.百度下拉框\n\n在百度输入框输入内容会自动... seo seo"
+    },
+    {
+      "id": "seo-code-optimization",
+      "title": "代码优化",
+      "summary": "rel=nofollow\"属性简介\n\n   nofollow是HTML元标签(meta)的content属性和链接标签(a)的rel属性的一个值，告诉机器(爬虫)无需追踪目标页，为了对抗blogspam(博客垃圾留言信息)，Google推荐使用nofollow，告诉搜索引擎爬虫无需抓取目标页，同时告...",
+      "category": "seo",
+      "tags": [
+        "SEO"
+      ],
+      "author": "博主",
+      "date": "2020-01-02T18:00:00.000Z",
+      "wordCount": 12299,
+      "readingTime": 50,
+      "views": 375,
+      "likes": 40,
+      "filePath": "/static/md/seo/code-optimization.md",
+      "searchText": "代码优化 rel=nofollow\"属性简介\n\n   nofollow是html元标签(meta)的content属性和链接标签(a)的rel属性的一个值，告诉机器(爬虫)无需追踪目标页，为了对抗blogspam(博客垃圾留言信息)，google推荐使用nofollow，告诉搜索引擎爬虫无需抓取目标页，同时告... seo seo"
+    },
+    {
+      "id": "seo-baidu-related",
+      "title": "百度相关",
+      "summary": "关键词指数是用以反映关键词在过去30天内的网络曝光率及用户关注度！它能形象地反映该关键词的每天的变化趋势！指数是以网页搜索和新闻搜索为基础的免费海量数据分析服务，用以反映不同关键词在过去一段时间里的“用户关注度”和“媒体关注度”。您可以发现、共享和挖掘互联网上最有价值的信息和资讯，直接、客观地反映社...",
+      "category": "seo",
+      "tags": [
+        "SEO"
+      ],
+      "author": "博主",
+      "date": "2020-01-01T18:00:00.000Z",
+      "wordCount": 21775,
+      "readingTime": 88,
+      "views": 252,
+      "likes": 18,
+      "filePath": "/static/md/seo/baidu-related.md",
+      "searchText": "百度相关 关键词指数是用以反映关键词在过去30天内的网络曝光率及用户关注度！它能形象地反映该关键词的每天的变化趋势！指数是以网页搜索和新闻搜索为基础的免费海量数据分析服务，用以反映不同关键词在过去一段时间里的“用户关注度”和“媒体关注度”。您可以发现、共享和挖掘互联网上最有价值的信息和资讯，直接、客观地反映社... seo seo"
+    },
+    {
+      "id": "knowledges-jQuery",
+      "title": "JQuery",
+      "summary": "jquery的一些基本用法\n\n[jquery的一些基本用法](https://blog.csdn.net/qq719365064/article/details/52925155)\n\n[jQuery的详细解析以及用法](https://blog.csdn.net/liuyingv8/article/...",
+      "category": "knowledges",
+      "tags": [
+        "JQuery",
+        "jQuery UI",
+        "Zepto"
+      ],
+      "author": "博主",
+      "date": "2019-12-22T18:22:11.000Z",
+      "wordCount": 3200,
+      "readingTime": 13,
+      "views": 477,
+      "likes": 21,
+      "filePath": "/static/md/knowledges/jQuery.md",
+      "searchText": "jquery jquery的一些基本用法\n\n[jquery的一些基本用法](https://blog.csdn.net/qq719365064/article/details/52925155)\n\n[jquery的详细解析以及用法](https://blog.csdn.net/liuyingv8/article/... jquery jquery ui zepto knowledges"
+    },
+    {
+      "id": "knowledges-Promise",
+      "title": "Promise",
+      "summary": "大白话讲解Promise（一）\n\n去年6月份， ES2015正式发布（也就是ES6，ES6是它的乳名），其中Promise被列为正式规范。作为ES6中最重要的特性之一，我们有必要掌握并理解透彻。本文将由浅到深，讲解Promise的基本概念与使用方法。\n\n \n\nES6 Promise 先拉出来遛遛...",
+      "category": "knowledges",
+      "tags": [
+        "Promise"
+      ],
+      "author": "博主",
+      "date": "2019-12-11T19:25:55.000Z",
+      "wordCount": 7226,
+      "readingTime": 29,
+      "views": 150,
+      "likes": 31,
+      "filePath": "/static/md/knowledges/Promise.md",
+      "searchText": "promise 大白话讲解promise（一）\n\n去年6月份， es2015正式发布（也就是es6，es6是它的乳名），其中promise被列为正式规范。作为es6中最重要的特性之一，我们有必要掌握并理解透彻。本文将由浅到深，讲解promise的基本概念与使用方法。\n\n \n\nes6 promise 先拉出来遛遛... promise knowledges"
+    },
+    {
+      "id": "knowledges-pnpm",
+      "title": "pnpm",
+      "summary": "现在越来越多的公司或开源项目开始使用 pnpm 作为包管理工具，这篇文章主要想分享一下这个优秀的包管理器的用法和原理，以及为什么我们应该使用它来代替 npm 和 yarn。\n\n\n\npnpm 是什么？\n\n根据[官方文档](https://link.juejin.cn?target=https\\\\%3A...",
+      "category": "knowledges",
+      "tags": [
+        "pnpm"
+      ],
+      "author": "博主",
+      "date": "2019-12-10T19:25:55.000Z",
+      "wordCount": 2667,
+      "readingTime": 11,
+      "views": 722,
+      "likes": 21,
+      "filePath": "/static/md/knowledges/pnpm.md",
+      "searchText": "pnpm 现在越来越多的公司或开源项目开始使用 pnpm 作为包管理工具，这篇文章主要想分享一下这个优秀的包管理器的用法和原理，以及为什么我们应该使用它来代替 npm 和 yarn。\n\n\n\npnpm 是什么？\n\n根据[官方文档](https://link.juejin.cn?target=https\\\\%3a... pnpm knowledges"
+    },
+    {
+      "id": "knowledges-nvm",
+      "title": "nvm",
+      "summary": "1、nvm是什么\n\n  nvm全名node.js version management，顾名思义是一个nodejs的版本管理工具。通过它可以安装和切换不同版本的nodejs。下面列出下载、安装及使用方法。\n\n\n\n2、下载\n\n  可在[点此在github](https://github.com/cor...",
+      "category": "knowledges",
+      "tags": [
+        "Node"
+      ],
+      "author": "博主",
+      "date": "2019-12-09T19:25:55.000Z",
+      "wordCount": 1203,
+      "readingTime": 5,
+      "views": 1018,
+      "likes": 16,
+      "filePath": "/static/md/knowledges/nvm.md",
+      "searchText": "nvm 1、nvm是什么\n\n  nvm全名node.js version management，顾名思义是一个nodejs的版本管理工具。通过它可以安装和切换不同版本的nodejs。下面列出下载、安装及使用方法。\n\n\n\n2、下载\n\n  可在[点此在github](https://github.com/cor... node knowledges"
+    },
+    {
+      "id": "knowledges-Node",
+      "title": "Node",
+      "summary": "对 Node 的优点和缺点提出了自己的看法？\n\n优点：\n\n1. 因为 Node 是基于事件驱动和无阻塞的，所以非常适合处理并发请求，因此构建在 Node 上的代理服务器相比其他技术实现（如 Ruby）的服务器表现要好得多。\n2. 与 Node 代理服务器交互的客户端代码是由 javascript 语...",
+      "category": "knowledges",
+      "tags": [
+        "Node"
+      ],
+      "author": "博主",
+      "date": "2019-12-08T19:25:55.000Z",
+      "wordCount": 11686,
+      "readingTime": 47,
+      "views": 454,
+      "likes": 63,
+      "filePath": "/static/md/knowledges/Node.md",
+      "searchText": "node 对 node 的优点和缺点提出了自己的看法？\n\n优点：\n\n1. 因为 node 是基于事件驱动和无阻塞的，所以非常适合处理并发请求，因此构建在 node 上的代理服务器相比其他技术实现（如 ruby）的服务器表现要好得多。\n2. 与 node 代理服务器交互的客户端代码是由 javascript 语... node knowledges"
+    },
+    {
+      "id": "knowledges-Markdown",
+      "title": "Markdown",
+      "summary": "Markdown使用参考\n\n目录\n* [Markdown概述](#summary)\n* 语法\n  * [标题](#headers)\n  * [换行](#break-line)\n  * [链接](#anchor)\n  * [图片](#pic)\n  * [列表](#list)\n  * [强调](#str...",
+      "category": "knowledges",
+      "tags": [
+        "Markdown"
+      ],
+      "author": "博主",
+      "date": "2019-12-07T19:25:55.000Z",
+      "wordCount": 627,
+      "readingTime": 3,
+      "views": 1047,
+      "likes": 68,
+      "filePath": "/static/md/knowledges/Markdown.md",
+      "searchText": "markdown markdown使用参考\n\n目录\n* [markdown概述](#summary)\n* 语法\n  * [标题](#headers)\n  * [换行](#break-line)\n  * [链接](#anchor)\n  * [图片](#pic)\n  * [列表](#list)\n  * [强调](#str... markdown knowledges"
+    },
+    {
+      "id": "knowledges-npm",
+      "title": "npm",
+      "summary": "NPM介绍\n\nNPM是随同NodeJS一起安装的包管理工具，能解决NodeJS代码部署上的很多问题，常见的使用场景有以下几种：\n\n+ 允许用户从NPM服务器下载别人编写的第三方包到本地使用。\n+ 允许用户从NPM服务器下载并安装别人编写的命令行程序到本地使用。\n+ 允许用户将自己编写的包或命令行程序...",
+      "category": "knowledges",
+      "tags": [
+        "npm",
+        "node"
+      ],
+      "author": "博主",
+      "date": "2019-11-24T11:10:20.000Z",
+      "wordCount": 8762,
+      "readingTime": 36,
+      "views": 355,
+      "likes": 74,
+      "filePath": "/static/md/knowledges/npm.md",
+      "searchText": "npm npm介绍\n\nnpm是随同nodejs一起安装的包管理工具，能解决nodejs代码部署上的很多问题，常见的使用场景有以下几种：\n\n+ 允许用户从npm服务器下载别人编写的第三方包到本地使用。\n+ 允许用户从npm服务器下载并安装别人编写的命令行程序到本地使用。\n+ 允许用户将自己编写的包或命令行程序... npm node knowledges"
+    },
+    {
+      "id": "knowledges-Redux",
+      "title": "Redux",
+      "summary": "Store\n\n就是把它们联系到一起的对象。Store 有以下职责：\n\n- 维持应用的 state；\n- 提供 [getState()](http://cn.redux.js.org/docs/api/Store.html#getState) 方法获取 state；\n- 提供 [dispatch(ac...",
+      "category": "knowledges",
+      "tags": [
+        "React"
+      ],
+      "author": "博主",
+      "date": "2019-11-17T17:11:07.000Z",
+      "wordCount": 4988,
+      "readingTime": 20,
+      "views": 194,
+      "likes": 58,
+      "filePath": "/static/md/knowledges/Redux.md",
+      "searchText": "redux store\n\n就是把它们联系到一起的对象。store 有以下职责：\n\n- 维持应用的 state；\n- 提供 [getstate()](http://cn.redux.js.org/docs/api/store.html#getstate) 方法获取 state；\n- 提供 [dispatch(ac... react knowledges"
+    },
+    {
+      "id": "knowledges-React Hook",
+      "title": "React Hook",
+      "summary": "useEffect\n\n是在render之后生效执行的\n\n\n\nuseEffect第二个参数\n\n\n\n如果有多个副效应，它们之间并没有关系，其实是两个不相关的副效应，应该调用多个useEffect()，而不应该合并写在一起\n\n\n\n有时候改变对象属性值页面不刷新\n\n\n\n例如\n\n\n\n\n\nuseState修改对...",
+      "category": "knowledges",
+      "tags": [
+        "React"
+      ],
+      "author": "博主",
+      "date": "2019-11-16T17:11:07.000Z",
+      "wordCount": 3030,
+      "readingTime": 13,
+      "views": 1040,
+      "likes": 95,
+      "filePath": "/static/md/knowledges/React Hook.md",
+      "searchText": "react hook useeffect\n\n是在render之后生效执行的\n\n\n\nuseeffect第二个参数\n\n\n\n如果有多个副效应，它们之间并没有关系，其实是两个不相关的副效应，应该调用多个useeffect()，而不应该合并写在一起\n\n\n\n有时候改变对象属性值页面不刷新\n\n\n\n例如\n\n\n\n\n\nusestate修改对... react knowledges"
+    },
+    {
+      "id": "knowledges-React",
+      "title": "React",
+      "summary": "React 是什么？\n\nReact 不是 MV* 框架，用于构建用户界面的 JavaScript 库，侧重于 View 层\n\nReact 主要的原理：\n\n- 虚拟 DOM + diff 算法 -> 不直接操作 DOM 对象\n- Components 组件 -> Virtual DOM 的节点\n- S...",
+      "category": "knowledges",
+      "tags": [
+        "React",
+        "redux",
+        "组件"
+      ],
+      "author": "博主",
+      "date": "2019-11-15T17:11:07.000Z",
+      "wordCount": 14108,
+      "readingTime": 57,
+      "views": 425,
+      "likes": 52,
+      "filePath": "/static/md/knowledges/React.md",
+      "searchText": "react react 是什么？\n\nreact 不是 mv* 框架，用于构建用户界面的 javascript 库，侧重于 view 层\n\nreact 主要的原理：\n\n- 虚拟 dom + diff 算法 -> 不直接操作 dom 对象\n- components 组件 -> virtual dom 的节点\n- s... react redux 组件 knowledges"
+    },
+    {
+      "id": "knowledges-sass",
+      "title": "sass",
+      "summary": "选择器\n\n\">\"代表子选择器，可以选择某个元素中所有的子元素\n\n\"+\"代表相邻元素选择器，选择紧挨着某个元素的元素\n\n\n\nscss 使用 /deep/ 穿透写法\n\n当 <style> 标签有 scoped 属性时，它的 CSS 只作用于当前组件中的元素。这类似于 Shadow DOM 中的样式封装。...",
+      "category": "knowledges",
+      "tags": [
+        "sass"
+      ],
+      "author": "博主",
+      "date": "2019-10-29T19:45:42.000Z",
+      "wordCount": 1893,
+      "readingTime": 8,
+      "views": 1046,
+      "likes": 34,
+      "filePath": "/static/md/knowledges/sass.md",
+      "searchText": "sass 选择器\n\n\">\"代表子选择器，可以选择某个元素中所有的子元素\n\n\"+\"代表相邻元素选择器，选择紧挨着某个元素的元素\n\n\n\nscss 使用 /deep/ 穿透写法\n\n当 <style> 标签有 scoped 属性时，它的 css 只作用于当前组件中的元素。这类似于 shadow dom 中的样式封装。... sass knowledges"
+    },
+    {
+      "id": "knowledges-RequireJS",
+      "title": "RequireJS",
+      "summary": "RequireJS是一个JavaScript文件和模块加载器，可视为模块管理工具。\n\n\n\n为什么使用RequireJS呢？\n\n- 有效防止命名冲突\n- 声明不同JS文件之间的依赖\n- JS代码以模块化的方式组织\n\nRequireJS为帮助解决前端代码库的组织难题，提供了两种解决思路：\n\n- 模块化组...",
+      "category": "knowledges",
+      "tags": [
+        "RequireJS",
+        "模块化",
+        "AMD规范"
+      ],
+      "author": "博主",
+      "date": "2019-10-28T19:45:42.000Z",
+      "wordCount": 2429,
+      "readingTime": 10,
+      "views": 967,
+      "likes": 96,
+      "filePath": "/static/md/knowledges/RequireJS.md",
+      "searchText": "requirejs requirejs是一个javascript文件和模块加载器，可视为模块管理工具。\n\n\n\n为什么使用requirejs呢？\n\n- 有效防止命名冲突\n- 声明不同js文件之间的依赖\n- js代码以模块化的方式组织\n\nrequirejs为帮助解决前端代码库的组织难题，提供了两种解决思路：\n\n- 模块化组... requirejs 模块化 amd规范 knowledges"
+    },
+    {
+      "id": "knowledges-TypeScript",
+      "title": "TypeScript",
+      "summary": "什么是Typescript？\n\nTypescript是强类型的Javascript超集，支持ES6语法，支持面向对象编程的概念，如类、接口、继承、泛型等。Typescript并不直接在浏览器上运行，需要编译器编译成纯Javascript来运行。\n\n\n\n说说Typescripy和Javascript的...",
+      "category": "knowledges",
+      "tags": [
+        "TypeScript"
+      ],
+      "author": "博主",
+      "date": "2019-10-12T19:25:55.000Z",
+      "wordCount": 13299,
+      "readingTime": 54,
+      "views": 388,
+      "likes": 103,
+      "filePath": "/static/md/knowledges/TypeScript.md",
+      "searchText": "typescript 什么是typescript？\n\ntypescript是强类型的javascript超集，支持es6语法，支持面向对象编程的概念，如类、接口、继承、泛型等。typescript并不直接在浏览器上运行，需要编译器编译成纯javascript来运行。\n\n\n\n说说typescripy和javascript的... typescript knowledges"
+    },
+    {
+      "id": "knowledges-DOM",
+      "title": "DOM",
+      "summary": "DOM\n\n> DOM文档对象模型，用来操作html文档\n\n属性\n\n| 属性            | 描述                           |\n| --------------- | ------------------------------ |\n| URL...",
+      "category": "knowledges",
+      "tags": [
+        "DOM"
+      ],
+      "author": "博主",
+      "date": "2019-10-09T15:38:24.000Z",
+      "wordCount": 14084,
+      "readingTime": 57,
+      "views": 327,
+      "likes": 50,
+      "filePath": "/static/md/knowledges/DOM.md",
+      "searchText": "dom dom\n\n> dom文档对象模型，用来操作html文档\n\n属性\n\n| 属性            | 描述                           |\n| --------------- | ------------------------------ |\n| url... dom knowledges"
+    },
+    {
+      "id": "knowledges-Axios",
+      "title": "Axios",
+      "summary": "vue中最优axios封装\n\n1.安装axios\n\n\n\n2.请求拦截器\n\n\n\n3.封装请求方法\n\n\n\n4.在main.js中引入，注册到原型\n\n\n\n5.最后在组件里直接使用\n\n\n\n\n\n关于axios如何在请求头添加参数\n\n\n\n\n\n\n\npost使用form-data和x-www-form-urlenc...",
+      "category": "knowledges",
+      "tags": [
+        "Axios"
+      ],
+      "author": "博主",
+      "date": "2019-10-08T15:38:24.000Z",
+      "wordCount": 2104,
+      "readingTime": 9,
+      "views": 732,
+      "likes": 102,
+      "filePath": "/static/md/knowledges/Axios.md",
+      "searchText": "axios vue中最优axios封装\n\n1.安装axios\n\n\n\n2.请求拦截器\n\n\n\n3.封装请求方法\n\n\n\n4.在main.js中引入，注册到原型\n\n\n\n5.最后在组件里直接使用\n\n\n\n\n\n关于axios如何在请求头添加参数\n\n\n\n\n\n\n\npost使用form-data和x-www-form-urlenc... axios knowledges"
+    },
+    {
+      "id": "knowledges-BOM",
+      "title": "BOM",
+      "summary": "BOM是什么\n\nBOM由一系列相关的对象构成，并且每个对象都提供了很多方法与属性，由于BOM主要用于管理窗口与窗口之间的通讯，因此其核心对象是window；\n\n前端BOM（Browser Object Model，浏览器对象模型）是Web编程中一个非常重要的概念。它是一组对象和方法的集合，允许Jav...",
+      "category": "knowledges",
+      "tags": [
+        "BOM",
+        "window对象"
+      ],
+      "author": "博主",
+      "date": "2019-10-08T15:38:24.000Z",
+      "wordCount": 5360,
+      "readingTime": 22,
+      "views": 99,
+      "likes": 65,
+      "filePath": "/static/md/knowledges/BOM.md",
+      "searchText": "bom bom是什么\n\nbom由一系列相关的对象构成，并且每个对象都提供了很多方法与属性，由于bom主要用于管理窗口与窗口之间的通讯，因此其核心对象是window；\n\n前端bom（browser object model，浏览器对象模型）是web编程中一个非常重要的概念。它是一组对象和方法的集合，允许jav... bom window对象 knowledges"
+    },
+    {
+      "id": "knowledges-Angular",
+      "title": "Angular",
+      "summary": "angular 的数据绑定采用什么机制？详述原理\n\n脏检查机制。\n\n解析：\n双向数据绑定是 AngularJS 的核心机制之一。当 view 中有任何数据变化时，会更新到 model ，当 model 中数据有变化时，view 也会同步更新，显然，这需要一个监控。\n\n原理就是，Angular 在 s...",
+      "category": "knowledges",
+      "tags": [
+        "Angular",
+        "数据绑定",
+        "MVVM"
+      ],
+      "author": "博主",
+      "date": "2019-10-07T15:38:24.000Z",
+      "wordCount": 2570,
+      "readingTime": 11,
+      "views": 577,
+      "likes": 15,
+      "filePath": "/static/md/knowledges/Angular.md",
+      "searchText": "angular angular 的数据绑定采用什么机制？详述原理\n\n脏检查机制。\n\n解析：\n双向数据绑定是 angularjs 的核心机制之一。当 view 中有任何数据变化时，会更新到 model ，当 model 中数据有变化时，view 也会同步更新，显然，这需要一个监控。\n\n原理就是，angular 在 s... angular 数据绑定 mvvm knowledges"
+    },
+    {
+      "id": "interview-bytedance-interview",
+      "title": "字节跳动面经总结",
+      "summary": "记录一下自己的第二次面试经历\n\n\n![字节跳动](../../images/ms001.jpg)\n\n\n面试公司：字节跳动\n\n公司介绍：\n\n​         字节跳动是全球第一家将人工智能应用到主产品的科技公司。全系产品矩阵包括今日头条、抖音、西瓜视频、火山小视频、TopBuzz、Faceu激萌、图...",
+      "category": "interview",
+      "tags": [
+        "字节跳动",
+        "面试问题",
+        "面试经验"
+      ],
+      "author": "博主",
+      "date": "2019-09-19T23:30:33.000Z",
+      "wordCount": 14325,
+      "readingTime": 58,
+      "views": 198,
+      "likes": 95,
+      "filePath": "/static/md/interview/bytedance-interview.md",
+      "searchText": "字节跳动面经总结 记录一下自己的第二次面试经历\n\n\n![字节跳动](../../images/ms001.jpg)\n\n\n面试公司：字节跳动\n\n公司介绍：\n\n​         字节跳动是全球第一家将人工智能应用到主产品的科技公司。全系产品矩阵包括今日头条、抖音、西瓜视频、火山小视频、topbuzz、faceu激萌、图... 字节跳动 面试问题 面试经验 interview"
+    },
+    {
+      "id": "knowledges-web-security",
+      "title": "Web安全",
+      "summary": "CSRF\n\n> 问的不难，一般问：\n\n- CSRF的基本概念、缩写、全称\n- 攻击原理\n- 防御措施\n\n> 如果把攻击原理和防御措施掌握好，基本没什么问题。\n\n\n\nCSRF的基本概念\n\nCSRF（Cross-site request forgery）：跨站请求伪造。\n\n- 伪造合法请求，让用户在不知...",
+      "category": "knowledges",
+      "tags": [
+        "CSRF",
+        "XSS",
+        "SQL注入",
+        "HTTPS"
+      ],
+      "author": "博主",
+      "date": "2019-08-30T18:21:17.000Z",
+      "wordCount": 6274,
+      "readingTime": 26,
+      "views": 802,
+      "likes": 37,
+      "filePath": "/static/md/knowledges/web-security.md",
+      "searchText": "web安全 csrf\n\n> 问的不难，一般问：\n\n- csrf的基本概念、缩写、全称\n- 攻击原理\n- 防御措施\n\n> 如果把攻击原理和防御措施掌握好，基本没什么问题。\n\n\n\ncsrf的基本概念\n\ncsrf（cross-site request forgery）：跨站请求伪造。\n\n- 伪造合法请求，让用户在不知... csrf xss sql注入 https knowledges"
+    },
+    {
+      "id": "knowledges-webpack",
+      "title": "webpack",
+      "summary": "谈谈你对 webpack 的看法\n\n我当时使用 webpack 的一个最主要原因是为了简化页面依赖的管理，并且通过将其打包为一个文件来降低页面加载时请求的资源\n数。\n\n我认为 webpack 的主要原理是，它将所有的资源都看成是一个模块，并且把页面逻辑当作一个整体，通过一个给定的入口文件，webpa...",
+      "category": "knowledges",
+      "tags": [
+        "webpack"
+      ],
+      "author": "博主",
+      "date": "2019-08-27T19:21:17.000Z",
+      "wordCount": 12011,
+      "readingTime": 49,
+      "views": 978,
+      "likes": 45,
+      "filePath": "/static/md/knowledges/webpack.md",
+      "searchText": "webpack 谈谈你对 webpack 的看法\n\n我当时使用 webpack 的一个最主要原因是为了简化页面依赖的管理，并且通过将其打包为一个文件来降低页面加载时请求的资源\n数。\n\n我认为 webpack 的主要原理是，它将所有的资源都看成是一个模块，并且把页面逻辑当作一个整体，通过一个给定的入口文件，webpa... webpack knowledges"
+    },
+    {
+      "id": "other-qinwei-blog",
+      "title": "秦伟博客",
+      "summary": "博客介绍\n\nWelcome to [QinWei‘s blog](http://qvchat.com/)!\n\n本博客有以下分类：\n- 前端知识\n- 前端进阶\n- 前端面试\n- 前端文章\n- 前端问题\n- 链接\n- SEO\n- 其他\n\nThis is my first post.If you have...",
+      "category": "other",
+      "tags": [
+        "博客",
+        "Hexo"
+      ],
+      "author": "博主",
+      "date": "2019-08-25T18:00:00.000Z",
+      "wordCount": 4311,
+      "readingTime": 18,
+      "views": 151,
+      "likes": 75,
+      "filePath": "/static/md/other/qinwei-blog.md",
+      "searchText": "秦伟博客 博客介绍\n\nwelcome to [qinwei‘s blog](http://qvchat.com/)!\n\n本博客有以下分类：\n- 前端知识\n- 前端进阶\n- 前端面试\n- 前端文章\n- 前端问题\n- 链接\n- seo\n- 其他\n\nthis is my first post.if you have... 博客 hexo other"
+    }
+  ],
+  "categories": [
+    {
+      "id": "articles",
+      "name": "技术文章",
+      "color": "#007AFF",
+      "icon": "📝",
+      "count": 13
+    },
+    {
+      "id": "interview",
+      "name": "面试题库",
+      "color": "#FF3B30",
+      "icon": "💼",
+      "count": 20
+    },
+    {
+      "id": "knowledges",
+      "name": "知识总结",
+      "color": "#34C759",
+      "icon": "📚",
+      "count": 86
+    },
+    {
+      "id": "link",
+      "name": "资源链接",
+      "color": "#FF9500",
+      "icon": "🔗",
+      "count": 17
+    },
+    {
+      "id": "other",
+      "name": "其他分类",
+      "color": "#8E8E93",
+      "icon": "📂",
+      "count": 13
+    },
+    {
+      "id": "questions",
+      "name": "问题解答",
+      "color": "#AF52DE",
+      "icon": "❓",
+      "count": 13
+    },
+    {
+      "id": "seo",
+      "name": "SEO优化",
+      "color": "#FF2D92",
+      "icon": "🔍",
+      "count": 14
+    }
+  ],
+  "tags": [
+    {
+      "name": "JavaScript",
+      "count": 31
+    },
+    {
+      "name": "vue",
+      "count": 19
+    },
+    {
+      "name": "链接",
+      "count": 17
+    },
+    {
+      "name": "SEO",
+      "count": 15
+    },
+    {
+      "name": "前端",
+      "count": 12
+    },
+    {
+      "name": "CSS",
+      "count": 9
+    },
+    {
+      "name": "uniapp",
+      "count": 7
+    },
+    {
+      "name": "DOM",
+      "count": 6
+    },
+    {
+      "name": "BOM",
+      "count": 6
+    },
+    {
+      "name": "小程序",
+      "count": 6
+    },
+    {
+      "name": "HTML",
+      "count": 5
+    },
+    {
+      "name": "电脑",
+      "count": 4
+    },
+    {
+      "name": "MVVM",
+      "count": 4
+    },
+    {
+      "name": "选择器",
+      "count": 4
+    },
+    {
+      "name": "qiankun",
+      "count": 3
+    },
+    {
+      "name": "字符串",
+      "count": 3
+    },
+    {
+      "name": "性能优化",
+      "count": 3
+    },
+    {
+      "name": "对象",
+      "count": 3
+    },
+    {
+      "name": "数组",
+      "count": 3
+    },
+    {
+      "name": "React",
+      "count": 3
+    },
+    {
+      "name": "组件库",
+      "count": 2
+    },
+    {
+      "name": "element",
+      "count": 2
+    },
+    {
+      "name": "vite",
+      "count": 2
+    },
+    {
+      "name": "vue3",
+      "count": 2
+    },
+    {
+      "name": "函数",
+      "count": 2
+    },
+    {
+      "name": "前端技能",
+      "count": 2
+    },
+    {
+      "name": "数据库",
+      "count": 2
+    },
+    {
+      "name": "浏览器",
+      "count": 2
+    },
+    {
+      "name": "面试问题",
+      "count": 2
+    },
+    {
+      "name": "面试经验",
+      "count": 2
+    },
+    {
+      "name": "模块化",
+      "count": 2
+    },
+    {
+      "name": "Git",
+      "count": 2
+    },
+    {
+      "name": "网页设计",
+      "count": 2
+    },
+    {
+      "name": "编程题",
+      "count": 2
+    },
+    {
+      "name": "类",
+      "count": 2
+    },
+    {
+      "name": "Node",
+      "count": 2
+    },
+    {
+      "name": "表格",
+      "count": 1
+    },
+    {
+      "name": "iview",
+      "count": 1
+    },
+    {
+      "name": "微前端",
+      "count": 1
+    },
+    {
+      "name": "事件循环",
+      "count": 1
+    },
+    {
+      "name": "vue-router",
+      "count": 1
+    },
+    {
+      "name": "vue-cli",
+      "count": 1
+    },
+    {
+      "name": "UI设计",
+      "count": 1
+    },
+    {
+      "name": "python",
+      "count": 1
+    },
+    {
+      "name": "同步异步",
+      "count": 1
+    },
+    {
+      "name": "前端架构",
+      "count": 1
+    },
+    {
+      "name": "权限",
+      "count": 1
+    },
+    {
+      "name": "管理系统",
+      "count": 1
+    },
+    {
+      "name": "缓存",
+      "count": 1
+    },
+    {
+      "name": "Webpack",
+      "count": 1
+    },
+    {
+      "name": "虚拟DOM",
+      "count": 1
+    },
+    {
+      "name": "Nodejs",
+      "count": 1
+    },
+    {
+      "name": "代码评审",
+      "count": 1
+    },
+    {
+      "name": "前端优化",
+      "count": 1
+    },
+    {
+      "name": "正则",
+      "count": 1
+    },
+    {
+      "name": "表单校验",
+      "count": 1
+    },
+    {
+      "name": "桌面程序",
+      "count": 1
+    },
+    {
+      "name": "无货源",
+      "count": 1
+    },
+    {
+      "name": "vuex",
+      "count": 1
+    },
+    {
+      "name": "Css",
+      "count": 1
+    },
+    {
+      "name": "名词",
+      "count": 1
+    },
+    {
+      "name": "代码题",
+      "count": 1
+    },
+    {
+      "name": "快捷键",
+      "count": 1
+    },
+    {
+      "name": "打字",
+      "count": 1
+    },
+    {
+      "name": "程序员",
+      "count": 1
+    },
+    {
+      "name": "散文",
+      "count": 1
+    },
+    {
+      "name": "数据结构",
+      "count": 1
+    },
+    {
+      "name": "计算机原理",
+      "count": 1
+    },
+    {
+      "name": "浏览器兼容",
+      "count": 1
+    },
+    {
+      "name": "移动端兼容",
+      "count": 1
+    },
+    {
+      "name": "存储技术",
+      "count": 1
+    },
+    {
+      "name": "事件机制",
+      "count": 1
+    },
+    {
+      "name": "跨域",
+      "count": 1
+    },
+    {
+      "name": "Service Worker",
+      "count": 1
+    },
+    {
+      "name": "渲染机制",
+      "count": 1
+    },
+    {
+      "name": "浏览器内核",
+      "count": 1
+    },
+    {
+      "name": "面试技巧",
+      "count": 1
+    },
+    {
+      "name": "页面布局",
+      "count": 1
+    },
+    {
+      "name": "前端异常监控",
+      "count": 1
+    },
+    {
+      "name": "简历",
+      "count": 1
+    },
+    {
+      "name": "同源策略",
+      "count": 1
+    },
+    {
+      "name": "通信方式",
+      "count": 1
+    },
+    {
+      "name": "Ajax",
+      "count": 1
+    },
+    {
+      "name": "JSON",
+      "count": 1
+    },
+    {
+      "name": "跨域通信",
+      "count": 1
+    },
+    {
+      "name": "异步",
+      "count": 1
+    },
+    {
+      "name": "前端新技术",
+      "count": 1
+    },
+    {
+      "name": "PS",
+      "count": 1
+    },
+    {
+      "name": "重构",
+      "count": 1
+    },
+    {
+      "name": "移动端",
+      "count": 1
+    },
+    {
+      "name": "设计模式",
+      "count": 1
+    },
+    {
+      "name": "响应式布局",
+      "count": 1
+    },
+    {
+      "name": "渲染优化",
+      "count": 1
+    },
+    {
+      "name": "网络优化",
+      "count": 1
+    },
+    {
+      "name": "flex",
+      "count": 1
+    },
+    {
+      "name": "盒子模型",
+      "count": 1
+    },
+    {
+      "name": "yarn",
+      "count": 1
+    },
+    {
+      "name": "ES6",
+      "count": 1
+    },
+    {
+      "name": "语义化",
+      "count": 1
+    },
+    {
+      "name": "Web",
+      "count": 1
+    },
+    {
+      "name": "标签",
+      "count": 1
+    },
+    {
+      "name": "HTTP",
+      "count": 1
+    },
+    {
+      "name": "前端通信",
+      "count": 1
+    },
+    {
+      "name": "代码优化",
+      "count": 1
+    },
+    {
+      "name": "闭包",
+      "count": 1
+    },
+    {
+      "name": "算法",
+      "count": 1
+    },
+    {
+      "name": "继承",
+      "count": 1
+    },
+    {
+      "name": "事件",
+      "count": 1
+    },
+    {
+      "name": "原型",
+      "count": 1
+    },
+    {
+      "name": "原型链",
+      "count": 1
+    },
+    {
+      "name": "instanceof",
+      "count": 1
+    },
+    {
+      "name": "作用域",
+      "count": 1
+    },
+    {
+      "name": "JQuery",
+      "count": 1
+    },
+    {
+      "name": "jQuery UI",
+      "count": 1
+    },
+    {
+      "name": "Zepto",
+      "count": 1
+    },
+    {
+      "name": "Promise",
+      "count": 1
+    },
+    {
+      "name": "pnpm",
+      "count": 1
+    },
+    {
+      "name": "Markdown",
+      "count": 1
+    },
+    {
+      "name": "npm",
+      "count": 1
+    },
+    {
+      "name": "node",
+      "count": 1
+    },
+    {
+      "name": "redux",
+      "count": 1
+    },
+    {
+      "name": "组件",
+      "count": 1
+    },
+    {
+      "name": "sass",
+      "count": 1
+    },
+    {
+      "name": "RequireJS",
+      "count": 1
+    },
+    {
+      "name": "AMD规范",
+      "count": 1
+    },
+    {
+      "name": "TypeScript",
+      "count": 1
+    },
+    {
+      "name": "Axios",
+      "count": 1
+    },
+    {
+      "name": "window对象",
+      "count": 1
+    },
+    {
+      "name": "Angular",
+      "count": 1
+    },
+    {
+      "name": "数据绑定",
+      "count": 1
+    },
+    {
+      "name": "字节跳动",
+      "count": 1
+    },
+    {
+      "name": "CSRF",
+      "count": 1
+    },
+    {
+      "name": "XSS",
+      "count": 1
+    },
+    {
+      "name": "SQL注入",
+      "count": 1
+    },
+    {
+      "name": "HTTPS",
+      "count": 1
+    },
+    {
+      "name": "webpack",
+      "count": 1
+    },
+    {
+      "name": "博客",
+      "count": 1
+    },
+    {
+      "name": "Hexo",
+      "count": 1
+    }
+  ],
+  "stats": {
+    "totalArticles": 176,
+    "totalCategories": 7,
+    "totalTags": 138,
+    "totalViews": 97534,
+    "totalLikes": 10290,
+    "totalWords": 1029164
+  },
+  "generatedAt": "2025-08-25T07:06:19.104Z",
+  "version": "2.0.0"
+}

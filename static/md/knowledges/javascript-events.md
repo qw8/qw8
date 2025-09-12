@@ -1,0 +1,1346 @@
+---
+title: JavaScript事件
+date: 2020-03-07 21:10:40
+categories: 
+- 前端知识
+tags:
+- JavaScript
+- 事件
+---
+
+### 简介
+
+- JS和HTML之间的交互是通过事件实现的。事件，就是文档或浏览器窗口中发生的一些特定的交互瞬间。可以使用`侦听器（或处理程序）`来预定事件，以便事件发生时执行相应的代码，这种在传统工程中被称为观察员模式的模型，支持页面的行为（JS）与页面（CSSHTML）之间的松散耦合
+- IE8是最后一个仍然使用其专有事件系统的主要浏览器
+
+
+
+### 事件流
+
+事件流描述的是从而绵中接收事件的顺序，但是IE与Netscape开发团队提出的是差不多完全相反的事件流概念，IE事件流是**冒泡**，而NC事件流是**捕获**
+
+
+
+### 冒泡
+
+- IE的事件流叫做事件冒泡，即事件开始时由最具体的元素（文档中嵌套层次最深的那个节点）接收，然后逐级向上传播到较为不具体的节点（文档）
+- IE5.5及更早版本冒泡会跳过html元素（从body直接跳到docuemnt）IE9+别的浏览器则将事件一直冒泡到window对象
+
+
+
+### 捕获
+
+- NC定义，事件捕获的思想是不太具体的节点应该更糟接收到事件，而最具体的节点英爱最后接收到事件，事件捕获的用意在于在事件打到预定目标之前捕获它
+- IE9+ 部分老浏览器从window开始 规范要求从docuemnt对象开始
+
+
+
+### DOM事件流
+
+- `dom2级事件`规定的事件流包括三个阶段： 事件捕获阶段、处于目标阶段和事件冒泡阶段
+- 首先发生的是事件捕获，为截获事件提供了机会
+- 然后是实际的目标接收到事件
+- 最后是冒泡阶段，可以再找个阶段对事件做出响应
+
+- 在DOM事件流中，实际的目标（div元素）在捕获阶段不会接收到事件，这意味着在捕获阶段，事件从document到html再到body后就停止了
+- 下一个阶段是处于目标阶段，于是事件在div上发生，并在事件处理中被看成冒泡阶段的一部分，然后，冒泡阶段发生，事件有传播回文档
+- 即时DOM2级事件规范名曲要求捕获阶段不会涉及事件目标，但IE9等更高版本浏览器都会在捕获阶段触发事件对象上的事件
+- IE8及更早版本不支持事件流
+
+
+
+### 事件冒泡与事件捕获
+
+事件冒泡：由最具体的元素（目标元素）向外传播到最不具体的元素
+
+事件捕获：由最不确定的元素到目标元素
+
+
+
+### 事件绑定的方式
+
+- 嵌入 dom
+
+```html
+<button onclick="func()">按钮</button>
+```
+
+- 直接绑定
+
+```js
+btn.onclick = function() \\{\\};
+```
+
+- 事件监听
+
+```js
+btn.addEventListener("click", function() \\{\\});
+```
+
+
+
+### 事件委托是什么
+
+利用事件冒泡的原理，让自己的所触发的事件，让他的父元素代替执行！
+
+解析：
+
+1、那什么样的事件可以用事件委托，什么样的事件不可以用呢？
+
+- 适合用事件委托的事件：click，mousedown，mouseup，keydown，keyup，keypress。
+- 值得注意的是，mouseover 和 mouseout 虽然也有事件冒泡，但是处理它们的时候需要特别的注意，因为需要经常计算它们的位置，处理起来不太容易。
+- 不适合的就有很多了，举个例子，mousemove，每次都要计算它的位置，非常不好把控，在不如说 focus，blur 之类的，本身就没用冒泡的特性，自然就不用事件委托了。
+
+2、为什么要用事件委托
+
+- 提高性能
+
+```
+<ul>
+  <li>苹果</li>
+  <li>香蕉</li>
+  <li>凤梨</li>
+</ul>
+
+// good
+document.querySelector('ul').onclick = (event) => \\{
+  let target = event.target
+  if (target.nodeName === 'LI') \\{
+    console.log(target.innerHTML)
+  \\}
+\\}
+
+// bad
+document.querySelectorAll('li').forEach((e) => \\{
+  e.onclick = function() \\{
+    console.log(this.innerHTML)
+  \\}
+\\})
+```
+
+- 新添加的元素还会有之前的事件。
+
+3、事件冒泡与事件委托的对比
+
+- 事件冒泡：box 内部无论是什么元素，点击后都会触发 box 的点击事件
+- 事件委托：可以对 box 内部的元素进行筛选
+
+4、事件委托怎么取索引？
+
+```js
+    <ul id="ul">
+        <li>aaaaaaaa</li>
+        <li>事件委托了 点击当前，如何获取 这个点击的下标</li>
+        <li>cccccccc</li>
+    </ul>
+    <script>
+        window.onload = function () \\{
+            var oUl = document.getElementById("ul");
+            var aLi = oUl.getElementsByTagName("li");
+            oUl.onclick = function (ev) \\{
+                var ev = ev || window.event;
+                var target = ev.target || ev.srcElement;
+                if (target.nodeName.toLowerCase() == "li") \\{
+                    var that = target;
+                    var index;
+                    for (var i = 0; i < aLi.length; i++)
+                        if (aLi[i] === target) index = i;
+                    if (index >= 0) alert('我的下标是第' + index + '个');
+                    target.style.background = "red";
+                \\}
+            \\}
+        \\}
+    </script>
+```
+
+拓展：
+
+- 键盘事件：keydown keypress keyup
+- 鼠标事件：mousedown mouseup mousemove mouseout mouseover
+
+[参考](https://github.com/qiilee/js/tree/master/JS/\\%E4\\%BA\\%8B\\%E4\\%BB\\%B6\\%E5\\%A7\\%94\\%E6\\%89\\%98)
+
+
+
+### 事件绑定与普通事件有什么区别
+
+- 用普通事件添加相同事件，下面会覆盖上面的，而事件绑定不会
+- 普通事件是针对非 dom 元素，事件绑定是针对 dom 元素的事件
+
+
+
+### IE 和 DOM 事件流的区别
+
+1.事件流的区别
+
+IE 采用冒泡型事件 Netscape 使用捕获型事件 DOM 使用先捕获后冒泡型事件
+示例：
+
+复制代码代码如下:
+
+```html
+<body>
+  <div>
+    <button>点击这里</button>
+  </div>
+</body>
+
+```
+
+冒泡型事件模型： button->div->body (IE 事件流)
+
+捕获型事件模型： body->div->button (Netscape 事件流)
+
+DOM 事件模型： body->div->button->button->div->body (先捕获后冒泡)
+
+2.事件侦听函数的区别
+
+IE 使用:
+
+```js
+[Object].attachEvent("name_of_event_handler", fnHandler); //绑定函数
+[Object].detachEvent("name_of_event_handler", fnHandler); //移除绑定
+
+```
+
+DOM 使用：
+
+```js
+[Object].addEventListener("name_of_event", fnHandler, bCapture); //绑定函数
+[Object].removeEventListener("name_of_event", fnHandler, bCapture); //移除绑定
+```
+
+bCapture 参数用于设置事件绑定的阶段，true 为捕获阶段，false 为冒泡阶段。
+
+
+
+### 事件 —— 如何使用事件，以及IE和标准DOM事件模型之间存在的差别。
+
+（1）冒泡型事件：事件按照从最特定的事件目标到最不特定的事件目标(document对象)的顺序触发。
+
+IE 5.5: div -> body -> document
+
+IE 6.0: div -> body -> html -> document
+
+Mozilla 1.0: div -> body -> html -> document -> window
+
+（2）捕获型事件(event capturing)：事件从最不精确的对象(document 对象)开始触发，然后到最精确(也可以在窗口级别捕获事件，不过必须由开发人员特别指定)。
+
+（3）DOM事件流：同时支持两种事件模型：捕获型事件和冒泡型事件，但是，捕获型事件先发生。两种事件流会触及DOM中的所有对象，从document对象开始，也在document对象结束。
+
+DOM事件模型最独特的性质是，文本节点也触发事件(在IE中不会)。
+
+
+
+### 如何阻止事件冒泡和默认事件？
+
+阻止浏览器的默认行为
+window.event?window.event.returnValue=false:e.preventDefault();
+
+停止事件冒泡
+window.event?window.event.cancelBubble=true:e.stopPropagation();
+原生 JavaScript 中，return false;只阻止默认行为，不阻止冒泡，jQuery 中的 return false;既阻止默认行为，又阻止冒泡
+
+
+
+### 事件、IE 与火狐的事件机制有什么区别？ 如何阻止冒泡？
+
+1. 我们在网页中的某个操作（有的操作对应多个事件）。例如：当我们点击一个按钮就会产生一个事件。是可以被 JavaScript 侦测到的行为
+2. 事件处理机制：IE 是事件冒泡、firefox 同时支持两种事件模型，也就是：捕获型事件和冒泡型事件
+3. ev.stopPropagation();
+   注意旧 ie 的方法：ev.cancelBubble = true;
+
+
+
+### 如何阻止冒泡与默认行为
+
+- 阻止冒泡行为：非 IE 浏览器 stopPropagation()，IE 浏览器 window.event.cancelBubble = true
+- 阻止默认行为：非 IE 浏览器 preventDefault()，IE 浏览器 window.event.returnValue = false
+
+解析：
+
+当需要阻止冒泡行为时，可以使用
+
+```js
+function stopBubble(e) \\{
+  //如果提供了事件对象，则这是一个非IE浏览器
+  if (e && e.stopPropagation)
+    //因此它支持W3C的stopPropagation()方法
+    e.stopPropagation();
+  //否则，我们需要使用IE的方式来取消事件冒泡
+  else window.event.cancelBubble = true;
+\\}
+
+```
+
+当需要阻止默认行为时，可以使用
+
+```js
+//阻止浏览器的默认行为
+function stopDefault(e) \\{
+  //阻止默认浏览器动作(W3C)
+  if (e && e.preventDefault) e.preventDefault();
+  //IE中阻止函数器默认动作的方式
+  else window.event.returnValue = false;
+  return false;
+\\}
+
+```
+
+
+
+### DOMContentLoaded 事件和 Load 事件的区别？
+
+​    当初始的 HTML 文档被完全加载和解析完成之后，DOMContentLoaded 事件被触发，而无需等待样式表、图像和子框架的加载完成。
+
+​    Load 事件是当所有资源加载完成后触发的。
+
+   详细资料可以参考：
+   [《DOMContentLoaded 事件 和 Load 事件的区别？》](https://www.jianshu.com/p/ca8dae435a2c)
+
+
+
+
+
+
+
+### 事件处理程序
+
+事件就是用户或浏览器自身执行的某种操作。而响应某个事件的函数就叫做事件处理程序或事件侦听器。事件处理程序的名字以on开头
+
+**HTML事件处理程序**
+
+- 某个元素支持的每种事件，都可以使用一个与相应事件处理程序同名的HTML特性来指定。这个特性的值应该是能够执行的JS代码
+- 不能使用未经转移的HTML语法字符串 例如& "" < > 
+
+```html
+<input onclick="alert(&quot;clicked&quot;)">
+```
+
+- 也可以这样
+
+```javascript
+<script type="text/javascript">
+  function showMessage()\\{
+    alert("Hellow World!")
+  \\}
+</script>
+```
+
+- 事件处理程序中的代码在执行时，有权访问全局作用域中的任何代码
+- 这样指定事件处理程序具有一些独到之处，首先，这样会创建一个封装这元素属性值的函数。这个函数中有一个局部变量`event`也就是事件对象。
+
+```html
+<input type="button" value="Click me" onclick = "alert(event.type)" >
+function()\\{ 
+  with(document)\\{ 
+    with(this.form)\\{ 
+      with(this)\\{ 
+      //元素属性值
+      \\} 
+    \\}
+  \\} 
+\\} 
+```
+
+在HTML中之指定事件处理程序由两个缺点。
+
+- 时差问题。因为用户可能在HTML元素一出现在页面上就触发相应的事件，当当时的事件处理程序可能尚不具备执行条件，因此 很多的HTML事件处理程序都会被封装在一个try-catch块中
+- 这样扩展事件处理程序的作用域链在不同浏览器中会导致不同结果。不同JS引擎遵循的标识符解析规则略有差异，很可能会在访问非限定对象成员时出错
+
+这样抒写过于紧密耦合，如果要更换事件处理程序就要更改两个地方HTML代码和JS代码。这正是开发人员掘弃HTML事件处理程序转而使用JS指定事件处理程序的原因所在。  
+
+
+
+### DOM0级事件处理程序
+
+- 通过JS指定事件处理程序的传统方式，就是讲一个函数赋值给一个事件处理程序属性。这个中为事件处理程序复制的方法是在第四代Web浏览器中出现的，而且至今冉根为所有现代浏览器所支持。原因1是简单，而是具有跨浏览器的又是。
+- 要使用JS指定事件处理程序，首先要取得一个要操作的UI想的引用
+- 每个元素都有自己的事件处理程序属性，这些属性通常全部小写。将这种属性的值设置为一个函数，就可以指定事件处理程序
+- 这些代码运行以前不会指定事件处理程序，因此如果这些代码在页面中位于按钮后面，就可能在一段时间内怎么点击都没有反应
+- 使用DOM0级方法指定的事件处理程序被认为是元素的方法，因此这时候的事件处理程序是在元素的作用域中运行，换句话说，程序中的this引用当前元素；
+
+```javascript
+var btn = document.getElementById("myBtn");
+btn.onclick = function()\\{
+  alert(this.id)
+\\}
+```
+
+- 以这种方式添加的事件处理程序会在事件流的冒泡阶段被处理
+- 也可以删除通过DOM0级的方法指定的事件处理程序
+
+```javascript
+btn.onclick = null
+```
+
+- 如果你是HTML指定事件处理程序，那么onclick属性的值就是一个包含着在同名HTML特性中指定的代码的函数。而将响应的属性设置为null也可以删除以这种方式指定的事件处理程序
+
+
+
+### DOM2级事件处理程序
+
+- DOM2级事件定义了两个方法，用于处理指定和删除事件处理程序的操作 `addEventListener（）`和`removeEventListener()`
+- 所有的DOM节点中都包含这两个方法，并且他们都接受3个参数： 要处理的事件名、 作为事件处理程序的函数 和 一个布尔值，最后的布尔值参数如果是true，表示在捕获阶段调用事件处理程序，如果是false表示在冒泡阶段处理程序
+
+```javascript
+var btn = docuemnt.getElementById("myBtn");
+btn.addEventListener( "click", function()\\{
+  alert(this.id)
+\\}, false )
+```
+
+- 使用DOM2级的方法可以添加多个事件处理程序
+
+```javascript
+var btn = docuemnt.getElementById("myBtn");
+btn.addEventListener( "click", function()\\{
+  alert(this.id)
+\\}, false )
+btn.addEventListener("click", function()\\{
+  alert("hello")
+\\}, false)
+```
+
+- 通过 `addEventListener`添加的事件只能通过`removeEventListener`来移除
+- 移除时传入的参数与添加处理程序时使用的参数相同。这也意味着通过`addEventListener`添加的**匿名函数**无法移除
+
+```javascript
+var btn = docuemnt.getElementById("myBtn");
+btn.addEventListener("click", function()\\{
+  alert(this.id)
+\\}, false)
+// 没有用
+btn.removeEventListener("click", function()\\{
+  alert(this.id)
+\\}, false)
+```
+
+- 这个例子则可以
+
+```javascript
+var btn = docuemnt.getElementById("myBtn");
+var handler = function()\\{
+  alert(this.id)
+\\}
+btn.addEventListener( "click", handler, false );
+btn.removeEventListener( "click", handler, false );
+
+```
+
+- 大部分情况下都是将事件处理程序添加到事件流的冒泡阶段，这样可以大限度的兼容各种浏览器。
+- 最好只在需要在事件到达目标之前截获它的时候将事件处理程序天基调捕获阶段，不建议添加到捕获阶段
+- IE9+
+
+
+
+### IE事件处理程序
+
+- IE实现了与DOM中类似的两个方法： `attachEvent()`和`detechEvent()`。
+- 这两个方法接受相同的两个参数： 事件处理程序名称与时间处理程序的函数。
+- 由于IE8-只支持事件冒泡，所以通过`attachEvent`添加的事件处理程序都会被添加到冒泡阶段
+
+```javascript
+var btn = doucment.getElementById("myBtn");
+btn.attachEvent("onclick", function()\\{
+  alert("clicked")
+\\})
+```
+
+- 注意第一个参数是`onclick`而非DOM的`addEventListener`方法中的click
+- 在IE中使用`attachEvent()`与使用DOM0级方法的主要区别在于事件处理程序的作用域。
+- 在使用DOM0级的方法的情况下，事件处理程序会在其所属元素的作用域内运行。
+- 在使用`attachEvent()`方法的情况下，**事件处理程序会在全局作用域中运行**，因此this等于window
+
+```javascript
+var btn = document.getElementById("myBtn");
+btn.attachEvent("onclick", function()\\{
+  alert(this === window) // true
+\\})
+```
+
+- attachEvent方法也可以用来为一个元素添加多个事件处理程序， 与DOM方法不同的是，这些事件处理程序不是以添加他们的顺序执行，而是以相反的顺序触发。
+- 使用`attachEvent`添加的事件可以通过`detachEvent`来移除，条件是必须提供相同的参数，所以**匿名函数**不能被移除。不过，只要能够将对相同函数的引用传给`detachEvent`就可以移除相应的事件处理程序
+
+```javascript
+var btn = document.getElementById("myBtn");
+var handler = function()\\{
+  alert("Clicked")
+\\}
+btn.attachEvent("onclick", hanlder);
+btn.detachEvent("onclick", hanlder)
+```
+
+
+
+### 跨浏览器的事件处理程序
+
+要保证处理事件的代码能再大多数浏览器下一致的运行，只需要关注冒泡阶段。
+
+**addHandler()**
+
+- 第一个要创建的方法是addHandler, 它的职责是视情况分别使用DOM0级方法、DOM2级方法或IE方法来添加事件。这个方法属于一个名叫`EventUtil`的对象。
+- addHandler方法接受三个参数： 要操作的元素、事件名称和事件处理程序函数。
+
+```javascript
+var EventUtil = \\{
+  addHandler: function(element, type, handler)\\{
+    if( element.addEventListener )\\{
+      element.addEventListener(type, handler, false)
+    \\} else if ( element.attachEvent )\\{
+      element.attachEvent( "on" + type, handler )
+    \\} else \\{
+      element[ "on" + type ] = handler
+    \\}
+  \\},
+  removeHandler: function(element, type, handler)\\{
+    if( element.removeEventListener )\\{
+      element.removeEventListener( type, handler, false )
+    \\} else if( element.detachEvent )\\{
+      element.detachEvent( "on" + type, handler )
+    \\} else \\{
+      element["on" + type] = null;
+    \\}
+  \\}
+\\}
+
+```
+
+- 并没有考虑到所有的浏览器问题， 比如IE中的作用域问题，不过，使用它们移除和添加事件处理程序还是足够的
+- DOM0级对每个事件只支持一个事件处理程序。
+
+
+
+### 事件对象 —— event
+
+在触发DOM上的某个事件时，会产生一个事件对象Event，这个对象中包含着所有与事件有关的信息
+
+### DOM中的事件对象
+
+兼容DOM的浏览器会将一个`event`独享传入到事件处理程序中，无论指定事件处理程序时使用什么方法（DOM0 DOM2），都会传入event对象
+
+```javascript
+var btn = doucment.getElementById("myBtn");
+btn.onclick = function(event)\\{
+  alert(event.type)
+\\}
+btn.addEventListener("click", function(event)\\{
+  alert(event.type)
+\\}, false)
+```
+
+```html
+<input type="button" value="click me" onclick="alert(event.type)" >
+```
+
+属性和方法 [MDN-Event](https://developer.mozilla.org/zh-CN/docs/Web/API/Event)
+
+1. bubbles Boolean 只读 表明事件是否冒泡
+2. cancelable Boolean 只读 表明事件是否可以取消事件的默认行为
+3. currentTarget Element 只读 其事件处理程序当前正在处理事件的那个元素
+4. defaultPrevented Boolean 只读 为true表示已经调用了preventDefault()
+5. detail Integer 只读 与事件相关的细节信息
+6. eventPhase Integer 只读 调用事件处理程序的阶段： 1. 捕获阶段 2. 处于目标 3. 冒泡阶段
+7. preventDefault Function 只读 取消事件的默认行为，如果cancelable是true 则可以使用这个方法
+8. stopImmediatePropagation Function 只读 取消事件的进一步捕获或冒泡，同时阻止任何事件处理程序被调用（DOM3级事件中新增）
+9. stopPropagation Function 只读 取消世间的进一步捕获或冒泡，如果bubbles是true 可以使用这个方法
+10. target Element 只读 事件的目标
+11. trusted Boolean 只读 为true表示事件是浏览器生成的 为false 表示事件是由开发人员通过JS创建的
+12. type String 只读 被触发的事件类型
+13. view AbstractView 只读 与实践关联的抽象视图 等同于发生事件的window对象
+
+在事件处理程序内部，对象this始终等于`currentTarget`的值，而target啧只包含事件的实际目标。
+
+如果直接将事件处理程序指定给了目标元素，则 this currentTarget 和 target包含相同的值
+
+```javascript
+var btn = document.getElementById("myBtn");
+btn.onclick = function(event)\\{
+  alert(event.currentTarget === this); // true
+  alert( event.target === this ); // true
+\\}
+```
+
+- 如果事件处理程序存在于按钮的父节点中(例如docuemnt.body)，那么这些值是不同的
+
+```javascript
+document.body.onclick = function(event)\\{
+  alert( event.currentTarget === document.body ) // true
+  alert( this = document.body ) // true
+  alert( event.target === document.getElementById("myBtn") ) // true
+\\}
+/*
+点击这个例子中的按钮时，this和currentTarget都等于document.body，因为事件处理是注册到这个元素上的
+而target元素却等于按钮元素，因为他是click事件真正的目标
+由于按钮上并没有注册事件处理程序，结果click事件就冒泡到了document.body在那里事件才得到了处理
+*/
+```
+
+- 在需要通过一个函数处理多个事件时，可以使用type属性
+- 阻止默认事件可以使用`event.preventDefault()`,不过cancelable属性必须是true
+- 阻止进一步的事件捕获或冒泡 可以使用`event.stopPropagation()`
+- eventPhase属性确定事件当前正位于事件流的哪个阶段
+
+```javascript
+var btn = document.getElementById("myBtn");
+btn.onclick = function(event)\\{
+  alert(event.eventPhase) // 2
+\\}
+document.body.addEventListener("click", function(event)\\{
+  alert(event.eventPhase) //1
+\\}, true)
+document.body.onclick = function(event)\\{
+  alert(event.eventPhase) // 3 
+\\}
+```
+
+
+
+### IE中的事件对象
+
+在使用DOM0级方法添加事件处理程序时，event对象作为window对象的一个属性存在。
+
+```javascript
+var btn = document.getElementById("myBtn");
+btn.onclick = function()\\{
+  var event = window.event;
+  alert(event.type)
+\\}
+```
+
+- 在此，我们通过window.event取到了event对象，并检测了被触发事件的类型（IE中额type属性与DOM中的type属性是相同的）
+- 可是，如果事件处理程序是使用attachEvent添加的，那么就会有一个event对象作为参数被传入事件处理程序函数中
+
+```javascript
+var btn = document.getElementById("myBtn");
+btn.attachEvent("onclick", function(event)\\{
+  alert(event.type)
+\\})
+```
+
+- 在 `attachEvent`的情况下，也可以通过window对象来访问Event对象
+- 如果是通过HTML特性置地当的事件处理程序，那么还可以通过一个名叫event的变量来访问event对象，与DOM中的事件模型相同
+
+```html
+<input type="button" value="Click Me" onclick = "alert(event.type)">
+```
+
+IE的event对象同样也包含与创建它的时间相关的属性和方法，其中很多属性和方法都有对应的或者相关的DOM属性和方法。与DOM的event对象一样，这些属性和方法也会因为事件类型的不同而不同，但所有时间对象都会包含下列的属性和方法
+
+1. cancelBubble Boolean 读/写 默认为false 将其设置为true可以取消事件冒泡（与DOM中的stopPropagation方法的作用相同）
+2. returnValue Boolean 读/写 默认true 但将其设置为false就可以取消事件的默认行为（与DOM中的preventDefault()方法的作用相同）
+3. srcElement Element 只读 时间的目标（与DOM中的target属性相同）
+4. type String 只读 被触发的事件的类型
+
+因为事件处理程序的作用域是根据指定它的方式来确定的，所以不能认为this会始终等于事件目标。故而，还是使用event.srcElement比较保险
+
+```javascript
+var btn = document.getElementById("myBtn");
+btn.onclick = function()\\{
+  alert( window.event.srcElement === this ); // true
+\\}
+btn.attachEvent("onclick", function(event)\\{
+  alert(event.srcElement === this) // false
+\\})
+```
+
+returnValue 相当于DOM中的preventDefault方法，它的作用都是取消给定事件的默认行为。只要将returnValue设置为false，就可以阻止默认行为
+
+```javascript
+var link = document.getElementById("myLink");
+link.onclick = function()\\{
+  window.event.returnValue = false;
+\\}
+```
+
+
+
+### 跨浏览器的事件对象
+
+```javascript
+var EventUtil = \\{
+  addHandler: function( element, type, handler )\\{
+    //
+  \\},
+  getEvent: function( event )\\{
+    return event ? event : window.event;
+  \\},
+  getTarget: function( event )\\{
+    return event.target || event.srcElement;
+  \\},
+  preventDefault: function( event )\\{
+    if( event.preventDefault )\\{
+      event.preventDefault()
+    \\} else \\{
+      event.returnValue = false;
+    \\}
+  \\},
+  removeHandler: function( element, type, handler )\\{
+  
+  \\},
+  stopPropagation: function( event )\\{
+    if( event.stopPropagation )\\{
+      event.stopPropagation()
+    \\} else \\{
+      event.cancelBubble = true;
+    \\}
+  \\}
+\\}
+```
+
+
+
+### 事件类型
+
+DOM3级事件 规定了以下几类事件
+
+- UI（User Interface）事件，当用户与页面上的元素交互时触发。
+- 焦点事件，当用户通过鼠标在页面上执行操作时触发
+- 鼠标事件，当用户通过鼠标在页面上
+- 滚轮事件
+- 文本事件
+- 键盘事件
+- 合成事件 IME（Input Method Editor 输入法编辑器）
+- 变动（mutation）事件， 当底层DOM结构发生变化时
+- 变动名称事件 已被遗弃
+
+
+
+### 鼠标与滚轮事件
+
+**客户区坐标位置**
+
+- 鼠标事件都是在浏览器视口中的特定位置上发生的，这个位置信息保存在事件对象的`clientX`和`clientY`属性中
+- 他们表示事件发生时，鼠标指针在视口中的水平和垂直坐标
+
+**页面坐标位置**
+
+- 页面坐标通过事件对象的pageX和pageY属性来告诉你事件是在页面中的什么位置发生的。
+- 换句话说，这两个属性表示鼠标光标在页面中的位置，因此做标书hi从页面本身而非视口的左边和顶边计算的。
+
+- 在页面没有滚动的情况下，pageX和pageY的值与clientX和clientY的值相等
+
+**兼容IE8的写法**
+
+- IE8及更早版本不支持时间对象上的页面坐标，不过使用客户区坐标和滚动信息可以计算出来。
+
+```javascript
+var div = document.getElementById("myDiv");
+EventUtil.addHandler( div, "click", function(event)\\{
+  event = EventUtil.getEvent(event);
+  var pageX = event.pageX,
+      pageY = event.pageY;
+  if( pageX === undefined )\\{
+    pageX = event.clientX + ( document.body.scrollLeft || document.documentElement.scrollLeft );
+  \\}    
+  if( pageY === undefined )\\{
+    pageY = event.clientY + ( document.body.scrollTop || document.documentElement.scrollTop )
+  \\}
+\\} )
+
+```
+
+
+
+### 屏幕坐标位置
+
+- 鼠标事件发生时，不仅会有相对于浏览器窗口的位置，还有一个相对于整个电脑屏幕的位置。
+- 通过`screenX`和`screenY`属性就可以确定鼠标事件发生时鼠标指针相对于整个屏幕的坐标信息
+
+
+
+### 修改键
+
+- shift => shiftKey
+- ctrl => ctrlKey
+- Alt => altKey
+- Meta => metaKey
+- 都是布尔值 触发了就是true
+- IE8之前不支持
+
+
+
+### 相关元素
+
+- 发生mouseover 和mouseout事件时，这两个事件都会涉及把鼠标指针从一个元素的边界之内移动到另一个元素的边界之内
+- 对mouseover事件而言，事件的主目标是获得光标的元素，而相关元素就是那个失去光标的元素
+- 对mouseout事件而言，事件的主目标是失去光标的元素，而相关元素则是获得光标的元素
+- DOM通过event对象的relatedTarget属性提供了相关元素的信息，这个属性只对于mouseover和mouseout事件才包含值，对于其他事件，这个属性的值是null
+- IE8之前不支持reletedTargt属性，但提供了保存着同样信息的不同属性
+- 在mouseover事件触发前，IE的fromElement属性中保存了相关元素
+- 在mouseout事件触发时，IE的toElement属性中保存着相关元素
+
+```javasctipt
+var EventUtil = \\{
+  getRelatedTarget: function( event )\\{
+    if( event.relatedTarget )\\{
+      return event.relatedTarget;
+    \\} else if ( event.toElement )\\{
+      return event.toElement
+    \\} else if ( event.fromElement )\\{
+      return event.fromElement
+    \\} else \\{
+      return null
+    \\}
+  \\}
+\\}
+```
+
+
+
+### 鼠标按钮
+
+在主鼠标按钮被单击的情况下才会触发click事件，因此检测按钮的信息并不是必要的
+
+但对于mousedown和mouseup事件来说，则在其event独享存在一个button属性
+
+DOM的button属性可能有如下三个值： 0 主鼠标按钮 1 中间鼠标按钮 2次鼠标按钮 主鼠标按钮一般是左键
+
+IE8之前也提供了button属性 但是与DOM的butotn属性有差异
+
+1. 0——没有按下
+2. 1——按下了主鼠标按钮
+3. 2——按下了次鼠标按钮
+4. 3——同时按下了主次鼠标按钮
+5. 4——按下了中间鼠标按钮
+6. 5——同时按下了主鼠标按钮和中间的鼠标按钮
+7. 6——同时按下了次鼠标按钮和中间的鼠标按钮
+
+为了兼容只要将IE的其它选项分别转换成如同按下这三个键中的一个即可（同时将转牛作为优先选取的对象） 
+
+由于单独使用能力检测无法确定差异，一次必须另辟蹊径。支持DOM版鼠标事件的浏览器可以通过`hasFearture()`方法来检测
+
+```javascript
+var EventUtil = \\{
+  getButton: function()\\{
+    if( document.implementation.hasFeature( "MouseEvents", "2.0" ) )\\{
+      reutrn event.button
+    \\} else \\{
+      switch( event.button )\\{
+        case 0:
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+          return 0;
+        case 2:
+        case 6:
+          return 2;
+        case 4:
+          return 1
+      \\}
+    \\}
+  \\}
+\\}
+```
+
+
+
+### 更多的事件信息
+
+**event.detail**
+
+对于鼠标事件来说，detail中包含了一个数值，表示在给定位置上发生了多少次单击。
+
+在同一个元素上相继的发生一次`mousedown`和`mouseup`算作一次单击。
+
+detail属性从1开始计数，每次单击后多厚激增。
+
+如果鼠标在`mosuedown`和`mouseup`之间移动了位置，则detail会被重置为0
+
+IE也通过下列属性为鼠标事件提供了更多信息
+
+1. **altLeft** 表示是否按下了Alt键。如果altLeft的值为true，啧altKey的值也为true
+2. **ctrlLeft** 表示是否按下了Ctrl键 如果ctrlLeft的值为true 则ctrlKey的值也为true
+3. **offsetX** 光标相对于目标元素边界的X坐标
+4. **offsetY** 光标相对于目标元素边界的y坐标
+5. **shiftLeft** 是否按下了shift键，如果shiftLeft的值为ture 则shiftKey的值也为true
+
+
+
+### 鼠标滚轮事件
+
+- IE6首先实现了`mousewheel`事件。
+- 当用户通过鼠标滚轮与页面交互、在垂直方向上滚动页面时（无论向上还是向下），就会触发`mousewheel`事件
+- 这个事件可以在任何元素上面触发，最终会冒泡到`document`(IE8)或`window`(IE9+)对象
+- 与`mousewheel`事件对应的`event`对象除包含鼠标事件的所有标准信息外，还包含一个特殊的`wheelDelta`属性。当用户向前滚动鼠标滚轮时，`wheelDelta`是120的倍数；当用户向后滚动时，`wheelDelta`是-120的倍数。
+- 而在早期的Opera版本，就需要使用浏览器检测技术来确定实际的值，因为在Opera 9.5之前的版本总，wheelDelta值的正负号是颠倒的
+
+```javascript
+EventUtil.addHandler( document, "mousewheel", function()\\{
+  event = EventUtil.getEvent(event);
+  var delta = ( client.engins.opera && client.engine.opera < 9.5 ? -event.wheelDelta : event.wheelDelta )
+\\} )
+```
+
+- Firefox支持一个名为`DOMMouseScroll`的类似事件，也被视为鼠标事件，因而包含于鼠标事件有关的所有属性。
+- 而有关detail的值，向前是-3的倍数，向后是3的倍数
+- DOMMouseScroll事件可以添加到页面中的任何元素，而该事件会冒泡到window对象
+
+```javascript
+EventUtil.addHandler( window, "DOMMouseScroll", function(event)\\{
+  event = EventUtil.getEvent(event);
+  alert(event.detail)
+\\} )
+```
+
+- **跨浏览器代码**
+
+```javascript
+var EventUtil = \\{
+  getWheelDelta: function(event)\\{
+    if( event.wheelDelta )\\{
+      return ( client.engine.opera && client.engine.opera < 9.5 ? -event.wheelDelta : event.wheelDelta )
+    \\} else \\{
+      return -event.detail * 40
+    \\}
+  \\}
+\\}
+```
+
+
+
+### 触摸设备
+
+- 不支持dbclick事件 双击会放大 （现在不一定了）
+- 轻击可单击元素会触发mousemove事件。如果此操作会导致内容变化，将不再有其他事件发生；如果屏幕没有因此变化，那么会一次发生mousedown mouseup和click事件。轻击不可单机的元素不会触发任何事件。可单击的元素是指那些单击可产生默认操作的元素如链接或者那些已经被指定了onclick事件处理程序的元素
+- mousemove事件也会触发mouseover和mosueout事件
+- 连个手指放在屏幕上切页面随手之移动而滚动时会触发mousewheel和scroll事件
+
+
+
+### 无障碍设备
+
+- 不建议使用click之外的其他鼠标事件来展示功能或引发代码执行
+- 使用click事件执行代码。在屏幕阅读器中，由于无法触发mousedown事件结果会造成代码无法执行
+- 不要使用onmouseover向用户显示新的选项。屏幕阅读器无法触发这个事件
+- 不要使用dbclick执行重要的操作
+
+
+
+### 键盘与文本事件
+
+对键盘事件的支持主要遵循的是DOM0级
+
+1. `keydown`当用户按下键盘上的任意键时触发，而且如果按住不放的话，会重复触发此事件
+2. `keypress`当用户按下键盘上的字符键时触发，而且如果按住不放的话，会重复触发此事件。按下`Esc`键也会触发这个事件。`Safari3.1`之前的版本也会在用户按下非字符键时触发`keypress`
+3. `keyup`当用户释放键盘上的键时触发
+
+所有元素都支持，但是一般文本框最常用到
+
+`textInput`。这个事件是对keypress的补充，用意是在将文本显示给用户之前更容易拦截文本。在文本插入文本框之前会触发textInput事件
+
+当用户按了一下键盘上的字符键时，首先会触发keydown事件，然后是keypress事件，最后触发keyup事件
+
+keydown和keypress都是在文本框发生变化之前被触发的
+
+keyup是变化之后触发的
+
+如果用户按下了一个字符键不放，就会重复触发keydown和keypress事件，直到松开为止。
+
+非字符键就没有keypress了
+
+
+
+### 键码
+
+- event.keyCode
+- IE会有些不一致
+
+
+
+### 字符编码
+
+- event.charCode
+- IE8及之前版本和Opera则是在keyCode中保存字符的ASCII编码
+
+```javascript
+var EventUtil = \\{
+  getCharCode: function(event)\\{
+    if( typeof event.charCode == "number" )\\{
+      return event.charCode
+    \\} else \\{
+      return event.keyCode
+    \\}
+  \\}
+\\}
+```
+
+
+
+### DOM3级变化
+
+**key char keyIdentifier**
+
+- DOM3级中的键盘事件，不再包含charCode属性，而是包含两个新属性： key和char
+- key属性是为了取代keyCode而新增的，它的值是一个字符串。在按下某个字符键时，key的值就是响应的文本字符（如k或m）。在按下非字符键时，key的值是相应键的命（如Shift或Down）
+- 而char属性在按下字符键时的行为与key相同，单在按下非字符键时值为null
+- IE支持key不支持char属性
+- safari5和Chrome支持名为keyIndentifier的属性，非字符键返回的与key相同，字符键keyIdentifier返回一个类似“U+0000”的字符串，表示`Unicode`的值
+
+```javascript
+event.key || event.keyIdentifier
+```
+
+- 由于浏览器为题 不推荐使用key keyIdentifier或char
+
+**location**
+
+- 按下了什么位置的键 存在兼容问题
+
+**getModifierState**
+
+- 接收一个参数，表示要检测的修改键
+- 如果指定的修改键是按下状态，返回true
+- IE9 火狐 谷歌 支持
+
+**textInput**
+
+- 只有可编辑区域才会触发`textInput`事件。
+- 只会在用户按下能够输入实际字符串的键时才会触发
+- 它的event对象中还包含一个data属性，这个属性的值就是用户输入的字符串（非编码字符串）
+
+```javascript
+EventUtil.addHandler( textbox, "textInput", function(event)\\{
+  event = EventUtil.getEvent(event);
+  alert(event.data)
+\\} )
+
+```
+
+event对象上还有一个属性，叫`inputMethod`，表示把文本输入到文本框中的方式
+
+1. 0 —— 浏览器不确定
+2. 1 —— 键盘输入的
+3. 2 —— 粘贴进来的
+4. 3 —— 拖放进来的
+5. 4 —— IME输入的
+6. 5 —— 表单中选择某项输入的
+7. 6 —— 手写输入的（例如手写笔）
+8. 7 —— 语音输入的
+9. 8 —— 几种方法组合输入的
+10. 9 —— 脚本输入的
+
+书上说IE9+ Safari和Chrome 支持 只有IE支持inputMethod属性 有待考证 书本信息比较老了  
+
+
+
+## 设备中键盘事件
+
+### 复合事件
+
+- 复合事件是DOM3级事件中新添加的一类事件，用于处理IME的输入序列。
+- IME可以让用户输入在无力键盘上找不到的字符
+- compositionstart 在IME的文本符合系统打开时触发，表示要开始输入了
+- compositionupdate 在向输入字段中插入新字符时触发
+- compositionend 在IME的文本复合系统关闭时触发，表示返回正常键盘输入状态
+- 复合事件的data
+- 如果在compostionstart事件发生时访问，包含正在编辑的文本
+- 如果在compositionupdate事件发生时访问，包含此次输入绘画中插入的所有字符
+- 如果在compositionend事件发生时访问，包含此次输入绘画中插入的所有字符
+
+
+
+### 变动事件
+
+- DOM2级的变动事件能再DOM中的某一部分发生变化时给出提示。变动事件视为XML或HTML DOM设计的，并不特定于某种语言。
+- `DOMSubtreeModified` 在DOM结构中发生任何变化时触发。这个事件在其他任何事件触发后都会触发
+- `DOMNodeInserted` 在一个节点作为子节点被插入到另一个节点中时触发
+- `DOMNodeInsertedIntoDocument` 在一个节点北直街插入文档或通过子树间接插入文档之后触发，这个事件在`DOMNodeInserted`之后触发
+- `DOMNodeRemoveFromDocument` 在一个节点被直接从文档中移除或通过子树间接从文档中移除之前触发。这个事件在`DOMRemoved`之后触发
+- `DOMAttrModified`在特性被修改后触发
+- `DOMCharacterDataModified`在文本节点的值发生变化时触发
+
+**浏览器是否支持**
+
+```javascript
+var isSupported = document.implementation.hasFeature("MutationEvents", "2.0");
+
+```
+
+- IE8及更早不支持
+
+
+
+## HTML5事件
+
+### contextmenu
+
+- 用以表示合适应该显示上下文菜单，以便开发人员取消默认的上下文菜单而提供自定义的菜单。
+- 由于` contextmenu`事件是冒泡的，因此可以为`document`指定一个事件处理程序，用意处理页面中发生的所有此类事件。
+- 这个事件的目标是发生用户操作的元素。
+- 在所有浏览器中都可以取消这个事件，在兼容DOM的浏览器中：`event.preventDefault()`，IE中，将`event.returnValue`的值设置为false
+
+```javascript
+EventUtil.addHandler( window, 'load', function(event)\\{
+  var div = document.getElementById("myDiv");
+  EventUtil.addHandler( div, "contextmenu", function(event)\\{
+    event = EventUtil.getEvent(event);
+    EventUtil.preventDefault(event);
+    
+    var menu = document.getElementById("myMenu");
+    menu.style.left = event.clientX + 'px';
+    menu.style.top = event.clientY + 'px';
+    menu.style.visibility = "visible"
+  \\} )
+  EventUtil.addHandler( document, "click", function(event)\\{
+    document.getElementById("myMenu").style.visibility = "hidden";
+  \\} )
+\\})
+```
+
+
+
+### beforeunload
+
+- 询问用户是否确认关闭
+- event.returnValue的值是提示用户的信息
+
+```javascript
+EventUtil.addHandler( window, "beforeunload", function(event)\\{
+  event = EventUtil.getEvent( event );
+  var message = "close";
+  event.returnValue = message;
+  return message
+\\} )
+```
+
+
+
+### DOMContentLoaded
+
+- 当DOM加载完就触发，不想onload要等待图像JSCSS触发
+
+```javascript
+EventUtil.addHandler( docuemnt, "DOMContentLoaded", function(event)\\{
+  alert("content loaded")
+\\} )
+```
+
+- 不支持这个事件的 可以写个0毫秒的延迟调用
+
+
+
+### readystatechange
+
+提供与文档或元素的加载状态有关的信息
+
+支持readystatechange事件的每个对象都有一个 readyState属性
+
+1. `uninitialized` 对象存在但未初始化
+2. `loading` 对象正在加载数据
+3. `loaded` 对象加载数据完成
+4. `interactive` 可以操作对象了但还没有完全加载
+5. `complete` 对象已经加载完成
+
+如果某个阶段不适用于某个对象，则该对象完全可能跳过该阶段，并没有规定哪个阶段适用于哪个对象。这就意味着事件经常会少于4次而且readyState属性的值也不总是连续的
+
+readystatechange可以十分近似的模拟DOMContentLoaded事件，但他们本制度上还是不同的。在不同页面种，load事件与readystaechange事件并不鞥保证以相同的顺序触发
+
+
+
+### pageshow 和 pagehide
+
+pageshow会在页面显示时触发，无论该页面是否来自`bfcache`，在重新加载的页面种，pageshow会在load事件触发后触发，对于bfcache中的页面，pageshow会在页面轧辊太完全恢复的那一刻触发
+
+虽然这个事件的目标是document，但必须将事件处理程序加到window
+
+event.persisted
+
+1. pageshow 页面从bfcache中健在，那么persisted的值会为true
+2. pagehide事件，如果页面写在会后会被保存在bfcache中，那么persisted的值为true，因此，第一次触发pageshow时，persisted的值一定是false，地产一触发pagehide时，persisted就会变成true
+
+
+
+### hashchange
+
+- 添加给window对象，url参数列表只要发生变化时
+- event.oldURL event.newURL
+- 能力检测
+
+```javascript
+var isSupported = ( "onhashchange" in window ) && ( document.documentMode === undefined || document.documentMode > 7 )
+```
+
+
+
+### 扫描二维码登录网页是什么原理，前后两个事件是如何联系的？
+
+​    核心过程应该是：浏览器获得一个临时 id，通过长连接等待客户端扫描带有此 id 的二维码后，从长连接中获得客户端上报给 server的帐号信息进行展示。并在客户端点击确认后，获得服务器授信的令牌，进行随后的信息交互过程。在超时、网络断开、其他设备上登录后，此前获得的令牌或丢失、或失效，对授权过程形成有效的安全防护。
+
+​    我的理解
+
+​    二维码登录网页的基本原理是，用户进入登录网页后，服务器生成一个 uid 来标识一个用户。对应的二维码对应了一个对应 uid 的链接，任何能够识别二维码的应用都可以获得这个链接，但是它们没有办法和对应登录的服务器响应。比如微信的二维码登录，只有用微信识这个二维码才有效。
+
+当微信客户端打开这个链接时，对应的登录服务器就获得了用户的相关信息。这个时候登录网页根据先前的长连接获取到服务器传过来的用户信息进行显示。然后提前预加载一些登录后可能用到的信息。
+
+当客户端点击确认授权登陆后，服务器生成一个权限令牌给网页，网页之后使用这个令牌进行信息的交互过程。由于整个授权的过程都是在手机端进行的，因此能够很好的防止 PC 上泛滥的病毒。并且在超时、网络断开、其他设备上登录后，此前获得的令牌或丢失、或失效，对授权过程能够形成有效的安全防护。
+
+   详细资料可以参考：
+   [《微信扫描二维码登录网页》](https://www.zhihu.com/question/20368066)
+
+
+
+### 移动端click事件、touch事件、tap事件的区别
+
+1. click 事件在移动端会有200-300ms的延迟，主要原因是苹果手机在设计时，考虑到用户在浏览网页时需要放大，所以，在用户点击的 200-300ms 之后，才触发 click，如果 200-300ms 之内还有 click，就会进行放大缩小。
+2. touch 事件是针对触屏手机上的触摸事件。现今大多数触屏手机 webkit 内核提供了 touch 事件的监听，让开发者可以获取用户触摸屏幕时的一些信息。其中包括：touchstart,touchmove,touchend,touchcancel 这四个事件，touchstart touchmove touchend 事件可以类比于 mousedown mouseover mouseup 的触发
+3. tap 事件在移动端，代替 click 作为点击事件，tap 事件被很多框架（如 zepto）封装，来减少这延迟问题， tap 事件不是原生的，所以是封装的，那么具体是如何实现的呢？
+
+```js
+  <script>
+    function tap(ele, callback) \\{
+      // 记录开始时间
+      var startTime = 0,
+      // 控制允许延迟的时间
+          delayTime = 200,
+      // 记录是否移动，如果移动，则不触发tap事件
+          isMove = false;
+
+      // 在touchstart时记录开始的时间
+      ele.addEventListener('touchstart', function (e) \\{
+        startTime = Date.now();
+      \\});
+
+      // 如果touchmove事件被触发，则isMove为true
+      ele.addEventListener('touchmove', function (e) \\{
+        isMove = true;
+      \\});
+
+      // 如果touchmove事件触发或者中间时间超过了延迟时间，则返回，否则，调用回调函数。
+      ele.addEventListener('touchend', function (e) \\{
+        if (isMove || (Date.now() - startTime > delayTime)) \\{
+          return;
+        \\} else \\{
+          callback(e);
+        \\}
+      \\})
+    \\}
+
+    var btn = document.getElementById('btn');
+    tap(btn, function () \\{
+      alert('taped');
+    \\});
+  </script>
+```
+
+
+
+### 前端点透问题
+
+前端点透问题，特别是在移动端开发中，是一个常见的现象。以下是对前端点透问题的详细解释、原因及解决方法的归纳：
+
+#### 一、点透问题的定义
+
+点透问题，通常发生在移动端开发中，特别是当涉及到两个重叠的元素时，其中一个元素具有默认的点击事件（如标签的跳转），而另一个元素（如一个弹层）在触发某些事件（如`touchstart`）后被隐藏或移除。此时，如果用户在隐藏或移除上层元素的同时点击了屏幕，下层元素可能会接收到这个点击事件，从而导致不期望的行为发生。
+
+#### 二、点透问题出现的原因
+
+点透问题出现的主要原因是移动端click事件存在300ms的延迟。当点击上层元素时，先触发`touchstart`事件，然后在大约300ms后会触发`click`事件。然而，如果在这300ms内上层元素因为某些操作（如隐藏或移除）而消失，那么原本应该被上层元素拦截的`click`事件就会穿透到下层元素，从而触发下层元素的点击事件。
+
+#### 三、解决点透问题的方法
+
+1. **使用透明遮罩**：在可能产生点透问题的区域上方添加一个透明的遮罩层，并禁止其所有事件。当上层元素隐藏或移除后，等待一段时间（如400ms，对于iOS来说是一个理想值）再移除这个遮罩层。这样可以确保在`click`事件触发之前，下层元素不会被误点。
+2. **使用`touchend`代替`touchstart`**：由于`touchend`事件的触发时间比`click`事件短（通常约200ms），将上层元素的隐藏或移除操作绑定到`touchend`事件上，可以减少点透问题发生的可能性。
+3. **使用第三方库**：如`zepto`（已修复点透问题）或`fastclick`等库，它们提供了对移动端click事件的优化处理，可以减少或避免点透问题的发生。
+4. **避免使用`click`事件**：在可能的情况下，尽量避免使用`click`事件，特别是在涉及到重叠元素和复杂交互的场景中。可以考虑使用`touchstart`、`touchmove`和`touchend`等触摸事件来代替。
+5. **改变下层元素的标签**：如果下层元素是一个具有默认点击行为的元素（如`a`标签），可以考虑将其改为不具有默认点击行为的元素（如`span`标签），并通过JavaScript来实现相应的功能。这样可以避免下层元素接收到穿透的`click`事件。
+
+#### 四、总结
+
+前端点透问题是一个需要开发者在移动端开发中特别注意的问题。通过了解点透问题的定义、原因及解决方法，我们可以更好地避免和解决这一问题，提高应用的用户体验和稳定性。
+
+
+
+### 移动端的点击事件的延迟时间是多长？为什么会有延迟？ 如何解决这个延时？
+
+移动端 click 有 300ms 延迟
+
+浏览器为了区分“双击”（放大页面）还是“单击”而设计
+
+因为浏览器捕获第一次单击后，会先等待一段时间，如果在这段时间区间里用户未进行下一次点击，则浏览器会做单击事件的处理。如果这段时间里用户进行了第二次单击操作，则浏览器会做双击事件处理。
+
+解决方案：
+
+- 禁用缩放(对safari无效)
+- 使用指针事件(IE私有特性，且仅IE10+)
+- 使用 Zepto 的 tap 事件(有点透BUG)
+
+
+
+### “点透”是什么？
+
+你可能碰到过在列表页面上创建一个弹出层，弹出层有个关闭的按钮，你点了这个按钮关闭弹出层后后，这个按钮正下方的内容也会执行点击事件（或打开链接）。这个被定义为这是一个“点透”现象。
+在前面的项目中遇到了如下图的问题：在点击弹出来的选择组件的右上角完成后会让完成后面的input输入框聚焦，弹出输入键盘，也就是点透了。
+
+zepto的tap通过兼听绑定在document上的touch事件来完成tap事件的模拟的，及tap事件是冒泡到document上触发的。
+再点击完成时的tap事件（touchstart、touchend）需要冒泡到document上才会触发，而在冒泡到document之前，用户手的接触屏幕（touchstart）和离开屏幕（touchend）是会触发click事件的，因为click事件有延迟触发（这就是为什么移动端不用click而用tap的原因。大概是300ms，为了实现safari的双击事件的设计)，所以在执行完tap事件之后，弹出来的选择组件马上就隐藏了，此时click事件还在延迟的300ms之中，当300ms到来的时候，click到的其实不是完成而是隐藏之后的下方的元素，如果正下方的元素绑定的有click事件此时便会触发，如果没有绑定click事件的话就当没click，但是正下方的是input输入框(或者select选择框或者单选复选框)，点击默认聚焦而弹出输入键盘，也就出现了上面的点透现象。
+
+如果我们在移动端所有的 click 都替换为了 tap 事件，还是会触发点透问题的，因为实质是：
+
+在同一个 z 轴上，z-index 不同的两个元素，上面的元素是一个绑定了 tap 事件的，下面是一个 a 标签，一旦 tap 触发，这个元素就会 display: none，而从上面的 tap 可以看出，有 touchstart、touchend，所以会 300ms 之后触发 click 事件，而 z-index 已经消失了，所以，触发了下面的 a 的 click 事件，注意： 我们认为 a 标签默认是绑定了 click 事件的。而这种现象不是我们所期待的。
+
+
+
+### Zepto 的点透问题如何解决？
+
+#### 方案一：
+
+来得很直接，github上有个fastclick库https://github.com/ftlabs/fastclick，可以完美解决，它也能规避移动设备上 click 事件的延迟响应。
+
+将它用 script 标签引入页面（该库支持 AMD，于是你也可以按照 AMD 规范，用诸如 require.js 的模块加载器引入），并且在 dom ready 时初始化在 body 上。
+
+引入 fastclick.js(体积大[压缩后8k])，因为 fastclick 源码不依赖其他库，所以你可以在原生的 js 前直接加上
+
+```js
+window.addEventListener(
+  "load",
+  function() \\{
+    FastClick.attach(document.body);
+  \\},
+  false
+);
+```
+
+或者有 zepto 或者 jqm 的 js 里面加上
+
+```js
+$(function() \\{
+  FastClick.attach(document.body);
+\\});
+```
+
+当然 require 的话就这样：
+
+```js
+var FastClick = require("fastclick");
+FastClick.attach(document.body, options);
+```
+
+#### 方案二：
+
+用 touchend 代替 tap 事件并阻止掉 touchend 的默认行为 preventDefault()
+
+```js
+$("#cbFinish").on("touchend", function(event) \\{
+  // 很多处理比如隐藏什么的
+  event.preventDefault();
+\\});
+```
+
+#### 方案三：
+
+延迟一定的时间(300ms+)来处理事件，过了300ms，那么 click 事件就不会触发在下面的 a 标签上了。
+
+```js
+$("#cbFinish").on("tap", function(e) \\{
+  setTimeout(function() \\{
+    // 很多处理比如隐藏什么的
+    e.style.display = "none";
+  \\}, 320);
+\\});
+```
+
+这种方法其实很好，可以和 fadeInIn/fadeOut 等动画结合使用，可以做出过渡效果
+
+理论上上面的方法可以完美的解决 tap 的点透问题，如果真的不行，用 click
